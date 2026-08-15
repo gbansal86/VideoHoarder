@@ -60,3 +60,7 @@ Do not create unnumbered duplicates. Extend the canonical record.
 ## Update rule
 
 After meaningful work, update affected catalogs, implementation truth, source/Git state, quality or planning records, and the dated session handoff in the same change. Never promote a feature from discussion to implemented without code and test evidence.
+
+## Current baseline
+
+The knowledge files were reconciled against the application and existing test modules on 2026-08-15. Reconciliation commit `f8e209bf65bc4f56e3c9618180cf40dfbcd68928` is the documentation baseline for the next independent implementation review. Use the existing tests as evidence of their actual covered behaviors; do not replace them with a documentation-only test inventory.

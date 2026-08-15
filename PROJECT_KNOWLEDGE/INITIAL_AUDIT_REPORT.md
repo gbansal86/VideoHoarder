@@ -58,3 +58,11 @@ Credential hardening; security/path tests; characterization fixtures; central ma
 - PASS 3 - Git vs Application: PASS; runtime/build/user data intentionally ignored.
 - PASS 4 - Tests vs Claims: PASS; current 11 pass/3 skip separated from historical 14/14.
 - PASS 5 - Handoff Readiness: PASS; evidence, gaps, Git state and priorities are self-contained.
+
+## Closing Baseline for the Next Stage
+
+The living-project files were already present in GitHub before this reconciliation. They did not need to be recreated or uploaded from scratch. This pass verified and reconciled the existing canonical records against the actual application source, configuration, specifications, Git state, build system, SQLite schema and tests.
+
+The primary gap addressed here was documentation trust and accuracy, not file creation. Existing tests—`tests/test_backend_smoke.py`, `tests/test_chatgpt_validation.py` and `tests/test_native_ui.py`—were inspected and executed where the current environment allowed. The testing inventory and implementation claims are based on what those tests actually cover, not on a newly invented test list or documentation-only assertions.
+
+Reconciliation commit `f8e209bf65bc4f56e3c9618180cf40dfbcd68928`, together with its recorded handoff-state commits, is the clean documentation baseline for the next stage: an independent review of the actual VideoHoarder implementation against the reconciled feature set. That next review must continue to distinguish source presence, automated verification, historical runtime evidence and currently untested behavior.
