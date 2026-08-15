@@ -1,53 +1,60 @@
-# Initial Application and Git Audit
+# Current Application and Project-Knowledge Reconciliation Report
 
 Recorded: 2026-08-15
-Scope: read-only application/Git audit plus non-destructive tests
+Scope: documentation/audit reconciliation; no application feature implementation
 
-## Executive assessment
+## Verified Implemented
 
-VideoHoarder is a feature-rich local Windows application with meaningful existing implementations for downloads, library browsing, transcript processing, reports, ChatGPT exchange validation/review, taxonomy, collections, health/recovery, clips, external media, and subscriptions. Implementation density and operational risk are concentrated in one 22k-line backend module. Documentation is stronger than test coverage.
+Git/knowledge handoff, Python compilation, dashboard smoke behavior, SQLite schema, and tested ChatGPT integrity/provenance/timestamps/planner/duplicate/clip safety. Source implements package files/hashes/state, one/many JSON validation, combined review CSV, 25-video transcript grouping, separate no-transcript grouping and manual exchange.
 
-## Evidence summary
+## Partially Implemented
 
-- Application source: `app/app.py`, `app/gui.py`, `app/native_ui.py`, `run_gui.pyw`.
-- Distribution: 218,124,389-byte `VideoHoarder.exe`; installed and local copies match by SHA-256.
-- Repository inventory: 7,240 files, approximately 1.47 GB including builds, browser-profile caches, QA renders, runtime data, and distributions.
-- Database: 102,400-byte SQLite file; 10 application tables; all row counts zero in the checked source database.
-- Tests: 14 discovered, 11 passed, 3 skipped. Test scope is backend startup/config/root migration, ChatGPT integrity/provenance/timestamps/planning/duplicate/clip behavior, and three native navigation assertions.
-- Git at audit time: BLOCKED because neither source nor installed folder contained `.git`. After the audit and explicit owner authorization, a new `main` repository and secret-aware initial baseline were established at commit `643c1f2e4ea4e6e090e8e06286b33c588cc67bdc`. The repository was subsequently renamed to the canonical remote `https://github.com/gbansal86/VideoHoarder.git`.
+Broad desktop/download/library/repair/Knowledge/external workflows have source but lack current populated runtime evidence. Smart planning has metadata/category, exclusions, AI grouping, transcript validation and grouped packages, but lacks manual editing and KEEP/SKIP/REVIEW. v3 tracking coexists with separate tag-cleanup and Phase 2/6 lifecycles. Central manifest has only a partial foundation.
 
-## Findings
+## Not Implemented
 
-### High
+Manual group rename/merge/split/move/add/remove; planner KEEP/SKIP/REVIEW and overrides; folder result import; planner per-video notes/edit page; full central-manifest lifecycle/history/exports/UI.
 
-- No pre-baseline Git metadata exists; source history before commit `643c1f2e4ea4e6e090e8e06286b33c588cc67bdc` cannot be established.
-- A plaintext API-key file exists in the installed root. Its value was not read or recorded.
-- `app/app.py` is a monolith with broad filesystem, database, HTTP, AI, UI markup, package, and destructive-operation responsibilities.
+## Outdated Documentation
 
-### Medium
+Legacy `specs/` 14/14 PySide6 and installed-runtime results are historical 2026-08-13 evidence, not the current run. Pre-Git audit statements are historical. The canonical knowledge records are current.
 
-- Current source database is empty, so production-like data flows and migrations were not exercised.
-- Native UI tests skipped under current Python because PySide6 is unavailable, despite the separate build log reporting a PySide6 environment.
-- Extensive broad exception suppression (`except Exception: pass`) reduces observability and can hide partial failures.
-- Large build/cache/browser-profile artifacts coexist with source and would require a carefully designed `.gitignore`.
-- Build log contains a missing QML plugin warning; build completed, but the warning should be classified during a clean release validation.
+## Broken/Failed
 
-### Positive controls
+No source test failed. Three UI tests skipped without PySide6. Some ignored temp directories deny enumeration. Historical QML warning impact is UNKNOWN.
 
-- ChatGPT package checksum, provenance, timestamp, planner grouping, duplicate review, and clip handoff tests pass.
-- Duplicate review does not physically delete; clip planning does not execute cutting.
-- Installed EXE and local distribution match exactly.
-- Build script compiles, tests, generates the icon, packages with PyInstaller, and creates a ZIP.
+## Security Findings
 
-## Not tested
+CRITICAL plaintext key storage; HIGH local HTTP/path/command review; HIGH browser-session exposure if ignores are bypassed; HIGH observability risk from silent exceptions. Scoped scans found no common credential pattern.
 
-Real YouTube downloads, transcript retrieval, Ollama calls, YouTube API calls, live-library search, imports against populated data, move/rename/apply/undo, manifest reconciliation, destructive purge, full repair/recovery, installed GUI interaction, package upload/return lifecycle, external media, subscriptions, or large-library performance.
+## Performance Findings
 
-## Recommended implementation order
+Monolithic backend, repeated scanning/hashing risk, synchronous external work and no large-library benchmark.
 
-1. Owner-approved Git initialization/import with secret and large-file review.
-2. Credential hardening and `.gitignore` policy.
-3. Characterization tests around database/schema, path safety, jobs, and package lifecycle.
-4. Central artifact manifest incremental design and tests using existing table/functions.
-5. Modular extraction from `app/app.py` behind unchanged interfaces.
-6. Installed-runtime UI and end-to-end validation on controlled fixtures.
+## UX Findings
+
+Native/web surfaces may have inconsistent progress/error behavior. Similarity planning lacks manual group editing. Populated-library acceptance testing is missing.
+
+## Testing Gaps
+
+Populated DB/migrations, real providers/files, reports, package generation/import-many/CSV, review persistence, tag cleanup, taxonomy apply/undo, concurrency, security, recovery, installed GUI, clean build and scale.
+
+## Improvement Opportunities
+
+Credential hardening; security/path tests; characterization fixtures; central manifest; lifecycle reconciliation; contextual errors; release provenance; installed/scale tests; then modular decomposition.
+
+## Recommended Priorities
+
+1. Credential and local HTTP/path security.
+2. Characterization tests and sanitized fixtures.
+3. Bounded central manifest.
+4. Package lifecycle/manual grouping if prioritized.
+5. Reproducible build, then safe modularization.
+
+## Five-Pass Quality Check
+
+- PASS 1 - Code vs Documentation: PASS with runtime-unknown distinctions.
+- PASS 2 - Documentation vs Documentation: PASS after historical/future reconciliation.
+- PASS 3 - Git vs Application: PASS; runtime/build/user data intentionally ignored.
+- PASS 4 - Tests vs Claims: PASS; current 11 pass/3 skip separated from historical 14/14.
+- PASS 5 - Handoff Readiness: PASS; evidence, gaps, Git state and priorities are self-contained.

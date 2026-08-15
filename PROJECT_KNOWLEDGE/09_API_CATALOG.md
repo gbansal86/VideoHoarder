@@ -1,7 +1,27 @@
 # API Catalog
 
-The local HTTP handler exposes progress/jobs, config, diagnostics, dependencies, library browser/detail/suggestions, media/report/thumbnail serving, video state, deletion marker, taxonomy, exchange, collections, Knowledge AI/search, clips, external media, subscriptions, and ChatGPT Processing endpoints.
+Recorded: 2026-08-15
 
-Representative ChatGPT paths: overview, selectors, history, coverage, review, unprocessed packages, create, import plan, planner preview, single/multiple result import, review CSV, review decisions, duplicate review, clip validation/handoff, and deletion of unprocessed packages.
+The application uses a custom local `BaseHTTPRequestHandler`/`ThreadingHTTPServer`, not a public web API framework.
 
-Status: IMPLEMENTED IN SOURCE. Authentication/authorization and request-hardening require a dedicated review; the intended trust boundary appears to be loopback/local desktop use.
+## Read/navigation endpoints
+
+- Progress/jobs/config/tool catalog/diagnostics/dependencies/system health.
+- Library browser/page/detail/suggestions, media/report/thumbnail serving.
+- Failures, clips, external media, subscriptions, collections, Knowledge AI status/search.
+- ChatGPT overview, selectors, history, coverage, review, and unprocessed packages.
+- Pages: `/app`, `/chatgpt-processing`, `/oldimport`, `/repairdata`, `/knowledge`, video/report/media routes.
+
+## Mutating endpoints
+
+- Configuration save, stop/close sessions, Selenium setup, log cleanup.
+- Job start/control, safe repair, taxonomy export/import/reapply/move/undo.
+- Exchange upload/import, collection create/rename/delete/export, video state/delete marker.
+- ChatGPT package creation, planner import/preview, one/many result import, CSV export, review decisions, duplicate review, clip validation/handoff, and unprocessed-package deletion.
+
+## Findings
+
+- Request bodies above 145 MB are rejected; UI notes a 100 MB per-file exchange limit.
+- Many endpoint errors are converted to JSON with HTTP 400/409/500/503.
+- Powerful endpoints assume a trusted local desktop boundary. A dedicated review is still needed for loopback binding, CSRF/local-browser threats, authorization, path traversal, file serving, and command dispatch.
+- No API schema/OpenAPI document or endpoint-level automated coverage matrix exists.

@@ -1,5 +1,11 @@
 # File Inventory
 
-Audit inventory: 7,240 files, approximately 1,471,084,668 bytes. This includes source, tests, SQLite/runtime data, build outputs, QA images/PDFs, and many browser-profile/cache artifacts.
+Recorded: 2026-08-15
 
-Important groups: 25 Python files, 116 JSON files, 82 DB files, 1,360 PNG files, 1,006 QML files, 277 DLLs, and 212 logs. Source control should exclude build/dist outputs, runtime databases, downloads/media, logs, QA intermediates, browser profiles/caches, Python caches, secrets, and temporary test data unless a specific fixture is intentional.
+Git currently tracks 125 files at reconciliation start; untracked count was zero. The working directory also contains approximately 7,162 ignored files, including runtime/build/browser/QA data. Some ignored temporary LibreOffice/test directories deny enumeration; they are not tracked.
+
+Tracked classes: runtime source, tests/intentional fixtures, build/install scripts, requirements, icons, specifications/checkpoints/future requests, selected design artifacts/tools, `.gitignore`, and `PROJECT_KNOWLEDGE`.
+
+Ignored classes: secrets/user URL input, media/downloads/transcripts, `data/` and databases, logs/maintenance, build/dist/ZIP/environment, document QA, browser profiles/session state, Python caches, and test runtime output.
+
+Repository completeness is suitable for source continuation, not production-data reproduction. Release executables belong in release/artifact storage rather than ordinary Git history.

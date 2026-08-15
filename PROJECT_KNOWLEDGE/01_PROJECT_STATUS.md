@@ -1,25 +1,29 @@
 # Project Status
 
 Recorded: 2026-08-15
+Overall: PARTIAL / NEEDS REVIEW
 
-## Overall
+## Verified current
 
-Status: PARTIAL / NEEDS REVIEW. Initial Git baseline established on 2026-08-15.
+- Git `main` and `origin/main` were synchronized at reconciliation start.
+- Python compilation passes.
+- Current unittest run: 14 discovered, 11 passed, 0 failed, 3 skipped without PySide6.
+- Dashboard smoke test starts the local server and reads `/api/progress`.
+- ChatGPT integrity/provenance/timestamp/planner/duplicate/clip safety tests pass.
+- Local and installed historical v33 EXEs match each other by SHA-256.
 
-The application compiles and its focused automated suite passes in the current environment. The installed EXE exactly matches the local distribution EXE by SHA-256. A new Git repository now provides a source baseline beginning at commit `643c1f2e4ea4e6e090e8e06286b33c588cc67bdc`; history before that baseline is unavailable. The source database is empty, native UI tests were skipped, and broad end-to-end workflows were not exercised.
+## Partial or unknown
 
-## Verified
+- Most application features are implemented in source but not currently validated against populated data, external services or installed GUI.
+- Smart planning lacks manual group editing and KEEP/SKIP/REVIEW.
+- Package lifecycle is fragmented across v3, legacy Phase 2, Phase 5 tag cleanup and Phase 6 taxonomy/intelligence.
+- Central Artifact Manifest is a partial foundation only.
+- Current Git source has not been rebuilt into a newly verified EXE.
 
-- Python compilation: passed for `app/app.py`, `app/gui.py`, `app/native_ui.py`, and `run_gui.pyw`.
-- Tests: 14 discovered; 11 passed; 3 skipped due to missing PySide6 in system Python.
-- Local dashboard smoke test: `/api/progress` returned successfully during tests.
-- Installed/local EXE match: SHA-256 `698B33DA474BE36F49B495DEB74D474A66066E4EF516C4853099EBAC1E3107CC`.
-- SQLite schema contains video, manifest, transcript availability, ChatGPT request/coverage/history, external media, subscriptions, and clip project tables.
+## Highest priorities
 
-## Highest-priority gaps
-
-1. Protect the new Git baseline with branch/repository security settings and verify the first push.
-2. Separate the monolithic backend into bounded modules with characterization tests first.
-3. Add integration coverage for filesystem, database migration, package lifecycle, recovery, and UI workflows.
-4. Move plaintext API-key handling to a protected credential mechanism.
-5. Implement the proposed central artifact manifest by extending—not replacing—the existing table/functions.
+1. Credential storage and local HTTP/path security review.
+2. Characterization tests with sanitized populated fixtures.
+3. Bounded central-manifest implementation using existing systems.
+4. Package-lifecycle reconciliation and manual grouping UX if authorized.
+5. Reproducible Git-linked build, then modular decomposition.
