@@ -3,6 +3,8 @@
 Recorded: 2026-08-15
 Status basis: code presence plus explicitly recorded test/runtime evidence
 
+Independent review on 2026-08-15 confirmed these classifications against baseline `f74650adbfc04b26386835cab05fd71109611e2b`. Fixture- and runtime-dependent rows remain `NEEDS REVIEW`; see `INDEPENDENT_VALIDATION_REPORT.md`.
+
 | Area | Status | Primary evidence | Verification and limitations |
 |---|---|---|---|
 | Windows application entry | IMPLEMENTED | `run_gui.pyw`, `app/gui.py:main()` | Compilation passed; installed interaction not rerun in current audit |

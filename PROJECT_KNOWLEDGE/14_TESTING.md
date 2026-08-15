@@ -9,6 +9,14 @@ Recorded: 2026-08-15
 - Discovered: 14; passed: 11; failed: 0; skipped: 3.
 - Skip reason: PySide6 is not installed in current system Python.
 
+## Independent validation rerun
+
+- Baseline: `f74650adbfc04b26386835cab05fd71109611e2b`, clean and synchronized with `origin/main` before documentation edits.
+- Compilation command rerun: PASSED.
+- Unittest discovery rerun: 14 discovered, 11 passed, 0 failed, 3 skipped for the same PySide6 environment limitation.
+- Dashboard smoke again started the loopback server and passed.
+- This rerun confirms the existing test record; it does not expand the behaviors covered by those tests.
+
 ## Actual coverage
 
 - Backend: library-root override, config presence, dashboard startup/progress endpoint, canonical health-file migration.

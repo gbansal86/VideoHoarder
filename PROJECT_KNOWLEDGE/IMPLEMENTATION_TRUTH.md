@@ -3,6 +3,8 @@
 Recorded: 2026-08-15
 Classification: IMPLEMENTED, PARTIAL, NOT IMPLEMENTED, UNKNOWN, or DEPRECATED
 
+Independent validation: confirmed against clean baseline `f74650adbfc04b26386835cab05fd71109611e2b`; see `INDEPENDENT_VALIDATION_REPORT.md`.
+
 | Capability | Status | Evidence and truth |
 |---|---|---|
 | Desktop/local dashboard | IMPLEMENTED | `app/gui.py`, `app/native_ui.py`, local HTTP handler; current dashboard smoke test passes |

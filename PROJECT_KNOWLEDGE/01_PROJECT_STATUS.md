@@ -11,6 +11,7 @@ Overall: PARTIAL / NEEDS REVIEW
 - Dashboard smoke test starts the local server and reads `/api/progress`.
 - ChatGPT integrity/provenance/timestamp/planner/duplicate/clip safety tests pass.
 - Local and installed historical v33 EXEs match each other by SHA-256.
+- Independent baseline review completed against clean, synchronized commit `f74650adbfc04b26386835cab05fd71109611e2b`.
 
 ## Partial or unknown
 
@@ -27,3 +28,7 @@ Overall: PARTIAL / NEEDS REVIEW
 3. Bounded central-manifest implementation using existing systems.
 4. Package-lifecycle reconciliation and manual grouping UX if authorized.
 5. Reproducible Git-linked build, then modular decomposition.
+
+## Independent validation boundary
+
+`INDEPENDENT_VALIDATION_REPORT.md` records the source/test/Git findings and the inputs still needed for application acceptance. Broad runtime claims remain PARTIAL or UNKNOWN until sanitized populated fixtures, external-service access where appropriate, and a current Git-linked build are available.

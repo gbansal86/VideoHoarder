@@ -13,7 +13,8 @@ This directory is the repository source of truth for project understanding, impl
 4. `SOURCE_VERSION.md` - source/build identity and hashes.
 5. `GIT_STATE.md` - repository, branch, remote, and commit state.
 6. `INITIAL_AUDIT_REPORT.md` - evidence and initial findings.
-7. `sessions/2026-08-15.md` - latest session handoff.
+7. `INDEPENDENT_VALIDATION_REPORT.md` - independent baseline verification and remaining inputs.
+8. `sessions/2026-08-15.md` - latest session handoff.
 
 ## Canonical name mapping
 
@@ -64,3 +65,5 @@ After meaningful work, update affected catalogs, implementation truth, source/Gi
 ## Current baseline
 
 The knowledge files were reconciled against the application and existing test modules on 2026-08-15. Reconciliation commit `f8e209bf65bc4f56e3c9618180cf40dfbcd68928` is the documentation baseline for the next independent implementation review. Use the existing tests as evidence of their actual covered behaviors; do not replace them with a documentation-only test inventory.
+
+The independent review was then performed against baseline commit `f74650adbfc04b26386835cab05fd71109611e2b`. Its detailed result is in `INDEPENDENT_VALIDATION_REPORT.md`; it confirms the reconciliation while preserving runtime and fixture-dependent items as UNKNOWN or PARTIAL.
