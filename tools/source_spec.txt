@@ -1,0 +1,1102 @@
+﻿PARAGRAPHS=601 TABLES=0 SECTIONS=1
+P0 [Title]: Video Library Manager
+Master Codex Implementation Specification
+P1 [Normal]: ChatGPT-First Video Intelligence • Unified Package • Import • Knowledge Center • Related Videos • Duplicate Detection
+P2 [Normal]: Purpose: Give this document to ChatGPT Codex as the complete implementation brief. The application must remain ChatGPT-first, and all AI analysis in scope for this specification is performed through ChatGPT packages and imported ChatGPT results.
+P3 [Heading 1]: 1. Non-Negotiable Architecture
+P4 [Normal]: Do not replace, redesign, or simplify away existing working functionality. Preserve downloads, Smart Resume, database data, folder structure, Knowledge Center, comments, collections, reports, recovery, Selenium/subscriptions, queue system, Help, hover help, Clip Studio, streams, diagnostics, Control Tower, and existing APIs unless explicitly changed here.
+P5 [Normal]: Primary AI architecture:
+P6 [Normal]: VIDEO
+  ↓
+Metadata + Description + Transcript + Timestamped Transcript + Meaningful Comments
+  ↓
+Create ChatGPT Package
+  ↓
+User processes package with ChatGPT
+  ↓
+Structured ChatGPT JSON
+  ↓
+Import → Validate → Normalize → Store
+  ↓
+Video Library / Reports / Knowledge Center / Search / Collections /
+Related Videos / Duplicate Analysis / Exports
+P7 [Normal]: ChatGPT is the only AI analysis engine in scope for this specification. Do not introduce alternative AI engines as part of this task.
+P8 [Heading 1]: 2. Audit Existing Code Before Changing Anything
+P9 [List Number]: Locate every existing ChatGPT package generator and result importer.
+P10 [List Number]: Locate Phase 2/3/4/5/6 package, intelligence, content-card, report, search, timestamp, embeddings and import functions.
+P11 [List Number]: Locate Create ChatGPT Packages & Tag Cleanup and all older detailed-summary generators.
+P12 [List Number]: Identify existing logic for summaries, timestamps, remedies, recipes, how-to, comparisons, rankings, safety, entities, glossary and Q&A.
+P13 [List Number]: Reuse working code instead of creating parallel duplicate implementations.
+P14 [List Number]: Preserve old ChatGPT result compatibility.
+P15 [List Number]: Log the functions/files found and state which will be reused before implementation.
+P16 [Heading 1]: 3. Unified Master ChatGPT Intelligence Schema
+P17 [Normal]: For every video, ChatGPT should return one complete structured object. Fields that do not apply must be empty arrays/objects rather than invented content.
+P18 [Normal]: {
+  "video_id": "",
+  "original_title": "",
+  "approved_english_title": "",
+  "short_title": "",
+  "source_language": "",
+  "title_translated": false,
+
+  "category": "",
+  "subcategory": "",
+  "primary_topic": "",
+  "secondary_topics": [],
+
+  "canonical_tags": [],
+  "concepts": [],
+  "search_phrases": [],
+  "synonyms": [],
+  "questions_answered": [],
+  "not_about": [],
+  "content_types": [],
+
+  "executive_summary": "",
+  "detailed_summary": "",
+  "key_takeaways": [],
+  "important_facts": [],
+  "important_numbers": [],
+
+  "entities": {},
+  "timeline_sections": [],
+  "topic_occurrences": [],
+  "things_discussed": {},
+
+  "how_to_guides": [],
+  "remedies": [],
+  "recipes": [],
+  "comparisons": [],
+  "rankings": [],
+  "recommendations": [],
+  "products_services_tools": [],
+  "claims": [],
+  "warnings_safety": [],
+  "sources_references": [],
+  "glossary": [],
+  "qa": [],
+
+  "viewer_comment_intelligence": {},
+  "chatgpt_perspective_ps": {},
+  "evidence_provenance": [],
+  "analysis_quality": {},
+  "field_confidence": {},
+
+  "transcript_status": "",
+  "classification_basis": "",
+  "classification_confidence": 0.0
+}
+P19 [Heading 1]: 4. Video Identity and Titles
+P20 [List Bullet]: `video_id` must exactly match the source VIDEO_ID. For YouTube, only a real 11-character ID matching ^[A-Za-z0-9_-]{11}$ is valid.
+P21 [List Bullet]: Never treat placeholders such as VIDEO_ID, exact input video_id, example_video_id, or prompt text as unresolved videos.
+P22 [List Bullet]: Always preserve `original_title`.
+P23 [List Bullet]: If the title is non-English or mixed-language, generate a natural, accurate `approved_english_title`; do not use awkward literal translation.
+P24 [List Bullet]: Keep `source_language` and `title_translated`.
+P25 [List Bullet]: `approved_english_title`: descriptive, non-clickbait, normally <=80 characters, no invented facts.
+P26 [List Bullet]: `short_title`: compact display title, normally 30-50 characters.
+P27 [Heading 1]: 5. Taxonomy and Search Intelligence
+P28 [Normal]: Return category, subcategory, primary topic, secondary topics, canonical tags, concepts, search phrases, synonyms, questions answered, and not_about.
+P29 [Normal]: Preferred broad categories may include Health, AI, IT, Mobile, Finance, Cooking, Gardening, Travel, Automotive, Education, News & Current Affairs, Lifestyle, Science, History, Entertainment, Business, DIY & Home, Technology, Career, Productivity, Personal Development, Politics, Sports, Spirituality, Legal, Real Estate, Other. Do not force a wrong category.
+P30 [List Bullet]: Subcategory must be narrower than category.
+P31 [List Bullet]: Canonical tags should normally be 4-12 useful normalized tags.
+P32 [List Bullet]: Remove weak tags such as Video, YouTube, Tips, Information, General, Miscellaneous, Explained.
+P33 [List Bullet]: Preserve accepted abbreviations such as AI, IT, SQL, API, AWS, Azure, iOS, UPI.
+P34 [List Bullet]: Search phrases should resemble natural queries a user would type.
+P35 [List Bullet]: Synonyms should include meaningful alternate terms and multilingual equivalents when useful.
+P36 [List Bullet]: `not_about` should reduce false-positive search matches.
+P37 [Heading 1]: 6. Global Taxonomy and Canonical Entity Registry
+P38 [Normal]: Maintain reusable canonical dictionaries so the same concept is not fragmented across the library.
+P39 [Normal]: data/taxonomy/
+  categories.json
+  subcategories.json
+  canonical_tags.json
+  concepts.json
+  entities.json
+  synonyms.json
+P40 [List Bullet]: Prefer an existing canonical term when semantically equivalent.
+P41 [List Bullet]: Map aliases to canonical entities: e.g. Azure / MS Azure → Microsoft Azure; moringa / Moringa oleifera / sahjan → one canonical entity with aliases.
+P42 [List Bullet]: Create a new category/tag/concept/entity only when genuinely necessary.
+P43 [List Bullet]: Keep original-language aliases for multilingual search.
+P44 [Heading 1]: 7. Content-Type Classification
+P45 [Normal]: Allow multiple content types: Explanation, Tutorial, How-To, News, Opinion, Interview, Podcast, Lecture, Review, Comparison, Ranking, Recipe, Remedy, Medical Discussion, Financial Discussion, Product Demonstration, Travel Guide, Documentary, Entertainment, Comedy, Music, Short, Q&A, Case Study, Troubleshooting, Story, Motivational, Debate, Analysis, Other.
+P46 [Heading 1]: 8. Summaries — Including Timestamps
+P47 [List Bullet]: Generate an executive summary for quick understanding.
+P48 [List Bullet]: Generate a comprehensive detailed summary for substantial videos.
+P49 [List Bullet]: Generate topic-based timestamped sections whenever timestamps exist.
+P50 [List Bullet]: Generate a compact chapter-style timestamp index.
+P51 [List Bullet]: Do not create arbitrary fixed-duration chapters; split on actual topic changes.
+P52 [List Bullet]: Never invent timestamps. If unavailable, leave them blank and mark timestamp coverage unavailable.
+P53 [Normal]: "timeline_sections": [{
+  "section_no": 1,
+  "title": "",
+  "start_timestamp": "",
+  "end_timestamp": "",
+  "start_seconds": 0,
+  "end_seconds": 0,
+  "summary": "",
+  "topics": [],
+  "key_points": [],
+  "named_items": []
+}]
+P54 [Heading 1]: 9. Extract Actual Named Items — Never Only Counts
+P55 [Normal]: If a video says '7 foods', '5 tools', '3 remedies', '10 exercises', etc., extract the actual identifiable names. Do not store only the count.
+P56 [Normal]: "foods_mentioned": [
+  {"name": "Amla", "details": "", "timestamp": ""},
+  {"name": "Walnuts", "details": "", "timestamp": ""}
+]
+P57 [List Bullet]: Apply this rule to foods, ingredients, medicines, herbs, products, tools, technologies, exercises, mistakes, recommendations, places, books, websites, people, companies and other lists.
+P58 [List Bullet]: If the source promises 7 items but only 5 are recoverable, return those 5 and mark the list incomplete.
+P59 [List Bullet]: Never invent missing items to satisfy a stated count.
+P60 [Heading 1]: 10. Repeated Discussion Inside the Same Video
+P61 [Normal]: Detect every meaningful recurrence of the same topic/concept/entity/question in one video. Do not keep only the first occurrence.
+P62 [Normal]: "topic_occurrences": [{
+  "topic": "Vitamin B12",
+  "total_occurrences": 3,
+  "occurrences": [
+    {"start_timestamp":"04:12","end_timestamp":"05:48","context":"","key_point":""},
+    {"start_timestamp":"16:03","end_timestamp":"17:14","context":"","key_point":""}
+  ]
+}]
+P63 [Normal]: Find Timestamp must be able to return multiple occurrences in the same video.
+P64 [Heading 1]: 11. Things Discussed in This Video
+P65 [Normal]: Every report/intelligence record should end with a compact structured index named 'Things Discussed in This Video'. Hide empty groups.
+P66 [Normal]: "things_discussed": {
+  "topics": [],
+  "subtopics": [],
+  "people": [],
+  "organizations": [],
+  "companies": [],
+  "products": [],
+  "tools": [],
+  "technologies": [],
+  "foods": [],
+  "ingredients": [],
+  "herbs": [],
+  "medicines": [],
+  "conditions": [],
+  "locations": [],
+  "countries": [],
+  "questions": [],
+  "claims": [],
+  "recommendations": [],
+  "warnings": [],
+  "comparisons": [],
+  "recipes": [],
+  "remedies": [],
+  "how_to_guides": []
+}
+P67 [Normal]: Where meaningful, show clickable timestamps next to items in the HTML report.
+P68 [Heading 1]: 12. Key Takeaways, Facts, Numbers and Measurements
+P69 [List Bullet]: `key_takeaways`: concrete, meaningful points, not vague filler.
+P70 [List Bullet]: `important_facts`: preserve speaker attribution and timestamp where possible; do not convert opinions into facts.
+P71 [List Bullet]: `important_numbers`: capture percentages, prices, dosages, quantities, durations, dates, measurements, thresholds, statistics, version numbers and financial figures exactly as stated.
+P72 [Normal]: {"fact":"","timestamp":"","speaker_attribution":"","confidence":0.0}
+{"value":"","unit":"","meaning":"","timestamp":""}
+P73 [Heading 1]: 13. Entity Extraction
+P74 [Normal]: Extract only entities present in the source.
+P75 [Normal]: "entities": {
+  "people": [], "organizations": [], "companies": [], "products": [],
+  "tools": [], "technologies": [], "medicines": [], "foods": [],
+  "ingredients": [], "herbs": [], "diseases_conditions": [],
+  "locations": [], "countries": [], "websites_platforms": [],
+  "books_papers": [], "other": []
+}
+P76 [Heading 1]: 14. How-To / Tutorial Extraction
+P77 [Normal]: {
+  "title": "", "purpose": "", "requirements": [], "materials": [],
+  "prerequisites": [],
+  "steps": [{"step_no":1,"instruction":"","details":"","timestamp":""}],
+  "tips": [], "common_problems": [], "warnings": [],
+  "expected_result": "", "start_timestamp": "", "end_timestamp": ""
+}
+P78 [Normal]: Preserve actual order. Never create unstated steps.
+P79 [Heading 1]: 15. Remedies / Health / Treatment Extraction
+P80 [Normal]: {
+  "name": "", "claimed_purpose": "", "condition_or_goal": "",
+  "ingredients": [{"name":"","quantity":"","unit":""}],
+  "preparation": [], "dosage_as_stated": "", "timing_as_stated": "",
+  "frequency_as_stated": "", "duration_as_stated": "", "route_or_method": "",
+  "claimed_benefits": [], "warnings_stated": [], "contraindications_stated": [],
+  "evidence_or_source_stated": "", "speaker_claim_not_verified": true,
+  "start_timestamp": "", "end_timestamp": ""
+}
+P81 [List Bullet]: Never present a speaker's health claim as established fact merely because it appears in the video.
+P82 [List Bullet]: Use source-attribution language such as 'The speaker claims...' where appropriate.
+P83 [List Bullet]: Never invent dosage, timing, duration, contraindications, ingredients or warnings.
+P84 [Heading 1]: 16. Recipes
+P85 [Normal]: {
+  "name": "", "description": "", "servings": "",
+  "ingredients": [{"name":"","quantity":"","unit":"","notes":""}],
+  "preparation_steps": [], "cooking_time": "", "temperature": "",
+  "equipment": [], "substitutions_stated": [], "tips": [],
+  "storage_instructions": "", "start_timestamp": "", "end_timestamp": ""
+}
+P86 [Heading 1]: 17. Comparisons, Rankings and Recommendations
+P87 [List Bullet]: Comparisons: capture items, criteria, advantages/disadvantages, speaker preference, conclusion and timestamps.
+P88 [List Bullet]: Rankings: only assign ranks when the source actually ranks things; unordered lists remain unordered.
+P89 [List Bullet]: Recommendations: record recommendation, recommended-for, conditions, reason, attribution and timestamp.
+P90 [List Bullet]: Distinguish speaker recommendation, viewer-comment suggestion and verified fact.
+P91 [Heading 1]: 18. Products / Services / Tools
+P92 [Normal]: {
+  "name": "", "type": "", "brand_company": "", "purpose": "",
+  "features_mentioned": [], "advantages_mentioned": [],
+  "disadvantages_mentioned": [], "price_mentioned": "",
+  "recommendation_status": "", "timestamp": ""
+}
+P93 [Heading 1]: 19. Claims, Warnings and References
+P94 [Normal]: Claims are especially important for health, medicine, finance, politics, science, products, investment and legal topics.
+P95 [Normal]: {
+  "claim": "", "claim_type": "", "speaker": "", "timestamp": "",
+  "evidence_stated": "", "verification_status": "SOURCE_CLAIM_ONLY"
+}
+P96 [Normal]: Suggested verification states: SOURCE_CLAIM_ONLY, SUPPORTED_WITHIN_VIDEO, OPINION, PERSONAL_EXPERIENCE, UNVERIFIED.
+P97 [Normal]: Warnings/safety should capture warnings actually stated, with attribution and timestamp. Do not fabricate generic warnings as if they came from the video.
+P98 [Normal]: Sources/references should capture research papers, books, websites, government sources, medical guidelines, news outlets, studies, datasets, organizations, videos/articles only when explicitly mentioned. Never fabricate citation details.
+P99 [Heading 1]: 20. Glossary and Q&A
+P100 [List Bullet]: Glossary: technical/specialized terms with in-context definitions and aliases.
+P101 [List Bullet]: Q&A: explicit questions, FAQ material, and questions clearly answered by the content; include timestamps and confidence.
+P102 [List Bullet]: Do not answer beyond supplied evidence.
+P103 [Heading 1]: 21. Viewer Comment Intelligence
+P104 [Normal]: Comments are a separate evidence source and must never be mixed into transcript facts.
+P105 [Normal]: "viewer_comment_intelligence": {
+  "comments_available": true,
+  "comments_analyzed": 0,
+  "meaningful_comments": [],
+  "common_themes": [],
+  "common_questions": [],
+  "viewer_experiences": [],
+  "disagreements": [],
+  "corrections_or_challenges": [],
+  "useful_additional_information": [],
+  "sentiment_summary": "",
+  "comment_cautions": []
+}
+P106 [List Bullet]: Keep meaningful questions, experiences, corrections, additional information, warnings, disagreements and useful product feedback.
+P107 [List Bullet]: Exclude spam, emoji-only comments, generic praise, duplicates, abuse with no informational value, promotions and unrelated conversations.
+P108 [List Bullet]: Label viewer comments AUDIENCE-GENERATED / NOT VERIFIED.
+P109 [List Bullet]: Keep a separate meaningful-comments transcript for ChatGPT/report use.
+P110 [Heading 1]: 22. Evidence / Provenance — Mandatory
+P111 [Normal]: Every important extracted item should be traceable to evidence. This is one of the highest-priority additions.
+P112 [Normal]: "evidence": {
+  "source_type": "transcript",
+  "start_timestamp": "",
+  "end_timestamp": "",
+  "source_excerpt": "",
+  "source_id": ""
+}
+P113 [Normal]: Allowed source types should include timestamped_transcript, transcript, description, metadata, chapter, viewer_comment, existing_intelligence.
+P114 [Normal]: Evidence hierarchy: timestamped transcript > untimestamped transcript > official metadata/description > existing structured intelligence > viewer comments. If sources conflict, preserve the conflict rather than silently choosing comments over transcript.
+P115 [Heading 1]: 23. Anti-Hallucination Rules
+P116 [List Number]: Use only evidence supplied in the package for the extraction task.
+P117 [List Number]: Do not add facts from general knowledge unless a separate external-verification workflow explicitly requests it.
+P118 [List Number]: Do not guess missing details.
+P119 [List Number]: Do not invent timestamps, quantities, dosage, ingredients, names, sources, product specifications or list items.
+P120 [List Number]: Do not convert opinions or speaker claims into facts.
+P121 [List Number]: Keep viewer comments separate from transcript evidence.
+P122 [List Number]: If uncertain, return empty/null values, ambiguity flags and lower confidence.
+P123 [List Number]: Preserve exact VIDEO_ID.
+P124 [List Number]: Return valid machine-readable JSON only when JSON is requested.
+P125 [List Number]: Do not wrap JSON in Markdown fences or add prose outside the requested JSON.
+P126 [Heading 1]: 24. Transcript Status, Basis and Quality
+P127 [Normal]: Transcript statuses: AVAILABLE, PARTIAL, MISSING, UNUSABLE. Classification basis: full_transcript, timestamped_sections, partial_transcript, metadata_only, transcript_plus_comments.
+P128 [Normal]: If transcript is missing, do not fabricate detailed transcript-derived intelligence. Use metadata/description/comments only and lower confidence.
+P129 [Normal]: "analysis_quality": {
+  "overall_confidence": 0.0,
+  "source_coverage": "",
+  "timestamp_coverage": "",
+  "possible_missing_information": [],
+  "ambiguities": [],
+  "language_detected": "",
+  "translated_to_english": false
+},
+"field_confidence": {
+  "approved_title": 0.0,
+  "category": 0.0,
+  "primary_topic": 0.0
+}
+P130 [Heading 1]: 25. Input Evidence Sent to ChatGPT
+P131 [List Bullet]: VIDEO_ID, original title, existing approved title, channel and channel URL if known.
+P132 [List Bullet]: Video URL, description, upload/download dates, duration.
+P133 [List Bullet]: YouTube official category ID/name where available.
+P134 [List Bullet]: Current category/subcategory/tags and language.
+P135 [List Bullet]: Transcript status and full timestamped transcript when practical.
+P136 [List Bullet]: Existing chapters/sections.
+P137 [List Bullet]: Meaningful comments and comment count.
+P138 [List Bullet]: Existing report/intelligence when useful for incremental analysis.
+P139 [Normal]: Do not silently truncate transcripts at an arbitrary character limit. Use package-size management and continuation/merge logic.
+P140 [Heading 1]: 26. FULL, FOCUSED and TAXONOMY Package Modes
+P141 [List Bullet]: FULL MASTER INTELLIGENCE: complete source evidence for final per-video intelligence.
+P142 [List Bullet]: FOCUSED TOPIC/QUESTION: user question + relevant transcript sections + surrounding context + relevant intelligence/comments; clearly state omitted material.
+P143 [List Bullet]: TAG/TAXONOMY CLEANUP: optimized for title/category/subcategory/tags/concepts/synonyms normalization.
+P144 [Heading 1]: 27. Large Videos, Package Splitting and Token Estimation
+P145 [Normal]: Estimate characters/tokens before export and show video count, transcript/comment characters, estimated input/output tokens and recommended package count.
+P146 [Normal]: For very large videos, support per-video parts followed by a final merge package. Never truncate silently.
+P147 [Normal]: VIDEO abc123
+  Part 1/4 → intelligence
+  Part 2/4 → intelligence
+  Part 3/4 → intelligence
+  Part 4/4 → intelligence
+        ↓
+  FINAL VIDEO MERGE
+        ↓
+  One deduplicated master intelligence record
+P148 [Normal]: Every package should include package_id, part_number, total_parts, schema_version, prompt_version, app_version and checksum/hash where practical.
+P149 [Heading 1]: 28. Master Result File and Prompt Versioning
+P150 [Normal]: {
+  "schema_version": "2.x",
+  "prompt_version": "MASTER_INTELLIGENCE_YYYY_MM_DD_Vx",
+  "app_version": "",
+  "package_id": "",
+  "package_sha256": "",
+  "generated_at": "",
+  "video_updates": []
+}
+P151 [Normal]: Store the exact prompt used with the package so future result differences are explainable.
+P152 [Heading 1]: 29. Import, Validation and Merge
+P153 [List Number]: Validate JSON syntax and detect schema version.
+P154 [List Number]: Validate VIDEO_ID and reject placeholders.
+P155 [List Number]: Validate field types, timestamps and confidence ranges.
+P156 [List Number]: Keep existing populated data when incoming value is blank.
+P157 [List Number]: Add incoming populated data where existing value is empty.
+P158 [List Number]: Use explicit field-specific merge rules when both differ.
+P159 [List Number]: Preserve raw returned JSON permanently for audit/recovery.
+P160 [List Number]: Normalize structured intelligence.
+P161 [List Number]: Continue processing other videos if one fails.
+P162 [List Number]: Report per-video PASS/WARN/FAIL.
+P163 [List Number]: Support old taxonomy-only schema, older detailed-summary schema and new unified schema.
+P164 [Heading 1]: 30. Preview, Diff and Undo Before Applying
+P165 [Normal]: Before applying imported ChatGPT changes, provide a change preview/diff for important fields and allow Apply, Skip, and Apply All Safe Changes.
+P166 [Normal]: Every import must be reversible. Store import_id plus before/after values and support Undo Last ChatGPT Import and Undo specific import.
+P167 [Normal]: Never touch downloaded media during metadata/intelligence undo.
+P168 [Heading 1]: 31. Idempotent Imports and Stable IDs
+P169 [Normal]: Importing the same result twice must not duplicate tags, concepts, Q&A, timeline sections, entities, content cards, claims, embeddings, comments or recommendations.
+P170 [Normal]: Use stable IDs/fingerprints based on video_id + normalized content type + normalized content + timestamp or equivalent.
+P171 [Heading 1]: 32. Storage Design
+P172 [Normal]: Use a hybrid design: keep frequently searched scalar fields in SQLite; keep rich nested intelligence in structured JSON/existing intelligence stores; normalize searchable content into existing Phase 4/5/6 structures where useful.
+P173 [List Bullet]: Suggested SQLite scalars: video_id, approved_english_title, short_title, category, subcategory, primary_topic, transcript_status, classification_basis, classification_confidence, intelligence_updated_at, schema_version.
+P174 [List Bullet]: Do not duplicate huge transcripts into SQLite unless the current architecture intentionally does so.
+P175 [Heading 1]: 33. Content Cards
+P176 [Normal]: Create/extend cards for How-To, Remedy, Recipe, Comparison, Ranking, Recommendation, Warning, Fact, Claim, Product, Tool, Q&A, Glossary, Source and Timeline Section. Every card retains VIDEO_ID, source title, timestamps, content type, structured fields and provenance.
+P177 [Heading 1]: 34. Knowledge Center — ChatGPT-First
+P178 [Normal]: Knowledge Center must work from imported ChatGPT intelligence plus transcripts.
+P179 [List Bullet]: Search approved/original titles, category/subcategory, primary/secondary topics, tags, concepts, search phrases, synonyms, questions, summaries, timeline sections, entities, how-to, remedies, recipes, comparisons, rankings, products, warnings, glossary, Q&A, meaningful comments and transcript sections.
+P180 [List Bullet]: Transcript/video evidence ranks above viewer comments.
+P181 [List Bullet]: Semantic embeddings may improve search but are optional; fall back to keyword/taxonomy/concept/synonym/full-text/search-phrase matching.
+P182 [Heading 1]: 35. Ask ChatGPT About Selected Videos
+P183 [Normal]: Primary high-quality question workflow should generate a focused ChatGPT package from the selected videos, collection, topic, or question.
+P184 [Normal]: Select videos / collection / topic
+  ↓
+Enter question
+  ↓
+Create Focused ChatGPT Question Package
+  ↓
+Include relevant intelligence + transcript evidence + timestamps + comments where useful
+  ↓
+ChatGPT answer with VIDEO_ID + source title + timestamps + evidence
+P185 [Normal]: Optionally import returned ChatGPT answers into a reusable Q&A history keyed by question_id/package_id.
+P186 [Heading 1]: 36. Find Timestamp
+P187 [Normal]: Use timeline sections, topic occurrences, Q&A, how-to/remedy/recipe/comparison timestamps and transcript chunks. Return VIDEO_ID, title, best timestamp, matching section, reason and confidence. Support multiple occurrences within one video.
+P188 [Heading 1]: 37. Related Videos from My Library
+P189 [Normal]: After intelligence import, calculate related videos from actual local-library records. Do not ask ChatGPT to invent library URLs.
+P190 [List Bullet]: Signals: primary/secondary topics, transcript content, timeline sections, tags, concepts, entities, search phrases, synonyms, questions, things discussed, category/subcategory and optional embeddings.
+P191 [List Bullet]: Show similarity score, matching topics/concepts/questions, reason and best matching transcript section.
+P192 [List Bullet]: Display related-library videos with thumbnails where available.
+P193 [List Bullet]: Keep topic similarity separate from duplicate similarity.
+P194 [Normal]: {
+  "video_id": "",
+  "title": "",
+  "similarity_score": 0.0,
+  "matching_topics": [],
+  "matching_concepts": [],
+  "matching_questions": [],
+  "best_matching_section": {
+    "start_timestamp": "",
+    "end_timestamp": "",
+    "section_title": ""
+  },
+  "reason": ""
+}
+P195 [Heading 1]: 38. Duplicate and Near-Duplicate Video Detection
+P196 [Normal]: Create a duplicate system independent from related-topic matching. Never classify videos as duplicates merely because they discuss the same subject.
+P197 [List Bullet]: Exact VIDEO_ID duplicate.
+P198 [List Bullet]: Exact media/file duplicate using hash/fingerprint.
+P199 [List Bullet]: Same normalized transcript.
+P200 [List Bullet]: Near duplicate with intro/outro/edit differences.
+P201 [List Bullet]: Reupload under another source/channel.
+P202 [List Bullet]: Short excerpt of a longer video.
+P203 [List Bullet]: Longer version containing the shorter video.
+P204 [List Bullet]: Translated/dubbed version.
+P205 [List Bullet]: Compilation containing a substantial segment.
+P206 [List Bullet]: `same_topic_not_duplicate` as an explicit non-duplicate relationship.
+P207 [Normal]: "duplicate_relationship": {
+  "duplicate_group_id": "",
+  "relationship_type": "",
+  "similarity_score": 0.0,
+  "transcript_overlap": 0.0,
+  "reason": [],
+  "canonical_video_id": ""
+}
+P208 [Normal]: Search should prefer one canonical result and list variants underneath. Cross-video synthesis should normally count a duplicate cluster once unless a variant adds materially different information. Never auto-delete duplicates; provide Review Duplicate Group.
+P209 [Heading 1]: 39. Cross-Video Intelligence and ChatGPT Synthesis
+P210 [Normal]: Use imported ChatGPT intelligence to build topic-level aggregation, then optionally generate a Cross-Video ChatGPT Analysis Package for deeper synthesis.
+P211 [List Bullet]: Areas of agreement.
+P212 [List Bullet]: Areas of disagreement and contradictions.
+P213 [List Bullet]: Different recommendations/dosages/approaches stated.
+P214 [List Bullet]: Common questions.
+P215 [List Bullet]: Unique information.
+P216 [List Bullet]: Important claims/warnings.
+P217 [List Bullet]: Best supporting videos and timestamps.
+P218 [List Bullet]: Do not imply majority agreement proves factual truth.
+P219 [Heading 1]: 40. Topic Pages, Entity Dossiers and Relationship Graph
+P220 [Normal]: Optional but strongly recommended future-ready features:
+P221 [List Bullet]: Auto-generated topic pages aggregating videos, questions, remedies, claims, warnings, products, contradictions and timestamps.
+P222 [List Bullet]: Entity dossiers aggregating aliases, mentions, videos, claims, recipes/remedies, warnings and related concepts.
+P223 [List Bullet]: Relationship graph using SQLite/JSON initially: video → discusses → topic; video → mentions → entity; claim → supported/contradicted by → source; video → related/duplicate-of → video.
+P224 [Heading 1]: 41. Multilingual Intelligence
+P225 [List Bullet]: Detect source language and mixed languages.
+P226 [List Bullet]: Preserve original-language terms and aliases.
+P227 [List Bullet]: Translate approved titles into natural English while preserving original title.
+P228 [List Bullet]: Allow Knowledge Center search in English or original language using aliases/translations/synonyms.
+P229 [List Bullet]: Do not lose important domain terms during translation.
+P230 [Heading 1]: 42. HTML Reports
+P231 [Normal]: Reports should display imported master intelligence with empty sections hidden.
+P232 [List Bullet]: Executive Summary, Detailed Summary, Key Takeaways.
+P233 [List Bullet]: Topics, Timeline/Chapters, Repeated Topic Occurrences.
+P234 [List Bullet]: Questions Answered, Important Facts/Numbers, Entities.
+P235 [List Bullet]: How-To, Remedies, Recipes, Comparisons, Rankings, Recommendations.
+P236 [List Bullet]: Products/Tools, Claims, Warnings, Sources, Glossary, Q&A.
+P237 [List Bullet]: Meaningful Viewer Comments clearly separated.
+P238 [List Bullet]: Related Videos and duplicate/variant information.
+P239 [List Bullet]: Things Discussed in This Video near the end.
+P240 [List Bullet]: Clickable timestamps that seek local video where possible.
+P241 [Heading 1]: 43. Video Details
+P242 [Normal]: Keep the main panel concise: primary topic, category/subcategory, tags, key takeaways, transcript status, analysis confidence, questions answered, related videos, duplicate status. Link to full report for deep intelligence.
+P243 [Heading 1]: 44. Automatic Refresh After Successful ChatGPT Import
+P244 [Normal]: Import
+ ↓
+Validate
+ ↓
+Normalize intelligence
+ ↓
+Extract/update Content Cards
+ ↓
+Apply approved title/taxonomy
+ ↓
+Refresh library indexes
+ ↓
+Refresh HTML report
+ ↓
+Refresh Knowledge Center structures
+ ↓
+Refresh Phase 5/Phase 6 data structures if still used
+ ↓
+Refresh optional embeddings
+ ↓
+Clear stale answer/search caches
+ ↓
+Refresh Artifact Registry
+ ↓
+Final validation
+P245 [Normal]: Prefer incremental per-video refresh; avoid rebuilding the whole library unnecessarily.
+P246 [Heading 1]: 45. Stale Intelligence Detection
+P247 [Normal]: Hash source transcript/comments/metadata at analysis time. If the current source hash differs later, mark affected intelligence STALE.
+P248 [List Bullet]: Track taxonomy stale, summary stale, comments stale, timeline stale, embeddings stale separately where practical.
+P249 [List Bullet]: Reprocess only affected layers rather than regenerating everything.
+P250 [Heading 1]: 46. Processing Lineage
+P251 [Normal]: Track where important values came from: source, ChatGPT import ID, prompt version, timestamp and prior value. Keep source content, AI extraction, cross-video synthesis and optional external verification as separate layers.
+P252 [Heading 1]: 47. Manual Review Queue and Quality Dashboard
+P253 [List Bullet]: Needs Review when confidence is low, timestamp invalid, dosage ambiguous, category conflict, transcript partial/garbled, unknown entity, import disagreement or suspected hallucination.
+P254 [List Bullet]: Quality indicators: transcript quality, metadata quality, AI analysis quality, timestamp coverage, taxonomy confidence, comment coverage and overall intelligence quality.
+P255 [List Bullet]: Filters: below quality threshold, missing transcript, missing ChatGPT intelligence, stale intelligence, needs re-analysis.
+P256 [Heading 1]: 48. Optional External Verification — Separate Workflow
+P257 [Normal]: Do not mix web verification into normal transcript extraction. Optionally support `Verify Claims Externally` later. Store external verification separately as Supported, Partially Supported, Unsupported, Insufficient Evidence or Outdated, with cited external sources. Never rewrite what the source video actually said.
+P258 [Heading 1]: 49. UI Changes — Preserve Existing Dashboard
+P259 [Normal]: Do not redesign the dashboard. Keep the ChatGPT flow connected and understandable.
+P260 [Normal]: Phase 2 Package Integrity & Completeness Audit
+ ↓
+Rebuild Comment Intelligence & Comments Transcript
+ ↓
+Create ChatGPT Packages & Tag Cleanup
+ ↓
+Stage File / Upload & Inspect
+ ↓
+Import, Validate & Extract ChatGPT Results
+ ↓
+Preview ChatGPT Changes
+ ↓
+Apply ChatGPT Updates & Organization Moves
+ ↓
+Knowledge & AI / Knowledge Center
+ ↓
+Export Structured Content Cards CSV
+P261 [Normal]: Package creation modes: FULL MASTER INTELLIGENCE, FOCUSED TOPIC/QUESTION, TAG/TAXONOMY CLEANUP. Show estimated size before creation.
+P262 [Heading 1]: 50. Help and Hover Help
+P263 [Normal]: Update Help/hover text so it accurately describes titles, taxonomy, topics, tags, concepts, search intelligence, summaries, timeline sections, repeated topics, named items, facts, numbers, entities, how-to, remedies, recipes, comparisons, rankings, recommendations, products/tools, claims, warnings, sources, glossary, Q&A, comments, evidence/provenance, related videos, duplicates and quality/confidence.
+P264 [Heading 1]: 51. Error Handling and Truthful Status
+P265 [Normal]: A single bad video must not fail the whole import. Continue processing and report counts plus per-video errors.
+P266 [Normal]: CHATGPT INTELLIGENCE IMPORT COMPLETE
+Package videos       : 100
+Imported successfully: 94
+Warnings             : 5
+Failed               : 1
+P267 [Normal]: WARN / ACTION REQUIRED must remain WARN. Never print a success completion banner for warning/failure results. Use the existing truthful job-status system.
+P268 [Heading 1]: 52. Regression and Runtime Testing
+P269 [Normal]: Do not stop at compile checks. Runtime-test at least:
+P270 [List Number]: Full transcript, partial transcript, missing transcript.
+P271 [List Number]: With comments and without comments.
+P272 [List Number]: Health/remedy, recipe, how-to, comparison, product review, entertainment.
+P273 [List Number]: Non-English/mixed-language title and transcript.
+P274 [List Number]: Apostrophes/quotes and large transcript.
+P275 [List Number]: Multi-part package and final merge.
+P276 [List Number]: Invalid JSON, missing/placeholder/unknown VIDEO_ID.
+P277 [List Number]: Old-schema and new-schema imports.
+P278 [List Number]: Duplicate package import/idempotency.
+P279 [List Number]: Empty incoming field vs populated existing field.
+P280 [List Number]: Timestamp parsing and repeated-topic occurrences.
+P281 [List Number]: HTML report generation and Things Discussed section.
+P282 [List Number]: Knowledge Center search and multilingual aliases.
+P283 [List Number]: Find Timestamp.
+P284 [List Number]: Related-video matching.
+P285 [List Number]: Exact/same-transcript/near-duplicate detection and same-topic-not-duplicate.
+P286 [List Number]: Preview/diff/undo.
+P287 [List Number]: Stale-intelligence hash detection.
+P288 [List Number]: Queue/status/error behavior.
+P289 [Normal]: Also regression-test existing Full Download, Media Only, Smart Resume, Metadata Scan, Artifact Registry, Delete Markers, Collections, exports, Favorite/Watched/Rating/Archive, queue controls, Selenium, Subscriptions, Streams, Clip Studio, Knowledge Center, reports, recovery, diagnostics, Help, hover help and Control Tower.
+P290 [Heading 1]: 53. Packaging Safety
+P291 [List Bullet]: Final release ZIP must exclude video_library.db, downloaded media, private transcripts, cookies/browser profiles, API keys, ChatGPT results and personal comments.
+P292 [List Bullet]: Exclude __pycache__ and *.pyc.
+P293 [List Bullet]: Do not bundle third-party executables unless legally and intentionally part of the project.
+P294 [List Bullet]: Use portable dependency installation for external tools.
+P295 [Heading 1]: 54. Deliverables
+P296 [List Number]: Updated full code package and incremented version.
+P297 [List Number]: Exact files/functions changed.
+P298 [List Number]: Formal master ChatGPT schema.
+P299 [List Number]: Example FULL package and expected ChatGPT JSON result.
+P300 [List Number]: Storage/database changes and migration steps.
+P301 [List Number]: Import merge/idempotency rules.
+P302 [List Number]: Backward compatibility explanation.
+P303 [List Number]: Runtime test results with PASS/WARN/FAIL.
+P304 [List Number]: Known limitations.
+P305 [List Number]: Final ZIP without personal data.
+P306 [Heading 1]: 55. Additional Features Worth Asking Codex to Add
+P307 [Normal]: These are additional high-value improvements beyond the core requirements. Implement them only if they fit cleanly without destabilizing the application; otherwise document them as the next phase.
+P308 [List Bullet]: One-click `Re-analyze with ChatGPT` from Video Details with Taxonomy Only, Full Intelligence, Comments Only, Summary Only and Focused Question modes.
+P309 [List Bullet]: One-click `Ask ChatGPT About This Video` that creates a focused package scoped to one VIDEO_ID.
+P310 [List Bullet]: `Compare Selected Videos`: select 2-10 videos and generate a ChatGPT comparison package with agreements, differences, claims, recommendations, products, warnings and timestamped evidence.
+P311 [List Bullet]: Quick View / Detailed Report / Full Intelligence Report display depths.
+P312 [List Bullet]: Exports of intelligence to JSON, JSONL, CSV, HTML and Markdown.
+P313 [List Bullet]: Smart chapter generation from timestamped topic sections for player/report/Clip Studio.
+P314 [List Bullet]: Related-video explanations: show why two videos match, not only a score.
+P315 [List Bullet]: Duplicate cluster management: choose canonical version, archive variants manually, never auto-delete.
+P316 [List Bullet]: Cross-video topic dashboard showing number of videos, claims, questions, remedies, warnings and contradictions.
+P317 [List Bullet]: Coverage-gap detection: identify important questions/topics mentioned in the library but poorly covered.
+P318 [List Bullet]: `What is unique in this video?` extraction to identify information not found in closely related library videos.
+P319 [List Bullet]: `What changed?` comparison when a newer video revisits the same topic.
+P320 [List Bullet]: Series/playlist intelligence: identify multipart series, episode order and shared themes.
+P321 [List Bullet]: Speaker/guest extraction and recurring-speaker pages when reliably identifiable from metadata/transcript.
+P322 [List Bullet]: Action-item extraction for tutorials/workflows: commands, configuration values, prerequisites and expected outputs.
+P323 [List Bullet]: Code/command extraction into copyable structured blocks with timestamps for technical videos.
+P324 [List Bullet]: Table extraction: convert comparisons, prices, specifications, schedules or ranked lists into structured tables when the transcript supports them.
+P325 [List Bullet]: URL/resource extraction from description/transcript/comments, with source type clearly recorded.
+P326 [List Bullet]: Date-sensitive information flagging: prices, software versions, laws, news and recommendations that may become outdated.
+P327 [List Bullet]: `Needs Update` indicator when a technical/current-affairs video is old or source metadata changed; do not assert the content is wrong solely because it is old.
+P328 [List Bullet]: Watch-progress-aware intelligence: allow users to jump to unwatched relevant sections.
+P329 [List Bullet]: Personal notes/bookmarks linked to VIDEO_ID + timestamp without altering ChatGPT source intelligence.
+P330 [List Bullet]: Saved searches/topics that can show newly downloaded matching videos.
+P331 [List Bullet]: Library-wide question package: select a topic and generate the smallest evidence-rich ChatGPT package needed to answer it.
+P332 [List Bullet]: Confidence-aware search ranking: down-rank metadata-only or low-confidence intelligence.
+P333 [List Bullet]: Source diversity indicator for cross-video synthesis so 10 duplicate/reupload videos do not look like 10 independent sources.
+P334 [List Bullet]: Backup before every schema migration plus repeatable/idempotent migrations.
+P335 [List Bullet]: Performance indexes and lazy loading so richer intelligence does not make the dashboard slow.
+P336 [List Bullet]: Background/incremental rebuild queue with progress, cancel/retry and truthful completion messages.
+P337 [List Bullet]: Automated integrity audit checking orphan JSON, missing VIDEO_ID markers, missing report links, stale hashes and unmatched imported intelligence.
+P338 [Heading 1]: 56. Priority Order for Codex
+P339 [Normal]: If implementing everything at once is risky, use this priority order:
+P340 [List Number]: Unified ChatGPT schema + full/timestamped summaries + English titles + actual named items.
+P341 [List Number]: Evidence/provenance + anti-hallucination rules.
+P342 [List Number]: Robust import/validation/merge + old-schema compatibility + idempotency.
+P343 [List Number]: Things Discussed + repeated-topic occurrences.
+P344 [List Number]: Reports + Knowledge Center integration.
+P345 [List Number]: Related-library video matching.
+P346 [List Number]: Duplicate/near-duplicate detection.
+P347 [List Number]: Preview/diff/undo + stale-intelligence detection.
+P348 [List Number]: Cross-video synthesis packages and topic/entity aggregation.
+P349 [List Number]: Optional enhancements from Section 55.
+P350 [Heading 1]: 57. Final Non-Negotiable Outcome
+P351 [Normal]: One ChatGPT analysis should become reusable structured intelligence everywhere. The user should not need to ask ChatGPT separately for title, summary, timestamps, tags, remedies, lists, comments, related topics, etc.
+P352 [Normal]: SOURCE VIDEO
+  ├─ Metadata
+  ├─ Original title/language
+  ├─ Transcript + timestamps
+  ├─ Description
+  └─ Meaningful comments
+          ↓
+FULL CHATGPT MASTER INTELLIGENCE PACKAGE
+          ↓
+STRUCTURED CHATGPT JSON
+          ↓
+VALIDATE + NORMALIZE + VERSION + STORE + AUDIT
+          ↓
+  ├─ English title / taxonomy
+  ├─ Executive + detailed timestamped summaries
+  ├─ Named items and Things Discussed
+  ├─ Repeated topic occurrences
+  ├─ Facts / numbers / entities
+  ├─ How-To / remedies / recipes
+  ├─ Comparisons / rankings / recommendations
+  ├─ Claims / warnings / references
+  ├─ Q&A / glossary / comments
+  ├─ Evidence/provenance
+  ├─ Related-library videos
+  └─ Duplicate relationships
+          ↓
+VIDEO LIBRARY / REPORTS / KNOWLEDGE CENTER / SEARCH /
+COLLECTIONS / FIND TIMESTAMP / CHATGPT QUESTION PACKAGES / EXPORTS
+P353 [Normal]: Do not stop after changing only the prompt. Implement the complete end-to-end workflow: package creation → ChatGPT result → validation → preview → import → storage → indexing → reports → Knowledge Center → related videos → duplicate analysis → audit/undo.
+P355 [Heading 1]: 58. Additional Mandatory Requirements — Source Priority, Novelty, Comments, Safety and Reliability
+P356 [Heading 2]: 58.1 Identify Which Videos Benefit from Comment Analysis
+P357 [Normal]: Do not download/process comments indiscriminately for every video. Analyze the transcript, metadata and content type first and decide whether viewer comments are likely to add useful intelligence.
+P358 [Normal]: {
+  "comment_usefulness": {
+    "recommended": true,
+    "score": 0.0,
+    "reason": [],
+    "expected_value": []
+  }
+}
+P359 [List Bullet]: Comments are especially useful when the transcript contains recommendations, products, treatments, tutorials, troubleshooting, controversial claims, personal-experience topics, questions likely to attract follow-up, rapidly changing information, or content where viewers commonly report results/corrections.
+P360 [List Bullet]: Examples of expected value: personal experiences, result reports, corrections, common questions, missing troubleshooting steps, product feedback, warnings, updated links/resources, disagreement with the speaker, and real-world implementation issues.
+P361 [List Bullet]: Comments are usually lower priority for pure music, comedy, generic entertainment, trailers, clips with little informational content, or videos where comments add no useful evidence.
+P362 [List Bullet]: The decision should be stored per VIDEO_ID and shown in the UI/report.
+P363 [List Bullet]: If comments are not recommended, the system may skip comment download/ChatGPT comment processing unless the user explicitly requests it.
+P364 [List Bullet]: Never treat comment usefulness as a truth/quality score for the video.
+P365 [Heading 2]: 58.2 Source Priority Per Field
+P366 [Normal]: Define a strict field-source priority so ChatGPT does not overwrite reliable source metadata unnecessarily.
+P367 [Normal]: Suggested source priority:
+
+VIDEO_ID / source URL
+  → authoritative source metadata
+
+Original title / channel / upload date / duration / official category
+  → authoritative YouTube/source metadata first
+
+Approved English title
+  → ChatGPT-derived from source title + transcript context
+  → preserve original title separately
+
+Summary / topics / questions / timeline / claims
+  → transcript first
+  → description/metadata second
+
+Viewer comment intelligence
+  → comments only
+  → never overwrite transcript-derived facts
+
+Manual user edits
+  → highest priority when LOCKED_BY_USER
+
+P368 [List Bullet]: Source metadata should not be replaced merely because ChatGPT returns a different channel/title/date/category value.
+P369 [List Bullet]: ChatGPT may propose a cleaned English display title/category, but source metadata remains preserved.
+P370 [List Bullet]: Transcript-derived intelligence should rank above comments.
+P371 [List Bullet]: Comments may supplement or challenge transcript content, but must remain a separate evidence layer.
+P372 [List Bullet]: Record which source won for each field.
+P373 [Heading 2]: 58.3 Information Novelty
+P374 [Normal]: Add `unique_information_in_this_video` so related-video results can explain what a video contributes beyond other similar videos.
+P375 [Normal]: "unique_information_in_this_video": [
+  {
+    "item": "",
+    "type": "",
+    "timestamp": "",
+    "why_unique": "",
+    "compared_against_video_ids": []
+  }
+]
+P376 [List Bullet]: Calculate novelty after related-video/topic matching, not by asking ChatGPT to guess the rest of the library.
+P377 [List Bullet]: Examples: a unique remedy, a different product, a newer software version, a different warning, an uncommon troubleshooting step, a unique comparison criterion, or a distinct personal experience.
+P378 [List Bullet]: Use novelty to diversify related-video recommendations.
+P379 [Heading 2]: 58.4 Contradictions and Corrections Inside the Same Video
+P380 [Normal]: Detect when a speaker changes, corrects, qualifies or contradicts an earlier statement later in the same video.
+P381 [Normal]: "intra_video_corrections": [
+  {
+    "earlier_statement": "",
+    "earlier_timestamp": "",
+    "later_statement": "",
+    "later_timestamp": "",
+    "relationship": "correction",
+    "notes": ""
+  }
+]
+P382 [List Bullet]: Do not silently merge conflicting statements into one conclusion.
+P383 [List Bullet]: Prefer the later explicit correction when producing a final summary, while preserving the earlier statement for audit/evidence.
+P384 [List Bullet]: Allowed relationships may include correction, qualification, contradiction, retraction, clarification and update.
+P385 [Heading 2]: 58.5 Temporal / Time-Sensitive Statements
+P386 [Normal]: Capture statements whose usefulness may decay over time.
+P387 [Normal]: "temporal_statements": [
+  {
+    "statement": "",
+    "timestamp": "",
+    "time_reference": "as of 2025",
+    "time_sensitive_type": "price",
+    "needs_freshness_review": true
+  }
+]
+P388 [List Bullet]: Detect phrases such as currently, today, as of <date/year>, next month, recently, latest, new version, current price, currently available, current law/rule, and release/version references.
+P389 [List Bullet]: Types include price, software_version, law/regulation, product_availability, schedule, news/current_affairs, recommendation, policy, rate, API behavior, product feature and other time-sensitive data.
+P390 [List Bullet]: Do not automatically declare old information wrong; flag it as potentially stale.
+P391 [List Bullet]: Knowledge Center/report should show a visible freshness indicator when appropriate.
+P392 [Heading 2]: 58.6 Technical-Video Extraction
+P393 [Normal]: Technical videos must be preserved as actionable technical knowledge, not flattened into generic summaries.
+P394 [Normal]: "technical_intelligence": {
+  "commands": [],
+  "code_snippets": [],
+  "configuration_settings": [],
+  "file_paths": [],
+  "error_messages": [],
+  "apis_endpoints": [],
+  "urls_resources": [],
+  "prerequisites": [],
+  "expected_outputs": [],
+  "troubleshooting_steps": []
+}
+P395 [List Bullet]: Every technical item should include a timestamp and evidence/provenance.
+P396 [List Bullet]: Preserve commands/code verbatim from the source where reliably recoverable.
+P397 [List Bullet]: Do not 'fix' code or commands silently. If ChatGPT proposes a correction, store it separately from the source-extracted command.
+P398 [List Bullet]: Capture command purpose, platform/shell/language when determinable, prerequisites and expected output.
+P399 [List Bullet]: Capture exact error text where possible so Knowledge Center can find a video by an error message.
+P400 [Heading 2]: 58.7 Structured Tables and Lists
+P401 [Normal]: When source content is structurally tabular, preserve the structure instead of flattening it into prose.
+P402 [Normal]: "structured_tables": [
+  {
+    "title": "",
+    "table_type": "comparison",
+    "columns": [],
+    "rows": [],
+    "start_timestamp": "",
+    "end_timestamp": "",
+    "notes": ""
+  }
+]
+P403 [List Bullet]: Examples: comparison matrices, price lists, food lists, product specifications, rankings, schedules, step lists, dosage tables, feature matrices, version tables and pros/cons.
+P404 [List Bullet]: Preserve actual named items and values.
+P405 [List Bullet]: Do not invent missing table cells.
+P406 [List Bullet]: Render appropriate tables in HTML reports and export them in JSON/CSV where useful.
+P407 [Heading 1]: 59. Playlist, Series and Episode Intelligence
+P408 [List Bullet]: Detect Part 1/2/3, episode numbers, course modules, chapters, seasons/series and playlist relationships.
+P409 [List Bullet]: Preserve intended viewing order.
+P410 [List Bullet]: Store playlist/series ID/name/URL when available from authoritative metadata.
+P411 [List Bullet]: Identify predecessor/successor videos where confidently known.
+P412 [List Bullet]: Do not infer a series solely because titles are similar.
+P413 [List Bullet]: Knowledge Center should allow opening the whole series and show current position.
+P414 [Normal]: "series_relationship": {
+  "series_name": "",
+  "playlist_id": "",
+  "episode_number": null,
+  "part_number": null,
+  "previous_video_id": "",
+  "next_video_id": "",
+  "confidence": 0.0
+}
+P415 [Heading 1]: 60. Thumbnail Intelligence and UI Use
+P416 [List Bullet]: Use existing downloaded/source thumbnails for Video Library cards, related-video suggestions, duplicate groups, topic pages and reports.
+P417 [List Bullet]: Thumbnail image analysis must NOT be required for core ChatGPT intelligence.
+P418 [List Bullet]: If thumbnail analysis is later added, keep it optional and separate from transcript evidence.
+P419 [List Bullet]: Do not classify a video based only on thumbnail text/image when transcript/metadata are available.
+P420 [Heading 1]: 61. Per-Field Provenance and Manual Locks
+P421 [Normal]: Track the origin of important fields, not only evidence for facts.
+P422 [Normal]: "field_provenance": {
+  "approved_english_title": {
+    "source": "chatgpt_import",
+    "import_id": "",
+    "prompt_version": "",
+    "updated_at": "",
+    "locked_by_user": false
+  },
+  "category": {
+    "source": "manual_edit",
+    "updated_at": "",
+    "locked_by_user": true
+  }
+}
+P423 [List Bullet]: Possible sources: authoritative_metadata, transcript_extraction, description, chatgpt_import, manual_edit, previous_intelligence, migration, recovery.
+P424 [List Bullet]: Manual edits should normally be protected from future ChatGPT overwrites.
+P425 [List Bullet]: Add `LOCKED_BY_USER` / `locked_by_user=true` for fields such as approved title, category, subcategory, tags, topic and other important metadata.
+P426 [List Bullet]: Import preview must show when ChatGPT wants to change a locked field.
+P427 [List Bullet]: Locked fields cannot be overwritten without an explicit user-approved unlock/override.
+P428 [List Bullet]: Preserve prior field values in history/audit where practical.
+P429 [Heading 1]: 62. Library-Wide Orphan and Integrity Audit
+P430 [Normal]: Add an audit that scans the whole library for disconnected artifacts and records.
+P431 [List Bullet]: Media exists but no SQLite VIDEO_ID row.
+P432 [List Bullet]: SQLite row exists but media is missing.
+P433 [List Bullet]: Transcript/subtitles exist but media/video row is missing.
+P434 [List Bullet]: ChatGPT result exists but VIDEO_ID is missing/invalid/not in DB.
+P435 [List Bullet]: HTML report exists but intelligence is missing.
+P436 [List Bullet]: Intelligence JSON exists but report/index does not reference it.
+P437 [List Bullet]: .video_id marker disagrees with database/folder identity.
+P438 [List Bullet]: Duplicate folders for the same VIDEO_ID.
+P439 [List Bullet]: Collection references missing VIDEO_IDs.
+P440 [List Bullet]: Artifact Registry references missing files or misses existing files.
+P441 [List Bullet]: Stale report/knowledge/embedding artifacts based on hashes/updated_at.
+P442 [Normal]: This audit should be read-only by default. Provide separate safe repair actions; never auto-delete orphaned content.
+P443 [Heading 1]: 63. Canonical Duplicate Source Selection
+P444 [Normal]: For a duplicate group, recommend the best canonical copy but never automatically delete/archive variants.
+P445 [Normal]: "canonical_recommendation": {
+  "recommended_video_id": "",
+  "score": 0.0,
+  "reasons": [],
+  "alternatives": []
+}
+P446 [Normal]: Canonical scoring may consider completeness, media quality/resolution, duration, transcript quality, metadata quality, comment availability, original source/channel, report/intelligence completeness and corruption status.
+P447 [Normal]: The recommendation must be reviewable and reversible.
+P448 [Heading 1]: 64. Related-Video Diversity
+P449 [List Bullet]: Do not recommend five near-identical/reuploaded videos just because their similarity score is high.
+P450 [List Bullet]: Collapse duplicate groups before ranking related videos.
+P451 [List Bullet]: Prefer complementary videos that add new subtopics, warnings, approaches, examples, versions or perspectives.
+P452 [List Bullet]: Use `unique_information_in_this_video` as a diversity signal.
+P453 [List Bullet]: Allow an option to include/exclude duplicate variants from suggestions.
+P454 [Heading 1]: 65. Atomic Import and Rollback
+P455 [Normal]: Every VIDEO_ID import must be atomic.
+P456 [List Bullet]: If validation/import fails halfway through one video's update, roll back that video's database/files/index changes.
+P457 [List Bullet]: Do not leave half-updated metadata, content cards, report references or intelligence JSON.
+P458 [List Bullet]: For batch import, one video's rollback must not force all valid videos to fail.
+P459 [List Bullet]: Write durable import transaction/audit state: STARTED, COMMITTED, ROLLED_BACK, FAILED.
+P460 [List Bullet]: Keep raw returned ChatGPT JSON even when normalization/import fails.
+P461 [List Bullet]: Undo should restore the pre-import state of that VIDEO_ID without touching media.
+P462 [Heading 1]: 66. Prompt and Schema Regression Fixtures
+P463 [Normal]: Keep a small permanent test fixture set representing known old and new ChatGPT results.
+P464 [List Bullet]: Taxonomy-only old schema.
+P465 [List Bullet]: Older detailed-summary schema.
+P466 [List Bullet]: New unified schema.
+P467 [List Bullet]: Missing transcript case.
+P468 [List Bullet]: Multilingual title case.
+P469 [List Bullet]: Remedy/health case.
+P470 [List Bullet]: Technical-video case with commands/errors.
+P471 [List Bullet]: Comments case.
+P472 [List Bullet]: Repeated-topic/timestamp case.
+P473 [List Bullet]: Duplicate/near-duplicate case.
+P474 [List Bullet]: Apostrophes/quotes and unusual Unicode.
+P475 [List Bullet]: Large/multipart result.
+P476 [Normal]: Every future importer/schema change must run these fixtures and confirm the normalized interpretation remains expected.
+P477 [Heading 1]: 67. Concurrency and Per-VIDEO_ID File Locking
+P478 [List Bullet]: Prevent Smart Resume, Download, ChatGPT Import, report rebuild, delete processing, migration and intelligence rebuild from modifying the same VIDEO_ID simultaneously.
+P479 [List Bullet]: Use a clear per-VIDEO_ID lock/lease with timeout and stale-lock recovery.
+P480 [List Bullet]: Read-only search/report viewing should remain available where safe.
+P481 [List Bullet]: Queue UI should show why an operation is waiting: e.g. `Waiting for VIDEO_ID lock held by ChatGPT Import`.
+P482 [List Bullet]: Never use a lock implementation that can permanently strand the library after a crash.
+P483 [Heading 1]: 68. Database Migration Versioning
+P484 [List Bullet]: Create numbered schema migrations with explicit from_version → to_version.
+P485 [List Bullet]: Backup metadata/database before migrations.
+P486 [List Bullet]: Each migration must be idempotent or detect already-applied state.
+P487 [List Bullet]: Validate schema/data after migration.
+P488 [List Bullet]: Record migration history.
+P489 [List Bullet]: Provide recovery/rollback strategy where practical.
+P490 [List Bullet]: Do not scatter uncontrolled `ALTER TABLE` logic through unrelated runtime functions.
+P491 [Normal]: schema_migrations/
+  001_initial.sql / Python migration
+  002_intelligence_fields
+  003_field_provenance
+  004_duplicate_groups
+  ...
+P492 [Heading 1]: 69. Performance Requirements and Scaling
+P493 [Normal]: Design and test for at least 100, 1,000 and 10,000+ video libraries.
+P494 [List Bullet]: Do not repeatedly compare every full transcript with every other full transcript on each page load.
+P495 [List Bullet]: Use indexes, hashes, cached normalized fingerprints, inverted indexes and/or embeddings where appropriate.
+P496 [List Bullet]: Related-video and duplicate scans should be incremental after a new/changed video.
+P497 [List Bullet]: UI should lazy-load large lists and paginate/virtualize where needed.
+P498 [List Bullet]: Long-running rebuilds must run through the queue with progress, cancel/retry and truthful completion.
+P499 [List Bullet]: Avoid rebuilding Phase/Knowledge/Reports for unchanged VIDEO_IDs.
+P500 [List Bullet]: Add basic runtime/performance telemetry for major operations so regressions are detectable.
+P501 [Heading 1]: 70. Data Portability Per VIDEO_ID
+P502 [Normal]: A video's complete metadata and intelligence must be exportable/recoverable independently of the main SQLite database.
+P503 [Normal]: portable_video_record/
+  manifest.json
+  metadata.json
+  intelligence.json
+  comments_intelligence.json
+  artifact_registry.json
+  report.html
+  transcript.vtt/txt (when allowed/present)
+  thumbnail reference/copy
+
+P504 [List Bullet]: Include schema version, hashes and VIDEO_ID.
+P505 [List Bullet]: Support safe re-import/recovery of portable records.
+P506 [List Bullet]: Do not make SQLite the only surviving copy of important intelligence.
+P507 [List Bullet]: Portable export should not silently include cookies/API keys/private browser data.
+P508 [Heading 1]: 71. No Destructive AI Authority
+P509 [Normal]: ChatGPT may propose title/taxonomy/organization/duplicate/canonical-source changes, but AI output alone must never perform irreversible actions.
+P510 [List Bullet]: AI output must never automatically delete media.
+P511 [List Bullet]: AI output must never automatically purge a VIDEO_ID.
+P512 [List Bullet]: AI output must never irreversibly reorganize folders without the existing preview/apply workflow.
+P513 [List Bullet]: Duplicate detection must never auto-delete variants.
+P514 [List Bullet]: Canonical source selection is a recommendation only.
+P515 [List Bullet]: Locked manual fields cannot be overridden by AI without explicit user action.
+P516 [List Bullet]: Destructive operations require explicit existing application controls and user confirmation.
+P517 [Heading 1]: 72. Same-Topic Return Package — Cross-Video Detailed Timestamped Intelligence
+P518 [Normal]: Add a separate return/package workflow specifically for videos discussing the same topic. This is different from the per-video master intelligence package.
+P519 [Normal]: New workflow/button name suggestion: `Create Same-Topic ChatGPT Analysis / Merge Package`.
+P520 [Normal]: Input can come from a Knowledge Center topic, search result, collection, selected videos, or one source video's detected topics.
+P521 [Heading 2]: 72.1 Same-Topic Candidate Selection
+P522 [List Bullet]: Find local-library videos matching the selected topic using imported ChatGPT intelligence, transcript sections, questions answered, concepts, entities, synonyms, search phrases and optional embeddings.
+P523 [List Bullet]: Exclude or collapse exact/near-duplicate variants by default.
+P524 [List Bullet]: Show candidate VIDEO_ID, title, thumbnail, similarity score, matched topics and best matching section before package creation.
+P525 [List Bullet]: Allow user to include/exclude candidates.
+P526 [Heading 2]: 72.2 What the Same-Topic ChatGPT Package Must Ask For
+P527 [Normal]: For every selected video, ask ChatGPT to return a detailed topic-specific summary based only on relevant evidence from that video.
+P528 [Normal]: "same_topic_video_results": [
+  {
+    "video_id": "",
+    "approved_english_title": "",
+    "topic": "",
+    "topic_summary": "",
+    "detailed_topic_sections": [
+      {
+        "start_timestamp": "",
+        "end_timestamp": "",
+        "start_seconds": 0,
+        "end_seconds": 0,
+        "section_title": "",
+        "detailed_summary": "",
+        "key_points": [],
+        "named_items": [],
+        "claims": [],
+        "warnings": [],
+        "evidence": []
+      }
+    ],
+    "unique_contribution": [],
+    "agreements_with_other_videos": [],
+    "differences_from_other_videos": [],
+    "contradictions": []
+  }
+]
+P529 [List Bullet]: The summary must focus on the selected topic, not re-summarize unrelated parts of each video.
+P530 [List Bullet]: Return multiple timestamp ranges from the same VIDEO_ID if the topic appears in multiple places.
+P531 [List Bullet]: Preserve source claims and viewer comments as separate evidence.
+P532 [List Bullet]: Identify what each video contributes uniquely.
+P533 [List Bullet]: Show agreements/differences/contradictions across videos without treating majority opinion as proof.
+P534 [Heading 2]: 72.3 Return VIDEO_ID + Timestamp Ranges for Video Combining
+P535 [Normal]: The same-topic result must generate machine-usable clip instructions so selected sections can be sent directly to Clip Studio or a merge workflow.
+P536 [Normal]: "merge_clip_plan": [
+  {
+    "order": 1,
+    "video_id": "UWCf9pDTmJI",
+    "source_title": "",
+    "start_timestamp": "04:12",
+    "end_timestamp": "06:45",
+    "start_seconds": 252,
+    "end_seconds": 405,
+    "topic": "",
+    "section_title": "",
+    "why_include": "",
+    "transition_note": ""
+  }
+]
+P537 [List Bullet]: Every clip must include exact VIDEO_ID plus start/end timestamp and numeric seconds.
+P538 [List Bullet]: Never invent a timestamp to make a clip plan complete.
+P539 [List Bullet]: If a timestamp is unavailable, mark that clip as NOT_MERGE_READY.
+P540 [List Bullet]: Allow multiple clips from the same VIDEO_ID.
+P541 [List Bullet]: Order clips into a coherent topic narrative when requested.
+P542 [List Bullet]: Keep source-title and evidence fields so the user can review before merging.
+P543 [List Bullet]: Do not automatically cut/merge based solely on ChatGPT output; first show a Clip Merge Preview.
+P544 [List Bullet]: Provide `Send Merge Plan to Clip Studio` after validation.
+P545 [List Bullet]: Clip Studio must resolve VIDEO_ID to the current local media path rather than storing fragile absolute paths in ChatGPT output.
+P546 [Heading 2]: 72.4 Same-Topic Final Synthesis
+P547 [Normal]: "same_topic_synthesis": {
+  "topic": "",
+  "overall_detailed_summary": "",
+  "common_points": [],
+  "different_points": [],
+  "contradictions": [],
+  "unique_information_by_video": [],
+  "important_named_items": [],
+  "important_claims": [],
+  "warnings": [],
+  "recommended_viewing_order": [],
+  "best_sections_to_watch": [],
+  "merge_clip_plan": []
+}
+P548 [Normal]: Also create a human-readable report showing each source video, detailed summary, timestamp links and an optional chronological/thematic merge sequence.
+P549 [Heading 2]: 72.5 Same-Topic Return Package Storage
+P550 [List Bullet]: Store raw ChatGPT return JSON, normalized result, package ID, topic, selected VIDEO_IDs, prompt/schema versions and timestamp validation result.
+P551 [List Bullet]: Do not overwrite the per-video master intelligence with cross-video synthesis fields.
+P552 [List Bullet]: Per-video topic summaries may enrich/search indexes, but cross-video conclusions must remain in a separate synthesis layer.
+P553 [List Bullet]: Allow regenerating the package when source intelligence/transcripts become stale.
+P554 [Heading 1]: 73. Comment Download / Analysis Optimization
+P555 [Normal]: Use the comment-usefulness decision to reduce unnecessary work while still preserving high-value comments.
+P556 [List Bullet]: Before requesting/downloading comments for an informational video, estimate whether comments are likely to contribute useful evidence.
+P557 [List Bullet]: If `comment_usefulness.recommended=true`, show why and offer/enable comment download.
+P558 [List Bullet]: If false, keep manual override.
+P559 [List Bullet]: If comments already exist locally, do not discard them merely because the new recommendation is false.
+P560 [List Bullet]: Re-evaluate usefulness if transcript/intelligence materially changes.
+P561 [Heading 1]: 74. Expanded Acceptance Tests for These New Requirements
+P562 [List Number]: Video whose transcript suggests comments will be useful; verify recommendation=true with reasons.
+P563 [List Number]: Pure entertainment/music video where comments are low-value; verify recommendation can be false.
+P564 [List Number]: Authoritative source title/channel/category cannot be silently overwritten by ChatGPT.
+P565 [List Number]: Manual locked category/title survives future ChatGPT import.
+P566 [List Number]: Related video contains unique information; novelty is captured.
+P567 [List Number]: Speaker corrects an earlier statement; both statements and correction relationship survive.
+P568 [List Number]: Time-sensitive software price/version statement is flagged.
+P569 [List Number]: Technical tutorial yields commands, paths, API endpoints, error messages and troubleshooting timestamps.
+P570 [List Number]: Comparison/list becomes structured table rather than only prose.
+P571 [List Number]: Playlist Part 1/2/3 order is preserved.
+P572 [List Number]: Thumbnail appears in related-video UI without requiring thumbnail AI analysis.
+P573 [List Number]: Orphan audit finds media-only, DB-only and ChatGPT-result-only records.
+P574 [List Number]: Duplicate group produces canonical recommendation but performs no delete/archive.
+P575 [List Number]: Related-video results diversify rather than return five duplicate variants.
+P576 [List Number]: Injected failure halfway through one VIDEO_ID import rolls back that VIDEO_ID atomically.
+P577 [List Number]: Regression fixture set passes after schema/importer modifications.
+P578 [List Number]: Two simultaneous writes to the same VIDEO_ID are serialized by lock.
+P579 [List Number]: Schema migration history is recorded and repeat run is safe.
+P580 [List Number]: 10,000-video synthetic/index test does not use naive full transcript all-pairs work on every request.
+P581 [List Number]: Portable VIDEO_ID export can reconstruct intelligence independently of the original SQLite row.
+P582 [List Number]: ChatGPT result proposing destructive deletion is ignored/rejected as unauthorized.
+P583 [List Number]: Same-topic package returns detailed per-video summaries and multiple timestamp ranges.
+P584 [List Number]: Merge clip plan contains VIDEO_ID + start/end timestamp + seconds and is accepted by Clip Studio preview.
+P585 [List Number]: Missing timestamps produce NOT_MERGE_READY rather than fabricated values.
+P586 [Heading 1]: 75. Updated Final Outcome
+P587 [Normal]: PER-VIDEO FLOW
+Video → metadata/transcript/comments
+      → ChatGPT master intelligence
+      → validate/preview/import
+      → library/report/search/knowledge
+
+CROSS-VIDEO SAME-TOPIC FLOW
+Topic / collection / selected videos
+      ↓
+Find relevant library videos and transcript sections
+      ↓
+Create Same-Topic ChatGPT Package
+      ↓
+ChatGPT returns:
+  - detailed topic summary per VIDEO_ID
+  - all relevant timestamp ranges
+  - unique contributions
+  - agreements/differences/contradictions
+  - evidence
+  - merge_clip_plan
+      ↓
+Validate VIDEO_ID + timestamps
+      ↓
+Same-topic report / Knowledge Center
+      ↓
+Optional reviewed "Send Merge Plan to Clip Studio"
+      ↓
+Combine selected local video sections into one new video
+P588 [Heading 1]: 76. Optional ChatGPT Perspective (PS) — Separate from Source-Grounded Intelligence
+P589 [Normal]: The uploaded baseline specification explicitly allows ChatGPT to provide its own take on the video at the end. Implement this as an optional, clearly separated field so it can never be mistaken for transcript-derived evidence or authoritative source metadata.
+P590 [Normal]: "chatgpt_perspective_ps": {
+  "take": "",
+  "interesting_observations": [],
+  "questions_to_consider": [],
+  "possible_gaps_or_caveats": [],
+  "label": "CHATGPT PERSPECTIVE / NOT SOURCE-EXTRACTED FACT"
+}
+P591 [List Bullet]: This field is optional and may be empty when no useful additional perspective exists.
+P592 [List Bullet]: It must be visually and structurally separated from executive_summary, detailed_summary, facts, claims, recommendations, warnings, and transcript evidence.
+P593 [List Bullet]: It must never overwrite source metadata, transcript-derived intelligence, manually locked fields, or evidence-backed facts.
+P594 [List Bullet]: Knowledge Center/search may expose it only when clearly labeled as ChatGPT perspective; it should not outrank transcript-derived evidence.
+P595 [List Bullet]: If the package requests strict source-only analysis, this field may contain source-grounded interpretation only. If broader commentary is allowed, the output must explicitly label any non-source inference as ChatGPT commentary.
+P596 [List Bullet]: Do not place free-form prose outside the machine-readable result when the package expects JSON; keep the PS inside the structured result.
+P597 [Heading 1]: 77. Coverage of the Unified ChatGPT Video Intelligence Baseline
+P598 [Normal]: This master specification supersedes and incorporates the requirements from the earlier “Unified ChatGPT Video Intelligence Package” baseline, including the complete video schema, English title generation, taxonomy, summaries, timestamped sections, remedies, recipes, how-to extraction, claims, comments, validation, import/storage, reports, testing, regression protection, packaging safety, and deliverables.
+P599 [Normal]: Where this master specification is more detailed, the stricter/more complete requirement applies. The alternative-AI-engine integration from the earlier baseline is intentionally out of scope; ChatGPT packages and imported ChatGPT results are the sole AI-analysis workflow defined here.
+P600 [Normal]: The baseline note allowing ChatGPT to provide a final “PS / take on the video” is incorporated through Section 76 as a separate, explicitly labeled ChatGPT perspective field.

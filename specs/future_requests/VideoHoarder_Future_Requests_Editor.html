@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VideoHoarder Future Requests</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2e;--panel2:#13243b;--line:#294361;--text:#f4f8ff;--muted:#9eb5d1;--accent:#35a7ff;--accent2:#7657ff;--good:#35d07f;--warn:#ffbd4a;--shadow:0 18px 45px rgba(0,0,0,.3)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,color-mix(in srgb,var(--accent) 14%,transparent),transparent 34%),var(--bg);color:var(--text);font:15px/1.6 "Segoe UI",Arial,sans-serif}.shell{display:grid;grid-template-columns:290px 1fr;min-height:100vh}.sidebar{background:linear-gradient(180deg,#0c1a2d,#091524);border-right:1px solid var(--line);padding:24px 18px;position:sticky;top:0;height:100vh;overflow:auto}.brand{display:flex;gap:12px;align-items:center;margin-bottom:24px}.logo{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 28px color-mix(in srgb,var(--accent) 35%,transparent);font-size:22px}.brand b{font-size:19px}.brand small,.muted{display:block;color:var(--muted)}.doc-button{width:100%;text-align:left;border:1px solid transparent;background:transparent;color:var(--muted);padding:12px;border-radius:10px;margin:5px 0;cursor:pointer}.doc-button:hover,.doc-button.active{background:var(--panel2);border-color:var(--line);color:#fff}.doc-button strong{display:block}.doc-button small{color:var(--muted)}.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}.swatch{height:30px;border:2px solid rgba(255,255,255,.35);border-radius:9px;cursor:pointer}.side-note{margin-top:24px;padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);color:var(--muted);font-size:13px}.main{padding:24px 30px 60px;min-width:0}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;position:sticky;top:0;z-index:5;padding:12px 0 18px;background:linear-gradient(180deg,var(--bg) 72%,transparent)}.title h1{margin:0;font-size:24px}.title span{color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:8px}button{border:1px solid var(--line);background:var(--panel2);color:#fff;border-radius:9px;padding:9px 13px;cursor:pointer;font-weight:650}button:hover{border-color:var(--accent)}button.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:0}.notice{background:color-mix(in srgb,var(--accent) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:13px;padding:13px 16px;margin-bottom:16px;color:#dcecff}.status{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:var(--good)}.document{max-width:1080px;margin:auto;background:linear-gradient(180deg,var(--panel),#0b1829);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:38px 46px;outline:none}.document[contenteditable=true]{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent),var(--shadow)}.document h1{font-size:32px;margin:0 0 8px}.document h2{margin-top:32px;padding-bottom:7px;border-bottom:1px solid var(--line);color:color-mix(in srgb,var(--accent) 72%,white)}.document h3{color:#dbe9ff}.document p,.document li{color:#c5d5ea}.document blockquote{margin:18px 0;border-left:4px solid var(--accent);background:rgba(255,255,255,.035);padding:14px 18px;border-radius:0 10px 10px 0}.document code{background:#07101e;border:1px solid #263d5a;border-radius:5px;padding:2px 5px;color:#bde4ff}.document ul,.document ol{padding-left:24px}.document .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.pill{background:color-mix(in srgb,var(--accent) 12%,var(--panel2));border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));border-radius:999px;padding:4px 10px;color:#d9ebff;font-size:12px}.hidden{display:none}@media(max-width:850px){.shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.main{padding:18px}.document{padding:25px}.topbar{position:relative;align-items:flex-start;flex-direction:column}}@media print{.sidebar,.topbar,.notice{display:none}.shell{display:block}.main{padding:0}.document{border:0;box-shadow:none;background:#fff;color:#111}.document p,.document li,.document h1,.document h2,.document h3{color:#111}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">▶</div><div><b>VideoHoarder</b><small>Future Request Editor</small></div></div>
+    <button class="doc-button active" data-doc="backlog"><strong>General Backlog</strong><small>2026-08-14</small></button>
+    <button class="doc-button" data-doc="manifest"><strong>Central Artifact Manifest</strong><small>2026-08-15</small></button>
+    <h3>Accent color</h3>
+    <div class="palette">
+      <button class="swatch" style="background:#35a7ff" data-color="#35a7ff" title="Blue"></button>
+      <button class="swatch" style="background:#8b5cf6" data-color="#8b5cf6" title="Purple"></button>
+      <button class="swatch" style="background:#14b8a6" data-color="#14b8a6" title="Teal"></button>
+      <button class="swatch" style="background:#f97316" data-color="#f97316" title="Orange"></button>
+      <button class="swatch" style="background:#ec4899" data-color="#ec4899" title="Pink"></button>
+    </div>
+    <h3>Background color</h3>
+    <div class="palette">
+      <button class="swatch background-swatch" style="background:#07111f" data-bg="#07111f" data-panel="#0d1b2e" data-panel2="#13243b" title="Midnight navy"></button>
+      <button class="swatch background-swatch" style="background:#111318" data-bg="#111318" data-panel="#1a1d24" data-panel2="#242832" title="Charcoal"></button>
+      <button class="swatch background-swatch" style="background:#071b17" data-bg="#071b17" data-panel="#0d2922" data-panel2="#143a31" title="Forest"></button>
+      <button class="swatch background-swatch" style="background:#190d24" data-bg="#190d24" data-panel="#28143a" data-panel2="#392052" title="Deep plum"></button>
+      <button class="swatch background-swatch" style="background:#20130d" data-bg="#20130d" data-panel="#302018" data-panel2="#453025" title="Warm brown"></button>
+    </div>
+    <div class="side-note"><b>Editing is local.</b><br>Your browser autosaves edits on this computer. Use <b>Save HTML</b> or <b>Export text</b> to create a portable file.</div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div class="title"><h1 id="pageTitle">General Pending Updates</h1><span id="pageDate">Recorded 2026-08-14</span></div>
+      <div class="actions">
+        <span class="status"><span class="dot"></span><span id="saveState">Saved locally</span></span>
+        <button id="editButton" class="primary">Edit document</button>
+        <button id="resetButton">Reset</button>
+        <button id="textButton">Export text</button>
+        <button id="htmlButton">Save HTML</button>
+        <button onclick="window.print()">Print</button>
+      </div>
+    </div>
+    <div class="notice">These are future specifications only. Editing this page does not implement features or change the VideoHoarder executable.</div>
+    <article id="document" class="document" contenteditable="false"></article>
+  </main>
+</div>
+
+<script type="text/plain" id="source-backlog">
+# VideoHoarder Pending Updates
+
+Originally recorded: 2026-08-14
+
+This is the general backlog for future VideoHoarder work. Adding an idea here does not authorize implementation.
+
+## Current pending updates
+
+1. Standardize detailed live progress for every command.
+   - Show command, phase, current VIDEO_ID/file, processed/total, skipped, failed, speed, elapsed time, ETA and latest error.
+   - Use the same progress model in Queue, Current Work and task pages.
+
+2. Improve Library and Old Library Import & Repair screens.
+   - Add clearer status cards, preflight summaries and per-file repair progress.
+   - Keep multiple source-folder selection and resumable checkpoints.
+
+3. Optimize large legacy-library repairs.
+   - Reduce repeated folder scans by using the central artifact manifest.
+   - Preserve the five-second maximum for unavailable transcript/subtitle checks.
+   - Resume from the last completed VIDEO_ID after interruption.
+
+4. Project normalized ChatGPT intelligence throughout the app.
+   - Show approved summaries, taxonomy, entities, topics and feature coverage in Library, reports, search and Knowledge Center.
+   - Preserve package/request provenance for every displayed field.
+
+5. Automate backup retention.
+   - Keep only the four newest verified VideoHoarder EXE backups.
+   - Never remove data/library backups through this EXE-retention rule.
+
+6. Run real-user acceptance testing with actual ChatGPT return packages.
+   - Test valid, partial, invalid, tampered and multi-file returns.
+   - Test reviewed rename/move/taxonomy staging, duplicate decisions and Clip Studio handoff without automatic destructive actions.
+
+## Future implementation request
+
+Implement every item in the dated general backlog. Inspect the existing implementation first and reuse existing systems. Complete code, automated tests, installed-runtime testing, documentation, recovery checkpoint, EXE build and installation in one release. Keep ChatGPT exchange manual. Do not automatically rename, move, delete, cut, merge or download media. Do not mark an item complete unless implemented and verified.
+
+## Completion rules
+
+- Reuse existing VideoHoarder systems.
+- Keep one application/backend instance.
+- Show live progress for long-running work.
+- Keep ChatGPT exchange manual-only.
+- Require review before physical rename, movement, deletion, cutting or merging.
+- Update status, changelog, future-request status and recovery checkpoint.
+- Build and install the EXE only after tests pass.
+</script>
+
+<script type="text/plain" id="source-manifest">
+# Future Request — Central Artifact Manifest System
+
+Recorded: 2026-08-15
+Status: Proposed; not implemented
+
+## Objective
+
+Implement a central VideoHoarder Artifact Manifest as the authoritative inventory, completeness record and change history for every VIDEO_ID. Commands must consult the manifest first and update only affected records after downloads, imports, repairs, metadata/transcript/comment/thumbnail retrieval, report generation, ChatGPT package activity, Knowledge AI indexing, renames, moves, duplicate review, archive/deletion and Clip Studio handoff.
+
+## Manual verification checkbox
+
+Preserve the checkbox above Refresh YouTube metadata and rename it:
+
+> Verify/rebuild central artifact manifest for selected videos
+
+Help text:
+
+> Scans selected video folders, reconciles present, missing, moved, stale and new artifacts, and refreshes the SQLite manifest plus master JSON/CSV exports. Other commands update the manifest automatically.
+
+When checked, scan selected video and _data folders; reconcile new, missing, moved, renamed, stale and duplicate artifacts; update SQLite and optional per-video manifests; regenerate master JSON/CSV; calculate completeness and recommended next actions; and record the job in change history. When unchecked, use cached data and verify a path only when missing or stale.
+
+## Authoritative storage and exports
+
+- Extend the existing video_artifact_manifest SQLite system; do not create a competing inventory.
+- Store schema version, inventory refresh date, filesystem verification date and last modifying command/job.
+- Create atomic exports under D:\YT GUi\downloads\data\artifact_manifest\:
+  - master JSON inventory;
+  - master CSV summary;
+  - optional per-video artifact_manifest.json.
+- Interrupted work must not corrupt the last valid manifest.
+
+## Per-video identity and location
+
+Track VIDEO_ID, URL, channel URL, original/clean title, channel, upload date, duration, YouTube category, VideoHoarder category, current/previous folder paths, media path/filename, archive/deletion/missing-folder state and duplicate-group/canonical status.
+
+## Artifact coverage
+
+Track media, .info.json, metadata, description, thumbnail, SRT/VTT, clean transcript, timestamped transcript, comments, HTML report, identity file, ChatGPT evidence/package files, returned results, taxonomy/tag cleanup, Knowledge AI indexes/embeddings, clip plans and generated outputs.
+
+For every artifact store status, absolute/relative path, filename, size, modified time, checksum where appropriate, source, producing command/job, created/refreshed/verified dates, validation status, last error, retry eligibility and cooldown.
+
+## ChatGPT package lifecycle
+
+For every video and package track package ID, master-set ID, batch number/total, mode, requested features, path, checksum, creation date, manually-sent state, result filename/import date, awaiting/valid/partial/invalid/tampered state, review state, applied state, features received, features missing and whether another package is required.
+
+Do not package an already completed feature again unless source evidence changed or the user explicitly requests regeneration.
+
+## Command change history
+
+Record command/job ID, name, start/end time, VIDEO_ID, before/after state, files created/modified/moved/renamed/skipped/removed, result status, error and recovery information.
+
+## Staleness and reconciliation
+
+Detect missing indexed files, changed sizes/timestamps/checksums, moved/renamed files, new unindexed files, duplicate paths, wrong VIDEO_ID folders, orphan database/manifest records and reports or AI outputs older than source evidence. Use targeted checks normally; full scans only for missing/stale records or an explicit rebuild.
+
+## Completeness and next actions
+
+Calculate required/optional artifacts, missing and permanently unavailable artifacts, retryable failures, completeness percentage and recommended next action. Support full-library, no-transcript, metadata-only and archived profiles.
+
+## Interface
+
+Add an Artifact Manifest area showing indexed, complete, incomplete, stale, missing-folder and error totals; last refresh; live progress; filters; per-video details; and change history. Provide Verify Selected, Rebuild Selected, Rebuild Entire Manifest, Export Master JSON and Export Master CSV. Show whether data came from cache or fresh verification.
+
+## Safety and verification
+
+Manifest maintenance must never automatically download, rename, move or delete files. Add tests for creation, incremental changes, stale/missing detection, rename/move, import/repair/download updates, archive/deletion tracking, ChatGPT lifecycle, checksums, interrupted recovery, exports and large-library performance using temporary fixtures.
+
+Do not mark complete until every relevant command uses or updates the manifest, tests pass, documents/checkpoint are updated, the EXE is rebuilt/installed and installed-runtime verification passes.
+</script>
+
+<script>
+const documents={backlog:{title:'General Pending Updates',date:'Recorded 2026-08-14'},manifest:{title:'Central Artifact Manifest System',date:'Recorded 2026-08-15'}};
+const editor=document.getElementById('document'),saveState=document.getElementById('saveState');let current='backlog',editing=false,timer;
+function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function inline(s){return escapeHtml(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')}
+function renderMarkdown(md){let out='',list=null;for(const raw of md.trim().split(/\r?\n/)){const line=raw.trimEnd();if(!line.trim()){if(list){out+=`</${list}>`;list=null}continue}let m;if((m=line.match(/^(#{1,3})\s+(.+)/))){if(list){out+=`</${list}>`;list=null}const n=m[1].length;out+=`<h${n}>${inline(m[2])}</h${n}>`}else if((m=line.match(/^>\s?(.*)/))){if(list){out+=`</${list}>`;list=null}out+=`<blockquote>${inline(m[1])}</blockquote>`}else if((m=line.match(/^[-*]\s+(.+)/))){if(list!=='ul'){if(list)out+=`</${list}>`;out+='<ul>';list='ul'}out+=`<li>${inline(m[1])}</li>`}else if((m=line.match(/^\d+\.\s+(.+)/))){if(list!=='ol'){if(list)out+=`</${list}>`;out+='<ol>';list='ol'}out+=`<li>${inline(m[1])}</li>`}else{if(list){out+=`</${list}>`;list=null}out+=`<p>${inline(line.trim())}</p>`}}if(list)out+=`</${list}>`;return out}
+function storageKey(){return 'videohoarder-future-'+current}
+function load(id){current=id;editing=false;editor.contentEditable='false';document.getElementById('editButton').textContent='Edit document';document.querySelectorAll('.doc-button').forEach(x=>x.classList.toggle('active',x.dataset.doc===id));document.getElementById('pageTitle').textContent=documents[id].title;document.getElementById('pageDate').textContent=documents[id].date;const saved=localStorage.getItem(storageKey());editor.innerHTML=saved||renderMarkdown(document.getElementById('source-'+id).textContent);saveState.textContent=saved?'Loaded local edits':'Original document'}
+function autosave(){clearTimeout(timer);saveState.textContent='Saving…';timer=setTimeout(()=>{localStorage.setItem(storageKey(),editor.innerHTML);saveState.textContent='Saved locally'},350)}
+editor.addEventListener('input',autosave);document.querySelectorAll('.doc-button').forEach(x=>x.onclick=()=>load(x.dataset.doc));document.querySelectorAll('.swatch[data-color]').forEach(x=>x.onclick=()=>{document.documentElement.style.setProperty('--accent',x.dataset.color);localStorage.setItem('videohoarder-accent',x.dataset.color)});document.querySelectorAll('.background-swatch').forEach(x=>x.onclick=()=>{const theme={bg:x.dataset.bg,panel:x.dataset.panel,panel2:x.dataset.panel2};document.documentElement.style.setProperty('--bg',theme.bg);document.documentElement.style.setProperty('--panel',theme.panel);document.documentElement.style.setProperty('--panel2',theme.panel2);localStorage.setItem('videohoarder-background',JSON.stringify(theme))});
+document.getElementById('editButton').onclick=()=>{editing=!editing;editor.contentEditable=String(editing);editor.focus();document.getElementById('editButton').textContent=editing?'Finish editing':'Edit document';if(!editing)autosave()};
+document.getElementById('resetButton').onclick=()=>{if(confirm('Discard local edits for this document and restore the original?')){localStorage.removeItem(storageKey());load(current)}};
+function download(name,type,data){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+document.getElementById('textButton').onclick=()=>download(`${current}_${new Date().toISOString().slice(0,10)}.txt`,'text/plain;charset=utf-8',editor.innerText);
+document.getElementById('htmlButton').onclick=()=>{const title=documents[current].title,body=`<!doctype html><html><head><meta charset="utf-8"><title>${title}</title><style>body{max-width:1000px;margin:40px auto;padding:20px;background:#07111f;color:#f4f8ff;font:16px/1.6 Segoe UI,Arial}h2{color:#35a7ff;border-bottom:1px solid #294361}blockquote{border-left:4px solid #35a7ff;padding:12px;background:#0d1b2e}p,li{color:#c5d5ea}</style></head><body>${editor.innerHTML}</body></html>`;download(`${current}_${new Date().toISOString().slice(0,10)}.html`,'text/html;charset=utf-8',body)};
+const accent=localStorage.getItem('videohoarder-accent');if(accent)document.documentElement.style.setProperty('--accent',accent);try{const theme=JSON.parse(localStorage.getItem('videohoarder-background')||'null');if(theme){document.documentElement.style.setProperty('--bg',theme.bg);document.documentElement.style.setProperty('--panel',theme.panel);document.documentElement.style.setProperty('--panel2',theme.panel2)}}catch(e){}load('backlog');
+</script>
+</body>
+</html>
