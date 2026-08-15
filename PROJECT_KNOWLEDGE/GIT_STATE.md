@@ -16,3 +16,5 @@ The initial commit contains 78 reviewed source, test, specification, tool, and d
 The project owner explicitly authorized commit and upload on 2026-08-15. No history rewrite, force push, branch deletion, merge, or destructive filesystem operation was performed.
 
 Remote verification confirmed GitHub `refs/heads/main` at documentation commit `c1c471555071e6e7260496211d339a11e6da0453` before this final state-record update.
+
+Living knowledge completion commit: `5c66fe1b67206a50e80082dc0a039cecfa11df3d` (`Complete living project knowledge records`). This expanded the master instructions, feature catalog, codebase map, repository-completeness assessment, prioritized improvements, session handoff, and knowledge index.
