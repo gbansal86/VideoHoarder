@@ -3,7 +3,7 @@
 Recorded: 2026-08-15
 
 - Application version: `33.0-GUI`
-- Repository: `https://github.com/gbansal86/VidoeHoarder.git`
+- Repository: `https://github.com/gbansal86/VideoHoarder.git`
 - Branch: `main`
 - Initial source commit: `643c1f2e4ea4e6e090e8e06286b33c588cc67bdc`
 - Living knowledge completion commit: `5c66fe1b67206a50e80082dc0a039cecfa11df3d`

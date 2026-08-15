@@ -14,7 +14,7 @@ VideoHoarder is a feature-rich local Windows application with meaningful existin
 - Repository inventory: 7,240 files, approximately 1.47 GB including builds, browser-profile caches, QA renders, runtime data, and distributions.
 - Database: 102,400-byte SQLite file; 10 application tables; all row counts zero in the checked source database.
 - Tests: 14 discovered, 11 passed, 3 skipped. Test scope is backend startup/config/root migration, ChatGPT integrity/provenance/timestamps/planning/duplicate/clip behavior, and three native navigation assertions.
-- Git at audit time: BLOCKED because neither source nor installed folder contained `.git`. After the audit and explicit owner authorization, a new `main` repository and secret-aware initial baseline were established at commit `643c1f2e4ea4e6e090e8e06286b33c588cc67bdc` with remote `https://github.com/gbansal86/VidoeHoarder.git`.
+- Git at audit time: BLOCKED because neither source nor installed folder contained `.git`. After the audit and explicit owner authorization, a new `main` repository and secret-aware initial baseline were established at commit `643c1f2e4ea4e6e090e8e06286b33c588cc67bdc`. The repository was subsequently renamed to the canonical remote `https://github.com/gbansal86/VideoHoarder.git`.
 
 ## Findings
 
