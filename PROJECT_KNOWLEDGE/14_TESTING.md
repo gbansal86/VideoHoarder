@@ -30,3 +30,13 @@ Recorded: 2026-08-15
 ## Material gaps
 
 No automated coverage for populated DB migrations, artifact-manifest reconciliation, downloads/providers, report rendering, package generation/multiple-import/combined-CSV, review decision persistence, tag cleanup, taxonomy apply/undo, jobs/concurrency/cancellation, local HTTP security, collections/Ollama, recovery/interruption, destructive-operation fixtures, installed GUI, clean build, or large-library performance.
+
+## Runtime-input check - 2026-08-24
+
+- Python compilation rerun: PASSED.
+- Unit-test discovery rerun: 14 discovered, 11 passed, 0 failed, 3 skipped because PySide6 is unavailable in the system Python.
+- Launched `dist/VideoHoarder/VideoHoarder.exe` from its one-folder distribution with a hidden test window.
+- Verified `http://127.0.0.1:8765/api/progress` returned HTTP 200 and an idle/ready progress payload.
+- Stopped the test process after the smoke check.
+- This proves startup and loopback progress availability for the existing v33 build only. It does not validate populated-library workflows or establish that the build was produced from the latest documentation commit.
+- Dataset blocker: all ten SQLite application tables contain zero rows; no files exist under `all_transcripts/`.

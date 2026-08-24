@@ -14,7 +14,7 @@ This directory is the repository source of truth for project understanding, impl
 5. `GIT_STATE.md` - repository, branch, remote, and commit state.
 6. `INITIAL_AUDIT_REPORT.md` - evidence and initial findings.
 7. `INDEPENDENT_VALIDATION_REPORT.md` - independent baseline verification and remaining inputs.
-8. `sessions/2026-08-15.md` - latest session handoff.
+8. `sessions/2026-08-24.md` - latest runtime-input and build-smoke handoff.
 
 ## Canonical name mapping
 

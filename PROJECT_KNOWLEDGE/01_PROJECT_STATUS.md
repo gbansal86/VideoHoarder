@@ -3,6 +3,8 @@
 Recorded: 2026-08-15
 Overall: PARTIAL / NEEDS REVIEW
 
+Runtime-input update: 2026-08-24
+
 ## Verified current
 
 - Git `main` and `origin/main` were synchronized at reconciliation start.
@@ -12,6 +14,7 @@ Overall: PARTIAL / NEEDS REVIEW
 - ChatGPT integrity/provenance/timestamp/planner/duplicate/clip safety tests pass.
 - Local and installed historical v33 EXEs match each other by SHA-256.
 - Independent baseline review completed against clean, synchronized commit `f74650adbfc04b26386835cab05fd71109611e2b`.
+- Available v33 one-folder desktop build started successfully on 2026-08-24 and returned HTTP 200 from `/api/progress`; the test process was then stopped.
 
 ## Partial or unknown
 
@@ -20,6 +23,8 @@ Overall: PARTIAL / NEEDS REVIEW
 - Package lifecycle is fragmented across v3, legacy Phase 2, Phase 5 tag cleanup and Phase 6 taxonomy/intelligence.
 - Central Artifact Manifest is a partial foundation only.
 - Current Git source has not been rebuilt into a newly verified EXE.
+- No sanitized runtime fixture set is available: all ten audited database tables have zero rows and `all_transcripts/` contains no files.
+- Ollama was not installed or running during the 2026-08-24 check; YouTube/provider network behavior remains untested.
 
 ## Highest priorities
 

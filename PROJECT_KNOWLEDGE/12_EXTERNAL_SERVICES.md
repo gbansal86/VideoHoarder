@@ -14,3 +14,10 @@ Recorded: 2026-08-15
 | Windows Explorer/default apps | open local artifacts/folders | IMPLEMENTED / not exercised |
 
 Network/service behavior, quotas, authentication failures, provider changes, and offline recovery were not tested in this reconciliation.
+
+## Runtime availability check - 2026-08-24
+
+- Ollama executable/process: not available in the checked environment.
+- YouTube credential file: present outside the repository; its contents were not read and it remains excluded from Git.
+- YouTube, yt-dlp, transcript-provider, FFmpeg, Selenium and ChatGPT exchange behavior: not invoked during this input check.
+- Manual ChatGPT package exchange remains usable in principle without granting the application direct ChatGPT credentials, but no representative package/result fixture was available for an end-to-end run.
