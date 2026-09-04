@@ -1,0 +1,283 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090656_242abe",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "l5RZZe4h7T0",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {"source": "canonical_transcript", "segment_ids": ["s00001"]},
+        {"source": "structured_comments", "segment_ids": []},
+        {"source": "metadata", "segment_ids": []}
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "The package labels the complete text as transcript source 'no_transcript' and supplies all 1,796 transcript words in a single canonical segment.",
+          "Canonical video duration is 0 seconds and the only segment has zero-length canonical timestamps; timeline, clip, and rewatch outputs are therefore empty rather than inferred from inline transcript markers.",
+          "Health, longevity, supplement, fasting, and celibacy claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five Ayurvedic-Inspired Habits Claimed to Slow Ageing",
+          "short_title": "Five Anti-Ageing Habits",
+          "reason": "The title identifies the five-part lifestyle advice and signals that the anti-ageing effects are claims rather than established conclusions."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Lifestyle habits claimed to support healthy ageing",
+          "secondary_topics": ["breathing and meditation", "selfless service", "Ayurvedic Rasayana", "fasting", "sexual restraint"],
+          "category": "Health",
+          "subcategory": "Healthy ageing and Ayurveda",
+          "keywords": ["anti-ageing", "longevity", "pranayama", "meditation", "selfless service", "Rasayana", "fasting", "Brahmacharya", "Ayurveda"],
+          "canonical_tags": ["healthy ageing", "longevity", "ayurveda", "pranayama", "meditation", "selfless service", "rasayana", "fasting", "celibacy"],
+          "search_queries": ["five anti ageing habits Fit Tuber", "Ayurveda Rasayana fasting longevity claims", "pranayama meditation healthy ageing", "Brahmacharya longevity evidence"]
+        },
+        "executive_summary.v2": {
+          "summary": "The source rejects creams as a sufficient anti-ageing strategy and presents five broader practices for people in their twenties and thirties: slower breathing through pranayama and meditation, selfless service, Rasayana foods or herbs, periodic fasting or earlier dinners, and restraint in sexual activity. It connects each practice to Ayurvedic ideas and cites assorted studies, institutions, statistics, and anecdotes as modern support. The practical suggestions include at least ten minutes of breathing or meditation, seeking an Ayurvedic practitioner's guidance for Rasayana selection, and fasting once or twice monthly if appropriate. The supplied package does not include the cited research itself, so the medical, causal, and longevity assertions remain source claims requiring external verification. The video ends with a commercial promotion for an ashwagandha hot-chocolate product.",
+          "key_takeaways": [
+            "The source frames healthy ageing as a long-term lifestyle project rather than a cosmetic-product result.",
+            "Its five pillars are breathing practice, service to others, Rasayana preparations, fasting or early meals, and sexual restraint.",
+            "Specific health and longevity benefits are asserted, but no underlying studies are supplied in the package.",
+            "The closing product promotion creates a relevant commercial-bias consideration."
+          ],
+          "source_basis": ["canonical_transcript:s00001", "metadata:original_title_and_description"]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video proposes five Ayurvedic-inspired practices as ways to delay visible or functional signs of ageing. Its central argument is that sustained habits matter more than an anti-ageing cream. It repeatedly links traditional concepts to unnamed or incompletely identified modern research, but the package provides only the source's narration, not the referenced studies. Accordingly, the following describes the presentation without independently endorsing its health conclusions.",
+          "sections": [
+            {
+              "heading": "Breathing and meditation",
+              "summary": "The source asks viewers to count breaths per minute, compares the breathing rates and lifespans of monkeys and tortoises, and argues that slower, fuller breathing improves oxygen supply and health span. It recommends at least ten minutes of pranayama and meditation, claiming that five minutes of anulom vilom can reduce breathing rate. It also attributes a very broad set of physical and mental problems to inadequate oxygen; this sweeping causal assertion is not supported by external evidence in the package.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Selfless service",
+              "summary": "Drawing on the Charaka Samhita's concept of sadvritta, the speaker says service without expectation supports mental health and body-mind balance. A described 50-year study of more than 3,000 people is offered as evidence that regular volunteers lived longer. Everyday help to family, coworkers, and strangers is presented as an accessible form of service, but the study is not identified sufficiently for verification from the supplied evidence.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Rasayana foods and herbs",
+              "summary": "Rasayana Chikitsa is characterized as maintaining physical and mental health through diet, wholesome activity, and gentle herbs. The source names amla, giloy, ashwagandha, shatavari, bala, brahmi, Triphala, Chyawanprash, and Brahma Rasayana, connecting them to antioxidant or oxidative-stress effects. It suggests two months of use followed by one month off and appropriately advises consulting an Ayurvedic practitioner for individual suitability. Ingredient safety, interactions, product quality, dosing evidence, and contraindications are not discussed.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Fasting and earlier meals",
+              "summary": "The speaker cites mouse longevity, caloric restriction, autophagy, DNA repair, and a claimed study of eating before sunset to argue for fasting once or twice monthly. Viewers unable to fast for a full day are told to finish dinner around 7 p.m. The narration moves from animal or organism findings to broad human outcomes such as better skin, hair, digestion, cognition, and weight without supplying the evidence needed to establish those transfers or causal effects.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Brahmacharya and closing promotion",
+              "summary": "The final habit is celibacy or, more practically, avoiding sexual overindulgence. The source invokes Swami Sivananda, a 1997 statement attributed to geneticist David James, research associated with the University of Sheffield, and the Ayurvedic concept of shukra. It concludes that even one habit can compound over time. The closing segment then promotes Auric hot chocolate with ashwagandha, describes its ingredients and claimed benefits, gives preparation instructions, and advertises a discount, which should be separated from the educational claims.",
+              "segment_ids": ["s00001"]
+            }
+          ],
+          "practical_details": [
+            "Count breaths for one minute as a baseline.",
+            "The source recommends at least ten minutes of pranayama and meditation.",
+            "For Rasayana products, the source suggests two months on and one month off, while also advising individualized practitioner guidance.",
+            "The source suggests fasting once or twice a month or, as an easier alternative, finishing the last meal around 7 p.m."
+          ],
+          "limitations": [
+            "All transcript evidence is compressed into one zero-duration canonical segment, preventing reliable canonical topic timing.",
+            "Referenced studies are not supplied, and several are not identified by title, author, journal, or link.",
+            "Medical contraindications and risks of fasting, herbs, supplements, and restrictive sexual-health advice are not developed.",
+            "A sponsored or affiliate-style product promotion appears at the end."
+          ],
+          "source_basis": ["canonical_transcript:s00001"]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {"name": "Fit Tuber", "type": "organization", "context": "Channel presenting the anti-ageing advice.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Ayurveda", "type": "concept", "context": "Traditional framework used to organize the five practices.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Charaka Samhita", "type": "work", "context": "Text cited for sadvritta and selfless service.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Rasayana Chikitsa", "type": "concept", "context": "Ayurvedic rejuvenation approach discussed for healthy ageing.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Triphala", "type": "product", "context": "Three-fruit Ayurvedic formulation cited for antioxidant capacity.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "USDA", "type": "organization", "context": "Attributed source of an ORAC comparison mentioned for Triphala.", "confidence": "medium", "segment_ids": ["s00001"]},
+            {"name": "NCBI", "type": "organization", "context": "Repository or institution label used by the speaker when referring to studies.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Autophagy", "type": "concept", "context": "Cellular recycling process invoked in the fasting argument.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Nobel Prize", "type": "event", "context": "The 2016 prize is mentioned in connection with autophagy research.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Brahmacharya", "type": "concept", "context": "Celibacy or sexual restraint presented as the first-ranked habit.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Swami Sivananda", "type": "person", "context": "Presented as attributing longevity to celibacy, avoiding spices, and daily yoga.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "David James", "type": "person", "context": "Geneticist cited for a claim about male celibacy and lifespan.", "confidence": "medium", "segment_ids": ["s00001"]},
+            {"name": "University College London", "type": "organization", "context": "Affiliation attributed to David James.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "University of Sheffield", "type": "organization", "context": "Institution attributed to research comparing celibate and sexually active adults.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Auric Hot Chocolate with Ashwagandha", "type": "product", "context": "Commercial product promoted in the closing segment.", "confidence": "high", "segment_ids": ["s00001"]},
+            {"name": "Vivek", "type": "person", "context": "Presenter's stated name.", "confidence": "high", "segment_ids": ["s00001"]}
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {"text": "Slower, fuller breathing is associated with longer life and can significantly increase health span.", "claim_type": "medical_causal", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Inadequate oxygen is essentially responsible for dull skin, wrinkles, dark circles, hair loss, insomnia, depression, and all chronic diseases.", "claim_type": "medical_causal", "verification_status": "needs_external_verification", "severity": "critical", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Five minutes of anulom vilom or breath meditation reduces breathing rate.", "claim_type": "medical_recommendation", "verification_status": "needs_external_verification", "severity": "medium", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Regular selfless service improves mental health and longevity; a 50-year study of more than 3,000 people allegedly found longer survival among those who served others.", "claim_type": "health_and_quantitative", "verification_status": "needs_external_verification", "severity": "medium", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Amla, giloy, ashwagandha, shatavari, bala, brahmi, Triphala, Chyawanprash, and Brahma Rasayana can counter oxidative stress or premature ageing.", "claim_type": "medical_supplement", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Triphala ranked at the top of a USDA ORAC comparison of thousands of foods.", "claim_type": "quantitative_scientific", "verification_status": "needs_external_verification", "severity": "medium", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Rasayana products should be taken for about two months and then stopped for one month before restarting.", "claim_type": "medical_recommendation", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Mice fasting twice monthly from middle age lived 11 percent longer, and organisms reducing calories by 30 percent live 30 percent longer.", "claim_type": "quantitative_scientific", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "During fasting, toxic or sick cells vanish while healthy cells survive, producing weight loss and improvements in digestion, skin, hair, and cognition.", "claim_type": "medical_causal", "verification_status": "needs_external_verification", "severity": "critical", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Fasting slows DNA degradation and accelerates DNA repair, thereby slowing ageing.", "claim_type": "medical_causal", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "People should fast once or twice monthly or finish their last meal by about 7 p.m. for anti-ageing benefits.", "claim_type": "medical_recommendation", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Celibate men, nuns, and spinsters outlive sexually active adults, and avoiding sexual overindulgence slows ageing.", "claim_type": "medical_causal", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Ayurvedic sexual restraint preserves shukra, which is said to govern beauty, health, creativity, joy, and attraction.", "claim_type": "traditional_health_claim", "verification_status": "source_claim_only", "severity": "medium", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "Auric hot chocolate contains 95 percent cocoa solids and 5 percent ashwagandha extract with no sugar, fillers, preservatives, or artificial flavors.", "claim_type": "product_composition", "verification_status": "source_claim_only", "severity": "medium", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "The promoted cocoa-and-ashwagandha drink increases strength, calms the mind, and boosts immunity.", "claim_type": "commercial_health_claim", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]}
+          ],
+          "warnings": [
+            {"text": "Do not treat the video's health, longevity, fasting, supplement, or sexual-health claims as medical guidance without external verification and individualized professional advice.", "claim_type": "medical_safety", "verification_status": "needs_external_verification", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "The source does not discuss contraindications, medication interactions, pregnancy, eating disorders, metabolic disease, or other circumstances that may make fasting or herbs unsafe.", "claim_type": "missing_safety_context", "verification_status": "source_claim_only", "severity": "high", "confidence": "high", "segment_ids": ["s00001"]},
+            {"text": "A commercial product is promoted immediately after the health advice, creating potential promotional bias.", "claim_type": "commercial_bias", "verification_status": "supported_by_supplied_evidence", "severity": "medium", "confidence": "high", "segment_ids": ["s00001"]}
+          ],
+          "overall_risk": "high"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1148,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {"theme": "Praise and gratitude", "approximate_count": 14, "summary": "Many sampled records thank the presenter or describe the channel as helpful."},
+            {"theme": "Requests for skin, hair, and anti-ageing guidance", "approximate_count": 10, "summary": "Viewers ask about whiteheads, pigmentation, wrinkles, products, and other remedies."},
+            {"theme": "Trying or adopting lifestyle habits", "approximate_count": 5, "summary": "Some viewers intend to try breathing practice or list routines learned from the channel."},
+            {"theme": "Questions about specific practices or products", "approximate_count": 9, "summary": "Questions cover fasting, balayam, pranayama, collagen products, face tools, books, and other health topics."}
+          ],
+          "agreements": [
+            "Several viewers express enthusiasm for trying breathing or broader healthy routines.",
+            "Positive comments commonly regard the presentation as useful or motivating."
+          ],
+          "disagreements": [
+            "One commenter reports no perceived change after 160 days of abstinence, countering an implied benefit of that practice.",
+            "A short exchange notes that one week of balayam is too early to judge results."
+          ],
+          "questions": [
+            "How can forehead whiteheads, pigmentation, or wrinkles be addressed?",
+            "Does balayam improve the hairline?",
+            "How should common pranayama exercises be performed correctly?",
+            "Are named commercial skin or collagen products effective?",
+            "How can fasting hunger be managed?"
+          ],
+          "useful_corrections": [
+            "A viewer's report of no change after 160 days of abstinence is anecdotal counterevidence, not a factual refutation.",
+            "Viewer enthusiasm and likes do not verify the video's medical or longevity claims."
+          ],
+          "sentiment": {"overall": "strongly positive", "positive": "dominant", "neutral_or_questioning": "substantial", "negative": "rare"},
+          "limitations": [
+            "Only 100 of 1,148 comments are included, selected by deterministic head-tail sampling.",
+            "The supplied records split comment metadata and multi-line comment text into separate records, so approximate theme counts refer to semantic comment contributions rather than raw record count.",
+            "Comments are audience-generated and are not factual verification."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips are selected because the canonical evidence reports a zero-second video duration and one zero-length segment; using inline timestamp text would violate the requirement to base clips on valid canonical timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "The complete transcript is supplied as one canonical segment whose start and end are both zero.",
+            "The transcript source is labeled 'no_transcript' despite 1,796 words of canonical text.",
+            "Inline time markers are present in the text but are not canonical segment boundaries.",
+            "No external research cited by the speaker is included for verification."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Five Ayurvedic-inspired lifestyle practices presented as ways to delay signs of ageing and extend health span.",
+          "strongest_takeaway": "The most defensible high-level message is that long-term lifestyle choices matter more than a single cosmetic product, while the specific medical and longevity effects require verification.",
+          "strengths": [
+            "Clear five-part structure with several concrete behavioral suggestions.",
+            "Distinguishes sustained habits from quick cosmetic fixes.",
+            "Advises consulting an Ayurvedic practitioner before choosing Rasayana products."
+          ],
+          "weaknesses": [
+            "Makes sweeping causal medical claims and extrapolates from animal or unspecified research.",
+            "Provides inadequate citation detail for the studies and statistics invoked.",
+            "Omits important contraindications and individual risk factors.",
+            "Mixes educational content with a health-product promotion."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "It is useful as a catalog of popular Ayurvedic-inspired ageing practices and as a source-criticism example, but not as verified medical guidance; canonical timing defects prevent a reliable rewatch judgment."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is an engaging lifestyle list whose sensible broad premise—ageing is not solved by a cream—is weakened by overconfident biological explanations. The breathing, service, diet, fasting, and restraint ideas are presented as a unified Ayurvedic programme, yet the evidentiary leap from tradition, animal findings, unnamed studies, and anecdotes to specific human anti-ageing effects is often large. The result is more useful for generating questions and habits to investigate than for deciding what is medically effective.",
+          "bottom_line": "Keep it as an organized overview of claimed practices, but independently verify each health claim and do not adopt fasting or supplements solely from this video.",
+          "what_is_new_or_distinctive": [
+            "Combines selfless service with breathing, Rasayana, fasting, and sexual restraint under one anti-ageing framework.",
+            "Offers a two-month-on, one-month-off Rasayana schedule, although this recommendation is unsupported in the supplied evidence."
+          ],
+          "practical_value": {"level": "medium", "explanation": "The practices are memorable and some are low-cost, but medical usefulness cannot be established from the package and several require safety screening."},
+          "credibility_assessment": {"level": "uncertain", "explanation": "The source names traditions, institutions, and numerical findings, but does not supply enough bibliographic detail or external evidence to check most claims; several explanations are implausibly broad."},
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Preference for Ayurvedic explanations and interventions.",
+            "Commercial promotion of Auric hot chocolate with ashwagandha and a discount code."
+          ],
+          "important_missing_context": [
+            "Human clinical evidence for each practice and outcome.",
+            "Contraindications, adverse effects, medication interactions, and suitability of named herbs.",
+            "Differences between animal longevity findings, caloric restriction, time-restricted eating, and human fasting.",
+            "Psychological and relationship context for sexual-restraint advice.",
+            "Full citations for the volunteerism, breathing, fasting, and celibacy studies."
+          ],
+          "who_should_watch": [
+            "Viewers comparing popular Ayurvedic perspectives on healthy ageing.",
+            "Researchers cataloging wellness claims or looking for questions to verify."
+          ],
+          "who_can_skip": [
+            "Anyone seeking clinically validated anti-ageing treatment guidance.",
+            "Viewers who already know the channel's breathing, fasting, and Brahmacharya positions."
+          ],
+          "recommended_actions": [
+            "Treat the five practices as hypotheses or discussion prompts, not proven therapies.",
+            "Consult an appropriately qualified clinician before fasting or using supplements when medical conditions, pregnancy, eating-disorder history, or medicines may be relevant.",
+            "Verify the named studies and product ingredient claims from primary sources before relying on them.",
+            "Separate the closing product advertisement from the evidence assessment."
+          ],
+          "questions_left_unanswered": [
+            "Which exact studies support each numerical or causal claim?",
+            "What outcomes were measured in humans, over what duration, and with what effect size?",
+            "Which Rasayana products and doses are safe for which people?",
+            "Does sexual restraint affect ageing after controlling for health, social, and lifestyle factors?"
+          ],
+          "contradictions_or_doubts": [
+            "The claim that oxygen deficiency essentially causes all chronic disease is far broader than the evidence supplied.",
+            "The narration equates fasting-related autophagy with toxic cells vanishing and broad visible benefits without showing that chain of evidence.",
+            "A commenter reports no benefit after prolonged abstinence, illustrating that audience experience is not uniformly supportive."
+          ],
+          "comparison_opportunities": [
+            "Compare the fasting advice with clinical guidance on time-restricted eating and periodic fasting.",
+            "Compare Rasayana claims with systematic reviews of each named herb.",
+            "Compare cited celibacy-longevity associations with research controlling for confounders.",
+            "Compare the marketed product's label and testing with the composition claimed in the video."
+          ],
+          "overall_score": {"score_0_to_100": 55, "explanation": "Strong organization and motivational value, but low supplied evidence strength, multiple high-risk overclaims, missing safety context, and commercial content limit reliability."},
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "This assessment uses one supplied canonical text segment, structured metadata, and a 100-record comment sample. It does not independently verify the cited science, evaluate the actual audiovisual presentation, or infer canonical timestamps from bracketed text."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical timestamps and duration are unusable for timeline, clip, and rewatch features.",
+            "All transcript-derived features necessarily cite the same single canonical segment.",
+            "External studies and product evidence are absent, so consequential claims remain unverified."
+          ],
+          "cross_feature_consistency": "The title, taxonomy, summaries, entities, claim inventory, intake, and editorial assessment consistently describe the same five practices, distinguish source assertions from verification, and cite canonical segment s00001. Timestamp-dependent arrays are consistently empty.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
