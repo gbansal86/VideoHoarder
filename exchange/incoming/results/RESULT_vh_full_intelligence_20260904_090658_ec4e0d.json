@@ -1,0 +1,697 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090658_ec4e0d",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "F4_Ne6re0RA",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium-high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [
+        "Transcript metadata labels the canonical transcript source as no_transcript while also providing a complete high-quality English transcript.",
+        "Declared video_duration_seconds is 0 even though the transcript text contains embedded timestamps through about 13 minutes."
+      ],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one complete segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing valid media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite containing a complete transcript; transcript-derived findings cite the supplied canonical segment but confidence remains cautious for exact timing.",
+          "Medical and cancer-prevention statements are source claims from the supplied transcript and should not be treated as external medical verification.",
+          "The video includes a sponsored A2 cow ghee promotion inside a cancer-warning discussion, creating possible commercial bias around nutrition claims."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Six Cancer Warning Signs and Lifestyle Risk Advice",
+          "short_title": "Cancer Warning Signs",
+          "reason": "The supplied transcript centers on six possible cancer warning signs, followed by lifestyle and food-risk advice."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Cancer warning signs and prevention advice",
+          "secondary_topics": [
+            "early detection",
+            "lumps and mole changes",
+            "unexplained bleeding",
+            "weight loss",
+            "persistent cough",
+            "bowel and bladder changes",
+            "diet and lifestyle risk"
+          ],
+          "category": "Health",
+          "subcategory": "Cancer awareness",
+          "keywords": [
+            "cancer warning signs",
+            "early detection",
+            "unexplained weight loss",
+            "persistent cough",
+            "mole changes",
+            "unexplained bleeding",
+            "bowel changes",
+            "cancer prevention",
+            "processed food risk"
+          ],
+          "canonical_tags": [
+            "cancer",
+            "early detection",
+            "warning sign",
+            "medical symptom",
+            "lump",
+            "weight loss",
+            "bleeding",
+            "persistent cough",
+            "mole change",
+            "bowel habit",
+            "bladder habit",
+            "processed food",
+            "lifestyle risk"
+          ],
+          "search_queries": [
+            "cancer early warning signs explained",
+            "when to seek medical attention for possible cancer symptoms",
+            "cancer prevention lifestyle risk factors"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video presents six warning signs the source says may point to cancer risk: new or unusual lumps, unexplained weight loss, unexplained bleeding, persistent cough or voice change, new or changing moles, and significant bowel or bladder changes. It repeatedly emphasizes that most of these symptoms are not cancer but should be medically checked when persistent or abnormal. The second half argues that cancer is rising because of poor lifestyle, processed foods, fried and overcooked meats, alcohol, stress, and family history, then recommends home-cooked food, activity, sleep, intermittent fasting, and pranayama. These are source claims only; the package contains no external medical references, and several prevention and reversal statements require professional verification.",
+          "key_takeaways": [
+            "The source frames early medical attention as the main practical response to suspicious or persistent symptoms.",
+            "Lumps, weight loss, unexplained bleeding, persistent cough, mole changes, and bowel or bladder changes are presented as warning signs rather than diagnoses.",
+            "The video repeatedly says common symptoms may have non-cancer causes and should be assessed by doctors.",
+            "Diet, sleep, activity, stress management, intermittent fasting, and pranayama are promoted as prevention-oriented habits.",
+            "Strong claims about ghee benefits, fasting killing cancer cells, and cancer reversal through breathing practices require external medical verification."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata description",
+            "structured YouTube comment sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video is a cancer-awareness explainer from Fit Tuber that combines symptom education, prevention advice, and a sponsored product segment. It opens by claiming cancer cases in India have become much more common and argues that early detection matters because early-stage cancer can be easier to treat. The creator says he consulted cancer-treating doctors and presents the material as vigilance rather than fear. The main educational structure is a list of six signs that may justify medical attention. The transcript then shifts from warning signs to proposed causes and prevention habits, including claims about processed foods, stress, family history, sleep, activity, intermittent fasting, and yogic breathing. The supplied evidence supports what the video says, but it does not externally verify the medical accuracy of those statements.",
+          "sections": [
+            {
+              "heading": "Purpose and early-detection framing",
+              "summary": "The opening says cancer is serious but can be treated more easily when caught early. The source positions the video as awareness-building and says the signs should prompt vigilance and medical assessment rather than panic.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Six warning signs",
+              "summary": "The source lists thickened tissue or lumps, unexplained weight loss, unexplained bleeding, persistent cough or voice change, new or changing moles, and significant bowel or bladder changes. It gives examples such as hard painless lumps, quick unintended weight loss, blood in urine, vomit, sputum, or stool, prolonged cough, ABCDE mole changes, urinary difficulty, and abnormal stool color.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Cautions around interpretation",
+              "summary": "The transcript repeatedly notes that these symptoms often have non-cancer explanations such as infection, diabetes, thyroid malfunction, tuberculosis, piles, lung congestion, kidney issues, or liver problems. The advised action is to get unusual persistent symptoms checked rather than assuming cancer.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Commercial and prevention segment",
+              "summary": "The video includes a sponsored promotion for Anveshan A2 cow ghee, then returns to cancer prevention. The source claims poor lifestyle, processed and fried foods, overcooked meat, sugar, refined carbohydrates, alcohol, stress, and family history increase risk. It recommends avoiding junk food, eating home-cooked meals at regular times, staying active, sleeping well, intermittent fasting, and pranayama.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Seek medical attention for persistent abnormal lumps, especially if hard, less movable, or associated with testicular heaviness.",
+            "Investigate unintended weight loss greater than 5 percent over about 6 months according to the source.",
+            "Persistent unexplained bleeding in urine, vomit, sputum, stool, or nose should be checked.",
+            "Use the ABCDE heuristic for mole changes: asymmetry, border, color, diameter, and elevation.",
+            "Persistent cough lasting 2 to 3 months, voice change, urinary difficulty, or ongoing bowel changes are presented as reasons for diagnosis rather than panic."
+          ],
+          "limitations": [
+            "The transcript is collapsed into a single zero-duration canonical segment, limiting timestamp-level validation.",
+            "No external medical sources are supplied beyond the transcript's references to doctors and the American Cancer Society.",
+            "Cancer prevention and reversal claims are high-stakes medical claims and need external verification.",
+            "The sponsored ghee segment may influence nutritional framing."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel/source of the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vivek",
+              "type": "person",
+              "context": "Presenter name used at the end of the transcript.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "American Cancer Society",
+              "type": "organization",
+              "context": "Cited by the source for unexplained weight loss as a noticeable symptom in some cancers.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Anveshan A2 cow ghee",
+              "type": "product",
+              "context": "Sponsored product promoted during the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "McDonald's",
+              "type": "organization",
+              "context": "Named as an example of multinational food joints becoming common in India.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "India",
+              "type": "place",
+              "context": "The source discusses rising cancer cases and changing diet patterns in India.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "America",
+              "type": "place",
+              "context": "Used by the source as a comparison for cancer prevalence and processed-food diet patterns.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "cancer",
+              "type": "concept",
+              "context": "Primary disease category discussed throughout the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "breast cancer",
+              "type": "concept",
+              "context": "Mentioned in connection with lump formation.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "testicular cancer",
+              "type": "concept",
+              "context": "Mentioned in connection with testicular heaviness and younger adults.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "colon cancer",
+              "type": "concept",
+              "context": "Mentioned as a rare possible association with persistent unexplained nose bleeding in the source's account.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "lung cancer",
+              "type": "concept",
+              "context": "Mentioned with blood in sputum and persistent cough or voice change.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "thyroid cancer",
+              "type": "concept",
+              "context": "Mentioned as a rare possible association with voice roughness.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "prostate cancer",
+              "type": "concept",
+              "context": "Mentioned as a rare possible explanation for lower urinary tract symptoms.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "intermittent fasting",
+              "type": "concept",
+              "context": "Recommended by the source as a prevention-oriented practice.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "pranayama",
+              "type": "concept",
+              "context": "Recommended by the source as a prevention-oriented breathing practice.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Every year more than 10 lakh people in India are diagnosed with cancer.",
+              "claim_type": "quantitative medical epidemiology",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Cancer caught in the beginning stages can be easily treated.",
+              "claim_type": "medical prognosis",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Hard, less movable, painless lumps can be a possible sign of cancer, while most lumps are not cancer.",
+              "claim_type": "medical symptom guidance",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "One testis becoming heavier or descending more than the other is abnormal and deserves medical attention.",
+              "claim_type": "medical symptom guidance",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Unexplained weight loss may be the first noticeable symptom of esophageal, pancreatic, stomach, and lung cancers.",
+              "claim_type": "medical symptom guidance",
+              "verification_status": "source_claim_only",
+              "severity": "high",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Losing more than 5 percent of body weight in 6 months without trying should prompt diagnosis.",
+              "claim_type": "medical recommendation",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Persistent unexplained bleeding in urine, vomit, sputum, stool, or nose may require medical evaluation and can rarely be associated with cancer.",
+              "claim_type": "medical symptom guidance",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A cough lasting 2 to 3 months, especially with voice change, can rarely be cancer-related and should prompt attention.",
+              "claim_type": "medical symptom guidance",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "New moles or changes in asymmetry, border, color, diameter, or elevation may require dermatology assessment or biopsy.",
+              "claim_type": "medical symptom guidance",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Persistent abnormal bowel or bladder changes should be checked rather than assumed harmless.",
+              "claim_type": "medical recommendation",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Processed meats, fried foods, overcooked meats, sugary foods, refined carbohydrates, and alcohol are linked by the source to higher cancer risk.",
+              "claim_type": "medical nutrition risk",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Poor lifestyle is presented as a major reason for growing cancer rates in India.",
+              "claim_type": "causal medical claim",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Persistent severe stress can lead to cancer development over time.",
+              "claim_type": "causal medical claim",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A person who avoids junk food, eats home food, keeps fixed timings, stays active, and sleeps well is most likely to never develop cancer.",
+              "claim_type": "medical prevention claim",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Daily intermittent fasting triggers healing in the body that kills cancer cells.",
+              "claim_type": "medical prevention claim",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A woman reversed fourth-stage cancer without chemotherapy by doing kapalbhati and anulom vilom for 6 hours daily.",
+              "claim_type": "medical treatment anecdote",
+              "verification_status": "needs_external_verification",
+              "severity": "critical",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A2 cow ghee reduces bad cholesterol, normalizes blood pressure, shrinks stubborn fat cells, lubricates joints, and becomes healthier after aging.",
+              "claim_type": "product health claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "The video discusses potentially serious cancer symptoms; viewers should seek qualified medical care rather than self-diagnose from the video.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The source mixes medical advice with a sponsored ghee advertisement, so nutrition and product-health claims should be treated cautiously.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The cancer reversal anecdote could discourage evidence-based treatment if taken literally; it requires strong external verification.",
+              "severity": "critical",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Viewer comments include personal medical anecdotes and remedy suggestions, which are not verified evidence.",
+              "severity": "medium",
+              "segment_ids": []
+            }
+          ],
+          "overall_risk": "high"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1102,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Fear, personal relevance, and family cancer experiences",
+              "approximate_count": 10,
+              "evidence": "Several comments describe fear when opening the video, relatives diagnosed with cancer, or family deaths from cancer."
+            },
+            {
+              "theme": "Requests for more medical topics",
+              "approximate_count": 12,
+              "evidence": "Viewers ask for videos on heart attack, cardiac arrest, lumps, moles, mucous in stool, incense smoke, synthetic materials, dental attrition, and other health questions."
+            },
+            {
+              "theme": "Calls for professional advice and skepticism",
+              "approximate_count": 3,
+              "evidence": "Some comments warn against relying on videos for serious diseases and recommend professional medical advice."
+            },
+            {
+              "theme": "Lifestyle and home-remedy suggestions",
+              "approximate_count": 8,
+              "evidence": "Comments propose oil reduction, omega intake, turmeric, black pepper, apricot kernels, aloe, wheatgrass, neem, juices, and natural lifestyle changes."
+            },
+            {
+              "theme": "Concerns about oversimplifying cancer causes",
+              "approximate_count": 2,
+              "evidence": "One supplied comment argues that cancer types differ, random mutations matter, and lifestyle cannot guarantee prevention."
+            },
+            {
+              "theme": "Product and unrelated topic requests",
+              "approximate_count": 10,
+              "evidence": "Some comments ask about ghee, multigrain atta, shampoo, lipstick, multivitamins, tattoo removal, facial hair, and other unrelated requests."
+            }
+          ],
+          "agreements": [
+            "Many viewers agree that cancer awareness is needed.",
+            "Some commenters support the message that persistent symptoms should not be ignored.",
+            "Several comments echo lifestyle-risk concerns."
+          ],
+          "disagreements": [
+            "At least one commenter challenges oversimplified lifestyle-only explanations for cancer.",
+            "A commenter explicitly says people should not follow videos for measures against major diseases and should seek professional advice.",
+            "Some remedy-oriented comments imply treatment approaches that are not supported by the supplied evidence."
+          ],
+          "questions": [
+            "Is mucous in stool a sign of cancer?",
+            "Are lumps in the hand or neck only fat lumps or something serious?",
+            "Can many moles around the neck turning wart-like be concerning?",
+            "Can incense or synthetic prayer materials contribute to cancer risk?",
+            "What are the best affordable ghee options?"
+          ],
+          "useful_corrections": [
+            "One comment notes that each type of cancer has different causes, progression, and treatment.",
+            "One comment says lifestyle can lower risk but cannot guarantee prevention.",
+            "A commenter warns viewers to seek professional advice for serious diseases rather than relying on creator research."
+          ],
+          "sentiment": {
+            "overall": "concerned and appreciative",
+            "positive": "Many comments thank the creator or request more videos.",
+            "negative": "A smaller but important subset expresses fear, grief, skepticism, or concern about oversimplification.",
+            "mixed": "The thread combines gratitude, personal loss, remedy-sharing, and medical caution."
+          },
+          "limitations": [
+            "Only 100 of 1102 comments are included.",
+            "The sampling method is deterministic_head_tail, so middle-of-thread themes may be underrepresented.",
+            "Comments are audience-generated and not factual verification.",
+            "Several comment records are metadata header lines rather than substantive viewer statements."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; using embedded timestamps from text would create timestamps not validated by canonical segment boundaries.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical_transcript.source is no_transcript despite a complete transcript being supplied",
+            "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+          ],
+          "limitations": [
+            "Transcript is collapsed into one canonical segment, preventing valid timeline boundary checks.",
+            "Medical facts are not externally verified by the package.",
+            "Comments are sampled and audience-generated.",
+            "Sponsored product content creates a potential commercial bias."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A Fit Tuber health video explaining six possible cancer warning signs, then giving lifestyle, diet, and breathing-practice advice for cancer-risk reduction.",
+          "strongest_takeaway": "Persistent unusual symptoms should be checked by a medical professional, but the video's prevention and product-health claims need external medical verification.",
+          "strengths": [
+            "Repeatedly cautions that common symptoms are often not cancer and should be diagnosed professionally.",
+            "Gives concrete symptom categories viewers may recognize.",
+            "Includes useful urgency around early detection.",
+            "Viewer comments reveal strong audience concern and practical medical questions."
+          ],
+          "weaknesses": [
+            "Transcript evidence is one zero-duration canonical segment.",
+            "High-stakes prevention and reversal claims are not externally supported in the package.",
+            "Sponsored ghee promotion interrupts the cancer discussion and introduces potential bias.",
+            "Some prevention language overstates certainty, especially around lifestyle, fasting, and pranayama."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Keep as a cancer-awareness and claim-review item, but the zero-duration transcript prevents precise rewatch sections and the medical recommendations should be checked against authoritative sources."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "The useful part of this video is its simple insistence that persistent abnormal symptoms deserve medical attention. The risky part is the confident shift from warning signs into broad lifestyle causation, sponsored ghee benefits, fasting, pranayama, and an anecdotal cancer reversal story. As a library item, it is valuable for tracking public health messaging and audience concerns, but it should not be treated as medical guidance without outside verification.",
+          "bottom_line": "Good as an awareness prompt, weak as a standalone medical authority.",
+          "what_is_new_or_distinctive": [
+            "Packages six symptom categories into an easy public-awareness format.",
+            "Combines cancer warning signs with lifestyle-prevention advice and a sponsored ghee segment.",
+            "Audience comments include both strong demand for health guidance and explicit skepticism about medical advice from creator videos."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "The warning-sign checklist may help viewers notice symptoms to discuss with doctors, but practical medical decisions need professional guidance."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The transcript claims doctor consultation and cites the American Cancer Society once, but no external source documents are supplied; several claims exceed what the package can verify."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Sponsored Anveshan A2 cow ghee promotion inside a health-risk video.",
+            "Strong natural-lifestyle framing may understate the complexity of cancer causes and treatment.",
+            "Creator-channel product and affiliate links appear in the metadata description."
+          ],
+          "important_missing_context": [
+            "No external medical references or citations are supplied for cancer statistics, symptom thresholds, or prevention claims.",
+            "No oncologist names, source documents, or study links are embedded in the package evidence.",
+            "No distinction is made between cancer types when making some broad prevention statements."
+          ],
+          "who_should_watch": [
+            "Viewers seeking a general list of symptoms they should not ignore.",
+            "Researchers cataloging health-influencer cancer messaging.",
+            "People comparing creator health advice against authoritative medical sources."
+          ],
+          "who_can_skip": [
+            "Anyone seeking diagnosis or treatment guidance for current symptoms.",
+            "Viewers who need peer-reviewed or guideline-based cancer information.",
+            "Users only interested in non-sponsored medical education."
+          ],
+          "recommended_actions": [
+            "Treat symptom advice as a prompt to consult a qualified clinician.",
+            "Externally verify all claims about cancer prevention, fasting, pranayama, stress, and ghee.",
+            "Flag the cancer-reversal anecdote as high-risk if the library tracks medical misinformation risk.",
+            "Compare this video with authoritative cancer-screening and symptom resources."
+          ],
+          "questions_left_unanswered": [
+            "Which doctors were consulted and what exactly did they endorse?",
+            "Which studies support the India cancer statistics and diet-risk claims?",
+            "How do these warning signs vary by cancer type, age, sex, and risk factors?",
+            "What screening recommendations apply to different groups?"
+          ],
+          "contradictions_or_doubts": [
+            "The source says not to panic and that most symptoms are not cancer, but also uses broad alarming links across many everyday symptoms.",
+            "The prevention section implies lifestyle can make cancer unlikely or prevent it, while supplied comments correctly note that cancer causes are more complex.",
+            "The transcript source metadata conflicts with the presence of a complete transcript."
+          ],
+          "comparison_opportunities": [
+            "Compare against American Cancer Society or national cancer institute symptom pages.",
+            "Compare with clinical guidance on unexplained weight loss, mole changes, blood in stool, and persistent cough.",
+            "Compare with evidence reviews on intermittent fasting, pranayama, stress, and cancer outcomes."
+          ],
+          "overall_score": {
+            "score_0_to_100": 62,
+            "explanation": "Useful public-awareness framing and complete transcript evidence, but high-stakes unsupported claims, commercial sponsorship, and unusable canonical timestamps reduce reliability."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "This assessment is based only on the supplied transcript, metadata, and sampled comments. It does not externally fact-check the cancer statistics, symptom guidance, treatment anecdotes, product claims, or prevention advice."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is supplied as one complete segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing valid media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite containing a complete transcript; transcript-derived findings cite the supplied canonical segment but confidence remains cautious for exact timing.",
+            "Medical and cancer-prevention statements are source claims from the supplied transcript and should not be treated as external medical verification.",
+            "The video includes a sponsored A2 cow ghee promotion inside a cancer-warning discussion, creating possible commercial bias around nutrition claims."
+          ],
+          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and editorial judgments cite canonical segment s00001; timeline, clips, and rewatch sections are empty because valid canonical timestamps are unavailable.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
