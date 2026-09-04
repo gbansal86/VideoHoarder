@@ -1,0 +1,3714 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090658_c7750f",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "09W4jwgSHzI",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five Dabur Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Amazing Dabur Products You Should Try",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Dabur consumer products recommended by the source",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "Dabur",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Amazing Dabur Products You Should Try Fit Tuber",
+            "Dabur product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five Dabur consumer products recommended by the source and frames them around value-for-money Ayurvedic and natural consumer products. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing Dabur consumer products recommended by the source.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates Dabur consumer products recommended by the source. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces Dabur consumer products recommended by the source and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes not sponsored by Dabur, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "Dabur"
+          ],
+          "products": [
+            "Dabur products"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed Dabur consumer products recommended by the source are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is not sponsored by Dabur.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about Dabur consumer products recommended by the source.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that Dabur or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on Dabur consumer products recommended by the source",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "not sponsored by Dabur",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "8SJhgzx5DVM",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Six mixed brands Recommendations and Safer-Alternative Claims",
+          "short_title": "6 Must Try Products Under Rs 499 That Make Healthy Lifestyle Easier",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "healthy-lifestyle products under Rs 499",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "mixed brands",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "6 Must Try Products Under Rs 499 That Make Healthy Lifestyle Easier Fit Tuber",
+            "mixed brands product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews six healthy-lifestyle products under Rs 499 and frames them around low-cost practical products including a copper bottle and other routine aids. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing healthy-lifestyle products under Rs 499.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates healthy-lifestyle products under Rs 499. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces healthy-lifestyle products under Rs 499 and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes Mamaearth promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "mixed brands"
+          ],
+          "products": [
+            "copper bottle",
+            "Mamaearth Tea Tree Hair Mask"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed healthy-lifestyle products under Rs 499 are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is Mamaearth promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about healthy-lifestyle products under Rs 499.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that mixed brands or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on healthy-lifestyle products under Rs 499",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Mamaearth promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "MJcM3baHkqg",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five Isha Life Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Amazing Isha Life Products by Sadhguru That You Should Try ( )",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Isha Life products recommended by the source",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "Isha Life",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Amazing Isha Life Products by Sadhguru That You Should Try ( ) Fit Tuber",
+            "Isha Life product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five Isha Life products recommended by the source and frames them around Sadhguru-linked wellness products assessed for value. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing Isha Life products recommended by the source.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates Isha Life products recommended by the source. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces Isha Life products recommended by the source and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes Mamaearth promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "Isha Life"
+          ],
+          "products": [
+            "Isha Life products",
+            "Mamaearth C3 Face Mask"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed Isha Life products recommended by the source are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is Mamaearth promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about Isha Life products recommended by the source.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that Isha Life or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on Isha Life products recommended by the source",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Mamaearth promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "MdTfLzT5FZw",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "C",
+      "confidence": "low",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification.",
+          "Transcript quality is garbled or partially unreliable; confidence is downgraded and detailed product claims are summarized conservatively."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five chemist shop products Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Products at Chemist Shop that Need Your Attention",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "chemist-shop products needing attention",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "chemist shop products",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Products at Chemist Shop that Need Your Attention Fit Tuber",
+            "chemist shop products product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five chemist-shop products needing attention and frames them around frequently bought pharmacy products with mixed usefulness. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing chemist-shop products needing attention.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates chemist-shop products needing attention. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces chemist-shop products needing attention and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes Mamaearth promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction.",
+            "Transcript corruption prevents confident recovery of every product-specific detail."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "chemist shop products"
+          ],
+          "products": [
+            "chemist shop products",
+            "Mamaearth Argan Hair Mask"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed chemist-shop products needing attention are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is Mamaearth promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript quality is weak, so only high-level product-review conclusions are reliable."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "C",
+          "transcript_quality": "garbled or partially unreliable single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable.",
+            "Transcript corruption reduces detail confidence."
+          ],
+          "confidence": "low",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about chemist-shop products needing attention.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists",
+            "Transcript is partly corrupted"
+          ],
+          "worth_keeping": "maybe",
+          "worth_rewatching": "unknown"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that chemist shop products or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on chemist-shop products needing attention",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "low",
+            "explanation": "Practical value is limited by transcript corruption."
+          },
+          "credibility_assessment": {
+            "level": "low",
+            "explanation": "Transcript quality is too weak for full product-level trust."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Mamaearth promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 4,
+            "scale": 10,
+            "reason": "Useful topic, but weak transcript and commercial context lower reliability."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification.",
+            "Transcript quality is garbled or partially unreliable; confidence is downgraded and detailed product claims are summarized conservatively."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "N_dVcI5p5ck",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five household products Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Daily Products You Should Stop Using Immediately (With Healthier Alt",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "daily household products the source says to stop using",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "household products",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Daily Products You Should Stop Using Immediately (With Healthier Alternatives) Fit Tuber",
+            "household products product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five daily household products the source says to stop using and frames them around healthier alternatives to common Indian home products the source calls hazardous. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing daily household products the source says to stop using.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates daily household products the source says to stop using. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces daily household products the source says to stop using and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes WOW promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "household products"
+          ],
+          "products": [
+            "WOW Rose & Lavender Mist Toner"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed daily household products the source says to stop using are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is WOW promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about daily household products the source says to stop using.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that household products or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on daily household products the source says to stop using",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "WOW promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "P9LW2lwgYiQ",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Six mixed brands Recommendations and Safer-Alternative Claims",
+          "short_title": "6 Amazing Products Under Rs 799 that Make Healthy Lifestyle Easier",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "healthy-lifestyle products under Rs 799",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "mixed brands",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "6 Amazing Products Under Rs 799 that Make Healthy Lifestyle Easier Fit Tuber",
+            "mixed brands product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews six healthy-lifestyle products under Rs 799 and frames them around practical lifestyle products including toilet/squatting support and other home health aids. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing healthy-lifestyle products under Rs 799.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates healthy-lifestyle products under Rs 799. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces healthy-lifestyle products under Rs 799 and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes Mamaearth promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "mixed brands"
+          ],
+          "products": [
+            "squatting aid",
+            "Mamaearth Ubtan Tinted Lip Balm"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed healthy-lifestyle products under Rs 799 are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is Mamaearth promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about healthy-lifestyle products under Rs 799.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that mixed brands or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on healthy-lifestyle products under Rs 799",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Mamaearth promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "RWRDGnsQX_k",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "C",
+      "confidence": "low",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification.",
+          "Transcript quality is garbled or partially unreliable; confidence is downgraded and detailed product claims are summarized conservatively."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five Patanjali Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Amazing Patanjali Products You Should Try",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Patanjali products recommended by the source",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "Patanjali",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Amazing Patanjali Products You Should Try Fit Tuber",
+            "Patanjali product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five Patanjali products recommended by the source and frames them around Patanjali Ayurved products assessed as genuine and value-for-money. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing Patanjali products recommended by the source.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates Patanjali products recommended by the source. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces Patanjali products recommended by the source and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes claimed not sponsored by Patanjali, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction.",
+            "Transcript corruption prevents confident recovery of every product-specific detail."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "Patanjali"
+          ],
+          "products": [
+            "Patanjali products"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed Patanjali products recommended by the source are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is claimed not sponsored by Patanjali.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript quality is weak, so only high-level product-review conclusions are reliable."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "C",
+          "transcript_quality": "garbled or partially unreliable single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable.",
+            "Transcript corruption reduces detail confidence."
+          ],
+          "confidence": "low",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about Patanjali products recommended by the source.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists",
+            "Transcript is partly corrupted"
+          ],
+          "worth_keeping": "maybe",
+          "worth_rewatching": "unknown"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that Patanjali or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on Patanjali products recommended by the source",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "low",
+            "explanation": "Practical value is limited by transcript corruption."
+          },
+          "credibility_assessment": {
+            "level": "low",
+            "explanation": "Transcript quality is too weak for full product-level trust."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "claimed not sponsored by Patanjali",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 4,
+            "scale": 10,
+            "reason": "Useful topic, but weak transcript and commercial context lower reliability."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification.",
+            "Transcript quality is garbled or partially unreliable; confidence is downgraded and detailed product claims are summarized conservatively."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "_3beJopLD2Y",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five chemist shop products Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Products at the Chemist Shop that Need Your Attention",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "chemist-shop products reviewed for usefulness and value",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "chemist shop products",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Products at the Chemist Shop that Need Your Attention Fit Tuber",
+            "chemist shop products product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five chemist-shop products reviewed for usefulness and value and frames them around common pharmacy purchases such as Safi, Revital, Glucon D, Strepsils, and Kayam Churan. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing chemist-shop products reviewed for usefulness and value.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates chemist-shop products reviewed for usefulness and value. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces chemist-shop products reviewed for usefulness and value and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes WOW promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "chemist shop products"
+          ],
+          "products": [
+            "Hamdard Safi",
+            "Revital",
+            "Glucon D",
+            "Strepsils",
+            "Kayam Churan",
+            "WOW Onion Black Seed Hair Oil"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed chemist-shop products reviewed for usefulness and value are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is WOW promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about chemist-shop products reviewed for usefulness and value.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that chemist shop products or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on chemist-shop products reviewed for usefulness and value",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "WOW promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "hLCvr7HHJNs",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five mixed brands Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Must have Products this Winter ( Will Surprise You)",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "winter essential products",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "mixed brands",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Must have Products this Winter ( Will Surprise You) Fit Tuber",
+            "mixed brands product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five winter essential products and frames them around toxin-free winter products for dry skin, dandruff, frizzy hair, and seasonal immunity concerns. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing winter essential products.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates winter essential products. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces winter essential products and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes ClickOnCare/Glutone promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "mixed brands"
+          ],
+          "products": [
+            "Glutone 1000",
+            "Escor Z"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed winter essential products are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is ClickOnCare/Glutone promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about winter essential products.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that mixed brands or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on winter essential products",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "ClickOnCare/Glutone promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "vTYuNp7wq10",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five household products Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Products at Your Home That You Should Stop Using Immediately ( With ",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "daily-use household products to replace",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "household products",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Products at Your Home That You Should Stop Using Immediately ( With Safe Alternatives) Fit Tuber",
+            "household products product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews five daily-use household products to replace and frames them around safe alternatives or DIY replacements for products the source calls hazardous. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing daily-use household products to replace.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates daily-use household products to replace. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces daily-use household products to replace and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes Mamaearth promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "household products"
+          ],
+          "products": [
+            "Mamaearth Body Wash for Babies"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed daily-use household products to replace are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is Mamaearth promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about daily-use household products to replace.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that household products or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on daily-use household products to replace",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Mamaearth promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "w1c9JhNYyRA",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "C",
+      "confidence": "low",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification.",
+          "Transcript quality is garbled or partially unreliable; confidence is downgraded and detailed product claims are summarized conservatively."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Seven mixed brands Recommendations and Safer-Alternative Claims",
+          "short_title": "7 Must Try Products Under Rs 299 That Make Healthy Lifestyle Easier",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "healthy-lifestyle products under Rs 299",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "mixed brands",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "7 Must Try Products Under Rs 299 That Make Healthy Lifestyle Easier Fit Tuber",
+            "mixed brands product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews seven healthy-lifestyle products under Rs 299 and frames them around very-low-cost practical lifestyle products. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing healthy-lifestyle products under Rs 299.",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates healthy-lifestyle products under Rs 299. It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces healthy-lifestyle products under Rs 299 and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes OZiva promotion, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction.",
+            "Transcript corruption prevents confident recovery of every product-specific detail."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "mixed brands"
+          ],
+          "products": [
+            "OZiva Protein & Herbs"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed healthy-lifestyle products under Rs 299 are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is OZiva promotion.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript quality is weak, so only high-level product-review conclusions are reliable."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "C",
+          "transcript_quality": "garbled or partially unreliable single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable.",
+            "Transcript corruption reduces detail confidence."
+          ],
+          "confidence": "low",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about healthy-lifestyle products under Rs 299.",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists",
+            "Transcript is partly corrupted"
+          ],
+          "worth_keeping": "maybe",
+          "worth_rewatching": "unknown"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that mixed brands or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on healthy-lifestyle products under Rs 299",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "low",
+            "explanation": "Practical value is limited by transcript corruption."
+          },
+          "credibility_assessment": {
+            "level": "low",
+            "explanation": "Transcript quality is too weak for full product-level trust."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "OZiva promotion",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 4,
+            "scale": 10,
+            "reason": "Useful topic, but weak transcript and commercial context lower reliability."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification.",
+            "Transcript quality is garbled or partially unreliable; confidence is downgraded and detailed product claims are summarized conservatively."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "ypkpJRyxgxE",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Multiple mixed products Recommendations and Safer-Alternative Claims",
+          "short_title": "5 Daily Winter Products That You Should Throw Away Immediately (With H",
+          "reason": "The title identifies the product-review scope while keeping recommendations as source claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives)",
+          "secondary_topics": [
+            "consumer product review",
+            "ingredient and safety claims",
+            "value-for-money assessment",
+            "healthier alternatives",
+            "sponsorship and affiliate context"
+          ],
+          "category": "Health",
+          "subcategory": "Consumer health-product reviews",
+          "keywords": [
+            "mixed products",
+            "product review",
+            "healthy lifestyle",
+            "safer alternatives",
+            "ingredients",
+            "value for money",
+            "Fit Tuber"
+          ],
+          "canonical_tags": [
+            "consumer products",
+            "product review",
+            "healthy lifestyle",
+            "ingredient safety",
+            "shopping guidance"
+          ],
+          "search_queries": [
+            "5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives) Fit Tuber",
+            "mixed products product review healthier alternatives"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews multiple 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives) and frames them around consumer product recommendations. The source presents itself as a consumer-oriented guide, often saying the featured brand itself is not sponsoring the review while still including separate sponsor or affiliate links in the metadata or closing segment. The supplied evidence supports a summary of what the speaker recommends, criticizes, or replaces, but it does not include independent product testing, current label photos, clinical evidence, or price verification. The safest use is as a shopping shortlist to verify, not as final medical or safety advice.",
+          "key_takeaways": [
+            "The source's core task is reviewing 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives).",
+            "Recommendations depend on the speaker's ingredient, practicality, and value judgments.",
+            "Separate sponsorships or affiliate links are important bias context.",
+            "Health and safety claims should be verified against current labels and professional guidance."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber consumer-health video evaluates 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives). It mixes practical shopping advice with health, safety, ingredient, or traditional-wellness claims. The output is conservative because the package provides transcript and metadata but no independent testing data.",
+          "sections": [
+            {
+              "heading": "Product-review frame",
+              "summary": "The source introduces 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives) and positions the selection as practical, healthier, or better value for Indian consumers.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            },
+            {
+              "heading": "Recommendation criteria",
+              "summary": "The speaker uses factors such as ingredients, everyday usefulness, price, perceived safety, and healthier alternatives to justify recommendations or warnings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Commercial context",
+              "summary": "The metadata or transcript includes commercial links in metadata, which should be treated as relevant context when interpreting product praise or criticism.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "No independent product label scans, lab tests, clinical studies, or current prices are included.",
+            "Canonical timestamps are unusable, preventing reliable chapter or clip extraction."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber",
+            "mixed products"
+          ],
+          "products": [],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "ingredient safety",
+            "consumer product safety",
+            "Ayurveda",
+            "healthy lifestyle",
+            "toxins"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The reviewed 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives) are useful, healthier, better value, or safer according to the source's criteria.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Some common consumer products pose health hazards or contain undesirable ingredients.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The suggested alternatives are safer or more beneficial for a healthy lifestyle.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The video's stated sponsorship or non-sponsorship context is commercial links in metadata.",
+              "risk_level": "low",
+              "verification_need": "metadata_or_source_statement_only",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not rely on product-review videos as medical advice or as proof of safety.",
+            "Check current labels, allergens, age suitability, contraindications, and professional guidance before using supplements, medicated products, or products for children.",
+            "Prices, formulas, and availability can change after publication."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the package and is not medical, dermatological, dental, or pharmacy advice.",
+          "confidence_notes": [
+            "Transcript is sufficient for high-level product-review intelligence, but not for independent product validation."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Metadata and transcript identify the consumer-product review topic.",
+            "The video gives practical recommendations or warnings for shopping decisions."
+          ],
+          "weaknesses": [
+            "No independent label, lab, or clinical evidence is included.",
+            "Commercial promotion or affiliate context is present.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer-health product review about 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives).",
+          "strongest_takeaway": "Use the video as a shortlist or warning prompt, then verify current labels, prices, and medical suitability before buying or using products.",
+          "strengths": [
+            "Practical shopping orientation",
+            "Market-specific Indian consumer context",
+            "Alternatives are discussed"
+          ],
+          "weaknesses": [
+            "Source claims are not independently verified",
+            "Commercial context exists"
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as consumer triage: it tells viewers what to inspect and what alternatives to consider. It should not be treated as proof that mixed products or the named alternatives are medically safer or objectively best.",
+          "bottom_line": "Helpful shopping context, but verify every product claim before acting.",
+          "what_is_new_or_distinctive": [
+            "Market-specific focus on 5 Daily Winter Products That You Should Throw Away Immediately (With Healthier Alternatives)",
+            "Combines product recommendations with safer-alternative framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for shopping comparison if labels and prices are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The speaker's criteria may be reasonable, but the package does not independently validate labels, safety, or efficacy."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "commercial links in metadata",
+            "Affiliate or product-link incentives",
+            "Channel brand built around product recommendations"
+          ],
+          "important_missing_context": [
+            "Current product label photos",
+            "Independent safety testing",
+            "Exact price comparison",
+            "Contraindications and suitability for children, pregnancy, allergies, or medical conditions"
+          ],
+          "who_should_watch": [
+            "Indian consumers comparing everyday health, wellness, household, pharmacy, or personal-care products"
+          ],
+          "who_can_skip": [
+            "Viewers needing clinician-level guidance or independently tested product rankings"
+          ],
+          "recommended_actions": [
+            "Verify labels and claims from current product packaging.",
+            "Be especially cautious with supplements, medicated products, baby products, and chronic-condition use.",
+            "Treat sponsored segments separately from review claims."
+          ],
+          "questions_left_unanswered": [
+            "Have formulas or prices changed since upload?",
+            "What objective thresholds define safer or healthier here?",
+            "Are any conflicts of interest beyond disclosed sponsor links present?"
+          ],
+          "contradictions_or_doubts": [
+            "A video may claim independence from the reviewed brand while still containing unrelated sponsorship or affiliate monetization."
+          ],
+          "comparison_opportunities": [
+            "Compare with current labels, FSSAI or regulatory data, dermatologist/pharmacist advice, and independent product testing."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Practical, but source-assessed and commercially contextualized."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Product safety, ingredient, pricing, health-benefit, and recommendation claims are source claims requiring external verification."
+          ]
+        }
+      }
+    }
+  ]
+}
