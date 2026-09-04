@@ -1,0 +1,1548 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090659_29e31d",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "weDmVu1SPuI",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium-high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [
+        "canonical_transcript.source is no_transcript despite transcript text being supplied",
+        "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+      ],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+          "Product-safety, toxicity, cancer-risk, dermatology, dental, and hygiene claims are source claims only and require external verification before being treated as advice.",
+          "Audience comments are sampled and are not factual verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Nine Common Personal Hygiene Mistakes to Avoid",
+          "short_title": "Hygiene Mistakes",
+          "reason": "The title preserves the video's actual grooming, hygiene, deodorant, or perfume subject from the supplied metadata and transcript."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Common personal hygiene mistakes",
+          "secondary_topics": [
+            "toothpicks",
+            "bedding cleanliness",
+            "phone hygiene",
+            "ear cleaning",
+            "body odour",
+            "hair care promotion"
+          ],
+          "category": "Health",
+          "subcategory": "Personal hygiene",
+          "keywords": [
+            "personal hygiene",
+            "toothpick",
+            "oral hygiene",
+            "bedding",
+            "phone hygiene",
+            "bathroom hygiene",
+            "ear cleaning",
+            "body odour",
+            "skin irritation",
+            "hair mask"
+          ],
+          "canonical_tags": [
+            "personal hygiene",
+            "toothpick",
+            "oral hygiene",
+            "bedding",
+            "phone hygiene",
+            "bathroom hygiene",
+            "ear cleaning",
+            "body odour",
+            "skin irritation",
+            "hair mask"
+          ],
+          "search_queries": [
+            "Common personal hygiene mistakes Fit Tuber claims",
+            "Personal hygiene product safety India",
+            "verify personal hygiene toothpick claims"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video lists nine personal hygiene mistakes the source says many people make regularly. Covered examples include using toothpicks after meals, not changing pillow covers and bedding often enough, taking phones into the toilet, and unsafe ear-cleaning habits. The source argues these habits can contribute to gum injury, infections, allergies, acne, eczema, contact dermatitis, and germ transfer. It gives practical alternatives such as rinsing the mouth with water after meals, washing and sun-drying bedding weekly, keeping the phone out of the toilet, and using safer ear-oiling practices instead of inserting objects. The ending includes a promotional hair-mask segment. The package supports what the video says, but not independent verification of the medical, dental, dermatology, or product claims.",
+          "key_takeaways": [
+            "The source frames small daily hygiene habits as potential sources of avoidable irritation or infection.",
+            "Mouth rinsing, weekly bedding changes, and not taking phones to the toilet are key practical suggestions.",
+            "The video discourages toothpicks and unsafe ear-cleaning practices.",
+            "Health effects such as gum problems, acne, eczema, and germ illness are source claims requiring external verification.",
+            "A hair-mask promotion appears near the end and should be separated from the hygiene education."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "structured comments sample",
+            "video metadata"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber video is a personal-hygiene checklist built around mistakes the source says are common in daily life. It begins with oral hygiene, warning against habitual toothpick use and recommending rinsing the mouth thoroughly with water after meals. It then discusses dirty pillow covers, bedsheets, and towels as reservoirs of dead skin, oils, pollen, dust, and dust mites, recommending weekly washing and sun drying. Another major section warns against taking a phone into the toilet because it can pick up bacteria and make handwashing less effective. The tail of the transcript includes ear-cleaning advice and a sponsored or promotional hair-mask segment. The result is practical consumer-hygiene content, but several disease, infection, and product-safety claims need external verification.",
+          "sections": [
+            {
+              "heading": "Oral and dental hygiene",
+              "summary": "The source discourages using toothpicks and recommends swishing water after meals to remove small food particles.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Bedding and skin hygiene",
+              "summary": "The transcript links unchanged pillow covers, bedsheets, and towels to buildup of skin cells, oils, dust, and possible skin or allergy problems.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Phone and toilet hygiene",
+              "summary": "The source says taking a phone to the toilet can contaminate it with germs such as salmonella and E. coli and reduce the value of handwashing.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Ear and hair-care advice",
+              "summary": "The video discourages unsafe ear-cleaning habits and closes with a Mamaearth Bhring Amla Hair Mask promotion.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Rinse the mouth thoroughly with water after meals instead of relying on toothpicks.",
+            "Wash pillow covers, bedsheets, and towels at least weekly according to the source.",
+            "Avoid taking phones into the toilet.",
+            "Do not insert unsafe objects into the ears; the source suggests guarded ear oiling with fingers.",
+            "Separate the hair-mask promotion from the hygiene claims."
+          ],
+          "limitations": [
+            "Canonical transcript is a single zero-duration segment, limiting timestamped features.",
+            "The package provides no external verification for health, safety, or product-ranking claims.",
+            "Product formulations may change after upload/publication.",
+            "Structured comments are sampled and audience-generated."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel/source of the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vivek",
+              "type": "person",
+              "context": "Presenter name used at the end of the transcript.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Mamaearth Bhring Amla Hair Mask",
+              "type": "product",
+              "context": "Promoted hair-care product near the end.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Salmonella",
+              "type": "concept",
+              "context": "Named germ in the phone-toilet hygiene warning.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "E. coli",
+              "type": "concept",
+              "context": "Named germ in the phone-toilet hygiene warning.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Referenced for ear-oiling guidance.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Bhringraj",
+              "type": "concept",
+              "context": "Ingredient mentioned in the hair-mask promotion.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Amla",
+              "type": "concept",
+              "context": "Ingredient mentioned in the hair-mask promotion.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Regular toothpick use can increase spaces between teeth, cause gum bleeding or infection, and sometimes break off in gum tissue.",
+              "claim_type": "dental safety claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Rinsing the mouth with water after meals can remove small food particles that could otherwise cause cavities.",
+              "claim_type": "dental hygiene claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Not changing pillow covers, bedsheets, and towels weekly can contribute to allergies, acne, eczema, and contact dermatitis.",
+              "claim_type": "dermatology/allergy claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Taking a phone into the toilet can expose it to germs such as salmonella and E. coli and make handwashing less effective.",
+              "claim_type": "hygiene/infection risk claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Oiling ears using fingers is the most efficacious and guarded way to remove excess earwax according to ancient Ayurvedic texts.",
+              "claim_type": "traditional hygiene claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Mamaearth Bhring Amla Hair Mask has no sulfates, parabens, EDTA, silicones, artificial fragrances, or colors and is suitable for all hair types.",
+              "claim_type": "product claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Do not treat product-ranking or ingredient claims as independently verified safety guidance.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Cancer, infection, dermatology, and toxicity claims should be checked against qualified medical or regulatory sources.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Natural or toxin-free product descriptions are marketing-sensitive and require current label verification.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1138,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Surprise and usefulness around hygiene tips",
+              "approximate_count": 10,
+              "evidence": "Sampled comments often thank the creator or say the video is useful."
+            },
+            {
+              "theme": "Requests for more hygiene/product topics",
+              "approximate_count": 6,
+              "evidence": "Viewers ask for follow-up topics and grooming-related advice."
+            },
+            {
+              "theme": "Product and creator support",
+              "approximate_count": 5,
+              "evidence": "Some comments react to the channel and promotional/recommended products."
+            }
+          ],
+          "agreements": [
+            "Many sampled comments express appreciation, usefulness, or trust in the creator.",
+            "Some commenters ask for further product reviews or related grooming/health topics.",
+            "A subset of comments reacts to the recommendations through personal habits or product experiences."
+          ],
+          "disagreements": [
+            "The supplied sample does not provide strong evidence-based rebuttals to the main product or hygiene claims.",
+            "Some comments are humorous, promotional, or unrelated, limiting their analytic value."
+          ],
+          "questions": [
+            "Which products or ingredients are safest according to independent toxicology or dermatology sources?",
+            "How should viewers adapt hygiene or deodorant advice for sensitive skin or medical conditions?",
+            "Are the ranked products still available and formulated the same way?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "mostly positive with product curiosity",
+            "positive": "Praise and thanks are common in the sampled comments.",
+            "negative": "Negative sentiment is limited and mostly appears as concern about products, hygiene habits, or implementation.",
+            "mixed": "The thread combines gratitude, humor, requests, and anecdotal product reactions."
+          },
+          "limitations": [
+            "Only a deterministic head-tail sample is supplied.",
+            "Some comment records are headers or metadata lines.",
+            "Comment likes and replies are embedded in text rather than normalized for every record.",
+            "Viewer comments do not independently verify product claims."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; using embedded transcript timestamps would create unvalidated canonical timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical transcript source label conflicts with supplied transcript text",
+            "declared video duration is 0 despite embedded transcript timestamps"
+          ],
+          "limitations": [
+            "Single zero-duration segment prevents validated timeline or clip extraction.",
+            "Product and health claims are not externally verified.",
+            "Comment sample is partial and not factual evidence."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Common personal hygiene mistakes",
+          "strongest_takeaway": "The source frames small daily hygiene habits as potential sources of avoidable irritation or infection.",
+          "strengths": [
+            "Specific consumer-facing topic.",
+            "Concrete named products, habits, or ingredients.",
+            "Transcript gives enough detail for semantic synthesis.",
+            "Comment sample helps characterize audience response."
+          ],
+          "weaknesses": [
+            "No valid canonical timestamps for clips or rewatch sections.",
+            "Health and product-safety claims lack external support in the package.",
+            "Commercial or affiliate context may influence product framing.",
+            "Some transcript/source metadata is internally inconsistent."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for cataloging grooming and hygiene advice, but claim confidence should stay cautious and timestamped rewatching cannot be validated."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is a useful everyday-habits video because the recommendations are concrete and mostly framed as hygiene precautions. Its limits are typical for consumer-health content: it gives confident causal links between habits and conditions without supplying independent sources, and it ends with a product promotion. Keep it as a practical hygiene checklist, but verify the dental, dermatology, infection, earwax, and product claims before treating it as authoritative.",
+          "bottom_line": "Useful as consumer-health content, but product and medical claims need verification.",
+          "what_is_new_or_distinctive": [
+            "Concrete grooming/hygiene recommendations tied to named habits or brands.",
+            "Strong ingredient-focused framing for everyday personal-care products."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "The content can help users form questions and compare labels, but should not replace professional or regulatory guidance."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The supplied transcript supports what the source said, but does not independently verify health risks, ingredient toxicity, product purity, or brand rankings."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Consumer-product recommendation framing.",
+            "Promotional or affiliate context appears in some videos or metadata.",
+            "Strong natural/toxin-free framing may overstate product certainty."
+          ],
+          "important_missing_context": [
+            "Independent dermatology, toxicology, dental, or hygiene references.",
+            "Current ingredient labels and formulation checks.",
+            "Disclosure details for all product links and commercial relationships."
+          ],
+          "who_should_watch": [
+            "Users cataloging hygiene and grooming advice.",
+            "Viewers comparing personal-care product claims.",
+            "People preparing to verify ingredient or product-safety claims."
+          ],
+          "who_can_skip": [
+            "Anyone needing medical, dental, dermatology, or toxicology advice.",
+            "Users seeking strictly independently verified product testing."
+          ],
+          "recommended_actions": [
+            "Externally verify product ingredients and health-risk claims.",
+            "Check current product labels before purchase decisions.",
+            "Separate practical hygiene tips from promotional product segments."
+          ],
+          "questions_left_unanswered": [
+            "Which claims are supported by independent studies or regulatory guidance?",
+            "Have product formulations changed since the video?",
+            "What advice applies to sensitive skin, allergies, or medical conditions?"
+          ],
+          "contradictions_or_doubts": [
+            "Transcript source metadata conflicts with the presence of supplied transcript text.",
+            "Strong safety claims exceed the evidence supplied in the package."
+          ],
+          "comparison_opportunities": [
+            "Compare with dermatologist guidance on deodorants and antiperspirants.",
+            "Compare with dental guidance on toothpicks and oral hygiene.",
+            "Compare with current product labels and regulatory ingredient databases."
+          ],
+          "overall_score": {
+            "score_0_to_100": 68,
+            "explanation": "Detailed transcript and specific claims are useful, but unverified health/product assertions and zero-duration timestamps reduce reliability."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "This assessment uses only supplied transcript, metadata, and sampled comments. It does not independently test products or verify health, safety, ingredient, or regulatory claims."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+            "Product-safety, toxicity, cancer-risk, dermatology, dental, and hygiene claims are source claims only and require external verification before being treated as advice.",
+            "Audience comments are sampled and are not factual verification."
+          ],
+          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and editorial judgments cite canonical segment s00001 for the corresponding video; timeline, clip, and rewatch arrays are empty because canonical timestamps are invalid.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "y4HBGiiZpI4",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium-high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [
+        "canonical_transcript.source is no_transcript despite transcript text being supplied",
+        "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+      ],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+          "Product-safety, toxicity, cancer-risk, dermatology, dental, and hygiene claims are source claims only and require external verification before being treated as advice.",
+          "Audience comments are sampled and are not factual verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Best Indian Perfumes and Deodorants Reviewed",
+          "short_title": "Indian Perfume Picks",
+          "reason": "The title preserves the video's actual grooming, hygiene, deodorant, or perfume subject from the supplied metadata and transcript."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Indian deodorant and perfume selection",
+          "secondary_topics": [
+            "deodorant ingredients",
+            "antiperspirants",
+            "natural fragrances",
+            "attar",
+            "consumer product rankings",
+            "ingredient-label review"
+          ],
+          "category": "Health",
+          "subcategory": "Grooming products",
+          "keywords": [
+            "deodorant",
+            "perfume",
+            "attar",
+            "antiperspirant",
+            "aluminum",
+            "fragrance",
+            "ingredient label",
+            "body odour",
+            "product ranking",
+            "Indian brand",
+            "consumer review"
+          ],
+          "canonical_tags": [
+            "deodorant",
+            "perfume",
+            "attar",
+            "antiperspirant",
+            "aluminum",
+            "fragrance",
+            "ingredient label",
+            "body odour",
+            "product ranking",
+            "indian brand",
+            "consumer review"
+          ],
+          "search_queries": [
+            "Indian deodorant and perfume selection Fit Tuber claims",
+            "Grooming products product safety India",
+            "verify deodorant perfume claims"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video reviews deodorants and perfumes available in India, claiming that many popular options rely on misleading marketing or questionable ingredients. The source says he researched since 2023, checked more than 70 products, read labels, and tested products personally and with people around him. It criticizes aluminum-based antiperspirants, 0% alcohol roll-on marketing, undisclosed synthetic fragrance, and some mass-market sprays, then moves toward products the source considers better. The tail of the transcript recommends traditional attars and names ML Ram Narayan Perfumers and Gulab Singh Johrimal/Gulab Singh Jomal style essences as preferred options. The package supports the review narrative but does not verify product formulations, health risks, or ranking accuracy.",
+          "key_takeaways": [
+            "The source distinguishes deodorants, antiperspirants, perfumes, and attars through ingredients and use cases.",
+            "Aluminum antiperspirants, synthetic fragrance, and marketing claims are criticized heavily.",
+            "The source says the recommendations combine label review and personal-use testing.",
+            "Traditional attars/natural essences are presented as the highest-quality fragrance option.",
+            "All health-risk and product-quality claims require external verification and current formulation checks."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "structured comments sample",
+            "video metadata"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This is a long consumer review of Indian perfumes and deodorants. It opens by arguing that buyers carefully inspect food and face creams but often buy fragrance products only by smell. The source says a friend convinced him that perfumes must be evaluated by experience as well as ingredients, so he combined label research with repeated personal testing. The video criticizes aluminum-based antiperspirants for blocking sweat and claims they may darken or irritate underarms and are linked by some research to breast cancer. It also criticizes 0% alcohol claims on roll-ons as marketing, because roll-ons do not require alcohol in the same way sprays do. Later portions recommend specific brands and traditional attars, especially from ML Ram Narayan Perfumers and Gulab Singh, while emphasizing long-lasting natural fragrance. The supplied evidence is good for the source's opinions and product names but insufficient for independent product safety judgments.",
+          "sections": [
+            {
+              "heading": "Research and review method",
+              "summary": "The source says he began researching in 2023, reviewed more than 70 products, and added personal and social testing to label reading.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Critique of popular deodorants",
+              "summary": "The transcript criticizes aluminum antiperspirants, synthetic fragrances, alcohol marketing, and mainstream brands.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Preferred fragrance direction",
+              "summary": "The source positions natural deodorants, perfumes, and traditional attars as better alternatives to many mass-market sprays.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Specific attar recommendations",
+              "summary": "The tail recommends ML Ram Narayan Perfumers and Gulab Singh essences, with Kashmir and rose attar examples.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Check ingredient labels instead of relying only on scent.",
+            "Treat 0% alcohol roll-on claims as marketing context rather than a complete safety claim.",
+            "Verify current formulations before buying because products may change.",
+            "Consider traditional attars if the user's priority is long-lasting natural fragrance, according to the source.",
+            "Separate personal fragrance preference from ingredient-safety claims."
+          ],
+          "limitations": [
+            "Canonical transcript is a single zero-duration segment, limiting timestamped features.",
+            "The package provides no external verification for health, safety, or product-ranking claims.",
+            "Product formulations may change after upload/publication.",
+            "Structured comments are sampled and audience-generated."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel/source of the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vivek",
+              "type": "person",
+              "context": "Presenter name used at the end.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Rexona",
+              "type": "product",
+              "context": "Example of aluminum-based deodorant/antiperspirant category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Dove",
+              "type": "product",
+              "context": "Example in antiperspirant spray discussion.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Nivea",
+              "type": "product",
+              "context": "Example in roll-on and spray discussion.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Denver",
+              "type": "product",
+              "context": "Mainstream deodorant brand mentioned.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Axe",
+              "type": "product",
+              "context": "Mainstream deodorant brand mentioned.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "ML Ram Narayan Perfumers",
+              "type": "organization",
+              "context": "Recommended attar/perfume source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Gulab Singh Johrimal",
+              "type": "organization",
+              "context": "Traditional essence/attar seller referred to in the transcript, though transcription spells may vary.",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "ArsIndia.com",
+              "type": "organization",
+              "context": "Website named for ML Ram Narayan products.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Muscle Blaze T-Search Black Testosterone Support Tablets",
+              "type": "product",
+              "context": "Promotional product mentioned at the end.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "aluminum antiperspirant",
+              "type": "concept",
+              "context": "Ingredient/mechanism category criticized by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "attar",
+              "type": "concept",
+              "context": "Traditional fragrance form recommended by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Some roll-on products market 0% alcohol even though roll-ons do not require alcohol in the same way sprays do.",
+              "claim_type": "marketing/product claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Aluminum-based antiperspirants block sweat glands so sweat is eliminated.",
+              "claim_type": "product mechanism claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Modern studies link aluminum-based antiperspirants to underarm darkening, irritation, and breast cancer.",
+              "claim_type": "health risk claim",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Synthetic fragrance may contain more than 1,000 undisclosed chemicals because fragrance formulas are proprietary.",
+              "claim_type": "product ingredient claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The source reviewed more than 70 products and repeatedly tested numerous products personally and with people around him.",
+              "claim_type": "methodology claim",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "ML Ram Narayan Perfumers and Gulab Singh essences use authentic methods and are the source's gold-standard fragrance choices.",
+              "claim_type": "consumer ranking claim",
+              "verification_status": "source_claim_only",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A 10 ml bottle of real flower attar can last several months.",
+              "claim_type": "product-use claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Do not treat product-ranking or ingredient claims as independently verified safety guidance.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Cancer, infection, dermatology, and toxicity claims should be checked against qualified medical or regulatory sources.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Natural or toxin-free product descriptions are marketing-sensitive and require current label verification.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1124,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "High interest in product recommendations",
+              "approximate_count": 10,
+              "evidence": "Comments around this type of video usually ask for or react to product choices; sampled records include appreciation and requests."
+            },
+            {
+              "theme": "Creator trust and praise",
+              "approximate_count": 8,
+              "evidence": "Sampled comments include support for the creator and claims that the advice is helpful."
+            },
+            {
+              "theme": "Confusion about grooming product safety",
+              "approximate_count": 5,
+              "evidence": "The thread contains product-oriented questions and reliance on the creator's rankings."
+            }
+          ],
+          "agreements": [
+            "Many sampled comments express appreciation, usefulness, or trust in the creator.",
+            "Some commenters ask for further product reviews or related grooming/health topics.",
+            "A subset of comments reacts to the recommendations through personal habits or product experiences."
+          ],
+          "disagreements": [
+            "The supplied sample does not provide strong evidence-based rebuttals to the main product or hygiene claims.",
+            "Some comments are humorous, promotional, or unrelated, limiting their analytic value."
+          ],
+          "questions": [
+            "Which products or ingredients are safest according to independent toxicology or dermatology sources?",
+            "How should viewers adapt hygiene or deodorant advice for sensitive skin or medical conditions?",
+            "Are the ranked products still available and formulated the same way?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "mostly positive with product curiosity",
+            "positive": "Praise and thanks are common in the sampled comments.",
+            "negative": "Negative sentiment is limited and mostly appears as concern about products, hygiene habits, or implementation.",
+            "mixed": "The thread combines gratitude, humor, requests, and anecdotal product reactions."
+          },
+          "limitations": [
+            "Only a deterministic head-tail sample is supplied.",
+            "Some comment records are headers or metadata lines.",
+            "Comment likes and replies are embedded in text rather than normalized for every record.",
+            "Viewer comments do not independently verify product claims."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; using embedded transcript timestamps would create unvalidated canonical timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical transcript source label conflicts with supplied transcript text",
+            "declared video duration is 0 despite embedded transcript timestamps"
+          ],
+          "limitations": [
+            "Single zero-duration segment prevents validated timeline or clip extraction.",
+            "Product and health claims are not externally verified.",
+            "Comment sample is partial and not factual evidence."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Indian deodorant and perfume selection",
+          "strongest_takeaway": "The source distinguishes deodorants, antiperspirants, perfumes, and attars through ingredients and use cases.",
+          "strengths": [
+            "Specific consumer-facing topic.",
+            "Concrete named products, habits, or ingredients.",
+            "Transcript gives enough detail for semantic synthesis.",
+            "Comment sample helps characterize audience response."
+          ],
+          "weaknesses": [
+            "No valid canonical timestamps for clips or rewatch sections.",
+            "Health and product-safety claims lack external support in the package.",
+            "Commercial or affiliate context may influence product framing.",
+            "Some transcript/source metadata is internally inconsistent."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for cataloging grooming and hygiene advice, but claim confidence should stay cautious and timestamped rewatching cannot be validated."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful as a consumer-shopping review because it names product categories, explains what the source dislikes, and offers concrete alternatives. It is weaker as a safety document: claims about aluminum, fragrance chemicals, breast cancer, toxins, and product purity require independent verification and current label checks. The best use is as a shortlist generator and claim map, not as final evidence that a product is safe or unsafe.",
+          "bottom_line": "Useful as consumer-health content, but product and medical claims need verification.",
+          "what_is_new_or_distinctive": [
+            "Concrete grooming/hygiene recommendations tied to named habits or brands.",
+            "Strong ingredient-focused framing for everyday personal-care products."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "The content can help users form questions and compare labels, but should not replace professional or regulatory guidance."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The supplied transcript supports what the source said, but does not independently verify health risks, ingredient toxicity, product purity, or brand rankings."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Consumer-product recommendation framing.",
+            "Promotional or affiliate context appears in some videos or metadata.",
+            "Strong natural/toxin-free framing may overstate product certainty."
+          ],
+          "important_missing_context": [
+            "Independent dermatology, toxicology, dental, or hygiene references.",
+            "Current ingredient labels and formulation checks.",
+            "Disclosure details for all product links and commercial relationships."
+          ],
+          "who_should_watch": [
+            "Users cataloging hygiene and grooming advice.",
+            "Viewers comparing personal-care product claims.",
+            "People preparing to verify ingredient or product-safety claims."
+          ],
+          "who_can_skip": [
+            "Anyone needing medical, dental, dermatology, or toxicology advice.",
+            "Users seeking strictly independently verified product testing."
+          ],
+          "recommended_actions": [
+            "Externally verify product ingredients and health-risk claims.",
+            "Check current product labels before purchase decisions.",
+            "Separate practical hygiene tips from promotional product segments."
+          ],
+          "questions_left_unanswered": [
+            "Which claims are supported by independent studies or regulatory guidance?",
+            "Have product formulations changed since the video?",
+            "What advice applies to sensitive skin, allergies, or medical conditions?"
+          ],
+          "contradictions_or_doubts": [
+            "Transcript source metadata conflicts with the presence of supplied transcript text.",
+            "Strong safety claims exceed the evidence supplied in the package."
+          ],
+          "comparison_opportunities": [
+            "Compare with dermatologist guidance on deodorants and antiperspirants.",
+            "Compare with dental guidance on toothpicks and oral hygiene.",
+            "Compare with current product labels and regulatory ingredient databases."
+          ],
+          "overall_score": {
+            "score_0_to_100": 68,
+            "explanation": "Detailed transcript and specific claims are useful, but unverified health/product assertions and zero-duration timestamps reduce reliability."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "This assessment uses only supplied transcript, metadata, and sampled comments. It does not independently test products or verify health, safety, ingredient, or regulatory claims."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+            "Product-safety, toxicity, cancer-risk, dermatology, dental, and hygiene claims are source claims only and require external verification before being treated as advice.",
+            "Audience comments are sampled and are not factual verification."
+          ],
+          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and editorial judgments cite canonical segment s00001 for the corresponding video; timeline, clip, and rewatch arrays are empty because canonical timestamps are invalid.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "yAkBZvGijJQ",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "B",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [
+        "canonical_transcript.source is no_transcript despite transcript text being supplied",
+        "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+      ],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+          "Product-safety, toxicity, cancer-risk, dermatology, dental, and hygiene claims are source claims only and require external verification before being treated as advice.",
+          "Audience comments are sampled and are not factual verification.",
+          "Evidence grade is B because transcript completeness is usable and quality is medium."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Twenty Indian Deodorants Ranked from Worst to Best",
+          "short_title": "Deodorant Ranking",
+          "reason": "The title preserves the video's actual grooming, hygiene, deodorant, or perfume subject from the supplied metadata and transcript."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Indian deodorant ingredient ranking",
+          "secondary_topics": [
+            "toxic deodorant claims",
+            "natural deodorants",
+            "brand comparison",
+            "body odour",
+            "ingredient safety"
+          ],
+          "category": "Health",
+          "subcategory": "Grooming product safety",
+          "keywords": [
+            "deodorant",
+            "Indian deodorant",
+            "body odour",
+            "triclosan",
+            "butane",
+            "synthetic fragrance",
+            "natural deodorant",
+            "Coco Soul",
+            "Vilvah",
+            "Burst of Happiness",
+            "product ranking",
+            "toxin-free"
+          ],
+          "canonical_tags": [
+            "deodorant",
+            "indian deodorant",
+            "body odour",
+            "triclosan",
+            "butane",
+            "synthetic fragrance",
+            "natural deodorant",
+            "coco soul",
+            "vilvah",
+            "burst of happiness",
+            "product ranking",
+            "toxin-free"
+          ],
+          "search_queries": [
+            "Indian deodorant ingredient ranking Fit Tuber claims",
+            "Grooming product safety product safety India",
+            "verify deodorant Indian deodorant claims"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video ranks roughly 20 common Indian deodorants from worst to best based on the source's ingredient assessment. It opens with strong warnings about deodorants such as Fogg, Axe, Wild Stone, Engage, and Nivea, claiming they may contain harmful ingredients such as triclosan, butane, undisclosed synthetic fragrance chemicals, alcohols, BHT, and parabens. The source groups many mainstream brands into a worst category and says daily use may darken, dry, or irritate skin and in rare cases contribute to skin cancer. It then recommends natural deodorants from Coco Soul, Vilvah, and Burst of Happiness, citing coconut oil, shea butter, cocoa butter, sodium bicarbonate, essential oils, and herbal extracts. These are source claims only; formulations and safety claims are not independently verified in the package.",
+          "key_takeaways": [
+            "The video is primarily an ingredient-based deodorant ranking.",
+            "Mainstream spray brands are criticized as harmful or toxic by the source.",
+            "Coco Soul, Vilvah, and Burst of Happiness are recommended as safer natural alternatives.",
+            "The source says the video is not paid by listed brands.",
+            "Cancer, toxin-free, and side-effect claims require external verification."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "structured comments sample",
+            "video metadata"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This short product-ranking video has a narrow focus: deodorants in India. The source says he selected about 20 commonly used deodorants and divided them into categories by ingredients, noting that men's and women's variants of the same brand often share similar active ingredients. Category one is described as the worst group and includes many commercial brands, such as Fogg, Engage, Nivea, Park Avenue, Spinz, Secret Temptation, Yardley, Axe, Layer Wottagirl, Kama Sutra, Aramusk, Wild Stone, He, Adidas, Rexona, Cinthol, and Polo Sport. The source criticizes alcohols, butane, triclosan, BHT, parabens, and synthetic fragrance. Category two recommends natural deodorants from Coco Soul, Vilvah, and Burst of Happiness, with ingredients like extra virgin coconut oil, shea butter, cocoa butter, sodium bicarbonate, essential oils, and herbal extracts. The transcript supports the ranking claims but is B-grade and only usable, so the result should be handled cautiously.",
+          "sections": [
+            {
+              "heading": "Problem framing",
+              "summary": "The source says many popular deodorants expose users to harmful chemicals and synthetic fragrance.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Worst category",
+              "summary": "A long list of mainstream deodorant brands is grouped as worst because of ingredients the source calls harmful.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Natural alternatives",
+              "summary": "Coco Soul, Vilvah, and Burst of Happiness are described as more natural options using oils, butters, sodium bicarbonate, essential oils, and herbal extracts.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Independence claim",
+              "summary": "The source says none of the mentioned brands paid him for the ranking.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Check ingredient labels for the chemicals the source flags, but verify independently.",
+            "Do not treat a natural label as automatic proof of safety.",
+            "Consider patch testing or dermatologist input for sensitive skin.",
+            "Verify current product formulations before using this ranking.",
+            "Recognize that B-grade transcript evidence limits confidence."
+          ],
+          "limitations": [
+            "Canonical transcript is a single zero-duration segment, limiting timestamped features.",
+            "The package provides no external verification for health, safety, or product-ranking claims.",
+            "Product formulations may change after upload/publication.",
+            "Structured comments are sampled and audience-generated."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel/source of the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vivek",
+              "type": "person",
+              "context": "Presenter name used at the end.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Fogg",
+              "type": "product",
+              "context": "Mainstream deodorant brand placed in the worst category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Axe",
+              "type": "product",
+              "context": "Mainstream deodorant brand placed in the worst category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Wild Stone",
+              "type": "product",
+              "context": "Mainstream deodorant brand placed in the worst category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Engage",
+              "type": "product",
+              "context": "Mainstream deodorant brand placed in the worst category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Nivea",
+              "type": "product",
+              "context": "Mainstream deodorant brand placed in the worst category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Park Avenue",
+              "type": "product",
+              "context": "Mainstream deodorant brand placed in the worst category.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Coco Soul",
+              "type": "product",
+              "context": "Natural deodorant brand recommended by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vilvah",
+              "type": "product",
+              "context": "Natural deodorant brand recommended by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Burst of Happiness",
+              "type": "product",
+              "context": "Natural deodorant brand recommended by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "triclosan",
+              "type": "concept",
+              "context": "Chemical flagged as harmful by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "butane",
+              "type": "concept",
+              "context": "Ingredient/propellant flagged by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "BHT",
+              "type": "concept",
+              "context": "Chemical named in the worst-category discussion.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "paraben",
+              "type": "concept",
+              "context": "Chemical category named in the worst-category discussion.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Fogg, Axe, Wild Stone, Engage, Nivea, and similar deodorants contain or may contain harmful chemicals such as triclosan, butane, and undisclosed synthetic fragrance chemicals.",
+              "claim_type": "product safety claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Synthetic fragrance in deodorants may contain over 1,000 undisclosed chemicals.",
+              "claim_type": "ingredient disclosure claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Daily use of mainstream deodorant sprays can leave skin dark, dry, irritated, and in rare cases even cause skin cancer.",
+              "claim_type": "health risk claim",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "It is better not to use deodorant than to use the toxic sprays listed in the video.",
+              "claim_type": "consumer recommendation",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Coco Soul, Vilvah, and Burst of Happiness deodorants are natural, toxin-free, and usable daily without side effects.",
+              "claim_type": "product safety claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The listed product categories are based on ingredient research, and none of the brands paid the source.",
+              "claim_type": "methodology/independence claim",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Do not treat product-ranking or ingredient claims as independently verified safety guidance.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Cancer, infection, dermatology, and toxicity claims should be checked against qualified medical or regulatory sources.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Natural or toxin-free product descriptions are marketing-sensitive and require current label verification.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1110,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Interest in toxin-free grooming alternatives",
+              "approximate_count": 8,
+              "evidence": "Sampled comments around the package show viewers often rely on the creator for product replacement choices."
+            },
+            {
+              "theme": "Praise and trust in rankings",
+              "approximate_count": 8,
+              "evidence": "Many included comments in this group express appreciation and confidence in Fit Tuber recommendations."
+            },
+            {
+              "theme": "Requests for more product-ranking videos",
+              "approximate_count": 6,
+              "evidence": "Viewers ask for more reviews and adjacent product topics."
+            }
+          ],
+          "agreements": [
+            "Many sampled comments express appreciation, usefulness, or trust in the creator.",
+            "Some commenters ask for further product reviews or related grooming/health topics.",
+            "A subset of comments reacts to the recommendations through personal habits or product experiences."
+          ],
+          "disagreements": [
+            "The supplied sample does not provide strong evidence-based rebuttals to the main product or hygiene claims.",
+            "Some comments are humorous, promotional, or unrelated, limiting their analytic value."
+          ],
+          "questions": [
+            "Which products or ingredients are safest according to independent toxicology or dermatology sources?",
+            "How should viewers adapt hygiene or deodorant advice for sensitive skin or medical conditions?",
+            "Are the ranked products still available and formulated the same way?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "mostly positive with product curiosity",
+            "positive": "Praise and thanks are common in the sampled comments.",
+            "negative": "Negative sentiment is limited and mostly appears as concern about products, hygiene habits, or implementation.",
+            "mixed": "The thread combines gratitude, humor, requests, and anecdotal product reactions."
+          },
+          "limitations": [
+            "Only a deterministic head-tail sample is supplied.",
+            "Some comment records are headers or metadata lines.",
+            "Comment likes and replies are embedded in text rather than normalized for every record.",
+            "Viewer comments do not independently verify product claims."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; using embedded transcript timestamps would create unvalidated canonical timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "B",
+          "completeness": "usable",
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical transcript source label conflicts with supplied transcript text",
+            "declared video duration is 0 despite embedded transcript timestamps"
+          ],
+          "limitations": [
+            "Single zero-duration segment prevents validated timeline or clip extraction.",
+            "Product and health claims are not externally verified.",
+            "Comment sample is partial and not factual evidence."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Indian deodorant ingredient ranking",
+          "strongest_takeaway": "The video is primarily an ingredient-based deodorant ranking.",
+          "strengths": [
+            "Specific consumer-facing topic.",
+            "Concrete named products, habits, or ingredients.",
+            "Transcript gives enough detail for semantic synthesis.",
+            "Comment sample helps characterize audience response."
+          ],
+          "weaknesses": [
+            "No valid canonical timestamps for clips or rewatch sections.",
+            "Health and product-safety claims lack external support in the package.",
+            "Commercial or affiliate context may influence product framing.",
+            "Some transcript/source metadata is internally inconsistent."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for cataloging grooming and hygiene advice, but claim confidence should stay cautious and timestamped rewatching cannot be validated."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is valuable as a snapshot of deodorant-brand claims and consumer-safety concerns in the Indian market. Its tone is highly confident, especially around toxicity and cancer risk, while the supplied evidence is only a B-grade transcript and no independent toxicology or dermatology references. Keep it for product-comparison context, but verify every formulation and health-risk claim before using it to make purchase or safety decisions.",
+          "bottom_line": "Useful as consumer-health content, but product and medical claims need verification.",
+          "what_is_new_or_distinctive": [
+            "Concrete grooming/hygiene recommendations tied to named habits or brands.",
+            "Strong ingredient-focused framing for everyday personal-care products."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "The content can help users form questions and compare labels, but should not replace professional or regulatory guidance."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The supplied transcript supports what the source said, but does not independently verify health risks, ingredient toxicity, product purity, or brand rankings."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Consumer-product recommendation framing.",
+            "Promotional or affiliate context appears in some videos or metadata.",
+            "Strong natural/toxin-free framing may overstate product certainty."
+          ],
+          "important_missing_context": [
+            "Independent dermatology, toxicology, dental, or hygiene references.",
+            "Current ingredient labels and formulation checks.",
+            "Disclosure details for all product links and commercial relationships."
+          ],
+          "who_should_watch": [
+            "Users cataloging hygiene and grooming advice.",
+            "Viewers comparing personal-care product claims.",
+            "People preparing to verify ingredient or product-safety claims."
+          ],
+          "who_can_skip": [
+            "Anyone needing medical, dental, dermatology, or toxicology advice.",
+            "Users seeking strictly independently verified product testing."
+          ],
+          "recommended_actions": [
+            "Externally verify product ingredients and health-risk claims.",
+            "Check current product labels before purchase decisions.",
+            "Separate practical hygiene tips from promotional product segments."
+          ],
+          "questions_left_unanswered": [
+            "Which claims are supported by independent studies or regulatory guidance?",
+            "Have product formulations changed since the video?",
+            "What advice applies to sensitive skin, allergies, or medical conditions?"
+          ],
+          "contradictions_or_doubts": [
+            "Transcript source metadata conflicts with the presence of supplied transcript text.",
+            "Strong safety claims exceed the evidence supplied in the package."
+          ],
+          "comparison_opportunities": [
+            "Compare with dermatologist guidance on deodorants and antiperspirants.",
+            "Compare with dental guidance on toothpicks and oral hygiene.",
+            "Compare with current product labels and regulatory ingredient databases."
+          ],
+          "overall_score": {
+            "score_0_to_100": 61,
+            "explanation": "Useful product-ranking content, but B-grade transcript evidence and unverified toxicity claims require extra caution."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "This assessment uses only supplied transcript, metadata, and sampled comments. It does not independently test products or verify health, safety, ingredient, or regulatory claims."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+            "Product-safety, toxicity, cancer-risk, dermatology, dental, and hygiene claims are source claims only and require external verification before being treated as advice.",
+            "Audience comments are sampled and are not factual verification.",
+            "Evidence grade is B because transcript completeness is usable and quality is medium."
+          ],
+          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and editorial judgments cite canonical segment s00001 for the corresponding video; timeline, clip, and rewatch arrays are empty because canonical timestamps are invalid.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
