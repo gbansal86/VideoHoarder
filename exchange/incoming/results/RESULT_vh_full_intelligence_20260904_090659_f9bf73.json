@@ -1,0 +1,1683 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090659_f9bf73",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "-QPF6OezA0Y",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+          "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Oil Pulling Detox Claims and Daily Method",
+          "short_title": "Oil Pulling Detox",
+          "reason": "The source presents oil pulling as a 10-minute daily detox practice and makes broad disease-related claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Oil pulling as detox and disease-prevention practice",
+          "secondary_topics": [
+            "Ayurveda",
+            "oral health",
+            "toxin-removal claims"
+          ],
+          "category": "Health",
+          "subcategory": "Alternative wellness",
+          "keywords": [
+            "oil pulling",
+            "detox",
+            "Ayurveda",
+            "oral health",
+            "toxins",
+            "coconut oil"
+          ],
+          "canonical_tags": [
+            "oil pulling",
+            "detox claim",
+            "ayurveda",
+            "oral health",
+            "alternative wellness",
+            "toxin removal",
+            "medical claim",
+            "daily routine"
+          ],
+          "search_queries": [
+            "Fit Tuber oil pulling detox 10 minutes",
+            "oil pulling detox claims Ayurveda evidence"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video promotes oil pulling as a simple, inexpensive 10-minute daily detox technique drawn from Ayurvedic or natural healing traditions. The source claims modern science also recognizes its benefits, then makes very broad claims that regular practice can help or cure numerous conditions including acne, arthritis, asthma, insomnia, PCOD, constipation, migraines, gray hair, and fat loss. The stated method is to swish a spoonful of oil, preferably coconut oil according to the source, for about 10 minutes on an empty stomach, spit it out, rinse, and then brush. The package evidence supports only that these claims are made in the transcript; it does not verify disease treatment, whole-body toxin removal, or safety for children and pregnant people.",
+          "key_takeaways": [
+            "The source presents oil pulling as a daily detox habit.",
+            "The mechanism claimed is that oil attracts lipid-covered microorganisms and removes toxins when spat out.",
+            "The video makes sweeping whole-body and disease-healing claims.",
+            "It warns not to swallow used oil.",
+            "Medical efficacy and broad safety claims are not externally verified."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This video is a high-risk alternative-wellness piece because it describes oil pulling not merely as oral hygiene but as a whole-body detox and disease-healing method. The source says modern lifestyles create toxins through pollution and processed foods, then claims old food and waste can remain in the intestines, form coatings of bacteria, viruses, and molds, and travel through the blood to cause acne, asthma, digestive problems, and other conditions. The remedy presented is oil pulling: take oil in the mouth, swish it for roughly 10 minutes, spit it out once it becomes milky and thinner, rinse, and brush afterward. The source explains its mechanism by saying oil attracts lipid-covered microorganisms and that the tongue is connected to various organs, allowing toxins to be pulled from the whole body. It claims benefits ranging from oral health to constipation, arthritis, asthma, PCOD, insomnia, migraine, gray-hair reversal, and fat loss, while saying everybody, including kids and pregnant women, can do it and that it has no side effects. These statements should be treated as unverified source claims requiring clinical review.",
+          "sections": [
+            {
+              "heading": "Toxin framing",
+              "summary": "The source attributes many health problems to accumulated toxins from food, pollution, and lifestyle.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Oil pulling method",
+              "summary": "Swish oil on an empty stomach, spit it out, rinse, and brush.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Claimed mechanism",
+              "summary": "The source says oil attracts microorganisms and can remove toxins beyond the mouth through tongue-organ connections.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Claimed benefits",
+              "summary": "The video claims oral, digestive, skin, respiratory, hormonal, hair, and weight effects.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Source method: oil pull once every morning on an empty stomach for about 10 minutes.",
+            "Do not swallow the used oil according to the source.",
+            "Coconut oil is presented as a preferred option."
+          ],
+          "limitations": [
+            "No clinical studies or external evidence are supplied in the package.",
+            "Some claims are implausibly broad and high impact.",
+            "Formal canonical timestamps are zero-duration."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "oil pulling",
+              "type": "concept",
+              "context": "Central practice promoted as detox method.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Tradition invoked as origin/support for the practice.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "coconut oil",
+              "type": "product",
+              "context": "Oil presented as a practical choice for oil pulling.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "PCOD",
+              "type": "concept",
+              "context": "Condition included in claimed benefits.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "arthritis",
+              "type": "concept",
+              "context": "Disease included in claimed benefits.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "asthma",
+              "type": "concept",
+              "context": "Disease included in claimed benefits.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Oil pulling detoxifies not only the mouth but the entire body.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Regular oil pulling is known to cure more than 30 systemic diseases.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "critical",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Oil pulling can help or cure acne, arthritis, asthma, insomnia, PCOD, constipation, and migraines.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "critical",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Oil pulling has no side effects and can be done by everybody, including children and pregnant women.",
+              "claim_type": "safety",
+              "verification_status": "needs_external_verification",
+              "severity": "critical",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Used oil should not be swallowed because it contains bacteria and toxins.",
+              "claim_type": "safety",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "This video contains critical-level disease-treatment and universal-safety claims without supplied external evidence.",
+              "severity": "critical",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Do not treat this as medical advice; consult a qualified clinician for disease, pregnancy, child health, or chronic-condition questions.",
+              "severity": "critical",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "high"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1093,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Strong trust or praise for the creator",
+              "approx_count": 20
+            },
+            {
+              "theme": "Skepticism and warnings about blind trust",
+              "approx_count": 8
+            },
+            {
+              "theme": "Jokes about longevity or health minister",
+              "approx_count": 15
+            },
+            {
+              "theme": "Requests for proof or cost/details",
+              "approx_count": 10
+            }
+          ],
+          "agreements": [
+            "Some viewers expressed very high trust in the creator.",
+            "Several comments praised the detox framing."
+          ],
+          "disagreements": [
+            "At least one comment calls it a scam or asks for proof.",
+            "Another comment warns against following anyone blindly."
+          ],
+          "questions": [
+            "What proof supports oil pulling claims?",
+            "What does it cost and how should it be done safely?"
+          ],
+          "useful_corrections": [
+            "Viewer skepticism highlights that claims need evidence rather than blind trust."
+          ],
+          "sentiment": {
+            "overall": "mixed_positive",
+            "positive_count_estimate": 45,
+            "neutral_count_estimate": 35,
+            "negative_count_estimate": 20
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration or not reliable enough for valid non-overlapping clip ranges.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Oil pulling presented as a whole-body detox and disease-healing method.",
+          "strongest_takeaway": "The source recommends daily empty-stomach oil pulling, but its disease and universal-safety claims require strong external verification.",
+          "strengths": [
+            "Gives a simple stated method.",
+            "Includes a warning not to swallow used oil."
+          ],
+          "weaknesses": [
+            "Makes sweeping unsupported medical claims.",
+            "Uses a broad toxin model not validated by the supplied package.",
+            "Says everybody can do it, including pregnant people and children, without evidence."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Keep mainly as an example of high-risk detox claims that need careful fact-checking."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is the riskiest kind of wellness video: an easy ritual is attached to sweeping disease-cure and detox language. The practical method is simple, but the claims go far beyond what this package can support. It should be preserved with strong warnings, not used as a trusted treatment guide.",
+          "bottom_line": "High caution: simple practice, very high-risk claims.",
+          "what_is_new_or_distinctive": [
+            "Positions oil pulling as whole-body detox rather than only oral hygiene.",
+            "Claims broad disease effects from a 10-minute routine."
+          ],
+          "practical_value": {
+            "level": "low",
+            "explanation": "The method is easy, but unsupported medical claims dominate the usefulness."
+          },
+          "credibility_assessment": {
+            "level": "weak",
+            "explanation": "The source makes critical health claims without supplied external evidence."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Strong Ayurveda/natural-healing framing.",
+            "Persuasive detox rhetoric."
+          ],
+          "important_missing_context": [
+            "Clinical evidence for oil pulling beyond oral-health outcomes.",
+            "Contraindications for children, pregnancy, swallowing/aspiration risk, and chronic illness."
+          ],
+          "who_should_watch": [
+            "People studying detox misinformation or wellness-claim patterns."
+          ],
+          "who_can_skip": [
+            "Anyone seeking reliable medical guidance for named diseases."
+          ],
+          "recommended_actions": [
+            "Do not use for disease treatment decisions.",
+            "Verify any oral-health use with dental/medical sources.",
+            "Avoid replacing medical care with oil pulling."
+          ],
+          "questions_left_unanswered": [
+            "What clinical trials support each claimed condition?",
+            "Are there safety risks for children or pregnant people?"
+          ],
+          "contradictions_or_doubts": [
+            "Universal no-side-effect claims conflict with the need for individualized medical safety judgment."
+          ],
+          "comparison_opportunities": [
+            "Compare oil pulling claims against dental association and medical literature evidence."
+          ],
+          "overall_score": {
+            "score_0_to_100": 38,
+            "explanation": "Clear method but very weak support for broad medical claims."
+          },
+          "keep_priority": "low",
+          "rewatch_sections": [],
+          "interpretation_limits": "The package supports identifying source claims and risks, not validating oil pulling as treatment."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; medical claims are not externally verified; timestamp-dependent fields are empty due formal timestamp limitations.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "3IYM8K9ZtWw",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+          "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "One Day Ayurvedic Detox Diet Plan",
+          "short_title": "Ayurvedic Detox Diet",
+          "reason": "The source gives a full-day meal plan for detoxing the body using hot water, CCF tea, fruit, khichdi, soup, triphala, and related foods."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Ayurvedic one-day detox diet plan",
+          "secondary_topics": [
+            "CCF tea",
+            "millet khichdi",
+            "Triphala",
+            "light dinner",
+            "Shilajit promotion"
+          ],
+          "category": "Health",
+          "subcategory": "Diet and wellness",
+          "keywords": [
+            "detox diet",
+            "Ayurveda",
+            "CCF tea",
+            "pomegranate",
+            "millet khichdi",
+            "Triphala",
+            "shilajit"
+          ],
+          "canonical_tags": [
+            "detox diet",
+            "ayurveda",
+            "ccf tea",
+            "hot water",
+            "pomegranate",
+            "millet",
+            "khichdi",
+            "triphala",
+            "shilajit",
+            "medical claim"
+          ],
+          "search_queries": [
+            "Fit Tuber toxic waste body detox diet plan",
+            "Ayurvedic detox diet CCF tea Triphala Fit Tuber"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video offers a one-day Ayurvedic-style diet plan intended to help the body detox. It recommends hot water after waking, cumin-coriander-fennel tea, pomegranate or sattu/vegetable oats for breakfast, millet and whole moong dal khichdi or light vegetable options for lunch, fruit or soaked raisins as a snack, soup with roasted makhana or light vegetables for dinner, and Triphala powder in lukewarm water before bed. The source claims this supports lymphatic cleaning, bowel evacuation, blood purification, skin glow, hair improvement, energy, weight-loss plateaus, and calmness. It also includes a Neuherbs Shilajit promotion. The diet advice is specific, but detox and therapeutic claims remain externally unverified.",
+          "key_takeaways": [
+            "The plan emphasizes warm water, simple meals, fruits, millets, soups, and Triphala.",
+            "CCF tea is described as a lymphatic-supporting detox drink.",
+            "The source prefers foods that are light, seasonal, fiber-rich, and less habitual than daily staples.",
+            "Triphala is framed as a bedtime laxative/rejuvenating detox aid.",
+            "The video contains supplement claims for Shilajit that require verification."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This video is a structured full-day detox diet plan based on Ayurvedic principles. The source frames tiredness, junk-food cravings, dull skin, digestive issues, and disturbed sleep as possible signs that the body needs a cleanse, while also saying the body can remove toxins if given the right environment. The schedule begins with one to two glasses of hot water after waking, then CCF tea made from equal amounts of cumin, coriander, and fennel seeds, optionally sweetened with honey after cooling. Breakfast options include pomegranate, spiced chana sattu, or vegetable oats, preferably steel-cut oats with minimal spices. Lunch centers on foxtail millet and whole green moong dal khichdi, with alternatives such as lauki or turai sabzi, jowar or bajra chapati, or moong dal sprout chaat. The evening snack is fruit such as jamun, soaked raisins, peeled almonds, or apple. Dinner is light: tomato or mixed vegetable soup, roasted makhana, lauki/turai, or a bowl of dal while avoiding heavier dals. Before bed, the source recommends Triphala powder in lukewarm water and emphasizes sleep as part of detox. A closing segment promotes Neuherbs Himalayan Shilajit for strength, stamina, vitality, memory, stress, and anti-aging effects.",
+          "sections": [
+            {
+              "heading": "Morning routine",
+              "summary": "Hot water and CCF tea are recommended to support bowel movement and lymphatic cleansing.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Meals",
+              "summary": "The plan uses fruit, sattu or oats, millet khichdi, light vegetables, soup, and makhana.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Bedtime and sleep",
+              "summary": "Triphala and sleep are framed as final detox supports.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Supplement promotion",
+              "summary": "Neuherbs Shilajit is promoted with strength, stamina, memory, stress, and anti-aging claims.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Morning: one to two glasses hot water, then CCF tea.",
+            "Lunch: foxtail millet plus whole green moong dal khichdi is the source's preferred option.",
+            "Dinner: keep food light, such as soup and roasted makhana.",
+            "Bedtime: Triphala powder in lukewarm water according to source."
+          ],
+          "limitations": [
+            "Detox benefits and disease-adjacent claims are not externally verified.",
+            "Triphala and shilajit may have contraindications not discussed in detail.",
+            "Formal canonical timestamps are zero-duration."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "CCF tea",
+              "type": "product",
+              "context": "Cumin-coriander-fennel tea recommended as detox drink.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Triphala",
+              "type": "product",
+              "context": "Bedtime Ayurvedic powder recommended for detox and laxative effect.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Neuherbs Pure Himalayan Shilajit",
+              "type": "product",
+              "context": "Sponsored supplement promoted near the end.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "pomegranate",
+              "type": "product",
+              "context": "Breakfast fruit recommended for detox properties.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "foxtail millet",
+              "type": "product",
+              "context": "Grain used in recommended khichdi.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "green moong dal",
+              "type": "product",
+              "context": "Dal used in lunch khichdi.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "jamun",
+              "type": "product",
+              "context": "Seasonal fruit recommended as snack.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Principle base for the plan.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "The diet plan helps detox the body and push out accumulated waste.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "CCF tea stimulates the lymphatic system and cleans cellular waste.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Pomegranate has three times more antioxidants than green tea and detoxifying properties.",
+              "claim_type": "nutrition",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Lauki and turai can eradicate free radicals, avert oxidative skin damage, and purify blood.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Triphala acts as a laxative, emptying accumulated waste with force the next morning.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Shilajit can improve strength, stamina, vitality, memory, stress management, and may have anti-aging effects.",
+              "claim_type": "supplement",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Diet, laxative, and supplement recommendations may be unsafe for some people, including those with medical conditions, pregnancy, medications, kidney issues, diabetes, eating disorders, or digestive disorders.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The source's detox framing is not externally verified by the supplied package.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "high"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1067,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Viewers summarizing or following the plan",
+              "approx_count": 20
+            },
+            {
+              "theme": "Questions about duration",
+              "approx_count": 10
+            },
+            {
+              "theme": "Trust and appreciation for creator",
+              "approx_count": 20
+            },
+            {
+              "theme": "Requests for clarifications or variants",
+              "approx_count": 12
+            }
+          ],
+          "agreements": [
+            "Several viewers echoed the plan steps and called it correct.",
+            "Many comments express trust in the creator."
+          ],
+          "disagreements": [
+            "The supplied sample shows few direct objections.",
+            "Some comments imply uncertainty about how long to follow it."
+          ],
+          "questions": [
+            "How many days or months should the plan be followed?",
+            "Can the plan be adapted for specific needs?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive",
+            "positive_count_estimate": 55,
+            "neutral_count_estimate": 38,
+            "negative_count_estimate": 7
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration or not reliable enough for valid non-overlapping clip ranges.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A one-day Ayurvedic detox meal schedule with hot water, CCF tea, fruit, khichdi, soup, Triphala, and Shilajit promotion.",
+          "strongest_takeaway": "The source offers a concrete light-eating day, but detox, laxative, and supplement claims need external medical/nutrition verification.",
+          "strengths": [
+            "Specific schedule and food options.",
+            "Emphasizes simple meals and hydration."
+          ],
+          "weaknesses": [
+            "Detox benefits are asserted broadly.",
+            "Supplement promotion adds commercial bias.",
+            "Contraindications are underdeveloped."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful as a record of the source's diet plan, but high-risk claims require caution."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is more actionable than many detox videos because it gives an actual day plan rather than vague cleansing language. Still, the plan is wrapped in claims about toxins, lymphatic cleansing, blood purification, and supplement benefits that the package cannot prove. It is best treated as a light-diet template to review critically, not a medical detox protocol.",
+          "bottom_line": "Concrete meal plan, high caution on detox and supplement claims.",
+          "what_is_new_or_distinctive": [
+            "Full-day schedule from wake-up to bedtime.",
+            "Combines CCF tea, millet khichdi, light dinner, and Triphala."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "The schedule is usable, but safety depends heavily on individual health context."
+          },
+          "credibility_assessment": {
+            "level": "weak",
+            "explanation": "Food steps are concrete, but therapeutic framing is unsupported in the package."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Ayurvedic detox framing.",
+            "Sponsored Shilajit segment."
+          ],
+          "important_missing_context": [
+            "Who should avoid Triphala or Shilajit.",
+            "Nutritional adequacy and calorie/protein levels.",
+            "Clinical evidence for detox effects."
+          ],
+          "who_should_watch": [
+            "People cataloging the exact Fit Tuber detox plan.",
+            "Viewers who want a light-food day idea to discuss with a professional."
+          ],
+          "who_can_skip": [
+            "People with medical conditions looking for safe individualized diet advice."
+          ],
+          "recommended_actions": [
+            "Do not use laxatives or supplements without checking contraindications.",
+            "Avoid extended restriction without medical guidance.",
+            "Verify Shilajit quality and safety externally."
+          ],
+          "questions_left_unanswered": [
+            "How long is safe for different populations?",
+            "What evidence supports each detox mechanism?"
+          ],
+          "contradictions_or_doubts": [
+            "The source says the body can detox itself but also implies specific foods are needed to push toxins out."
+          ],
+          "comparison_opportunities": [
+            "Compare with evidence-based guidance on liver/kidney detoxification and safe dietary resets."
+          ],
+          "overall_score": {
+            "score_0_to_100": 55,
+            "explanation": "Specific and organized, but medically overclaims and includes supplement promotion."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "The package supports extracting the schedule and warnings, not validating detox efficacy."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; medical claims are not externally verified; timestamp-dependent fields are empty due formal timestamp limitations.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "3i_Xl-JYx_Q",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "B",
+      "confidence": "medium_low",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+          "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation.",
+          "Transcript is complete but significantly garbled in many portions, so summaries emphasize only stable, repeated claims and metadata-supported topics."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Fasting Detox Claims and Ekadashi Routine",
+          "short_title": "Fasting Detox Claims",
+          "reason": "The source discusses fasting as detox/healing, Ayurvedic timing, practical fasting methods, and a shampoo promotion."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Fasting as detox and disease-prevention practice",
+          "secondary_topics": [
+            "Ayurveda",
+            "Ekadashi",
+            "autophagy",
+            "fasting safety",
+            "sponsor promotion"
+          ],
+          "category": "Health",
+          "subcategory": "Fasting and wellness",
+          "keywords": [
+            "fasting",
+            "detox",
+            "Ekadashi",
+            "Ayurveda",
+            "autophagy",
+            "starvation",
+            "Vilvah shampoo"
+          ],
+          "canonical_tags": [
+            "fasting",
+            "detox claim",
+            "ekadashi",
+            "ayurveda",
+            "autophagy",
+            "medical claim",
+            "wellness routine",
+            "sponsor segment"
+          ],
+          "search_queries": [
+            "Fit Tuber detox body once in 15 days fasting Ekadashi",
+            "Fit Tuber fasting detox Ayurveda autophagy"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video promotes fasting as a powerful natural tool for healing, prevention, and detox, while distinguishing it from starvation. It connects fasting to religious and traditional practices, Ayurveda, autophagy, metabolism, growth hormone, mental clarity, and Ekadashi timing. The transcript is often garbled, but the stable content indicates the source recommends practical fasts using water, fruits, coconut water, or lighter foods, says longer or stricter fasting should be guided, and suggests breaking a fast gently with lemon water and fruit. It also includes a Vilvah shampoo promotion. Because the transcript quality is weaker and the topic involves disease and fasting safety, all therapeutic claims require external verification and medical caution.",
+          "key_takeaways": [
+            "The source distinguishes voluntary fasting from starvation.",
+            "Fasting is framed as both traditional/spiritual and modern-science-supported.",
+            "The source links fasting to autophagy, detox, metabolism, growth hormone, energy, and cognition.",
+            "Practical guidance includes easier fasting forms and gentle refeeding.",
+            "Transcript garbling lowers confidence, and medical claims need external verification."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This video discusses fasting as a periodic detox practice, but the supplied transcript is highly error-prone in many places. The stable structure is clear from timestamps and recurring content: it asks what happens during fasting, contrasts fasting with starvation, invokes religious traditions such as Muslim fasting, Hindu Navratri, and Buddhist practices, and claims both Ayurveda and modern science support fasting. The source appears to cite autophagy and a Nobel Prize context, then discusses claimed benefits such as detox, chronic-disease prevention, weight loss, metabolism effects, growth hormone changes, energy, endurance, and cognition. Practical sections suggest starting with a form that is comfortable, such as replacing routine meals with light foods or using fruits, coconut water, or water, and caution that stricter or longer fasts need guidance. It recommends breaking a fast with something like lemon water and fruit and mentions Ekadashi as an Ayurvedic timing preference. The source says he has personally followed a meal-frequency or fasting routine and experienced improvements, but this is self-report. A final sponsor segment promotes Vilvah toxin-free shampoos. Given transcript garbling and medical risk, the result should treat this video as lower confidence than the package's nominal grade.",
+          "sections": [
+            {
+              "heading": "Fasting versus starvation",
+              "summary": "The source presents fasting as voluntary and controlled, not the same as starvation.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Traditional and science framing",
+              "summary": "Religious traditions, Ayurveda, autophagy, and modern science are invoked as support.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Practical fasting",
+              "summary": "The source suggests choosing a manageable form and breaking the fast gently.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Sponsor segment",
+              "summary": "The closing segment promotes Vilvah shampoos and should be separated from fasting claims.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Start with a manageable fasting form rather than an extreme fast, according to the source.",
+            "Break a fast gently with lemon water and fruit according to the transcript.",
+            "Ekadashi is presented as a preferred timing in the source's Ayurvedic framing."
+          ],
+          "limitations": [
+            "Transcript is significantly garbled, reducing confidence.",
+            "Medical and fasting-safety claims are not externally verified.",
+            "The sponsor segment is unrelated to fasting."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "fasting",
+              "type": "concept",
+              "context": "Central practice discussed as detox and prevention tool.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "starvation",
+              "type": "concept",
+              "context": "Contrasted with voluntary fasting.",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Traditional framework used for fasting timing and benefits.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ekadashi",
+              "type": "event",
+              "context": "Lunar fasting day recommended by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "autophagy",
+              "type": "concept",
+              "context": "Cellular process invoked to explain fasting benefits.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vilvah",
+              "type": "organization",
+              "context": "Sponsor brand for shampoo segment.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Fasting is one of the most powerful natural tools for healing and disease prevention.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Fasting helps the body clear toxic waste and supports autophagy.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Fasting can improve metabolism, growth hormone, energy, endurance, cognition, and chronic-disease markers.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "high",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Longer or stricter fasting should be done under guidance according to the source.",
+              "claim_type": "safety",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Ekadashi is the best fasting time according to Ayurveda.",
+              "claim_type": "traditional",
+              "verification_status": "source_claim_only",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Vilvah shampoos are toxin-free and certified according to the sponsor segment.",
+              "claim_type": "product",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Fasting can be medically unsafe for some people; this package does not provide individualized contraindication screening.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The transcript is garbled, so exact claims should be checked against a cleaner source before use.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Product claims in the shampoo sponsor segment are unrelated to fasting and externally unverified.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "high"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1178,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Humor about wording and fasting jokes",
+              "approx_count": 20
+            },
+            {
+              "theme": "Traditional or religious fasting references",
+              "approx_count": 15
+            },
+            {
+              "theme": "Questions about fasting duration or strictness",
+              "approx_count": 12
+            },
+            {
+              "theme": "Personal fasting attempts",
+              "approx_count": 10
+            }
+          ],
+          "agreements": [
+            "Some viewers connect fasting to Navratri or Ekadashi traditions.",
+            "A few comments report attempting water fasts."
+          ],
+          "disagreements": [
+            "Some comments challenge jokes or show confusion about fasting duration.",
+            "No supplied comment verifies medical benefits."
+          ],
+          "questions": [
+            "Is nine days without food and only water safe?",
+            "Is a full-day water fast appropriate?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "mixed_positive",
+            "positive_count_estimate": 45,
+            "neutral_count_estimate": 45,
+            "negative_count_estimate": 10
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration or not reliable enough for valid non-overlapping clip ranges.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "B",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation.",
+            "Transcript is complete but significantly garbled in many portions, so summaries emphasize only stable, repeated claims and metadata-supported topics."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A fasting-as-detox video linking Ayurveda, religious fasting, autophagy, practical fasts, and sponsor content.",
+          "strongest_takeaway": "The video encourages periodic fasting but should be handled cautiously because the transcript is garbled and the medical claims are broad.",
+          "strengths": [
+            "Acknowledges fasting differs from starvation.",
+            "Mentions guidance and gentle refeeding."
+          ],
+          "weaknesses": [
+            "Transcript quality is weak.",
+            "High-risk fasting claims are unsupported.",
+            "Sponsor content is unrelated."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Keep as a high-risk claim source and compare with clearer fasting-safety guidance."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This entry needs a lower-confidence treatment despite the package's nominal high grade. The topic is medically sensitive, and the transcript is too garbled to trust fine details. The safest value is to capture the broad intent: periodic fasting, Ayurveda/Ekadashi framing, and a caution that stronger evidence and medical screening are needed.",
+          "bottom_line": "Use only as a rough source-claim record; verify before relying on it.",
+          "what_is_new_or_distinctive": [
+            "Connects Ekadashi fasting with detox and autophagy language.",
+            "Presents fasting as both spiritual practice and biology."
+          ],
+          "practical_value": {
+            "level": "low",
+            "explanation": "The transcript is too noisy for precise protocol extraction."
+          },
+          "credibility_assessment": {
+            "level": "weak",
+            "explanation": "High-impact claims plus garbled transcript limit reliability."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Ayurvedic fasting advocacy.",
+            "Sponsor segment for shampoo."
+          ],
+          "important_missing_context": [
+            "Clear transcript or source video review.",
+            "Contraindications for diabetes, pregnancy, eating disorders, medications, and chronic illness.",
+            "Evidence quality for fasting duration and frequency."
+          ],
+          "who_should_watch": [
+            "Researchers cataloging Fit Tuber fasting claims."
+          ],
+          "who_can_skip": [
+            "Anyone seeking a safe fasting protocol."
+          ],
+          "recommended_actions": [
+            "Do not follow extended fasting advice without clinician guidance.",
+            "Cross-check against reliable fasting-safety sources."
+          ],
+          "questions_left_unanswered": [
+            "What exact fast duration is recommended for which person?",
+            "What evidence supports the claimed physiological effects?"
+          ],
+          "contradictions_or_doubts": [
+            "The video advocates fasting strongly while transcript clarity is insufficient for safe instructions."
+          ],
+          "comparison_opportunities": [
+            "Compare against the 36-hour fasting animation, which includes clearer safety caveats."
+          ],
+          "overall_score": {
+            "score_0_to_100": 42,
+            "explanation": "Important topic but low reliability due transcript noise and medical overclaim risk."
+          },
+          "keep_priority": "low",
+          "rewatch_sections": [],
+          "interpretation_limits": "Only broad claims can be extracted reliably from this transcript."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation.",
+            "Transcript is complete but significantly garbled in many portions, so summaries emphasize only stable, repeated claims and metadata-supported topics."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; medical claims are not externally verified; timestamp-dependent fields are empty due formal timestamp limitations.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "SBVkI7tAUm4",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+          "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Organs During Thirty Six Hour Fasting",
+          "short_title": "36 Hour Fasting",
+          "reason": "The animation explains organ-level changes during a 36-hour fast and includes explicit safety warnings."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Physiology and safety of a 36-hour fast",
+          "secondary_topics": [
+            "glycogen depletion",
+            "ketosis",
+            "autophagy",
+            "fasting risks",
+            "breaking a fast"
+          ],
+          "category": "Health",
+          "subcategory": "Fasting and physiology",
+          "keywords": [
+            "36-hour fast",
+            "glycogen",
+            "ketosis",
+            "autophagy",
+            "insulin",
+            "electrolytes",
+            "breaking fast"
+          ],
+          "canonical_tags": [
+            "fasting",
+            "36 hour fast",
+            "glycogen",
+            "ketosis",
+            "autophagy",
+            "insulin",
+            "electrolyte imbalance",
+            "fasting safety",
+            "metabolism"
+          ],
+          "search_queries": [
+            "what happens during 36 hour fast organs ketosis autophagy",
+            "36 hour fasting safety who should avoid"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "This animation presents a simplified organ-level journey through a 36-hour fast. A doctor advises Lisa to understand the mechanism before fasting. The body first uses leftovers from the last meal and liver glycogen, then as insulin drops and glucagon rises, fat burning and ketosis begin. The video says beta-hydroxybutyrate fuels the brain, autophagy recycles old cell components, blood pressure and inflammation signals may drop, insulin sensitivity may improve, and muscles are protected. Unlike the other package videos, it includes explicit warnings: extended fasting is not for children, pregnant people, people with eating disorders, health conditions, or medications, and even healthy people may face electrolyte imbalance, sleep disturbance, and digestive issues. It recommends hydration, doctor consultation, and breaking the fast gently.",
+          "key_takeaways": [
+            "The first hours use last-meal energy and liver glycogen.",
+            "Around the later fast, the source describes lower insulin, higher glucagon, fat burning, and ketosis.",
+            "Autophagy is explained as recycling damaged cell components.",
+            "The video explicitly warns that extended fasting is not for everyone.",
+            "Breaking a fast gently with easy foods is recommended."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This video is a science-animation style explanation of a 36-hour fast. It frames the topic through Lisa consulting a doctor before attempting the fast, then personifies organs reacting over time. Early in the fast, the liver says it has about 100 g of glycogen and enough glycogen for roughly 10 to 12 hours, while the brain wants steady glucose and the pancreas notes insulin dropping. Later, glycogen reserves fall, fat starts being broken into fuel, insulin remains low, glucagon rises, and ketosis begins. The brain is described as using beta-hydroxybutyrate, while the pancreas, heart, kidneys, lungs, stomach, and muscles describe lower sugar chaos, lower blood pressure, stable fat burning, muscle protection, improved glucose tolerance, reduced oxidative stress, and other markers. Autophagy is explained as damaged cellular components being broken down and recycled. Importantly, the video includes safety boundaries: fasting is not recommended for children, pregnant women, people with eating disorders, health conditions, or medications without professional advice; even healthy people may experience electrolyte imbalances, sleep disturbances, or post-fast digestive issues. It recommends staying hydrated, avoiding ego-driven fasting, consulting a doctor, and breaking the fast gently with vegetables, proteins, and healthy fats before heavy meals.",
+          "sections": [
+            {
+              "heading": "Preparation and early fuel",
+              "summary": "Lisa is advised to understand the mechanism; the body begins with last-meal energy and liver glycogen.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Fat burning and ketosis",
+              "summary": "As insulin drops and glucagon rises, the source says fat burning and ketone use begin.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Autophagy and markers",
+              "summary": "The animation describes cellular recycling, lower inflammation signals, blood pressure changes, and improved glucose tolerance.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Safety and refeeding",
+              "summary": "The video warns many groups against extended fasting without medical advice and recommends gentle refeeding.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Consult a healthcare professional before extended fasting according to the source.",
+            "Stay hydrated during fasting.",
+            "Break the fast gently with easy foods such as vegetables, proteins, and healthy fats."
+          ],
+          "limitations": [
+            "Animated simplification may overstate certainty or timing precision.",
+            "Physiological claims are not externally verified in the package.",
+            "The comment sample includes high-risk viewer fasting intentions."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Lisa",
+              "type": "person",
+              "context": "Animated character considering a 36-hour fast.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Dr. Jo Jo",
+              "type": "person",
+              "context": "Doctor character advising Lisa in the animation.",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "glycogen",
+              "type": "concept",
+              "context": "Stored carbohydrate fuel discussed in early fasting.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "insulin",
+              "type": "concept",
+              "context": "Hormone described as dropping during fasting.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "glucagon",
+              "type": "concept",
+              "context": "Hormone described as rising as fat burning begins.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "beta-hydroxybutyrate",
+              "type": "concept",
+              "context": "Ketone described as brain fuel.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "autophagy",
+              "type": "concept",
+              "context": "Cellular recycling process explained by the animation.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "The liver stores about 100 g glycogen and can power the body for about 10 to 12 hours.",
+              "claim_type": "physiology",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "During a 36-hour fast, insulin drops, glucagon rises, fat burning begins, and ketosis can start.",
+              "claim_type": "physiology",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Beta-hydroxybutyrate can fuel the brain during ketosis.",
+              "claim_type": "physiology",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Autophagy recycles old damaged cell components during fasting.",
+              "claim_type": "physiology",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Extended fasting is not recommended for children, pregnant women, people with eating disorders, health conditions, or medications without medical advice.",
+              "claim_type": "safety",
+              "verification_status": "supported_by_supplied_evidence",
+              "severity": "high",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A 36-hour fast can cause electrolyte imbalances, sleep disturbances, and post-fast digestive issues.",
+              "claim_type": "safety",
+              "verification_status": "supported_by_supplied_evidence",
+              "severity": "high",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Extended fasting can be risky and should not be attempted by higher-risk groups without medical advice.",
+              "severity": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "One supplied viewer comment mentions an extreme 41-day fast, which is dangerous and not supported by the video.",
+              "severity": "critical",
+              "segment_ids": []
+            }
+          ],
+          "overall_risk": "high"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 365,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Questions about personal medical suitability",
+              "approx_count": 10
+            },
+            {
+              "theme": "Extreme fasting intentions",
+              "approx_count": 5
+            },
+            {
+              "theme": "Humor about animated characters",
+              "approx_count": 15
+            },
+            {
+              "theme": "Requests to subscribe or comment prompts",
+              "approx_count": 10
+            }
+          ],
+          "agreements": [
+            "Some comments repeat that hydration matters.",
+            "Creator replies in the sample caution a diabetic viewer with gallbladder removal not to attempt a 36-hour fast alone."
+          ],
+          "disagreements": [
+            "One comment claims fasting can create gallbladder stones, raising a safety concern not resolved by the package.",
+            "Some comments appear to turn the idea into extreme fasting plans."
+          ],
+          "questions": [
+            "Can someone with diabetes, fatty liver, and gallbladder removal fast?",
+            "Is 24-hour fasting also effective?"
+          ],
+          "useful_corrections": [
+            "A creator reply appropriately advises a commenter with diabetes and gallbladder removal against unsupervised 36-hour fasting."
+          ],
+          "sentiment": {
+            "overall": "mixed",
+            "positive_count_estimate": 40,
+            "neutral_count_estimate": 45,
+            "negative_count_estimate": 15
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration or not reliable enough for valid non-overlapping clip ranges.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Animated explanation of organ responses, possible benefits, risks, and safety precautions during a 36-hour fast.",
+          "strongest_takeaway": "The video is valuable because it pairs fasting physiology claims with explicit warnings about who should avoid extended fasting and how to break a fast gently.",
+          "strengths": [
+            "Includes safety caveats and doctor-consultation advice.",
+            "Explains fasting physiology in accessible terms."
+          ],
+          "weaknesses": [
+            "Animated simplification can make mechanisms look more certain than they are.",
+            "Claims still need external medical verification."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful as a more balanced fasting explainer than the other detox videos, especially because it includes contraindications."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is the strongest item in the package because it at least builds safety guardrails into the fasting explanation. It still simplifies physiology and should not be used as medical advice, but it is more responsible than the videos that present fasting or detox as universally beneficial.",
+          "bottom_line": "Keep as a cautious fasting explainer, with medical caveats intact.",
+          "what_is_new_or_distinctive": [
+            "Organ-character animation for glycogen, ketosis, autophagy, and refeeding.",
+            "Explicit contraindication and risk section."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "It gives safety framing and general mechanisms but not an individualized protocol."
+          },
+          "credibility_assessment": {
+            "level": "moderate",
+            "explanation": "Safety warnings improve credibility, though package evidence does not externally verify physiology."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Simplified animation may make claims feel more definitive."
+          ],
+          "important_missing_context": [
+            "Individual medical screening.",
+            "Citation quality for timing and magnitude of effects.",
+            "Electrolyte and medication guidance."
+          ],
+          "who_should_watch": [
+            "People wanting a high-level fasting physiology overview.",
+            "Viewers considering fasting who need to hear safety caveats first."
+          ],
+          "who_can_skip": [
+            "Anyone needing personalized fasting instructions."
+          ],
+          "recommended_actions": [
+            "Consult a clinician before extended fasting, especially with any condition or medication.",
+            "Avoid extreme fasts suggested in comments.",
+            "Refeed gently if fasting is medically appropriate."
+          ],
+          "questions_left_unanswered": [
+            "What evidence supports each claimed marker change at exactly 36 hours?",
+            "How should electrolytes be managed safely?"
+          ],
+          "contradictions_or_doubts": [
+            "The video promotes benefits while warning the practice is unsuitable for many people."
+          ],
+          "comparison_opportunities": [
+            "Compare with clinical fasting guidance and autophagy research."
+          ],
+          "overall_score": {
+            "score_0_to_100": 68,
+            "explanation": "Accessible and safety-aware, though still unverified and simplified."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "The package supports summarizing source physiology claims and safety warnings, not prescribing fasting."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but most package videos are represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Detox, cleansing, fasting, disease, toxin-removal, and supplement claims are medical or nutrition claims and require external verification and clinician guidance before action.",
+            "Several package assessments label transcript source as no_transcript despite supplied canonical transcript text; content fields cite supplied canonical segment text while noting this metadata limitation."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; medical claims are not externally verified; timestamp-dependent fields are empty due formal timestamp limitations.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
