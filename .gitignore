@@ -1,77 +1,29 @@
-# Credentials and machine-local inputs
-api_key.txt
-**/api_key.txt
-*.pem
-*.key
-*.pfx
-*.p12
+# Credentials and local configuration
 .env
 .env.*
-urls.txt
+*.token
+*.key
+*.pem
+credentials.json
 
-# Python caches and environments
-__pycache__/
-*.py[cod]
-*$py.class
-.venv/
-venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Runtime application data and user media
-all_transcripts/
-downloads/
-data/
-logs/
-maintenance/
-*.db
-*.db-journal
-*.db-shm
-*.db-wal
+# Video/audio and local databases
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.mov
+*.mp3
+*.wav
 *.sqlite
 *.sqlite3
-*.log
+*.db
 
-# Build and packaged releases
-build/
-dist/
-.videohoarder-build/
-*.spec.bak
-
-# Generated document/render QA and temporary extraction
-docx_*/
-feature_registry*_qa/
-five_mockups_doc_qa/
-full_doc*_qa/
-ui_spec_qa/
-.spec_extract.txt
-~$*.docx
-
-# Generated browser profiles, caches, and session state
-tools/edge-concepts/
-tools/edge-concepts-final/
-tools/edge-concepts-fixed/
-tools/edge-headless-profile/
-tools/*_qa/
-tools/soffice_*/
-
-# OS and editor metadata
-.DS_Store
-Thumbs.db
-Desktop.ini
-*.swp
-*.swo
-.idea/
-.vscode/
-
-# Test runtime output; keep intentional fixtures and source tests
-tests/runtime_data/
-tests/**/validation_tmp/
-
-# Local generated reports and transient archives
+# Temporary and operating-system files
 *.tmp
-*.temp
-*.bak
-*.zip
+*.part
+Thumbs.db
+.DS_Store
+
+# VideoHoarder local state
+downloads/
+VideoHoarder Videos/
