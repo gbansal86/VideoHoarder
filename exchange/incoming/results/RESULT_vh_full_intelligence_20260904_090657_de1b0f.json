@@ -6,8 +6,8 @@
     {
       "video_id": "BtPEpEeAPI8",
       "processing_status": "PASS_WITH_WARNINGS",
-      "evidence_grade": "A",
-      "confidence": "high",
+      "evidence_grade": "B",
+      "confidence": "medium",
       "evidence_references": [
         {
           "source": "canonical_transcript",
@@ -18,389 +18,297 @@
         {
           "source": "metadata",
           "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
         "warnings": [
-          "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Health, deficiency, diagnosis, and treatment-style claims are source claims requiring external verification.",
+          "Transcript appears duplicated/looped, so confidence is downgraded."
         ],
         "repair_attempts": 0
       },
       "features": {
         "title_en.v1": {
-          "title": "Why You Feel Tired and How to Restore Energy",
-          "short_title": "Fix Low Energy",
-          "reason": "Title reflects the supplied metadata and canonical transcript subject without adding unsupported facts."
+          "title": "Five Claimed Reasons You Feel Tired and How to Fix Them",
+          "short_title": "Why You Feel Tired",
+          "reason": "Names the five-reason fatigue structure without diagnosing the viewer."
         },
         "taxonomy.v3": {
-          "primary_topic": "Fatigue causes and lifestyle fixes",
+          "primary_topic": "Common lifestyle and nutrition explanations for fatigue",
           "secondary_topics": [
-            "overeating and digestion load",
-            "sleep quality and caffeine timing",
-            "inactivity and exercise",
-            "prana, stress, and fresh food",
-            "low blood count"
+            "overeating",
+            "sleep quality",
+            "low-prana food framing",
+            "low blood count",
+            "Ayurvedic lifestyle advice"
           ],
           "category": "Health",
-          "subcategory": "body symptoms and lifestyle remedies",
+          "subcategory": "Fatigue and wellness",
           "keywords": [
-            "overeating and digestion load",
-            "sleep quality and caffeine timing",
-            "inactivity and exercise",
-            "prana, stress, and fresh food",
-            "low blood count",
-            "health warning signs",
-            "Fit Tuber"
+            "fatigue",
+            "tiredness",
+            "overeating",
+            "sleep quality",
+            "blood count",
+            "prana",
+            "Mamaearth"
           ],
           "canonical_tags": [
             "fatigue",
-            "body symptom",
-            "health warning sign",
-            "ayurveda",
-            "nutrition",
-            "home remedy",
-            "vitamin deficiency",
-            "sleep quality",
-            "digestion",
-            "exercise"
+            "sleep",
+            "diet habits",
+            "low energy",
+            "ayurveda"
           ],
           "search_queries": [
-            "Fatigue causes and lifestyle fixes Fit Tuber",
-            "Why You're Always Tired - The REAL Reasons",
-            "BtPEpEeAPI8 health signs"
+            "Fit Tuber why you are always tired five reasons"
           ]
         },
         "executive_summary.v2": {
-          "summary": "The video argues that persistent tiredness is usually linked to everyday lifestyle and nutrition patterns rather than motivation alone. It presents five source-claimed causes: overeating or frequent snacking, poor sleep timing and caffeine use, prolonged sitting, low pranic energy from stale food or stress, and low blood count. Suggested fixes include lighter meals, early and higher-quality sleep, short daily exercise, fresh foods, breathing practices, and foods such as dry dates with milk, beet-carrot juice, or pomegranate. The supplied evidence supports what the speaker recommends, but the medical and Ayurvedic claims are source claims that need external verification before being treated as clinical advice.",
+          "summary": "The video frames fatigue as a solvable signal with five possible causes rather than a purely psychological issue. The transcript clearly discusses overeating, poor sleep quality, low-prana or stale foods, and low blood count, while implying another cause in the middle of the list that is less cleanly recoverable from the supplied transcript. It recommends lighter fixed meals, earlier and better sleep, fresher foods, and blood-supporting foods such as dry dates with milk, beetroot-carrot juice, and pomegranate. The metadata also includes a hair-mask promotion. The transcript is usable but appears repeated, so fine-grained completeness is uncertain.",
           "key_takeaways": [
-            "The source frames fatigue as a practical signal with several possible lifestyle causes.",
-            "Overeating and heavy foods are said to drain energy through digestion.",
-            "Sleep quality is tied to early bedtime, avoiding afternoon caffeine, and lighter dinners.",
-            "Daily movement is presented as a way to raise baseline energy rather than consume it.",
-            "Fresh food, pranayama, sunlight, and grounding are described as ways to restore prana.",
-            "Low blood count is presented as a possible reason for persistent fatigue and a reason to consider blood testing."
+            "The source's practical center is routine: avoid overeating, improve sleep quality, and eat fresher food.",
+            "Low blood count is raised as a possible cause of persistent tiredness, but viewers would need proper testing and medical advice.",
+            "Ayurvedic concepts such as prana are mixed with modern lifestyle advice.",
+            "The supplied transcript appears duplicated, limiting confidence in exact coverage."
           ],
           "source_basis": [
             "canonical_transcript:s00001",
-            "metadata: title, description, upload date, channel",
-            "structured comments where available"
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The video argues that persistent tiredness is usually linked to everyday lifestyle and nutrition patterns rather than motivation alone. It presents five source-claimed causes: overeating or frequent snacking, poor sleep timing and caffeine use, prolonged sitting, low pranic energy from stale food or stress, and low blood count. Suggested fixes include lighter meals, early and higher-quality sleep, short daily exercise, fresh foods, breathing practices, and foods such as dry dates with milk, beet-carrot juice, or pomegranate. The supplied evidence supports what the speaker recommends, but the medical and Ayurvedic claims are source claims that need external verification before being treated as clinical advice.",
+          "overview": "This Fit Tuber video uses a car-battery analogy to argue that low energy improves when the cause is identified. It combines conventional lifestyle points with Ayurvedic food-quality ideas and food remedies for low blood count.",
           "sections": [
             {
-              "heading": "Problem framing",
-              "summary": "The speaker opens by comparing fatigue to a car that will not start: once the underlying cause is found, the fix becomes clearer. The video stresses that fatigue is not merely psychological and promises five reasons and remedies.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Cause-finding frame",
+              "summary": "Fatigue is introduced as a signal with specific causes, not just a mental state.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "heading": "Food quantity and heaviness",
-              "summary": "The source says overeating, frequent munching, and heavy foods such as cheese, cream, nut butters, black urad dal, parathas, and fried foods can leave the body using too much energy for digestion. It recommends smaller portions and intermittent fasting.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Food quantity and sleep",
+              "summary": "The source says overeating drains energy through digestion and that sleeping at the right time improves sleep quality.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "heading": "Sleep and caffeine",
-              "summary": "The video argues that timing matters, especially sleep before midnight. It warns that caffeine has a long half-life, says afternoon coffee can reduce deep sleep, and adds that heavy dinners can make eight hours of sleep feel unrestful.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Movement and energy",
-              "summary": "Prolonged sitting is described as weakening and tiring. The speaker recommends short breaks and 15 to 20 minutes of moderate exercise such as sprints, jumping jacks, strength training, Surya namaskar, or gym work.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Prana, stress, and blood count",
-              "summary": "The speaker mixes yogic and Ayurvedic framing with nutrition claims, recommending fresh foods, breathing exercises, sunlight, and grounding. It also says low red blood cells may cause fatigue and suggests dry dates milk, beet-carrot juice, or pomegranate, ideally checked with blood tests.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Prana and blood count",
+              "summary": "Fresh, high-prana foods are preferred over junk, reheated food, and meat, and low blood count is addressed with dates, beetroot-carrot juice, and pomegranate.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "practical_details": [
-            "Overeating and heavy foods are said to drain energy through digestion.",
-            "Sleep quality is tied to early bedtime, avoiding afternoon caffeine, and lighter dinners.",
-            "Daily movement is presented as a way to raise baseline energy rather than consume it.",
-            "Fresh food, pranayama, sunlight, and grounding are described as ways to restore prana."
-          ],
           "limitations": [
-            "Supplied medical and Ayurvedic recommendations are not externally verified in the package.",
-            "All transcript text is contained in one canonical segment, preventing reliable topic-boundary timestamps."
-          ],
-          "source_basis": [
-            "canonical_transcript:s00001",
-            "metadata description and chapters"
+            "The package supplies transcript and metadata but not the external studies or medical sources referenced.",
+            "Canonical timestamps are unusable for reliable timed sectioning."
           ]
         },
         "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
           "sections": []
         },
         "entities.v2": {
-          "entities": [
-            {
-              "name": "Fit Tuber",
-              "type": "organization",
-              "context": "YouTube channel presenting the health advice.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Vivek",
-              "type": "person",
-              "context": "Presenter identified near the end.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Ayurveda",
-              "type": "concept",
-              "context": "Traditional health framework used for food, sleep, and prana claims.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Prana",
-              "type": "concept",
-              "context": "Yogic life-energy concept used to explain freshness, stress, and breathing practices.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Mamaearth Argan Hair Mask",
-              "type": "product",
-              "context": "Sponsored segment product at the end.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "people": [],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [
+            "Mamaearth Argan Hair Mask"
+          ],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "fatigue",
+            "sleep quality",
+            "red blood cells",
+            "hemoglobin",
+            "prana"
+          ],
+          "foods_or_ingredients": [
+            "chapati",
+            "dry dates",
+            "milk",
+            "beetroot",
+            "carrot",
+            "pomegranate",
+            "junk food"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
           ]
         },
         "claims_warnings.v2": {
           "claims": [
             {
-              "text": "Overeating or constant snacking can make a person feel low because the body spends energy digesting food.",
-              "claim_type": "causal",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Overeating causes sluggishness because the body spends energy on digestion.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Sleeping between 10 pm and midnight is especially valuable for sleep quality.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Sleeping between 10 pm and midnight is especially valuable for sleep quality.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Caffeine consumed at 4 pm may still affect sleep at night because of its half-life.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Refrigerating and reheating cooked food reduces its pranic energy.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Daily moderate exercise can increase baseline energy by improving circulation and cellular energy production.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Meat lacks prana and cannot make a person feel lively.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Fresh foods, pranayama, sunlight, and grounding increase pranic energy.",
-              "claim_type": "recommendation",
-              "verification_status": "source_claim_only",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Dry dates milk, beet-carrot juice, or pomegranate can help improve blood count over 30 days.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Low red blood cell count can cause persistent fatigue and certain foods can increase blood count.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "warnings": [
-            {
-              "text": "Health, deficiency, symptom, and remedy claims should not be treated as diagnosis or treatment advice without qualified medical review.",
-              "severity": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Sponsored product mentions should be separated from the educational content and not treated as independent recommendation evidence.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "safety_warnings": [
+            "Persistent fatigue can reflect anemia, thyroid disease, sleep apnea, infection, depression, medication effects, or other conditions requiring medical evaluation.",
+            "Dietary advice should not replace testing or treatment for anemia or chronic fatigue."
           ],
-          "overall_risk": "medium"
+          "medical_disclaimer": "This summarizes supplied source claims only and is not medical advice.",
+          "confidence_notes": [
+            "No independent medical evidence is included in the package."
+          ]
         },
         "viewer_comment_intelligence.v2": {
-          "total_comments": 1129,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "appreciation for the creator and perceived usefulness",
-              "approximate_count": 14,
-              "evidence": "supplied comment records"
-            },
-            {
-              "theme": "requests for future videos or help on related health topics",
-              "approximate_count": 9,
-              "evidence": "supplied comment records"
-            },
-            {
-              "theme": "viewers relating symptoms or lifestyle changes to themselves",
-              "approximate_count": 1,
-              "evidence": "supplied comment records"
-            }
-          ],
-          "agreements": [
-            "Many supplied comments express appreciation or personal relevance, but this is not factual validation."
-          ],
-          "disagreements": [],
-          "questions": [
-            "What do you think is the REAL reason behind tiredness? #youropinionmatters",
-            "santoshkumarbisoi412 qtf?"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "confidence": "medium",
-            "basis": "available structured comments are mostly appreciative or request more topics"
-          },
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
           "limitations": [
-            "Comments are audience-generated and are not evidence that health claims are true.",
-            "Only supplied comment records were analyzed."
+            "No structured comments were supplied."
           ]
         },
         "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; creating 30-180 second clips would require inventing timestamps.",
-          "total_selected_duration_seconds": 0
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
         },
         "evidence_assessment.v1": {
-          "grade": "A",
-          "completeness": "complete",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "Reasons for fatigue and suggested lifestyle, diet, sleep, exercise, breathing, and blood-count remedies.",
-          "strongest_takeaway": "The source frames fatigue as a practical signal with several possible lifestyle causes.",
+          "evidence_grade": "B",
+          "transcript_quality": "complete but transcript appears duplicated in supplied text",
           "strengths": [
-            "Clear topic fit for body warning signs and symptoms.",
-            "Provides practical recommendations from the source perspective."
+            "Long transcript available.",
+            "Specific reasons and remedies are named."
           ],
           "weaknesses": [
-            "Medical claims are not externally verified.",
-            "Timestamp structure is unusable for timeline and clip extraction."
+            "Transcript appears duplicated and may omit one numbered section.",
+            "External medical evidence is not supplied.",
+            "Product promotion appears in metadata."
           ],
-          "worth_keeping": "yes",
-          "worth_rewatching": "unknown",
-          "reason": "Useful for cataloging the source's health-warning content, but conclusions require caution because supplied evidence does not externally verify medical advice."
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A wellness video listing lifestyle, food-quality, and blood-count explanations for tiredness.",
+          "strongest_takeaway": "The best practical takeaway is to look for routine causes of tiredness while seeking medical evaluation for persistent symptoms.",
+          "strengths": [
+            "Beginner-friendly framing.",
+            "Several low-cost habit suggestions."
+          ],
+          "weaknesses": [
+            "Blends medical and Ayurvedic claims without supplied sources.",
+            "Could understate medical causes of fatigue."
+          ],
+          "worth_keeping": "maybe",
+          "worth_rewatching": "low"
         },
         "editorial_assessment.v1": {
-          "chatgpt_take": "This is useful as a compact map of the creator's symptom-and-remedy framing, but the value is mostly in understanding the source's recommendations rather than accepting them as medical fact.",
-          "bottom_line": "The source frames fatigue as a practical signal with several possible lifestyle causes.",
+          "chatgpt_take": "Useful as a checklist for habits, but not as a diagnostic tool. The fatigue topic is medically broad, so the video's confidence should be lower wherever it moves from routine advice into blood-count or prana claims.",
+          "bottom_line": "Try routine improvements, but investigate persistent fatigue medically.",
           "what_is_new_or_distinctive": [
-            "Combines everyday symptom observation with Ayurveda-influenced explanations and practical food or lifestyle steps."
+            "Combines sleep timing, overeating, prana, and blood-count explanations."
           ],
           "practical_value": {
             "level": "medium",
-            "explanation": "The video offers actionable suggestions, but many are health claims needing external verification."
+            "explanation": "Practical for habit reflection, limited for diagnosis."
           },
           "credibility_assessment": {
             "level": "uncertain",
-            "explanation": "The package supplies transcript and metadata evidence for what the source says, but no independent clinical evidence."
+            "explanation": "Some lifestyle points are plausible, but medical and Ayurvedic claims are not independently supported and the transcript quality is imperfect."
           },
-          "evidence_strength": "medium",
+          "evidence_strength": "low-medium",
           "possible_bias_or_agenda": [
-            "Creator/channel promotion and sponsored product segment may shape presentation."
+            "Hair-mask sponsorship",
+            "Simplified wellness framing"
           ],
           "important_missing_context": [
-            "No external medical sourcing is supplied in the package.",
-            "No reliable duration data is supplied for timeline validation."
+            "Medical differential diagnosis",
+            "Testing guidance for anemia or fatigue",
+            "Complete clean transcript for all five reasons"
           ],
           "who_should_watch": [
-            "Viewers cataloging Fit Tuber health-remedy content.",
-            "Viewers looking for the source's own symptom checklist, with caution."
+            "Viewers wanting a simple fatigue checklist"
           ],
           "who_can_skip": [
-            "Anyone needing clinically verified diagnosis or treatment guidance."
+            "People with severe, sudden, or persistent fatigue needing clinical care"
           ],
           "recommended_actions": [
-            "Treat health claims as prompts for further verification, not as medical instructions.",
-            "Consult a qualified clinician for persistent symptoms."
+            "Seek medical evaluation for ongoing fatigue.",
+            "Use sleep, meal size, and food quality changes as supportive habits."
           ],
           "questions_left_unanswered": [
-            "Which claims are supported by peer-reviewed medical evidence?",
-            "Which recommendations are safe for people with medical conditions or medications?"
+            "What was the missing or unclear numbered reason?",
+            "Which claims are supported by clinical evidence?"
           ],
-          "contradictions_or_doubts": [],
+          "contradictions_or_doubts": [
+            "The transcript repetition reduces confidence in exact sequencing."
+          ],
           "comparison_opportunities": [
-            "Compare with clinical guidance on fatigue, deficiency symptoms, and digestive or skin signs.",
-            "Compare against other videos in the same body-warning-signs group."
+            "Compare with clinician-reviewed fatigue evaluation guidance."
           ],
           "overall_score": {
-            "score_0_to_100": 68,
-            "explanation": "Score reflects topical relevance and supplied transcript usability, reduced for unverified health claims and unusable timestamps."
-          },
-          "keep_priority": "medium",
-          "rewatch_sections": [],
-          "interpretation_limits": "Analysis is limited to supplied transcript, metadata, and comments; it does not externally fact-check medical or product claims."
+            "score": 5,
+            "scale": 10,
+            "reason": "Practical in places but medically broad and transcript-limited."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "s00001 used for transcript grounding",
+            "no invented timestamps",
+            "no duplicate IDs"
           ],
-          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and assessments cite s00001; timeline, clips, and rewatch sections are empty because timestamps are zero-duration.",
-          "repair_attempts": 0
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Health, deficiency, diagnosis, and treatment-style claims are source claims requiring external verification.",
+            "Transcript appears duplicated/looped, so confidence is downgraded."
+          ]
         }
       }
     },
@@ -419,382 +327,263 @@
         {
           "source": "metadata",
           "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
         "warnings": [
-          "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
-          "Transcript is severely garbled; summaries and claims are low-confidence reconstructions supported partly by metadata/chapter evidence."
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Health, deficiency, diagnosis, and treatment-style claims are source claims requiring external verification.",
+          "Evidence grade downgraded to C because the transcript is severely garbled."
         ],
         "repair_attempts": 0
       },
       "features": {
         "title_en.v1": {
-          "title": "Forty Nine Body Warning Signs and Suggested Remedies",
-          "short_title": "Body Warning Signs",
-          "reason": "Title reflects the supplied metadata and canonical transcript subject without adding unsupported facts."
+          "title": "Forty-Nine Body Warning Signs Claimed to Reveal Root Causes",
+          "short_title": "49 Body Warning Signs",
+          "reason": "Captures the broad warning-sign claim while signaling uncertainty."
         },
         "taxonomy.v3": {
-          "primary_topic": "Body symptoms and proposed root-cause remedies",
+          "primary_topic": "Body warning signs and home solutions from a low-quality transcript",
           "secondary_topics": [
-            "pain and hot-cold therapy",
-            "vitamin D and calcium signs",
-            "mouth ulcers and digestion",
-            "iron and hemoglobin signs",
-            "migraine, sinus, acidity, and sweating"
+            "minor symptoms",
+            "root-cause claims",
+            "home remedies",
+            "Ayurvedic and naturopathic advice"
           ],
           "category": "Health",
-          "subcategory": "body symptoms and lifestyle remedies",
+          "subcategory": "Symptoms and self-assessment",
           "keywords": [
-            "pain and hot-cold therapy",
-            "vitamin D and calcium signs",
-            "mouth ulcers and digestion",
-            "iron and hemoglobin signs",
-            "migraine, sinus, acidity, and sweating",
-            "health warning signs",
+            "body signs",
+            "warning signs",
+            "root cause",
+            "home remedies",
+            "naturopathy",
             "Fit Tuber"
           ],
           "canonical_tags": [
-            "fatigue",
-            "body symptom",
-            "health warning sign",
-            "ayurveda",
-            "nutrition",
-            "home remedy",
-            "vitamin deficiency",
-            "sleep quality",
-            "digestion",
-            "exercise"
+            "body warning signs",
+            "symptoms",
+            "home remedies",
+            "low confidence"
           ],
           "search_queries": [
-            "Body symptoms and proposed root-cause remedies Fit Tuber",
-            "49 Signs Your Body is Crying for Help (WITH SOLUTION)",
-            "YQsQjFO0uBk health signs"
+            "Fit Tuber 49 signs your body is crying for help with solution"
           ]
         },
         "executive_summary.v2": {
-          "summary": "The supplied transcript for this video is heavily garbled, but metadata and recognizable passages show that it presents many common body signs as warning signals for internal imbalances. The source appears to connect symptoms such as pains, tooth decay, tiredness, muscle cramps, mouth ulcers, pale skin, restless legs, sweating, bleeding, acidity, migraine, vertigo, and sinus issues to Ayurvedic or nutritional explanations. It offers remedies including hot-cold applications, yoga, sunlight, dietary changes, katha paste, iron-rich foods, vitamin C, and traditional practices. Because the transcript quality is poor, conclusions should be treated as low-confidence source reconstruction, not a reliable detailed summary.",
+          "summary": "The supplied transcript for this video is severely garbled, making reliable feature extraction limited. The metadata says the video is about identifying root causes of 49 minor health problems at home, and the transcript fragments mention constipation, gas, back problems, oil massage, hot and cold water techniques, white hair, and other symptom-remedy pairings. Because the text is corrupted, only high-level characterization is appropriate: it appears to present many bodily signs as warnings and offers home, naturopathic, or Ayurvedic-style solutions. Specific diagnostic or treatment conclusions should not be trusted from this package alone.",
           "key_takeaways": [
-            "The video frames minor body problems as warning signs that should be addressed early.",
-            "The clearest evidence indicates a long list of symptom-remedy pairings rather than one focused argument.",
-            "Several recommendations mix Ayurveda, naturopathy, nutrition, yoga, and common home practices.",
-            "The supplied transcript is severely corrupted, so many details cannot be confidently reconstructed.",
-            "Medical claims require external verification and should not be used as diagnosis."
+            "The video's intended topic is broad symptom self-assessment with many alleged solutions.",
+            "The transcript quality is too poor for confident extraction of all 49 signs.",
+            "Any diagnostic or treatment claims require external verification and medical caution.",
+            "The result should be treated as low-confidence metadata-plus-fragment analysis."
           ],
           "source_basis": [
             "canonical_transcript:s00001",
-            "metadata: title, description, upload date, channel",
-            "structured comments where available"
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The supplied transcript for this video is heavily garbled, but metadata and recognizable passages show that it presents many common body signs as warning signals for internal imbalances. The source appears to connect symptoms such as pains, tooth decay, tiredness, muscle cramps, mouth ulcers, pale skin, restless legs, sweating, bleeding, acidity, migraine, vertigo, and sinus issues to Ayurvedic or nutritional explanations. It offers remedies including hot-cold applications, yoga, sunlight, dietary changes, katha paste, iron-rich foods, vitamin C, and traditional practices. Because the transcript quality is poor, conclusions should be treated as low-confidence source reconstruction, not a reliable detailed summary.",
+          "overview": "The package includes metadata and a low-quality transcript that appears machine-corrupted. It is not safe to reconstruct all 49 signs or detailed remedies. The output therefore preserves only what is directly recoverable: broad warning-sign framing and a few garbled references to common complaints and alternative remedies.",
           "sections": [
             {
-              "heading": "Overall structure",
-              "summary": "The video appears to introduce the body as an intelligent system that gives warning signs before chronic health issues develop. It says the goal is to identify root causes of common problems and address them early.",
-              "segment_ids": [
-                "s00001"
+              "heading": "General warning-sign frame",
+              "summary": "The source appears to say minor body problems can reveal internal issues and become chronic if ignored.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata:description"
               ]
             },
             {
-              "heading": "Pain and musculoskeletal signs",
-              "summary": "Recognizable passages mention cervical, back, and body pains and suggest oil massage, hot-cold applications, and yoga-related routines. The transcript is too degraded to confirm exact instructions.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Deficiency-style explanations",
-              "summary": "The video links tooth decay, sperm count, tiredness, muscle pains, low bone density, cramps, pale skin, cold hands and feet, restless legs, and shortness of breath to nutrients or blood markers such as calcium, vitamin D, iron, hemoglobin, and vitamin C.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Digestive and inflammatory signs",
-              "summary": "Mouth ulcers, acidity, bad breath, chest discomfort, sweating, bleeding, migraine, vertigo, sneezing, runny nose, and sinus issues appear in the transcript. The remedies include dietary changes, katha, warm water, and Ayurvedic preparations, but the precise mappings are uncertain.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Evidence limits",
-              "summary": "The transcript contains repeated fragments, mistranscriptions, and incoherent words. Metadata supplies the chapter list and confirms the intended topic, but the evidence does not support confident extraction of all 49 signs.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Fragmentary remedies",
+              "summary": "Transcript fragments refer to constipation, gas, back problems, oil massage, hot/cold water use, yoga, and diet changes, but wording is too corrupted for precise instructions.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "practical_details": [
-            "Several recommendations mix Ayurveda, naturopathy, nutrition, yoga, and common home practices."
-          ],
           "limitations": [
-            "Supplied medical and Ayurvedic recommendations are not externally verified in the package.",
-            "All transcript text is contained in one canonical segment, preventing reliable topic-boundary timestamps.",
-            "Transcript corruption limits detail fidelity."
-          ],
-          "source_basis": [
-            "canonical_transcript:s00001",
-            "metadata description and chapters"
+            "Transcript is garbled enough that detailed claims, entity lists, and remedies cannot be reliably reconstructed.",
+            "The package provides no external clinical references."
           ]
         },
         "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
           "sections": []
         },
         "entities.v2": {
-          "entities": [
-            {
-              "name": "Fit Tuber",
-              "type": "organization",
-              "context": "YouTube channel presenting the advice.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Ayurveda",
-              "type": "concept",
-              "context": "Framework used for many symptom interpretations.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Katha",
-              "type": "product",
-              "context": "Traditional substance recommended in the mouth-ulcer section.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Brahma Rasayana",
-              "type": "product",
-              "context": "Ayurvedic preparation mentioned in metadata and transcript fragments.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Amalaki Rasayana",
-              "type": "product",
-              "context": "Ayurvedic preparation mentioned for faster results.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "people": [],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [
+            "Oziva Plant based Immunity booster"
+          ],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "constipation",
+            "gas",
+            "back pain",
+            "naturopathy",
+            "chronic health issues"
+          ],
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
           ]
         },
         "claims_warnings.v2": {
           "claims": [
             {
-              "text": "Minor symptoms are warning signs from the body that can become chronic issues if ignored.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
+              "claim": "Minor body signs can reveal root causes without tests at home.",
+              "risk_level": "high",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Hot and cold water cloth applications can be effective for back problems.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
+              "claim": "Ignored minor problems may become chronic health issues.",
+              "risk_level": "high",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Sunlight exposure is presented as the best way to replenish vitamin D levels.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Mouth ulcers are described as a reflection of trapped heat or intestinal issues.",
-              "claim_type": "medical",
-              "verification_status": "source_claim_only",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Iron-rich foods with vitamin C are recommended for signs of low hemoglobin.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
+              "claim": "Specific home or naturopathic remedies can address many symptoms.",
+              "risk_level": "high",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "warnings": [
-            {
-              "text": "Health, deficiency, symptom, and remedy claims should not be treated as diagnosis or treatment advice without qualified medical review.",
-              "severity": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Sponsored product mentions should be separated from the educational content and not treated as independent recommendation evidence.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "safety_warnings": [
+            "Do not rely on a garbled transcript or symptom list for self-diagnosis.",
+            "Red-flag symptoms, persistent pain, bleeding, unexplained weight loss, fever, neurological symptoms, or worsening conditions require professional care."
           ],
-          "overall_risk": "high"
+          "medical_disclaimer": "This summarizes supplied source claims only and is not medical advice.",
+          "confidence_notes": [
+            "Transcript quality is low; claims are intentionally summarized at high level."
+          ]
         },
         "viewer_comment_intelligence.v2": {
-          "total_comments": 1248,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "appreciation for the creator and perceived usefulness",
-              "approximate_count": 4,
-              "evidence": "supplied comment records"
-            },
-            {
-              "theme": "requests for future videos or help on related health topics",
-              "approximate_count": 7,
-              "evidence": "supplied comment records"
-            },
-            {
-              "theme": "viewers relating symptoms or lifestyle changes to themselves",
-              "approximate_count": 2,
-              "evidence": "supplied comment records"
-            }
-          ],
-          "agreements": [
-            "Many supplied comments express appreciation or personal relevance, but this is not factual validation."
-          ],
-          "disagreements": [],
-          "questions": [
-            "umm what ?",
-            "Umm corona ??"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "confidence": "medium",
-            "basis": "available structured comments are mostly appreciative or request more topics"
-          },
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
           "limitations": [
-            "Comments are audience-generated and are not evidence that health claims are true.",
-            "Only supplied comment records were analyzed."
+            "No structured comments were supplied."
           ]
         },
         "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; creating 30-180 second clips would require inventing timestamps.",
-          "total_selected_duration_seconds": 0
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
         },
         "evidence_assessment.v1": {
-          "grade": "C",
-          "completeness": "partial",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
-            "Transcript is severely garbled; summaries and claims are low-confidence reconstructions supported partly by metadata/chapter evidence."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "A broad, low-confidence symptom checklist with proposed Ayurvedic, nutritional, and home remedies.",
-          "strongest_takeaway": "The video frames minor body problems as warning signs that should be addressed early.",
+          "evidence_grade": "C",
+          "transcript_quality": "garbled single-segment transcript",
           "strengths": [
-            "Clear topic fit for body warning signs and symptoms.",
-            "Provides practical recommendations from the source perspective."
+            "Metadata clearly states the intended topic.",
+            "Some broad transcript fragments align with a symptom-remedy format."
           ],
           "weaknesses": [
-            "Medical claims are not externally verified.",
-            "Timestamp structure is unusable for timeline and clip extraction.",
-            "Transcript quality is poor and limits confident extraction."
+            "Transcript is severely corrupted.",
+            "The claimed list of 49 signs cannot be reliably enumerated.",
+            "Medical claims are not independently supported."
           ],
-          "worth_keeping": "unknown",
-          "worth_rewatching": "unknown",
-          "reason": "Useful for cataloging the source's health-warning content, but conclusions require caution because supplied evidence does not externally verify medical advice."
+          "confidence": "low",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A broad body-warning-sign video, but the package evidence is too garbled for detailed extraction.",
+          "strongest_takeaway": "The only safe takeaway is that the video intends to encourage attention to body signals; exact remedies are unreliable from the supplied evidence.",
+          "strengths": [
+            "Broad topic may help users notice symptoms."
+          ],
+          "weaknesses": [
+            "Low transcript quality prevents detailed use.",
+            "Risk of self-diagnosis from unreliable symptom claims."
+          ],
+          "worth_keeping": "no",
+          "worth_rewatching": "unknown"
         },
         "editorial_assessment.v1": {
-          "chatgpt_take": "This item is valuable mainly as a broad catalog pointer, not as a dependable knowledge asset, because the transcript is too noisy for fine-grained extraction.",
-          "bottom_line": "The video frames minor body problems as warning signs that should be addressed early.",
+          "chatgpt_take": "This package should be handled conservatively. The metadata promises a large symptom guide, but the transcript cannot support a reliable 49-item intelligence summary.",
+          "bottom_line": "Low-confidence result; do not use for health decisions.",
           "what_is_new_or_distinctive": [
-            "Combines everyday symptom observation with Ayurveda-influenced explanations and practical food or lifestyle steps."
+            "Large symptom-count framing"
           ],
           "practical_value": {
             "level": "low",
-            "explanation": "The video offers actionable suggestions, but many are health claims needing external verification."
+            "explanation": "Low, because the transcript cannot be trusted for specifics."
           },
           "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The package supplies transcript and metadata evidence for what the source says, but no independent clinical evidence."
+            "level": "low",
+            "explanation": "Evidence quality is insufficient for detailed medical interpretation."
           },
           "evidence_strength": "low",
           "possible_bias_or_agenda": [
-            "Creator/channel promotion and sponsored product segment may shape presentation."
+            "Supplement promotion in metadata",
+            "Symptom-list click appeal"
           ],
           "important_missing_context": [
-            "No external medical sourcing is supplied in the package.",
-            "No reliable duration data is supplied for timeline validation."
+            "Clean transcript",
+            "Full list of signs and solutions",
+            "Clinical references"
           ],
           "who_should_watch": [
-            "Viewers cataloging Fit Tuber health-remedy content.",
-            "Viewers looking for the source's own symptom checklist, with caution."
+            "Only viewers willing to re-open the original video for clarification"
           ],
           "who_can_skip": [
-            "Anyone needing clinically verified diagnosis or treatment guidance."
+            "Anyone needing dependable health advice"
           ],
           "recommended_actions": [
-            "Treat health claims as prompts for further verification, not as medical instructions.",
-            "Consult a qualified clinician for persistent symptoms."
+            "Fetch a clean transcript before using this as a reference.",
+            "Consult qualified care for persistent or serious symptoms."
           ],
           "questions_left_unanswered": [
-            "Which claims are supported by peer-reviewed medical evidence?",
-            "Which recommendations are safe for people with medical conditions or medications?"
+            "What are the exact 49 signs?",
+            "Which solutions are evidence-based?"
           ],
           "contradictions_or_doubts": [
-            "The transcript is corrupted enough that several topic mappings remain uncertain."
+            "The transcript corruption may distort nearly every specific instruction."
           ],
           "comparison_opportunities": [
-            "Compare with clinical guidance on fatigue, deficiency symptoms, and digestive or skin signs.",
-            "Compare against other videos in the same body-warning-signs group."
+            "Compare after obtaining a clean transcript."
           ],
           "overall_score": {
-            "score_0_to_100": 38,
-            "explanation": "Score reflects topical relevance and supplied transcript usability, reduced for unverified health claims and unusable timestamps."
-          },
-          "keep_priority": "low",
-          "rewatch_sections": [],
-          "interpretation_limits": "Analysis is limited to supplied transcript, metadata, and comments; it does not externally fact-check medical or product claims."
+            "score": 2,
+            "scale": 10,
+            "reason": "Topic is clear, but evidence is too corrupted for reliable detail."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
-            "Transcript is severely garbled; summaries and claims are low-confidence reconstructions supported partly by metadata/chapter evidence."
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "s00001 used for transcript grounding",
+            "no invented timestamps",
+            "no duplicate IDs"
           ],
-          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and assessments cite s00001; timeline, clips, and rewatch sections are empty because timestamps are zero-duration.",
-          "repair_attempts": 0
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Health, deficiency, diagnosis, and treatment-style claims are source claims requiring external verification.",
+            "Evidence grade downgraded to C because the transcript is severely garbled."
+          ]
         }
       }
     },
@@ -802,7 +591,7 @@
       "video_id": "dE4i4LUq2R4",
       "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
-      "confidence": "high",
+      "confidence": "medium",
       "evidence_references": [
         {
           "source": "canonical_transcript",
@@ -813,424 +602,349 @@
         {
           "source": "metadata",
           "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
         "warnings": [
-          "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Health, deficiency, diagnosis, and treatment-style claims are source claims requiring external verification."
         ],
         "repair_attempts": 0
       },
       "features": {
         "title_en.v1": {
-          "title": "Nine Body Warning Signs and Suggested Health Responses",
-          "short_title": "Nine Body Signs",
-          "reason": "Title reflects the supplied metadata and canonical transcript subject without adding unsupported facts."
+          "title": "Nine Body Signs Claimed to Show Your Body Needs Help",
+          "short_title": "9 Body Warning Signs",
+          "reason": "Names the nine-sign format and avoids endorsing diagnoses."
         },
         "taxonomy.v3": {
-          "primary_topic": "Body warning signs and nutrition-based responses",
+          "primary_topic": "Physical signs interpreted as nutrition or health warnings",
           "secondary_topics": [
-            "low hemoglobin signs",
-            "digestion and food intolerance",
-            "vitamin E and muscle cramps",
-            "liver and foot pain claims",
-            "omega 3, worms, vitamin C, calcium, and vitamin D"
+            "low hemoglobin",
+            "digestion",
+            "vitamin E",
+            "liver claims",
+            "water retention",
+            "omega-3",
+            "intestinal worms",
+            "vitamin C",
+            "calcium and vitamin D"
           ],
           "category": "Health",
-          "subcategory": "body symptoms and lifestyle remedies",
+          "subcategory": "Symptoms and nutrition deficiencies",
           "keywords": [
-            "low hemoglobin signs",
-            "digestion and food intolerance",
-            "vitamin E and muscle cramps",
-            "liver and foot pain claims",
-            "omega 3, worms, vitamin C, calcium, and vitamin D",
-            "health warning signs",
-            "Fit Tuber"
+            "whitish nails",
+            "smelly farts",
+            "muscle cramps",
+            "feet pain",
+            "round face",
+            "dry skin",
+            "anal itching",
+            "swollen gums",
+            "white spots on face"
           ],
           "canonical_tags": [
-            "fatigue",
-            "body symptom",
-            "health warning sign",
-            "ayurveda",
+            "body signs",
+            "deficiency claims",
             "nutrition",
-            "home remedy",
-            "vitamin deficiency",
-            "sleep quality",
-            "digestion",
-            "exercise"
+            "symptoms",
+            "ayurveda"
           ],
           "search_queries": [
-            "Body warning signs and nutrition-based responses Fit Tuber",
-            "9 Signs Your Body is Asking for Help (With Solution)",
-            "dE4i4LUq2R4 health signs"
+            "Fit Tuber 9 signs your body is asking for help whitish nails smelly farts"
           ]
         },
         "executive_summary.v2": {
-          "summary": "The video presents nine common physical signs as possible warnings from the body and pairs each with a suggested response. It links whitish nails, pale lips, and pale face to low hemoglobin; smelly gas to overeating or food intolerance; calf cramps to vitamin E; foot pain and burning to liver overload; puffiness to water retention; dry flaky skin to low omega-3 intake; anal itching, drooling, and teeth grinding to intestinal worms; swollen or bleeding gums to vitamin C deficiency; and white facial spots or tooth issues to calcium and vitamin D concerns. These are presented as source claims and practical suggestions, not externally verified diagnoses.",
+          "summary": "The video lists nine visible or everyday body signs and interprets them as warnings: whitish nails for low hemoglobin, smelly farts for food intolerance or overeating, calf cramps for vitamin E deficiency, foot pain for liver malfunction, puffy round face for water retention, dry flaky skin for omega-3 deficiency, anal itching or teeth grinding for intestinal worms, swollen bleeding gums for vitamin C deficiency, and white facial spots or dental/joint issues for calcium and vitamin D concerns. It gives food-based suggestions and some Ayurvedic practices, then ends with a Mamaearth serum promotion. Many pairings are diagnostic or treatment-style claims and should be externally verified.",
           "key_takeaways": [
-            "The source uses visible body signs as prompts for lifestyle or nutrition changes.",
-            "Many claims connect symptoms to deficiencies or organ stress, which need external verification.",
-            "Suggested responses include beet-carrot juice, smaller meals, nuts and seeds, cutting junk food, hydration, fiber, vitamin C foods, and sunlight.",
-            "The video repeatedly warns that ignored minor signs can lead to larger health issues.",
-            "A sponsored face-serum segment appears near the end and should be separated from health claims."
+            "The video maps common signs to possible deficiencies or internal problems.",
+            "Some advice is low-risk food inclusion, but several diagnostic links are strong and uncertain.",
+            "The foot-pain-to-liver and anal-itching-to-worm claims especially need caution.",
+            "A beauty-product promotion appears at the end."
           ],
           "source_basis": [
             "canonical_transcript:s00001",
-            "metadata: title, description, upload date, channel",
-            "structured comments where available"
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The video presents nine common physical signs as possible warnings from the body and pairs each with a suggested response. It links whitish nails, pale lips, and pale face to low hemoglobin; smelly gas to overeating or food intolerance; calf cramps to vitamin E; foot pain and burning to liver overload; puffiness to water retention; dry flaky skin to low omega-3 intake; anal itching, drooling, and teeth grinding to intestinal worms; swollen or bleeding gums to vitamin C deficiency; and white facial spots or tooth issues to calcium and vitamin D concerns. These are presented as source claims and practical suggestions, not externally verified diagnoses.",
+          "overview": "This Fit Tuber video is a symptom interpretation list. It turns nails, digestion, cramps, foot pain, facial puffiness, skin texture, anal itching, gums, and facial spots into warning signals, then suggests foods or traditional practices for each.",
           "sections": [
             {
-              "heading": "Warning-sign premise",
-              "summary": "The speaker says the body gives warning signs that reveal what is happening internally and that ignoring them can lead to bigger health issues.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
               "heading": "Blood, digestion, and cramps",
-              "summary": "Whitish nails and pale features are linked to low hemoglobin and low red blood cells; smelly gas is linked to overeating, intolerance, or difficult-to-digest protein; calf cramps are linked to vitamin E and internal dryness.",
-              "segment_ids": [
-                "s00001"
+              "summary": "Whitish nails are tied to low hemoglobin, smelly farts to intolerance or overeating, and calf cramps to vitamin E deficiency.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "heading": "Feet, face, and skin signs",
-              "summary": "Foot pain, hot or itchy feet, and foot odor are framed as liver-overload signs. A puffy round face is tied to water retention from too many carbs, salt, or alcohol. Dry flaky skin is tied to omega-3 deficiency.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Fluid, skin, and parasites",
+              "summary": "Puffy round face is linked to water retention from carbs, salt, or alcohol; dry flaky skin to omega-3 deficiency; anal itching, drooling, or teeth grinding to intestinal worms.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "heading": "Gut, gums, and calcium signs",
-              "summary": "Anal itching, drooling, and teeth grinding are attributed to intestinal worms. Swollen or bleeding gums are attributed to vitamin C deficiency and intestinal health. White facial spots, tooth decay, cavities, and joint cracking are linked to calcium and vitamin D.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Sponsored close",
-              "summary": "The final section promotes Mamaearth Flowers of Youth Essence Serum, including ingredient-positioning, usage directions, patch-test advice, and a discount code.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Gums, calcium, and promotion",
+              "summary": "Swollen gums are linked to vitamin C deficiency and intestinal health, while white facial spots are tied to calcium and vitamin D issues before a Mamaearth serum promotion.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "practical_details": [
-            "Suggested responses include beet-carrot juice, smaller meals, nuts and seeds, cutting junk food, hydration, fiber, vitamin C foods, and sunlight."
-          ],
           "limitations": [
-            "Supplied medical and Ayurvedic recommendations are not externally verified in the package.",
-            "All transcript text is contained in one canonical segment, preventing reliable topic-boundary timestamps."
-          ],
-          "source_basis": [
-            "canonical_transcript:s00001",
-            "metadata description and chapters"
+            "The package supplies transcript and metadata but not the external studies or medical sources referenced.",
+            "Canonical timestamps are unusable for reliable timed sectioning."
           ]
         },
         "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
           "sections": []
         },
         "entities.v2": {
-          "entities": [
-            {
-              "name": "Fit Tuber",
-              "type": "organization",
-              "context": "YouTube channel presenting the video.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Ayurveda",
-              "type": "concept",
-              "context": "Traditional framework used in claims about nails, digestion, gums, sunbath, and body signs.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Mamaearth Flowers of Youth Essence Serum",
-              "type": "product",
-              "context": "Sponsored face serum promoted near the end.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Vitamin E",
-              "type": "concept",
-              "context": "Nutrient linked by the source to muscle cramps.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Omega-3 fatty acids",
-              "type": "concept",
-              "context": "Nutrient linked by the source to dry flaky skin.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Vitamin C",
-              "type": "concept",
-              "context": "Nutrient linked to swollen or bleeding gums.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Vitamin D",
-              "type": "concept",
-              "context": "Nutrient linked to calcium absorption and white spots in the source.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "people": [],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [
+            "Mamaearth Flowers Of Youth Essence Serum"
+          ],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "hemoglobin",
+            "red blood cells",
+            "vitamin E",
+            "water retention",
+            "omega-3 fatty acids",
+            "intestinal worms",
+            "vitamin C deficiency",
+            "calcium deficiency",
+            "vitamin D"
+          ],
+          "foods_or_ingredients": [
+            "carrot",
+            "beetroot",
+            "leafy greens",
+            "sunflower seeds",
+            "almonds",
+            "cashews",
+            "peanuts",
+            "cow ghee",
+            "walnuts",
+            "flax seeds",
+            "amla",
+            "guava",
+            "lemon",
+            "orange",
+            "capsicum",
+            "milk products",
+            "sesame seeds",
+            "banana",
+            "peanut butter"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
           ]
         },
         "claims_warnings.v2": {
           "claims": [
             {
-              "text": "Whitish nails, pale face, and pale lips can indicate low hemoglobin.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Whitish nails indicate low hemoglobin.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Smelly gas can indicate food intolerance or eating more than the body can digest.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Smelly farts indicate food intolerance or overeating.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Vitamin E deficiency can contribute to muscle cramps, and supplementation reduced cramps by 68% in a cited study.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Calf muscle cramps indicate vitamin E deficiency and vitamin E reduced cramps by 68 percent in a cited study.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Foot pain, itchy or burning feet, and foot odor are signs of liver malfunction or overload.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Foot pain can indicate liver malfunction.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Dry flaky skin around the nose and forehead indicates omega-3 fatty-acid deficiency.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "A puffy round face indicates water retention from carbs, salt, or alcohol.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Anal itching, drooling, and teeth grinding are definitive signs of intestinal worms.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Dry flaky skin around the nose and forehead indicates omega-3 deficiency.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Swollen or bleeding gums can be signs of vitamin C deficiency.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Anal itching, drooling, or teeth grinding are definitive signs of intestinal worms.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "White spots on the face, tooth decay, cavities, and joint cracking are signs of calcium deficiency and may relate to vitamin D deficiency.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Swollen or bleeding gums indicate vitamin C deficiency.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "White spots on the face, tooth decay, cavities, or joint cracking indicate calcium or vitamin D problems.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "warnings": [
-            {
-              "text": "Health, deficiency, symptom, and remedy claims should not be treated as diagnosis or treatment advice without qualified medical review.",
-              "severity": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Sponsored product mentions should be separated from the educational content and not treated as independent recommendation evidence.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "safety_warnings": [
+            "Symptoms can have many causes; do not self-diagnose deficiencies, worms, liver disease, or anemia solely from appearance.",
+            "Foot pain, bleeding gums, persistent cramps, severe fatigue, swelling, or unexplained skin changes warrant professional evaluation."
           ],
-          "overall_risk": "high"
+          "medical_disclaimer": "This summarizes supplied source claims only and is not medical advice.",
+          "confidence_notes": [
+            "No independent medical evidence is included in the package."
+          ]
         },
         "viewer_comment_intelligence.v2": {
-          "total_comments": 1095,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "appreciation for the creator and perceived usefulness",
-              "approximate_count": 13,
-              "evidence": "supplied comment records"
-            },
-            {
-              "theme": "requests for future videos or help on related health topics",
-              "approximate_count": 13,
-              "evidence": "supplied comment records"
-            },
-            {
-              "theme": "viewers relating symptoms or lifestyle changes to themselves",
-              "approximate_count": 1,
-              "evidence": "supplied comment records"
-            }
-          ],
-          "agreements": [
-            "Many supplied comments express appreciation or personal relevance, but this is not factual validation."
-          ],
-          "disagreements": [],
-          "questions": [
-            "What other common signs should be covered in the next part of this series? #youropinionmatters",
-            "can you make a video about chia seeds please.....?",
-            "I've watched so many of your videos. Thank you for all your information. I can't remember which one you covered headaches in tho ?? help thnks"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "confidence": "medium",
-            "basis": "available structured comments are mostly appreciative or request more topics"
-          },
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
           "limitations": [
-            "Comments are audience-generated and are not evidence that health claims are true.",
-            "Only supplied comment records were analyzed."
+            "No structured comments were supplied."
           ]
         },
         "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; creating 30-180 second clips would require inventing timestamps.",
-          "total_selected_duration_seconds": 0
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
         },
         "evidence_assessment.v1": {
-          "grade": "A",
-          "completeness": "complete",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "Nine symptom signs presented as possible body warnings with diet, hygiene, supplement, and lifestyle responses.",
-          "strongest_takeaway": "The source uses visible body signs as prompts for lifestyle or nutrition changes.",
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Clear topic fit for body warning signs and symptoms.",
-            "Provides practical recommendations from the source perspective."
+            "Transcript clearly lists nine signs and suggested foods.",
+            "The output can cite one canonical segment for all source claims."
           ],
           "weaknesses": [
-            "Medical claims are not externally verified.",
-            "Timestamp structure is unusable for timeline and clip extraction."
+            "Many diagnostic links are oversimplified.",
+            "Referenced studies are not supplied.",
+            "Commercial promotion appears in the video."
           ],
-          "worth_keeping": "yes",
-          "worth_rewatching": "unknown",
-          "reason": "Useful for cataloging the source's health-warning content, but conclusions require caution because supplied evidence does not externally verify medical advice."
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A nine-item symptom and nutrition-warning list with food remedies and Ayurvedic framing.",
+          "strongest_takeaway": "The safest takeaway is to notice persistent body changes and seek proper evaluation rather than treating the sign mapping as diagnosis.",
+          "strengths": [
+            "Memorable list format.",
+            "Includes practical food ideas."
+          ],
+          "weaknesses": [
+            "Risk of overdiagnosis or false reassurance.",
+            "Some claims are medically strong without supplied evidence."
+          ],
+          "worth_keeping": "maybe",
+          "worth_rewatching": "maybe"
         },
         "editorial_assessment.v1": {
-          "chatgpt_take": "This is useful as a compact map of the creator's symptom-and-remedy framing, but the value is mostly in understanding the source's recommendations rather than accepting them as medical fact.",
-          "bottom_line": "The source uses visible body signs as prompts for lifestyle or nutrition changes.",
+          "chatgpt_take": "The video is useful as a prompt to pay attention, but too confident as a diagnostic map. Its food suggestions are often ordinary, but the condition-sign pairings need medical skepticism.",
+          "bottom_line": "Use as awareness content, not diagnosis.",
           "what_is_new_or_distinctive": [
-            "Combines everyday symptom observation with Ayurveda-influenced explanations and practical food or lifestyle steps."
+            "Nine highly specific visible signs mapped to deficiencies or internal issues"
           ],
           "practical_value": {
             "level": "medium",
-            "explanation": "The video offers actionable suggestions, but many are health claims needing external verification."
+            "explanation": "Moderate for prompting checkups and diet reflection, lower for self-treatment."
           },
           "credibility_assessment": {
             "level": "uncertain",
-            "explanation": "The package supplies transcript and metadata evidence for what the source says, but no independent clinical evidence."
+            "explanation": "Clear transcript support for what the source says, but no external validation for the medical mappings."
           },
-          "evidence_strength": "medium",
+          "evidence_strength": "medium-low",
           "possible_bias_or_agenda": [
-            "Creator/channel promotion and sponsored product segment may shape presentation."
+            "Mamaearth product promotion",
+            "Attention-grabbing symptom warning framing"
           ],
           "important_missing_context": [
-            "No external medical sourcing is supplied in the package.",
-            "No reliable duration data is supplied for timeline validation."
+            "Differential diagnosis",
+            "Lab confirmation guidance",
+            "Study citations and limitations"
           ],
           "who_should_watch": [
-            "Viewers cataloging Fit Tuber health-remedy content.",
-            "Viewers looking for the source's own symptom checklist, with caution."
+            "Viewers curious about nutrition-related signs"
           ],
           "who_can_skip": [
-            "Anyone needing clinically verified diagnosis or treatment guidance."
+            "People tempted to self-diagnose serious symptoms"
           ],
           "recommended_actions": [
-            "Treat health claims as prompts for further verification, not as medical instructions.",
-            "Consult a qualified clinician for persistent symptoms."
+            "Treat persistent signs as reasons to consult a clinician or dentist.",
+            "Avoid high-dose supplementation without testing or advice."
           ],
           "questions_left_unanswered": [
-            "Which claims are supported by peer-reviewed medical evidence?",
-            "Which recommendations are safe for people with medical conditions or medications?"
+            "How accurate are these signs for the claimed deficiencies?",
+            "What red flags require urgent care?"
           ],
-          "contradictions_or_doubts": [],
+          "contradictions_or_doubts": [
+            "Several claims use definitive wording where many causes are possible."
+          ],
           "comparison_opportunities": [
-            "Compare with clinical guidance on fatigue, deficiency symptoms, and digestive or skin signs.",
-            "Compare against other videos in the same body-warning-signs group."
+            "Compare with clinician-reviewed deficiency and symptom evaluation resources."
           ],
           "overall_score": {
-            "score_0_to_100": 58,
-            "explanation": "Score reflects topical relevance and supplied transcript usability, reduced for unverified health claims and unusable timestamps."
-          },
-          "keep_priority": "medium",
-          "rewatch_sections": [],
-          "interpretation_limits": "Analysis is limited to supplied transcript, metadata, and comments; it does not externally fact-check medical or product claims."
+            "score": 5,
+            "scale": 10,
+            "reason": "Clear and specific, but medically overconfident."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "s00001 used for transcript grounding",
+            "no invented timestamps",
+            "no duplicate IDs"
           ],
-          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and assessments cite s00001; timeline, clips, and rewatch sections are empty because timestamps are zero-duration.",
-          "repair_attempts": 0
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Health, deficiency, diagnosis, and treatment-style claims are source claims requiring external verification."
+          ]
         }
       }
     }
