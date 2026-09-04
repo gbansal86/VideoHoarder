@@ -1,0 +1,979 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090659_e44dc8",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "8hFr16_3cuI",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "B",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [
+        "canonical_transcript.source is no_transcript despite transcript text being supplied",
+        "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+      ],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+          "Nutrition, weight-loss, appetite-control, product-safety, and physiological claims are source claims only and require external verification before being treated as advice.",
+          "Evidence grade remains B because the transcript is usable but not complete/high quality.",
+          "The forehead-tapping craving intervention is based in the source on an experiment/anecdote and needs external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Six Ways to Reduce Unhealthy Food Cravings",
+          "short_title": "Reduce Food Cravings",
+          "reason": "The transcript defines cravings and gives six methods plus a 30-second forehead-tapping technique."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Reducing unhealthy food cravings",
+          "secondary_topics": [
+            "hydration",
+            "protein intake",
+            "sleep",
+            "stress management",
+            "motivation",
+            "healthy substitutes",
+            "forehead tapping"
+          ],
+          "category": "Health",
+          "subcategory": "Nutrition and appetite control",
+          "keywords": [
+            "food cravings",
+            "junk food",
+            "hydration",
+            "protein",
+            "sleep",
+            "stress eating",
+            "healthy substitutes",
+            "forehead tapping"
+          ],
+          "canonical_tags": [
+            "craving",
+            "junk food",
+            "hydration",
+            "protein intake",
+            "sleep",
+            "stress eating",
+            "motivation",
+            "healthy substitute",
+            "weight loss",
+            "appetite control"
+          ],
+          "search_queries": [
+            "how to reduce unhealthy food cravings",
+            "hydration protein sleep stress cravings",
+            "forehead tapping food craving technique"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video explains unhealthy food cravings as an intense desire for specific foods such as chocolate, pastries, samosas, pizza, or burgers even when a person may not be hungry. The source says cravings are normal but can interfere with weight loss and fitness goals. It recommends drinking water and waiting about 30 minutes, eating enough protein, avoiding extreme hunger, sleeping 7 to 8 hours, managing stress through activity or social support, using visualization and motivation, keeping healthier sweet alternatives available, and waiting out cravings that the source says often last about 10 minutes. It closes with a 30-second forehead-tapping technique that the creator says reduced his brother's urge to order junk food.",
+          "key_takeaways": [
+            "Cravings are framed as desire for specific foods, not always true hunger.",
+            "Water, protein, sleep, stress control, motivation, and healthy substitutes are the main recommendations.",
+            "The source says waiting can help because cravings may pass quickly.",
+            "The 30-second forehead-tapping trick is presented as effective but is not externally verified in the supplied package.",
+            "Advice is general fitness content, not individualized medical or dietary care."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber video is a short behavior-focused explanation of cravings and how the source believes they can be reduced. It defines a craving as an intense desire to eat a specific food regardless of hunger, gives common examples such as chocolate, pastries, samosa, pizza, and burgers, and links cravings to difficulty maintaining weight-loss or fitness goals. The recommendations are practical and everyday: drink water first, wait before deciding, eat enough protein, avoid becoming extremely hungry, get adequate sleep, manage stress, strengthen motivation, and keep a healthier alternative available. The strongest and most distinctive claim is a 30-second forehead-tapping method, which the creator connects to an experiment on people with obesity and a personal anecdote involving his brother. The supplied transcript supports that these claims were made, but it does not verify the experiment or effectiveness.",
+          "sections": [
+            {
+              "heading": "Definition and problem framing",
+              "summary": "The source defines cravings as desire for a specific food regardless of actual hunger and says they can interfere with weight loss and fitness goals.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Basic physiological habits",
+              "summary": "The source recommends water, enough protein, avoiding extreme hunger, and 7 to 8 hours of sleep as ways to reduce the intensity or frequency of cravings.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Stress, motivation, and substitutes",
+              "summary": "Stress eating is described as a trigger, while walking, exercise, calling a friend, visualization, motivation, and healthier sweet alternatives are offered as substitutes.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Forehead-tapping technique",
+              "summary": "The source says tapping the forehead for 30 seconds can reduce cravings, citing an experiment and a personal anecdote, but the supplied package does not include external evidence.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Drink water and wait about 30 minutes before acting on a craving, according to the source.",
+            "Increase protein intake to improve satiety, according to the source.",
+            "Sleep 7 to 8 hours daily and manage stress through non-food outlets.",
+            "Keep a healthier sweet option, such as the banana peanut butter sandwich mentioned by the source.",
+            "Try waiting about 10 minutes or using the 30-second forehead-tapping technique, while recognizing it is not externally verified here."
+          ],
+          "limitations": [
+            "Only one zero-duration canonical segment is available.",
+            "Evidence grade is B, not A, because transcript quality is medium and completeness is usable.",
+            "The claimed experiment and anecdote are not externally documented in the package.",
+            "No individualized nutrition or medical context is supplied."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel/source of the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vivek",
+              "type": "person",
+              "context": "Presenter name used in the transcript.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Pizza Hut",
+              "type": "organization",
+              "context": "Named as a junk-food outlet the presenter used to visit.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Dominos",
+              "type": "organization",
+              "context": "Named as a junk-food outlet the presenter used to visit.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Obese Society in Boston",
+              "type": "organization",
+              "context": "Referenced by the source as connected to a forehead-tapping experiment.",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "craving",
+              "type": "concept",
+              "context": "Primary behavior discussed in the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "protein",
+              "type": "concept",
+              "context": "Recommended as a satiety-supporting nutrient.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "stress eating",
+              "type": "concept",
+              "context": "Described as a trigger for sweets/chocolate cravings.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Drinking water and waiting about 30 minutes can make many cravings disappear.",
+              "claim_type": "nutrition behavior claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Adequate protein reduces cravings because it takes longer to break down and keeps the body busy.",
+              "claim_type": "nutrition physiology claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "People who sleep less and feel tired crave more.",
+              "claim_type": "health behavior claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Stress can trigger cravings for sweets or chocolate.",
+              "claim_type": "health behavior claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Cravings last no more than 10 minutes.",
+              "claim_type": "behavioral claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Tapping the forehead for 30 seconds can make cravings go away.",
+              "claim_type": "behavioral intervention claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "General craving, overeating, diet, and weight-control advice may not apply to people with eating disorders, diabetes, pregnancy, medication effects, or other medical conditions.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The package does not externally verify the source's nutrition, Ayurveda, product, or physiology claims.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Audience comments are not factual verification.",
+              "severity": "low",
+              "segment_ids": []
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1086,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Creator appreciation and support",
+              "approximate_count": 10,
+              "evidence": "The sample includes thanks, praise, and requests to support the channel."
+            },
+            {
+              "theme": "Relatability around diet discipline",
+              "approximate_count": 7,
+              "evidence": "Several viewers joke about cravings, family food pressure, or difficulty maintaining diet habits."
+            },
+            {
+              "theme": "Requests for more platforms or future topics",
+              "approximate_count": 5,
+              "evidence": "Comments ask for YouTube/Instagram interaction and other health topics."
+            },
+            {
+              "theme": "Humor about fitness standards",
+              "approximate_count": 4,
+              "evidence": "Some comments joke about abs, belly fat, and the creator's presentation."
+            }
+          ],
+          "agreements": [
+            "Many included comments express appreciation for the creator or describe the video as useful.",
+            "Some comments say they relate to the diet, craving, or overeating problem.",
+            "Several comments ask for more health, fitness, or nutrition topics."
+          ],
+          "disagreements": [
+            "Some comments treat the advice humorously or imply the recommendations are difficult to follow in real life.",
+            "The supplied sample does not include strong evidence-based rebuttals to the central advice."
+          ],
+          "questions": [
+            "How can the advice be adapted for people whose family meals or social settings encourage overeating?",
+            "Which recommendations have strong clinical evidence versus traditional or personal-experience support?",
+            "Are there medical conditions that change how cravings or overeating should be handled?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive and amused",
+            "positive": "Praise, thanks, and perceived usefulness are common in the included sample.",
+            "negative": "Some comments show difficulty applying diet discipline or raise unrelated requests.",
+            "mixed": "The thread combines appreciation, jokes, self-comparison, and requests for future videos."
+          },
+          "limitations": [
+            "Only a deterministic head-tail sample is supplied, not the full comment set.",
+            "Comment records include metadata/header lines and unrelated requests.",
+            "Audience comments do not verify factual nutrition or health claims."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because each video's canonical transcript has only a zero-duration segment; using embedded timestamps from text would create unvalidated canonical timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "B",
+          "completeness": "usable",
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical transcript source label conflicts with supplied transcript text",
+            "declared video duration is 0 despite embedded transcript timestamps"
+          ],
+          "limitations": [
+            "Single zero-duration canonical segment prevents validated timeline or clip extraction.",
+            "Health and nutrition claims are not externally verified.",
+            "Comments are sampled and audience-generated."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A Fit Tuber video giving practical methods to reduce junk-food cravings, including hydration, protein, sleep, stress management, motivation, substitutes, and forehead tapping.",
+          "strongest_takeaway": "The most useful practical theme is to pause before acting on cravings and check hydration, hunger, sleep, stress, and substitutes.",
+          "strengths": [
+            "Clear definition of cravings.",
+            "Practical everyday tactics.",
+            "Acknowledges mental and stress-related components.",
+            "Short focused transcript."
+          ],
+          "weaknesses": [
+            "Forehead-tapping effectiveness is weakly supported in the package.",
+            "Evidence grade is only B.",
+            "No individualized nutrition context.",
+            "No valid canonical timestamps."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful as a lightweight craving-control item, but keep claims provisional and avoid timestamped rewatch recommendations."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is a practical habit video with a useful pause-and-substitute message: cravings are not always hunger, and small behavior changes can reduce impulsive eating. Its weakest point is the dramatic 30-second forehead-tapping claim, which may be harmless for many people but is not proven by the package evidence. It belongs in the library as craving-control advice with moderate confidence, not as medical nutrition guidance.",
+          "bottom_line": "Useful habit prompts, but the headline trick needs verification.",
+          "what_is_new_or_distinctive": [
+            "The 30-second forehead-tapping method is the distinctive hook.",
+            "The advice combines hydration, protein, sleep, stress, and motivation in one short package."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "The pause, water, sleep, stress, and substitute tactics are easy to try, but evidence strength varies."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The transcript is usable but not complete/high quality, and no external study details are supplied for the key trick."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Fitness-goal framing may oversimplify emotional or clinical causes of cravings."
+          ],
+          "important_missing_context": [
+            "No cited study details for the forehead-tapping experiment.",
+            "No discussion of eating disorders, medication, diabetes, or other medical contexts."
+          ],
+          "who_should_watch": [
+            "Viewers seeking simple non-medical craving-management tactics.",
+            "People cataloging fitness-influencer appetite advice."
+          ],
+          "who_can_skip": [
+            "Anyone needing clinical help for binge eating or disordered eating.",
+            "Users looking for evidence-graded nutrition science."
+          ],
+          "recommended_actions": [
+            "Externally verify the forehead-tapping study claim.",
+            "Treat advice as general habit support, not individualized care."
+          ],
+          "questions_left_unanswered": [
+            "What was the exact study behind the tapping claim?",
+            "How should people handle recurring intense cravings tied to mood or health conditions?"
+          ],
+          "contradictions_or_doubts": [
+            "The source says cravings naturally last about 10 minutes but also promotes an immediate 30-second intervention."
+          ],
+          "comparison_opportunities": [
+            "Compare with clinical behavioral strategies for cravings and binge eating.",
+            "Compare with nutrition guidance on protein, sleep, and appetite."
+          ],
+          "overall_score": {
+            "score_0_to_100": 66,
+            "explanation": "Clear and practical but limited by B-grade evidence, no verified study citation, and unusable timestamps."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "Based only on supplied transcript, metadata, and sampled comments; effectiveness claims are not externally fact-checked."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+            "Nutrition, weight-loss, appetite-control, product-safety, and physiological claims are source claims only and require external verification before being treated as advice.",
+            "Evidence grade remains B because the transcript is usable but not complete/high quality.",
+            "The forehead-tapping craving intervention is based in the source on an experiment/anecdote and needs external verification."
+          ],
+          "cross_feature_consistency": "All transcript-derived content cites s00001 for the corresponding video; timestamped timeline, clip, and rewatch fields are empty due zero-duration canonical segment boundaries.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "F4wUMbrUR78",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium-high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [
+        "canonical_transcript.source is no_transcript despite transcript text being supplied",
+        "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+      ],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+          "Nutrition, weight-loss, appetite-control, product-safety, and physiological claims are source claims only and require external verification before being treated as advice.",
+          "The transcript is marked high quality and complete, but canonical timestamps are unusable.",
+          "Product claims for skincare items appear in a promotional segment and require external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five Ways to Stop Overeating",
+          "short_title": "Stop Overeating",
+          "reason": "The transcript gives five strategies for reducing overeating and portion excess."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Stopping overeating through portion control and mindful eating",
+          "secondary_topics": [
+            "Ayurvedic six tastes",
+            "portion size",
+            "meal variety",
+            "slow eating",
+            "satiety signals",
+            "whole foods"
+          ],
+          "category": "Health",
+          "subcategory": "Nutrition and eating habits",
+          "keywords": [
+            "overeating",
+            "portion control",
+            "six tastes",
+            "mindful eating",
+            "slow eating",
+            "satiety",
+            "whole foods",
+            "jaggery",
+            "buttermilk"
+          ],
+          "canonical_tags": [
+            "overeating",
+            "portion control",
+            "mindful eating",
+            "satiety",
+            "six taste",
+            "whole food",
+            "slow eating",
+            "meal variety",
+            "digestive health",
+            "appetite control"
+          ],
+          "search_queries": [
+            "how to stop overeating portion control",
+            "mindful eating satiety signals overeating",
+            "six tastes Ayurveda overeating advice"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video argues that many people overeat even when they know a smaller portion would be enough, leading to discomfort and possible long-term health consequences. The source gives five methods: include all six Ayurvedic tastes so meals feel complete, plan add-ons such as curd, buttermilk, milk, fruits, or salad so less main food is needed, eat nutrient-dense whole foods instead of low-nutrition processed food, take only one serving rather than repeatedly refilling the plate, and eat slowly without distractions so the brain has time to register satiety. It also suggests stopping when doubt arises about whether another portion is needed. A promotional skincare segment appears near the end.",
+          "key_takeaways": [
+            "The source frames overeating as repeated extra portions that burden digestion and may affect health.",
+            "Meal satisfaction is linked to variety, whole foods, and the six tastes in Ayurvedic framing.",
+            "One-serving plating and eating slowly are presented as practical behavior changes.",
+            "The source says satiety signals take time, so distracted and fast eating can lead to excess.",
+            "Promotional skincare claims are unrelated to the main overeating advice and need separate verification."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Fit Tuber video addresses overeating as a habitual pattern in which a person eats beyond what would be sufficient, then experiences bloating, laziness, digestive burden, or longer-term health concerns. It mixes Ayurvedic concepts with behavior-change advice. The source first suggests an Ayurvedic portion idea based on the food fitting in two palms and makes a broader longevity claim about reduced calorie intake. It then recommends including all six tastes in meals so they feel complete, using add-ons such as curd, buttermilk, milk, fruits, juices, or salad to make smaller meals easier, choosing whole foods rich in fiber, protein, fats, fruits, and vegetables, taking only one serving, and eating slowly without phone, laptop, TV, or conversation distractions. The transcript ends with a skincare product promotion, so product claims are separate from the overeating content.",
+          "sections": [
+            {
+              "heading": "Overeating problem and portion framing",
+              "summary": "The source says repeated extra portions can create immediate discomfort and may contribute to health problems, then introduces a two-palms portion idea.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Six tastes and add-ons",
+              "summary": "The video recommends completing meals with sweet, salty, bitter, sour, astringent, and pungent tastes and using curd, buttermilk, milk, fruit, or salad to reduce excess main-food intake.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Whole foods and single serving",
+              "summary": "The source argues nutrient-dense whole grains, pulses, milk products, nuts, fruits, and vegetable salads create fuller satisfaction than processed food and recommends plating one serving only.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Slow, distraction-free eating",
+              "summary": "The source says the brain needs about 14 to 15 minutes to register satiety and recommends eating quietly, chewing small bites, putting down cutlery, and stopping when unsure about more food.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Try smaller initial portions rather than repeated refills.",
+            "Include variety and all six tastes as framed by the source.",
+            "Use planned add-ons such as curd, buttermilk, milk, fruit, or salad to support satiety.",
+            "Choose whole foods with fiber, protein, fats, vitamins, and minerals.",
+            "Eat slowly without digital distractions and stop when doubt arises about another serving."
+          ],
+          "limitations": [
+            "Canonical timestamps are zero-duration, so no reliable time-coded timeline can be created.",
+            "Some longevity, Ayurveda, and satiety claims are not externally supported in the package.",
+            "Transcript contains recognition errors, though overall meaning is usable.",
+            "Skincare promotional claims are unrelated and not verified."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel/source of the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Vivek",
+              "type": "person",
+              "context": "Presenter associated with the channel, inferred from the video series metadata/comments.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Traditional health framework used for portion size and meal composition.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "six tastes",
+              "type": "concept",
+              "context": "Sweet, salty, bitter, sour, astringent, and pungent meal-completion concept.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Aarata face wash",
+              "type": "product",
+              "context": "Promotional skincare product mentioned near the end.",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Aarata face serum cream",
+              "type": "product",
+              "context": "Promotional skincare product mentioned near the end.",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "whole foods",
+              "type": "concept",
+              "context": "Recommended to prevent nutrient-driven hunger and overeating.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "satiety signal",
+              "type": "concept",
+              "context": "Brain/body fullness cue discussed by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Patreon",
+              "type": "product",
+              "context": "Support platform mentioned near the end.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Repeated overeating can contribute to belly fat, skin problems, hair fall, lethargy, heart problems, and diabetes.",
+              "claim_type": "health risk claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Ayurveda suggests eating one Anjali, or the amount fitting in two palms, in one serving.",
+              "claim_type": "traditional health claim",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Reducing calorie intake by 30 percent makes an organism live 30 percent longer.",
+              "claim_type": "quantitative longevity claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "A meal is balanced and satiating only if it contains all six tastes.",
+              "claim_type": "nutrition/traditional medicine claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Curd after breakfast, buttermilk after lunch, and milk after dinner can help curb overeating.",
+              "claim_type": "nutrition recommendation",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Processed low-nutrition food can make hunger return because the body still needs nutrients.",
+              "claim_type": "nutrition physiology claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The mind becomes satiated after chewing for about 14 to 15 minutes.",
+              "claim_type": "physiology/behavior claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Eating while talking or using screens contributes to overeating and choking risk.",
+              "claim_type": "safety/behavior claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Aarata face wash and serum cream are 100 percent safe and free from harsh chemicals.",
+              "claim_type": "product safety claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "General craving, overeating, diet, and weight-control advice may not apply to people with eating disorders, diabetes, pregnancy, medication effects, or other medical conditions.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The package does not externally verify the source's nutrition, Ayurveda, product, or physiology claims.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Audience comments are not factual verification.",
+              "severity": "low",
+              "segment_ids": []
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1112,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Positive reception and gratitude",
+              "approximate_count": 15,
+              "evidence": "Many comments call the video helpful, useful, sensible, or express thanks."
+            },
+            {
+              "theme": "Humor and entertainment value",
+              "approximate_count": 10,
+              "evidence": "Several comments focus on the intro, acting, jokes, or performance style."
+            },
+            {
+              "theme": "Diet difficulty and family/social obstacles",
+              "approximate_count": 5,
+              "evidence": "Viewers joke about family members undermining diet efforts or describe overeating as difficult."
+            },
+            {
+              "theme": "Requests for future health and product videos",
+              "approximate_count": 5,
+              "evidence": "Comments ask about face steam, supplements, and other health topics."
+            }
+          ],
+          "agreements": [
+            "Many included comments express appreciation for the creator or describe the video as useful.",
+            "Some comments say they relate to the diet, craving, or overeating problem.",
+            "Several comments ask for more health, fitness, or nutrition topics."
+          ],
+          "disagreements": [
+            "Some comments treat the advice humorously or imply the recommendations are difficult to follow in real life.",
+            "The supplied sample does not include strong evidence-based rebuttals to the central advice."
+          ],
+          "questions": [
+            "How can the advice be adapted for people whose family meals or social settings encourage overeating?",
+            "Which recommendations have strong clinical evidence versus traditional or personal-experience support?",
+            "Are there medical conditions that change how cravings or overeating should be handled?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive and amused",
+            "positive": "Praise, thanks, and perceived usefulness are common in the included sample.",
+            "negative": "Some comments show difficulty applying diet discipline or raise unrelated requests.",
+            "mixed": "The thread combines appreciation, jokes, self-comparison, and requests for future videos."
+          },
+          "limitations": [
+            "Only a deterministic head-tail sample is supplied, not the full comment set.",
+            "Comment records include metadata/header lines and unrelated requests.",
+            "Audience comments do not verify factual nutrition or health claims."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because each video's canonical transcript has only a zero-duration segment; using embedded timestamps from text would create unvalidated canonical timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical transcript source label conflicts with supplied transcript text",
+            "declared video duration is 0 despite embedded transcript timestamps"
+          ],
+          "limitations": [
+            "Single zero-duration canonical segment prevents validated timeline or clip extraction.",
+            "Health and nutrition claims are not externally verified.",
+            "Comments are sampled and audience-generated."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A Fit Tuber video on reducing overeating through portion control, six tastes, add-ons, whole foods, one-serving plating, and slow distraction-free eating.",
+          "strongest_takeaway": "Plate one satisfying varied serving, eat slowly, and stop when uncertainty about another portion appears.",
+          "strengths": [
+            "Concrete meal-behavior recommendations.",
+            "Connects overeating to satiety signals and distractions.",
+            "Includes simple recap.",
+            "Transcript is complete enough for semantic synthesis."
+          ],
+          "weaknesses": [
+            "Some claims are overstated or unverified.",
+            "Ayurvedic and product claims are mixed with general nutrition advice.",
+            "Promotional skincare segment is off-topic.",
+            "No valid canonical timestamps."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for appetite-control organization, but external verification is needed for quantified and product claims."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is stronger as behavioral eating advice than as nutritional science. The one-serving, slow-eating, and distraction-free meal ideas are concrete and easy to understand. The less reliable parts are broad health consequence claims, precise longevity numbers, and product-safety statements. As a library item, it is worth keeping for appetite-control heuristics while flagging its unverified claims.",
+          "bottom_line": "Good practical portion-control heuristics, mixed evidence quality.",
+          "what_is_new_or_distinctive": [
+            "Uses the six-tastes framework to explain meal satisfaction.",
+            "Turns satiety into a simple stopping rule: if in doubt, stop."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Several suggestions are actionable and low complexity, though not all are evidence-verified."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Complete transcript supports the source's message, but quantified, Ayurvedic, and product claims need external support."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Promotion of skincare products near the end.",
+            "Traditional-health framing may overstate certainty."
+          ],
+          "important_missing_context": [
+            "No citations for the 30 percent calorie/longevity claim.",
+            "No clinical nuance for people with metabolic disease, eating disorders, pregnancy, or other special needs."
+          ],
+          "who_should_watch": [
+            "Viewers seeking simple overeating-control habits.",
+            "Users comparing appetite-control content from health creators."
+          ],
+          "who_can_skip": [
+            "People needing individualized diet therapy.",
+            "Viewers looking for strictly citation-based nutrition advice."
+          ],
+          "recommended_actions": [
+            "Verify quantitative and health-risk claims before reuse.",
+            "Separate main overeating advice from promotional skincare claims."
+          ],
+          "questions_left_unanswered": [
+            "What evidence supports the six-tastes satiety claim?",
+            "How much should portion size vary by activity level, age, and health status?"
+          ],
+          "contradictions_or_doubts": [
+            "The video warns against overeating while making broad disease claims that are not supported by supplied evidence."
+          ],
+          "comparison_opportunities": [
+            "Compare with mindful-eating research.",
+            "Compare with dietitian guidance on portion control and satiety."
+          ],
+          "overall_score": {
+            "score_0_to_100": 70,
+            "explanation": "Practical and coherent, with complete transcript evidence, but weakened by unverified quantified claims, product promotion, and unusable timestamps."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "This is a transcript-grounded assessment only; it does not externally verify nutritional, Ayurvedic, longevity, safety, or product claims."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+            "Nutrition, weight-loss, appetite-control, product-safety, and physiological claims are source claims only and require external verification before being treated as advice.",
+            "The transcript is marked high quality and complete, but canonical timestamps are unusable.",
+            "Product claims for skincare items appear in a promotional segment and require external verification."
+          ],
+          "cross_feature_consistency": "All transcript-derived content cites s00001 for the corresponding video; timestamped timeline, clip, and rewatch fields are empty due zero-duration canonical segment boundaries.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
