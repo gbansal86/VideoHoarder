@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090705_31c8ea",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "FULL_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090705_31c8ea",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Heart, arteries, and cardiovascular health",
+      "batch_number": 41,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "batch_instruction": "This is independently importable batch 41 of 71 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260904_090705_31c8ea",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260904_090705_31c8ea"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090705_31c8ea",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Heart, arteries, and cardiovascular health",
+      "batch_number": 41,
+      "batch_total": 71,
+      "batch_size": 12
+    }
+  },
+  "manifest": {
+    "request_id": "f0049178-4042-4240-9d46-dde02041aa3d",
+    "package_id": "vh_full_intelligence_20260904_090705_31c8ea",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "mVWSWc--zGE"
+    ],
+    "evidence_grades": {
+      "mVWSWc--zGE": "A"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Heart, arteries, and cardiovascular health",
+      "batch_number": 41,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "hashes": {
+      "evidence.json": "1b85a2774fa2c95cf826ea81e5ddcbe255915adf4b1d4ad49fcf5e0be5dd0751",
+      "prompt.json": "cb9af8edb2ed730a016720489db9219026d32b71ab012005050764451cbae4d8",
+      "schema.json": "236676812da3982edbcc36b74893b0a10cb7f6bf39504a19fb2bab34740c031f"
+    },
+    "created_at": "2026-09-04 09:07:05",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "mVWSWc--zGE",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=mVWSWc--zGE",
+        "original_title": "How to Unclog Your Arteries (& Prevent Heart Attack)",
+        "clean_title": "How to Unclog Your Arteries (& Prevent Heart Attack)",
+        "channel": "Fit Tuber",
+        "upload_date": "2023-06-02",
+        "description": "In this video, we will discuss why our arteries get clogged? The warning signs that our body gives, the best foods and the 3 most effective ways as mentioned in the Ayurvedic scriptures to unclog the arteries and prevent heart attack. \n\nBuy Mamaearth Essence Serum (Roots of Radiance) - https://bit.ly/3NzP0bZ\n(Apply code FITTUBER21 to get 21% off)\nBuy from Amazon - https://amzn.to/42n5Azw\n\n00:33 - Why is it important to unclog the arteries?\n00:52 - How do we know if our arteries are clogged?\n01:29 - Why does cholesterol get buildup in the arteries?\n02:45 - How to cleanse our arteries?\n05:47 - Best foods to cleanse the arteries\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nGarlic Tablets - https://amzn.to/3N8MxEQ\nArjun Chhaal Powder (option 1 - Rs 159/200g) - https://amzn.to/3MPw7jz\nArjun Chhaal Powder (option 2 - Rs 558/kg) - https://amzn.to/3oNGdZZ\nArjun Chhaal Powder (option 3 - Rs 250/500g) - https://amzn.to/3ISvq7S\nArjun Chhaal Tablets - https://amzn.to/3N8MxEQ\nArjun Chhaal Capsules - https://amzn.to/3MLMVIa\nArjunarishta (option 1 - Rs 200/450ml) - https://amzn.to/3NaDwvc\nArjunarishta (option 2 - Rs 170/450ml) - https://amzn.to/45GxzNH\nArjunarishta (option 3 - Rs 181/450ml) - https://amzn.to/42eBuyk\nMedohar Guggul (option 1 - Rs 180/120 tablets) - https://amzn.to/43Ah18c\nMedohar Guggul (option 2 - Rs 198/120 tablets) - https://amzn.to/3WSzMBK\nA2 desi cow ghee - https://amzn.to/43EpF5z\nGurbandi Almonds - https://amzn.to/43hPbOo\nBrazil nuts - https://amzn.to/3WLp7bL\nOats - https://amzn.to/3P9tBHJ\nMillet Combo - https://amzn.to/3Nj1vZf\nHandpounded rice - https://amzn.to/3N8yWNH\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n5 Amazing Foods for Fat Loss (100% Guaranteed)\nhttps://youtu.be/gjYVS8m91UU\n5 Proven Ways to Reduce Body Heat (Pigmentation, Rashes, Grey Hair, Body odour, Sweating)\nhttps://youtu.be/pCaz06psb0s\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n07:35 - Segment Partner - Mamaearth Essence Serum (Roots of Radiance)\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "high",
+          "completeness": "complete",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:09] [Music] in this video we will discuss why Our arteries get clogged the warning signs that our body gives the best foods and the three most effective ways as mentioned in ayurvedic scriptures to unclog the arteries and prevent heart attack so without any further delay [00:00:26] let's get started Hello friends welcome to fit tuber foremost let's understand why is it important to unclog the arteries consider a road with heavy traffic how hard it is to move forward a similar [00:00:41] situation happens when arteries get clogged due to cholesterol buildup and the blood has a tough time moving forward this puts you at a risk of a heart attack so how do we know that our arteries are blocked well a simple lipid profile test is a sure short way to know [00:00:57] the status of your heart health however if one is proactive enough there are certain signs that can indicate high cholesterol since cholesterol buildup in the arteries causes inflammation pain in the left side of the chest is a sign one should not ignore then shortness of [00:01:14] breath the feeling that you can't catch your breath can also indicate obstructed blood flow through the arteries apart from this tiredness weak memory and cramps in the legs may be a sign of high cholesterol but why does cholesterol get [00:01:29] build up in the arteries by far bad food choices are the major cause of bad cholesterol it's important to know that there are two types of cholesterol good and bad bad cholesterol sticks to artery walls and causes blockage on the other hand good cholesterol has essential [00:01:45] functions to perform including reducing the bad cholesterol so we should aim to increase good cholesterol and decrease bad cholesterol red meat is a major source of bad cholesterol a 2019 study confirmed that people who eat plant-based diet have 52 percent less [00:02:03] chances of a heart attack another major cause of clogged arteries is the consumption of bad oils when foods are fried in refined oils or when oils are reused for deep frying bad cholesterol builds up hydrogenated oils found in packaged foods like cream biscuits [00:02:20] commercial peanut butters margarine mayonnaise and cheese have trans fats that increase bad cholesterol packaged Foods consisting of refined sugar and maida Spike the insulin that increases cholesterol production apart from this [00:02:35] being overweight having a sedentary lifestyle smoking and binge drinking puts one at a risk of high cholesterol so how can we reduce this cholesterol buildup and cleanse Our arteries statin drugs are often prescribed for the same although the problem with Statin tablets [00:02:52] is that cholesterol remains in control only as long as you are consuming them more importantly they are known to have side effects like liver damage impotency and muscle weakness why risk your health when arteries can be cleansed naturally [00:03:07] ayurvedic scriptures talk at length about the various herbs that help reduce cholesterol out of so many I have selected three ways which are easy practical and effective first is garlic although not recommended as daily food but can do wonders if used as medicine [00:03:24] unsurprisingly more than 25 Studies have confirmed that having just one clove of of raw garlic daily significantly reduces cholesterol raw garlic contains vitamin C B6 manganese and selenium but it's the bioactive compound called [00:03:40] ellicin a type of antioxidant that is responsible for lowering the bad cholesterol and reduce blood pressure needless to say garlic is available in almost every Indian Kitchen for best results have one clove daily with water one hour before breakfast easy on Pocket [00:03:57] efficacious garlic is a natural remedy to unblock the arteries second option is Arjun bark Arjun kitchen is probably the most effective herb for heart so much so that it is often termed as cardiovascular herb having strong [00:04:12] antioxidants anti-inflammatory and blood thinning properties it not just reduces the level of bad cholesterol and triglycerides but also increases good cholesterol in a study when Arjun bark powder was consumed for one month it [00:04:27] reduced triglycerides by almost 18 percent bad cholesterol by 16 percent and increased good cholesterol by 10 percent overall an amazing tonic for cleansing the arteries you can have a teaspoon of powder boiled in milk or [00:04:43] water filter it and then sweeten it with honey or jaggery powder have it post breakfast and in evening if Arjun tea is not your cup of tea Arjun bark is available in the form of tablet and syrup as well both can be consumed post meals third is Middle [00:05:00] maida means fat tissue and her means to eradicate as its name suggests this google-based ayurvedic classical formulation is proven to reduce bad cholesterol and triglyceride levels in a study when medohar Google was given with other ayurvedic medicines it showed [00:05:17] mind-boggling results reducing bad cholesterol and triglyceride levels by a whopping 30 percent to get the maximum benefit it is recommended to chew two tablets of medohar Google with lukewarm water twice a day preferably after food in morning and evening each of these [00:05:35] three remedies are powerful in their own aspect you can choose as per your convenience follow it religiously for two months and then get your lipid profile test done again you won't be disappointed apart from these Solutions there are certain foods which help [00:05:50] cleanse the arteries foods with healthy fats like A2 Desi cow ghee nuts coconut and flax seeds help eliminate bad cholesterol in the body bottle guard and other members of guard family are highly effective in cleansing the arteries [00:06:05] fiber rich foods like seasonal fruits and whole grains especially Oats help cut cholesterol out from the body interestingly when a group of men and women were given just four Brazil nuts to eat cholesterol reduced by 20 units in just 9 hours you can easily get them [00:06:23] online apart from food 10 minutes of kapal bhati pranayama can melt that stubborn Block in your arteries if we quickly recap chest pain shortness of breath and cramps in legs are warning signs that you might have high cholesterol lipid profile test is a sure [00:06:40] short way to find out regular consumption of red meat refined oil reusing oils packaged foods are the major causes of blockage of arteries to naturally cleanse the arteries you can have a clove of garlic with water one or [00:06:55] before breakfast you can include Arjun bark in the form of tea tablet or syrup post breakfast or you can opt for medohar Google Tablet twice a day post food healthy fats bottle Guard Family high fiber grains and Brazil nuts are [00:07:10] recommended to reduce bad cholesterol your heart takes care of you 24 7. so it's wise we take good care of it have no doubt following the above your arteries will renew itself and you will feel lighter and energetic all the products mentioned in the video can [00:07:26] easily be bought offline although for your convenience I have even linked them in the description box looking for a toxin-free face serum check out Mama Earth's root of Radiance Essence face serum turn the pack and you will find that it has no mineral oil edtas harsh [00:07:43] alcohols artificial colors or fragrance with the goodness of ashwagandha turmeric and punar Nava it is a safe chemical formulation to get the best of it take three to four drops and massage on face and neck in upward motion it is suitable for men and women of all skin [00:08:00] types still a patch test is recommended to buy Mama or stocks in free roots of Radiance face serum click on the link down in the description box do not forget to apply the special discount coupon to get 21 off on your order if you want to know 5 foods that melt body [00:08:16] fat check out this video my name is Vivek I thank you so much for watching"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1106,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: mVWSWc--zGE",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @Unknown2_5_7 | Likes: 5219 | Replies: 124 | Published: 2023-06-02T13:31:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Vote for pregnancy series and more women related series .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @ayushkanojiya4972 | Likes: 12 | Replies: 0 | Published: 2023-06-02T13:37:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "It is there in Ayush kanojiya comments",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @leo_messi___ | Likes: 114 | Replies: 0 | Published: 2023-06-02T13:42:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "No plz he is going right track...men also needs his guidance he is doing good for both",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @rahinamw | Likes: 14 | Replies: 0 | Published: 2023-06-02T13:42:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "@ayushkanojiya4972 abe tu women hai kya",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @ayushkanojiya4972 | Likes: 8 | Replies: 0 | Published: 2023-06-02T13:47:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "@rahinamw Nhi fool, Gentleman's always supports the right women's .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @PranZzz01245 | Likes: 0 | Replies: 0 | Published: 2023-06-02T13:50:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "No.1 point : Don't get horny again after delivery 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @hirensarma600 | Likes: 191 | Replies: 1 | Published: 2024-03-27T03:42:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "This guy going to ruin the business of many cardiologists. Thank you bruhh ❤❤☺☺☺☺",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @kiransharma7753 | Likes: 3 | Replies: 0 | Published: 2025-03-24T05:17:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "So true",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @anynomus83828 | Likes: 194 | Replies: 1 | Published: 2024-01-30T00:51:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Loss of memory is sign of heart blockage... If I had got this video a little early.. Like couple of months before I could have saved my grandfather... I thought it might be dementia... Even doctors couldn't tell it was heart disease.. I commented just to aware people about symptoms of heart attack... I hope you people will save your loves ones...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @akshaygupta8723 | Likes: 6 | Replies: 0 | Published: 2025-02-25T21:16:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Thank you and may God bless u and ur grandfather. May him Rest in peace.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @BanibrataDutta | Likes: 16 | Replies: 0 | Published: 2023-07-16T11:24:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "Vivek, request you to make a video for people nearing 50s, who are overweight with belly fat, hyper-tensive, having started with knee and lower back problems. Obviously, such people have not been good to their bodies for large part of their life, nor can they suddenly undertake very rigorous and tough exercises/tough yoga. Like the way you explain why a certain thing should be done, based on scientific evidence. Hoping that you'd do this one too.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @chandrashekarreddy852 | Likes: 10 | Replies: 0 | Published: 2023-06-25T04:10:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Garlic should be chewed.its not tab to swallow",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @Mohit_1610 | Likes: 312 | Replies: 0 | Published: 2023-06-02T13:32:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "Fitness is not a destination it's a way of life",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 14] Author: @ayushkanojiya4972 | Likes: 1163 | Replies: 22 | Published: 2023-06-02T13:34:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Sir make videos on these topics -",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "1= Ayurvedic Diet Plan for healthy and effective weight gain",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "2= Ayurvedic Skin Type Test in 7 mins with perfect solution",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "3 = 7 practical ways to make our flat and house more liveable and healthy",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "4= Pregnancy series for women",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "5= Natural treatment of Stretch marks, surgical marks, warts and moles .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 15] Author: @ayushkanojiya4972 | Likes: 13 | Replies: 0 | Published: 2023-06-02T13:35:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "Plzz put this comment as next poll in community section, Vivek sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 16] Author: @ayushkanojiya4972 | Likes: 7 | Replies: 0 | Published: 2023-06-02T13:35:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "Plz support the comment",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 17] Author: @Snorlax108 | Likes: 5 | Replies: 0 | Published: 2023-06-02T13:42:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "Ok",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 18] Author: @ayushichoudhary8757 | Likes: 4 | Replies: 0 | Published: 2023-06-02T13:44:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "In sab topic me already video bni Hui h",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 19] Author: @rkstatus0.1 | Likes: 11 | Replies: 0 | Published: 2023-06-02T13:53:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "कौन कौन मानता हैं कि माँ सबसे बड़ी योद्धा हैं..❤️😊!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01556",
+              "author": "",
+              "text": "[COMMENT 476] Author: @JanviAnand. | Likes: 0 | Replies: 0 | Published: 2023-06-13T23:51:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01557",
+              "author": "",
+              "text": "Hello, I am using strong laxatives for long time please make a video on how to cut out the laxatives from my daily life.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01559",
+              "author": "",
+              "text": "[COMMENT 477] Author: @DhyananandaPrusty | Likes: 0 | Replies: 0 | Published: 2023-06-09T05:51:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01560",
+              "author": "",
+              "text": "Plz make a video on diabetes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01562",
+              "author": "",
+              "text": "[COMMENT 478] Author: @sapnamishra8044 | Likes: 0 | Replies: 0 | Published: 2023-06-21T10:55:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01563",
+              "author": "",
+              "text": "Can u make video on type 1 diabetes ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01565",
+              "author": "",
+              "text": "[COMMENT 479] Author: @ROGERone4 | Likes: 0 | Replies: 0 | Published: 2023-06-14T09:42:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01566",
+              "author": "",
+              "text": "Can you suggest me best ayurvedic books that contains most of healthy remedies",
+              "likes": null
+            },
+            {
+              "comment_id": "c01568",
+              "author": "",
+              "text": "[COMMENT 480] Author: @gif24gt60 | Likes: 1 | Replies: 0 | Published: 2023-12-30T21:54:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01569",
+              "author": "",
+              "text": "Hug the fit tuber!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01571",
+              "author": "",
+              "text": "[COMMENT 481] Author: @merwinrodrigues8516 | Likes: 2 | Replies: 0 | Published: 2024-03-20T10:57:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01572",
+              "author": "",
+              "text": "I tried Himalayas Arjuna tablets, twice a day for a month...my cholesterol was high before, did not check at the end of one month but my weight reduced by 5 kgs from 92->87 and waist size dropped by one belt hole...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "[COMMENT 482] Author: @oasis3659 | Likes: 0 | Replies: 0 | Published: 2023-06-12T05:18:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01575",
+              "author": "",
+              "text": "Hello... Sir latest sunscreen prr video banao na...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "[COMMENT 483] Author: @ManjitYadav-cu2qh | Likes: 0 | Replies: 0 | Published: 2023-08-09T14:33:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01578",
+              "author": "",
+              "text": "Sir please viedo on UTI.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "[COMMENT 484] Author: @ramansehgal2946 | Likes: 1 | Replies: 0 | Published: 2023-06-16T12:32:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01581",
+              "author": "",
+              "text": "Vote for video on most authentic protein supplement in India plse🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01583",
+              "author": "",
+              "text": "[COMMENT 485] Author: @colorcornercc2553 | Likes: 0 | Replies: 0 | Published: 2023-09-07T10:18:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01584",
+              "author": "",
+              "text": "Can you make a video on spirulina",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "[COMMENT 486] Author: @prabhatpandey9014 | Likes: 0 | Replies: 0 | Published: 2024-03-05T19:21:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "Make a vedio on Diabetes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "[COMMENT 487] Author: @radhikachemistry | Likes: 0 | Replies: 0 | Published: 2023-09-07T08:51:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "Thankuu sir❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "[COMMENT 488] Author: @subhamagarwal999 | Likes: 0 | Replies: 0 | Published: 2023-06-08T18:01:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "Hindi video of this. Need to share with parents too",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "[COMMENT 489] Author: @nirmalac3344 | Likes: 0 | Replies: 0 | Published: 2023-06-13T16:59:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "Please do video on keto diet Vivek",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "[COMMENT 490] Author: @historyandfactsofeverythin7063 | Likes: 0 | Replies: 0 | Published: 2023-06-11T17:18:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "Sirji bharat mae jitne bhi ayurvedic companya hai vo khud manufactur karti hai ya kahi or se redymade lete hai.....sabhi ayurvedic company ki case study video banaye plz",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "[COMMENT 491] Author: @moto1607-rn7qo | Likes: 0 | Replies: 0 | Published: 2024-05-06T11:02:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "Bhaiya tell about the product of Milifestyle are they good or not because they say that they are ayurvedic and are very good please make one video on it it will help so many people to know that is it good or not",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "[COMMENT 492] Author: @AminaBheenick | Likes: 0 | Replies: 0 | Published: 2025-02-05T12:36:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "Pls make video on constipation sir I eat lots of vegetables still constipation pls help 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "[COMMENT 493] Author: @BuradaguntaShabreenShaik | Likes: 0 | Replies: 0 | Published: 2024-10-14T13:09:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "Please tell how to treat hirsutism",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "[COMMENT 494] Author: @AzadShaikh-f7z | Likes: 0 | Replies: 0 | Published: 2025-09-22T16:24:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "Heart scanning can diagnose the size of plaque in heart",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "[COMMENT 495] Author: @NupurSharma-b1g | Likes: 0 | Replies: 0 | Published: 2023-12-25T09:34:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "Hello. Can we use Arjune bark powder with lemon water and honey",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "[COMMENT 496] Author: @ShubhankarMishra7 | Likes: 0 | Replies: 0 | Published: 2023-06-18T14:04:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "Sir Please make a video on daily men's skin care for budget middle class people of india",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "[COMMENT 497] Author: @kritikumari4038 | Likes: 0 | Replies: 0 | Published: 2023-06-09T05:34:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01620",
+              "author": "",
+              "text": "please make a video on how to stop lips from cracking permanently",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "[COMMENT 498] Author: @mithunshahare5157 | Likes: 0 | Replies: 0 | Published: 2025-03-24T11:24:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01623",
+              "author": "",
+              "text": "Please make video on HERBALIFe Products ...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "[COMMENT 499] Author: @merlecarvalho5606 | Likes: 0 | Replies: 0 | Published: 2024-06-17T15:05:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "Hi can u please let me know how many brazil nuts can be consumed per day to lower cholesterol",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "[COMMENT 500] Author: @manoharaph3934 | Likes: 0 | Replies: 0 | Published: 2023-06-09T14:06:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "Make video for natural dying of hai",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "mVWSWc--zGE",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Unclog Your Arteries (& Prevent Heart Attack)\\How to Unclog Your Arteries (& Prevent Heart Attack).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Unclog Your Arteries (& Prevent Heart Attack)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\mVWSWc zGE",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "mVWSWc--zGE",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "high",
+            "transcript_completeness": "complete",
+            "timestamp_count": 31,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 7943,
+            "transcript_words": 1423,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "A",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "high",
+              "completeness": "complete",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:09] [Music] in this video we will discuss why Our arteries get clogged the warning signs that our body gives the best foods and the three most effective ways as mentioned in ayurvedic scriptures to unclog the arteries and prevent heart attack so without any further delay [00:00:26] let's get started Hello friends welcome to fit tuber foremost let's understand why is it important to unclog the arteries consider a road with heavy traffic how hard it is to move forward a similar [00:00:41] situation happens when arteries get clogged due to cholesterol buildup and the blood has a tough time moving forward this puts you at a risk of a heart attack so how do we know that our arteries are blocked well a simple lipid profile test is a sure short way to know [00:00:57] the status of your heart health however if one is proactive enough there are certain signs that can indicate high cholesterol since cholesterol buildup in the arteries causes inflammation pain in the left side of the chest is a sign one should not ignore then shortness of [00:01:14] breath the feeling that you can't catch your breath can also indicate obstructed blood flow through the arteries apart from this tiredness weak memory and cramps in the legs may be a sign of high cholesterol but why does cholesterol get [00:01:29] build up in the arteries by far bad food choices are the major cause of bad cholesterol it's important to know that there are two types of cholesterol good and bad bad cholesterol sticks to artery walls and causes blockage on the other hand good cholesterol has essential [00:01:45] functions to perform including reducing the bad cholesterol so we should aim to increase good cholesterol and decrease bad cholesterol red meat is a major source of bad cholesterol a 2019 study confirmed that people who eat plant-based diet have 52 percent less [00:02:03] chances of a heart attack another major cause of clogged arteries is the consumption of bad oils when foods are fried in refined oils or when oils are reused for deep frying bad cholesterol builds up hydrogenated oils found in packaged foods like cream biscuits [00:02:20] commercial peanut butters margarine mayonnaise and cheese have trans fats that increase bad cholesterol packaged Foods consisting of refined sugar and maida Spike the insulin that increases cholesterol production apart from this [00:02:35] being overweight having a sedentary lifestyle smoking and binge drinking puts one at a risk of high cholesterol so how can we reduce this cholesterol buildup and cleanse Our arteries statin drugs are often prescribed for the same although the problem with Statin tablets [00:02:52] is that cholesterol remains in control only as long as you are consuming them more importantly they are known to have side effects like liver damage impotency and muscle weakness why risk your health when arteries can be cleansed naturally [00:03:07] ayurvedic scriptures talk at length about the various herbs that help reduce cholesterol out of so many I have selected three ways which are easy practical and effective first is garlic although not recommended as daily food but can do wonders if used as medicine [00:03:24] unsurprisingly more than 25 Studies have confirmed that having just one clove of of raw garlic daily significantly reduces cholesterol raw garlic contains vitamin C B6 manganese and selenium but it's the bioactive compound called [00:03:40] ellicin a type of antioxidant that is responsible for lowering the bad cholesterol and reduce blood pressure needless to say garlic is available in almost every Indian Kitchen for best results have one clove daily with water one hour before breakfast easy on Pocket [00:03:57] efficacious garlic is a natural remedy to unblock the arteries second option is Arjun bark Arjun kitchen is probably the most effective herb for heart so much so that it is often termed as cardiovascular herb having strong [00:04:12] antioxidants anti-inflammatory and blood thinning properties it not just reduces the level of bad cholesterol and triglycerides but also increases good cholesterol in a study when Arjun bark powder was consumed for one month it [00:04:27] reduced triglycerides by almost 18 percent bad cholesterol by 16 percent and increased good cholesterol by 10 percent overall an amazing tonic for cleansing the arteries you can have a teaspoon of powder boiled in milk or [00:04:43] water filter it and then sweeten it with honey or jaggery powder have it post breakfast and in evening if Arjun tea is not your cup of tea Arjun bark is available in the form of tablet and syrup as well both can be consumed post meals third is Middle [00:05:00] maida means fat tissue and her means to eradicate as its name suggests this google-based ayurvedic classical formulation is proven to reduce bad cholesterol and triglyceride levels in a study when medohar Google was given with other ayurvedic medicines it showed [00:05:17] mind-boggling results reducing bad cholesterol and triglyceride levels by a whopping 30 percent to get the maximum benefit it is recommended to chew two tablets of medohar Google with lukewarm water twice a day preferably after food in morning and evening each of these [00:05:35] three remedies are powerful in their own aspect you can choose as per your convenience follow it religiously for two months and then get your lipid profile test done again you won't be disappointed apart from these Solutions there are certain foods which help [00:05:50] cleanse the arteries foods with healthy fats like A2 Desi cow ghee nuts coconut and flax seeds help eliminate bad cholesterol in the body bottle guard and other members of guard family are highly effective in cleansing the arteries [00:06:05] fiber rich foods like seasonal fruits and whole grains especially Oats help cut cholesterol out from the body interestingly when a group of men and women were given just four Brazil nuts to eat cholesterol reduced by 20 units in just 9 hours you can easily get them [00:06:23] online apart from food 10 minutes of kapal bhati pranayama can melt that stubborn Block in your arteries if we quickly recap chest pain shortness of breath and cramps in legs are warning signs that you might have high cholesterol lipid profile test is a sure [00:06:40] short way to find out regular consumption of red meat refined oil reusing oils packaged foods are the major causes of blockage of arteries to naturally cleanse the arteries you can have a clove of garlic with water one or [00:06:55] before breakfast you can include Arjun bark in the form of tea tablet or syrup post breakfast or you can opt for medohar Google Tablet twice a day post food healthy fats bottle Guard Family high fiber grains and Brazil nuts are [00:07:10] recommended to reduce bad cholesterol your heart takes care of you 24 7. so it's wise we take good care of it have no doubt following the above your arteries will renew itself and you will feel lighter and energetic all the products mentioned in the video can [00:07:26] easily be bought offline although for your convenience I have even linked them in the description box looking for a toxin-free face serum check out Mama Earth's root of Radiance Essence face serum turn the pack and you will find that it has no mineral oil edtas harsh [00:07:43] alcohols artificial colors or fragrance with the goodness of ashwagandha turmeric and punar Nava it is a safe chemical formulation to get the best of it take three to four drops and massage on face and neck in upward motion it is suitable for men and women of all skin [00:08:00] types still a patch test is recommended to buy Mama or stocks in free roots of Radiance face serum click on the link down in the description box do not forget to apply the special discount coupon to get 21 off on your order if you want to know 5 foods that melt body [00:08:16] fat check out this video my name is Vivek I thank you so much for watching"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1106,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: mVWSWc--zGE",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @Unknown2_5_7 | Likes: 5219 | Replies: 124 | Published: 2023-06-02T13:31:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Vote for pregnancy series and more women related series .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @ayushkanojiya4972 | Likes: 12 | Replies: 0 | Published: 2023-06-02T13:37:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "It is there in Ayush kanojiya comments",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @leo_messi___ | Likes: 114 | Replies: 0 | Published: 2023-06-02T13:42:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "No plz he is going right track...men also needs his guidance he is doing good for both",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @rahinamw | Likes: 14 | Replies: 0 | Published: 2023-06-02T13:42:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "@ayushkanojiya4972 abe tu women hai kya",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @ayushkanojiya4972 | Likes: 8 | Replies: 0 | Published: 2023-06-02T13:47:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "@rahinamw Nhi fool, Gentleman's always supports the right women's .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @PranZzz01245 | Likes: 0 | Replies: 0 | Published: 2023-06-02T13:50:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "No.1 point : Don't get horny again after delivery 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @hirensarma600 | Likes: 191 | Replies: 1 | Published: 2024-03-27T03:42:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "This guy going to ruin the business of many cardiologists. Thank you bruhh ❤❤☺☺☺☺",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @kiransharma7753 | Likes: 3 | Replies: 0 | Published: 2025-03-24T05:17:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "So true",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @anynomus83828 | Likes: 194 | Replies: 1 | Published: 2024-01-30T00:51:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Loss of memory is sign of heart blockage... If I had got this video a little early.. Like couple of months before I could have saved my grandfather... I thought it might be dementia... Even doctors couldn't tell it was heart disease.. I commented just to aware people about symptoms of heart attack... I hope you people will save your loves ones...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @akshaygupta8723 | Likes: 6 | Replies: 0 | Published: 2025-02-25T21:16:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Thank you and may God bless u and ur grandfather. May him Rest in peace.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @BanibrataDutta | Likes: 16 | Replies: 0 | Published: 2023-07-16T11:24:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "Vivek, request you to make a video for people nearing 50s, who are overweight with belly fat, hyper-tensive, having started with knee and lower back problems. Obviously, such people have not been good to their bodies for large part of their life, nor can they suddenly undertake very rigorous and tough exercises/tough yoga. Like the way you explain why a certain thing should be done, based on scientific evidence. Hoping that you'd do this one too.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @chandrashekarreddy852 | Likes: 10 | Replies: 0 | Published: 2023-06-25T04:10:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Garlic should be chewed.its not tab to swallow",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @Mohit_1610 | Likes: 312 | Replies: 0 | Published: 2023-06-02T13:32:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "Fitness is not a destination it's a way of life",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @ayushkanojiya4972 | Likes: 1163 | Replies: 22 | Published: 2023-06-02T13:34:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Sir make videos on these topics -",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "1= Ayurvedic Diet Plan for healthy and effective weight gain",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "2= Ayurvedic Skin Type Test in 7 mins with perfect solution",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "3 = 7 practical ways to make our flat and house more liveable and healthy",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "4= Pregnancy series for women",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "5= Natural treatment of Stretch marks, surgical marks, warts and moles .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @ayushkanojiya4972 | Likes: 13 | Replies: 0 | Published: 2023-06-02T13:35:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "Plzz put this comment as next poll in community section, Vivek sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @ayushkanojiya4972 | Likes: 7 | Replies: 0 | Published: 2023-06-02T13:35:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "Plz support the comment",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @Snorlax108 | Likes: 5 | Replies: 0 | Published: 2023-06-02T13:42:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "Ok",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @ayushichoudhary8757 | Likes: 4 | Replies: 0 | Published: 2023-06-02T13:44:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "In sab topic me already video bni Hui h",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @rkstatus0.1 | Likes: 11 | Replies: 0 | Published: 2023-06-02T13:53:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "कौन कौन मानता हैं कि माँ सबसे बड़ी योद्धा हैं..❤️😊!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01556",
+                  "author": "",
+                  "text": "[COMMENT 476] Author: @JanviAnand. | Likes: 0 | Replies: 0 | Published: 2023-06-13T23:51:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01557",
+                  "author": "",
+                  "text": "Hello, I am using strong laxatives for long time please make a video on how to cut out the laxatives from my daily life.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01559",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @DhyananandaPrusty | Likes: 0 | Replies: 0 | Published: 2023-06-09T05:51:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01560",
+                  "author": "",
+                  "text": "Plz make a video on diabetes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01562",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @sapnamishra8044 | Likes: 0 | Replies: 0 | Published: 2023-06-21T10:55:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01563",
+                  "author": "",
+                  "text": "Can u make video on type 1 diabetes ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01565",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @ROGERone4 | Likes: 0 | Replies: 0 | Published: 2023-06-14T09:42:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01566",
+                  "author": "",
+                  "text": "Can you suggest me best ayurvedic books that contains most of healthy remedies",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01568",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @gif24gt60 | Likes: 1 | Replies: 0 | Published: 2023-12-30T21:54:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01569",
+                  "author": "",
+                  "text": "Hug the fit tuber!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01571",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @merwinrodrigues8516 | Likes: 2 | Replies: 0 | Published: 2024-03-20T10:57:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01572",
+                  "author": "",
+                  "text": "I tried Himalayas Arjuna tablets, twice a day for a month...my cholesterol was high before, did not check at the end of one month but my weight reduced by 5 kgs from 92->87 and waist size dropped by one belt hole...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @oasis3659 | Likes: 0 | Replies: 0 | Published: 2023-06-12T05:18:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01575",
+                  "author": "",
+                  "text": "Hello... Sir latest sunscreen prr video banao na...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @ManjitYadav-cu2qh | Likes: 0 | Replies: 0 | Published: 2023-08-09T14:33:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01578",
+                  "author": "",
+                  "text": "Sir please viedo on UTI.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @ramansehgal2946 | Likes: 1 | Replies: 0 | Published: 2023-06-16T12:32:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01581",
+                  "author": "",
+                  "text": "Vote for video on most authentic protein supplement in India plse🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01583",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @colorcornercc2553 | Likes: 0 | Replies: 0 | Published: 2023-09-07T10:18:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01584",
+                  "author": "",
+                  "text": "Can you make a video on spirulina",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @prabhatpandey9014 | Likes: 0 | Replies: 0 | Published: 2024-03-05T19:21:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "Make a vedio on Diabetes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @radhikachemistry | Likes: 0 | Replies: 0 | Published: 2023-09-07T08:51:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "Thankuu sir❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @subhamagarwal999 | Likes: 0 | Replies: 0 | Published: 2023-06-08T18:01:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "Hindi video of this. Need to share with parents too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @nirmalac3344 | Likes: 0 | Replies: 0 | Published: 2023-06-13T16:59:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "Please do video on keto diet Vivek",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @historyandfactsofeverythin7063 | Likes: 0 | Replies: 0 | Published: 2023-06-11T17:18:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "Sirji bharat mae jitne bhi ayurvedic companya hai vo khud manufactur karti hai ya kahi or se redymade lete hai.....sabhi ayurvedic company ki case study video banaye plz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @moto1607-rn7qo | Likes: 0 | Replies: 0 | Published: 2024-05-06T11:02:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "Bhaiya tell about the product of Milifestyle are they good or not because they say that they are ayurvedic and are very good please make one video on it it will help so many people to know that is it good or not",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @AminaBheenick | Likes: 0 | Replies: 0 | Published: 2025-02-05T12:36:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "Pls make video on constipation sir I eat lots of vegetables still constipation pls help 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @BuradaguntaShabreenShaik | Likes: 0 | Replies: 0 | Published: 2024-10-14T13:09:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "Please tell how to treat hirsutism",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @AzadShaikh-f7z | Likes: 0 | Replies: 0 | Published: 2025-09-22T16:24:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "Heart scanning can diagnose the size of plaque in heart",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @NupurSharma-b1g | Likes: 0 | Replies: 0 | Published: 2023-12-25T09:34:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "Hello. Can we use Arjune bark powder with lemon water and honey",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @ShubhankarMishra7 | Likes: 0 | Replies: 0 | Published: 2023-06-18T14:04:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "Sir Please make a video on daily men's skin care for budget middle class people of india",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @kritikumari4038 | Likes: 0 | Replies: 0 | Published: 2023-06-09T05:34:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01620",
+                  "author": "",
+                  "text": "please make a video on how to stop lips from cracking permanently",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @mithunshahare5157 | Likes: 0 | Replies: 0 | Published: 2025-03-24T11:24:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01623",
+                  "author": "",
+                  "text": "Please make video on HERBALIFe Products ...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @merlecarvalho5606 | Likes: 0 | Replies: 0 | Published: 2024-06-17T15:05:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "Hi can u please let me know how many brazil nuts can be consumed per day to lower cholesterol",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @manoharaph3934 | Likes: 0 | Replies: 0 | Published: 2023-06-09T14:06:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "Make video for natural dying of hai",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "mVWSWc--zGE",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "high",
+          "transcript_completeness": "complete",
+          "timestamp_count": 31,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 7943,
+          "transcript_words": 1423,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "A",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "high",
+            "completeness": "complete",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:09] [Music] in this video we will discuss why Our arteries get clogged the warning signs that our body gives the best foods and the three most effective ways as mentioned in ayurvedic scriptures to unclog the arteries and prevent heart attack so without any further delay [00:00:26] let's get started Hello friends welcome to fit tuber foremost let's understand why is it important to unclog the arteries consider a road with heavy traffic how hard it is to move forward a similar [00:00:41] situation happens when arteries get clogged due to cholesterol buildup and the blood has a tough time moving forward this puts you at a risk of a heart attack so how do we know that our arteries are blocked well a simple lipid profile test is a sure short way to know [00:00:57] the status of your heart health however if one is proactive enough there are certain signs that can indicate high cholesterol since cholesterol buildup in the arteries causes inflammation pain in the left side of the chest is a sign one should not ignore then shortness of [00:01:14] breath the feeling that you can't catch your breath can also indicate obstructed blood flow through the arteries apart from this tiredness weak memory and cramps in the legs may be a sign of high cholesterol but why does cholesterol get [00:01:29] build up in the arteries by far bad food choices are the major cause of bad cholesterol it's important to know that there are two types of cholesterol good and bad bad cholesterol sticks to artery walls and causes blockage on the other hand good cholesterol has essential [00:01:45] functions to perform including reducing the bad cholesterol so we should aim to increase good cholesterol and decrease bad cholesterol red meat is a major source of bad cholesterol a 2019 study confirmed that people who eat plant-based diet have 52 percent less [00:02:03] chances of a heart attack another major cause of clogged arteries is the consumption of bad oils when foods are fried in refined oils or when oils are reused for deep frying bad cholesterol builds up hydrogenated oils found in packaged foods like cream biscuits [00:02:20] commercial peanut butters margarine mayonnaise and cheese have trans fats that increase bad cholesterol packaged Foods consisting of refined sugar and maida Spike the insulin that increases cholesterol production apart from this [00:02:35] being overweight having a sedentary lifestyle smoking and binge drinking puts one at a risk of high cholesterol so how can we reduce this cholesterol buildup and cleanse Our arteries statin drugs are often prescribed for the same although the problem with Statin tablets [00:02:52] is that cholesterol remains in control only as long as you are consuming them more importantly they are known to have side effects like liver damage impotency and muscle weakness why risk your health when arteries can be cleansed naturally [00:03:07] ayurvedic scriptures talk at length about the various herbs that help reduce cholesterol out of so many I have selected three ways which are easy practical and effective first is garlic although not recommended as daily food but can do wonders if used as medicine [00:03:24] unsurprisingly more than 25 Studies have confirmed that having just one clove of of raw garlic daily significantly reduces cholesterol raw garlic contains vitamin C B6 manganese and selenium but it's the bioactive compound called [00:03:40] ellicin a type of antioxidant that is responsible for lowering the bad cholesterol and reduce blood pressure needless to say garlic is available in almost every Indian Kitchen for best results have one clove daily with water one hour before breakfast easy on Pocket [00:03:57] efficacious garlic is a natural remedy to unblock the arteries second option is Arjun bark Arjun kitchen is probably the most effective herb for heart so much so that it is often termed as cardiovascular herb having strong [00:04:12] antioxidants anti-inflammatory and blood thinning properties it not just reduces the level of bad cholesterol and triglycerides but also increases good cholesterol in a study when Arjun bark powder was consumed for one month it [00:04:27] reduced triglycerides by almost 18 percent bad cholesterol by 16 percent and increased good cholesterol by 10 percent overall an amazing tonic for cleansing the arteries you can have a teaspoon of powder boiled in milk or [00:04:43] water filter it and then sweeten it with honey or jaggery powder have it post breakfast and in evening if Arjun tea is not your cup of tea Arjun bark is available in the form of tablet and syrup as well both can be consumed post meals third is Middle [00:05:00] maida means fat tissue and her means to eradicate as its name suggests this google-based ayurvedic classical formulation is proven to reduce bad cholesterol and triglyceride levels in a study when medohar Google was given with other ayurvedic medicines it showed [00:05:17] mind-boggling results reducing bad cholesterol and triglyceride levels by a whopping 30 percent to get the maximum benefit it is recommended to chew two tablets of medohar Google with lukewarm water twice a day preferably after food in morning and evening each of these [00:05:35] three remedies are powerful in their own aspect you can choose as per your convenience follow it religiously for two months and then get your lipid profile test done again you won't be disappointed apart from these Solutions there are certain foods which help [00:05:50] cleanse the arteries foods with healthy fats like A2 Desi cow ghee nuts coconut and flax seeds help eliminate bad cholesterol in the body bottle guard and other members of guard family are highly effective in cleansing the arteries [00:06:05] fiber rich foods like seasonal fruits and whole grains especially Oats help cut cholesterol out from the body interestingly when a group of men and women were given just four Brazil nuts to eat cholesterol reduced by 20 units in just 9 hours you can easily get them [00:06:23] online apart from food 10 minutes of kapal bhati pranayama can melt that stubborn Block in your arteries if we quickly recap chest pain shortness of breath and cramps in legs are warning signs that you might have high cholesterol lipid profile test is a sure [00:06:40] short way to find out regular consumption of red meat refined oil reusing oils packaged foods are the major causes of blockage of arteries to naturally cleanse the arteries you can have a clove of garlic with water one or [00:06:55] before breakfast you can include Arjun bark in the form of tea tablet or syrup post breakfast or you can opt for medohar Google Tablet twice a day post food healthy fats bottle Guard Family high fiber grains and Brazil nuts are [00:07:10] recommended to reduce bad cholesterol your heart takes care of you 24 7. so it's wise we take good care of it have no doubt following the above your arteries will renew itself and you will feel lighter and energetic all the products mentioned in the video can [00:07:26] easily be bought offline although for your convenience I have even linked them in the description box looking for a toxin-free face serum check out Mama Earth's root of Radiance Essence face serum turn the pack and you will find that it has no mineral oil edtas harsh [00:07:43] alcohols artificial colors or fragrance with the goodness of ashwagandha turmeric and punar Nava it is a safe chemical formulation to get the best of it take three to four drops and massage on face and neck in upward motion it is suitable for men and women of all skin [00:08:00] types still a patch test is recommended to buy Mama or stocks in free roots of Radiance face serum click on the link down in the description box do not forget to apply the special discount coupon to get 21 off on your order if you want to know 5 foods that melt body [00:08:16] fat check out this video my name is Vivek I thank you so much for watching"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1106,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: mVWSWc--zGE",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @Unknown2_5_7 | Likes: 5219 | Replies: 124 | Published: 2023-06-02T13:31:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Vote for pregnancy series and more women related series .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @ayushkanojiya4972 | Likes: 12 | Replies: 0 | Published: 2023-06-02T13:37:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "It is there in Ayush kanojiya comments",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @leo_messi___ | Likes: 114 | Replies: 0 | Published: 2023-06-02T13:42:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "No plz he is going right track...men also needs his guidance he is doing good for both",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @rahinamw | Likes: 14 | Replies: 0 | Published: 2023-06-02T13:42:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "@ayushkanojiya4972 abe tu women hai kya",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @ayushkanojiya4972 | Likes: 8 | Replies: 0 | Published: 2023-06-02T13:47:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "@rahinamw Nhi fool, Gentleman's always supports the right women's .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @PranZzz01245 | Likes: 0 | Replies: 0 | Published: 2023-06-02T13:50:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "No.1 point : Don't get horny again after delivery 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @hirensarma600 | Likes: 191 | Replies: 1 | Published: 2024-03-27T03:42:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "This guy going to ruin the business of many cardiologists. Thank you bruhh ❤❤☺☺☺☺",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @kiransharma7753 | Likes: 3 | Replies: 0 | Published: 2025-03-24T05:17:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "So true",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @anynomus83828 | Likes: 194 | Replies: 1 | Published: 2024-01-30T00:51:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Loss of memory is sign of heart blockage... If I had got this video a little early.. Like couple of months before I could have saved my grandfather... I thought it might be dementia... Even doctors couldn't tell it was heart disease.. I commented just to aware people about symptoms of heart attack... I hope you people will save your loves ones...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @akshaygupta8723 | Likes: 6 | Replies: 0 | Published: 2025-02-25T21:16:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Thank you and may God bless u and ur grandfather. May him Rest in peace.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @BanibrataDutta | Likes: 16 | Replies: 0 | Published: 2023-07-16T11:24:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "Vivek, request you to make a video for people nearing 50s, who are overweight with belly fat, hyper-tensive, having started with knee and lower back problems. Obviously, such people have not been good to their bodies for large part of their life, nor can they suddenly undertake very rigorous and tough exercises/tough yoga. Like the way you explain why a certain thing should be done, based on scientific evidence. Hoping that you'd do this one too.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @chandrashekarreddy852 | Likes: 10 | Replies: 0 | Published: 2023-06-25T04:10:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Garlic should be chewed.its not tab to swallow",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @Mohit_1610 | Likes: 312 | Replies: 0 | Published: 2023-06-02T13:32:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "Fitness is not a destination it's a way of life",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 14] Author: @ayushkanojiya4972 | Likes: 1163 | Replies: 22 | Published: 2023-06-02T13:34:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Sir make videos on these topics -",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "1= Ayurvedic Diet Plan for healthy and effective weight gain",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "2= Ayurvedic Skin Type Test in 7 mins with perfect solution",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "3 = 7 practical ways to make our flat and house more liveable and healthy",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "4= Pregnancy series for women",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "5= Natural treatment of Stretch marks, surgical marks, warts and moles .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 15] Author: @ayushkanojiya4972 | Likes: 13 | Replies: 0 | Published: 2023-06-02T13:35:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "Plzz put this comment as next poll in community section, Vivek sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 16] Author: @ayushkanojiya4972 | Likes: 7 | Replies: 0 | Published: 2023-06-02T13:35:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "Plz support the comment",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 17] Author: @Snorlax108 | Likes: 5 | Replies: 0 | Published: 2023-06-02T13:42:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "Ok",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 18] Author: @ayushichoudhary8757 | Likes: 4 | Replies: 0 | Published: 2023-06-02T13:44:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "In sab topic me already video bni Hui h",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 19] Author: @rkstatus0.1 | Likes: 11 | Replies: 0 | Published: 2023-06-02T13:53:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "कौन कौन मानता हैं कि माँ सबसे बड़ी योद्धा हैं..❤️😊!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01556",
+                "author": "",
+                "text": "[COMMENT 476] Author: @JanviAnand. | Likes: 0 | Replies: 0 | Published: 2023-06-13T23:51:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01557",
+                "author": "",
+                "text": "Hello, I am using strong laxatives for long time please make a video on how to cut out the laxatives from my daily life.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01559",
+                "author": "",
+                "text": "[COMMENT 477] Author: @DhyananandaPrusty | Likes: 0 | Replies: 0 | Published: 2023-06-09T05:51:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01560",
+                "author": "",
+                "text": "Plz make a video on diabetes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01562",
+                "author": "",
+                "text": "[COMMENT 478] Author: @sapnamishra8044 | Likes: 0 | Replies: 0 | Published: 2023-06-21T10:55:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01563",
+                "author": "",
+                "text": "Can u make video on type 1 diabetes ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01565",
+                "author": "",
+                "text": "[COMMENT 479] Author: @ROGERone4 | Likes: 0 | Replies: 0 | Published: 2023-06-14T09:42:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01566",
+                "author": "",
+                "text": "Can you suggest me best ayurvedic books that contains most of healthy remedies",
+                "likes": null
+              },
+              {
+                "comment_id": "c01568",
+                "author": "",
+                "text": "[COMMENT 480] Author: @gif24gt60 | Likes: 1 | Replies: 0 | Published: 2023-12-30T21:54:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01569",
+                "author": "",
+                "text": "Hug the fit tuber!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01571",
+                "author": "",
+                "text": "[COMMENT 481] Author: @merwinrodrigues8516 | Likes: 2 | Replies: 0 | Published: 2024-03-20T10:57:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01572",
+                "author": "",
+                "text": "I tried Himalayas Arjuna tablets, twice a day for a month...my cholesterol was high before, did not check at the end of one month but my weight reduced by 5 kgs from 92->87 and waist size dropped by one belt hole...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "[COMMENT 482] Author: @oasis3659 | Likes: 0 | Replies: 0 | Published: 2023-06-12T05:18:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01575",
+                "author": "",
+                "text": "Hello... Sir latest sunscreen prr video banao na...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "[COMMENT 483] Author: @ManjitYadav-cu2qh | Likes: 0 | Replies: 0 | Published: 2023-08-09T14:33:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01578",
+                "author": "",
+                "text": "Sir please viedo on UTI.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "[COMMENT 484] Author: @ramansehgal2946 | Likes: 1 | Replies: 0 | Published: 2023-06-16T12:32:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01581",
+                "author": "",
+                "text": "Vote for video on most authentic protein supplement in India plse🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01583",
+                "author": "",
+                "text": "[COMMENT 485] Author: @colorcornercc2553 | Likes: 0 | Replies: 0 | Published: 2023-09-07T10:18:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01584",
+                "author": "",
+                "text": "Can you make a video on spirulina",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "[COMMENT 486] Author: @prabhatpandey9014 | Likes: 0 | Replies: 0 | Published: 2024-03-05T19:21:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "Make a vedio on Diabetes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "[COMMENT 487] Author: @radhikachemistry | Likes: 0 | Replies: 0 | Published: 2023-09-07T08:51:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "Thankuu sir❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "[COMMENT 488] Author: @subhamagarwal999 | Likes: 0 | Replies: 0 | Published: 2023-06-08T18:01:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "Hindi video of this. Need to share with parents too",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "[COMMENT 489] Author: @nirmalac3344 | Likes: 0 | Replies: 0 | Published: 2023-06-13T16:59:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "Please do video on keto diet Vivek",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "[COMMENT 490] Author: @historyandfactsofeverythin7063 | Likes: 0 | Replies: 0 | Published: 2023-06-11T17:18:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "Sirji bharat mae jitne bhi ayurvedic companya hai vo khud manufactur karti hai ya kahi or se redymade lete hai.....sabhi ayurvedic company ki case study video banaye plz",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "[COMMENT 491] Author: @moto1607-rn7qo | Likes: 0 | Replies: 0 | Published: 2024-05-06T11:02:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "Bhaiya tell about the product of Milifestyle are they good or not because they say that they are ayurvedic and are very good please make one video on it it will help so many people to know that is it good or not",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "[COMMENT 492] Author: @AminaBheenick | Likes: 0 | Replies: 0 | Published: 2025-02-05T12:36:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "Pls make video on constipation sir I eat lots of vegetables still constipation pls help 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "[COMMENT 493] Author: @BuradaguntaShabreenShaik | Likes: 0 | Replies: 0 | Published: 2024-10-14T13:09:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "Please tell how to treat hirsutism",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "[COMMENT 494] Author: @AzadShaikh-f7z | Likes: 0 | Replies: 0 | Published: 2025-09-22T16:24:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "Heart scanning can diagnose the size of plaque in heart",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "[COMMENT 495] Author: @NupurSharma-b1g | Likes: 0 | Replies: 0 | Published: 2023-12-25T09:34:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "Hello. Can we use Arjune bark powder with lemon water and honey",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "[COMMENT 496] Author: @ShubhankarMishra7 | Likes: 0 | Replies: 0 | Published: 2023-06-18T14:04:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "Sir Please make a video on daily men's skin care for budget middle class people of india",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "[COMMENT 497] Author: @kritikumari4038 | Likes: 0 | Replies: 0 | Published: 2023-06-09T05:34:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01620",
+                "author": "",
+                "text": "please make a video on how to stop lips from cracking permanently",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "[COMMENT 498] Author: @mithunshahare5157 | Likes: 0 | Replies: 0 | Published: 2025-03-24T11:24:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01623",
+                "author": "",
+                "text": "Please make video on HERBALIFe Products ...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "[COMMENT 499] Author: @merlecarvalho5606 | Likes: 0 | Replies: 0 | Published: 2024-06-17T15:05:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "Hi can u please let me know how many brazil nuts can be consumed per day to lower cholesterol",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "[COMMENT 500] Author: @manoharaph3934 | Likes: 0 | Replies: 0 | Published: 2023-06-09T14:06:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "Make video for natural dying of hai",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

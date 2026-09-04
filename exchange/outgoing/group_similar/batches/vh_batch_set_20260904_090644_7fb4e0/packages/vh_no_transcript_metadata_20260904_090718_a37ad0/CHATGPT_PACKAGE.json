@@ -1,0 +1,4983 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090718_a37ad0",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090718_a37ad0",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Sleep quality and nighttime habits",
+      "batch_number": 33,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 33 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090718_a37ad0",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090718_a37ad0"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090718_a37ad0",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Sleep quality and nighttime habits",
+      "batch_number": 33,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "9939af2d-5902-43dd-aadd-93e6f66f7c27",
+    "package_id": "vh_no_transcript_metadata_20260904_090718_a37ad0",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "7ArZ9GK4AIQ",
+      "azsMvdSI3cU"
+    ],
+    "evidence_grades": {
+      "7ArZ9GK4AIQ": "E",
+      "azsMvdSI3cU": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Sleep quality and nighttime habits",
+      "batch_number": 33,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "78cee4c9611117626c40ba241fb2e41aa763504ea49757881e7dac2c162619d7",
+      "prompt.json": "1a2676ee67e02d3fa1593996aafe1262d279621ad6ce48280c61b7ddd7bb0bec",
+      "schema.json": "e08c360b302be0f3a3b2d31ec3169da050162e0273da350067d2c77b85aec15f"
+    },
+    "created_at": "2026-09-04 09:07:18",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "7ArZ9GK4AIQ",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=7ArZ9GK4AIQ",
+        "original_title": "How to Sleep Fast and Increase Sleep Quality?",
+        "clean_title": "How to Sleep Fast and Increase Sleep Quality?",
+        "channel": "Fit Tuber",
+        "upload_date": "2017-09-29",
+        "description": "How to sleep fast and increase sleep quality? 6 ways to fall asleep faster. How to sleep better? \nLack of sleep is one of the major problems of urban lifestyle. Unfortunately, lack of sleep brings along so many other problems. Gain in weight, body's incapability to build muscle, stress, anxiety are some of them.\nI can not stress enough how important it is to sleep well. Exercise, Nutrition and Rest are the three pillars of fitness. \nSo, if your body is devoid of rest, no matter what, you will not be able to build muscle of lose fat.\n\nIn this video, I have discussed in detail, the 6 ways by which you have fall asleep faster and have a better sound sleep. This is because when it comes to sleep, it is always about quality and not quantity.\n\n6 WAYS TO SLEEP FAST AND BETTER.\n\n01:45 - Maintain proper sleep timings\n02:30 - Put away all electronic devices at least half an hour before going to sleep.\n03:04 - Create an optimal environment to sleep better\n03:41 - Eat right at night. What you eat for dinner can decide how well you will sleep at night.\n04:40 - Exercise during the day. Some form of exercise during the day can help you sleep well at night. However, the timing of exercise should be considered.\n04:59 - Techniques to sleep fast. There are some very powerful techniques that will help you will sleep in just 30 seconds.\n\nI hope you found this video helpful. Well, if you did, please do \n\nLIKE | SHARE | COMMENT\n\nPlease SUBSCRIBE\nhttps://www.youtube.com/channel/UCYC6...\n\nAlready subscribed? Hit the bell Icon\n\nSOME OF MY MOST POPULAR VIDEOS:\n\nFull day of eating for muscle gains \nhttps://www.youtube.com/watch?v=2knVu...\n\nHow to reduce belly fat in 1 week?\nhttps://www.youtube.com/watch?v=718DN...\n\nTop 10 Cheapest  Protein Foods in India\nhttps://www.youtube.com/watch?v=TOAaM...\n\nHow to get rid of Man Boobs?\nhttps://www.youtube.com/watch?v=WLsl3...\n\nCheapest fat burner in Rs 3\nhttps://www.youtube.com/watch?v=wtN6u...\n\nDiet Plan for weight loss\nhttps://www.youtube.com/watch?v=-X639...\n\nGrocery Shopping for a Healthy and Balanced diet.\nhttps://www.youtube.com/watch?v=6whI1...\n\nMusic Credits : YouTube Audio Library\n\n\nThanks for visiting!\n\nI wish you good health\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 1100,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: 7ArZ9GK4AIQ",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @utkarshranjan48 | Likes: 2382 | Replies: 42 | Published: 2017-09-29T13:47:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "greatest trick to sleep .. study before sleep.. neend sali jhak maar k tumhare peeche ayegi..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @SK1717 | Likes: 58 | Replies: 0 | Published: 2017-09-29T16:34:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Lucknow motovlog You saved my 6 minutes and 24 seconds. However I almost spent the same time in replying to this msg. So it’s all square now. Thanks anyways",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @rahul_1899 | Likes: 18 | Replies: 0 | Published: 2017-09-30T06:14:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Nothing beats it :P",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @nocopyrightmusicindia376 | Likes: 12 | Replies: 0 | Published: 2017-09-30T07:07:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Lucknow motovlog heheheh😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @asiyasyed1921 | Likes: 5 | Replies: 0 | Published: 2018-04-22T13:05:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Utkarsh Ranjan 😂😂😂so true",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @sharad4285 | Likes: 2 | Replies: 0 | Published: 2018-06-22T17:38:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Utkarsh Ranjan sahi kahte hobhaiya",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @naman245 | Likes: 5340 | Replies: 335 | Published: 2017-09-29T21:19:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Watching at 3 am..hehe",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @shubodas499 | Likes: 114 | Replies: 0 | Published: 2018-02-06T23:28:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "Naman Rana watching 4.58a.m. not sleep 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @martind3948 | Likes: 38 | Replies: 0 | Published: 2018-02-18T21:56:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Same",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @pheonixflyyy | Likes: 22 | Replies: 0 | Published: 2018-03-12T22:16:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Naman Rana mee to..i need to sleep",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @guddupal7671 | Likes: 13 | Replies: 0 | Published: 2018-03-17T15:35:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "U got it 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @manas1755 | Likes: 26 | Replies: 0 | Published: 2018-05-12T00:03:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "5:33",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @sufyanzaki3142 | Likes: 1285 | Replies: 24 | Published: 2021-02-09T02:23:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "1) proper sleep timing",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "2) put away all electronic devices before half hour before sleeping",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "3) right environment i.e temp , clothes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "4) eat something before sleep",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "5) exercise",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 14] Author: @lmaoyes489 | Likes: 14 | Replies: 0 | Published: 2021-05-31T15:22:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "ay I'll try that",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 15] Author: @omprakhashmudaliar | Likes: 7 | Replies: 0 | Published: 2021-06-02T21:14:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 16] Author: @nitinpandit3953 | Likes: 19 | Replies: 0 | Published: 2021-06-29T18:15:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "mention point 5 as exercise 3hrs before sleep",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 17] Author: @mohammedarfa7041 | Likes: 3 | Replies: 0 | Published: 2021-07-28T16:59:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "Helped a lot ....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 18] Author: @ThatBlueWnd | Likes: 2 | Replies: 0 | Published: 2021-08-30T02:05:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "Same",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 19] Author: @yt_stranger1 | Likes: 8 | Replies: 0 | Published: 2022-11-07T06:24:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "Who is teenager here 🙄",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "[COMMENT 20] Author: @baminlailiang608 | Likes: 9 | Replies: 0 | Published: 2022-12-04T01:01:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01532",
+              "author": "",
+              "text": "[COMMENT 476] Author: @girlyyy_04 | Likes: 1 | Replies: 0 | Published: 2022-05-30T20:53:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01533",
+              "author": "",
+              "text": "Watching at 2:30 am 🥺",
+              "likes": null
+            },
+            {
+              "comment_id": "c01535",
+              "author": "",
+              "text": "[COMMENT 477] Author: @amanXomi | Likes: 1 | Replies: 0 | Published: 2022-06-24T17:34:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01536",
+              "author": "",
+              "text": "Watching in stairs 4:40 time 🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c01538",
+              "author": "",
+              "text": "[COMMENT 478] Author: @jyotichoudhary58 | Likes: 0 | Replies: 0 | Published: 2022-01-25T09:03:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01539",
+              "author": "",
+              "text": "2 hours trying to sleep 😴😴 bt now here",
+              "likes": null
+            },
+            {
+              "comment_id": "c01541",
+              "author": "",
+              "text": "[COMMENT 479] Author: @sravang4402 | Likes: 0 | Replies: 0 | Published: 2021-08-15T17:13:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01542",
+              "author": "",
+              "text": "Which Is the best type of mattress to purchase according to health.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01544",
+              "author": "",
+              "text": "[COMMENT 480] Author: @julitaednalino1900 | Likes: 0 | Replies: 0 | Published: 2022-11-22T04:42:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01545",
+              "author": "",
+              "text": "I have anxiety disorder and i am on benzos and antidepressants..how will this applies?thanks for any suggestions..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01547",
+              "author": "",
+              "text": "[COMMENT 481] Author: @shivanisidhu9477 | Likes: 0 | Replies: 0 | Published: 2022-03-12T10:39:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01548",
+              "author": "",
+              "text": "What if someone is doing night shifts nd all which schedule we should follow to get the proper sleep nd fresh mind ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01550",
+              "author": "",
+              "text": "[COMMENT 482] Author: @Dvk527 | Likes: 0 | Replies: 0 | Published: 2023-01-25T21:19:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01551",
+              "author": "",
+              "text": "If we are getting sleep very lately ..and it's our habit the how could we change it..? And do found any ayurvedic medicine which has not any side effects..? please make any video on that.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01553",
+              "author": "",
+              "text": "[COMMENT 483] Author: @standardgroup7561 | Likes: 0 | Replies: 0 | Published: 2023-03-06T00:50:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01554",
+              "author": "",
+              "text": "Watching at 6:20 AM. Tossed and turned throughout the night.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01556",
+              "author": "",
+              "text": "[COMMENT 484] Author: @mico_paw | Likes: 1 | Replies: 0 | Published: 2022-05-23T21:50:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01557",
+              "author": "",
+              "text": "Watching @ 3:20 😵",
+              "likes": null
+            },
+            {
+              "comment_id": "c01559",
+              "author": "",
+              "text": "[COMMENT 485] Author: @apunyt5425 | Likes: 1 | Replies: 0 | Published: 2022-05-21T17:15:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01560",
+              "author": "",
+              "text": "Watching at 10:45 pm",
+              "likes": null
+            },
+            {
+              "comment_id": "c01562",
+              "author": "",
+              "text": "[COMMENT 486] Author: @sukhpreetsinghsidhusukhpre3764 | Likes: 0 | Replies: 0 | Published: 2022-12-21T13:53:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01563",
+              "author": "",
+              "text": "Watching at 12pm",
+              "likes": null
+            },
+            {
+              "comment_id": "c01565",
+              "author": "",
+              "text": "[COMMENT 487] Author: @Idk-iz2hs | Likes: 0 | Replies: 0 | Published: 2022-08-07T23:12:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01566",
+              "author": "",
+              "text": "I felt sleepy just by clicking the video ig it worked💀🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c01568",
+              "author": "",
+              "text": "[COMMENT 488] Author: @lajdodani3326 | Likes: 0 | Replies: 0 | Published: 2022-01-23T17:37:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01569",
+              "author": "",
+              "text": "Hello Vivek thx for all ur help I have fungus on my hands cld u pls recommend a natural cure for this thx so much really appreciated Stay Blessed Always",
+              "likes": null
+            },
+            {
+              "comment_id": "c01571",
+              "author": "",
+              "text": "[COMMENT 489] Author: @arunjayaraj2278 | Likes: 0 | Replies: 0 | Published: 2022-01-03T18:42:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01572",
+              "author": "",
+              "text": "Watching @1am",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "[COMMENT 490] Author: @aadyachakraborty3170 | Likes: 0 | Replies: 0 | Published: 2021-07-10T17:45:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01575",
+              "author": "",
+              "text": "I have same blanket",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "[COMMENT 491] Author: @dhrubamondal8689 | Likes: 1 | Replies: 0 | Published: 2022-04-14T22:53:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01578",
+              "author": "",
+              "text": "Watching at 4 : 30 😁",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "[COMMENT 492] Author: @ashugautam401 | Likes: 0 | Replies: 0 | Published: 2021-06-21T09:35:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01581",
+              "author": "",
+              "text": "Pls mattresses k upar bhi bnao ek video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01583",
+              "author": "",
+              "text": "[COMMENT 493] Author: @jasssas6861 | Likes: 0 | Replies: 0 | Published: 2022-05-12T22:08:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01584",
+              "author": "",
+              "text": "watching i’m 3:43am. hehe 🥲",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "[COMMENT 494] Author: @vencenzo3711 | Likes: 0 | Replies: 0 | Published: 2022-10-04T21:13:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "Watching at 3:13 AM...:)",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "[COMMENT 495] Author: @aman_chawlaa | Likes: 0 | Replies: 0 | Published: 2022-08-02T20:19:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "Watching at 4 in night 🙂",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "[COMMENT 496] Author: @heckler9733 | Likes: 0 | Replies: 0 | Published: 2021-07-05T18:57:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "Hope it works it is 1 AM trying to sleep hope it work",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "[COMMENT 497] Author: @sid9869 | Likes: 0 | Replies: 0 | Published: 2022-10-03T21:15:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "Same watching at 3 am",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "[COMMENT 498] Author: @kiratsingh03 | Likes: 0 | Replies: 0 | Published: 2021-07-22T19:28:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "Can I get a heart",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "[COMMENT 499] Author: @Rafayliaqat_ | Likes: 1 | Replies: 0 | Published: 2022-06-05T01:12:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "Watching at 6am..🤭amm",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "[COMMENT 500] Author: @jennyfersyiem5372 | Likes: 0 | Replies: 0 | Published: 2022-04-05T16:02:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "I have a very light dinner by 8pm took a walk in the rooftop for 30-40min every night but I never sleep, until 2 am I read a lot,I write some speech on different topic because I have to give lots of awareness or seminar speech every now and then I don't have any health issues I am 60+but I never sleep more than 3hrs and by 5:30 -6am I'm awake go walking for 15-20 min to reach my church for a morning service.I do want to sleep for long hours but couldn't.I have tried your advice but no used I have been living like this for more than 15 yrs.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "7ArZ9GK4AIQ",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Sleep Fast and Increase Sleep Quality\\How to Sleep Fast and Increase Sleep Quality.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Sleep Fast and Increase Sleep Quality",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\7ArZ9GK4AIQ",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "7ArZ9GK4AIQ",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 1100,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: 7ArZ9GK4AIQ",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @utkarshranjan48 | Likes: 2382 | Replies: 42 | Published: 2017-09-29T13:47:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "greatest trick to sleep .. study before sleep.. neend sali jhak maar k tumhare peeche ayegi..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @SK1717 | Likes: 58 | Replies: 0 | Published: 2017-09-29T16:34:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Lucknow motovlog You saved my 6 minutes and 24 seconds. However I almost spent the same time in replying to this msg. So it’s all square now. Thanks anyways",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @rahul_1899 | Likes: 18 | Replies: 0 | Published: 2017-09-30T06:14:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Nothing beats it :P",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @nocopyrightmusicindia376 | Likes: 12 | Replies: 0 | Published: 2017-09-30T07:07:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Lucknow motovlog heheheh😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @asiyasyed1921 | Likes: 5 | Replies: 0 | Published: 2018-04-22T13:05:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Utkarsh Ranjan 😂😂😂so true",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @sharad4285 | Likes: 2 | Replies: 0 | Published: 2018-06-22T17:38:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Utkarsh Ranjan sahi kahte hobhaiya",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @naman245 | Likes: 5340 | Replies: 335 | Published: 2017-09-29T21:19:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Watching at 3 am..hehe",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @shubodas499 | Likes: 114 | Replies: 0 | Published: 2018-02-06T23:28:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "Naman Rana watching 4.58a.m. not sleep 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @martind3948 | Likes: 38 | Replies: 0 | Published: 2018-02-18T21:56:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Same",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @pheonixflyyy | Likes: 22 | Replies: 0 | Published: 2018-03-12T22:16:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Naman Rana mee to..i need to sleep",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @guddupal7671 | Likes: 13 | Replies: 0 | Published: 2018-03-17T15:35:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "U got it 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @manas1755 | Likes: 26 | Replies: 0 | Published: 2018-05-12T00:03:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "5:33",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @sufyanzaki3142 | Likes: 1285 | Replies: 24 | Published: 2021-02-09T02:23:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "1) proper sleep timing",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "2) put away all electronic devices before half hour before sleeping",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "3) right environment i.e temp , clothes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "4) eat something before sleep",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "5) exercise",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @lmaoyes489 | Likes: 14 | Replies: 0 | Published: 2021-05-31T15:22:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "ay I'll try that",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @omprakhashmudaliar | Likes: 7 | Replies: 0 | Published: 2021-06-02T21:14:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @nitinpandit3953 | Likes: 19 | Replies: 0 | Published: 2021-06-29T18:15:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "mention point 5 as exercise 3hrs before sleep",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @mohammedarfa7041 | Likes: 3 | Replies: 0 | Published: 2021-07-28T16:59:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "Helped a lot ....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @ThatBlueWnd | Likes: 2 | Replies: 0 | Published: 2021-08-30T02:05:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "Same",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @yt_stranger1 | Likes: 8 | Replies: 0 | Published: 2022-11-07T06:24:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "Who is teenager here 🙄",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @baminlailiang608 | Likes: 9 | Replies: 0 | Published: 2022-12-04T01:01:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01532",
+                  "author": "",
+                  "text": "[COMMENT 476] Author: @girlyyy_04 | Likes: 1 | Replies: 0 | Published: 2022-05-30T20:53:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01533",
+                  "author": "",
+                  "text": "Watching at 2:30 am 🥺",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01535",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @amanXomi | Likes: 1 | Replies: 0 | Published: 2022-06-24T17:34:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01536",
+                  "author": "",
+                  "text": "Watching in stairs 4:40 time 🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01538",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @jyotichoudhary58 | Likes: 0 | Replies: 0 | Published: 2022-01-25T09:03:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01539",
+                  "author": "",
+                  "text": "2 hours trying to sleep 😴😴 bt now here",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01541",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @sravang4402 | Likes: 0 | Replies: 0 | Published: 2021-08-15T17:13:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01542",
+                  "author": "",
+                  "text": "Which Is the best type of mattress to purchase according to health.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01544",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @julitaednalino1900 | Likes: 0 | Replies: 0 | Published: 2022-11-22T04:42:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01545",
+                  "author": "",
+                  "text": "I have anxiety disorder and i am on benzos and antidepressants..how will this applies?thanks for any suggestions..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01547",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @shivanisidhu9477 | Likes: 0 | Replies: 0 | Published: 2022-03-12T10:39:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01548",
+                  "author": "",
+                  "text": "What if someone is doing night shifts nd all which schedule we should follow to get the proper sleep nd fresh mind ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01550",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @Dvk527 | Likes: 0 | Replies: 0 | Published: 2023-01-25T21:19:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01551",
+                  "author": "",
+                  "text": "If we are getting sleep very lately ..and it's our habit the how could we change it..? And do found any ayurvedic medicine which has not any side effects..? please make any video on that.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01553",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @standardgroup7561 | Likes: 0 | Replies: 0 | Published: 2023-03-06T00:50:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01554",
+                  "author": "",
+                  "text": "Watching at 6:20 AM. Tossed and turned throughout the night.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01556",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @mico_paw | Likes: 1 | Replies: 0 | Published: 2022-05-23T21:50:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01557",
+                  "author": "",
+                  "text": "Watching @ 3:20 😵",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01559",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @apunyt5425 | Likes: 1 | Replies: 0 | Published: 2022-05-21T17:15:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01560",
+                  "author": "",
+                  "text": "Watching at 10:45 pm",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01562",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @sukhpreetsinghsidhusukhpre3764 | Likes: 0 | Replies: 0 | Published: 2022-12-21T13:53:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01563",
+                  "author": "",
+                  "text": "Watching at 12pm",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01565",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @Idk-iz2hs | Likes: 0 | Replies: 0 | Published: 2022-08-07T23:12:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01566",
+                  "author": "",
+                  "text": "I felt sleepy just by clicking the video ig it worked💀🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01568",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @lajdodani3326 | Likes: 0 | Replies: 0 | Published: 2022-01-23T17:37:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01569",
+                  "author": "",
+                  "text": "Hello Vivek thx for all ur help I have fungus on my hands cld u pls recommend a natural cure for this thx so much really appreciated Stay Blessed Always",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01571",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @arunjayaraj2278 | Likes: 0 | Replies: 0 | Published: 2022-01-03T18:42:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01572",
+                  "author": "",
+                  "text": "Watching @1am",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @aadyachakraborty3170 | Likes: 0 | Replies: 0 | Published: 2021-07-10T17:45:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01575",
+                  "author": "",
+                  "text": "I have same blanket",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @dhrubamondal8689 | Likes: 1 | Replies: 0 | Published: 2022-04-14T22:53:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01578",
+                  "author": "",
+                  "text": "Watching at 4 : 30 😁",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @ashugautam401 | Likes: 0 | Replies: 0 | Published: 2021-06-21T09:35:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01581",
+                  "author": "",
+                  "text": "Pls mattresses k upar bhi bnao ek video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01583",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @jasssas6861 | Likes: 0 | Replies: 0 | Published: 2022-05-12T22:08:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01584",
+                  "author": "",
+                  "text": "watching i’m 3:43am. hehe 🥲",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @vencenzo3711 | Likes: 0 | Replies: 0 | Published: 2022-10-04T21:13:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "Watching at 3:13 AM...:)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @aman_chawlaa | Likes: 0 | Replies: 0 | Published: 2022-08-02T20:19:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "Watching at 4 in night 🙂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @heckler9733 | Likes: 0 | Replies: 0 | Published: 2021-07-05T18:57:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "Hope it works it is 1 AM trying to sleep hope it work",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @sid9869 | Likes: 0 | Replies: 0 | Published: 2022-10-03T21:15:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "Same watching at 3 am",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @kiratsingh03 | Likes: 0 | Replies: 0 | Published: 2021-07-22T19:28:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "Can I get a heart",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @Rafayliaqat_ | Likes: 1 | Replies: 0 | Published: 2022-06-05T01:12:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "Watching at 6am..🤭amm",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @jennyfersyiem5372 | Likes: 0 | Replies: 0 | Published: 2022-04-05T16:02:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "I have a very light dinner by 8pm took a walk in the rooftop for 30-40min every night but I never sleep, until 2 am I read a lot,I write some speech on different topic because I have to give lots of awareness or seminar speech every now and then I don't have any health issues I am 60+but I never sleep more than 3hrs and by 5:30 -6am I'm awake go walking for 15-20 min to reach my church for a morning service.I do want to sleep for long hours but couldn't.I have tried your advice but no used I have been living like this for more than 15 yrs.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "7ArZ9GK4AIQ",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 1100,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: 7ArZ9GK4AIQ",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @utkarshranjan48 | Likes: 2382 | Replies: 42 | Published: 2017-09-29T13:47:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "greatest trick to sleep .. study before sleep.. neend sali jhak maar k tumhare peeche ayegi..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @SK1717 | Likes: 58 | Replies: 0 | Published: 2017-09-29T16:34:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Lucknow motovlog You saved my 6 minutes and 24 seconds. However I almost spent the same time in replying to this msg. So it’s all square now. Thanks anyways",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @rahul_1899 | Likes: 18 | Replies: 0 | Published: 2017-09-30T06:14:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Nothing beats it :P",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @nocopyrightmusicindia376 | Likes: 12 | Replies: 0 | Published: 2017-09-30T07:07:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Lucknow motovlog heheheh😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @asiyasyed1921 | Likes: 5 | Replies: 0 | Published: 2018-04-22T13:05:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Utkarsh Ranjan 😂😂😂so true",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @sharad4285 | Likes: 2 | Replies: 0 | Published: 2018-06-22T17:38:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Utkarsh Ranjan sahi kahte hobhaiya",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @naman245 | Likes: 5340 | Replies: 335 | Published: 2017-09-29T21:19:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Watching at 3 am..hehe",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @shubodas499 | Likes: 114 | Replies: 0 | Published: 2018-02-06T23:28:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "Naman Rana watching 4.58a.m. not sleep 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @martind3948 | Likes: 38 | Replies: 0 | Published: 2018-02-18T21:56:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Same",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @pheonixflyyy | Likes: 22 | Replies: 0 | Published: 2018-03-12T22:16:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Naman Rana mee to..i need to sleep",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @guddupal7671 | Likes: 13 | Replies: 0 | Published: 2018-03-17T15:35:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "U got it 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @manas1755 | Likes: 26 | Replies: 0 | Published: 2018-05-12T00:03:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "5:33",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @sufyanzaki3142 | Likes: 1285 | Replies: 24 | Published: 2021-02-09T02:23:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "1) proper sleep timing",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "2) put away all electronic devices before half hour before sleeping",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "3) right environment i.e temp , clothes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "4) eat something before sleep",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "5) exercise",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 14] Author: @lmaoyes489 | Likes: 14 | Replies: 0 | Published: 2021-05-31T15:22:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "ay I'll try that",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 15] Author: @omprakhashmudaliar | Likes: 7 | Replies: 0 | Published: 2021-06-02T21:14:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 16] Author: @nitinpandit3953 | Likes: 19 | Replies: 0 | Published: 2021-06-29T18:15:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "mention point 5 as exercise 3hrs before sleep",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 17] Author: @mohammedarfa7041 | Likes: 3 | Replies: 0 | Published: 2021-07-28T16:59:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "Helped a lot ....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 18] Author: @ThatBlueWnd | Likes: 2 | Replies: 0 | Published: 2021-08-30T02:05:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "Same",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 19] Author: @yt_stranger1 | Likes: 8 | Replies: 0 | Published: 2022-11-07T06:24:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "Who is teenager here 🙄",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "[COMMENT 20] Author: @baminlailiang608 | Likes: 9 | Replies: 0 | Published: 2022-12-04T01:01:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01532",
+                "author": "",
+                "text": "[COMMENT 476] Author: @girlyyy_04 | Likes: 1 | Replies: 0 | Published: 2022-05-30T20:53:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01533",
+                "author": "",
+                "text": "Watching at 2:30 am 🥺",
+                "likes": null
+              },
+              {
+                "comment_id": "c01535",
+                "author": "",
+                "text": "[COMMENT 477] Author: @amanXomi | Likes: 1 | Replies: 0 | Published: 2022-06-24T17:34:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01536",
+                "author": "",
+                "text": "Watching in stairs 4:40 time 🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c01538",
+                "author": "",
+                "text": "[COMMENT 478] Author: @jyotichoudhary58 | Likes: 0 | Replies: 0 | Published: 2022-01-25T09:03:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01539",
+                "author": "",
+                "text": "2 hours trying to sleep 😴😴 bt now here",
+                "likes": null
+              },
+              {
+                "comment_id": "c01541",
+                "author": "",
+                "text": "[COMMENT 479] Author: @sravang4402 | Likes: 0 | Replies: 0 | Published: 2021-08-15T17:13:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01542",
+                "author": "",
+                "text": "Which Is the best type of mattress to purchase according to health.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01544",
+                "author": "",
+                "text": "[COMMENT 480] Author: @julitaednalino1900 | Likes: 0 | Replies: 0 | Published: 2022-11-22T04:42:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01545",
+                "author": "",
+                "text": "I have anxiety disorder and i am on benzos and antidepressants..how will this applies?thanks for any suggestions..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01547",
+                "author": "",
+                "text": "[COMMENT 481] Author: @shivanisidhu9477 | Likes: 0 | Replies: 0 | Published: 2022-03-12T10:39:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01548",
+                "author": "",
+                "text": "What if someone is doing night shifts nd all which schedule we should follow to get the proper sleep nd fresh mind ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01550",
+                "author": "",
+                "text": "[COMMENT 482] Author: @Dvk527 | Likes: 0 | Replies: 0 | Published: 2023-01-25T21:19:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01551",
+                "author": "",
+                "text": "If we are getting sleep very lately ..and it's our habit the how could we change it..? And do found any ayurvedic medicine which has not any side effects..? please make any video on that.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01553",
+                "author": "",
+                "text": "[COMMENT 483] Author: @standardgroup7561 | Likes: 0 | Replies: 0 | Published: 2023-03-06T00:50:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01554",
+                "author": "",
+                "text": "Watching at 6:20 AM. Tossed and turned throughout the night.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01556",
+                "author": "",
+                "text": "[COMMENT 484] Author: @mico_paw | Likes: 1 | Replies: 0 | Published: 2022-05-23T21:50:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01557",
+                "author": "",
+                "text": "Watching @ 3:20 😵",
+                "likes": null
+              },
+              {
+                "comment_id": "c01559",
+                "author": "",
+                "text": "[COMMENT 485] Author: @apunyt5425 | Likes: 1 | Replies: 0 | Published: 2022-05-21T17:15:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01560",
+                "author": "",
+                "text": "Watching at 10:45 pm",
+                "likes": null
+              },
+              {
+                "comment_id": "c01562",
+                "author": "",
+                "text": "[COMMENT 486] Author: @sukhpreetsinghsidhusukhpre3764 | Likes: 0 | Replies: 0 | Published: 2022-12-21T13:53:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01563",
+                "author": "",
+                "text": "Watching at 12pm",
+                "likes": null
+              },
+              {
+                "comment_id": "c01565",
+                "author": "",
+                "text": "[COMMENT 487] Author: @Idk-iz2hs | Likes: 0 | Replies: 0 | Published: 2022-08-07T23:12:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01566",
+                "author": "",
+                "text": "I felt sleepy just by clicking the video ig it worked💀🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c01568",
+                "author": "",
+                "text": "[COMMENT 488] Author: @lajdodani3326 | Likes: 0 | Replies: 0 | Published: 2022-01-23T17:37:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01569",
+                "author": "",
+                "text": "Hello Vivek thx for all ur help I have fungus on my hands cld u pls recommend a natural cure for this thx so much really appreciated Stay Blessed Always",
+                "likes": null
+              },
+              {
+                "comment_id": "c01571",
+                "author": "",
+                "text": "[COMMENT 489] Author: @arunjayaraj2278 | Likes: 0 | Replies: 0 | Published: 2022-01-03T18:42:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01572",
+                "author": "",
+                "text": "Watching @1am",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "[COMMENT 490] Author: @aadyachakraborty3170 | Likes: 0 | Replies: 0 | Published: 2021-07-10T17:45:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01575",
+                "author": "",
+                "text": "I have same blanket",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "[COMMENT 491] Author: @dhrubamondal8689 | Likes: 1 | Replies: 0 | Published: 2022-04-14T22:53:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01578",
+                "author": "",
+                "text": "Watching at 4 : 30 😁",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "[COMMENT 492] Author: @ashugautam401 | Likes: 0 | Replies: 0 | Published: 2021-06-21T09:35:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01581",
+                "author": "",
+                "text": "Pls mattresses k upar bhi bnao ek video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01583",
+                "author": "",
+                "text": "[COMMENT 493] Author: @jasssas6861 | Likes: 0 | Replies: 0 | Published: 2022-05-12T22:08:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01584",
+                "author": "",
+                "text": "watching i’m 3:43am. hehe 🥲",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "[COMMENT 494] Author: @vencenzo3711 | Likes: 0 | Replies: 0 | Published: 2022-10-04T21:13:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "Watching at 3:13 AM...:)",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "[COMMENT 495] Author: @aman_chawlaa | Likes: 0 | Replies: 0 | Published: 2022-08-02T20:19:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "Watching at 4 in night 🙂",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "[COMMENT 496] Author: @heckler9733 | Likes: 0 | Replies: 0 | Published: 2021-07-05T18:57:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "Hope it works it is 1 AM trying to sleep hope it work",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "[COMMENT 497] Author: @sid9869 | Likes: 0 | Replies: 0 | Published: 2022-10-03T21:15:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "Same watching at 3 am",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "[COMMENT 498] Author: @kiratsingh03 | Likes: 0 | Replies: 0 | Published: 2021-07-22T19:28:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "Can I get a heart",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "[COMMENT 499] Author: @Rafayliaqat_ | Likes: 1 | Replies: 0 | Published: 2022-06-05T01:12:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "Watching at 6am..🤭amm",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "[COMMENT 500] Author: @jennyfersyiem5372 | Likes: 0 | Replies: 0 | Published: 2022-04-05T16:02:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "I have a very light dinner by 8pm took a walk in the rooftop for 30-40min every night but I never sleep, until 2 am I read a lot,I write some speech on different topic because I have to give lots of awareness or seminar speech every now and then I don't have any health issues I am 60+but I never sleep more than 3hrs and by 5:30 -6am I'm awake go walking for 15-20 min to reach my church for a morning service.I do want to sleep for long hours but couldn't.I have tried your advice but no used I have been living like this for more than 15 yrs.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "video_id": "azsMvdSI3cU",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=azsMvdSI3cU",
+        "original_title": "10 Sleeping Habits Ranked from Worst to Best",
+        "clean_title": "10 Sleeping Habits Ranked from Worst to Best",
+        "channel": "Fit Tuber",
+        "upload_date": "2018-08-24",
+        "description": "The Best and the Worst Sleeping Habits. How to Improve sleep quality. How to have sound sleep. \n\nA good night sleep is extremely important for healthy brain function, physical body and emotional well being. All our fitness goals, muscle building or fat loss are directly related to the quality of our sleep. However, due to fast stressful life most people nowadays are sleep deprived. Through this video I wish to share with you what exactly we should do and what not to do to get the best sleep of our life each night.\n\n01:00 - 5 Worst Sleeping Habits\n04:24 -  5 Best Sleeping Habits\n\n08:10 - Kerala Floods 2018 - Let us come together and help Kerala which is facing its worst flood in 100 years. \nMore than 343 people have diet and over 10 lakh displaced. The total estimated damage is over 20,000 crores. \nThe help being provided by Central govt and most state govts is highly insufficient.\nLet us do our bit. You can donate directly to the Chief Minister’s distress relief fund (CMDRF) through the bank account given below. Whatever amount is possible.\n\nLink: https://donation.cmdrf.kerala.gov.in/\n\nThank you.\n\nBEST PRODUCTS FROM WORST TO BEST SERIES\n\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nUSEFUL LINKS\n\nWater bottle that I use - https://amzn.to/2KtbcBg\nBhuna Chana - https://amzn.to/2tOFdVa\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON WEIGHT LOSS\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZgDcm-M&t=29s\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns9LDyHU\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVuQrz0oQ&t=294s\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/watch?v=rKpHBYboazo\n\nFull day diet plan for Extreme Fat loss\nhttps://www.youtube.com/watch?v=JaMQfQK1_i8&t=94s\n\nI hope you found this video helpful. Well, if you did, please do \n\nLIKE | SHARE | COMMENT \n\nPlease SUBSCRIBE https://www.youtube.com/channel/UCYC6... \n\nAlready subscribed? Hit the bell Icon \n\nSOME OF MY MOST POPULAR VIDEOS: \n\n20 Shampoos in India Ranked from Worst to Best.\nhttps://www.youtube.com/watch?v=qfB7tnJ-kRI&t=4s\n\nWhich Toothpaste is the best?\nhttps://www.youtube.com/watch?v=RfinWpg9MYY&t=3s\n\nWhich Bathing soap is the best?\nhttps://www.youtube.com/watch?v=bgx6nHUNILg&t=140s\n\n10 Foods you will never eat knowing how they are made.\nhttps://www.youtube.com/watch?v=ci6viCNdAjI&t=673s\n\n5 Foods Wrongly Marketed as Healthy\nhttps://www.youtube.com/watch?v=peM93I89TQU&t=414s\n\nFull day of eating for muscle gains\nhttps://www.youtube.com/watch?v=2knVu... \n\nTop 10 Cheapest Protein Foods in India \nhttps://www.youtube.com/watch?v=TOAaM... \n\nCheapest fat burner in Rs 3 \nhttps://www.youtube.com/watch?v=wtN6u... \n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 1128,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: azsMvdSI3cU",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 1782 | Replies: 98 | Published: 2018-08-24T13:34:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Hello Friends! Before we improve our sleep habits, let us take a step forward to help the Kerala flood victims who are getting sleepless nights due to the natural calamity. Links in the description box. Thank you for your support.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00011",
+              "author": "",
+              "text": "I wish you good health.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "Fit Tuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00014",
+              "author": "",
+              "text": "[COMMENT 2] Author: @gyymtheroy | Likes: 19 | Replies: 0 | Published: 2018-08-24T13:42:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "Fit Tuber sleep is the best thing in this world",
+              "likes": null
+            },
+            {
+              "comment_id": "c00017",
+              "author": "",
+              "text": "[COMMENT 3] Author: @9009vishnu | Likes: 9 | Replies: 0 | Published: 2018-08-24T13:45:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "Thank you so much",
+              "likes": null
+            },
+            {
+              "comment_id": "c00020",
+              "author": "",
+              "text": "[COMMENT 4] Author: @amit3952 | Likes: 11 | Replies: 0 | Published: 2018-08-24T13:48:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "Please make a video on worst to best habits that affect Mindset",
+              "likes": null
+            },
+            {
+              "comment_id": "c00023",
+              "author": "",
+              "text": "[COMMENT 5] Author: @bobbyyadav9239 | Likes: 3 | Replies: 0 | Published: 2018-08-24T13:51:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "Thank you so much vivek bhaiya",
+              "likes": null
+            },
+            {
+              "comment_id": "c00026",
+              "author": "",
+              "text": "[COMMENT 6] Author: @soumya9633 | Likes: 11 | Replies: 0 | Published: 2018-08-24T13:53:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "A video on \" How to do meditation the right way \" and Maine donate kardia Kerala ke liye ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "[COMMENT 7] Author: @aaron7063 | Likes: 2313 | Replies: 79 | Published: 2018-08-24T17:07:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "/To sleep fastly/ :",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "1) *first off all you should lay on a bed*",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "2) *second you should close your eyes and imagine that you are sitting in your maths class*",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "3) *and then you will automatically go sleep*",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 8] Author: @pranavbagal3024 | Likes: 26 | Replies: 0 | Published: 2018-08-29T09:55:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "LoL✌️✌️🤣🤣🤣🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 9] Author: @rajardevi | Likes: 15 | Replies: 0 | Published: 2018-08-29T16:08:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "Yes very true",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 10] Author: @kunalpatil261 | Likes: 61 | Replies: 0 | Published: 2018-08-31T16:50:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "Damn true...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "We office going people think manager is taking meeting... Sleep comes at double rate😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 11] Author: @georgeschlumberger9814 | Likes: 45 | Replies: 0 | Published: 2018-09-10T05:40:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "For me, maths is the most interesting and fun subject so it wont work",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 12] Author: @annanyaradhika799 | Likes: 5 | Replies: 0 | Published: 2018-10-13T06:50:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "So funny",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 13] Author: @lavanyaverma1194 | Likes: 729 | Replies: 2 | Published: 2019-05-10T16:12:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "\"Fitness isn't a destination",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "It's a way of life\"",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "-fitTuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 14] Author: @shivshankar6027 | Likes: 1 | Replies: 0 | Published: 2020-02-19T16:55:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "Where r you from",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 15] Author: @svkhymns2177 | Likes: 1 | Replies: 0 | Published: 2020-08-28T16:17:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "@SAMURAI TOWNSHIP then who's",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 16] Author: @4258MK | Likes: 2599 | Replies: 26 | Published: 2020-02-15T06:43:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "Me : I'm dead",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "Fit tuber : you're dying in a wrong way 😬😂♥️",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 17] Author: @lingeshanr | Likes: 54 | Replies: 0 | Published: 2020-03-11T17:56:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "There's actually something that you die in a wrong way. If you die peacefully on sleep, that's the best! Dying of Cancer and AIDS - bad and suffering way right??",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "Hey vivek, I am feeling sleepy now... Make a video on how to control sleep...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01576",
+              "author": "",
+              "text": "[COMMENT 477] Author: @njajbn1893 | Likes: 0 | Replies: 0 | Published: 2020-08-12T14:06:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "Excellent presentation.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01579",
+              "author": "",
+              "text": "[COMMENT 478] Author: @pankajkhairnar7089 | Likes: 0 | Replies: 0 | Published: 2022-03-21T08:43:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "I like your all videos. They are much informative. Having one question around same topic i.e. which mattress is best for sleeping?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "[COMMENT 479] Author: @samwaytv007 | Likes: 0 | Replies: 0 | Published: 2020-06-13T06:15:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01583",
+              "author": "",
+              "text": "Best guy admire him ❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "[COMMENT 480] Author: @rajeshreebenekan4953 | Likes: 0 | Replies: 0 | Published: 2019-09-18T15:22:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "Nice n helpful vedio sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "Tell me about hernia...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "[COMMENT 481] Author: @sandeepbathindian07 | Likes: 0 | Replies: 0 | Published: 2022-06-21T05:32:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "Good video, thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "[COMMENT 482] Author: @serenamariadesouza5897 | Likes: 0 | Replies: 0 | Published: 2021-03-03T07:46:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "Thank for this video!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "[COMMENT 483] Author: @dipaligauns1432 | Likes: 0 | Replies: 0 | Published: 2021-05-18T07:09:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "Thankyou for the information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "[COMMENT 484] Author: @Varkataka | Likes: 0 | Replies: 0 | Published: 2019-08-29T03:42:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "Hi Vivek, please advise sleeping habits for people working at night. Especially working in call centeres.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "[COMMENT 485] Author: @ananyasingh-x2e | Likes: 0 | Replies: 0 | Published: 2020-09-18T15:52:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "Very helpful video 😍😍😍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "[COMMENT 486] Author: @a.i.m.lbsnaa.9119 | Likes: 0 | Replies: 0 | Published: 2022-01-30T17:27:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "THANKU. BHAIYA.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "[COMMENT 487] Author: @nanditadey2110 | Likes: 0 | Replies: 0 | Published: 2020-06-11T22:28:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "Thank you bro for ur valuable words😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "[COMMENT 488] Author: @arjundas8069 | Likes: 0 | Replies: 0 | Published: 2020-09-30T16:29:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "Big fan sir👍👍❤️❤️❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "[COMMENT 489] Author: @devikasambari4643 | Likes: 0 | Replies: 0 | Published: 2021-05-17T21:59:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "Helpful !",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "[COMMENT 490] Author: @mahdiLost | Likes: 0 | Replies: 0 | Published: 2020-08-21T12:04:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "thanks bro for good motivation",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "[COMMENT 491] Author: @prithwirajbhardwaj9295 | Likes: 0 | Replies: 0 | Published: 2020-03-01T12:01:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01620",
+              "author": "",
+              "text": "4 7 8 method helps in calming ourselves during any stressful situations like sports tournament ,exams etc",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "[COMMENT 492] Author: @pameladey36 | Likes: 0 | Replies: 0 | Published: 2019-12-16T02:54:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01623",
+              "author": "",
+              "text": "I love you ♥️and your smile too",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "[COMMENT 493] Author: @rukiyyashaikh2601 | Likes: 0 | Replies: 0 | Published: 2021-10-05T15:50:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "Very good video👌👌🖤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "[COMMENT 494] Author: @AbhiVerse1181 | Likes: 0 | Replies: 0 | Published: 2020-01-06T13:21:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "Hey please make a video for the people who are working in night shifts. Like what sort of food to eat and how to get quality sleep which was lost coz of night shift.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01631",
+              "author": "",
+              "text": "[COMMENT 495] Author: @Eiz_hax | Likes: 0 | Replies: 0 | Published: 2022-01-12T03:32:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "Very helpful video ☺️💞",
+              "likes": null
+            },
+            {
+              "comment_id": "c01634",
+              "author": "",
+              "text": "[COMMENT 496] Author: @8890rk | Likes: 0 | Replies: 0 | Published: 2020-07-23T01:11:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "Naice tips",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "[COMMENT 497] Author: @TheMoicani | Likes: 0 | Replies: 0 | Published: 2021-06-07T04:23:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "It’s all true. Thank you!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01640",
+              "author": "",
+              "text": "[COMMENT 498] Author: @kandukurigybu2712 | Likes: 0 | Replies: 0 | Published: 2020-07-26T08:34:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "good imfermation 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01643",
+              "author": "",
+              "text": "[COMMENT 499] Author: @rhianalove534 | Likes: 0 | Replies: 0 | Published: 2021-02-22T05:37:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "Thanks for information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01646",
+              "author": "",
+              "text": "[COMMENT 500] Author: @SugandhiTalks7233 | Likes: 0 | Replies: 0 | Published: 2020-04-08T08:21:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "Very useful videos.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "azsMvdSI3cU",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\10 Sleeping Habits Ranked from Worst to Best\\10 Sleeping Habits Ranked from Worst to Best.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\10 Sleeping Habits Ranked from Worst to Best",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\azsMvdSI3cU",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "azsMvdSI3cU",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 1128,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: azsMvdSI3cU",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 1782 | Replies: 98 | Published: 2018-08-24T13:34:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Hello Friends! Before we improve our sleep habits, let us take a step forward to help the Kerala flood victims who are getting sleepless nights due to the natural calamity. Links in the description box. Thank you for your support.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00011",
+                  "author": "",
+                  "text": "I wish you good health.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "Fit Tuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00014",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @gyymtheroy | Likes: 19 | Replies: 0 | Published: 2018-08-24T13:42:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "Fit Tuber sleep is the best thing in this world",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00017",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @9009vishnu | Likes: 9 | Replies: 0 | Published: 2018-08-24T13:45:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "Thank you so much",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00020",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @amit3952 | Likes: 11 | Replies: 0 | Published: 2018-08-24T13:48:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "Please make a video on worst to best habits that affect Mindset",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00023",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @bobbyyadav9239 | Likes: 3 | Replies: 0 | Published: 2018-08-24T13:51:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "Thank you so much vivek bhaiya",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00026",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @soumya9633 | Likes: 11 | Replies: 0 | Published: 2018-08-24T13:53:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "A video on \" How to do meditation the right way \" and Maine donate kardia Kerala ke liye ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @aaron7063 | Likes: 2313 | Replies: 79 | Published: 2018-08-24T17:07:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "/To sleep fastly/ :",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "1) *first off all you should lay on a bed*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "2) *second you should close your eyes and imagine that you are sitting in your maths class*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "3) *and then you will automatically go sleep*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @pranavbagal3024 | Likes: 26 | Replies: 0 | Published: 2018-08-29T09:55:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "LoL✌️✌️🤣🤣🤣🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @rajardevi | Likes: 15 | Replies: 0 | Published: 2018-08-29T16:08:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "Yes very true",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @kunalpatil261 | Likes: 61 | Replies: 0 | Published: 2018-08-31T16:50:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "Damn true...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "We office going people think manager is taking meeting... Sleep comes at double rate😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @georgeschlumberger9814 | Likes: 45 | Replies: 0 | Published: 2018-09-10T05:40:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "For me, maths is the most interesting and fun subject so it wont work",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @annanyaradhika799 | Likes: 5 | Replies: 0 | Published: 2018-10-13T06:50:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "So funny",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @lavanyaverma1194 | Likes: 729 | Replies: 2 | Published: 2019-05-10T16:12:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "\"Fitness isn't a destination",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "It's a way of life\"",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "-fitTuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @shivshankar6027 | Likes: 1 | Replies: 0 | Published: 2020-02-19T16:55:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "Where r you from",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @svkhymns2177 | Likes: 1 | Replies: 0 | Published: 2020-08-28T16:17:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "@SAMURAI TOWNSHIP then who's",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @4258MK | Likes: 2599 | Replies: 26 | Published: 2020-02-15T06:43:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "Me : I'm dead",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "Fit tuber : you're dying in a wrong way 😬😂♥️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @lingeshanr | Likes: 54 | Replies: 0 | Published: 2020-03-11T17:56:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "There's actually something that you die in a wrong way. If you die peacefully on sleep, that's the best! Dying of Cancer and AIDS - bad and suffering way right??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "Hey vivek, I am feeling sleepy now... Make a video on how to control sleep...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01576",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @njajbn1893 | Likes: 0 | Replies: 0 | Published: 2020-08-12T14:06:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "Excellent presentation.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01579",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @pankajkhairnar7089 | Likes: 0 | Replies: 0 | Published: 2022-03-21T08:43:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "I like your all videos. They are much informative. Having one question around same topic i.e. which mattress is best for sleeping?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @samwaytv007 | Likes: 0 | Replies: 0 | Published: 2020-06-13T06:15:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01583",
+                  "author": "",
+                  "text": "Best guy admire him ❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @rajeshreebenekan4953 | Likes: 0 | Replies: 0 | Published: 2019-09-18T15:22:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "Nice n helpful vedio sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "Tell me about hernia...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @sandeepbathindian07 | Likes: 0 | Replies: 0 | Published: 2022-06-21T05:32:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "Good video, thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @serenamariadesouza5897 | Likes: 0 | Replies: 0 | Published: 2021-03-03T07:46:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "Thank for this video!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @dipaligauns1432 | Likes: 0 | Replies: 0 | Published: 2021-05-18T07:09:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "Thankyou for the information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @Varkataka | Likes: 0 | Replies: 0 | Published: 2019-08-29T03:42:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "Hi Vivek, please advise sleeping habits for people working at night. Especially working in call centeres.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @ananyasingh-x2e | Likes: 0 | Replies: 0 | Published: 2020-09-18T15:52:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "Very helpful video 😍😍😍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @a.i.m.lbsnaa.9119 | Likes: 0 | Replies: 0 | Published: 2022-01-30T17:27:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "THANKU. BHAIYA.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @nanditadey2110 | Likes: 0 | Replies: 0 | Published: 2020-06-11T22:28:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "Thank you bro for ur valuable words😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @arjundas8069 | Likes: 0 | Replies: 0 | Published: 2020-09-30T16:29:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "Big fan sir👍👍❤️❤️❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @devikasambari4643 | Likes: 0 | Replies: 0 | Published: 2021-05-17T21:59:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "Helpful !",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @mahdiLost | Likes: 0 | Replies: 0 | Published: 2020-08-21T12:04:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "thanks bro for good motivation",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @prithwirajbhardwaj9295 | Likes: 0 | Replies: 0 | Published: 2020-03-01T12:01:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01620",
+                  "author": "",
+                  "text": "4 7 8 method helps in calming ourselves during any stressful situations like sports tournament ,exams etc",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @pameladey36 | Likes: 0 | Replies: 0 | Published: 2019-12-16T02:54:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01623",
+                  "author": "",
+                  "text": "I love you ♥️and your smile too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @rukiyyashaikh2601 | Likes: 0 | Replies: 0 | Published: 2021-10-05T15:50:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "Very good video👌👌🖤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @AbhiVerse1181 | Likes: 0 | Replies: 0 | Published: 2020-01-06T13:21:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "Hey please make a video for the people who are working in night shifts. Like what sort of food to eat and how to get quality sleep which was lost coz of night shift.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01631",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @Eiz_hax | Likes: 0 | Replies: 0 | Published: 2022-01-12T03:32:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "Very helpful video ☺️💞",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01634",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @8890rk | Likes: 0 | Replies: 0 | Published: 2020-07-23T01:11:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "Naice tips",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @TheMoicani | Likes: 0 | Replies: 0 | Published: 2021-06-07T04:23:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "It’s all true. Thank you!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01640",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @kandukurigybu2712 | Likes: 0 | Replies: 0 | Published: 2020-07-26T08:34:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "good imfermation 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01643",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @rhianalove534 | Likes: 0 | Replies: 0 | Published: 2021-02-22T05:37:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "Thanks for information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01646",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @SugandhiTalks7233 | Likes: 0 | Replies: 0 | Published: 2020-04-08T08:21:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "Very useful videos.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "azsMvdSI3cU",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 1128,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: azsMvdSI3cU",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 1782 | Replies: 98 | Published: 2018-08-24T13:34:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Hello Friends! Before we improve our sleep habits, let us take a step forward to help the Kerala flood victims who are getting sleepless nights due to the natural calamity. Links in the description box. Thank you for your support.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00011",
+                "author": "",
+                "text": "I wish you good health.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "Fit Tuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00014",
+                "author": "",
+                "text": "[COMMENT 2] Author: @gyymtheroy | Likes: 19 | Replies: 0 | Published: 2018-08-24T13:42:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "Fit Tuber sleep is the best thing in this world",
+                "likes": null
+              },
+              {
+                "comment_id": "c00017",
+                "author": "",
+                "text": "[COMMENT 3] Author: @9009vishnu | Likes: 9 | Replies: 0 | Published: 2018-08-24T13:45:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "Thank you so much",
+                "likes": null
+              },
+              {
+                "comment_id": "c00020",
+                "author": "",
+                "text": "[COMMENT 4] Author: @amit3952 | Likes: 11 | Replies: 0 | Published: 2018-08-24T13:48:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "Please make a video on worst to best habits that affect Mindset",
+                "likes": null
+              },
+              {
+                "comment_id": "c00023",
+                "author": "",
+                "text": "[COMMENT 5] Author: @bobbyyadav9239 | Likes: 3 | Replies: 0 | Published: 2018-08-24T13:51:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "Thank you so much vivek bhaiya",
+                "likes": null
+              },
+              {
+                "comment_id": "c00026",
+                "author": "",
+                "text": "[COMMENT 6] Author: @soumya9633 | Likes: 11 | Replies: 0 | Published: 2018-08-24T13:53:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "A video on \" How to do meditation the right way \" and Maine donate kardia Kerala ke liye ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "[COMMENT 7] Author: @aaron7063 | Likes: 2313 | Replies: 79 | Published: 2018-08-24T17:07:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "/To sleep fastly/ :",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "1) *first off all you should lay on a bed*",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "2) *second you should close your eyes and imagine that you are sitting in your maths class*",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "3) *and then you will automatically go sleep*",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 8] Author: @pranavbagal3024 | Likes: 26 | Replies: 0 | Published: 2018-08-29T09:55:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "LoL✌️✌️🤣🤣🤣🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 9] Author: @rajardevi | Likes: 15 | Replies: 0 | Published: 2018-08-29T16:08:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "Yes very true",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 10] Author: @kunalpatil261 | Likes: 61 | Replies: 0 | Published: 2018-08-31T16:50:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "Damn true...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "We office going people think manager is taking meeting... Sleep comes at double rate😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 11] Author: @georgeschlumberger9814 | Likes: 45 | Replies: 0 | Published: 2018-09-10T05:40:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "For me, maths is the most interesting and fun subject so it wont work",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 12] Author: @annanyaradhika799 | Likes: 5 | Replies: 0 | Published: 2018-10-13T06:50:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "So funny",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 13] Author: @lavanyaverma1194 | Likes: 729 | Replies: 2 | Published: 2019-05-10T16:12:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "\"Fitness isn't a destination",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "It's a way of life\"",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "-fitTuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 14] Author: @shivshankar6027 | Likes: 1 | Replies: 0 | Published: 2020-02-19T16:55:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "Where r you from",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 15] Author: @svkhymns2177 | Likes: 1 | Replies: 0 | Published: 2020-08-28T16:17:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "@SAMURAI TOWNSHIP then who's",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 16] Author: @4258MK | Likes: 2599 | Replies: 26 | Published: 2020-02-15T06:43:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "Me : I'm dead",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "Fit tuber : you're dying in a wrong way 😬😂♥️",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 17] Author: @lingeshanr | Likes: 54 | Replies: 0 | Published: 2020-03-11T17:56:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "There's actually something that you die in a wrong way. If you die peacefully on sleep, that's the best! Dying of Cancer and AIDS - bad and suffering way right??",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "Hey vivek, I am feeling sleepy now... Make a video on how to control sleep...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01576",
+                "author": "",
+                "text": "[COMMENT 477] Author: @njajbn1893 | Likes: 0 | Replies: 0 | Published: 2020-08-12T14:06:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "Excellent presentation.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01579",
+                "author": "",
+                "text": "[COMMENT 478] Author: @pankajkhairnar7089 | Likes: 0 | Replies: 0 | Published: 2022-03-21T08:43:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "I like your all videos. They are much informative. Having one question around same topic i.e. which mattress is best for sleeping?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "[COMMENT 479] Author: @samwaytv007 | Likes: 0 | Replies: 0 | Published: 2020-06-13T06:15:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01583",
+                "author": "",
+                "text": "Best guy admire him ❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "[COMMENT 480] Author: @rajeshreebenekan4953 | Likes: 0 | Replies: 0 | Published: 2019-09-18T15:22:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "Nice n helpful vedio sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "Tell me about hernia...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "[COMMENT 481] Author: @sandeepbathindian07 | Likes: 0 | Replies: 0 | Published: 2022-06-21T05:32:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "Good video, thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "[COMMENT 482] Author: @serenamariadesouza5897 | Likes: 0 | Replies: 0 | Published: 2021-03-03T07:46:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "Thank for this video!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "[COMMENT 483] Author: @dipaligauns1432 | Likes: 0 | Replies: 0 | Published: 2021-05-18T07:09:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "Thankyou for the information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "[COMMENT 484] Author: @Varkataka | Likes: 0 | Replies: 0 | Published: 2019-08-29T03:42:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "Hi Vivek, please advise sleeping habits for people working at night. Especially working in call centeres.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "[COMMENT 485] Author: @ananyasingh-x2e | Likes: 0 | Replies: 0 | Published: 2020-09-18T15:52:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "Very helpful video 😍😍😍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "[COMMENT 486] Author: @a.i.m.lbsnaa.9119 | Likes: 0 | Replies: 0 | Published: 2022-01-30T17:27:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "THANKU. BHAIYA.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "[COMMENT 487] Author: @nanditadey2110 | Likes: 0 | Replies: 0 | Published: 2020-06-11T22:28:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "Thank you bro for ur valuable words😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "[COMMENT 488] Author: @arjundas8069 | Likes: 0 | Replies: 0 | Published: 2020-09-30T16:29:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "Big fan sir👍👍❤️❤️❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "[COMMENT 489] Author: @devikasambari4643 | Likes: 0 | Replies: 0 | Published: 2021-05-17T21:59:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "Helpful !",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "[COMMENT 490] Author: @mahdiLost | Likes: 0 | Replies: 0 | Published: 2020-08-21T12:04:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "thanks bro for good motivation",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "[COMMENT 491] Author: @prithwirajbhardwaj9295 | Likes: 0 | Replies: 0 | Published: 2020-03-01T12:01:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01620",
+                "author": "",
+                "text": "4 7 8 method helps in calming ourselves during any stressful situations like sports tournament ,exams etc",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "[COMMENT 492] Author: @pameladey36 | Likes: 0 | Replies: 0 | Published: 2019-12-16T02:54:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01623",
+                "author": "",
+                "text": "I love you ♥️and your smile too",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "[COMMENT 493] Author: @rukiyyashaikh2601 | Likes: 0 | Replies: 0 | Published: 2021-10-05T15:50:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "Very good video👌👌🖤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "[COMMENT 494] Author: @AbhiVerse1181 | Likes: 0 | Replies: 0 | Published: 2020-01-06T13:21:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "Hey please make a video for the people who are working in night shifts. Like what sort of food to eat and how to get quality sleep which was lost coz of night shift.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01631",
+                "author": "",
+                "text": "[COMMENT 495] Author: @Eiz_hax | Likes: 0 | Replies: 0 | Published: 2022-01-12T03:32:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "Very helpful video ☺️💞",
+                "likes": null
+              },
+              {
+                "comment_id": "c01634",
+                "author": "",
+                "text": "[COMMENT 496] Author: @8890rk | Likes: 0 | Replies: 0 | Published: 2020-07-23T01:11:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "Naice tips",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "[COMMENT 497] Author: @TheMoicani | Likes: 0 | Replies: 0 | Published: 2021-06-07T04:23:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "It’s all true. Thank you!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01640",
+                "author": "",
+                "text": "[COMMENT 498] Author: @kandukurigybu2712 | Likes: 0 | Replies: 0 | Published: 2020-07-26T08:34:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "good imfermation 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01643",
+                "author": "",
+                "text": "[COMMENT 499] Author: @rhianalove534 | Likes: 0 | Replies: 0 | Published: 2021-02-22T05:37:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "Thanks for information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01646",
+                "author": "",
+                "text": "[COMMENT 500] Author: @SugandhiTalks7233 | Likes: 0 | Replies: 0 | Published: 2020-04-08T08:21:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "Very useful videos.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

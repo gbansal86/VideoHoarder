@@ -1,0 +1,3031 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090717_85b8cb",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090717_85b8cb",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Home workouts by body part",
+      "batch_number": 22,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 22 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090717_85b8cb",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090717_85b8cb"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090717_85b8cb",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Home workouts by body part",
+      "batch_number": 22,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "32d5f6d5-7e97-4851-ad8d-096bfc1d1291",
+    "package_id": "vh_no_transcript_metadata_20260904_090717_85b8cb",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "OZG38G2DQtY"
+    ],
+    "evidence_grades": {
+      "OZG38G2DQtY": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Home workouts by body part",
+      "batch_number": 22,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "94bca05d256f42faf4d1a149e879c19e61c38aea42f5b69949b9775b2786f46e",
+      "prompt.json": "66d776563a77a3595e4156d9fee6a2f850177c0aa762da6bd7af6541e766b2d3",
+      "schema.json": "70da5cba6f44a88b3319e447cd7487f7d1abb36cb09955766e1cc80f99345853"
+    },
+    "created_at": "2026-09-04 09:07:17",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "OZG38G2DQtY",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=OZG38G2DQtY",
+        "original_title": "BICEP WORKOUT - Workout at Home | Episode 5 - BICEPS | No Dumbbells",
+        "clean_title": "BICEP WORKOUT - Workout at Home | Episode 5 - BICEPS | No Dumbbells",
+        "channel": "Fit Tuber",
+        "upload_date": "2016-12-13",
+        "description": "This Workout At Home series is specially designed for those who want to stay fit but are too busy to go to a gym. Workout at Home is without equipment and an ideal program for beginners. Both men and women can benefit from it.\n\nHOW WORKOUT AT HOME CAN BE A BOON ? \n\n--15 MINUTES ONLY - Experts confirm that 15 minutes of workout everyday is enough to stay fit provided we eat clean.\n-- BODY IS EQUIPMENT - Even though you do not have fancy machines but your own body can provide you so much resistance.One can even use the home equipment.\n-- PRIVACY - You can wear whatever you feel like, listen to loud music and also practice your killer dance moves :D\n-- SAVES TIME -  No matter what, workout at home will save your precious time. And time is money.\n-- SAVES MONEY - You do not have to regret that you had paid the gym monthly fees but have not utilized it to full extent.\n \nA PIECE OF ADVICE:\n\n- Take out just 15 minutes from your busy schedule and dedicate it to your body. It deserves to be fit.\n- Turn on your favorite music if you need a little push and start working out.\n- Keep a water bottle and a hand towel along. \n- Keep sipping water in between the sets. It's important\n- Give your best by maintaining a strong  muscle mind connection. Focus is the key.\n\nFITNESS is anyway achieved in the kitchen, so make sure you EAT CLEAN.\n \nSome of my previous videos which might be helpful to you in this context:\n\n- What you should be eating? \nhttps://www.youtube.com/watch?v=6whI1dKlJn4\n\n- How can you fight junk food cravings?\nhttps://www.youtube.com/watch?v=8hFr16_3cuI&t=1s\n\n- Some workout mistakes that you should avoid and why?\nhttps://www.youtube.com/watch?v=BbWmzx8JpAY\n\n- How much and how you should be drinking water?\nhttps://www.youtube.com/watch?v=pFjyrjw5HPc&t=16s\n\n- You would require protein and these 3 egg white hacks will help.\nhttps://www.youtube.com/watch?v=MFzok4V-mqQ&t=1s\n \n- Do not fall for these 5 Diet Myths.\nhttps://www.youtube.com/watch?v=GWQu3k9ls3g&t=14s\n\n- Are you short of motivation? Watch these two videos.\nhttps://www.youtube.com/watch?v=lh5dsxZ0scc&t=1s\nhttps://www.youtube.com/watch?v=KAZqPIvQT2c\n\n\nBICEPS WORKOUT AT HOME (30 sec rest after each exercise)\n\n1. Back Hand Push ups - 3 set * 10 reps\n2. Towel Curl - 3 sets * 10 reps\n3. If you find a pull up bar - 3 sets * Failure\n4.  Use Home Equipment - 3 sets * 10 reps\n5. Using Cylinder (complelely optional) \n\nYou may not follow the same routine always. You can tweak the order and number of sets etc of the above exercises.\n\nIf you find this video helpful, do:\n\nLIKE | SHARE | COMMENT\n\nSUBSCRIBE so that you do not miss the next episodes in this series. Just click the link below:\n https://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw\n\nThanks for your time. :)\n\n- Fit Tuber",
+        "source_category": "Sports",
+        "youtube_category_name": "Sports",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 225,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: OZG38G2DQtY",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 105",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @redbull9551 | Likes: 50 | Replies: 1 | Published: 2017-07-01T00:40:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "using the chairs workout is so owesome😂😂👭",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @SmartphoneHacks | Likes: 0 | Replies: 0 | Published: 2017-10-07T15:09:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "derick d 🎻😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @bhaskardesigns1452 | Likes: 15 | Replies: 1 | Published: 2020-05-22T11:43:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "The View from your terrace is beautiful💓",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @abhinavmishra5522 | Likes: 2 | Replies: 0 | Published: 2020-06-21T23:24:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "It's Visakhapatnam. The view is of VUDA Kailasgiri. I stayed there for 5 years. It is indeed a beautiful place......",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @thechinmoydeka | Likes: 10 | Replies: 0 | Published: 2018-05-07T06:34:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Actually I have been doing the cylinder one from quite a while now, and found someone else also who does it.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @xplorerav | Likes: 4 | Replies: 0 | Published: 2018-01-28T21:34:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "CHAIR WAS BEST",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "AND WALING WITH CYCLINDER TOO BRO, 😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "[COMMENT 7] Author: @beeraamruth9778 | Likes: 3 | Replies: 0 | Published: 2017-06-10T07:25:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "ya, that cylinder (empty) n tables were good part of exercise for biceps. I also do my exercise at home with them. Good work team \"fit tuber\"",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "[COMMENT 8] Author: @alllies5573 | Likes: 5 | Replies: 0 | Published: 2020-02-03T06:23:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "1:18 what i feel after holding my school bag? I feels like I'm holding dumbels.😫😣😖",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "[COMMENT 9] Author: @vijayvarmabellamkonda4284 | Likes: 2 | Replies: 0 | Published: 2017-10-28T17:28:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "😁😁.. Ultimate bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 10] Author: @motorheadpriyanshu2746 | Likes: 0 | Replies: 0 | Published: 2018-04-29T16:17:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "Vivek Sir,I loved the idea of using a bag full of books as dumbells .I did a few reps with my bag full of books and I really felt the difference in my biceps.Thank you so much for such great ideas ,Vivek Sir.Love you so much.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 11] Author: @yrajasekhar1883 | Likes: 1 | Replies: 0 | Published: 2018-01-12T13:20:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "Awesome",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 12] Author: @harshallone1083 | Likes: 3 | Replies: 0 | Published: 2017-10-28T12:39:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "Thanks for your videos. working out since 1 Month, noticed a small change in my biceps. I think i should try shoulder workout also for better results. It's hard to implement diet plan because I tend to workout in morning.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "[COMMENT 13] Author: @dailypuzzlelovers | Likes: 1 | Replies: 0 | Published: 2017-12-11T04:38:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "Your ways are unique but its my personal experience that other exercises are more effective such as plank, wall pushing, pushups on punches, fingers and many others but your ways are also good if they are giving you results as the goal is neither any specific exercise nor any instruments but the correct form and the gains. All the best.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "[COMMENT 14] Author: @lionheartindian3937 | Likes: 0 | Replies: 0 | Published: 2018-02-08T08:55:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "love you bro mera bachpan yaad aa gya. ....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "[COMMENT 15] Author: @nitachaudhari9223 | Likes: 0 | Replies: 0 | Published: 2020-07-04T10:50:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "Hats off for ur Desi types",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 16] Author: @RikiSarkar9792 | Likes: 0 | Replies: 0 | Published: 2018-05-01T11:35:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "Wow yaar...It's amazing.....Full of sense in your tricks of working out....You are a passionate gyemer. I will definitely follow that tricks",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 17] Author: @durgaroshanthbora803 | Likes: 1 | Replies: 0 | Published: 2020-11-29T08:39:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "Hey it's visakhapatnam in our colony.... Wow",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 18] Author: @HKsOriginal | Likes: 0 | Replies: 0 | Published: 2017-12-07T04:39:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "Idea of bag was awesome",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 19] Author: @vardaan_agarwal | Likes: 0 | Replies: 0 | Published: 2017-06-24T08:51:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "i dont know who disliked the video ,bunch of wierdos,but u deserve a thumbs up !!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "i learned a lot of new exercises,tnx keep up the good work.....ur channel will definitely grow assuming u keep posting this sort of interesting content...(y)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 20] Author: @enigmaticambivert4767 | Likes: 0 | Replies: 0 | Published: 2020-03-13T00:36:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "Thanks man",
+              "likes": null
+            },
+            {
+              "comment_id": "c00072",
+              "author": "",
+              "text": "[COMMENT 21] Author: @adityasikka3283 | Likes: 1 | Replies: 0 | Published: 2017-12-30T16:05:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00259",
+              "author": "",
+              "text": "[COMMENT 82] Author: @nishantwilliam478 | Likes: 1 | Replies: 1 | Published: 2017-01-12T12:11:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00260",
+              "author": "",
+              "text": "my weight is 72 kgs , (earlier it was 59 kgs)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00261",
+              "author": "",
+              "text": "i want to keep my weight at 72 and increase the muscle volume",
+              "likes": null
+            },
+            {
+              "comment_id": "c00262",
+              "author": "",
+              "text": "can u suggest me proper supplements",
+              "likes": null
+            },
+            {
+              "comment_id": "c00264",
+              "author": "",
+              "text": "[COMMENT 83] Author: @ZAID9243-f1s | Likes: 0 | Replies: 0 | Published: 2023-04-24T12:20:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00265",
+              "author": "",
+              "text": "Hi are you still active? 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00267",
+              "author": "",
+              "text": "[COMMENT 84] Author: @SachinSabbarwal | Likes: 1 | Replies: 1 | Published: 2017-04-09T01:18:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00268",
+              "author": "",
+              "text": "Bro u forgot to mention a bucket full of water. We can use quarter/half/full bucket to imitate progressive overload. Can be used as a replacement to barbell curl. Thanks for making awesome stuff.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00270",
+              "author": "",
+              "text": "[COMMENT 85] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-04-09T18:00:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00271",
+              "author": "",
+              "text": "+Sachin Sabbarwal Great idea brother. Thanks for sharing :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00273",
+              "author": "",
+              "text": "[COMMENT 86] Author: @akshnair15 | Likes: 0 | Replies: 1 | Published: 2017-01-27T03:28:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00274",
+              "author": "",
+              "text": "Which will give better results? If i do my biceps daily or if I do it every alternate day.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00276",
+              "author": "",
+              "text": "[COMMENT 87] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-01-27T17:07:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00277",
+              "author": "",
+              "text": "+Akash Nair Definitely, the latter. Every muscle needs time to recovery.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00279",
+              "author": "",
+              "text": "[COMMENT 88] Author: @vishalarora5049 | Likes: 0 | Replies: 1 | Published: 2016-12-15T09:12:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00280",
+              "author": "",
+              "text": "first one is rally tough ....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00282",
+              "author": "",
+              "text": "[COMMENT 89] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2016-12-15T16:06:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00283",
+              "author": "",
+              "text": "But very effective too. Isn't it? ;)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00285",
+              "author": "",
+              "text": "[COMMENT 90] Author: @drdevil226 | Likes: 0 | Replies: 1 | Published: 2017-02-27T11:59:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00286",
+              "author": "",
+              "text": "Hi vivek, I'm not able to do more than 2-3 pushups at one go. What should I do??",
+              "likes": null
+            },
+            {
+              "comment_id": "c00288",
+              "author": "",
+              "text": "[COMMENT 91] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-02-27T16:56:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00289",
+              "author": "",
+              "text": "+Shivansh Srivastava Just 3 words. Eat healthy and practice.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00291",
+              "author": "",
+              "text": "[COMMENT 92] Author: @naturelover5796 | Likes: 0 | Replies: 0 | Published: 2019-12-08T16:11:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00292",
+              "author": "",
+              "text": "Bagal wale chat se bache.. Wo dekho... Ji... Cylinder dho rhe vivek bhyya. Ainwe hi",
+              "likes": null
+            },
+            {
+              "comment_id": "c00294",
+              "author": "",
+              "text": "[COMMENT 93] Author: @mohdsacademy1387 | Likes: 0 | Replies: 1 | Published: 2016-12-20T10:20:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00295",
+              "author": "",
+              "text": "I have 10kg dumbbells at home. Where can I put the to use?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00297",
+              "author": "",
+              "text": "[COMMENT 94] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2016-12-20T15:15:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00298",
+              "author": "",
+              "text": "+Mohd's Academy You can use them to train almost every muscle. Checkout my home workout videos for reference.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00300",
+              "author": "",
+              "text": "[COMMENT 95] Author: @sohamchakraborty9683 | Likes: 0 | Replies: 1 | Published: 2017-01-28T14:23:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00301",
+              "author": "",
+              "text": "Hii Sir , I am Soham Chakraborty, age 16 , weight 48. Yesterday I came across your channel and really got motivated. Today I tried the Chest workout . I did normal hand pushups for 10 times and then my hands started paining. I then proceeded further to Hands wide pushups and did 6 times. But , then I got too tired and hands got numb. I couldn't proceed further . What should I do now ? Stop the exercise? I am not even bulky. Please help me out Sir.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00303",
+              "author": "",
+              "text": "[COMMENT 96] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-01-28T15:44:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00304",
+              "author": "",
+              "text": "+Soham Chakraborty I won't suggest you to stop. Instead, practice regularly. Slowly, you will pick up. However, make sure you are having a protein rich diet along. Checkout my grocery shopping video for more information.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00306",
+              "author": "",
+              "text": "[COMMENT 97] Author: @cooljai565656 | Likes: 0 | Replies: 3 | Published: 2016-12-13T19:12:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00307",
+              "author": "",
+              "text": "I have 8kgs of dumbbells at home ...what kind of exercise I can do with that ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00309",
+              "author": "",
+              "text": "[COMMENT 98] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2016-12-14T15:26:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00310",
+              "author": "",
+              "text": "+abhinav shrivastava Bro you can do almost anything :) Biceps curl with single hand, double hand, concentration, hammer etc. You name it. Try varying the reps and routine for better results.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00312",
+              "author": "",
+              "text": "[COMMENT 99] Author: @cooljai565656 | Likes: 0 | Replies: 0 | Published: 2016-12-14T16:09:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00313",
+              "author": "",
+              "text": "Fit Tuber my height is 5'11\" and weight only 64, I have been trying to gain muscle and weight but I am not getting any result. help :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00315",
+              "author": "",
+              "text": "[COMMENT 100] Author: @Sydb79 | Likes: 0 | Replies: 0 | Published: 2017-08-21T16:46:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00316",
+              "author": "",
+              "text": "I would like to know how to breathe during a bicep curl, double handed triceps lift also.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00318",
+              "author": "",
+              "text": "[COMMENT 101] Author: @rishikeshrout1035 | Likes: 0 | Replies: 2 | Published: 2017-04-07T09:36:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00319",
+              "author": "",
+              "text": "Was that a full cylinder? :O",
+              "likes": null
+            },
+            {
+              "comment_id": "c00321",
+              "author": "",
+              "text": "[COMMENT 102] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-04-09T14:25:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00322",
+              "author": "",
+              "text": "+Rishikesh Rout Haha,,, Yes brother :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00324",
+              "author": "",
+              "text": "[COMMENT 103] Author: @PramodSingh-jj8ix | Likes: 0 | Replies: 0 | Published: 2017-07-11T14:03:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00325",
+              "author": "",
+              "text": "Fit Tuber 😄😄😂😂😂😄😄",
+              "likes": null
+            },
+            {
+              "comment_id": "c00327",
+              "author": "",
+              "text": "[COMMENT 104] Author: @sweetynadal9607 | Likes: 0 | Replies: 0 | Published: 2019-02-24T08:44:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00328",
+              "author": "",
+              "text": "Pora...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00330",
+              "author": "",
+              "text": "[COMMENT 105] Author: @motorheadpriyanshu2746 | Likes: 1 | Replies: 0 | Published: 2018-04-29T16:18:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00331",
+              "author": "",
+              "text": "Vivek Sir,I loved the idea of using a bag full of books as dumbells .I did a few reps with my bag full of books and I really felt the difference in my biceps.Thank you so much for such great ideas ,Vivek Sir.Love you so much.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "OZG38G2DQtY",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\BICEP WORKOUT - Workout at Home - Episode 5 - BICEPS - No Dumbbells\\BICEP WORKOUT - Workout at Home - Episode 5 - BICEPS - No Dumbbells.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\BICEP WORKOUT - Workout at Home - Episode 5 - BICEPS - No Dumbbells",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\OZG38G2DQtY",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "OZG38G2DQtY",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 225,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: OZG38G2DQtY",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 105",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @redbull9551 | Likes: 50 | Replies: 1 | Published: 2017-07-01T00:40:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "using the chairs workout is so owesome😂😂👭",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @SmartphoneHacks | Likes: 0 | Replies: 0 | Published: 2017-10-07T15:09:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "derick d 🎻😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @bhaskardesigns1452 | Likes: 15 | Replies: 1 | Published: 2020-05-22T11:43:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "The View from your terrace is beautiful💓",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @abhinavmishra5522 | Likes: 2 | Replies: 0 | Published: 2020-06-21T23:24:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "It's Visakhapatnam. The view is of VUDA Kailasgiri. I stayed there for 5 years. It is indeed a beautiful place......",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @thechinmoydeka | Likes: 10 | Replies: 0 | Published: 2018-05-07T06:34:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Actually I have been doing the cylinder one from quite a while now, and found someone else also who does it.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @xplorerav | Likes: 4 | Replies: 0 | Published: 2018-01-28T21:34:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "CHAIR WAS BEST",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "AND WALING WITH CYCLINDER TOO BRO, 😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @beeraamruth9778 | Likes: 3 | Replies: 0 | Published: 2017-06-10T07:25:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "ya, that cylinder (empty) n tables were good part of exercise for biceps. I also do my exercise at home with them. Good work team \"fit tuber\"",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @alllies5573 | Likes: 5 | Replies: 0 | Published: 2020-02-03T06:23:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "1:18 what i feel after holding my school bag? I feels like I'm holding dumbels.😫😣😖",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @vijayvarmabellamkonda4284 | Likes: 2 | Replies: 0 | Published: 2017-10-28T17:28:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "😁😁.. Ultimate bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @motorheadpriyanshu2746 | Likes: 0 | Replies: 0 | Published: 2018-04-29T16:17:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "Vivek Sir,I loved the idea of using a bag full of books as dumbells .I did a few reps with my bag full of books and I really felt the difference in my biceps.Thank you so much for such great ideas ,Vivek Sir.Love you so much.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @yrajasekhar1883 | Likes: 1 | Replies: 0 | Published: 2018-01-12T13:20:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "Awesome",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @harshallone1083 | Likes: 3 | Replies: 0 | Published: 2017-10-28T12:39:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "Thanks for your videos. working out since 1 Month, noticed a small change in my biceps. I think i should try shoulder workout also for better results. It's hard to implement diet plan because I tend to workout in morning.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @dailypuzzlelovers | Likes: 1 | Replies: 0 | Published: 2017-12-11T04:38:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "Your ways are unique but its my personal experience that other exercises are more effective such as plank, wall pushing, pushups on punches, fingers and many others but your ways are also good if they are giving you results as the goal is neither any specific exercise nor any instruments but the correct form and the gains. All the best.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @lionheartindian3937 | Likes: 0 | Replies: 0 | Published: 2018-02-08T08:55:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "love you bro mera bachpan yaad aa gya. ....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @nitachaudhari9223 | Likes: 0 | Replies: 0 | Published: 2020-07-04T10:50:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "Hats off for ur Desi types",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @RikiSarkar9792 | Likes: 0 | Replies: 0 | Published: 2018-05-01T11:35:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "Wow yaar...It's amazing.....Full of sense in your tricks of working out....You are a passionate gyemer. I will definitely follow that tricks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @durgaroshanthbora803 | Likes: 1 | Replies: 0 | Published: 2020-11-29T08:39:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "Hey it's visakhapatnam in our colony.... Wow",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @HKsOriginal | Likes: 0 | Replies: 0 | Published: 2017-12-07T04:39:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "Idea of bag was awesome",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @vardaan_agarwal | Likes: 0 | Replies: 0 | Published: 2017-06-24T08:51:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "i dont know who disliked the video ,bunch of wierdos,but u deserve a thumbs up !!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "i learned a lot of new exercises,tnx keep up the good work.....ur channel will definitely grow assuming u keep posting this sort of interesting content...(y)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @enigmaticambivert4767 | Likes: 0 | Replies: 0 | Published: 2020-03-13T00:36:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "Thanks man",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00072",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @adityasikka3283 | Likes: 1 | Replies: 0 | Published: 2017-12-30T16:05:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00259",
+                  "author": "",
+                  "text": "[COMMENT 82] Author: @nishantwilliam478 | Likes: 1 | Replies: 1 | Published: 2017-01-12T12:11:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00260",
+                  "author": "",
+                  "text": "my weight is 72 kgs , (earlier it was 59 kgs)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00261",
+                  "author": "",
+                  "text": "i want to keep my weight at 72 and increase the muscle volume",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00262",
+                  "author": "",
+                  "text": "can u suggest me proper supplements",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00264",
+                  "author": "",
+                  "text": "[COMMENT 83] Author: @ZAID9243-f1s | Likes: 0 | Replies: 0 | Published: 2023-04-24T12:20:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00265",
+                  "author": "",
+                  "text": "Hi are you still active? 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00267",
+                  "author": "",
+                  "text": "[COMMENT 84] Author: @SachinSabbarwal | Likes: 1 | Replies: 1 | Published: 2017-04-09T01:18:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00268",
+                  "author": "",
+                  "text": "Bro u forgot to mention a bucket full of water. We can use quarter/half/full bucket to imitate progressive overload. Can be used as a replacement to barbell curl. Thanks for making awesome stuff.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00270",
+                  "author": "",
+                  "text": "[COMMENT 85] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-04-09T18:00:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00271",
+                  "author": "",
+                  "text": "+Sachin Sabbarwal Great idea brother. Thanks for sharing :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00273",
+                  "author": "",
+                  "text": "[COMMENT 86] Author: @akshnair15 | Likes: 0 | Replies: 1 | Published: 2017-01-27T03:28:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00274",
+                  "author": "",
+                  "text": "Which will give better results? If i do my biceps daily or if I do it every alternate day.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00276",
+                  "author": "",
+                  "text": "[COMMENT 87] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-01-27T17:07:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00277",
+                  "author": "",
+                  "text": "+Akash Nair Definitely, the latter. Every muscle needs time to recovery.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00279",
+                  "author": "",
+                  "text": "[COMMENT 88] Author: @vishalarora5049 | Likes: 0 | Replies: 1 | Published: 2016-12-15T09:12:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00280",
+                  "author": "",
+                  "text": "first one is rally tough ....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00282",
+                  "author": "",
+                  "text": "[COMMENT 89] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2016-12-15T16:06:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00283",
+                  "author": "",
+                  "text": "But very effective too. Isn't it? ;)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00285",
+                  "author": "",
+                  "text": "[COMMENT 90] Author: @drdevil226 | Likes: 0 | Replies: 1 | Published: 2017-02-27T11:59:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00286",
+                  "author": "",
+                  "text": "Hi vivek, I'm not able to do more than 2-3 pushups at one go. What should I do??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00288",
+                  "author": "",
+                  "text": "[COMMENT 91] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-02-27T16:56:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00289",
+                  "author": "",
+                  "text": "+Shivansh Srivastava Just 3 words. Eat healthy and practice.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00291",
+                  "author": "",
+                  "text": "[COMMENT 92] Author: @naturelover5796 | Likes: 0 | Replies: 0 | Published: 2019-12-08T16:11:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00292",
+                  "author": "",
+                  "text": "Bagal wale chat se bache.. Wo dekho... Ji... Cylinder dho rhe vivek bhyya. Ainwe hi",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00294",
+                  "author": "",
+                  "text": "[COMMENT 93] Author: @mohdsacademy1387 | Likes: 0 | Replies: 1 | Published: 2016-12-20T10:20:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00295",
+                  "author": "",
+                  "text": "I have 10kg dumbbells at home. Where can I put the to use?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00297",
+                  "author": "",
+                  "text": "[COMMENT 94] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2016-12-20T15:15:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00298",
+                  "author": "",
+                  "text": "+Mohd's Academy You can use them to train almost every muscle. Checkout my home workout videos for reference.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00300",
+                  "author": "",
+                  "text": "[COMMENT 95] Author: @sohamchakraborty9683 | Likes: 0 | Replies: 1 | Published: 2017-01-28T14:23:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00301",
+                  "author": "",
+                  "text": "Hii Sir , I am Soham Chakraborty, age 16 , weight 48. Yesterday I came across your channel and really got motivated. Today I tried the Chest workout . I did normal hand pushups for 10 times and then my hands started paining. I then proceeded further to Hands wide pushups and did 6 times. But , then I got too tired and hands got numb. I couldn't proceed further . What should I do now ? Stop the exercise? I am not even bulky. Please help me out Sir.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00303",
+                  "author": "",
+                  "text": "[COMMENT 96] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-01-28T15:44:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00304",
+                  "author": "",
+                  "text": "+Soham Chakraborty I won't suggest you to stop. Instead, practice regularly. Slowly, you will pick up. However, make sure you are having a protein rich diet along. Checkout my grocery shopping video for more information.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00306",
+                  "author": "",
+                  "text": "[COMMENT 97] Author: @cooljai565656 | Likes: 0 | Replies: 3 | Published: 2016-12-13T19:12:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00307",
+                  "author": "",
+                  "text": "I have 8kgs of dumbbells at home ...what kind of exercise I can do with that ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00309",
+                  "author": "",
+                  "text": "[COMMENT 98] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2016-12-14T15:26:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00310",
+                  "author": "",
+                  "text": "+abhinav shrivastava Bro you can do almost anything :) Biceps curl with single hand, double hand, concentration, hammer etc. You name it. Try varying the reps and routine for better results.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00312",
+                  "author": "",
+                  "text": "[COMMENT 99] Author: @cooljai565656 | Likes: 0 | Replies: 0 | Published: 2016-12-14T16:09:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00313",
+                  "author": "",
+                  "text": "Fit Tuber my height is 5'11\" and weight only 64, I have been trying to gain muscle and weight but I am not getting any result. help :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00315",
+                  "author": "",
+                  "text": "[COMMENT 100] Author: @Sydb79 | Likes: 0 | Replies: 0 | Published: 2017-08-21T16:46:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00316",
+                  "author": "",
+                  "text": "I would like to know how to breathe during a bicep curl, double handed triceps lift also.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00318",
+                  "author": "",
+                  "text": "[COMMENT 101] Author: @rishikeshrout1035 | Likes: 0 | Replies: 2 | Published: 2017-04-07T09:36:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00319",
+                  "author": "",
+                  "text": "Was that a full cylinder? :O",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00321",
+                  "author": "",
+                  "text": "[COMMENT 102] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-04-09T14:25:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00322",
+                  "author": "",
+                  "text": "+Rishikesh Rout Haha,,, Yes brother :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00324",
+                  "author": "",
+                  "text": "[COMMENT 103] Author: @PramodSingh-jj8ix | Likes: 0 | Replies: 0 | Published: 2017-07-11T14:03:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00325",
+                  "author": "",
+                  "text": "Fit Tuber 😄😄😂😂😂😄😄",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00327",
+                  "author": "",
+                  "text": "[COMMENT 104] Author: @sweetynadal9607 | Likes: 0 | Replies: 0 | Published: 2019-02-24T08:44:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00328",
+                  "author": "",
+                  "text": "Pora...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00330",
+                  "author": "",
+                  "text": "[COMMENT 105] Author: @motorheadpriyanshu2746 | Likes: 1 | Replies: 0 | Published: 2018-04-29T16:18:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00331",
+                  "author": "",
+                  "text": "Vivek Sir,I loved the idea of using a bag full of books as dumbells .I did a few reps with my bag full of books and I really felt the difference in my biceps.Thank you so much for such great ideas ,Vivek Sir.Love you so much.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "OZG38G2DQtY",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 225,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: OZG38G2DQtY",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 105",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @redbull9551 | Likes: 50 | Replies: 1 | Published: 2017-07-01T00:40:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "using the chairs workout is so owesome😂😂👭",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @SmartphoneHacks | Likes: 0 | Replies: 0 | Published: 2017-10-07T15:09:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "derick d 🎻😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @bhaskardesigns1452 | Likes: 15 | Replies: 1 | Published: 2020-05-22T11:43:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "The View from your terrace is beautiful💓",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @abhinavmishra5522 | Likes: 2 | Replies: 0 | Published: 2020-06-21T23:24:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "It's Visakhapatnam. The view is of VUDA Kailasgiri. I stayed there for 5 years. It is indeed a beautiful place......",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @thechinmoydeka | Likes: 10 | Replies: 0 | Published: 2018-05-07T06:34:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Actually I have been doing the cylinder one from quite a while now, and found someone else also who does it.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @xplorerav | Likes: 4 | Replies: 0 | Published: 2018-01-28T21:34:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "CHAIR WAS BEST",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "AND WALING WITH CYCLINDER TOO BRO, 😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "[COMMENT 7] Author: @beeraamruth9778 | Likes: 3 | Replies: 0 | Published: 2017-06-10T07:25:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "ya, that cylinder (empty) n tables were good part of exercise for biceps. I also do my exercise at home with them. Good work team \"fit tuber\"",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "[COMMENT 8] Author: @alllies5573 | Likes: 5 | Replies: 0 | Published: 2020-02-03T06:23:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "1:18 what i feel after holding my school bag? I feels like I'm holding dumbels.😫😣😖",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "[COMMENT 9] Author: @vijayvarmabellamkonda4284 | Likes: 2 | Replies: 0 | Published: 2017-10-28T17:28:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "😁😁.. Ultimate bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 10] Author: @motorheadpriyanshu2746 | Likes: 0 | Replies: 0 | Published: 2018-04-29T16:17:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "Vivek Sir,I loved the idea of using a bag full of books as dumbells .I did a few reps with my bag full of books and I really felt the difference in my biceps.Thank you so much for such great ideas ,Vivek Sir.Love you so much.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 11] Author: @yrajasekhar1883 | Likes: 1 | Replies: 0 | Published: 2018-01-12T13:20:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "Awesome",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 12] Author: @harshallone1083 | Likes: 3 | Replies: 0 | Published: 2017-10-28T12:39:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "Thanks for your videos. working out since 1 Month, noticed a small change in my biceps. I think i should try shoulder workout also for better results. It's hard to implement diet plan because I tend to workout in morning.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "[COMMENT 13] Author: @dailypuzzlelovers | Likes: 1 | Replies: 0 | Published: 2017-12-11T04:38:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "Your ways are unique but its my personal experience that other exercises are more effective such as plank, wall pushing, pushups on punches, fingers and many others but your ways are also good if they are giving you results as the goal is neither any specific exercise nor any instruments but the correct form and the gains. All the best.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "[COMMENT 14] Author: @lionheartindian3937 | Likes: 0 | Replies: 0 | Published: 2018-02-08T08:55:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "love you bro mera bachpan yaad aa gya. ....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "[COMMENT 15] Author: @nitachaudhari9223 | Likes: 0 | Replies: 0 | Published: 2020-07-04T10:50:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "Hats off for ur Desi types",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 16] Author: @RikiSarkar9792 | Likes: 0 | Replies: 0 | Published: 2018-05-01T11:35:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "Wow yaar...It's amazing.....Full of sense in your tricks of working out....You are a passionate gyemer. I will definitely follow that tricks",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 17] Author: @durgaroshanthbora803 | Likes: 1 | Replies: 0 | Published: 2020-11-29T08:39:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "Hey it's visakhapatnam in our colony.... Wow",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 18] Author: @HKsOriginal | Likes: 0 | Replies: 0 | Published: 2017-12-07T04:39:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "Idea of bag was awesome",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 19] Author: @vardaan_agarwal | Likes: 0 | Replies: 0 | Published: 2017-06-24T08:51:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "i dont know who disliked the video ,bunch of wierdos,but u deserve a thumbs up !!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "i learned a lot of new exercises,tnx keep up the good work.....ur channel will definitely grow assuming u keep posting this sort of interesting content...(y)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 20] Author: @enigmaticambivert4767 | Likes: 0 | Replies: 0 | Published: 2020-03-13T00:36:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "Thanks man",
+                "likes": null
+              },
+              {
+                "comment_id": "c00072",
+                "author": "",
+                "text": "[COMMENT 21] Author: @adityasikka3283 | Likes: 1 | Replies: 0 | Published: 2017-12-30T16:05:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00259",
+                "author": "",
+                "text": "[COMMENT 82] Author: @nishantwilliam478 | Likes: 1 | Replies: 1 | Published: 2017-01-12T12:11:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00260",
+                "author": "",
+                "text": "my weight is 72 kgs , (earlier it was 59 kgs)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00261",
+                "author": "",
+                "text": "i want to keep my weight at 72 and increase the muscle volume",
+                "likes": null
+              },
+              {
+                "comment_id": "c00262",
+                "author": "",
+                "text": "can u suggest me proper supplements",
+                "likes": null
+              },
+              {
+                "comment_id": "c00264",
+                "author": "",
+                "text": "[COMMENT 83] Author: @ZAID9243-f1s | Likes: 0 | Replies: 0 | Published: 2023-04-24T12:20:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00265",
+                "author": "",
+                "text": "Hi are you still active? 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00267",
+                "author": "",
+                "text": "[COMMENT 84] Author: @SachinSabbarwal | Likes: 1 | Replies: 1 | Published: 2017-04-09T01:18:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00268",
+                "author": "",
+                "text": "Bro u forgot to mention a bucket full of water. We can use quarter/half/full bucket to imitate progressive overload. Can be used as a replacement to barbell curl. Thanks for making awesome stuff.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00270",
+                "author": "",
+                "text": "[COMMENT 85] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-04-09T18:00:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00271",
+                "author": "",
+                "text": "+Sachin Sabbarwal Great idea brother. Thanks for sharing :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00273",
+                "author": "",
+                "text": "[COMMENT 86] Author: @akshnair15 | Likes: 0 | Replies: 1 | Published: 2017-01-27T03:28:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00274",
+                "author": "",
+                "text": "Which will give better results? If i do my biceps daily or if I do it every alternate day.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00276",
+                "author": "",
+                "text": "[COMMENT 87] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-01-27T17:07:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00277",
+                "author": "",
+                "text": "+Akash Nair Definitely, the latter. Every muscle needs time to recovery.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00279",
+                "author": "",
+                "text": "[COMMENT 88] Author: @vishalarora5049 | Likes: 0 | Replies: 1 | Published: 2016-12-15T09:12:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00280",
+                "author": "",
+                "text": "first one is rally tough ....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00282",
+                "author": "",
+                "text": "[COMMENT 89] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2016-12-15T16:06:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00283",
+                "author": "",
+                "text": "But very effective too. Isn't it? ;)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00285",
+                "author": "",
+                "text": "[COMMENT 90] Author: @drdevil226 | Likes: 0 | Replies: 1 | Published: 2017-02-27T11:59:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00286",
+                "author": "",
+                "text": "Hi vivek, I'm not able to do more than 2-3 pushups at one go. What should I do??",
+                "likes": null
+              },
+              {
+                "comment_id": "c00288",
+                "author": "",
+                "text": "[COMMENT 91] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-02-27T16:56:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00289",
+                "author": "",
+                "text": "+Shivansh Srivastava Just 3 words. Eat healthy and practice.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00291",
+                "author": "",
+                "text": "[COMMENT 92] Author: @naturelover5796 | Likes: 0 | Replies: 0 | Published: 2019-12-08T16:11:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00292",
+                "author": "",
+                "text": "Bagal wale chat se bache.. Wo dekho... Ji... Cylinder dho rhe vivek bhyya. Ainwe hi",
+                "likes": null
+              },
+              {
+                "comment_id": "c00294",
+                "author": "",
+                "text": "[COMMENT 93] Author: @mohdsacademy1387 | Likes: 0 | Replies: 1 | Published: 2016-12-20T10:20:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00295",
+                "author": "",
+                "text": "I have 10kg dumbbells at home. Where can I put the to use?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00297",
+                "author": "",
+                "text": "[COMMENT 94] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2016-12-20T15:15:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00298",
+                "author": "",
+                "text": "+Mohd's Academy You can use them to train almost every muscle. Checkout my home workout videos for reference.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00300",
+                "author": "",
+                "text": "[COMMENT 95] Author: @sohamchakraborty9683 | Likes: 0 | Replies: 1 | Published: 2017-01-28T14:23:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00301",
+                "author": "",
+                "text": "Hii Sir , I am Soham Chakraborty, age 16 , weight 48. Yesterday I came across your channel and really got motivated. Today I tried the Chest workout . I did normal hand pushups for 10 times and then my hands started paining. I then proceeded further to Hands wide pushups and did 6 times. But , then I got too tired and hands got numb. I couldn't proceed further . What should I do now ? Stop the exercise? I am not even bulky. Please help me out Sir.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00303",
+                "author": "",
+                "text": "[COMMENT 96] Author: @FitTuber | Likes: 2 | Replies: 0 | Published: 2017-01-28T15:44:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00304",
+                "author": "",
+                "text": "+Soham Chakraborty I won't suggest you to stop. Instead, practice regularly. Slowly, you will pick up. However, make sure you are having a protein rich diet along. Checkout my grocery shopping video for more information.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00306",
+                "author": "",
+                "text": "[COMMENT 97] Author: @cooljai565656 | Likes: 0 | Replies: 3 | Published: 2016-12-13T19:12:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00307",
+                "author": "",
+                "text": "I have 8kgs of dumbbells at home ...what kind of exercise I can do with that ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00309",
+                "author": "",
+                "text": "[COMMENT 98] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2016-12-14T15:26:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00310",
+                "author": "",
+                "text": "+abhinav shrivastava Bro you can do almost anything :) Biceps curl with single hand, double hand, concentration, hammer etc. You name it. Try varying the reps and routine for better results.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00312",
+                "author": "",
+                "text": "[COMMENT 99] Author: @cooljai565656 | Likes: 0 | Replies: 0 | Published: 2016-12-14T16:09:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00313",
+                "author": "",
+                "text": "Fit Tuber my height is 5'11\" and weight only 64, I have been trying to gain muscle and weight but I am not getting any result. help :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00315",
+                "author": "",
+                "text": "[COMMENT 100] Author: @Sydb79 | Likes: 0 | Replies: 0 | Published: 2017-08-21T16:46:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00316",
+                "author": "",
+                "text": "I would like to know how to breathe during a bicep curl, double handed triceps lift also.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00318",
+                "author": "",
+                "text": "[COMMENT 101] Author: @rishikeshrout1035 | Likes: 0 | Replies: 2 | Published: 2017-04-07T09:36:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00319",
+                "author": "",
+                "text": "Was that a full cylinder? :O",
+                "likes": null
+              },
+              {
+                "comment_id": "c00321",
+                "author": "",
+                "text": "[COMMENT 102] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-04-09T14:25:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00322",
+                "author": "",
+                "text": "+Rishikesh Rout Haha,,, Yes brother :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00324",
+                "author": "",
+                "text": "[COMMENT 103] Author: @PramodSingh-jj8ix | Likes: 0 | Replies: 0 | Published: 2017-07-11T14:03:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00325",
+                "author": "",
+                "text": "Fit Tuber 😄😄😂😂😂😄😄",
+                "likes": null
+              },
+              {
+                "comment_id": "c00327",
+                "author": "",
+                "text": "[COMMENT 104] Author: @sweetynadal9607 | Likes: 0 | Replies: 0 | Published: 2019-02-24T08:44:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00328",
+                "author": "",
+                "text": "Pora...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00330",
+                "author": "",
+                "text": "[COMMENT 105] Author: @motorheadpriyanshu2746 | Likes: 1 | Replies: 0 | Published: 2018-04-29T16:18:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00331",
+                "author": "",
+                "text": "Vivek Sir,I loved the idea of using a bag full of books as dumbells .I did a few reps with my bag full of books and I really felt the difference in my biceps.Thank you so much for such great ideas ,Vivek Sir.Love you so much.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

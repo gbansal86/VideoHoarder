@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090706_711e25",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "FULL_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090706_711e25",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Liver health and cleansing",
+      "batch_number": 47,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "batch_instruction": "This is independently importable batch 47 of 71 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260904_090706_711e25",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260904_090706_711e25"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090706_711e25",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Liver health and cleansing",
+      "batch_number": 47,
+      "batch_total": 71,
+      "batch_size": 12
+    }
+  },
+  "manifest": {
+    "request_id": "2da7414a-c487-42fc-9c15-3f099a0034d2",
+    "package_id": "vh_full_intelligence_20260904_090706_711e25",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "7YwsUAcMX60"
+    ],
+    "evidence_grades": {
+      "7YwsUAcMX60": "A"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Liver health and cleansing",
+      "batch_number": 47,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "hashes": {
+      "evidence.json": "1ae33de3a67eda1a354f74f1d6486e2f0c5e9fde29201cf882be141c670e1f4d",
+      "prompt.json": "588cf1c5eb29bb5cb04eadb3dea265ce2a99d70a860ef6da78cdb09d5967d9ba",
+      "schema.json": "b0c287d19cce5503121ad093838a68f71ee7a9e68c31cd63e648f90d6d98e102"
+    },
+    "created_at": "2026-09-04 09:07:06",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "7YwsUAcMX60",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=7YwsUAcMX60",
+        "original_title": "How to Cleanse Your Liver Naturally?",
+        "clean_title": "How to Cleanse Your Liver Naturally",
+        "channel": "Fit Tuber",
+        "upload_date": "2021-09-10",
+        "description": "3 Amazing Ways to Cleanse your Liver naturally at home\n\nBuy Mamaearth Tea Tree Hair Mask - https://bit.ly/3A93p53\n(Apply code FITTUBER21 to get 21% off)\nBuy from Amazon - https://amzn.to/38sbwhm\n\nIn this video, we will discuss why our liver gets toxic, the clear signs that our body gives, best foods and the 3 most effective ways as mentioned in the Ayurvedic scriptures to cleanse the liver without much effort. \n\n01:30 - Why is Liver health important?\n02:04 - How do we know if our liver function is compromised?\n03:06 - Why does our liver get toxic?\n03:56 - How do we cleanse or detox the liver naturally?\n04:15 - 3 Easy ways to cleanse the liver at home\n06:34 - Certain Foods that are Amazing for the liver\n07:03 - Easy and Effective Lifestyle changes that help the liver\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nBhringrajasava (option 1) - https://amzn.to/3jv6ZAV\nBhringrajasava (option 2) - https://amzn.to/3gKTA62\nKutki (option 1, powder) - https://amzn.to/3gOB5O9\nKutki (option 2, powder) - https://amzn.to/3t0rSah\nKutki (option 1, whole) - https://amzn.to/3BqqBMH\nKutki (option 2, whole) - https://amzn.to/3jqYBT8\nHoney (option 1, NMR tested as claimed by the brand) - https://amzn.to/3juLlwX\nHoney (option 2, NMR tested as claimed by the brand) - https://amzn.to/3DqPqtX\n\n✅  SUPPORT MY WORK and get exclusive perks \nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\nHow to Purify Your Blood Naturally?\nhttps://youtu.be/WYt9VnY6PmY\n5 Amazing Ways to Reduce Body Heat (Hairfall, Pimples, Acidity)\nhttps://youtu.be/Yq0cuX__wck\n15 Min Daily Yoga Routine for Beginners (Follow Along)\nhttps://youtu.be/s2NQhpFGIOg\n30 Min Daily Yoga Routine for Beginners (Follow Along)\nhttps://youtu.be/dAqQqmaI9vY\nHow to ACTUALLY Remove Pesticides from Fruits & Vegetables (Practical Solution)\nhttps://youtu.be/Qn2AjYZZo-8\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n08:10 - #partnership with Mamaearth \n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the products mentioned is sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits: YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "high",
+          "completeness": "complete",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:13] [Music] foreign [00:00:30] [Music] [00:01:14] in this video we will discuss why our liver gets toxic the clear signs that our body gives the best foods and the three most effective ways as mentioned in the ayurvedic scriptures to cleanse the liver without much effort so without any further delay let's get started [00:01:31] [Music] hello friends welcome to fitness foremost we must know why is liver health important consider a cloth that you use for daily cleaning if it is overloaded with dirt at some point it would need a cleanse to work effectively [00:01:47] similarly the liver is a detoxifying organ in the body that converts toxins into waste materials which then get eliminated through different channels so if liver function is compromised toxins get accumulated which then become the reason for various acute and chronic [00:02:03] health problems how do we know if our liver function is compromised liver is one of the most hard working organs in the body with over 500 functions attributed to its name being such a vital organ any problem in the liver body is proactive enough to show signs [00:02:19] and signals most common being pigmentation on skin and premature graying of hair this clearly shows excess heat in the liver an important function of the liver is to break down fat so if you have gained weight or have reached a weight loss plateau you might [00:02:35] just need a liver cleanse liver is the storehouse of iron so if you are anemic you need to focus on your liver other important warning signs include chronic fatigue bad breath yellowish appearance of skin and eyes dark yellow urine loss [00:02:50] of appetite swelling in legs and other body parts high triglyceride levels skin that feels itchy allergies of food and skin pale or orangish color of stool and the tendency to bruise easily if not acted upon this can cause major damage [00:03:06] to the body so why does our liver get toxic even though the liver is quite resilient if it gets overburdened it loses its efficiency a lot of factors contribute other than air and water pollution binge drinking smoking pesticides in food over medication usage [00:03:24] of refined oils for cooking excessive indulgence in preservative laden packaged foods refined sugary foods non-vegetarian food fatty foods overload the liver basically the more toxins you expose your body to the harder it will be for your liver to detoxify then every [00:03:41] time you get angry or irritated your liver has to pay the price as anger is closely related to the health of your liver it's a known fact that our body detoxifies during deep sleep compromising on sleep doesn't give an opportunity for the liver to recharge so [00:03:56] how do you cleanse the liver it's simple reduce the toxic overload and your liver is capable enough to rejuvenate itself this can be done by eradicating the causal factors as much as possible ayurvedic scriptures elaborately talk about various herbs and concoctions that [00:04:12] can rejuvenate the liver within a few days out of so many i have selected three ways which are easy practical and effective first one is simply to have a glass of fresh sugar juice on an empty stomach continuously for about 15 days fresh sugarcane is a boon to strengthen [00:04:29] the liver no wonder it is recommended by doctors during jaundice the antioxidants in sugarcane juice protect the liver against infection and maintain the bilirubin levels in control it gets even better with added ginger and lemon juice you can have it one hour before [00:04:45] breakfast in the morning or in the evening two to three hours after lunch avoid it post sunset at such an economical price it's not only tasty but also easily available all round the year the second option is bring rajasurf a classical formulation prepared using [00:05:02] bringraj haritaki thai pool narcer and others it is well known to reverse hair and skin problems that's because its direct action is on the liver in fact studies have proven bringrash to be more potent in preventing liver damage than milk thistle seeds which are among the [00:05:18] most popular liver detox supplements in the market and it is way cheaper you need to take 4 teaspoons of brangra serve with 4 teaspoons of water once a day 30 minutes after breakfast or lunch you can buy any reputed brand it is easily available online and offline just [00:05:36] one bottle is good enough to bring your liver back to action easy to digest more penetrating and without any side effects it can give a run for their money to most liver detox syrups in the market then the third option is to have kutki bitter and taste cooling cleansing and [00:05:52] anti-microbial powerhouse kutki is one of the best herbs for liver in ayurveda in an interesting study a bunch of rodents were given a liver damaging agent later with a small dose of cookie powder their liver was found to be significantly healed kurti is so [00:06:08] effective that it is often prescribed to treat even the most advanced liver disorders at the same time it is safe and has no side effects you just need to take half teaspoon of cookie powder with half teaspoon of honey 1 hour before breakfast have it daily for 15 days for [00:06:24] a deep cleanse each of these three remedies is powerful in its own aspect you can choose as per your convenience eating fresh homely food keeps liver health in check however you must also know the best foods for your liver turmeric is among the top foods other [00:06:40] foods like fenugreek seeds ginger and jaggery are also great for the liver in fruits grapes pears lemon coconut and amla are highly beneficial then high fiber foods like whole grains leafy vegetables nuts and seeds help cleanse [00:06:56] the liver beet root and carrots in any form are rejuvenating for the liver to eliminate the causal factors there are a few things that can be done soak fruits and vegetables in baking soda solution to remove pesticides start using traditional cold pressed oils for [00:07:11] cooking practice a minimum 15 minutes of yoga daily to stay calm and happy avoid foods that play havoc with the liver start using cast iron utensils for cooking to optimize liver health to sum up try to reduce the toxic overload on your liver as much as possible include [00:07:29] foods that will help strengthen your liver do not compromise on your sleep then pick any one of these three remedies as per your preference when it comes to fighting toxins out the liver is our best friend so it is paramount that we take good care of it following [00:07:44] the above your liver will renew and you will feel lighter energetic your hormones will come in place the body will absorb the nutrients better weight loss will become easier immunity will improve and you will experience a heightened state of health all the [00:07:59] products mentioned in the video can easily be bought offline although for your convenience i have linked them in the description box if you found this video helpful please do give a thumbs up looking for a toxin-free hair mask suffering from dandruff and itchy scalp get your hands on mama earth's tea tree [00:08:16] hair mask with the goodness of tea tree argan and lemon oil this hair mask is free from all harsh chemicals no sulphates no parabens no silicones no edtas artificial fragrances or cosmetic colors to use it simply part your hair [00:08:32] in two halves take a generous amount of this hair mask and apply an adequate quantity to wet hair and scalp leave the mask on for 10 to 15 minutes before washing it off with a toxin-free shampoo for best results use two to three times a week mama earth's tea tree hair mask [00:08:48] is suitable for men and women of all hair types to buy it click on the link down in the description box do not forget to apply the special discount coupon to get 21 off on your order so friends that's all for this video you can now support my work by clicking on the join button below please do remember [00:09:04] to subscribe to my channel hit that bell icon so that you never miss a video from me you can also follow me on instagram my name is vivek i thank you so much for watching [Music]"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1172,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: 7YwsUAcMX60",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @baburaju30 | Likes: 2867 | Replies: 192 | Published: 2021-09-27T16:59:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "My dad got stage 4 liver cancer. Being with him is so tough. Whenever I see him, I cry a lot. Only some months. So, please guys check ur parents health. And be kinder to them",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @vrushaligharad3398 | Likes: 83 | Replies: 0 | Published: 2021-10-02T17:05:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "God bless your family",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @buddha9822 | Likes: 74 | Replies: 0 | Published: 2021-10-09T03:38:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Me prathna karta hoon aapke papa jaldi thik ho jaye",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @baburaju30 | Likes: 12 | Replies: 0 | Published: 2021-10-09T03:54:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "@buddha9822 I don't know hindi",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @buddha9822 | Likes: 70 | Replies: 0 | Published: 2021-10-09T04:06:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "@baburaju30 I am praying for your dad will recover soon and live healthy life",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @baburaju30 | Likes: 20 | Replies: 0 | Published: 2021-10-09T04:30:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "@buddha9822 thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @priyankarathore571 | Likes: 3388 | Replies: 76 | Published: 2021-09-20T19:31:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "This guy reads numerous books for research just to make sure he doesn’t promote wrong products.We should appreciate his genuine efforts……..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @drkapish2964 | Likes: 27 | Replies: 0 | Published: 2021-10-07T14:25:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "madam doctors actually pass multiple exams by reading numerous books their whole life ...he is a quack who just wants to earn money by promo or youtube ,pls dont support such persons",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @nitinverma5994 | Likes: 51 | Replies: 0 | Published: 2021-10-10T20:05:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "@drkapish2964 wtf are you doing at his channel?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "And what's wrong if he wants to earn?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "[COMMENT 10] Author: @mukesh3931 | Likes: 16 | Replies: 0 | Published: 2021-10-12T17:21:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "@nitinverma5994I agree with you sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "[COMMENT 11] Author: @danyvarghese12 | Likes: 7 | Replies: 0 | Published: 2021-10-18T19:59:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "Except a detoxing is a myth",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "[COMMENT 12] Author: @drkirasha | Likes: 17 | Replies: 0 | Published: 2021-10-20T10:41:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "But he should not give advice on subjects he is not expert in. Let doctors do the job . Plus liver don’t need any detox. It is created to detox body itself.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "[COMMENT 13] Author: @music4sph | Likes: 2041 | Replies: 26 | Published: 2021-09-10T14:58:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "Nobody :",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "Not even me :",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Fittuber : drinks Kadha in the name of Patiala Peg 😂😅",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 14] Author: @AfrahAfzal1997 | Likes: 55 | Replies: 0 | Published: 2021-09-10T16:08:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "But he did eat the burger and samosa for the video",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 15] Author: @music4sph | Likes: 47 | Replies: 0 | Published: 2021-09-10T16:17:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "@AfrahAfzal1997 Pura thodi na khaya....sirf ek ek bite khaya... Pura khaye toh maan jaye 😅😅",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 16] Author: @agamsharma2941 | Likes: 35 | Replies: 0 | Published: 2021-09-10T17:39:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Triphala piya hoga, peg ke naam pe, wo bhi karwa hota hai😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 17] Author: @luvsuneja | Likes: 15 | Replies: 0 | Published: 2021-09-11T01:17:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "I doubt he knows what is a Patiala Peg 😜",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "[COMMENT 18] Author: @abhishekraj4635 | Likes: 10 | Replies: 0 | Published: 2021-09-11T02:48:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "@luvsuneja even i don't know neither any brand except kingfisher ib",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "[COMMENT 19] Author: @villageboy7731 | Likes: 381 | Replies: 4 | Published: 2023-05-21T04:51:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "1. Have sugarcane juice, 1 hour before breakfast in the morning or in the evening 2-3 hours after the lunch.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "2. Bhringrajasava of any reputed brand.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "3. Half teaspoon of Kutki powder with half teaspoon of honey 1hr before breakfast.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "fit tuber you should make video about liver fat also as many people are suffering from it",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "[COMMENT 479] Author: @jimmykundan1075 | Likes: 0 | Replies: 0 | Published: 2024-01-14T19:08:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "VERY HELPFULL VIDEO",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "GOD BLESS YOU FIT TUBER....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "Is Psoriasis also because of liver condition?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "Reply please if you know....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "[COMMENT 480] Author: @prettyg6076 | Likes: 0 | Replies: 0 | Published: 2023-02-27T23:11:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "Hi, Please make a video on Sarcoidosis topic if possible.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "[COMMENT 481] Author: @noamkurulkar2587 | Likes: 0 | Replies: 0 | Published: 2023-07-20T20:15:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "Hi you are amazing. Those who are pollen allergic can they consume bhringhrajasva?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "[COMMENT 482] Author: @alakasaha6293 | Likes: 0 | Replies: 0 | Published: 2022-08-04T17:33:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "Please make a video on fatty liver and liver enzyme. Please also tell about how to reduce high sgpt and sgot level of liver. Please help.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 483] Author: @anugupta5241 | Likes: 0 | Replies: 0 | Published: 2023-07-16T11:17:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Pls pls pls make a video about extreme hairfall and dandruff in teenage boys ....will always grateful to u...please🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "[COMMENT 484] Author: @SarmisthasLifestyle | Likes: 0 | Replies: 0 | Published: 2022-07-26T02:43:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "Thanks for your valuable video.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "[COMMENT 485] Author: @krishnagarg221 | Likes: 0 | Replies: 0 | Published: 2023-09-20T13:58:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "You are a real gem, keep doing good work...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01662",
+              "author": "",
+              "text": "[COMMENT 486] Author: @ishikajain1114 | Likes: 0 | Replies: 0 | Published: 2022-08-30T06:14:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "Hi @Fit Tuber, does liver get affected if anybody has too much content of green tea in one glass? Or does having a huge content of caffeine based green tea causes any healthy issues? Please let me know.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01665",
+              "author": "",
+              "text": "[COMMENT 487] Author: @knowledgehindiking | Likes: 0 | Replies: 0 | Published: 2022-07-29T07:40:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "Thanku bhai.very very thanku",
+              "likes": null
+            },
+            {
+              "comment_id": "c01668",
+              "author": "",
+              "text": "[COMMENT 488] Author: @orbitmotivationwellness5495 | Likes: 0 | Replies: 0 | Published: 2022-09-29T16:13:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "Very informative.... Thanks a lot",
+              "likes": null
+            },
+            {
+              "comment_id": "c01671",
+              "author": "",
+              "text": "[COMMENT 489] Author: @samrarafi2137 | Likes: 0 | Replies: 0 | Published: 2026-01-07T17:44:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "Thank u so much ...this video is very helpful .",
+              "likes": null
+            },
+            {
+              "comment_id": "c01674",
+              "author": "",
+              "text": "[COMMENT 490] Author: @starz9527 | Likes: 0 | Replies: 0 | Published: 2023-11-30T14:05:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "Yyyesss Brother so true Parents Respect them when they are older in age",
+              "likes": null
+            },
+            {
+              "comment_id": "c01677",
+              "author": "",
+              "text": "[COMMENT 491] Author: @vinayakmane9237 | Likes: 0 | Replies: 0 | Published: 2022-09-14T15:14:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "Hello Vivek Sir. Please make video on complete diabetic care",
+              "likes": null
+            },
+            {
+              "comment_id": "c01680",
+              "author": "",
+              "text": "[COMMENT 492] Author: @AbsolutelyAJYoutube | Likes: 0 | Replies: 0 | Published: 2022-11-29T08:16:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "Very nice video, thanks for creating it.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01683",
+              "author": "",
+              "text": "[COMMENT 493] Author: @leslieanndimaano164 | Likes: 0 | Replies: 0 | Published: 2025-08-26T12:10:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "I saw that kind symptoms in my daddy🥺🥺🥺",
+              "likes": null
+            },
+            {
+              "comment_id": "c01686",
+              "author": "",
+              "text": "Thank you for information ♥️😇",
+              "likes": null
+            },
+            {
+              "comment_id": "c01688",
+              "author": "",
+              "text": "[COMMENT 494] Author: @84musty | Likes: 0 | Replies: 0 | Published: 2023-04-02T19:57:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01689",
+              "author": "",
+              "text": "Thankyou Bhai...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01690",
+              "author": "",
+              "text": "All the best from 🇵🇰",
+              "likes": null
+            },
+            {
+              "comment_id": "c01692",
+              "author": "",
+              "text": "[COMMENT 495] Author: @zoya7091 | Likes: 0 | Replies: 0 | Published: 2023-05-24T20:44:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01693",
+              "author": "",
+              "text": "Please make a video on preventing or curing sugar ( diabetes) please",
+              "likes": null
+            },
+            {
+              "comment_id": "c01695",
+              "author": "",
+              "text": "[COMMENT 496] Author: @merukasharma1399 | Likes: 0 | Replies: 0 | Published: 2022-09-14T17:18:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01696",
+              "author": "",
+              "text": "Thanks... important info....need it",
+              "likes": null
+            },
+            {
+              "comment_id": "c01698",
+              "author": "",
+              "text": "[COMMENT 497] Author: @Kdavi2612 | Likes: 0 | Replies: 0 | Published: 2023-09-14T14:01:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01699",
+              "author": "",
+              "text": "Your opener always cracks me up",
+              "likes": null
+            },
+            {
+              "comment_id": "c01701",
+              "author": "",
+              "text": "[COMMENT 498] Author: @ananddeshmukh4939 | Likes: 0 | Replies: 0 | Published: 2023-05-29T01:09:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01702",
+              "author": "",
+              "text": "Thank you is so small for your efforts",
+              "likes": null
+            },
+            {
+              "comment_id": "c01704",
+              "author": "",
+              "text": "[COMMENT 499] Author: @suchishyam6811 | Likes: 0 | Replies: 0 | Published: 2023-09-25T17:19:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01705",
+              "author": "",
+              "text": "Hi bro please upload video on grade 2 fatty liver and remedies to reverse.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01707",
+              "author": "",
+              "text": "[COMMENT 500] Author: @aajena4420 | Likes: 0 | Replies: 0 | Published: 2023-03-06T10:26:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01708",
+              "author": "",
+              "text": "Much needed video...thank you",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "7YwsUAcMX60",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Cleanse Your Liver Naturally\\How to Cleanse Your Liver Naturally.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Cleanse Your Liver Naturally",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\7YwsUAcMX60",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "7YwsUAcMX60",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "high",
+            "transcript_completeness": "complete",
+            "timestamp_count": 32,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 8182,
+            "transcript_words": 1516,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "A",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "high",
+              "completeness": "complete",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:13] [Music] foreign [00:00:30] [Music] [00:01:14] in this video we will discuss why our liver gets toxic the clear signs that our body gives the best foods and the three most effective ways as mentioned in the ayurvedic scriptures to cleanse the liver without much effort so without any further delay let's get started [00:01:31] [Music] hello friends welcome to fitness foremost we must know why is liver health important consider a cloth that you use for daily cleaning if it is overloaded with dirt at some point it would need a cleanse to work effectively [00:01:47] similarly the liver is a detoxifying organ in the body that converts toxins into waste materials which then get eliminated through different channels so if liver function is compromised toxins get accumulated which then become the reason for various acute and chronic [00:02:03] health problems how do we know if our liver function is compromised liver is one of the most hard working organs in the body with over 500 functions attributed to its name being such a vital organ any problem in the liver body is proactive enough to show signs [00:02:19] and signals most common being pigmentation on skin and premature graying of hair this clearly shows excess heat in the liver an important function of the liver is to break down fat so if you have gained weight or have reached a weight loss plateau you might [00:02:35] just need a liver cleanse liver is the storehouse of iron so if you are anemic you need to focus on your liver other important warning signs include chronic fatigue bad breath yellowish appearance of skin and eyes dark yellow urine loss [00:02:50] of appetite swelling in legs and other body parts high triglyceride levels skin that feels itchy allergies of food and skin pale or orangish color of stool and the tendency to bruise easily if not acted upon this can cause major damage [00:03:06] to the body so why does our liver get toxic even though the liver is quite resilient if it gets overburdened it loses its efficiency a lot of factors contribute other than air and water pollution binge drinking smoking pesticides in food over medication usage [00:03:24] of refined oils for cooking excessive indulgence in preservative laden packaged foods refined sugary foods non-vegetarian food fatty foods overload the liver basically the more toxins you expose your body to the harder it will be for your liver to detoxify then every [00:03:41] time you get angry or irritated your liver has to pay the price as anger is closely related to the health of your liver it's a known fact that our body detoxifies during deep sleep compromising on sleep doesn't give an opportunity for the liver to recharge so [00:03:56] how do you cleanse the liver it's simple reduce the toxic overload and your liver is capable enough to rejuvenate itself this can be done by eradicating the causal factors as much as possible ayurvedic scriptures elaborately talk about various herbs and concoctions that [00:04:12] can rejuvenate the liver within a few days out of so many i have selected three ways which are easy practical and effective first one is simply to have a glass of fresh sugar juice on an empty stomach continuously for about 15 days fresh sugarcane is a boon to strengthen [00:04:29] the liver no wonder it is recommended by doctors during jaundice the antioxidants in sugarcane juice protect the liver against infection and maintain the bilirubin levels in control it gets even better with added ginger and lemon juice you can have it one hour before [00:04:45] breakfast in the morning or in the evening two to three hours after lunch avoid it post sunset at such an economical price it's not only tasty but also easily available all round the year the second option is bring rajasurf a classical formulation prepared using [00:05:02] bringraj haritaki thai pool narcer and others it is well known to reverse hair and skin problems that's because its direct action is on the liver in fact studies have proven bringrash to be more potent in preventing liver damage than milk thistle seeds which are among the [00:05:18] most popular liver detox supplements in the market and it is way cheaper you need to take 4 teaspoons of brangra serve with 4 teaspoons of water once a day 30 minutes after breakfast or lunch you can buy any reputed brand it is easily available online and offline just [00:05:36] one bottle is good enough to bring your liver back to action easy to digest more penetrating and without any side effects it can give a run for their money to most liver detox syrups in the market then the third option is to have kutki bitter and taste cooling cleansing and [00:05:52] anti-microbial powerhouse kutki is one of the best herbs for liver in ayurveda in an interesting study a bunch of rodents were given a liver damaging agent later with a small dose of cookie powder their liver was found to be significantly healed kurti is so [00:06:08] effective that it is often prescribed to treat even the most advanced liver disorders at the same time it is safe and has no side effects you just need to take half teaspoon of cookie powder with half teaspoon of honey 1 hour before breakfast have it daily for 15 days for [00:06:24] a deep cleanse each of these three remedies is powerful in its own aspect you can choose as per your convenience eating fresh homely food keeps liver health in check however you must also know the best foods for your liver turmeric is among the top foods other [00:06:40] foods like fenugreek seeds ginger and jaggery are also great for the liver in fruits grapes pears lemon coconut and amla are highly beneficial then high fiber foods like whole grains leafy vegetables nuts and seeds help cleanse [00:06:56] the liver beet root and carrots in any form are rejuvenating for the liver to eliminate the causal factors there are a few things that can be done soak fruits and vegetables in baking soda solution to remove pesticides start using traditional cold pressed oils for [00:07:11] cooking practice a minimum 15 minutes of yoga daily to stay calm and happy avoid foods that play havoc with the liver start using cast iron utensils for cooking to optimize liver health to sum up try to reduce the toxic overload on your liver as much as possible include [00:07:29] foods that will help strengthen your liver do not compromise on your sleep then pick any one of these three remedies as per your preference when it comes to fighting toxins out the liver is our best friend so it is paramount that we take good care of it following [00:07:44] the above your liver will renew and you will feel lighter energetic your hormones will come in place the body will absorb the nutrients better weight loss will become easier immunity will improve and you will experience a heightened state of health all the [00:07:59] products mentioned in the video can easily be bought offline although for your convenience i have linked them in the description box if you found this video helpful please do give a thumbs up looking for a toxin-free hair mask suffering from dandruff and itchy scalp get your hands on mama earth's tea tree [00:08:16] hair mask with the goodness of tea tree argan and lemon oil this hair mask is free from all harsh chemicals no sulphates no parabens no silicones no edtas artificial fragrances or cosmetic colors to use it simply part your hair [00:08:32] in two halves take a generous amount of this hair mask and apply an adequate quantity to wet hair and scalp leave the mask on for 10 to 15 minutes before washing it off with a toxin-free shampoo for best results use two to three times a week mama earth's tea tree hair mask [00:08:48] is suitable for men and women of all hair types to buy it click on the link down in the description box do not forget to apply the special discount coupon to get 21 off on your order so friends that's all for this video you can now support my work by clicking on the join button below please do remember [00:09:04] to subscribe to my channel hit that bell icon so that you never miss a video from me you can also follow me on instagram my name is vivek i thank you so much for watching [Music]"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1172,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: 7YwsUAcMX60",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @baburaju30 | Likes: 2867 | Replies: 192 | Published: 2021-09-27T16:59:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "My dad got stage 4 liver cancer. Being with him is so tough. Whenever I see him, I cry a lot. Only some months. So, please guys check ur parents health. And be kinder to them",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @vrushaligharad3398 | Likes: 83 | Replies: 0 | Published: 2021-10-02T17:05:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "God bless your family",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @buddha9822 | Likes: 74 | Replies: 0 | Published: 2021-10-09T03:38:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Me prathna karta hoon aapke papa jaldi thik ho jaye",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @baburaju30 | Likes: 12 | Replies: 0 | Published: 2021-10-09T03:54:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "@buddha9822 I don't know hindi",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @buddha9822 | Likes: 70 | Replies: 0 | Published: 2021-10-09T04:06:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "@baburaju30 I am praying for your dad will recover soon and live healthy life",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @baburaju30 | Likes: 20 | Replies: 0 | Published: 2021-10-09T04:30:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "@buddha9822 thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @priyankarathore571 | Likes: 3388 | Replies: 76 | Published: 2021-09-20T19:31:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "This guy reads numerous books for research just to make sure he doesn’t promote wrong products.We should appreciate his genuine efforts……..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @drkapish2964 | Likes: 27 | Replies: 0 | Published: 2021-10-07T14:25:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "madam doctors actually pass multiple exams by reading numerous books their whole life ...he is a quack who just wants to earn money by promo or youtube ,pls dont support such persons",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @nitinverma5994 | Likes: 51 | Replies: 0 | Published: 2021-10-10T20:05:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "@drkapish2964 wtf are you doing at his channel?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "And what's wrong if he wants to earn?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @mukesh3931 | Likes: 16 | Replies: 0 | Published: 2021-10-12T17:21:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "@nitinverma5994I agree with you sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @danyvarghese12 | Likes: 7 | Replies: 0 | Published: 2021-10-18T19:59:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "Except a detoxing is a myth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @drkirasha | Likes: 17 | Replies: 0 | Published: 2021-10-20T10:41:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "But he should not give advice on subjects he is not expert in. Let doctors do the job . Plus liver don’t need any detox. It is created to detox body itself.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @music4sph | Likes: 2041 | Replies: 26 | Published: 2021-09-10T14:58:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "Nobody :",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "Not even me :",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Fittuber : drinks Kadha in the name of Patiala Peg 😂😅",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @AfrahAfzal1997 | Likes: 55 | Replies: 0 | Published: 2021-09-10T16:08:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "But he did eat the burger and samosa for the video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @music4sph | Likes: 47 | Replies: 0 | Published: 2021-09-10T16:17:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "@AfrahAfzal1997 Pura thodi na khaya....sirf ek ek bite khaya... Pura khaye toh maan jaye 😅😅",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @agamsharma2941 | Likes: 35 | Replies: 0 | Published: 2021-09-10T17:39:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Triphala piya hoga, peg ke naam pe, wo bhi karwa hota hai😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @luvsuneja | Likes: 15 | Replies: 0 | Published: 2021-09-11T01:17:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "I doubt he knows what is a Patiala Peg 😜",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @abhishekraj4635 | Likes: 10 | Replies: 0 | Published: 2021-09-11T02:48:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "@luvsuneja even i don't know neither any brand except kingfisher ib",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @villageboy7731 | Likes: 381 | Replies: 4 | Published: 2023-05-21T04:51:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "1. Have sugarcane juice, 1 hour before breakfast in the morning or in the evening 2-3 hours after the lunch.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "2. Bhringrajasava of any reputed brand.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "3. Half teaspoon of Kutki powder with half teaspoon of honey 1hr before breakfast.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "fit tuber you should make video about liver fat also as many people are suffering from it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @jimmykundan1075 | Likes: 0 | Replies: 0 | Published: 2024-01-14T19:08:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "VERY HELPFULL VIDEO",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "GOD BLESS YOU FIT TUBER....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "Is Psoriasis also because of liver condition?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "Reply please if you know....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @prettyg6076 | Likes: 0 | Replies: 0 | Published: 2023-02-27T23:11:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "Hi, Please make a video on Sarcoidosis topic if possible.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @noamkurulkar2587 | Likes: 0 | Replies: 0 | Published: 2023-07-20T20:15:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "Hi you are amazing. Those who are pollen allergic can they consume bhringhrajasva?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @alakasaha6293 | Likes: 0 | Replies: 0 | Published: 2022-08-04T17:33:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "Please make a video on fatty liver and liver enzyme. Please also tell about how to reduce high sgpt and sgot level of liver. Please help.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @anugupta5241 | Likes: 0 | Replies: 0 | Published: 2023-07-16T11:17:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Pls pls pls make a video about extreme hairfall and dandruff in teenage boys ....will always grateful to u...please🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @SarmisthasLifestyle | Likes: 0 | Replies: 0 | Published: 2022-07-26T02:43:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "Thanks for your valuable video.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @krishnagarg221 | Likes: 0 | Replies: 0 | Published: 2023-09-20T13:58:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "You are a real gem, keep doing good work...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01662",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @ishikajain1114 | Likes: 0 | Replies: 0 | Published: 2022-08-30T06:14:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "Hi @Fit Tuber, does liver get affected if anybody has too much content of green tea in one glass? Or does having a huge content of caffeine based green tea causes any healthy issues? Please let me know.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01665",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @knowledgehindiking | Likes: 0 | Replies: 0 | Published: 2022-07-29T07:40:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "Thanku bhai.very very thanku",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01668",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @orbitmotivationwellness5495 | Likes: 0 | Replies: 0 | Published: 2022-09-29T16:13:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "Very informative.... Thanks a lot",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01671",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @samrarafi2137 | Likes: 0 | Replies: 0 | Published: 2026-01-07T17:44:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "Thank u so much ...this video is very helpful .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01674",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @starz9527 | Likes: 0 | Replies: 0 | Published: 2023-11-30T14:05:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "Yyyesss Brother so true Parents Respect them when they are older in age",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01677",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @vinayakmane9237 | Likes: 0 | Replies: 0 | Published: 2022-09-14T15:14:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "Hello Vivek Sir. Please make video on complete diabetic care",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01680",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @AbsolutelyAJYoutube | Likes: 0 | Replies: 0 | Published: 2022-11-29T08:16:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "Very nice video, thanks for creating it.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01683",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @leslieanndimaano164 | Likes: 0 | Replies: 0 | Published: 2025-08-26T12:10:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "I saw that kind symptoms in my daddy🥺🥺🥺",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01686",
+                  "author": "",
+                  "text": "Thank you for information ♥️😇",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01688",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @84musty | Likes: 0 | Replies: 0 | Published: 2023-04-02T19:57:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01689",
+                  "author": "",
+                  "text": "Thankyou Bhai...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01690",
+                  "author": "",
+                  "text": "All the best from 🇵🇰",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01692",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @zoya7091 | Likes: 0 | Replies: 0 | Published: 2023-05-24T20:44:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01693",
+                  "author": "",
+                  "text": "Please make a video on preventing or curing sugar ( diabetes) please",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01695",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @merukasharma1399 | Likes: 0 | Replies: 0 | Published: 2022-09-14T17:18:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01696",
+                  "author": "",
+                  "text": "Thanks... important info....need it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01698",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @Kdavi2612 | Likes: 0 | Replies: 0 | Published: 2023-09-14T14:01:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01699",
+                  "author": "",
+                  "text": "Your opener always cracks me up",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01701",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @ananddeshmukh4939 | Likes: 0 | Replies: 0 | Published: 2023-05-29T01:09:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01702",
+                  "author": "",
+                  "text": "Thank you is so small for your efforts",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01704",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @suchishyam6811 | Likes: 0 | Replies: 0 | Published: 2023-09-25T17:19:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01705",
+                  "author": "",
+                  "text": "Hi bro please upload video on grade 2 fatty liver and remedies to reverse.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01707",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @aajena4420 | Likes: 0 | Replies: 0 | Published: 2023-03-06T10:26:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01708",
+                  "author": "",
+                  "text": "Much needed video...thank you",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "7YwsUAcMX60",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "high",
+          "transcript_completeness": "complete",
+          "timestamp_count": 32,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 8182,
+          "transcript_words": 1516,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "A",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "high",
+            "completeness": "complete",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:13] [Music] foreign [00:00:30] [Music] [00:01:14] in this video we will discuss why our liver gets toxic the clear signs that our body gives the best foods and the three most effective ways as mentioned in the ayurvedic scriptures to cleanse the liver without much effort so without any further delay let's get started [00:01:31] [Music] hello friends welcome to fitness foremost we must know why is liver health important consider a cloth that you use for daily cleaning if it is overloaded with dirt at some point it would need a cleanse to work effectively [00:01:47] similarly the liver is a detoxifying organ in the body that converts toxins into waste materials which then get eliminated through different channels so if liver function is compromised toxins get accumulated which then become the reason for various acute and chronic [00:02:03] health problems how do we know if our liver function is compromised liver is one of the most hard working organs in the body with over 500 functions attributed to its name being such a vital organ any problem in the liver body is proactive enough to show signs [00:02:19] and signals most common being pigmentation on skin and premature graying of hair this clearly shows excess heat in the liver an important function of the liver is to break down fat so if you have gained weight or have reached a weight loss plateau you might [00:02:35] just need a liver cleanse liver is the storehouse of iron so if you are anemic you need to focus on your liver other important warning signs include chronic fatigue bad breath yellowish appearance of skin and eyes dark yellow urine loss [00:02:50] of appetite swelling in legs and other body parts high triglyceride levels skin that feels itchy allergies of food and skin pale or orangish color of stool and the tendency to bruise easily if not acted upon this can cause major damage [00:03:06] to the body so why does our liver get toxic even though the liver is quite resilient if it gets overburdened it loses its efficiency a lot of factors contribute other than air and water pollution binge drinking smoking pesticides in food over medication usage [00:03:24] of refined oils for cooking excessive indulgence in preservative laden packaged foods refined sugary foods non-vegetarian food fatty foods overload the liver basically the more toxins you expose your body to the harder it will be for your liver to detoxify then every [00:03:41] time you get angry or irritated your liver has to pay the price as anger is closely related to the health of your liver it's a known fact that our body detoxifies during deep sleep compromising on sleep doesn't give an opportunity for the liver to recharge so [00:03:56] how do you cleanse the liver it's simple reduce the toxic overload and your liver is capable enough to rejuvenate itself this can be done by eradicating the causal factors as much as possible ayurvedic scriptures elaborately talk about various herbs and concoctions that [00:04:12] can rejuvenate the liver within a few days out of so many i have selected three ways which are easy practical and effective first one is simply to have a glass of fresh sugar juice on an empty stomach continuously for about 15 days fresh sugarcane is a boon to strengthen [00:04:29] the liver no wonder it is recommended by doctors during jaundice the antioxidants in sugarcane juice protect the liver against infection and maintain the bilirubin levels in control it gets even better with added ginger and lemon juice you can have it one hour before [00:04:45] breakfast in the morning or in the evening two to three hours after lunch avoid it post sunset at such an economical price it's not only tasty but also easily available all round the year the second option is bring rajasurf a classical formulation prepared using [00:05:02] bringraj haritaki thai pool narcer and others it is well known to reverse hair and skin problems that's because its direct action is on the liver in fact studies have proven bringrash to be more potent in preventing liver damage than milk thistle seeds which are among the [00:05:18] most popular liver detox supplements in the market and it is way cheaper you need to take 4 teaspoons of brangra serve with 4 teaspoons of water once a day 30 minutes after breakfast or lunch you can buy any reputed brand it is easily available online and offline just [00:05:36] one bottle is good enough to bring your liver back to action easy to digest more penetrating and without any side effects it can give a run for their money to most liver detox syrups in the market then the third option is to have kutki bitter and taste cooling cleansing and [00:05:52] anti-microbial powerhouse kutki is one of the best herbs for liver in ayurveda in an interesting study a bunch of rodents were given a liver damaging agent later with a small dose of cookie powder their liver was found to be significantly healed kurti is so [00:06:08] effective that it is often prescribed to treat even the most advanced liver disorders at the same time it is safe and has no side effects you just need to take half teaspoon of cookie powder with half teaspoon of honey 1 hour before breakfast have it daily for 15 days for [00:06:24] a deep cleanse each of these three remedies is powerful in its own aspect you can choose as per your convenience eating fresh homely food keeps liver health in check however you must also know the best foods for your liver turmeric is among the top foods other [00:06:40] foods like fenugreek seeds ginger and jaggery are also great for the liver in fruits grapes pears lemon coconut and amla are highly beneficial then high fiber foods like whole grains leafy vegetables nuts and seeds help cleanse [00:06:56] the liver beet root and carrots in any form are rejuvenating for the liver to eliminate the causal factors there are a few things that can be done soak fruits and vegetables in baking soda solution to remove pesticides start using traditional cold pressed oils for [00:07:11] cooking practice a minimum 15 minutes of yoga daily to stay calm and happy avoid foods that play havoc with the liver start using cast iron utensils for cooking to optimize liver health to sum up try to reduce the toxic overload on your liver as much as possible include [00:07:29] foods that will help strengthen your liver do not compromise on your sleep then pick any one of these three remedies as per your preference when it comes to fighting toxins out the liver is our best friend so it is paramount that we take good care of it following [00:07:44] the above your liver will renew and you will feel lighter energetic your hormones will come in place the body will absorb the nutrients better weight loss will become easier immunity will improve and you will experience a heightened state of health all the [00:07:59] products mentioned in the video can easily be bought offline although for your convenience i have linked them in the description box if you found this video helpful please do give a thumbs up looking for a toxin-free hair mask suffering from dandruff and itchy scalp get your hands on mama earth's tea tree [00:08:16] hair mask with the goodness of tea tree argan and lemon oil this hair mask is free from all harsh chemicals no sulphates no parabens no silicones no edtas artificial fragrances or cosmetic colors to use it simply part your hair [00:08:32] in two halves take a generous amount of this hair mask and apply an adequate quantity to wet hair and scalp leave the mask on for 10 to 15 minutes before washing it off with a toxin-free shampoo for best results use two to three times a week mama earth's tea tree hair mask [00:08:48] is suitable for men and women of all hair types to buy it click on the link down in the description box do not forget to apply the special discount coupon to get 21 off on your order so friends that's all for this video you can now support my work by clicking on the join button below please do remember [00:09:04] to subscribe to my channel hit that bell icon so that you never miss a video from me you can also follow me on instagram my name is vivek i thank you so much for watching [Music]"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1172,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: 7YwsUAcMX60",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @baburaju30 | Likes: 2867 | Replies: 192 | Published: 2021-09-27T16:59:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "My dad got stage 4 liver cancer. Being with him is so tough. Whenever I see him, I cry a lot. Only some months. So, please guys check ur parents health. And be kinder to them",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @vrushaligharad3398 | Likes: 83 | Replies: 0 | Published: 2021-10-02T17:05:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "God bless your family",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @buddha9822 | Likes: 74 | Replies: 0 | Published: 2021-10-09T03:38:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Me prathna karta hoon aapke papa jaldi thik ho jaye",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @baburaju30 | Likes: 12 | Replies: 0 | Published: 2021-10-09T03:54:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "@buddha9822 I don't know hindi",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @buddha9822 | Likes: 70 | Replies: 0 | Published: 2021-10-09T04:06:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "@baburaju30 I am praying for your dad will recover soon and live healthy life",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @baburaju30 | Likes: 20 | Replies: 0 | Published: 2021-10-09T04:30:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "@buddha9822 thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @priyankarathore571 | Likes: 3388 | Replies: 76 | Published: 2021-09-20T19:31:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "This guy reads numerous books for research just to make sure he doesn’t promote wrong products.We should appreciate his genuine efforts……..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @drkapish2964 | Likes: 27 | Replies: 0 | Published: 2021-10-07T14:25:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "madam doctors actually pass multiple exams by reading numerous books their whole life ...he is a quack who just wants to earn money by promo or youtube ,pls dont support such persons",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @nitinverma5994 | Likes: 51 | Replies: 0 | Published: 2021-10-10T20:05:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "@drkapish2964 wtf are you doing at his channel?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "And what's wrong if he wants to earn?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "[COMMENT 10] Author: @mukesh3931 | Likes: 16 | Replies: 0 | Published: 2021-10-12T17:21:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "@nitinverma5994I agree with you sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "[COMMENT 11] Author: @danyvarghese12 | Likes: 7 | Replies: 0 | Published: 2021-10-18T19:59:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "Except a detoxing is a myth",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "[COMMENT 12] Author: @drkirasha | Likes: 17 | Replies: 0 | Published: 2021-10-20T10:41:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "But he should not give advice on subjects he is not expert in. Let doctors do the job . Plus liver don’t need any detox. It is created to detox body itself.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "[COMMENT 13] Author: @music4sph | Likes: 2041 | Replies: 26 | Published: 2021-09-10T14:58:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "Nobody :",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "Not even me :",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Fittuber : drinks Kadha in the name of Patiala Peg 😂😅",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 14] Author: @AfrahAfzal1997 | Likes: 55 | Replies: 0 | Published: 2021-09-10T16:08:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "But he did eat the burger and samosa for the video",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 15] Author: @music4sph | Likes: 47 | Replies: 0 | Published: 2021-09-10T16:17:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "@AfrahAfzal1997 Pura thodi na khaya....sirf ek ek bite khaya... Pura khaye toh maan jaye 😅😅",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 16] Author: @agamsharma2941 | Likes: 35 | Replies: 0 | Published: 2021-09-10T17:39:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Triphala piya hoga, peg ke naam pe, wo bhi karwa hota hai😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 17] Author: @luvsuneja | Likes: 15 | Replies: 0 | Published: 2021-09-11T01:17:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "I doubt he knows what is a Patiala Peg 😜",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "[COMMENT 18] Author: @abhishekraj4635 | Likes: 10 | Replies: 0 | Published: 2021-09-11T02:48:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "@luvsuneja even i don't know neither any brand except kingfisher ib",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "[COMMENT 19] Author: @villageboy7731 | Likes: 381 | Replies: 4 | Published: 2023-05-21T04:51:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "1. Have sugarcane juice, 1 hour before breakfast in the morning or in the evening 2-3 hours after the lunch.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "2. Bhringrajasava of any reputed brand.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "3. Half teaspoon of Kutki powder with half teaspoon of honey 1hr before breakfast.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "fit tuber you should make video about liver fat also as many people are suffering from it",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "[COMMENT 479] Author: @jimmykundan1075 | Likes: 0 | Replies: 0 | Published: 2024-01-14T19:08:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "VERY HELPFULL VIDEO",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "GOD BLESS YOU FIT TUBER....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "Is Psoriasis also because of liver condition?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "Reply please if you know....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "[COMMENT 480] Author: @prettyg6076 | Likes: 0 | Replies: 0 | Published: 2023-02-27T23:11:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "Hi, Please make a video on Sarcoidosis topic if possible.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "[COMMENT 481] Author: @noamkurulkar2587 | Likes: 0 | Replies: 0 | Published: 2023-07-20T20:15:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "Hi you are amazing. Those who are pollen allergic can they consume bhringhrajasva?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "[COMMENT 482] Author: @alakasaha6293 | Likes: 0 | Replies: 0 | Published: 2022-08-04T17:33:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "Please make a video on fatty liver and liver enzyme. Please also tell about how to reduce high sgpt and sgot level of liver. Please help.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 483] Author: @anugupta5241 | Likes: 0 | Replies: 0 | Published: 2023-07-16T11:17:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Pls pls pls make a video about extreme hairfall and dandruff in teenage boys ....will always grateful to u...please🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "[COMMENT 484] Author: @SarmisthasLifestyle | Likes: 0 | Replies: 0 | Published: 2022-07-26T02:43:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "Thanks for your valuable video.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "[COMMENT 485] Author: @krishnagarg221 | Likes: 0 | Replies: 0 | Published: 2023-09-20T13:58:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "You are a real gem, keep doing good work...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01662",
+                "author": "",
+                "text": "[COMMENT 486] Author: @ishikajain1114 | Likes: 0 | Replies: 0 | Published: 2022-08-30T06:14:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "Hi @Fit Tuber, does liver get affected if anybody has too much content of green tea in one glass? Or does having a huge content of caffeine based green tea causes any healthy issues? Please let me know.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01665",
+                "author": "",
+                "text": "[COMMENT 487] Author: @knowledgehindiking | Likes: 0 | Replies: 0 | Published: 2022-07-29T07:40:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "Thanku bhai.very very thanku",
+                "likes": null
+              },
+              {
+                "comment_id": "c01668",
+                "author": "",
+                "text": "[COMMENT 488] Author: @orbitmotivationwellness5495 | Likes: 0 | Replies: 0 | Published: 2022-09-29T16:13:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "Very informative.... Thanks a lot",
+                "likes": null
+              },
+              {
+                "comment_id": "c01671",
+                "author": "",
+                "text": "[COMMENT 489] Author: @samrarafi2137 | Likes: 0 | Replies: 0 | Published: 2026-01-07T17:44:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "Thank u so much ...this video is very helpful .",
+                "likes": null
+              },
+              {
+                "comment_id": "c01674",
+                "author": "",
+                "text": "[COMMENT 490] Author: @starz9527 | Likes: 0 | Replies: 0 | Published: 2023-11-30T14:05:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "Yyyesss Brother so true Parents Respect them when they are older in age",
+                "likes": null
+              },
+              {
+                "comment_id": "c01677",
+                "author": "",
+                "text": "[COMMENT 491] Author: @vinayakmane9237 | Likes: 0 | Replies: 0 | Published: 2022-09-14T15:14:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "Hello Vivek Sir. Please make video on complete diabetic care",
+                "likes": null
+              },
+              {
+                "comment_id": "c01680",
+                "author": "",
+                "text": "[COMMENT 492] Author: @AbsolutelyAJYoutube | Likes: 0 | Replies: 0 | Published: 2022-11-29T08:16:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "Very nice video, thanks for creating it.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01683",
+                "author": "",
+                "text": "[COMMENT 493] Author: @leslieanndimaano164 | Likes: 0 | Replies: 0 | Published: 2025-08-26T12:10:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "I saw that kind symptoms in my daddy🥺🥺🥺",
+                "likes": null
+              },
+              {
+                "comment_id": "c01686",
+                "author": "",
+                "text": "Thank you for information ♥️😇",
+                "likes": null
+              },
+              {
+                "comment_id": "c01688",
+                "author": "",
+                "text": "[COMMENT 494] Author: @84musty | Likes: 0 | Replies: 0 | Published: 2023-04-02T19:57:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01689",
+                "author": "",
+                "text": "Thankyou Bhai...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01690",
+                "author": "",
+                "text": "All the best from 🇵🇰",
+                "likes": null
+              },
+              {
+                "comment_id": "c01692",
+                "author": "",
+                "text": "[COMMENT 495] Author: @zoya7091 | Likes: 0 | Replies: 0 | Published: 2023-05-24T20:44:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01693",
+                "author": "",
+                "text": "Please make a video on preventing or curing sugar ( diabetes) please",
+                "likes": null
+              },
+              {
+                "comment_id": "c01695",
+                "author": "",
+                "text": "[COMMENT 496] Author: @merukasharma1399 | Likes: 0 | Replies: 0 | Published: 2022-09-14T17:18:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01696",
+                "author": "",
+                "text": "Thanks... important info....need it",
+                "likes": null
+              },
+              {
+                "comment_id": "c01698",
+                "author": "",
+                "text": "[COMMENT 497] Author: @Kdavi2612 | Likes: 0 | Replies: 0 | Published: 2023-09-14T14:01:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01699",
+                "author": "",
+                "text": "Your opener always cracks me up",
+                "likes": null
+              },
+              {
+                "comment_id": "c01701",
+                "author": "",
+                "text": "[COMMENT 498] Author: @ananddeshmukh4939 | Likes: 0 | Replies: 0 | Published: 2023-05-29T01:09:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01702",
+                "author": "",
+                "text": "Thank you is so small for your efforts",
+                "likes": null
+              },
+              {
+                "comment_id": "c01704",
+                "author": "",
+                "text": "[COMMENT 499] Author: @suchishyam6811 | Likes: 0 | Replies: 0 | Published: 2023-09-25T17:19:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01705",
+                "author": "",
+                "text": "Hi bro please upload video on grade 2 fatty liver and remedies to reverse.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01707",
+                "author": "",
+                "text": "[COMMENT 500] Author: @aajena4420 | Likes: 0 | Replies: 0 | Published: 2023-03-06T10:26:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01708",
+                "author": "",
+                "text": "Much needed video...thank you",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

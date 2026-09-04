@@ -1,0 +1,3031 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090715_1dc595",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090715_1dc595",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Ayurvedic herbs, remedies, tablets, and traditional practices",
+      "batch_number": 3,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 3 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090715_1dc595",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090715_1dc595"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090715_1dc595",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Ayurvedic herbs, remedies, tablets, and traditional practices",
+      "batch_number": 3,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "e9715d28-7c46-4bb5-9d37-69c127edf150",
+    "package_id": "vh_no_transcript_metadata_20260904_090715_1dc595",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "PRlD8BWLQkQ"
+    ],
+    "evidence_grades": {
+      "PRlD8BWLQkQ": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Ayurvedic herbs, remedies, tablets, and traditional practices",
+      "batch_number": 3,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "68c4ce3f26fd7843ff26b980556e3380bba2d047b4c6f98585612acaa066a344",
+      "prompt.json": "8a3dce63256d28f37cdd8b2fe5b1c26308c6ae29f5827ae580c274f0cf76f6c5",
+      "schema.json": "aa38d04f68ac7fad9a8f4252c7886036ebe14107151f8c85552e87fe4fd24295"
+    },
+    "created_at": "2026-09-04 09:07:15",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "PRlD8BWLQkQ",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=PRlD8BWLQkQ",
+        "original_title": "TURMERIC -  The Most Versatile Spice of India",
+        "clean_title": "TURMERIC -  The Most Versatile Spice of India",
+        "channel": "Fit Tuber",
+        "upload_date": "2018-12-14",
+        "description": "Why turmeric is considered to be the queen of spices? What makes turmeric the most versatile spice of India?\n\nBuy The Moms Co. Natural Face Care Kit - https://themomsco.com/pregnancy-new-mom-products/shop-by-product/natural-vita-rich-face-care.html\n(Apply Discount code - FITTUBER15 to get 15% off on all orders)\nBuy The Moms Co. products from Amazon - https://amzn.to/2QIMrHI\n\nIf you thought that turmeric was just to enhance the flavour and provide colour to the curries then you should watch this video as today I am going to share with you the most surprising benefits and practical uses of this golden spice of India. From skin, hair, teeth, throat to serious issues of heart, liver , joints and brain turmeric can be used to treat extensive variety of health conditions. Even the modern medical research is waking up to its plethora of benefits, making India not only the largest producer of Turmeric but also the largest exporter. However, it is unfortunate that most of us today have limited the use of turmeric only to colour and flavour our dishes. Believe me, if you use turmeric the right way, you can just throw away most of your costly cosmetics and medicines.\n\n01:23 - How to use turmeric for glowing and radiant skin? How turmeric can lighten your skin tone?\n02:20 - How to use turmeric to get soft, silky and strong hair?\n03:00 - How to use turmeric to whiten teeth and make the gums stronger? \n03:41 - How to use turmeric to heal the wounds, burns and cuts? Ditch the antiseptic creams.\n04:40 - How to use turmeric to treat the deadliest of diseases. The diseases of heart, liver, stomach, brain and joints.\n05:35 - Turmeric based supplement drinks to treat health issues.\n\nBuy Unadulterated Turmeric Powder (Not sponsored) - https://amzn.to/2PywyyW\nBuy Organic Turmeric Root (Not sponsored) - https://amzn.to/2QNJLse\n\n06:31 - Video Partner - The Moms Company. The Moms Co. makes toxin free cosmetic products. Free from harsh chemicals, their products are highly recommended.\nBuy The Moms Co. Natural Face Care Kit - https://themomsco.com/pregnancy-new-mom-products/shop-by-product/natural-vita-rich-face-care.html\n((Apply Discount code - FITTUBER15 to get 15% off on all orders)\nBuy The Moms Co. products from Amazon - https://amzn.to/2QIMrHI\n\nBEST PRODUCTS FROM WORST TO BEST SERIES\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nWINTER PRODUCTS (My recommendations)\nLip Balm - https://amzn.to/2QL6Rwn\nShilajit - https://amzn.to/2DqtLoV\nFace Moisturiser - https://amzn.to/2zc0oUy\nBadam Hair Oil - https://amzn.to/2K9zEbn\nMustard Hair Oil - https://amzn.to/2K9QFSO\nBody Lotion - https://amzn.to/2zdgzRz\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nUSEFUL LINKS\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nWater bottle that I use https://amzn.to/2KtbcBg\nBhuna Chana - https://amzn.to/2tOFdVa\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON FIT TUBER\n\n5 Amazing Patanjali products you should try\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\n10 Toothpastes in India Ranked from Worst to Best?\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZgDcm-M&t=29s\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns9LDyHU\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVuQrz0oQ&t=294s\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/\n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 1135,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: PRlD8BWLQkQ",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 613 | Replies: 99 | Published: 2018-12-14T13:37:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "You can follow me on Instagram for daily updates - https://www.instagram.com/fittuber/?hl=en",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @AbeedBasheer | Likes: 5 | Replies: 0 | Published: 2018-12-14T13:41:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Sure",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @vijayalakshmit5450 | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:41:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Very nice thank u.. normal turmeric or wild turmeric used fr hair?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @mohammedafran5442 | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:42:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Abhi gaya🏃‍♂️🏃‍♂️ #Instagram",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @spiritually_high | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:57:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Fit Tuber sir please please please make video on full body hygiene.. i have acne and its scare all over my body please tell me how to cure my acne .. i consumed lot of medicine for this still not getting any result... I know your advice will help me. Thank you 😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @yashasvi59 | Likes: 0 | Replies: 0 | Published: 2018-12-14T14:00:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Done..following ...8622 numberd follower..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @aswinmaddy1533 | Likes: 3027 | Replies: 37 | Published: 2018-12-14T13:44:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "The best channel in YouTube!!!! No doubt..... 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @THECATALYSTRIDERPANKAJ | Likes: 6 | Replies: 0 | Published: 2018-12-14T14:08:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "Hey fittuber. Love your content",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @NATURALBODYAESTHETICS | Likes: 3 | Replies: 0 | Published: 2018-12-14T14:47:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Awesome content bro 💓💓",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @canbefit | Likes: 3 | Replies: 0 | Published: 2018-12-17T10:27:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Must agree awesome channel!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @NATURALBODYAESTHETICS | Likes: 1 | Replies: 0 | Published: 2018-12-17T10:31:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "@canbefit yes 😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @ghazalafarzana9554 | Likes: 1 | Replies: 0 | Published: 2018-12-28T17:41:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Rock salt kya h",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @Nvidia_1050 | Likes: 445 | Replies: 6 | Published: 2020-11-05T14:32:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "IF USA is trying to patent turmeric, It think it is high time we start using and respecting Ayurveda in our lifestyle",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 14] Author: @Gauravkumar-jm4ve | Likes: 3 | Replies: 0 | Published: 2021-01-13T17:34:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Right",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 15] Author: @Jegganathsurya9619 | Likes: 5 | Replies: 0 | Published: 2021-01-27T07:34:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Patent🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 16] Author: @TheSooz2008 | Likes: 3 | Replies: 0 | Published: 2021-10-06T02:36:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "Hardly anyone uses ayurvedic remedies anymore. Most use terrible western medicines. Too sad the superior ayurvedic remedies have been left. I'm too happy I found them. Such a treasure.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 17] Author: @lucynakila8089 | Likes: 1 | Replies: 0 | Published: 2021-11-01T07:22:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 18] Author: @marktiltins8845 | Likes: 0 | Replies: 0 | Published: 2022-04-14T08:18:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "You can't patent a natural products",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "They tried to in Australia with Lanolin",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "They were told you can't patent a natural product",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 19] Author: @Engsimplified | Likes: 277 | Replies: 1 | Published: 2018-12-14T13:34:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "I'm sure you deliberately wore a turmeric coloured shirt 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 20] Author: @GudduVashisth | Likes: 1 | Replies: 0 | Published: 2024-02-13T11:00:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "😁😆😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "[COMMENT 21] Author: @rachitsahoo2582 | Likes: 35 | Replies: 0 | Published: 2021-09-15T21:15:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01573",
+              "author": "",
+              "text": "Great info.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "Thankyou",
+              "likes": null
+            },
+            {
+              "comment_id": "c01576",
+              "author": "",
+              "text": "[COMMENT 478] Author: @marykingdomchangermunalula105 | Likes: 0 | Replies: 0 | Published: 2020-09-21T09:48:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "Thank you I did stumble on your channel",
+              "likes": null
+            },
+            {
+              "comment_id": "c01579",
+              "author": "",
+              "text": "[COMMENT 479] Author: @rolandonudalo1056 | Likes: 0 | Replies: 0 | Published: 2022-06-05T03:01:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "thanks so much for your good information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "[COMMENT 480] Author: @MBGxYT | Likes: 0 | Replies: 0 | Published: 2021-04-29T15:00:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01583",
+              "author": "",
+              "text": "God bless you for making such useful vdo😊🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "[COMMENT 481] Author: @ayeshabasharat9274 | Likes: 0 | Replies: 0 | Published: 2021-01-03T04:21:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "Thanku sooo mch brother..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "[COMMENT 482] Author: @cmbeauty25 | Likes: 0 | Replies: 0 | Published: 2022-01-26T17:17:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "I love turmeric usuallt i use it for everything,even for drinks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01591",
+              "author": "",
+              "text": "[COMMENT 483] Author: @soumyagupta3051 | Likes: 0 | Replies: 0 | Published: 2021-09-23T08:38:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "Amazing video 👌🏻👌🏻 thanks for your video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "[COMMENT 484] Author: @thechosengeneration4245 | Likes: 0 | Replies: 0 | Published: 2021-08-19T21:55:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "I love the golden milk,you guys should try it 💕💕",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "[COMMENT 485] Author: @krisgovinden266 | Likes: 1 | Replies: 0 | Published: 2022-04-03T08:07:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "The exposé is extremely interesting",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": ".",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "[COMMENT 486] Author: @SachinYadav-co3we | Likes: 1 | Replies: 0 | Published: 2020-12-10T16:48:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "We grow turmeric in our farm for personal use.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "[COMMENT 487] Author: @leahrabedin9717 | Likes: 0 | Replies: 0 | Published: 2020-09-11T02:46:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "amazing indeed",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "[COMMENT 488] Author: @sanojsano7028 | Likes: 0 | Replies: 0 | Published: 2022-01-14T13:51:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "Thank you for ur valuable information ❤❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "[COMMENT 489] Author: @saib6450 | Likes: 0 | Replies: 0 | Published: 2021-06-25T15:38:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "Great video and most useful video!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "[COMMENT 490] Author: @libraelleno2383 | Likes: 0 | Replies: 0 | Published: 2022-02-21T22:41:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "Hi,thanks ,shall watch the rest later.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "[COMMENT 491] Author: @sumbmicjz6482 | Likes: 0 | Replies: 0 | Published: 2022-01-16T21:03:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "Thanks so much for dis informative, what is curd and where can I get it",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "[COMMENT 492] Author: @pradipdas3141 | Likes: 0 | Replies: 0 | Published: 2020-11-16T10:06:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01620",
+              "author": "",
+              "text": "Excellent, want to see a video on haritaki.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "[COMMENT 493] Author: @shalinideepak4150 | Likes: 0 | Replies: 0 | Published: 2022-02-12T02:05:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01623",
+              "author": "",
+              "text": "Love yr videos, vivek. Your doing great job!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "[COMMENT 494] Author: @hariom_patel_gurjar8986 | Likes: 0 | Replies: 0 | Published: 2024-12-01T10:17:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "I understand. Thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "[COMMENT 495] Author: @moniquebosman3178 | Likes: 1 | Replies: 0 | Published: 2021-02-02T11:41:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "thank you <3",
+              "likes": null
+            },
+            {
+              "comment_id": "c01631",
+              "author": "",
+              "text": "[COMMENT 496] Author: @seemadhabhai4481 | Likes: 0 | Replies: 0 | Published: 2021-07-27T10:23:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "Thanks for such knowledge💯🎁🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01634",
+              "author": "",
+              "text": "[COMMENT 497] Author: @SUhaNni325 | Likes: 0 | Replies: 0 | Published: 2022-09-13T15:07:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "Nice video sir it really work i have try it",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "[COMMENT 498] Author: @vickyyabut9998 | Likes: 0 | Replies: 0 | Published: 2022-08-25T19:35:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "Thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "Viewing from the kingdom of BAHRAIN with 🇧🇭❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "[COMMENT 499] Author: @yesrghtpanchal2323 | Likes: 0 | Replies: 0 | Published: 2021-02-12T17:14:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "I m v v impressed wid ur videos it's v useful",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "[COMMENT 500] Author: @prabharabindranath6671 | Likes: 0 | Replies: 0 | Published: 2021-10-22T11:07:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "Full of information thanks.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "PRlD8BWLQkQ",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\TURMERIC - The Most Versatile Spice of India\\TURMERIC - The Most Versatile Spice of India.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\TURMERIC - The Most Versatile Spice of India",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\PRlD8BWLQkQ",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "PRlD8BWLQkQ",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 1135,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: PRlD8BWLQkQ",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 613 | Replies: 99 | Published: 2018-12-14T13:37:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "You can follow me on Instagram for daily updates - https://www.instagram.com/fittuber/?hl=en",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @AbeedBasheer | Likes: 5 | Replies: 0 | Published: 2018-12-14T13:41:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Sure",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @vijayalakshmit5450 | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:41:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Very nice thank u.. normal turmeric or wild turmeric used fr hair?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @mohammedafran5442 | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:42:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Abhi gaya🏃‍♂️🏃‍♂️ #Instagram",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @spiritually_high | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:57:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Fit Tuber sir please please please make video on full body hygiene.. i have acne and its scare all over my body please tell me how to cure my acne .. i consumed lot of medicine for this still not getting any result... I know your advice will help me. Thank you 😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @yashasvi59 | Likes: 0 | Replies: 0 | Published: 2018-12-14T14:00:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Done..following ...8622 numberd follower..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @aswinmaddy1533 | Likes: 3027 | Replies: 37 | Published: 2018-12-14T13:44:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "The best channel in YouTube!!!! No doubt..... 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @THECATALYSTRIDERPANKAJ | Likes: 6 | Replies: 0 | Published: 2018-12-14T14:08:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "Hey fittuber. Love your content",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @NATURALBODYAESTHETICS | Likes: 3 | Replies: 0 | Published: 2018-12-14T14:47:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Awesome content bro 💓💓",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @canbefit | Likes: 3 | Replies: 0 | Published: 2018-12-17T10:27:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Must agree awesome channel!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @NATURALBODYAESTHETICS | Likes: 1 | Replies: 0 | Published: 2018-12-17T10:31:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "@canbefit yes 😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @ghazalafarzana9554 | Likes: 1 | Replies: 0 | Published: 2018-12-28T17:41:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Rock salt kya h",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @Nvidia_1050 | Likes: 445 | Replies: 6 | Published: 2020-11-05T14:32:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "IF USA is trying to patent turmeric, It think it is high time we start using and respecting Ayurveda in our lifestyle",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @Gauravkumar-jm4ve | Likes: 3 | Replies: 0 | Published: 2021-01-13T17:34:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Right",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @Jegganathsurya9619 | Likes: 5 | Replies: 0 | Published: 2021-01-27T07:34:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Patent🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @TheSooz2008 | Likes: 3 | Replies: 0 | Published: 2021-10-06T02:36:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "Hardly anyone uses ayurvedic remedies anymore. Most use terrible western medicines. Too sad the superior ayurvedic remedies have been left. I'm too happy I found them. Such a treasure.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @lucynakila8089 | Likes: 1 | Replies: 0 | Published: 2021-11-01T07:22:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @marktiltins8845 | Likes: 0 | Replies: 0 | Published: 2022-04-14T08:18:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "You can't patent a natural products",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "They tried to in Australia with Lanolin",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "They were told you can't patent a natural product",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @Engsimplified | Likes: 277 | Replies: 1 | Published: 2018-12-14T13:34:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "I'm sure you deliberately wore a turmeric coloured shirt 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @GudduVashisth | Likes: 1 | Replies: 0 | Published: 2024-02-13T11:00:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "😁😆😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @rachitsahoo2582 | Likes: 35 | Replies: 0 | Published: 2021-09-15T21:15:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01573",
+                  "author": "",
+                  "text": "Great info.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "Thankyou",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01576",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @marykingdomchangermunalula105 | Likes: 0 | Replies: 0 | Published: 2020-09-21T09:48:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "Thank you I did stumble on your channel",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01579",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @rolandonudalo1056 | Likes: 0 | Replies: 0 | Published: 2022-06-05T03:01:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "thanks so much for your good information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @MBGxYT | Likes: 0 | Replies: 0 | Published: 2021-04-29T15:00:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01583",
+                  "author": "",
+                  "text": "God bless you for making such useful vdo😊🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @ayeshabasharat9274 | Likes: 0 | Replies: 0 | Published: 2021-01-03T04:21:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "Thanku sooo mch brother..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @cmbeauty25 | Likes: 0 | Replies: 0 | Published: 2022-01-26T17:17:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "I love turmeric usuallt i use it for everything,even for drinks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01591",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @soumyagupta3051 | Likes: 0 | Replies: 0 | Published: 2021-09-23T08:38:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "Amazing video 👌🏻👌🏻 thanks for your video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @thechosengeneration4245 | Likes: 0 | Replies: 0 | Published: 2021-08-19T21:55:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "I love the golden milk,you guys should try it 💕💕",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @krisgovinden266 | Likes: 1 | Replies: 0 | Published: 2022-04-03T08:07:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "The exposé is extremely interesting",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": ".",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @SachinYadav-co3we | Likes: 1 | Replies: 0 | Published: 2020-12-10T16:48:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "We grow turmeric in our farm for personal use.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @leahrabedin9717 | Likes: 0 | Replies: 0 | Published: 2020-09-11T02:46:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "amazing indeed",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @sanojsano7028 | Likes: 0 | Replies: 0 | Published: 2022-01-14T13:51:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "Thank you for ur valuable information ❤❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @saib6450 | Likes: 0 | Replies: 0 | Published: 2021-06-25T15:38:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "Great video and most useful video!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @libraelleno2383 | Likes: 0 | Replies: 0 | Published: 2022-02-21T22:41:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "Hi,thanks ,shall watch the rest later.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @sumbmicjz6482 | Likes: 0 | Replies: 0 | Published: 2022-01-16T21:03:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "Thanks so much for dis informative, what is curd and where can I get it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @pradipdas3141 | Likes: 0 | Replies: 0 | Published: 2020-11-16T10:06:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01620",
+                  "author": "",
+                  "text": "Excellent, want to see a video on haritaki.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @shalinideepak4150 | Likes: 0 | Replies: 0 | Published: 2022-02-12T02:05:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01623",
+                  "author": "",
+                  "text": "Love yr videos, vivek. Your doing great job!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @hariom_patel_gurjar8986 | Likes: 0 | Replies: 0 | Published: 2024-12-01T10:17:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "I understand. Thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @moniquebosman3178 | Likes: 1 | Replies: 0 | Published: 2021-02-02T11:41:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "thank you <3",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01631",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @seemadhabhai4481 | Likes: 0 | Replies: 0 | Published: 2021-07-27T10:23:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "Thanks for such knowledge💯🎁🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01634",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @SUhaNni325 | Likes: 0 | Replies: 0 | Published: 2022-09-13T15:07:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "Nice video sir it really work i have try it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @vickyyabut9998 | Likes: 0 | Replies: 0 | Published: 2022-08-25T19:35:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "Thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "Viewing from the kingdom of BAHRAIN with 🇧🇭❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @yesrghtpanchal2323 | Likes: 0 | Replies: 0 | Published: 2021-02-12T17:14:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "I m v v impressed wid ur videos it's v useful",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @prabharabindranath6671 | Likes: 0 | Replies: 0 | Published: 2021-10-22T11:07:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "Full of information thanks.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "PRlD8BWLQkQ",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 1135,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: PRlD8BWLQkQ",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 613 | Replies: 99 | Published: 2018-12-14T13:37:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "You can follow me on Instagram for daily updates - https://www.instagram.com/fittuber/?hl=en",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @AbeedBasheer | Likes: 5 | Replies: 0 | Published: 2018-12-14T13:41:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Sure",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @vijayalakshmit5450 | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:41:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Very nice thank u.. normal turmeric or wild turmeric used fr hair?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @mohammedafran5442 | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:42:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Abhi gaya🏃‍♂️🏃‍♂️ #Instagram",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @spiritually_high | Likes: 2 | Replies: 0 | Published: 2018-12-14T13:57:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Fit Tuber sir please please please make video on full body hygiene.. i have acne and its scare all over my body please tell me how to cure my acne .. i consumed lot of medicine for this still not getting any result... I know your advice will help me. Thank you 😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @yashasvi59 | Likes: 0 | Replies: 0 | Published: 2018-12-14T14:00:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Done..following ...8622 numberd follower..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @aswinmaddy1533 | Likes: 3027 | Replies: 37 | Published: 2018-12-14T13:44:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "The best channel in YouTube!!!! No doubt..... 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @THECATALYSTRIDERPANKAJ | Likes: 6 | Replies: 0 | Published: 2018-12-14T14:08:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "Hey fittuber. Love your content",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @NATURALBODYAESTHETICS | Likes: 3 | Replies: 0 | Published: 2018-12-14T14:47:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Awesome content bro 💓💓",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @canbefit | Likes: 3 | Replies: 0 | Published: 2018-12-17T10:27:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Must agree awesome channel!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @NATURALBODYAESTHETICS | Likes: 1 | Replies: 0 | Published: 2018-12-17T10:31:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "@canbefit yes 😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @ghazalafarzana9554 | Likes: 1 | Replies: 0 | Published: 2018-12-28T17:41:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Rock salt kya h",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @Nvidia_1050 | Likes: 445 | Replies: 6 | Published: 2020-11-05T14:32:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "IF USA is trying to patent turmeric, It think it is high time we start using and respecting Ayurveda in our lifestyle",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 14] Author: @Gauravkumar-jm4ve | Likes: 3 | Replies: 0 | Published: 2021-01-13T17:34:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Right",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 15] Author: @Jegganathsurya9619 | Likes: 5 | Replies: 0 | Published: 2021-01-27T07:34:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Patent🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 16] Author: @TheSooz2008 | Likes: 3 | Replies: 0 | Published: 2021-10-06T02:36:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "Hardly anyone uses ayurvedic remedies anymore. Most use terrible western medicines. Too sad the superior ayurvedic remedies have been left. I'm too happy I found them. Such a treasure.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 17] Author: @lucynakila8089 | Likes: 1 | Replies: 0 | Published: 2021-11-01T07:22:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 18] Author: @marktiltins8845 | Likes: 0 | Replies: 0 | Published: 2022-04-14T08:18:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "You can't patent a natural products",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "They tried to in Australia with Lanolin",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "They were told you can't patent a natural product",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 19] Author: @Engsimplified | Likes: 277 | Replies: 1 | Published: 2018-12-14T13:34:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "I'm sure you deliberately wore a turmeric coloured shirt 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 20] Author: @GudduVashisth | Likes: 1 | Replies: 0 | Published: 2024-02-13T11:00:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "😁😆😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "[COMMENT 21] Author: @rachitsahoo2582 | Likes: 35 | Replies: 0 | Published: 2021-09-15T21:15:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01573",
+                "author": "",
+                "text": "Great info.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "Thankyou",
+                "likes": null
+              },
+              {
+                "comment_id": "c01576",
+                "author": "",
+                "text": "[COMMENT 478] Author: @marykingdomchangermunalula105 | Likes: 0 | Replies: 0 | Published: 2020-09-21T09:48:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "Thank you I did stumble on your channel",
+                "likes": null
+              },
+              {
+                "comment_id": "c01579",
+                "author": "",
+                "text": "[COMMENT 479] Author: @rolandonudalo1056 | Likes: 0 | Replies: 0 | Published: 2022-06-05T03:01:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "thanks so much for your good information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "[COMMENT 480] Author: @MBGxYT | Likes: 0 | Replies: 0 | Published: 2021-04-29T15:00:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01583",
+                "author": "",
+                "text": "God bless you for making such useful vdo😊🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "[COMMENT 481] Author: @ayeshabasharat9274 | Likes: 0 | Replies: 0 | Published: 2021-01-03T04:21:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "Thanku sooo mch brother..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "[COMMENT 482] Author: @cmbeauty25 | Likes: 0 | Replies: 0 | Published: 2022-01-26T17:17:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "I love turmeric usuallt i use it for everything,even for drinks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01591",
+                "author": "",
+                "text": "[COMMENT 483] Author: @soumyagupta3051 | Likes: 0 | Replies: 0 | Published: 2021-09-23T08:38:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "Amazing video 👌🏻👌🏻 thanks for your video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "[COMMENT 484] Author: @thechosengeneration4245 | Likes: 0 | Replies: 0 | Published: 2021-08-19T21:55:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "I love the golden milk,you guys should try it 💕💕",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "[COMMENT 485] Author: @krisgovinden266 | Likes: 1 | Replies: 0 | Published: 2022-04-03T08:07:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "The exposé is extremely interesting",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": ".",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "[COMMENT 486] Author: @SachinYadav-co3we | Likes: 1 | Replies: 0 | Published: 2020-12-10T16:48:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "We grow turmeric in our farm for personal use.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "[COMMENT 487] Author: @leahrabedin9717 | Likes: 0 | Replies: 0 | Published: 2020-09-11T02:46:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "amazing indeed",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "[COMMENT 488] Author: @sanojsano7028 | Likes: 0 | Replies: 0 | Published: 2022-01-14T13:51:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "Thank you for ur valuable information ❤❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "[COMMENT 489] Author: @saib6450 | Likes: 0 | Replies: 0 | Published: 2021-06-25T15:38:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "Great video and most useful video!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "[COMMENT 490] Author: @libraelleno2383 | Likes: 0 | Replies: 0 | Published: 2022-02-21T22:41:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "Hi,thanks ,shall watch the rest later.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "[COMMENT 491] Author: @sumbmicjz6482 | Likes: 0 | Replies: 0 | Published: 2022-01-16T21:03:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "Thanks so much for dis informative, what is curd and where can I get it",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "[COMMENT 492] Author: @pradipdas3141 | Likes: 0 | Replies: 0 | Published: 2020-11-16T10:06:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01620",
+                "author": "",
+                "text": "Excellent, want to see a video on haritaki.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "[COMMENT 493] Author: @shalinideepak4150 | Likes: 0 | Replies: 0 | Published: 2022-02-12T02:05:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01623",
+                "author": "",
+                "text": "Love yr videos, vivek. Your doing great job!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "[COMMENT 494] Author: @hariom_patel_gurjar8986 | Likes: 0 | Replies: 0 | Published: 2024-12-01T10:17:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "I understand. Thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "[COMMENT 495] Author: @moniquebosman3178 | Likes: 1 | Replies: 0 | Published: 2021-02-02T11:41:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "thank you <3",
+                "likes": null
+              },
+              {
+                "comment_id": "c01631",
+                "author": "",
+                "text": "[COMMENT 496] Author: @seemadhabhai4481 | Likes: 0 | Replies: 0 | Published: 2021-07-27T10:23:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "Thanks for such knowledge💯🎁🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01634",
+                "author": "",
+                "text": "[COMMENT 497] Author: @SUhaNni325 | Likes: 0 | Replies: 0 | Published: 2022-09-13T15:07:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "Nice video sir it really work i have try it",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "[COMMENT 498] Author: @vickyyabut9998 | Likes: 0 | Replies: 0 | Published: 2022-08-25T19:35:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "Thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "Viewing from the kingdom of BAHRAIN with 🇧🇭❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "[COMMENT 499] Author: @yesrghtpanchal2323 | Likes: 0 | Replies: 0 | Published: 2021-02-12T17:14:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "I m v v impressed wid ur videos it's v useful",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "[COMMENT 500] Author: @prabharabindranath6671 | Likes: 0 | Replies: 0 | Published: 2021-10-22T11:07:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "Full of information thanks.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

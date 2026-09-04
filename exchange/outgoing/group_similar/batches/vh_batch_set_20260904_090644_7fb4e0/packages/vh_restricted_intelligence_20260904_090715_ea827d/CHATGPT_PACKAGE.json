@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_restricted_intelligence_20260904_090715_ea827d",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090715_ea827d",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Yoga routines — partial transcript",
+      "batch_number": 35,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "batch_instruction": "This is independently importable batch 35 of 35 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260904_090715_ea827d",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260904_090715_ea827d"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090715_ea827d",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Yoga routines — partial transcript",
+      "batch_number": 35,
+      "batch_total": 35,
+      "batch_size": 8
+    }
+  },
+  "manifest": {
+    "request_id": "7ec32184-a3a9-4f2f-9028-d4fbde4adc7f",
+    "package_id": "vh_restricted_intelligence_20260904_090715_ea827d",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "dAqQqmaI9vY"
+    ],
+    "evidence_grades": {
+      "dAqQqmaI9vY": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Yoga routines — partial transcript",
+      "batch_number": 35,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "hashes": {
+      "evidence.json": "b0c8edf0d0f5c2b75df012e68fde2c14cfaf8af0302cb8131bc39f8b30c697f6",
+      "prompt.json": "9bb96dc57cbe55f40c56ace4d352ab9e32374751a7a48c8b9d0ec4a4d4a60960",
+      "schema.json": "f0db9a3ed3ef7bbec394828b953c065237c8cae1219d9435e0a653ebcbd5fd2f"
+    },
+    "created_at": "2026-09-04 09:07:15",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "dAqQqmaI9vY",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=dAqQqmaI9vY",
+        "original_title": "30 Min Daily Yoga Routine for Beginners (Follow Along)",
+        "clean_title": "30 Min Daily Yoga Routine for Beginners (Follow Along)",
+        "channel": "Fit Tuber",
+        "upload_date": "2021-04-02",
+        "description": "30 Minute Daily Yoga Routine for Beginners (Follow Along) \n\nBuy Mamaearth's Ubtan Face Wash - https://bit.ly/3etuDvu\n(Apply discount coupon FITTUBER21 to get 21% off)\nBuy from Amazon - https://amzn.to/3o5AecH\n\nThis is a 30 mins beginner daily yoga routine that you can do at home. With this unpredictability surrounding the world in the pandemic, this video is focused on channelising our energy in learning the divine practice of Yoga. If you are a complete beginner to yoga or someone with basic experience, then this video will properly introduce you to the heavenly world of asanas and pranayama making your body healthy and mind calm. One more thing this video is not just to watch but to follow along. So come on. Let's do it together.\n\n0:40​ - Before getting started with this Yoga Routine, do this.\n01:12​ - Yoga Warm up. These have been referred to as Sukshama Vyayama in the Yogic scriptures\n05:14​ - Suryanamaskar.The sun salutation. A powerful yogic practice involving 12 asanas.\n06:53​ - Six most important asanas to beat the problems of our busy modern lifestyle\n07:05 - Pawanmuktasana. The gas release pose. Best to beat acidity and gas issues.\n07:47​ - Markatasana. The monkey pose. This is especially for the back and the issues related to the spine.\n08:41 - Naukaasana. The Boat pose. This is to reduce the belly ponch and tone the abdominal muscles.\n09:20 - Sarvangasana - The Shoulder stand. It is helpful for almost every body part.\n10:25 - Badhkonasana - The butterfly pose for PCOD and prostate.\n11:16 - Mandukasana - The frog pose is the best for diabetes.\n​12:20 - Yogic pranayama or the breathing exercises.\n12:40​ - Aum chanting. Thrice. Aum chanting creates subtle vibrations within the body that makes the body ready for pranayama.\n13:27​ - Bhastrika pranayama or yogic deep breathing. This is a simple yet effective way to boost the immunity. It energises the body and calms the mind.\n14:47​ - Kapalbhati or rapid exhalation. Among the most powerful Yogic pranayama. It pushes the excessive air trapped in the digestive tract. \n19:03​ - Agnisaar. The benefits of agnisaar kriya increase manifold when it's done just after Kapalbhati. It is known to strengthen the digestive system.\n20:03 - Jalandhar Bandh. Miraculously beneficial for getting over addictions of the body as well as the mind.\n21:26 - Shithali breath. The cooling breath. For all body heat issues. Must in summers.\n22:35​ - Anulom Vilom pranayama or Alternate Nostril Breathing. Anulom vilom instantly calms the mind. It has the capability to put in a trance state. You feel mediative.\n26:43​ - Bhramari Pranayama or Bee breath. This is the best breathing exercise for brain. Stress, anxiety, depression, insomnia, anger issues, weak concentration power,  you name it, Bharamari has the power to cure any issues related to the brain. It even stimulates the pineal and pituitary glands.\n28:03​ - Rubbing the hands together before concluding. It activates the acupressure points.\n28:27​ - Last but not the least. Shavasana, to cool down the body.\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nYoga Mat (Cotton) - https://amzn.to/2J4Uedk​\nYoga Mat (Regular) - https://amzn.to/2xecwWO\nYoga Mat (Jute Handwoven) - https://amzn.to/30Ze0jp\nYoga Mat (Jute Handwoven) - https://amzn.to/312ZhnL\n\n✅  SUPPORT MY WORK and get exclusive perks \nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n15 Min Daily Yoga Routine for Beginners (Follow Along)\nhttps://youtu.be/s2NQhpFGIOg\nThe Only Diet Plan That Ayurveda Recommends (Men & Women)\nhttps://youtu.be/6ZUFT0CwU1w\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\n\n29:57 - Segment Partner - Mamaearth's Ubtan Face Wash\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] that state to seven minutes ignore Delhi yoga routine that you can do at home with this unpredictability brand in olden depend on time this video is focus don't channelizing and energy in learning divine practice of yoga as you are a complete ignore yoga and someone with basic experience in this video will properly [00:00:18] introduce you to the family world of snacks and pranayama making her body healthy and mind from this videos in association with my mother's natural excellent face wash one month later love letter way video one more thing this video is not just watch but [00:00:34] for your lord to come on let's get together on hello hello friends welcome to front this up every morning after waking up drink water commence of enquiry into practice yoga preferably you to without eating and i [00:00:50] think all you need is your comment and open mind to start well yoga mat preferably made of cotton wool and you can Even News 28 Aug 18 2012 Prevent the wastage of the energy that will get generated in your body The effectiveness of doing yoga multiplies with the [00:01:08] proper lubrication and the joints So let's get started by rhythmically moving from one to the other for health and refreshing distraction Starting with left to right to do list Try to enter in the same [00:01:27] with moving to all the best and then do 2 times in 2 positions Meanwhile Micro Exercises and Cold Yoga A [00:01:43] subtle exercise Stress Similarly Left Right Left and Rotate five times in each direction and five times in anti-clockwise direction Close your eyes All about doing comfortable at your own pace with a positive state of mind Not mean that Place [00:02:01] your palms together in a routine clockwise and anti-clockwise five times each That will seemingly minor exercises and powerful exercises activate the channels of the [00:02:16] body Now please and hands on the right and rooted five times clockwise Five Times in anti-clockwise direction. Fuel the back. You will feel instant relaxation in [00:02:40] 110°C. Light warm-up. Allusion to older joints by removing excess air bubbles. Tetra 10am toe [Music] That will make you pee. Take Chauhan for cramps. Wee and rotating breast side 20°C and [00:02:57] clean chain. Relax three times. Lunch. Go back and this time bring them for vote. [00:03:12] This exercise bill to your Ram meeting. Arrests of Hunger and Vipin Power Factor [Music] That time you will duet with complete involvement and [00:03:27] smile on your face. Hai Na Please and pinch the shoulders like this and the temples but in backward five times each. [00:03:47] 12 weights slowly making an impact on imagined outcomes. Inning and celebrate in improvement on a newly married hand. Junior Artist Roti and Neck Three Times First Inquest Addiction in Three Times in anti-clockwise [00:04:03] direction. Do it your own pace routine. Get Properly take that feel the tension getting released the neck muscles very effective in preventing cervical problems name holder ears and [00:04:22] moved clockwise and anti clockwise five times the new set increase prajna battery saver is located in early ears move into is ruling and is clockwise three times in three times in [00:04:39] anti-clockwise direction it is easy to use [00:04:56] and is tied in the open the white five times in the stands for muscles definitely need lord of exercise 123 complete the warm up to increase prana kumbh achieve through of the body builder [00:05:13] name body is ready to do surya namaskar it is a powerful kriya to instructions energy with a new latest weight with a sense of gratitude to the person for sustaining life in the east facing weight reduce to the shadow [00:05:29] of the merit holder anjali mudra a depression and left her palms after impact not bring out bent forward and bring you to the net decide fit begum patel ki naukri denge in pushkar left leg [00:05:47] aspect is possible right now being independent people's name take back their right leg also move and back up with is able toe in knowledge and clearing and nice town to the [00:06:02] floor and axle arrest chest and chain on the floor day slide forward and research as top * cobra force look up now reading out lifting bring her body into [00:06:18] inverted videos taking depression and this time with your left foot forward in between the two hands bring out bring your right forward not stand you another depression reddy and hands off in the [00:06:34] backwaters is discreet first freedom the body tanning and arms down sideways relax how you feel not just on the body surya namaskar this non toe has earned immeasurable positive impact on the mind as we all no lie [00:06:51] development before moving onto the breathing exercises will practice 600 Bath Sweeter Element And Today Satta Me In Curing And Modern Day Health Problems First Tests Here In Relieving Poses The Pawanmuktasana Arms [00:07:09] Website The Body Palms Fisting 80 Link List Gather Brigham And Us A Seal Bank Potion Knees And Bring Thumb Toe Watch Your Chest Interlock And Fingers Press And Thighs On The Laptop Mind Lift Your Head And [00:07:25] Chest Off The Floor Prime To Take Care Notes In Your Kitchen Hall This Position For About And Seconds Apps Name Suggestions Pawanmuktasana Massage Pista Intestine Having Indigestion And Release Of Gas No [00:07:42] Release And Head Your Hands In The Nether To Relax Next Muktasana Aa Daman Ki Poses Bank Both Your Knees And Key Pathetic Hips Spread Toe The And Ram Set The Level Of [00:07:58] Shoulder Is Not Done Both Her Knees Together Towards Right Side Next Left Side Fold Kar Ftu Sabari Normal Yes Your Spine And Gently Been Expressed 9 Loosely Come back to the previous position. [00:08:17] This time, take two steps on the left and the next step on the right. Hold for a few seconds. Merkatasana also promotes creativity. Shringar (mind to mind) is a great way to relax. Come back to the previous position. [00:08:35] Slowly stretch and relax. Keep your arms straight like figures of French tourists at a distance of 10 degrees. [00:08:51] Lift your feet off the ground level at about a forty-five degree angle. Stretch and do sports fit. Hold the inner body weight on this product. It is highly beneficial in reducing extra [00:09:06] fat. It is the abdominal muscles that feel the tension originating in these upper muscles. Slowly, bring the body to the starting position and relax. Like the queen of business. 10. [00:09:24] Sarvangasana (Sarvangasana) Difficult you can insert you Ardha Halasana a a scholar movement booty and lines buttocks and back to that Mahagyana shoulders support your back with his and weight also [00:09:45] supported by your shoulders and upper arms and not where he stands at least putting footprint on the sea link breeding deeply hold arms for fifteen seconds for Earth Halasana holder [00:10:03] body like that in relationship brain power follow thyroid function Sarvangasana of this is highly effective is that without letting her slowly bring her point down completely toe follow relax [00:10:19] for five seconds feel more sensations within the body next Baddha Konasana a popularly known as the butterfly pores set with your spine erect new the fight you brings heels closer to the genitals as possible do it [00:10:37] comfortably as much as your body all accurate depression reading out start flipping Buddha lax up and don't like wings of a butterfly Slap comfortably at your own pace for about thirty seconds. Breathing normally, [00:10:54] you can instantly release a lunge stretch. This is one of the best options for training the pelvic region. This is highly recommended for PCOD and problems related to menstruation and prostate. Relaxation is possible only with a chest [00:11:14] and front. Move to the last option. Mandukasana and the free pose Dashami Dasana for diabetes. First for Saturn Vajrasana. Place your palms on the floor and feel the sensation. Give them [00:11:32] inside and make rests with both hands. Last not clear. First form Leon Dasha, which is inside of belly button. Just like that, it does not give a good impression. Easily get out of the back. Downward position. Close to the left. Lock in [00:11:50] front. Hold your breath in this yoga posture for a few seconds comfortably without straining. Applying lunge pressure exerted in Mandukasana exercises many important organs like back. Vaults Goal Bladder and Liver and Spleen Thumak [00:12:08] Inhalation Back to the Original Position Relax Sudhir Vardhak Yoga Postures Specially Designed for Business Model Lifestyle World No Latest Jobs in Exercise Set Spread Here in Sukhasana [00:12:25] Meaning Siddhasana Siddhasana and Padmasana What ever you are comfortable and spirit Next Create Hands in Meditation Ubhe Kara Smile on your face radiating positivity will [00:12:40] begin with chanting Om three times Close your eyes with mild focus in between your eyebrows Take a deep breath in and slowly chant on Ho in Someshwar Town Related to One [00:12:57] Particular Religion Its Prime and Digital Sound of the Universe Yes Yes Om refers to Atman or Self Resist and Brahman the Ultimate Reality [00:13:13] from Unify Atman with Brahman and cleanse the troubled soul This Divine Sound Balance the Body When Planning and A Ka Naam Vipin 253 Ka and Balance Print on [00:13:32] A Banquet is Closest 10:30 Earth and nose these days a seal slide itself forcefully through your notes will do the best for 4 minutes [00:13:52] a big smile on your face with a steep inhalation feel the pranic energy from the universe is entering your body and with its extradition field doing activity impurities are flowing out [00:14:12] ki Bhad Stree ka Pranayama staple man yogi is acid instantly energy is in the body and instills silence in your mind heartening two senses aptly called inappropriate isolated fire [00:14:29] hello friends respiratory and sinus problems bhastrika is a must spiritually the settled for woman reaches emotional and mental notes of opposition dead black heads and hair now elections on a [00:14:45] new window kapalabhati and rapid action for 4 minutes backstreet is closet body relaxed mind work 10:30 Circle in Indian Express with full contraction of the [00:15:01] dominant muscles is Just like that 200th test kriya tried to keep smiling focus only on the stomach area I do [00:15:19] not worry about these links just focus being on the point between two exclusions is when their bodies will automatically be retained its mechanism is similar to hand pump in the air in the physical body here we are pumping breath out of the body [00:15:37] [music] that kapalabhati literally translates to the shining forehead and subscribe so what happens with regular practice of this yoga kriya a forehead knows not just from the [00:15:56] outside but also from the inside making your mind eliminated ajay that team for at least 6 out votes from per minute slowly you can increase number [00:16:15] 278 and even in 3D its progress luis noher ea you can even access lessons in mind as you are clear [00:16:32] that with every youth world track feel that you are pushing the toxins out Of your body your digestive system it exercises and hotspot of but deliver that functioning better that the internal factory is pain getting clean [00:16:48] top 9th workers are at work and your simply facilitating mem regular practice of kapalabhati pranayama talk only is all the system se nadi its power full fat loss is just [00:17:05] by product kar do me just like milk get spoiled for after effects provided cost hit the benefits of kapalabhati and these text [00:17:20] effects done without a break away at no point over activity or left if but is pressed for president intense that can that in terms of circulating [00:17:36] tissue in a plate effective date of fun apps compare to running that kapalabhati advertising effect on the notes and refreshing effect on the brain so its pregnancy test system like no [00:17:51] yadav gas acidity indigestion lo appetite malabsorption yunus minute delhi kapalabhati Practice alone has the power to destroy distances from its very growth [00:18:13] that in order to de-life remove upper body while walking remove lower body as well as by blocks and climb stairs highest middle portion tetris means lar nukat dates where mostly is from kapalabhati tashana let happen lo kapalabhati [00:18:34] naturally purifies sir plot as well as david's heat yang ended on 110 to 120 words and subtle channels that are in human body kapalabhati has its money to [00:18:49] stimulate and clear the passage yoga-pranayama is all about men get with a calm share full mind with at most fit and involvement [00:19:08] 19 latest so if anusara is that if the depression gives a seal completely no contract and expand stomach is many times as you can end times of good number one slowly you can increase number 213 due to the positive impact of anusara is [00:19:26] Multiply twitter after kapalabhati 2018 who is the name agnisara is derived from two sanskrit words agni meaning fire and sar meaning of classes agnisara kriya mainly [00:19:44] affects the bowels irrigation and regulates the fire element and body all-rounder stomach and this improves the process of digestion and relieves problems related to the stomach [00:20:03] tits set2 balances manipura chakra near first a hain next will do jalandhar dam all so called sachin lock on ki inhale slowly and tips for the normals hai na hot breath contractor that instantly per [00:20:20] conscious download all most touching the upper chest holder band for its long acid comfortable hai luat kuch din ruk to chhut research an and ek sill dhyan us [00:20:36] dry three times ki in uk ignore jalandhar dam considered of prime importance in getting over addictions of the body as well as determined alcohol smoking access masturbation in [00:20:56] Addition to sugar and milk foods what are the concerns details of thought and to drishtipat trimendously increase the bell pass with regular practice of jalandhar dam [00:21:12] folding bed for long times it stimulates awake at night a man shading maharishi patanjali ashtanga yoga its practice question in standard edition is next will do the additional side right is [00:21:31] lost job mute marks all the best all the side of the time like tube a long deep inhalation dhruvdas tube actor in these relations complete through her mouth and exhale through the nostrils such name suggests [00:21:49] cools down the body soothing internal inflammations can you feel relaxed and cooling effect latest best for minute jai hind scorching heat of india strong option climate shitali increased school [00:22:05] tour to keep the internal body temperature in check cooling effect medicine practice penetrating and zip that issues protein in to the body heat ulcers acidity Pimples, Attractions and [00:22:23] if stress induced, this will take effect, feel extra heat from your body, cutting flight booking for the body and rejuvenated mind, this is how you will do Anulom-Vilom and alternate [00:22:41] nostril breathing with your right from clothes, right nostril takes your right nostril, for depression, left nostril, plaster middle to middle, close single left nostril and exhale slowly but complete, lift right [00:22:57] nostril in the same position in half degree from the right nostril, span girls please right them again, inside right nostril and exhale completely from the left nostril, with this completes one circle of [00:23:12] Anulom-Vilom Pranayam will do this important kriya for 4 minutes, do it slowly keeping Ammayilu focus in between your eyes, this will take [00:23:27] effect on your husband, take long drive in relations, feeling and lunge, full capacity these days, one slowly completely, from 2 key time of inhalation and exhalation Rafi 10M and Anulom-Vilom His own name is Nadi Shodhan [00:23:45] Pranayama Nadi Rintu Channel Shodhan means cleansing and pranayama Stagnation of pain and Pingala and two most important nodes in the human body Leader and the Moon channel connecting to the left [00:24:03] nostril corresponds to the right means your doctor and Pingala and the Solar channel connecting to the right nostril corresponds to the left side of the brain Van Anulom-Vilom Mishra test by two notices of [00:24:18] clan springs botanically Prem between the left and right brain which results in heightened states of awareness and perception Physical health scanner product [00:24:37] that with every inhalation field follow-up Rana entering the body and with every action field Impurities flowing out that cleansing Skimming on 830 Posts Labels It's small small feet be mindful of 8 is [00:24:54] you out that by mild focus in between and I promise this is way Ajna Chakra is located at [music] and Anulom-Vilom is considered Tridoshanashak Pranayama which means it springs in [00:25:12] balance between the three basic so maybe no body namely Vadh Faith and Kam Sun no matter what your body type this Anulom-Vilom will bring about and ideal balance pay [00:25:32] and mind has tendency to keep regretting and caloric find the past and create and support for future Nadi Shodhan Pranayama reminds back to the present moment [00:25:50] that the proper reason is to why it is done dave town vayu first in her from the left nostril why only and music playlist vayada middle to fungs are you want to put its ability to bring up balance between the five elements of nature cross [00:26:08] part is made of luit its leaders energy channels assurance of flop rana to agree or not supported on do [00:26:29] and Anulom-Vilom is Advanced This Technique Begins Into Practice Duet With A Sense Of Gratitude That Without Feeling That You Have Been Given A Chance To Get Connected To Your Inner Self Your True Nature Of A Moving Onto The Last Practice Of This [00:26:45] Yoga Session Brahmri And Dabi Vrat That We School In The Years Index Finger Chest Bar Eye Producer And Forest Officer From Girls Short Clip Play Store And Is Touched A Finger Leg To The [00:27:01] Palt Mouth Closed Concentrate In Between Raipur Os One And Long Depressed Through Your Nostrils And Without Making Humming Sound Of Om Do It Five Times As It Is [00:27:19] Pure Is Lost And Looked At And Third I Love Was Tempted Addition Assume It Was Setting On The Access And This Universe Is Revolving Around You Know [00:27:38] That The World Lives At All The Positive Energy Circumventing Minutes From Your Body In The Form Of Humming Sound Of Then Fuels And Stimulating The Pineal And Alum [00:27:54] Plants 85600 for all problems related to the brain in that job form condemnation ice bring her palms together and come back juicy and [00:28:10] continuously for few seconds and unpleasant memories and ice and this that now slowly open air is a this piece work then neti doors on water for [00:28:26] disseminating no fly zone flight and comment in shabash chowkpur minute hits like ka yoga a flight se lene up and discreet foot you for completing this action every and dense [00:28:41] and body is related to her light and satisfied for being taken care of me i am proud of its rich and full chapter note this universe from yourself thank you you will remember [00:28:56] cheerful all day long promise you will reply to them as a prostitute read everyone will of investment from its state no matter what life project you updated with test and then work not that [00:29:12] tomorrow down you have completed tehsils ka session imo download To the divine you and you tomorrow Namaste subscribe this video [00:29:36] can't under estimate the benefits from these minutes go a long way subscribe [00:29:57] subscribe and subscribe the Channel Please subscribe and subscribe [00:30:12] me Herbal Extracts of Turmeric Saffron and Semen Skin Friendly Extracts of Aasmaan Maa Twe Std Removal Highest Starting Table For All Skin Types And Can Be Used For Both Men and Women Maam and Serious Products Dermatologically Tested and Made in India But Luck Download [00:30:30] Description Box Do Not Forget Who Applied Special Discount Coupon 22% Off After This Video You Can Now Support Me By Backing Ajwain Button Blog Please Remember to Subscribe To My Channel Press The Bell Icon Should Have Never Missed a Video From Where You Can Also [00:30:47] Follow Me on Instagram My Name is Vivek Thank You So Much To Watch A"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1254,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: dAqQqmaI9vY",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 3336 | Replies: 390 | Published: 2021-04-02T13:50:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "\"The body benefits from movement and the mind benefits from stillness\". Are we ready for #21daysyogachallenge?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @wethrive_webloom | Likes: 79 | Replies: 0 | Published: 2021-04-02T13:52:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Yes....😊 But can we do yoga during periods?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @rajumnaik1677 | Likes: 25 | Replies: 0 | Published: 2021-04-02T13:53:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Hello vivek bhai. Pls make a video on cardio workout. I want get rid of my body fat. So Pls next video cardio workout. Pls pls",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @gazaldeep7 | Likes: 7 | Replies: 0 | Published: 2021-04-02T13:54:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Yes brother ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @monuji9108 | Likes: 31 | Replies: 0 | Published: 2021-04-02T13:55:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Please make a video on facial hair removal natural way for women...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @charnjitsingh3365 | Likes: 4 | Replies: 0 | Published: 2021-04-02T13:55:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Are you married?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @kirankadyan8305 | Likes: 8912 | Replies: 119 | Published: 2021-04-02T14:19:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "No ads in 30 mins video.a huge applause goes to u.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @mrbutane6664 | Likes: 290 | Replies: 0 | Published: 2021-04-05T02:38:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "I got 1 ad in the beginning",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @garvitpandia8059 | Likes: 172 | Replies: 0 | Published: 2021-04-05T17:26:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Yes because it is a follow along and he doesn't want us to get disturbed",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @mrbutane6664 | Likes: 23 | Replies: 0 | Published: 2021-04-06T02:13:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "@garvitpandia8059 yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @blackmatter20 | Likes: 16 | Replies: 0 | Published: 2021-04-10T02:19:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "Chal be",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @abhishekihma | Likes: 23 | Replies: 0 | Published: 2021-04-14T05:29:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Mama earth",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @Dubeyji-k3q | Likes: 179 | Replies: 8 | Published: 2026-04-30T05:11:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "Who is Watching in 2026",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 14] Author: @FirozMugal07 | Likes: 6 | Replies: 0 | Published: 2026-05-06T01:29:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Are bhai tere ko bhi yoga karne ka bhoot sawar hua hai kya 😅😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 15] Author: @jae2433 | Likes: 2 | Replies: 0 | Published: 2026-05-08T01:44:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Have been following this video since it was uploaded!! Best video for quick workout and health!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 16] Author: @Education.qualification | Likes: 3 | Replies: 0 | Published: 2026-05-12T13:52:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "@FirozMugal07হা😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 17] Author: @devaanshiii756 | Likes: 3 | Replies: 0 | Published: 2026-05-21T00:43:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Me",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 18] Author: @Education.qualification | Likes: 1 | Replies: 0 | Published: 2026-05-21T01:21:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "@devaanshiii756your age?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "[COMMENT 19] Author: @abhinavashish891 | Likes: 707 | Replies: 7 | Published: 2021-04-02T13:34:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "Someone : what if fit Tuber become the next health",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "Minister?😄",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "Me : The good days of Indian health ministry",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 20] Author: @SatanjibDas | Likes: 5 | Replies: 0 | Published: 2021-04-02T14:08:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "The first person he will meet after this happens , is Akshay Kumar",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "[COMMENT 21] Author: @neerajsingh8401 | Likes: 3 | Replies: 0 | Published: 2021-04-02T14:16:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01703",
+              "author": "",
+              "text": "We are following last five years 😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01705",
+              "author": "",
+              "text": "[COMMENT 480] Author: @Magical_explainer | Likes: 188 | Replies: 24 | Published: 2025-09-11T04:30:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01706",
+              "author": "",
+              "text": "Sept 2025😅...why iam so late",
+              "likes": null
+            },
+            {
+              "comment_id": "c01708",
+              "author": "",
+              "text": "[COMMENT 481] Author: @anshulsuryawanshi8760 | Likes: 15 | Replies: 0 | Published: 2025-09-15T06:12:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01709",
+              "author": "",
+              "text": "Better late than never 🙃",
+              "likes": null
+            },
+            {
+              "comment_id": "c01711",
+              "author": "",
+              "text": "[COMMENT 482] Author: @Deepakmehra_21 | Likes: 9 | Replies: 0 | Published: 2025-09-16T02:14:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01712",
+              "author": "",
+              "text": "@anshulsuryawanshi8760 absolutely right dude",
+              "likes": null
+            },
+            {
+              "comment_id": "c01714",
+              "author": "",
+              "text": "[COMMENT 483] Author: @kidsdance402 | Likes: 4 | Replies: 0 | Published: 2025-09-16T02:25:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01715",
+              "author": "",
+              "text": "Same to you",
+              "likes": null
+            },
+            {
+              "comment_id": "c01717",
+              "author": "",
+              "text": "[COMMENT 484] Author: @jaymahajan3712 | Likes: 0 | Replies: 0 | Published: 2025-09-18T02:37:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01718",
+              "author": "",
+              "text": "Yo 🤘",
+              "likes": null
+            },
+            {
+              "comment_id": "c01720",
+              "author": "",
+              "text": "[COMMENT 485] Author: @sarabjeet3099 | Likes: 0 | Replies: 0 | Published: 2025-09-19T01:37:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01721",
+              "author": "",
+              "text": "Me 2",
+              "likes": null
+            },
+            {
+              "comment_id": "c01723",
+              "author": "",
+              "text": "[COMMENT 486] Author: @manyasharma7066 | Likes: 12 | Replies: 2 | Published: 2021-04-02T13:35:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01724",
+              "author": "",
+              "text": "This man is all set to get an amazing change in our lives 😍....thankyou Fit tuber for such great videos🙏🏻💯",
+              "likes": null
+            },
+            {
+              "comment_id": "c01726",
+              "author": "",
+              "text": "[COMMENT 487] Author: @FitTuber | Likes: 4 | Replies: 0 | Published: 2021-04-02T13:51:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01727",
+              "author": "",
+              "text": "🙏🏻🙏🏻🙏🏻",
+              "likes": null
+            },
+            {
+              "comment_id": "c01729",
+              "author": "",
+              "text": "[COMMENT 488] Author: @AdityaSharma-kv9ho | Likes: 0 | Replies: 0 | Published: 2021-04-02T13:56:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01730",
+              "author": "",
+              "text": "😂🤣 op",
+              "likes": null
+            },
+            {
+              "comment_id": "c01732",
+              "author": "",
+              "text": "[COMMENT 489] Author: @avoiddistraction6126 | Likes: 10 | Replies: 1 | Published: 2021-04-29T17:08:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01733",
+              "author": "",
+              "text": "INDIA NEED MORE MEN LIKE YOU TO PROMOTE YOGA",
+              "likes": null
+            },
+            {
+              "comment_id": "c01735",
+              "author": "",
+              "text": "[COMMENT 490] Author: @victory-s6 | Likes: 1 | Replies: 0 | Published: 2021-05-20T04:34:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01736",
+              "author": "",
+              "text": "One is baba Ramdev",
+              "likes": null
+            },
+            {
+              "comment_id": "c01738",
+              "author": "",
+              "text": "[COMMENT 491] Author: @silkyhoda53 | Likes: 0 | Replies: 0 | Published: 2026-07-05T05:17:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01739",
+              "author": "",
+              "text": "One of the best online yoga class !!!!!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01741",
+              "author": "",
+              "text": "[COMMENT 492] Author: @DrDharaLakhani | Likes: 9 | Replies: 0 | Published: 2021-04-02T14:00:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01742",
+              "author": "",
+              "text": "Weight kam karna, weight badhana, increase height, sperm count badhane k liye, detox, diabetes, hair problems, corona, hypertension, heart attack ...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01743",
+              "author": "",
+              "text": "Thanks a lot diet yoga & Ayurveda channel ko support karne k liye",
+              "likes": null
+            },
+            {
+              "comment_id": "c01745",
+              "author": "",
+              "text": "[COMMENT 493] Author: @dabas2031 | Likes: 4 | Replies: 0 | Published: 2021-07-18T02:06:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01746",
+              "author": "",
+              "text": "1:32 I made a mini tornado 🌪️ on th 11 th day",
+              "likes": null
+            },
+            {
+              "comment_id": "c01748",
+              "author": "",
+              "text": "[COMMENT 494] Author: @kirankadyan8305 | Likes: 23 | Replies: 4 | Published: 2021-04-02T14:01:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01749",
+              "author": "",
+              "text": "The background music is just so soothing.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01751",
+              "author": "",
+              "text": "[COMMENT 495] Author: @balajitandale5255 | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:03:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01752",
+              "author": "",
+              "text": "Utube pr mil nahi raha background music",
+              "likes": null
+            },
+            {
+              "comment_id": "c01753",
+              "author": "",
+              "text": "Kisiko pata hai to plz link share kro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01755",
+              "author": "",
+              "text": "[COMMENT 496] Author: @ayurdarpan | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:15:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01756",
+              "author": "",
+              "text": "white noise dal k search kro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01758",
+              "author": "",
+              "text": "[COMMENT 497] Author: @balajitandale5255 | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:33:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01759",
+              "author": "",
+              "text": "Nahi mil raha😑",
+              "likes": null
+            },
+            {
+              "comment_id": "c01760",
+              "author": "",
+              "text": "Jo video me hai vo vala chahiye",
+              "likes": null
+            },
+            {
+              "comment_id": "c01761",
+              "author": "",
+              "text": "Link bhejo n 😐",
+              "likes": null
+            },
+            {
+              "comment_id": "c01763",
+              "author": "",
+              "text": "[COMMENT 498] Author: @vidhusri1623 | Likes: 0 | Replies: 0 | Published: 2021-04-02T18:08:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01764",
+              "author": "",
+              "text": "Ya💯 any idea where I could get this music's link on YouTube ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01766",
+              "author": "",
+              "text": "[COMMENT 499] Author: @bhaskareenadu4540 | Likes: 0 | Replies: 0 | Published: 2025-08-12T00:13:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01767",
+              "author": "",
+              "text": "I am grateful for fituber for creating such a peaceful amazing video on yoga",
+              "likes": null
+            },
+            {
+              "comment_id": "c01769",
+              "author": "",
+              "text": "[COMMENT 500] Author: @athmajwala | Likes: 4 | Replies: 0 | Published: 2021-04-02T14:35:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01770",
+              "author": "",
+              "text": "After watching too many yoga videos, I was so confused on what to do and how to plan my yoga session keeping it precise.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01771",
+              "author": "",
+              "text": "Your video is a perfect answer to my quest 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01772",
+              "author": "",
+              "text": "Thank you bro !!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01773",
+              "author": "",
+              "text": "God bless you for scaling greater heights.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "dAqQqmaI9vY",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\30 Min Daily Yoga Routine for Beginners (Follow Along)\\30 Min Daily Yoga Routine for Beginners (Follow Along).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\30 Min Daily Yoga Routine for Beginners (Follow Along)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\dAqQqmaI9vY",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "dAqQqmaI9vY",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 109,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 20365,
+            "transcript_words": 3681,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] that state to seven minutes ignore Delhi yoga routine that you can do at home with this unpredictability brand in olden depend on time this video is focus don't channelizing and energy in learning divine practice of yoga as you are a complete ignore yoga and someone with basic experience in this video will properly [00:00:18] introduce you to the family world of snacks and pranayama making her body healthy and mind from this videos in association with my mother's natural excellent face wash one month later love letter way video one more thing this video is not just watch but [00:00:34] for your lord to come on let's get together on hello hello friends welcome to front this up every morning after waking up drink water commence of enquiry into practice yoga preferably you to without eating and i [00:00:50] think all you need is your comment and open mind to start well yoga mat preferably made of cotton wool and you can Even News 28 Aug 18 2012 Prevent the wastage of the energy that will get generated in your body The effectiveness of doing yoga multiplies with the [00:01:08] proper lubrication and the joints So let's get started by rhythmically moving from one to the other for health and refreshing distraction Starting with left to right to do list Try to enter in the same [00:01:27] with moving to all the best and then do 2 times in 2 positions Meanwhile Micro Exercises and Cold Yoga A [00:01:43] subtle exercise Stress Similarly Left Right Left and Rotate five times in each direction and five times in anti-clockwise direction Close your eyes All about doing comfortable at your own pace with a positive state of mind Not mean that Place [00:02:01] your palms together in a routine clockwise and anti-clockwise five times each That will seemingly minor exercises and powerful exercises activate the channels of the [00:02:16] body Now please and hands on the right and rooted five times clockwise Five Times in anti-clockwise direction. Fuel the back. You will feel instant relaxation in [00:02:40] 110°C. Light warm-up. Allusion to older joints by removing excess air bubbles. Tetra 10am toe [Music] That will make you pee. Take Chauhan for cramps. Wee and rotating breast side 20°C and [00:02:57] clean chain. Relax three times. Lunch. Go back and this time bring them for vote. [00:03:12] This exercise bill to your Ram meeting. Arrests of Hunger and Vipin Power Factor [Music] That time you will duet with complete involvement and [00:03:27] smile on your face. Hai Na Please and pinch the shoulders like this and the temples but in backward five times each. [00:03:47] 12 weights slowly making an impact on imagined outcomes. Inning and celebrate in improvement on a newly married hand. Junior Artist Roti and Neck Three Times First Inquest Addiction in Three Times in anti-clockwise [00:04:03] direction. Do it your own pace routine. Get Properly take that feel the tension getting released the neck muscles very effective in preventing cervical problems name holder ears and [00:04:22] moved clockwise and anti clockwise five times the new set increase prajna battery saver is located in early ears move into is ruling and is clockwise three times in three times in [00:04:39] anti-clockwise direction it is easy to use [00:04:56] and is tied in the open the white five times in the stands for muscles definitely need lord of exercise 123 complete the warm up to increase prana kumbh achieve through of the body builder [00:05:13] name body is ready to do surya namaskar it is a powerful kriya to instructions energy with a new latest weight with a sense of gratitude to the person for sustaining life in the east facing weight reduce to the shadow [00:05:29] of the merit holder anjali mudra a depression and left her palms after impact not bring out bent forward and bring you to the net decide fit begum patel ki naukri denge in pushkar left leg [00:05:47] aspect is possible right now being independent people's name take back their right leg also move and back up with is able toe in knowledge and clearing and nice town to the [00:06:02] floor and axle arrest chest and chain on the floor day slide forward and research as top * cobra force look up now reading out lifting bring her body into [00:06:18] inverted videos taking depression and this time with your left foot forward in between the two hands bring out bring your right forward not stand you another depression reddy and hands off in the [00:06:34] backwaters is discreet first freedom the body tanning and arms down sideways relax how you feel not just on the body surya namaskar this non toe has earned immeasurable positive impact on the mind as we all no lie [00:06:51] development before moving onto the breathing exercises will practice 600 Bath Sweeter Element And Today Satta Me In Curing And Modern Day Health Problems First Tests Here In Relieving Poses The Pawanmuktasana Arms [00:07:09] Website The Body Palms Fisting 80 Link List Gather Brigham And Us A Seal Bank Potion Knees And Bring Thumb Toe Watch Your Chest Interlock And Fingers Press And Thighs On The Laptop Mind Lift Your Head And [00:07:25] Chest Off The Floor Prime To Take Care Notes In Your Kitchen Hall This Position For About And Seconds Apps Name Suggestions Pawanmuktasana Massage Pista Intestine Having Indigestion And Release Of Gas No [00:07:42] Release And Head Your Hands In The Nether To Relax Next Muktasana Aa Daman Ki Poses Bank Both Your Knees And Key Pathetic Hips Spread Toe The And Ram Set The Level Of [00:07:58] Shoulder Is Not Done Both Her Knees Together Towards Right Side Next Left Side Fold Kar Ftu Sabari Normal Yes Your Spine And Gently Been Expressed 9 Loosely Come back to the previous position. [00:08:17] This time, take two steps on the left and the next step on the right. Hold for a few seconds. Merkatasana also promotes creativity. Shringar (mind to mind) is a great way to relax. Come back to the previous position. [00:08:35] Slowly stretch and relax. Keep your arms straight like figures of French tourists at a distance of 10 degrees. [00:08:51] Lift your feet off the ground level at about a forty-five degree angle. Stretch and do sports fit. Hold the inner body weight on this product. It is highly beneficial in reducing extra [00:09:06] fat. It is the abdominal muscles that feel the tension originating in these upper muscles. Slowly, bring the body to the starting position and relax. Like the queen of business. 10. [00:09:24] Sarvangasana (Sarvangasana) Difficult you can insert you Ardha Halasana a a scholar movement booty and lines buttocks and back to that Mahagyana shoulders support your back with his and weight also [00:09:45] supported by your shoulders and upper arms and not where he stands at least putting footprint on the sea link breeding deeply hold arms for fifteen seconds for Earth Halasana holder [00:10:03] body like that in relationship brain power follow thyroid function Sarvangasana of this is highly effective is that without letting her slowly bring her point down completely toe follow relax [00:10:19] for five seconds feel more sensations within the body next Baddha Konasana a popularly known as the butterfly pores set with your spine erect new the fight you brings heels closer to the genitals as possible do it [00:10:37] comfortably as much as your body all accurate depression reading out start flipping Buddha lax up and don't like wings of a butterfly Slap comfortably at your own pace for about thirty seconds. Breathing normally, [00:10:54] you can instantly release a lunge stretch. This is one of the best options for training the pelvic region. This is highly recommended for PCOD and problems related to menstruation and prostate. Relaxation is possible only with a chest [00:11:14] and front. Move to the last option. Mandukasana and the free pose Dashami Dasana for diabetes. First for Saturn Vajrasana. Place your palms on the floor and feel the sensation. Give them [00:11:32] inside and make rests with both hands. Last not clear. First form Leon Dasha, which is inside of belly button. Just like that, it does not give a good impression. Easily get out of the back. Downward position. Close to the left. Lock in [00:11:50] front. Hold your breath in this yoga posture for a few seconds comfortably without straining. Applying lunge pressure exerted in Mandukasana exercises many important organs like back. Vaults Goal Bladder and Liver and Spleen Thumak [00:12:08] Inhalation Back to the Original Position Relax Sudhir Vardhak Yoga Postures Specially Designed for Business Model Lifestyle World No Latest Jobs in Exercise Set Spread Here in Sukhasana [00:12:25] Meaning Siddhasana Siddhasana and Padmasana What ever you are comfortable and spirit Next Create Hands in Meditation Ubhe Kara Smile on your face radiating positivity will [00:12:40] begin with chanting Om three times Close your eyes with mild focus in between your eyebrows Take a deep breath in and slowly chant on Ho in Someshwar Town Related to One [00:12:57] Particular Religion Its Prime and Digital Sound of the Universe Yes Yes Om refers to Atman or Self Resist and Brahman the Ultimate Reality [00:13:13] from Unify Atman with Brahman and cleanse the troubled soul This Divine Sound Balance the Body When Planning and A Ka Naam Vipin 253 Ka and Balance Print on [00:13:32] A Banquet is Closest 10:30 Earth and nose these days a seal slide itself forcefully through your notes will do the best for 4 minutes [00:13:52] a big smile on your face with a steep inhalation feel the pranic energy from the universe is entering your body and with its extradition field doing activity impurities are flowing out [00:14:12] ki Bhad Stree ka Pranayama staple man yogi is acid instantly energy is in the body and instills silence in your mind heartening two senses aptly called inappropriate isolated fire [00:14:29] hello friends respiratory and sinus problems bhastrika is a must spiritually the settled for woman reaches emotional and mental notes of opposition dead black heads and hair now elections on a [00:14:45] new window kapalabhati and rapid action for 4 minutes backstreet is closet body relaxed mind work 10:30 Circle in Indian Express with full contraction of the [00:15:01] dominant muscles is Just like that 200th test kriya tried to keep smiling focus only on the stomach area I do [00:15:19] not worry about these links just focus being on the point between two exclusions is when their bodies will automatically be retained its mechanism is similar to hand pump in the air in the physical body here we are pumping breath out of the body [00:15:37] [music] that kapalabhati literally translates to the shining forehead and subscribe so what happens with regular practice of this yoga kriya a forehead knows not just from the [00:15:56] outside but also from the inside making your mind eliminated ajay that team for at least 6 out votes from per minute slowly you can increase number [00:16:15] 278 and even in 3D its progress luis noher ea you can even access lessons in mind as you are clear [00:16:32] that with every youth world track feel that you are pushing the toxins out Of your body your digestive system it exercises and hotspot of but deliver that functioning better that the internal factory is pain getting clean [00:16:48] top 9th workers are at work and your simply facilitating mem regular practice of kapalabhati pranayama talk only is all the system se nadi its power full fat loss is just [00:17:05] by product kar do me just like milk get spoiled for after effects provided cost hit the benefits of kapalabhati and these text [00:17:20] effects done without a break away at no point over activity or left if but is pressed for president intense that can that in terms of circulating [00:17:36] tissue in a plate effective date of fun apps compare to running that kapalabhati advertising effect on the notes and refreshing effect on the brain so its pregnancy test system like no [00:17:51] yadav gas acidity indigestion lo appetite malabsorption yunus minute delhi kapalabhati Practice alone has the power to destroy distances from its very growth [00:18:13] that in order to de-life remove upper body while walking remove lower body as well as by blocks and climb stairs highest middle portion tetris means lar nukat dates where mostly is from kapalabhati tashana let happen lo kapalabhati [00:18:34] naturally purifies sir plot as well as david's heat yang ended on 110 to 120 words and subtle channels that are in human body kapalabhati has its money to [00:18:49] stimulate and clear the passage yoga-pranayama is all about men get with a calm share full mind with at most fit and involvement [00:19:08] 19 latest so if anusara is that if the depression gives a seal completely no contract and expand stomach is many times as you can end times of good number one slowly you can increase number 213 due to the positive impact of anusara is [00:19:26] Multiply twitter after kapalabhati 2018 who is the name agnisara is derived from two sanskrit words agni meaning fire and sar meaning of classes agnisara kriya mainly [00:19:44] affects the bowels irrigation and regulates the fire element and body all-rounder stomach and this improves the process of digestion and relieves problems related to the stomach [00:20:03] tits set2 balances manipura chakra near first a hain next will do jalandhar dam all so called sachin lock on ki inhale slowly and tips for the normals hai na hot breath contractor that instantly per [00:20:20] conscious download all most touching the upper chest holder band for its long acid comfortable hai luat kuch din ruk to chhut research an and ek sill dhyan us [00:20:36] dry three times ki in uk ignore jalandhar dam considered of prime importance in getting over addictions of the body as well as determined alcohol smoking access masturbation in [00:20:56] Addition to sugar and milk foods what are the concerns details of thought and to drishtipat trimendously increase the bell pass with regular practice of jalandhar dam [00:21:12] folding bed for long times it stimulates awake at night a man shading maharishi patanjali ashtanga yoga its practice question in standard edition is next will do the additional side right is [00:21:31] lost job mute marks all the best all the side of the time like tube a long deep inhalation dhruvdas tube actor in these relations complete through her mouth and exhale through the nostrils such name suggests [00:21:49] cools down the body soothing internal inflammations can you feel relaxed and cooling effect latest best for minute jai hind scorching heat of india strong option climate shitali increased school [00:22:05] tour to keep the internal body temperature in check cooling effect medicine practice penetrating and zip that issues protein in to the body heat ulcers acidity Pimples, Attractions and [00:22:23] if stress induced, this will take effect, feel extra heat from your body, cutting flight booking for the body and rejuvenated mind, this is how you will do Anulom-Vilom and alternate [00:22:41] nostril breathing with your right from clothes, right nostril takes your right nostril, for depression, left nostril, plaster middle to middle, close single left nostril and exhale slowly but complete, lift right [00:22:57] nostril in the same position in half degree from the right nostril, span girls please right them again, inside right nostril and exhale completely from the left nostril, with this completes one circle of [00:23:12] Anulom-Vilom Pranayam will do this important kriya for 4 minutes, do it slowly keeping Ammayilu focus in between your eyes, this will take [00:23:27] effect on your husband, take long drive in relations, feeling and lunge, full capacity these days, one slowly completely, from 2 key time of inhalation and exhalation Rafi 10M and Anulom-Vilom His own name is Nadi Shodhan [00:23:45] Pranayama Nadi Rintu Channel Shodhan means cleansing and pranayama Stagnation of pain and Pingala and two most important nodes in the human body Leader and the Moon channel connecting to the left [00:24:03] nostril corresponds to the right means your doctor and Pingala and the Solar channel connecting to the right nostril corresponds to the left side of the brain Van Anulom-Vilom Mishra test by two notices of [00:24:18] clan springs botanically Prem between the left and right brain which results in heightened states of awareness and perception Physical health scanner product [00:24:37] that with every inhalation field follow-up Rana entering the body and with every action field Impurities flowing out that cleansing Skimming on 830 Posts Labels It's small small feet be mindful of 8 is [00:24:54] you out that by mild focus in between and I promise this is way Ajna Chakra is located at [music] and Anulom-Vilom is considered Tridoshanashak Pranayama which means it springs in [00:25:12] balance between the three basic so maybe no body namely Vadh Faith and Kam Sun no matter what your body type this Anulom-Vilom will bring about and ideal balance pay [00:25:32] and mind has tendency to keep regretting and caloric find the past and create and support for future Nadi Shodhan Pranayama reminds back to the present moment [00:25:50] that the proper reason is to why it is done dave town vayu first in her from the left nostril why only and music playlist vayada middle to fungs are you want to put its ability to bring up balance between the five elements of nature cross [00:26:08] part is made of luit its leaders energy channels assurance of flop rana to agree or not supported on do [00:26:29] and Anulom-Vilom is Advanced This Technique Begins Into Practice Duet With A Sense Of Gratitude That Without Feeling That You Have Been Given A Chance To Get Connected To Your Inner Self Your True Nature Of A Moving Onto The Last Practice Of This [00:26:45] Yoga Session Brahmri And Dabi Vrat That We School In The Years Index Finger Chest Bar Eye Producer And Forest Officer From Girls Short Clip Play Store And Is Touched A Finger Leg To The [00:27:01] Palt Mouth Closed Concentrate In Between Raipur Os One And Long Depressed Through Your Nostrils And Without Making Humming Sound Of Om Do It Five Times As It Is [00:27:19] Pure Is Lost And Looked At And Third I Love Was Tempted Addition Assume It Was Setting On The Access And This Universe Is Revolving Around You Know [00:27:38] That The World Lives At All The Positive Energy Circumventing Minutes From Your Body In The Form Of Humming Sound Of Then Fuels And Stimulating The Pineal And Alum [00:27:54] Plants 85600 for all problems related to the brain in that job form condemnation ice bring her palms together and come back juicy and [00:28:10] continuously for few seconds and unpleasant memories and ice and this that now slowly open air is a this piece work then neti doors on water for [00:28:26] disseminating no fly zone flight and comment in shabash chowkpur minute hits like ka yoga a flight se lene up and discreet foot you for completing this action every and dense [00:28:41] and body is related to her light and satisfied for being taken care of me i am proud of its rich and full chapter note this universe from yourself thank you you will remember [00:28:56] cheerful all day long promise you will reply to them as a prostitute read everyone will of investment from its state no matter what life project you updated with test and then work not that [00:29:12] tomorrow down you have completed tehsils ka session imo download To the divine you and you tomorrow Namaste subscribe this video [00:29:36] can't under estimate the benefits from these minutes go a long way subscribe [00:29:57] subscribe and subscribe the Channel Please subscribe and subscribe [00:30:12] me Herbal Extracts of Turmeric Saffron and Semen Skin Friendly Extracts of Aasmaan Maa Twe Std Removal Highest Starting Table For All Skin Types And Can Be Used For Both Men and Women Maam and Serious Products Dermatologically Tested and Made in India But Luck Download [00:30:30] Description Box Do Not Forget Who Applied Special Discount Coupon 22% Off After This Video You Can Now Support Me By Backing Ajwain Button Blog Please Remember to Subscribe To My Channel Press The Bell Icon Should Have Never Missed a Video From Where You Can Also [00:30:47] Follow Me on Instagram My Name is Vivek Thank You So Much To Watch A"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1254,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: dAqQqmaI9vY",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 3336 | Replies: 390 | Published: 2021-04-02T13:50:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "\"The body benefits from movement and the mind benefits from stillness\". Are we ready for #21daysyogachallenge?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @wethrive_webloom | Likes: 79 | Replies: 0 | Published: 2021-04-02T13:52:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Yes....😊 But can we do yoga during periods?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @rajumnaik1677 | Likes: 25 | Replies: 0 | Published: 2021-04-02T13:53:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Hello vivek bhai. Pls make a video on cardio workout. I want get rid of my body fat. So Pls next video cardio workout. Pls pls",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @gazaldeep7 | Likes: 7 | Replies: 0 | Published: 2021-04-02T13:54:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Yes brother ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @monuji9108 | Likes: 31 | Replies: 0 | Published: 2021-04-02T13:55:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Please make a video on facial hair removal natural way for women...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @charnjitsingh3365 | Likes: 4 | Replies: 0 | Published: 2021-04-02T13:55:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Are you married?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @kirankadyan8305 | Likes: 8912 | Replies: 119 | Published: 2021-04-02T14:19:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "No ads in 30 mins video.a huge applause goes to u.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @mrbutane6664 | Likes: 290 | Replies: 0 | Published: 2021-04-05T02:38:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "I got 1 ad in the beginning",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @garvitpandia8059 | Likes: 172 | Replies: 0 | Published: 2021-04-05T17:26:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Yes because it is a follow along and he doesn't want us to get disturbed",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @mrbutane6664 | Likes: 23 | Replies: 0 | Published: 2021-04-06T02:13:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "@garvitpandia8059 yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @blackmatter20 | Likes: 16 | Replies: 0 | Published: 2021-04-10T02:19:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "Chal be",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @abhishekihma | Likes: 23 | Replies: 0 | Published: 2021-04-14T05:29:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Mama earth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @Dubeyji-k3q | Likes: 179 | Replies: 8 | Published: 2026-04-30T05:11:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "Who is Watching in 2026",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @FirozMugal07 | Likes: 6 | Replies: 0 | Published: 2026-05-06T01:29:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Are bhai tere ko bhi yoga karne ka bhoot sawar hua hai kya 😅😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @jae2433 | Likes: 2 | Replies: 0 | Published: 2026-05-08T01:44:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Have been following this video since it was uploaded!! Best video for quick workout and health!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @Education.qualification | Likes: 3 | Replies: 0 | Published: 2026-05-12T13:52:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "@FirozMugal07হা😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @devaanshiii756 | Likes: 3 | Replies: 0 | Published: 2026-05-21T00:43:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Me",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @Education.qualification | Likes: 1 | Replies: 0 | Published: 2026-05-21T01:21:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "@devaanshiii756your age?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @abhinavashish891 | Likes: 707 | Replies: 7 | Published: 2021-04-02T13:34:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "Someone : what if fit Tuber become the next health",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "Minister?😄",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "Me : The good days of Indian health ministry",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @SatanjibDas | Likes: 5 | Replies: 0 | Published: 2021-04-02T14:08:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "The first person he will meet after this happens , is Akshay Kumar",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @neerajsingh8401 | Likes: 3 | Replies: 0 | Published: 2021-04-02T14:16:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01703",
+                  "author": "",
+                  "text": "We are following last five years 😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01705",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @Magical_explainer | Likes: 188 | Replies: 24 | Published: 2025-09-11T04:30:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01706",
+                  "author": "",
+                  "text": "Sept 2025😅...why iam so late",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01708",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @anshulsuryawanshi8760 | Likes: 15 | Replies: 0 | Published: 2025-09-15T06:12:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01709",
+                  "author": "",
+                  "text": "Better late than never 🙃",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01711",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @Deepakmehra_21 | Likes: 9 | Replies: 0 | Published: 2025-09-16T02:14:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01712",
+                  "author": "",
+                  "text": "@anshulsuryawanshi8760 absolutely right dude",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01714",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @kidsdance402 | Likes: 4 | Replies: 0 | Published: 2025-09-16T02:25:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01715",
+                  "author": "",
+                  "text": "Same to you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01717",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @jaymahajan3712 | Likes: 0 | Replies: 0 | Published: 2025-09-18T02:37:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01718",
+                  "author": "",
+                  "text": "Yo 🤘",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01720",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @sarabjeet3099 | Likes: 0 | Replies: 0 | Published: 2025-09-19T01:37:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01721",
+                  "author": "",
+                  "text": "Me 2",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01723",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @manyasharma7066 | Likes: 12 | Replies: 2 | Published: 2021-04-02T13:35:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01724",
+                  "author": "",
+                  "text": "This man is all set to get an amazing change in our lives 😍....thankyou Fit tuber for such great videos🙏🏻💯",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01726",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @FitTuber | Likes: 4 | Replies: 0 | Published: 2021-04-02T13:51:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01727",
+                  "author": "",
+                  "text": "🙏🏻🙏🏻🙏🏻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01729",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @AdityaSharma-kv9ho | Likes: 0 | Replies: 0 | Published: 2021-04-02T13:56:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01730",
+                  "author": "",
+                  "text": "😂🤣 op",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01732",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @avoiddistraction6126 | Likes: 10 | Replies: 1 | Published: 2021-04-29T17:08:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01733",
+                  "author": "",
+                  "text": "INDIA NEED MORE MEN LIKE YOU TO PROMOTE YOGA",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01735",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @victory-s6 | Likes: 1 | Replies: 0 | Published: 2021-05-20T04:34:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01736",
+                  "author": "",
+                  "text": "One is baba Ramdev",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01738",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @silkyhoda53 | Likes: 0 | Replies: 0 | Published: 2026-07-05T05:17:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01739",
+                  "author": "",
+                  "text": "One of the best online yoga class !!!!!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01741",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @DrDharaLakhani | Likes: 9 | Replies: 0 | Published: 2021-04-02T14:00:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01742",
+                  "author": "",
+                  "text": "Weight kam karna, weight badhana, increase height, sperm count badhane k liye, detox, diabetes, hair problems, corona, hypertension, heart attack ...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01743",
+                  "author": "",
+                  "text": "Thanks a lot diet yoga & Ayurveda channel ko support karne k liye",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01745",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @dabas2031 | Likes: 4 | Replies: 0 | Published: 2021-07-18T02:06:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01746",
+                  "author": "",
+                  "text": "1:32 I made a mini tornado 🌪️ on th 11 th day",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01748",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @kirankadyan8305 | Likes: 23 | Replies: 4 | Published: 2021-04-02T14:01:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01749",
+                  "author": "",
+                  "text": "The background music is just so soothing.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01751",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @balajitandale5255 | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:03:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01752",
+                  "author": "",
+                  "text": "Utube pr mil nahi raha background music",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01753",
+                  "author": "",
+                  "text": "Kisiko pata hai to plz link share kro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01755",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @ayurdarpan | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:15:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01756",
+                  "author": "",
+                  "text": "white noise dal k search kro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01758",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @balajitandale5255 | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:33:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01759",
+                  "author": "",
+                  "text": "Nahi mil raha😑",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01760",
+                  "author": "",
+                  "text": "Jo video me hai vo vala chahiye",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01761",
+                  "author": "",
+                  "text": "Link bhejo n 😐",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01763",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @vidhusri1623 | Likes: 0 | Replies: 0 | Published: 2021-04-02T18:08:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01764",
+                  "author": "",
+                  "text": "Ya💯 any idea where I could get this music's link on YouTube ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01766",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @bhaskareenadu4540 | Likes: 0 | Replies: 0 | Published: 2025-08-12T00:13:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01767",
+                  "author": "",
+                  "text": "I am grateful for fituber for creating such a peaceful amazing video on yoga",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01769",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @athmajwala | Likes: 4 | Replies: 0 | Published: 2021-04-02T14:35:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01770",
+                  "author": "",
+                  "text": "After watching too many yoga videos, I was so confused on what to do and how to plan my yoga session keeping it precise.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01771",
+                  "author": "",
+                  "text": "Your video is a perfect answer to my quest 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01772",
+                  "author": "",
+                  "text": "Thank you bro !!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01773",
+                  "author": "",
+                  "text": "God bless you for scaling greater heights.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "dAqQqmaI9vY",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 109,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 20365,
+          "transcript_words": 3681,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] that state to seven minutes ignore Delhi yoga routine that you can do at home with this unpredictability brand in olden depend on time this video is focus don't channelizing and energy in learning divine practice of yoga as you are a complete ignore yoga and someone with basic experience in this video will properly [00:00:18] introduce you to the family world of snacks and pranayama making her body healthy and mind from this videos in association with my mother's natural excellent face wash one month later love letter way video one more thing this video is not just watch but [00:00:34] for your lord to come on let's get together on hello hello friends welcome to front this up every morning after waking up drink water commence of enquiry into practice yoga preferably you to without eating and i [00:00:50] think all you need is your comment and open mind to start well yoga mat preferably made of cotton wool and you can Even News 28 Aug 18 2012 Prevent the wastage of the energy that will get generated in your body The effectiveness of doing yoga multiplies with the [00:01:08] proper lubrication and the joints So let's get started by rhythmically moving from one to the other for health and refreshing distraction Starting with left to right to do list Try to enter in the same [00:01:27] with moving to all the best and then do 2 times in 2 positions Meanwhile Micro Exercises and Cold Yoga A [00:01:43] subtle exercise Stress Similarly Left Right Left and Rotate five times in each direction and five times in anti-clockwise direction Close your eyes All about doing comfortable at your own pace with a positive state of mind Not mean that Place [00:02:01] your palms together in a routine clockwise and anti-clockwise five times each That will seemingly minor exercises and powerful exercises activate the channels of the [00:02:16] body Now please and hands on the right and rooted five times clockwise Five Times in anti-clockwise direction. Fuel the back. You will feel instant relaxation in [00:02:40] 110°C. Light warm-up. Allusion to older joints by removing excess air bubbles. Tetra 10am toe [Music] That will make you pee. Take Chauhan for cramps. Wee and rotating breast side 20°C and [00:02:57] clean chain. Relax three times. Lunch. Go back and this time bring them for vote. [00:03:12] This exercise bill to your Ram meeting. Arrests of Hunger and Vipin Power Factor [Music] That time you will duet with complete involvement and [00:03:27] smile on your face. Hai Na Please and pinch the shoulders like this and the temples but in backward five times each. [00:03:47] 12 weights slowly making an impact on imagined outcomes. Inning and celebrate in improvement on a newly married hand. Junior Artist Roti and Neck Three Times First Inquest Addiction in Three Times in anti-clockwise [00:04:03] direction. Do it your own pace routine. Get Properly take that feel the tension getting released the neck muscles very effective in preventing cervical problems name holder ears and [00:04:22] moved clockwise and anti clockwise five times the new set increase prajna battery saver is located in early ears move into is ruling and is clockwise three times in three times in [00:04:39] anti-clockwise direction it is easy to use [00:04:56] and is tied in the open the white five times in the stands for muscles definitely need lord of exercise 123 complete the warm up to increase prana kumbh achieve through of the body builder [00:05:13] name body is ready to do surya namaskar it is a powerful kriya to instructions energy with a new latest weight with a sense of gratitude to the person for sustaining life in the east facing weight reduce to the shadow [00:05:29] of the merit holder anjali mudra a depression and left her palms after impact not bring out bent forward and bring you to the net decide fit begum patel ki naukri denge in pushkar left leg [00:05:47] aspect is possible right now being independent people's name take back their right leg also move and back up with is able toe in knowledge and clearing and nice town to the [00:06:02] floor and axle arrest chest and chain on the floor day slide forward and research as top * cobra force look up now reading out lifting bring her body into [00:06:18] inverted videos taking depression and this time with your left foot forward in between the two hands bring out bring your right forward not stand you another depression reddy and hands off in the [00:06:34] backwaters is discreet first freedom the body tanning and arms down sideways relax how you feel not just on the body surya namaskar this non toe has earned immeasurable positive impact on the mind as we all no lie [00:06:51] development before moving onto the breathing exercises will practice 600 Bath Sweeter Element And Today Satta Me In Curing And Modern Day Health Problems First Tests Here In Relieving Poses The Pawanmuktasana Arms [00:07:09] Website The Body Palms Fisting 80 Link List Gather Brigham And Us A Seal Bank Potion Knees And Bring Thumb Toe Watch Your Chest Interlock And Fingers Press And Thighs On The Laptop Mind Lift Your Head And [00:07:25] Chest Off The Floor Prime To Take Care Notes In Your Kitchen Hall This Position For About And Seconds Apps Name Suggestions Pawanmuktasana Massage Pista Intestine Having Indigestion And Release Of Gas No [00:07:42] Release And Head Your Hands In The Nether To Relax Next Muktasana Aa Daman Ki Poses Bank Both Your Knees And Key Pathetic Hips Spread Toe The And Ram Set The Level Of [00:07:58] Shoulder Is Not Done Both Her Knees Together Towards Right Side Next Left Side Fold Kar Ftu Sabari Normal Yes Your Spine And Gently Been Expressed 9 Loosely Come back to the previous position. [00:08:17] This time, take two steps on the left and the next step on the right. Hold for a few seconds. Merkatasana also promotes creativity. Shringar (mind to mind) is a great way to relax. Come back to the previous position. [00:08:35] Slowly stretch and relax. Keep your arms straight like figures of French tourists at a distance of 10 degrees. [00:08:51] Lift your feet off the ground level at about a forty-five degree angle. Stretch and do sports fit. Hold the inner body weight on this product. It is highly beneficial in reducing extra [00:09:06] fat. It is the abdominal muscles that feel the tension originating in these upper muscles. Slowly, bring the body to the starting position and relax. Like the queen of business. 10. [00:09:24] Sarvangasana (Sarvangasana) Difficult you can insert you Ardha Halasana a a scholar movement booty and lines buttocks and back to that Mahagyana shoulders support your back with his and weight also [00:09:45] supported by your shoulders and upper arms and not where he stands at least putting footprint on the sea link breeding deeply hold arms for fifteen seconds for Earth Halasana holder [00:10:03] body like that in relationship brain power follow thyroid function Sarvangasana of this is highly effective is that without letting her slowly bring her point down completely toe follow relax [00:10:19] for five seconds feel more sensations within the body next Baddha Konasana a popularly known as the butterfly pores set with your spine erect new the fight you brings heels closer to the genitals as possible do it [00:10:37] comfortably as much as your body all accurate depression reading out start flipping Buddha lax up and don't like wings of a butterfly Slap comfortably at your own pace for about thirty seconds. Breathing normally, [00:10:54] you can instantly release a lunge stretch. This is one of the best options for training the pelvic region. This is highly recommended for PCOD and problems related to menstruation and prostate. Relaxation is possible only with a chest [00:11:14] and front. Move to the last option. Mandukasana and the free pose Dashami Dasana for diabetes. First for Saturn Vajrasana. Place your palms on the floor and feel the sensation. Give them [00:11:32] inside and make rests with both hands. Last not clear. First form Leon Dasha, which is inside of belly button. Just like that, it does not give a good impression. Easily get out of the back. Downward position. Close to the left. Lock in [00:11:50] front. Hold your breath in this yoga posture for a few seconds comfortably without straining. Applying lunge pressure exerted in Mandukasana exercises many important organs like back. Vaults Goal Bladder and Liver and Spleen Thumak [00:12:08] Inhalation Back to the Original Position Relax Sudhir Vardhak Yoga Postures Specially Designed for Business Model Lifestyle World No Latest Jobs in Exercise Set Spread Here in Sukhasana [00:12:25] Meaning Siddhasana Siddhasana and Padmasana What ever you are comfortable and spirit Next Create Hands in Meditation Ubhe Kara Smile on your face radiating positivity will [00:12:40] begin with chanting Om three times Close your eyes with mild focus in between your eyebrows Take a deep breath in and slowly chant on Ho in Someshwar Town Related to One [00:12:57] Particular Religion Its Prime and Digital Sound of the Universe Yes Yes Om refers to Atman or Self Resist and Brahman the Ultimate Reality [00:13:13] from Unify Atman with Brahman and cleanse the troubled soul This Divine Sound Balance the Body When Planning and A Ka Naam Vipin 253 Ka and Balance Print on [00:13:32] A Banquet is Closest 10:30 Earth and nose these days a seal slide itself forcefully through your notes will do the best for 4 minutes [00:13:52] a big smile on your face with a steep inhalation feel the pranic energy from the universe is entering your body and with its extradition field doing activity impurities are flowing out [00:14:12] ki Bhad Stree ka Pranayama staple man yogi is acid instantly energy is in the body and instills silence in your mind heartening two senses aptly called inappropriate isolated fire [00:14:29] hello friends respiratory and sinus problems bhastrika is a must spiritually the settled for woman reaches emotional and mental notes of opposition dead black heads and hair now elections on a [00:14:45] new window kapalabhati and rapid action for 4 minutes backstreet is closet body relaxed mind work 10:30 Circle in Indian Express with full contraction of the [00:15:01] dominant muscles is Just like that 200th test kriya tried to keep smiling focus only on the stomach area I do [00:15:19] not worry about these links just focus being on the point between two exclusions is when their bodies will automatically be retained its mechanism is similar to hand pump in the air in the physical body here we are pumping breath out of the body [00:15:37] [music] that kapalabhati literally translates to the shining forehead and subscribe so what happens with regular practice of this yoga kriya a forehead knows not just from the [00:15:56] outside but also from the inside making your mind eliminated ajay that team for at least 6 out votes from per minute slowly you can increase number [00:16:15] 278 and even in 3D its progress luis noher ea you can even access lessons in mind as you are clear [00:16:32] that with every youth world track feel that you are pushing the toxins out Of your body your digestive system it exercises and hotspot of but deliver that functioning better that the internal factory is pain getting clean [00:16:48] top 9th workers are at work and your simply facilitating mem regular practice of kapalabhati pranayama talk only is all the system se nadi its power full fat loss is just [00:17:05] by product kar do me just like milk get spoiled for after effects provided cost hit the benefits of kapalabhati and these text [00:17:20] effects done without a break away at no point over activity or left if but is pressed for president intense that can that in terms of circulating [00:17:36] tissue in a plate effective date of fun apps compare to running that kapalabhati advertising effect on the notes and refreshing effect on the brain so its pregnancy test system like no [00:17:51] yadav gas acidity indigestion lo appetite malabsorption yunus minute delhi kapalabhati Practice alone has the power to destroy distances from its very growth [00:18:13] that in order to de-life remove upper body while walking remove lower body as well as by blocks and climb stairs highest middle portion tetris means lar nukat dates where mostly is from kapalabhati tashana let happen lo kapalabhati [00:18:34] naturally purifies sir plot as well as david's heat yang ended on 110 to 120 words and subtle channels that are in human body kapalabhati has its money to [00:18:49] stimulate and clear the passage yoga-pranayama is all about men get with a calm share full mind with at most fit and involvement [00:19:08] 19 latest so if anusara is that if the depression gives a seal completely no contract and expand stomach is many times as you can end times of good number one slowly you can increase number 213 due to the positive impact of anusara is [00:19:26] Multiply twitter after kapalabhati 2018 who is the name agnisara is derived from two sanskrit words agni meaning fire and sar meaning of classes agnisara kriya mainly [00:19:44] affects the bowels irrigation and regulates the fire element and body all-rounder stomach and this improves the process of digestion and relieves problems related to the stomach [00:20:03] tits set2 balances manipura chakra near first a hain next will do jalandhar dam all so called sachin lock on ki inhale slowly and tips for the normals hai na hot breath contractor that instantly per [00:20:20] conscious download all most touching the upper chest holder band for its long acid comfortable hai luat kuch din ruk to chhut research an and ek sill dhyan us [00:20:36] dry three times ki in uk ignore jalandhar dam considered of prime importance in getting over addictions of the body as well as determined alcohol smoking access masturbation in [00:20:56] Addition to sugar and milk foods what are the concerns details of thought and to drishtipat trimendously increase the bell pass with regular practice of jalandhar dam [00:21:12] folding bed for long times it stimulates awake at night a man shading maharishi patanjali ashtanga yoga its practice question in standard edition is next will do the additional side right is [00:21:31] lost job mute marks all the best all the side of the time like tube a long deep inhalation dhruvdas tube actor in these relations complete through her mouth and exhale through the nostrils such name suggests [00:21:49] cools down the body soothing internal inflammations can you feel relaxed and cooling effect latest best for minute jai hind scorching heat of india strong option climate shitali increased school [00:22:05] tour to keep the internal body temperature in check cooling effect medicine practice penetrating and zip that issues protein in to the body heat ulcers acidity Pimples, Attractions and [00:22:23] if stress induced, this will take effect, feel extra heat from your body, cutting flight booking for the body and rejuvenated mind, this is how you will do Anulom-Vilom and alternate [00:22:41] nostril breathing with your right from clothes, right nostril takes your right nostril, for depression, left nostril, plaster middle to middle, close single left nostril and exhale slowly but complete, lift right [00:22:57] nostril in the same position in half degree from the right nostril, span girls please right them again, inside right nostril and exhale completely from the left nostril, with this completes one circle of [00:23:12] Anulom-Vilom Pranayam will do this important kriya for 4 minutes, do it slowly keeping Ammayilu focus in between your eyes, this will take [00:23:27] effect on your husband, take long drive in relations, feeling and lunge, full capacity these days, one slowly completely, from 2 key time of inhalation and exhalation Rafi 10M and Anulom-Vilom His own name is Nadi Shodhan [00:23:45] Pranayama Nadi Rintu Channel Shodhan means cleansing and pranayama Stagnation of pain and Pingala and two most important nodes in the human body Leader and the Moon channel connecting to the left [00:24:03] nostril corresponds to the right means your doctor and Pingala and the Solar channel connecting to the right nostril corresponds to the left side of the brain Van Anulom-Vilom Mishra test by two notices of [00:24:18] clan springs botanically Prem between the left and right brain which results in heightened states of awareness and perception Physical health scanner product [00:24:37] that with every inhalation field follow-up Rana entering the body and with every action field Impurities flowing out that cleansing Skimming on 830 Posts Labels It's small small feet be mindful of 8 is [00:24:54] you out that by mild focus in between and I promise this is way Ajna Chakra is located at [music] and Anulom-Vilom is considered Tridoshanashak Pranayama which means it springs in [00:25:12] balance between the three basic so maybe no body namely Vadh Faith and Kam Sun no matter what your body type this Anulom-Vilom will bring about and ideal balance pay [00:25:32] and mind has tendency to keep regretting and caloric find the past and create and support for future Nadi Shodhan Pranayama reminds back to the present moment [00:25:50] that the proper reason is to why it is done dave town vayu first in her from the left nostril why only and music playlist vayada middle to fungs are you want to put its ability to bring up balance between the five elements of nature cross [00:26:08] part is made of luit its leaders energy channels assurance of flop rana to agree or not supported on do [00:26:29] and Anulom-Vilom is Advanced This Technique Begins Into Practice Duet With A Sense Of Gratitude That Without Feeling That You Have Been Given A Chance To Get Connected To Your Inner Self Your True Nature Of A Moving Onto The Last Practice Of This [00:26:45] Yoga Session Brahmri And Dabi Vrat That We School In The Years Index Finger Chest Bar Eye Producer And Forest Officer From Girls Short Clip Play Store And Is Touched A Finger Leg To The [00:27:01] Palt Mouth Closed Concentrate In Between Raipur Os One And Long Depressed Through Your Nostrils And Without Making Humming Sound Of Om Do It Five Times As It Is [00:27:19] Pure Is Lost And Looked At And Third I Love Was Tempted Addition Assume It Was Setting On The Access And This Universe Is Revolving Around You Know [00:27:38] That The World Lives At All The Positive Energy Circumventing Minutes From Your Body In The Form Of Humming Sound Of Then Fuels And Stimulating The Pineal And Alum [00:27:54] Plants 85600 for all problems related to the brain in that job form condemnation ice bring her palms together and come back juicy and [00:28:10] continuously for few seconds and unpleasant memories and ice and this that now slowly open air is a this piece work then neti doors on water for [00:28:26] disseminating no fly zone flight and comment in shabash chowkpur minute hits like ka yoga a flight se lene up and discreet foot you for completing this action every and dense [00:28:41] and body is related to her light and satisfied for being taken care of me i am proud of its rich and full chapter note this universe from yourself thank you you will remember [00:28:56] cheerful all day long promise you will reply to them as a prostitute read everyone will of investment from its state no matter what life project you updated with test and then work not that [00:29:12] tomorrow down you have completed tehsils ka session imo download To the divine you and you tomorrow Namaste subscribe this video [00:29:36] can't under estimate the benefits from these minutes go a long way subscribe [00:29:57] subscribe and subscribe the Channel Please subscribe and subscribe [00:30:12] me Herbal Extracts of Turmeric Saffron and Semen Skin Friendly Extracts of Aasmaan Maa Twe Std Removal Highest Starting Table For All Skin Types And Can Be Used For Both Men and Women Maam and Serious Products Dermatologically Tested and Made in India But Luck Download [00:30:30] Description Box Do Not Forget Who Applied Special Discount Coupon 22% Off After This Video You Can Now Support Me By Backing Ajwain Button Blog Please Remember to Subscribe To My Channel Press The Bell Icon Should Have Never Missed a Video From Where You Can Also [00:30:47] Follow Me on Instagram My Name is Vivek Thank You So Much To Watch A"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1254,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: dAqQqmaI9vY",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 3336 | Replies: 390 | Published: 2021-04-02T13:50:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "\"The body benefits from movement and the mind benefits from stillness\". Are we ready for #21daysyogachallenge?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @wethrive_webloom | Likes: 79 | Replies: 0 | Published: 2021-04-02T13:52:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Yes....😊 But can we do yoga during periods?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @rajumnaik1677 | Likes: 25 | Replies: 0 | Published: 2021-04-02T13:53:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Hello vivek bhai. Pls make a video on cardio workout. I want get rid of my body fat. So Pls next video cardio workout. Pls pls",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @gazaldeep7 | Likes: 7 | Replies: 0 | Published: 2021-04-02T13:54:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Yes brother ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @monuji9108 | Likes: 31 | Replies: 0 | Published: 2021-04-02T13:55:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Please make a video on facial hair removal natural way for women...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @charnjitsingh3365 | Likes: 4 | Replies: 0 | Published: 2021-04-02T13:55:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Are you married?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @kirankadyan8305 | Likes: 8912 | Replies: 119 | Published: 2021-04-02T14:19:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "No ads in 30 mins video.a huge applause goes to u.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @mrbutane6664 | Likes: 290 | Replies: 0 | Published: 2021-04-05T02:38:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "I got 1 ad in the beginning",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @garvitpandia8059 | Likes: 172 | Replies: 0 | Published: 2021-04-05T17:26:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Yes because it is a follow along and he doesn't want us to get disturbed",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @mrbutane6664 | Likes: 23 | Replies: 0 | Published: 2021-04-06T02:13:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "@garvitpandia8059 yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @blackmatter20 | Likes: 16 | Replies: 0 | Published: 2021-04-10T02:19:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "Chal be",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @abhishekihma | Likes: 23 | Replies: 0 | Published: 2021-04-14T05:29:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Mama earth",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @Dubeyji-k3q | Likes: 179 | Replies: 8 | Published: 2026-04-30T05:11:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "Who is Watching in 2026",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 14] Author: @FirozMugal07 | Likes: 6 | Replies: 0 | Published: 2026-05-06T01:29:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Are bhai tere ko bhi yoga karne ka bhoot sawar hua hai kya 😅😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 15] Author: @jae2433 | Likes: 2 | Replies: 0 | Published: 2026-05-08T01:44:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Have been following this video since it was uploaded!! Best video for quick workout and health!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 16] Author: @Education.qualification | Likes: 3 | Replies: 0 | Published: 2026-05-12T13:52:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "@FirozMugal07হা😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 17] Author: @devaanshiii756 | Likes: 3 | Replies: 0 | Published: 2026-05-21T00:43:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Me",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 18] Author: @Education.qualification | Likes: 1 | Replies: 0 | Published: 2026-05-21T01:21:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "@devaanshiii756your age?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "[COMMENT 19] Author: @abhinavashish891 | Likes: 707 | Replies: 7 | Published: 2021-04-02T13:34:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "Someone : what if fit Tuber become the next health",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "Minister?😄",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "Me : The good days of Indian health ministry",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 20] Author: @SatanjibDas | Likes: 5 | Replies: 0 | Published: 2021-04-02T14:08:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "The first person he will meet after this happens , is Akshay Kumar",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "[COMMENT 21] Author: @neerajsingh8401 | Likes: 3 | Replies: 0 | Published: 2021-04-02T14:16:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01703",
+                "author": "",
+                "text": "We are following last five years 😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01705",
+                "author": "",
+                "text": "[COMMENT 480] Author: @Magical_explainer | Likes: 188 | Replies: 24 | Published: 2025-09-11T04:30:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01706",
+                "author": "",
+                "text": "Sept 2025😅...why iam so late",
+                "likes": null
+              },
+              {
+                "comment_id": "c01708",
+                "author": "",
+                "text": "[COMMENT 481] Author: @anshulsuryawanshi8760 | Likes: 15 | Replies: 0 | Published: 2025-09-15T06:12:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01709",
+                "author": "",
+                "text": "Better late than never 🙃",
+                "likes": null
+              },
+              {
+                "comment_id": "c01711",
+                "author": "",
+                "text": "[COMMENT 482] Author: @Deepakmehra_21 | Likes: 9 | Replies: 0 | Published: 2025-09-16T02:14:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01712",
+                "author": "",
+                "text": "@anshulsuryawanshi8760 absolutely right dude",
+                "likes": null
+              },
+              {
+                "comment_id": "c01714",
+                "author": "",
+                "text": "[COMMENT 483] Author: @kidsdance402 | Likes: 4 | Replies: 0 | Published: 2025-09-16T02:25:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01715",
+                "author": "",
+                "text": "Same to you",
+                "likes": null
+              },
+              {
+                "comment_id": "c01717",
+                "author": "",
+                "text": "[COMMENT 484] Author: @jaymahajan3712 | Likes: 0 | Replies: 0 | Published: 2025-09-18T02:37:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01718",
+                "author": "",
+                "text": "Yo 🤘",
+                "likes": null
+              },
+              {
+                "comment_id": "c01720",
+                "author": "",
+                "text": "[COMMENT 485] Author: @sarabjeet3099 | Likes: 0 | Replies: 0 | Published: 2025-09-19T01:37:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01721",
+                "author": "",
+                "text": "Me 2",
+                "likes": null
+              },
+              {
+                "comment_id": "c01723",
+                "author": "",
+                "text": "[COMMENT 486] Author: @manyasharma7066 | Likes: 12 | Replies: 2 | Published: 2021-04-02T13:35:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01724",
+                "author": "",
+                "text": "This man is all set to get an amazing change in our lives 😍....thankyou Fit tuber for such great videos🙏🏻💯",
+                "likes": null
+              },
+              {
+                "comment_id": "c01726",
+                "author": "",
+                "text": "[COMMENT 487] Author: @FitTuber | Likes: 4 | Replies: 0 | Published: 2021-04-02T13:51:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01727",
+                "author": "",
+                "text": "🙏🏻🙏🏻🙏🏻",
+                "likes": null
+              },
+              {
+                "comment_id": "c01729",
+                "author": "",
+                "text": "[COMMENT 488] Author: @AdityaSharma-kv9ho | Likes: 0 | Replies: 0 | Published: 2021-04-02T13:56:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01730",
+                "author": "",
+                "text": "😂🤣 op",
+                "likes": null
+              },
+              {
+                "comment_id": "c01732",
+                "author": "",
+                "text": "[COMMENT 489] Author: @avoiddistraction6126 | Likes: 10 | Replies: 1 | Published: 2021-04-29T17:08:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01733",
+                "author": "",
+                "text": "INDIA NEED MORE MEN LIKE YOU TO PROMOTE YOGA",
+                "likes": null
+              },
+              {
+                "comment_id": "c01735",
+                "author": "",
+                "text": "[COMMENT 490] Author: @victory-s6 | Likes: 1 | Replies: 0 | Published: 2021-05-20T04:34:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01736",
+                "author": "",
+                "text": "One is baba Ramdev",
+                "likes": null
+              },
+              {
+                "comment_id": "c01738",
+                "author": "",
+                "text": "[COMMENT 491] Author: @silkyhoda53 | Likes: 0 | Replies: 0 | Published: 2026-07-05T05:17:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01739",
+                "author": "",
+                "text": "One of the best online yoga class !!!!!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01741",
+                "author": "",
+                "text": "[COMMENT 492] Author: @DrDharaLakhani | Likes: 9 | Replies: 0 | Published: 2021-04-02T14:00:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01742",
+                "author": "",
+                "text": "Weight kam karna, weight badhana, increase height, sperm count badhane k liye, detox, diabetes, hair problems, corona, hypertension, heart attack ...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01743",
+                "author": "",
+                "text": "Thanks a lot diet yoga & Ayurveda channel ko support karne k liye",
+                "likes": null
+              },
+              {
+                "comment_id": "c01745",
+                "author": "",
+                "text": "[COMMENT 493] Author: @dabas2031 | Likes: 4 | Replies: 0 | Published: 2021-07-18T02:06:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01746",
+                "author": "",
+                "text": "1:32 I made a mini tornado 🌪️ on th 11 th day",
+                "likes": null
+              },
+              {
+                "comment_id": "c01748",
+                "author": "",
+                "text": "[COMMENT 494] Author: @kirankadyan8305 | Likes: 23 | Replies: 4 | Published: 2021-04-02T14:01:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01749",
+                "author": "",
+                "text": "The background music is just so soothing.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01751",
+                "author": "",
+                "text": "[COMMENT 495] Author: @balajitandale5255 | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:03:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01752",
+                "author": "",
+                "text": "Utube pr mil nahi raha background music",
+                "likes": null
+              },
+              {
+                "comment_id": "c01753",
+                "author": "",
+                "text": "Kisiko pata hai to plz link share kro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01755",
+                "author": "",
+                "text": "[COMMENT 496] Author: @ayurdarpan | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:15:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01756",
+                "author": "",
+                "text": "white noise dal k search kro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01758",
+                "author": "",
+                "text": "[COMMENT 497] Author: @balajitandale5255 | Likes: 0 | Replies: 0 | Published: 2021-04-02T15:33:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01759",
+                "author": "",
+                "text": "Nahi mil raha😑",
+                "likes": null
+              },
+              {
+                "comment_id": "c01760",
+                "author": "",
+                "text": "Jo video me hai vo vala chahiye",
+                "likes": null
+              },
+              {
+                "comment_id": "c01761",
+                "author": "",
+                "text": "Link bhejo n 😐",
+                "likes": null
+              },
+              {
+                "comment_id": "c01763",
+                "author": "",
+                "text": "[COMMENT 498] Author: @vidhusri1623 | Likes: 0 | Replies: 0 | Published: 2021-04-02T18:08:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01764",
+                "author": "",
+                "text": "Ya💯 any idea where I could get this music's link on YouTube ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01766",
+                "author": "",
+                "text": "[COMMENT 499] Author: @bhaskareenadu4540 | Likes: 0 | Replies: 0 | Published: 2025-08-12T00:13:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01767",
+                "author": "",
+                "text": "I am grateful for fituber for creating such a peaceful amazing video on yoga",
+                "likes": null
+              },
+              {
+                "comment_id": "c01769",
+                "author": "",
+                "text": "[COMMENT 500] Author: @athmajwala | Likes: 4 | Replies: 0 | Published: 2021-04-02T14:35:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01770",
+                "author": "",
+                "text": "After watching too many yoga videos, I was so confused on what to do and how to plan my yoga session keeping it precise.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01771",
+                "author": "",
+                "text": "Your video is a perfect answer to my quest 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01772",
+                "author": "",
+                "text": "Thank you bro !!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01773",
+                "author": "",
+                "text": "God bless you for scaling greater heights.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

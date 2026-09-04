@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_restricted_intelligence_20260904_090712_fd5419",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090712_fd5419",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Diabetes and blood-sugar management — partial transcript",
+      "batch_number": 9,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "batch_instruction": "This is independently importable batch 9 of 35 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260904_090712_fd5419",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260904_090712_fd5419"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090712_fd5419",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Diabetes and blood-sugar management — partial transcript",
+      "batch_number": 9,
+      "batch_total": 35,
+      "batch_size": 8
+    }
+  },
+  "manifest": {
+    "request_id": "a19cc61f-0924-4f2f-81e0-c4f204aeb41d",
+    "package_id": "vh_restricted_intelligence_20260904_090712_fd5419",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "fb5gHqmreas"
+    ],
+    "evidence_grades": {
+      "fb5gHqmreas": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Diabetes and blood-sugar management — partial transcript",
+      "batch_number": 9,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "hashes": {
+      "evidence.json": "06a8dee2bcff6a28abee2a830732768522f53feeeacbb91a43c06e7444a1cac6",
+      "prompt.json": "67f0c12f14e9e1231e102d5510474a08820a8005eaf102a9b4d4fcec33f1113f",
+      "schema.json": "1d15360de396c67e1e2617bc5821b9d1894513ac227285467ebea5b910a318f5"
+    },
+    "created_at": "2026-09-04 09:07:12",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "fb5gHqmreas",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=fb5gHqmreas",
+        "original_title": "Reverse Diabetes Permanently in 3 Steps",
+        "clean_title": "Reverse Diabetes Permanently in 3 Steps",
+        "channel": "Fit Tuber",
+        "upload_date": "2023-12-15",
+        "description": "If you are pre-diabetic or diabetic or sugar runs in your family then this is the video for you. In this video, I am going to share with you 3 concrete steps that will reverse your diabetes permanently. Well, it might shake you a bit but contrary to popular belief that diabetes can’t be cured, it can only be managed, Ayurveda is firm that all you need is the right direction and conviction in your mind to get rid of diabetes forever. And that’s exactly what this video is about. In this video, I will share with you a clear roadmap to how your diet should look like, what mistakes you must avoid and some of the most effective remedies as mentioned in Ayurvedic scriptures.\n\n00:00 - Intro\n01:12 - Understanding diabetes so that it gets easy to cure\n04:03 - STEP 1 to Reverse Diabetes Permanently - DIET\n09:38 - STEP 2 to Reverse Diabetes Permanently - AYURVEDIC HERBS\n11:02 - STEP 3 to Reverse Diabetes Permanently - W_______G\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nJamun Seed Powder (Mix half teaspoon in water and drink in morning) - https://amzn.to/3NZlRpU\nOrganic Fenugreek Seeds (Methi Dana) - https://amzn.to/48iNJgB\nRegular Fenugreek Seeds (Methi Dana) - https://amzn.to/3NorI8k\nPure Amla Powder (Edible) - https://amzn.to/478cwmQ \nOrganic Amla Powder (Edible) - https://amzn.to/3tfJ4NN\nPremium Lakadong Turmeric Powder - https://amzn.to/41qcx3Z\nOrganic Turmeric Powder - https://amzn.to/3RJklL2\nRegular Turmeric Powder - https://amzn.to/3GHG5kc\nNishamalki Tablets (option 1 ) - https://amzn.to/3TnnbGL\nNishamalki Tablets (option 2) - https://amzn.to/47VotNN \nKhapli whole wheat flour (option 1 - Rs 250/kg) - https://amzn.to/3JA9pKG\nKhapli whole wheat flour (option 2 - Rs 150/kg) - https://amzn.to/3lnlL0n\nKhapli whole wheat flour (option 4 - Rs 215/kg) - https://amzn.to/3mUwxvs\nKhapli whole wheat flour (option 5 - Rs 165/kg) - https://amzn.to/40aV660\nHand pounded Rice (option 1) - https://amzn.to/3Nt16mo\nHand pounded Rice (option 2)- https://amzn.to/39O9Lwd\nRed Rice (Hand Pounded) - https://amzn.to/3oPnwzf\nHorsegram (Kulthi Dal) - https://amzn.to/47YYmFN\nRoasted Unsalted Peanuts (ideal for diabetics - Rs 390/900g) - https://amzn.to/4718Hzu\nNatural Unsweetened Peanut Butter - https://amzn.to/3GMHWUZ\nSteel cut oats (good option for making vegetable dalia) - https://amzn.to/3uUD8tQ\nOrganic Barley dalia (Ideal for diabetics) - https://amzn.to/3uWLb9D\nUnpolished Millets (prefer them over rice - eat normally like rice) - https://amzn.to/3tfKxDN\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n00:00 - Segment Partner - \n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:22] if you are diabetic pre-diabetic or sugar runs in your family then this is the video for you in this video I'm going to share with you three concrete steps that will re verse your diabetes permanently well it might shake you a bit but contrary to popular belief that [00:00:37] diabetes can't be cured it can only be managed ayura is firmed that all you need is the right direction and conviction in your mind to get rid of diabetes forever and that's exactly what this video is all about in this video I will share with [00:00:54] you a clear road map as to what your diet should look like what mistakes you must avoid and the most effective remedy as mentioned in ayic scriptures so get your blood sugar checked today and let's get started with the [00:01:13] video Hello friends welcome to fit tuber diabetes is a condition when your blood sugar Rises more than what your body can handle if the blood sugar reading is 100 or even 200 mg per decil it can be tackled by the body Beyond this it begins to get problematic but keep in [00:01:29] mind mind that high blood sugar is just the symptom of diabetes and not the root cause of it take the example of a person who is suffering from fever because of a viral infection now if that person only tries to suppress the fever it won't [00:01:44] help him in the long run because the infection is still there similarly if we only take metformin and drugs like that to suppress the blood sugar it won't help the root cause which is insulin resistance basically when you eat food [00:02:00] your body converts it into glucose however to use this glucose for energy the glucose molecule must enter the cells and that's where insulin a hormone produced by the pancreas comes into the picture just as to open a door you need [00:02:17] a key insulin is the key for the glucose to enter the cell doors where it is used to produce energy this is a normal scenario but when you begin to eat excessive amount of carbon hydrates glucose in the blood Rises beyond the [00:02:33] limit pancreas in response produces more insulin to push that glucose into the cells however after a point the cells can't take in more glucose and they begin to resist insulin signal consider a coach of Delhi Metro which is already [00:02:49] full of people now if someone tries to push in more people into it what will happen obviously people inside will begin to resist this this is exactly what we call insulin resistance cells are already so full of glucose that they [00:03:04] can't take in more glucose so right now the blood will have an excess amount of unutilized glucose and pancreas will try to pump in more insulin to somehow push that glucose into the cells this High insulin causes more insulin resistance [00:03:21] and when cells get too resistant to insulin it's called diabetes Now this makes sense why insulin resistance causes increas in body fat in fact blood thickens up with excess glucose which injures the tiny blood vessels this is a [00:03:37] major reason why diabetes if not reversed causes kidney failure heart Strokes blood Vision foot amputation and nerve damage so how can we reverse this mess only if we use up this excess blood sugar in the cells and make the body [00:03:54] sensitive to insulin the situation will automatically reverse and it's possible only if you are really keen on taking the Three Steps step one diet first of all let's get this straight that diabetes is not a disease it is in fact [00:04:10] a dietary disorder it's caused by wrong diet and it can be reversed by eating right well it's not just an ayurvedic claim but there is modern research to support this fact but if you say that diabetes runs in my family then I think you should be happy to know that genes [00:04:27] contribute less than 15% chance chances plus studies show that it's the wrong food choices that trigger such genes so how should your diet look like if you are truly looking to reverse diabetes for breakfast it's best that you eat [00:04:42] fruits yes you need not avoid fruits in diabetes fruit sugar is natural plus it's fructose which gets metabolized in the liver easily also fruits are high on antioxidant scale that help reverse diabetes choose any one seasonal fruit [00:04:58] preferably trick like jamun guava orange Mambi and pineapple or any other fruit you like banana mango Chu dates and watermelon should be taken in moderation just make sure that you avoid fruit juice as it is devoid of fiber and [00:05:15] spikes blood sugar if fruit alone isn't enough for you you can also eat vegetable Deli after that use a variety of seasonal vegetables rather than wheat prefer using barley oats and millets to make this suffering from diabetes it's extremely [00:05:32] beneficial that you start your lunch with a big bowl of raw vegetable salad what it does is that first the fiber and antioxidants in the salad won't let the blood sugar Spike too high and second you will feel satiated fast if you don't [00:05:48] like raw salad you can lightly sauté or steam the vegetables cucumber cabbage onions carrots can be included then you can have a protein rich dll with some season Al subzi and chapati kulti Dal is almost medicinal in diabetes rajma CH [00:06:06] Chana Dal green mongal and muty are all great options for diabetics it's ideal if they avoid wheat and white rice millets on the other hand are a super grain with low glycemic load and high fiber in fact they look like smaller [00:06:21] version of rice they can be consumed just like rice in the form of Keri Pula or Biryani some Millet flowers are also easily available and and you can make chapattis out of them if you can't do without wheat and rice cuple wheat is one variety which is suitable for [00:06:36] diabetics similarly hand pounded rice can be consumed in moderation basically when you eat your meal you should eat less of grain and more of that subzi it is important that you strictly avoid refined oils for cooking they are proven to damage the pancreas it's high time [00:06:53] you start using Kiani cold pressed oils then in the evening if you feel like snacking prefer eating low carb high fat foods why I suggest this will be more clear to you if you look at this graph compare the huge difference in the blood sugar Spike caused by carbs versus that [00:07:10] of fats try handful of peanuts rich in healthy fatty acids and protein it hardly spikes blood sugar and rather makes you feel full easily other such options can be pumpkin seeds almonds and cashews simply a serving of fruit can [00:07:26] also be taken apple with peanut butter app applied on it can also be a good option you can even have Tulsi Ginger cinnamon herbal tea at any time of the day then for dinner again start with salad but this time take onion salad you will be amazed to know how raw onion has [00:07:43] a special compound that reduces the blood sugar within hours there have been several studies done in one study just 100 G of raw onion reduced blood sugar in 84 diabetic people in 4 hours so have onion salad and then you can have Keri [00:08:00] Dal with millets or subsy with millets avoid subses having Alo bringel sweet corn and soyab bean try to complete your dinner by 7:00 p.m. what this will do is that the diet which is essentially low carb will reduce the blood sugar and the [00:08:16] fasting window of 12 to 16 hours will help instigate the repair mechanism of the body your body's intelligence will have ample opportunity to bring the insulin resistance thing in order how well interm fasting Works in diabetes is [00:08:31] clear from this study done on two groups people who were following intermittent fasting for 3 months their diabetes improved 47% while in the normal group there was just 2% Improvement basically intermittent fasting will speed up your [00:08:47] recovery 23 times needless to say you should strictly avoid refined sugar packaged Foods carbonated drinks and mea based junk food if you can't do this much then I don't think you are serious about reversing diabetes even milk and [00:09:03] milk products are better avoided for the first few months for diabetics it's best that they consume sugar only from fruits however if you feel the need to add sugar note this artificial sweeteners like sugarfree are the worst because they aren't metabolized well in the body [00:09:20] and have proven side effects then comes refined sugar which is again chemically processed better are Jager Jager powder dried a powder and honey according to ayura Pure raw neem and jamun honey are considered among the best sweet nerses [00:09:36] in diabetes step two herbs as we have discussed the right diet is the prime medicine in reversing diabetes and to accelerate the process ayurvedic scriptures talk about various herbs and combinations taking into consideration [00:09:52] two factors Effectiveness and practicality I have selected two of them one to be taken in the morning and the other before going to sleep at night morning one is methana ayura is clear that meika it Sanskrit name is a [00:10:08] medicine in madum that is diabetes today modern studies are in line as well which show that methan or fenugreek seeds have this peculiar property to reduce the blood sugar level and also increase insulin sensitivity at night soak 1 tbsp [00:10:24] of methy Dan in little water and the next morning first drink plain water go freshen up and then have myy water and also chew the myy seeds second one to be taken at night is a combination of two herbs referred to as Nisha Amal yog in [00:10:40] AA basically it's turmeric plus amla all you need to do is take 1 teaspoon of amla powder mix 1/4 teaspoon of turmeric powder and add it in hot water now this little shot is a potent medicine for diabetes this classical formula comes in [00:10:57] the form of tablet as well which you can have with warm water step three walking walking in diabetes is a double LED sword first obviously because it's a form of exercise and whenever we exercise the excess sugar in the blood [00:11:12] is used up by the body so walking for just 15 minutes after a meal is your natural met forming tablet although walking has another Advantage it's that it is a stress Buster and stress mind you is one of the major triggers of diabetes when our mind is under stress [00:11:29] body releases the stored glucose into the blood thereby increasing blood sugar even more so try walking whenever you get time after dinner or early in the morning you will feel better instantly research has shown that if one walks 3 [00:11:45] kilm daily blood sugar levels go down while insulin sensitivity increases significantly if we quickly recap diabetes is not a disease but a lifestyle disorder if however ignored and manage it is a precursor for many [00:12:01] life-threatening diseases its root causes insulin resistance and to get hold of the root you need to take three steps diet that should be low in carbs relatively high in protein and healthy fats fruit should be consumed before breakfast vegetable salad before lunch [00:12:19] and onion salad before dinner try to eat within a window of 12 hours and keep at least 12 hours for fast tank to speed up the process have myy water water with seeds in morning and amla turmeric water at night walking is not just a simple [00:12:35] and effective exercise to burn up the excess glucose in the blood but it is a great stress Buster which Taps diabetes from its root so if you follow the three steps that is Diet herbs and walking within a week you will experience a [00:12:50] noticeable drop in your base sugar level if you are already on medication it's best to taper it down slowly week by week if you diligently stick to this plan in a few months a time will come when your doctor will tell you that now you don't need any medicine that you [00:13:07] don't have diabetes anymore I want you to take this up as a challenge and then come back and share your success story with others if you think this video helps and it can be useful to someone you know like and share it if you're looking for a toxin Free Soap M's [00:13:24] moisturizing bathing bar for babies stands out in the Indian market turn it and you will find that it is free from sulfates parabens artificial colors and fragrances with the goodness of oatmeal goat milk Shia butter coconut and lavender oil it is a fine choice in the [00:13:41] Indian market even though it's a baby bar it can be used by men and women of all skin types yes it's way better than those so-called mild baby soaps to buy M's moisturizing bathing bar for babies click on the link down in the description box do not forget to apply [00:13:58] the special discount C on to get 21% off on your order there are five foods that are proven to melt your body fat to find out click on this video my name is VI I thank you so much for watching [Music]"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1137,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: fb5gHqmreas",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 1341 | Replies: 194 | Published: 2023-12-15T13:41:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "In Type 1 diabetes, the pancreas gets completely damaged and stops making insulin. While in Type 2 diabetes, there is excess insulin in the blood. This also makes sense as to why people with Type 2 diabetes put on body fat while in Type 1 diabetes people become thin. Almost 95% of people suffer from Type 2 diabetes whereas only 5% of people get Type 1 diabetes. Generally, if Type 2 diabetes is not cured, it leads to type 1 diabetes. Have no doubt that the 3 steps mentioned in this video will work to reverse both type 1 and type 2 diabetes. If you would want me to talk about 5 Products that every Diabetic/Pre diabetic should try then leave a like #youropinionmatters",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @arasiselvaraj2214 | Likes: 18 | Replies: 0 | Published: 2023-12-15T13:51:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Thank you very much bhaiya. Much sought after video. I earnestly want my mother diabetes free",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @aaradhyashahi9085 | Likes: 7 | Replies: 0 | Published: 2023-12-15T13:53:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Please make a video on how to cure Deviated nasal septum DNS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @chandrakanta565 | Likes: 14 | Replies: 0 | Published: 2023-12-15T13:54:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Yes I want. Plz make such videos, it is very helpful.and also in hindi",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @RameshKumaar | Likes: 1 | Replies: 0 | Published: 2023-12-15T13:56:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Diabetes mafia will attack you Vivek so be ready to give it back.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @RameshKumaar | Likes: 0 | Replies: 0 | Published: 2023-12-15T13:58:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Diabetes ma fia will attack you Vivek so be ready to give it back.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @chhayagautam6724 | Likes: 1017 | Replies: 37 | Published: 2023-12-16T09:19:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "I am a doctor and it's amazing how correctly he explained the pathology behind diabetes.. kudos to you ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @RGZShorts | Likes: 22 | Replies: 0 | Published: 2023-12-17T08:23:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "You are a doctor😂😂😂😂😂😂....... YouTube ki video dekh kr hi doctor bne ho kya... Tabhi to abhi bhi yhi video dekh rhe ho 😂😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @chhayagautam6724 | Likes: 96 | Replies: 0 | Published: 2023-12-17T10:08:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "@RGZShorts Is there any rule against watching YT videos for doctors?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "I am just appreciating that instead of spreading misinformation this video is well informed.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "[COMMENT 10] Author: @RGZShorts | Likes: 12 | Replies: 0 | Published: 2023-12-17T10:12:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "@chhayagautam6724aisa koi rule nhi hai .... Fake comment karna galat hai ... Tum doctor nhi ho....tum paid commenter ho",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "[COMMENT 11] Author: @amitkumarjha3809 | Likes: 6 | Replies: 0 | Published: 2023-12-18T13:26:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "You should watch Rajiv Dixit's Ayurvedic videos on YouTube, you will get so much knowledge about Ayurveda and you will be free of all diseases and you can treat many people with only home remedy.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "[COMMENT 12] Author: @RGZShorts | Likes: 1 | Replies: 0 | Published: 2023-12-18T13:33:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "@@anonymousseeker7470 I am 100% sure . Every YouTube channel have some paid commentator .They post comment in favour of channel and then the got pinned by the channel 😂😂 ..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "Do you really think that doctors watch these kind of YouTube video and then they immediately do a long comment 😂😂😂😂......",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "You are also a paid person of channel 😂😂😂 that's why you are supporting that fake id doctor 😂😂😂 YouTube doctor",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Bimar hone par offline jakar doctor se hi ilaaj karwana padta hai online video dekh kar ilaaj nhi hota",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 13] Author: @nikss7076 | Likes: 195 | Replies: 7 | Published: 2024-04-07T17:55:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Why GovernMENT not giving HIM a good award?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 14] Author: @GlenroseMakgorogo | Likes: 1 | Replies: 0 | Published: 2024-07-12T23:47:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "They won't",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 15] Author: @avishekgurung5297 | Likes: 9 | Replies: 0 | Published: 2024-07-20T08:09:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "because he is not promoting govt",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 16] Author: @lifeinbeta2025 | Likes: 7 | Replies: 0 | Published: 2024-08-19T01:02:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "Bcz govt works for corporates and least bothered about citizens",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "[COMMENT 17] Author: @DEMON-cl5nb | Likes: 0 | Replies: 0 | Published: 2024-09-08T08:32:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "@lifeinbeta2025 exactly",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "[COMMENT 18] Author: @DEMON-cl5nb | Likes: 1 | Replies: 0 | Published: 2024-09-08T08:32:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "@avishekgurung5297 exactly",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 19] Author: @Kisalens24 | Likes: 79 | Replies: 0 | Published: 2024-05-21T01:08:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "FIT Tubers is much better than 1000 doctors in the country. His explanation on health issues is holistic and practical. I have tried some tips myself based on his explanation",
+              "likes": null
+            },
+            {
+              "comment_id": "c00072",
+              "author": "",
+              "text": "[COMMENT 20] Author: @kolkatakakalakar | Likes: 736 | Replies: 33 | Published: 2023-12-20T14:54:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "[COMMENT 476] Author: @novfalmohammed1732 | Likes: 0 | Replies: 0 | Published: 2024-02-04T21:17:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "Thanx for the video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "[COMMENT 477] Author: @sahilshahzaib-r4k | Likes: 0 | Replies: 0 | Published: 2024-01-28T09:05:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "very nice awsome video sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c01591",
+              "author": "",
+              "text": "[COMMENT 478] Author: @Vaibhavvipulmotupatlu | Likes: 0 | Replies: 0 | Published: 2024-05-15T13:26:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "Thanks a lot",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "[COMMENT 479] Author: @gautambhindwar | Likes: 0 | Replies: 0 | Published: 2024-06-26T13:14:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "This is best habit go for it it work",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "[COMMENT 480] Author: @RaviKumar-ce2nh | Likes: 0 | Replies: 0 | Published: 2025-06-11T05:30:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "Thanks for your video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "[COMMENT 481] Author: @abhisheksrivastava9016 | Likes: 0 | Replies: 0 | Published: 2024-02-24T17:37:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "I was searching sir... kaha thay abhi tak",
+              "likes": null
+            },
+            {
+              "comment_id": "c01603",
+              "author": "",
+              "text": "[COMMENT 482] Author: @jyo9310 | Likes: 0 | Replies: 0 | Published: 2024-03-12T17:50:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "A video on migrane and vertigo plzz",
+              "likes": null
+            },
+            {
+              "comment_id": "c01606",
+              "author": "",
+              "text": "[COMMENT 483] Author: @adimension-11 | Likes: 0 | Replies: 0 | Published: 2024-02-04T15:06:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "Nice Information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01609",
+              "author": "",
+              "text": "[COMMENT 484] Author: @meharoshmulla5842 | Likes: 0 | Replies: 0 | Published: 2024-02-21T13:42:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "What an explanation 👏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01612",
+              "author": "",
+              "text": "[COMMENT 485] Author: @Kanikasharma-kk5vx | Likes: 0 | Replies: 0 | Published: 2025-09-23T19:24:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "Thankyou bhaiya 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01615",
+              "author": "",
+              "text": "[COMMENT 486] Author: @athenarockett3088 | Likes: 0 | Replies: 0 | Published: 2024-01-29T02:16:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "Thank you sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c01618",
+              "author": "",
+              "text": "[COMMENT 487] Author: @Shim-l1d | Likes: 0 | Replies: 0 | Published: 2024-02-24T05:38:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "Thank you Fit tuber very grateful 🙏 if you are Jain and don’t eat onion is there an alternative please?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01621",
+              "author": "",
+              "text": "[COMMENT 488] Author: @financeidentified8015 | Likes: 0 | Replies: 0 | Published: 2024-02-05T14:25:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "Hello bro, could you please make a video on high blood pressure",
+              "likes": null
+            },
+            {
+              "comment_id": "c01624",
+              "author": "",
+              "text": "[COMMENT 489] Author: @tosendhil | Likes: 0 | Replies: 0 | Published: 2025-11-14T15:29:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "[COMMENT 490] Author: @samirgurung221 | Likes: 0 | Replies: 0 | Published: 2024-02-08T10:41:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "Wow..Nice information..sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "[COMMENT 491] Author: @PinkyJain-yw4wz | Likes: 0 | Replies: 0 | Published: 2024-04-30T08:24:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01631",
+              "author": "",
+              "text": "Hats off to you",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "[COMMENT 492] Author: @ajaysuri3101 | Likes: 0 | Replies: 0 | Published: 2024-03-06T12:04:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01634",
+              "author": "",
+              "text": "Very well explained.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01636",
+              "author": "",
+              "text": "[COMMENT 493] Author: @NikiReti | Likes: 0 | Replies: 0 | Published: 2024-03-15T18:35:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "Thenkiu so much❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "[COMMENT 494] Author: @anumikram7150 | Likes: 0 | Replies: 0 | Published: 2025-09-01T21:47:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01640",
+              "author": "",
+              "text": "great research... keep it up bro..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "[COMMENT 495] Author: @AnjumdiyaSachan | Likes: 0 | Replies: 0 | Published: 2024-02-25T12:37:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01643",
+              "author": "",
+              "text": "U r really jem for us",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "[COMMENT 496] Author: @Chloe-sg4yi | Likes: 0 | Replies: 0 | Published: 2024-08-11T09:08:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01646",
+              "author": "",
+              "text": "THANK YOU SO MUCH 🙏🙏🙏🫶",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "[COMMENT 497] Author: @madhup2400 | Likes: 0 | Replies: 0 | Published: 2024-01-24T13:53:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01649",
+              "author": "",
+              "text": "Good info SIR,Thanks.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "[COMMENT 498] Author: @martiniandice | Likes: 0 | Replies: 0 | Published: 2024-05-07T06:24:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01652",
+              "author": "",
+              "text": "Bless you!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "[COMMENT 499] Author: @vaibhav7vm | Likes: 0 | Replies: 0 | Published: 2024-03-04T18:15:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01655",
+              "author": "",
+              "text": "Thank you sir ❤️🙏❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "[COMMENT 500] Author: @selvivenkat7786 | Likes: 0 | Replies: 0 | Published: 2024-02-01T09:31:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01658",
+              "author": "",
+              "text": "Really its of more use",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "fb5gHqmreas",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Reverse Diabetes Permanently in 3 Steps\\Reverse Diabetes Permanently in 3 Steps.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Reverse Diabetes Permanently in 3 Steps",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\fb5gHqmreas",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "fb5gHqmreas",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 52,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 12870,
+            "transcript_words": 2467,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:22] if you are diabetic pre-diabetic or sugar runs in your family then this is the video for you in this video I'm going to share with you three concrete steps that will re verse your diabetes permanently well it might shake you a bit but contrary to popular belief that [00:00:37] diabetes can't be cured it can only be managed ayura is firmed that all you need is the right direction and conviction in your mind to get rid of diabetes forever and that's exactly what this video is all about in this video I will share with [00:00:54] you a clear road map as to what your diet should look like what mistakes you must avoid and the most effective remedy as mentioned in ayic scriptures so get your blood sugar checked today and let's get started with the [00:01:13] video Hello friends welcome to fit tuber diabetes is a condition when your blood sugar Rises more than what your body can handle if the blood sugar reading is 100 or even 200 mg per decil it can be tackled by the body Beyond this it begins to get problematic but keep in [00:01:29] mind mind that high blood sugar is just the symptom of diabetes and not the root cause of it take the example of a person who is suffering from fever because of a viral infection now if that person only tries to suppress the fever it won't [00:01:44] help him in the long run because the infection is still there similarly if we only take metformin and drugs like that to suppress the blood sugar it won't help the root cause which is insulin resistance basically when you eat food [00:02:00] your body converts it into glucose however to use this glucose for energy the glucose molecule must enter the cells and that's where insulin a hormone produced by the pancreas comes into the picture just as to open a door you need [00:02:17] a key insulin is the key for the glucose to enter the cell doors where it is used to produce energy this is a normal scenario but when you begin to eat excessive amount of carbon hydrates glucose in the blood Rises beyond the [00:02:33] limit pancreas in response produces more insulin to push that glucose into the cells however after a point the cells can't take in more glucose and they begin to resist insulin signal consider a coach of Delhi Metro which is already [00:02:49] full of people now if someone tries to push in more people into it what will happen obviously people inside will begin to resist this this is exactly what we call insulin resistance cells are already so full of glucose that they [00:03:04] can't take in more glucose so right now the blood will have an excess amount of unutilized glucose and pancreas will try to pump in more insulin to somehow push that glucose into the cells this High insulin causes more insulin resistance [00:03:21] and when cells get too resistant to insulin it's called diabetes Now this makes sense why insulin resistance causes increas in body fat in fact blood thickens up with excess glucose which injures the tiny blood vessels this is a [00:03:37] major reason why diabetes if not reversed causes kidney failure heart Strokes blood Vision foot amputation and nerve damage so how can we reverse this mess only if we use up this excess blood sugar in the cells and make the body [00:03:54] sensitive to insulin the situation will automatically reverse and it's possible only if you are really keen on taking the Three Steps step one diet first of all let's get this straight that diabetes is not a disease it is in fact [00:04:10] a dietary disorder it's caused by wrong diet and it can be reversed by eating right well it's not just an ayurvedic claim but there is modern research to support this fact but if you say that diabetes runs in my family then I think you should be happy to know that genes [00:04:27] contribute less than 15% chance chances plus studies show that it's the wrong food choices that trigger such genes so how should your diet look like if you are truly looking to reverse diabetes for breakfast it's best that you eat [00:04:42] fruits yes you need not avoid fruits in diabetes fruit sugar is natural plus it's fructose which gets metabolized in the liver easily also fruits are high on antioxidant scale that help reverse diabetes choose any one seasonal fruit [00:04:58] preferably trick like jamun guava orange Mambi and pineapple or any other fruit you like banana mango Chu dates and watermelon should be taken in moderation just make sure that you avoid fruit juice as it is devoid of fiber and [00:05:15] spikes blood sugar if fruit alone isn't enough for you you can also eat vegetable Deli after that use a variety of seasonal vegetables rather than wheat prefer using barley oats and millets to make this suffering from diabetes it's extremely [00:05:32] beneficial that you start your lunch with a big bowl of raw vegetable salad what it does is that first the fiber and antioxidants in the salad won't let the blood sugar Spike too high and second you will feel satiated fast if you don't [00:05:48] like raw salad you can lightly sauté or steam the vegetables cucumber cabbage onions carrots can be included then you can have a protein rich dll with some season Al subzi and chapati kulti Dal is almost medicinal in diabetes rajma CH [00:06:06] Chana Dal green mongal and muty are all great options for diabetics it's ideal if they avoid wheat and white rice millets on the other hand are a super grain with low glycemic load and high fiber in fact they look like smaller [00:06:21] version of rice they can be consumed just like rice in the form of Keri Pula or Biryani some Millet flowers are also easily available and and you can make chapattis out of them if you can't do without wheat and rice cuple wheat is one variety which is suitable for [00:06:36] diabetics similarly hand pounded rice can be consumed in moderation basically when you eat your meal you should eat less of grain and more of that subzi it is important that you strictly avoid refined oils for cooking they are proven to damage the pancreas it's high time [00:06:53] you start using Kiani cold pressed oils then in the evening if you feel like snacking prefer eating low carb high fat foods why I suggest this will be more clear to you if you look at this graph compare the huge difference in the blood sugar Spike caused by carbs versus that [00:07:10] of fats try handful of peanuts rich in healthy fatty acids and protein it hardly spikes blood sugar and rather makes you feel full easily other such options can be pumpkin seeds almonds and cashews simply a serving of fruit can [00:07:26] also be taken apple with peanut butter app applied on it can also be a good option you can even have Tulsi Ginger cinnamon herbal tea at any time of the day then for dinner again start with salad but this time take onion salad you will be amazed to know how raw onion has [00:07:43] a special compound that reduces the blood sugar within hours there have been several studies done in one study just 100 G of raw onion reduced blood sugar in 84 diabetic people in 4 hours so have onion salad and then you can have Keri [00:08:00] Dal with millets or subsy with millets avoid subses having Alo bringel sweet corn and soyab bean try to complete your dinner by 7:00 p.m. what this will do is that the diet which is essentially low carb will reduce the blood sugar and the [00:08:16] fasting window of 12 to 16 hours will help instigate the repair mechanism of the body your body's intelligence will have ample opportunity to bring the insulin resistance thing in order how well interm fasting Works in diabetes is [00:08:31] clear from this study done on two groups people who were following intermittent fasting for 3 months their diabetes improved 47% while in the normal group there was just 2% Improvement basically intermittent fasting will speed up your [00:08:47] recovery 23 times needless to say you should strictly avoid refined sugar packaged Foods carbonated drinks and mea based junk food if you can't do this much then I don't think you are serious about reversing diabetes even milk and [00:09:03] milk products are better avoided for the first few months for diabetics it's best that they consume sugar only from fruits however if you feel the need to add sugar note this artificial sweeteners like sugarfree are the worst because they aren't metabolized well in the body [00:09:20] and have proven side effects then comes refined sugar which is again chemically processed better are Jager Jager powder dried a powder and honey according to ayura Pure raw neem and jamun honey are considered among the best sweet nerses [00:09:36] in diabetes step two herbs as we have discussed the right diet is the prime medicine in reversing diabetes and to accelerate the process ayurvedic scriptures talk about various herbs and combinations taking into consideration [00:09:52] two factors Effectiveness and practicality I have selected two of them one to be taken in the morning and the other before going to sleep at night morning one is methana ayura is clear that meika it Sanskrit name is a [00:10:08] medicine in madum that is diabetes today modern studies are in line as well which show that methan or fenugreek seeds have this peculiar property to reduce the blood sugar level and also increase insulin sensitivity at night soak 1 tbsp [00:10:24] of methy Dan in little water and the next morning first drink plain water go freshen up and then have myy water and also chew the myy seeds second one to be taken at night is a combination of two herbs referred to as Nisha Amal yog in [00:10:40] AA basically it's turmeric plus amla all you need to do is take 1 teaspoon of amla powder mix 1/4 teaspoon of turmeric powder and add it in hot water now this little shot is a potent medicine for diabetes this classical formula comes in [00:10:57] the form of tablet as well which you can have with warm water step three walking walking in diabetes is a double LED sword first obviously because it's a form of exercise and whenever we exercise the excess sugar in the blood [00:11:12] is used up by the body so walking for just 15 minutes after a meal is your natural met forming tablet although walking has another Advantage it's that it is a stress Buster and stress mind you is one of the major triggers of diabetes when our mind is under stress [00:11:29] body releases the stored glucose into the blood thereby increasing blood sugar even more so try walking whenever you get time after dinner or early in the morning you will feel better instantly research has shown that if one walks 3 [00:11:45] kilm daily blood sugar levels go down while insulin sensitivity increases significantly if we quickly recap diabetes is not a disease but a lifestyle disorder if however ignored and manage it is a precursor for many [00:12:01] life-threatening diseases its root causes insulin resistance and to get hold of the root you need to take three steps diet that should be low in carbs relatively high in protein and healthy fats fruit should be consumed before breakfast vegetable salad before lunch [00:12:19] and onion salad before dinner try to eat within a window of 12 hours and keep at least 12 hours for fast tank to speed up the process have myy water water with seeds in morning and amla turmeric water at night walking is not just a simple [00:12:35] and effective exercise to burn up the excess glucose in the blood but it is a great stress Buster which Taps diabetes from its root so if you follow the three steps that is Diet herbs and walking within a week you will experience a [00:12:50] noticeable drop in your base sugar level if you are already on medication it's best to taper it down slowly week by week if you diligently stick to this plan in a few months a time will come when your doctor will tell you that now you don't need any medicine that you [00:13:07] don't have diabetes anymore I want you to take this up as a challenge and then come back and share your success story with others if you think this video helps and it can be useful to someone you know like and share it if you're looking for a toxin Free Soap M's [00:13:24] moisturizing bathing bar for babies stands out in the Indian market turn it and you will find that it is free from sulfates parabens artificial colors and fragrances with the goodness of oatmeal goat milk Shia butter coconut and lavender oil it is a fine choice in the [00:13:41] Indian market even though it's a baby bar it can be used by men and women of all skin types yes it's way better than those so-called mild baby soaps to buy M's moisturizing bathing bar for babies click on the link down in the description box do not forget to apply [00:13:58] the special discount C on to get 21% off on your order there are five foods that are proven to melt your body fat to find out click on this video my name is VI I thank you so much for watching [Music]"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1137,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: fb5gHqmreas",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 1341 | Replies: 194 | Published: 2023-12-15T13:41:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "In Type 1 diabetes, the pancreas gets completely damaged and stops making insulin. While in Type 2 diabetes, there is excess insulin in the blood. This also makes sense as to why people with Type 2 diabetes put on body fat while in Type 1 diabetes people become thin. Almost 95% of people suffer from Type 2 diabetes whereas only 5% of people get Type 1 diabetes. Generally, if Type 2 diabetes is not cured, it leads to type 1 diabetes. Have no doubt that the 3 steps mentioned in this video will work to reverse both type 1 and type 2 diabetes. If you would want me to talk about 5 Products that every Diabetic/Pre diabetic should try then leave a like #youropinionmatters",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @arasiselvaraj2214 | Likes: 18 | Replies: 0 | Published: 2023-12-15T13:51:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Thank you very much bhaiya. Much sought after video. I earnestly want my mother diabetes free",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @aaradhyashahi9085 | Likes: 7 | Replies: 0 | Published: 2023-12-15T13:53:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Please make a video on how to cure Deviated nasal septum DNS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @chandrakanta565 | Likes: 14 | Replies: 0 | Published: 2023-12-15T13:54:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Yes I want. Plz make such videos, it is very helpful.and also in hindi",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @RameshKumaar | Likes: 1 | Replies: 0 | Published: 2023-12-15T13:56:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Diabetes mafia will attack you Vivek so be ready to give it back.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @RameshKumaar | Likes: 0 | Replies: 0 | Published: 2023-12-15T13:58:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Diabetes ma fia will attack you Vivek so be ready to give it back.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @chhayagautam6724 | Likes: 1017 | Replies: 37 | Published: 2023-12-16T09:19:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "I am a doctor and it's amazing how correctly he explained the pathology behind diabetes.. kudos to you ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @RGZShorts | Likes: 22 | Replies: 0 | Published: 2023-12-17T08:23:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "You are a doctor😂😂😂😂😂😂....... YouTube ki video dekh kr hi doctor bne ho kya... Tabhi to abhi bhi yhi video dekh rhe ho 😂😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @chhayagautam6724 | Likes: 96 | Replies: 0 | Published: 2023-12-17T10:08:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "@RGZShorts Is there any rule against watching YT videos for doctors?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "I am just appreciating that instead of spreading misinformation this video is well informed.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @RGZShorts | Likes: 12 | Replies: 0 | Published: 2023-12-17T10:12:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "@chhayagautam6724aisa koi rule nhi hai .... Fake comment karna galat hai ... Tum doctor nhi ho....tum paid commenter ho",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @amitkumarjha3809 | Likes: 6 | Replies: 0 | Published: 2023-12-18T13:26:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "You should watch Rajiv Dixit's Ayurvedic videos on YouTube, you will get so much knowledge about Ayurveda and you will be free of all diseases and you can treat many people with only home remedy.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @RGZShorts | Likes: 1 | Replies: 0 | Published: 2023-12-18T13:33:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "@@anonymousseeker7470 I am 100% sure . Every YouTube channel have some paid commentator .They post comment in favour of channel and then the got pinned by the channel 😂😂 ..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "Do you really think that doctors watch these kind of YouTube video and then they immediately do a long comment 😂😂😂😂......",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "You are also a paid person of channel 😂😂😂 that's why you are supporting that fake id doctor 😂😂😂 YouTube doctor",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Bimar hone par offline jakar doctor se hi ilaaj karwana padta hai online video dekh kar ilaaj nhi hota",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @nikss7076 | Likes: 195 | Replies: 7 | Published: 2024-04-07T17:55:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Why GovernMENT not giving HIM a good award?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @GlenroseMakgorogo | Likes: 1 | Replies: 0 | Published: 2024-07-12T23:47:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "They won't",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @avishekgurung5297 | Likes: 9 | Replies: 0 | Published: 2024-07-20T08:09:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "because he is not promoting govt",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @lifeinbeta2025 | Likes: 7 | Replies: 0 | Published: 2024-08-19T01:02:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "Bcz govt works for corporates and least bothered about citizens",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @DEMON-cl5nb | Likes: 0 | Replies: 0 | Published: 2024-09-08T08:32:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "@lifeinbeta2025 exactly",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @DEMON-cl5nb | Likes: 1 | Replies: 0 | Published: 2024-09-08T08:32:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "@avishekgurung5297 exactly",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @Kisalens24 | Likes: 79 | Replies: 0 | Published: 2024-05-21T01:08:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "FIT Tubers is much better than 1000 doctors in the country. His explanation on health issues is holistic and practical. I have tried some tips myself based on his explanation",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00072",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @kolkatakakalakar | Likes: 736 | Replies: 33 | Published: 2023-12-20T14:54:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "[COMMENT 476] Author: @novfalmohammed1732 | Likes: 0 | Replies: 0 | Published: 2024-02-04T21:17:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "Thanx for the video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @sahilshahzaib-r4k | Likes: 0 | Replies: 0 | Published: 2024-01-28T09:05:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "very nice awsome video sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01591",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @Vaibhavvipulmotupatlu | Likes: 0 | Replies: 0 | Published: 2024-05-15T13:26:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "Thanks a lot",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @gautambhindwar | Likes: 0 | Replies: 0 | Published: 2024-06-26T13:14:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "This is best habit go for it it work",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @RaviKumar-ce2nh | Likes: 0 | Replies: 0 | Published: 2025-06-11T05:30:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "Thanks for your video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @abhisheksrivastava9016 | Likes: 0 | Replies: 0 | Published: 2024-02-24T17:37:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "I was searching sir... kaha thay abhi tak",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01603",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @jyo9310 | Likes: 0 | Replies: 0 | Published: 2024-03-12T17:50:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "A video on migrane and vertigo plzz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01606",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @adimension-11 | Likes: 0 | Replies: 0 | Published: 2024-02-04T15:06:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "Nice Information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01609",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @meharoshmulla5842 | Likes: 0 | Replies: 0 | Published: 2024-02-21T13:42:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "What an explanation 👏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01612",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @Kanikasharma-kk5vx | Likes: 0 | Replies: 0 | Published: 2025-09-23T19:24:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "Thankyou bhaiya 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01615",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @athenarockett3088 | Likes: 0 | Replies: 0 | Published: 2024-01-29T02:16:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "Thank you sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01618",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @Shim-l1d | Likes: 0 | Replies: 0 | Published: 2024-02-24T05:38:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "Thank you Fit tuber very grateful 🙏 if you are Jain and don’t eat onion is there an alternative please?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01621",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @financeidentified8015 | Likes: 0 | Replies: 0 | Published: 2024-02-05T14:25:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "Hello bro, could you please make a video on high blood pressure",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01624",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @tosendhil | Likes: 0 | Replies: 0 | Published: 2025-11-14T15:29:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @samirgurung221 | Likes: 0 | Replies: 0 | Published: 2024-02-08T10:41:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "Wow..Nice information..sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @PinkyJain-yw4wz | Likes: 0 | Replies: 0 | Published: 2024-04-30T08:24:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01631",
+                  "author": "",
+                  "text": "Hats off to you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @ajaysuri3101 | Likes: 0 | Replies: 0 | Published: 2024-03-06T12:04:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01634",
+                  "author": "",
+                  "text": "Very well explained.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01636",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @NikiReti | Likes: 0 | Replies: 0 | Published: 2024-03-15T18:35:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "Thenkiu so much❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @anumikram7150 | Likes: 0 | Replies: 0 | Published: 2025-09-01T21:47:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01640",
+                  "author": "",
+                  "text": "great research... keep it up bro..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @AnjumdiyaSachan | Likes: 0 | Replies: 0 | Published: 2024-02-25T12:37:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01643",
+                  "author": "",
+                  "text": "U r really jem for us",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @Chloe-sg4yi | Likes: 0 | Replies: 0 | Published: 2024-08-11T09:08:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01646",
+                  "author": "",
+                  "text": "THANK YOU SO MUCH 🙏🙏🙏🫶",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @madhup2400 | Likes: 0 | Replies: 0 | Published: 2024-01-24T13:53:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01649",
+                  "author": "",
+                  "text": "Good info SIR,Thanks.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @martiniandice | Likes: 0 | Replies: 0 | Published: 2024-05-07T06:24:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01652",
+                  "author": "",
+                  "text": "Bless you!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @vaibhav7vm | Likes: 0 | Replies: 0 | Published: 2024-03-04T18:15:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01655",
+                  "author": "",
+                  "text": "Thank you sir ❤️🙏❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @selvivenkat7786 | Likes: 0 | Replies: 0 | Published: 2024-02-01T09:31:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01658",
+                  "author": "",
+                  "text": "Really its of more use",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "fb5gHqmreas",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 52,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 12870,
+          "transcript_words": 2467,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:22] if you are diabetic pre-diabetic or sugar runs in your family then this is the video for you in this video I'm going to share with you three concrete steps that will re verse your diabetes permanently well it might shake you a bit but contrary to popular belief that [00:00:37] diabetes can't be cured it can only be managed ayura is firmed that all you need is the right direction and conviction in your mind to get rid of diabetes forever and that's exactly what this video is all about in this video I will share with [00:00:54] you a clear road map as to what your diet should look like what mistakes you must avoid and the most effective remedy as mentioned in ayic scriptures so get your blood sugar checked today and let's get started with the [00:01:13] video Hello friends welcome to fit tuber diabetes is a condition when your blood sugar Rises more than what your body can handle if the blood sugar reading is 100 or even 200 mg per decil it can be tackled by the body Beyond this it begins to get problematic but keep in [00:01:29] mind mind that high blood sugar is just the symptom of diabetes and not the root cause of it take the example of a person who is suffering from fever because of a viral infection now if that person only tries to suppress the fever it won't [00:01:44] help him in the long run because the infection is still there similarly if we only take metformin and drugs like that to suppress the blood sugar it won't help the root cause which is insulin resistance basically when you eat food [00:02:00] your body converts it into glucose however to use this glucose for energy the glucose molecule must enter the cells and that's where insulin a hormone produced by the pancreas comes into the picture just as to open a door you need [00:02:17] a key insulin is the key for the glucose to enter the cell doors where it is used to produce energy this is a normal scenario but when you begin to eat excessive amount of carbon hydrates glucose in the blood Rises beyond the [00:02:33] limit pancreas in response produces more insulin to push that glucose into the cells however after a point the cells can't take in more glucose and they begin to resist insulin signal consider a coach of Delhi Metro which is already [00:02:49] full of people now if someone tries to push in more people into it what will happen obviously people inside will begin to resist this this is exactly what we call insulin resistance cells are already so full of glucose that they [00:03:04] can't take in more glucose so right now the blood will have an excess amount of unutilized glucose and pancreas will try to pump in more insulin to somehow push that glucose into the cells this High insulin causes more insulin resistance [00:03:21] and when cells get too resistant to insulin it's called diabetes Now this makes sense why insulin resistance causes increas in body fat in fact blood thickens up with excess glucose which injures the tiny blood vessels this is a [00:03:37] major reason why diabetes if not reversed causes kidney failure heart Strokes blood Vision foot amputation and nerve damage so how can we reverse this mess only if we use up this excess blood sugar in the cells and make the body [00:03:54] sensitive to insulin the situation will automatically reverse and it's possible only if you are really keen on taking the Three Steps step one diet first of all let's get this straight that diabetes is not a disease it is in fact [00:04:10] a dietary disorder it's caused by wrong diet and it can be reversed by eating right well it's not just an ayurvedic claim but there is modern research to support this fact but if you say that diabetes runs in my family then I think you should be happy to know that genes [00:04:27] contribute less than 15% chance chances plus studies show that it's the wrong food choices that trigger such genes so how should your diet look like if you are truly looking to reverse diabetes for breakfast it's best that you eat [00:04:42] fruits yes you need not avoid fruits in diabetes fruit sugar is natural plus it's fructose which gets metabolized in the liver easily also fruits are high on antioxidant scale that help reverse diabetes choose any one seasonal fruit [00:04:58] preferably trick like jamun guava orange Mambi and pineapple or any other fruit you like banana mango Chu dates and watermelon should be taken in moderation just make sure that you avoid fruit juice as it is devoid of fiber and [00:05:15] spikes blood sugar if fruit alone isn't enough for you you can also eat vegetable Deli after that use a variety of seasonal vegetables rather than wheat prefer using barley oats and millets to make this suffering from diabetes it's extremely [00:05:32] beneficial that you start your lunch with a big bowl of raw vegetable salad what it does is that first the fiber and antioxidants in the salad won't let the blood sugar Spike too high and second you will feel satiated fast if you don't [00:05:48] like raw salad you can lightly sauté or steam the vegetables cucumber cabbage onions carrots can be included then you can have a protein rich dll with some season Al subzi and chapati kulti Dal is almost medicinal in diabetes rajma CH [00:06:06] Chana Dal green mongal and muty are all great options for diabetics it's ideal if they avoid wheat and white rice millets on the other hand are a super grain with low glycemic load and high fiber in fact they look like smaller [00:06:21] version of rice they can be consumed just like rice in the form of Keri Pula or Biryani some Millet flowers are also easily available and and you can make chapattis out of them if you can't do without wheat and rice cuple wheat is one variety which is suitable for [00:06:36] diabetics similarly hand pounded rice can be consumed in moderation basically when you eat your meal you should eat less of grain and more of that subzi it is important that you strictly avoid refined oils for cooking they are proven to damage the pancreas it's high time [00:06:53] you start using Kiani cold pressed oils then in the evening if you feel like snacking prefer eating low carb high fat foods why I suggest this will be more clear to you if you look at this graph compare the huge difference in the blood sugar Spike caused by carbs versus that [00:07:10] of fats try handful of peanuts rich in healthy fatty acids and protein it hardly spikes blood sugar and rather makes you feel full easily other such options can be pumpkin seeds almonds and cashews simply a serving of fruit can [00:07:26] also be taken apple with peanut butter app applied on it can also be a good option you can even have Tulsi Ginger cinnamon herbal tea at any time of the day then for dinner again start with salad but this time take onion salad you will be amazed to know how raw onion has [00:07:43] a special compound that reduces the blood sugar within hours there have been several studies done in one study just 100 G of raw onion reduced blood sugar in 84 diabetic people in 4 hours so have onion salad and then you can have Keri [00:08:00] Dal with millets or subsy with millets avoid subses having Alo bringel sweet corn and soyab bean try to complete your dinner by 7:00 p.m. what this will do is that the diet which is essentially low carb will reduce the blood sugar and the [00:08:16] fasting window of 12 to 16 hours will help instigate the repair mechanism of the body your body's intelligence will have ample opportunity to bring the insulin resistance thing in order how well interm fasting Works in diabetes is [00:08:31] clear from this study done on two groups people who were following intermittent fasting for 3 months their diabetes improved 47% while in the normal group there was just 2% Improvement basically intermittent fasting will speed up your [00:08:47] recovery 23 times needless to say you should strictly avoid refined sugar packaged Foods carbonated drinks and mea based junk food if you can't do this much then I don't think you are serious about reversing diabetes even milk and [00:09:03] milk products are better avoided for the first few months for diabetics it's best that they consume sugar only from fruits however if you feel the need to add sugar note this artificial sweeteners like sugarfree are the worst because they aren't metabolized well in the body [00:09:20] and have proven side effects then comes refined sugar which is again chemically processed better are Jager Jager powder dried a powder and honey according to ayura Pure raw neem and jamun honey are considered among the best sweet nerses [00:09:36] in diabetes step two herbs as we have discussed the right diet is the prime medicine in reversing diabetes and to accelerate the process ayurvedic scriptures talk about various herbs and combinations taking into consideration [00:09:52] two factors Effectiveness and practicality I have selected two of them one to be taken in the morning and the other before going to sleep at night morning one is methana ayura is clear that meika it Sanskrit name is a [00:10:08] medicine in madum that is diabetes today modern studies are in line as well which show that methan or fenugreek seeds have this peculiar property to reduce the blood sugar level and also increase insulin sensitivity at night soak 1 tbsp [00:10:24] of methy Dan in little water and the next morning first drink plain water go freshen up and then have myy water and also chew the myy seeds second one to be taken at night is a combination of two herbs referred to as Nisha Amal yog in [00:10:40] AA basically it's turmeric plus amla all you need to do is take 1 teaspoon of amla powder mix 1/4 teaspoon of turmeric powder and add it in hot water now this little shot is a potent medicine for diabetes this classical formula comes in [00:10:57] the form of tablet as well which you can have with warm water step three walking walking in diabetes is a double LED sword first obviously because it's a form of exercise and whenever we exercise the excess sugar in the blood [00:11:12] is used up by the body so walking for just 15 minutes after a meal is your natural met forming tablet although walking has another Advantage it's that it is a stress Buster and stress mind you is one of the major triggers of diabetes when our mind is under stress [00:11:29] body releases the stored glucose into the blood thereby increasing blood sugar even more so try walking whenever you get time after dinner or early in the morning you will feel better instantly research has shown that if one walks 3 [00:11:45] kilm daily blood sugar levels go down while insulin sensitivity increases significantly if we quickly recap diabetes is not a disease but a lifestyle disorder if however ignored and manage it is a precursor for many [00:12:01] life-threatening diseases its root causes insulin resistance and to get hold of the root you need to take three steps diet that should be low in carbs relatively high in protein and healthy fats fruit should be consumed before breakfast vegetable salad before lunch [00:12:19] and onion salad before dinner try to eat within a window of 12 hours and keep at least 12 hours for fast tank to speed up the process have myy water water with seeds in morning and amla turmeric water at night walking is not just a simple [00:12:35] and effective exercise to burn up the excess glucose in the blood but it is a great stress Buster which Taps diabetes from its root so if you follow the three steps that is Diet herbs and walking within a week you will experience a [00:12:50] noticeable drop in your base sugar level if you are already on medication it's best to taper it down slowly week by week if you diligently stick to this plan in a few months a time will come when your doctor will tell you that now you don't need any medicine that you [00:13:07] don't have diabetes anymore I want you to take this up as a challenge and then come back and share your success story with others if you think this video helps and it can be useful to someone you know like and share it if you're looking for a toxin Free Soap M's [00:13:24] moisturizing bathing bar for babies stands out in the Indian market turn it and you will find that it is free from sulfates parabens artificial colors and fragrances with the goodness of oatmeal goat milk Shia butter coconut and lavender oil it is a fine choice in the [00:13:41] Indian market even though it's a baby bar it can be used by men and women of all skin types yes it's way better than those so-called mild baby soaps to buy M's moisturizing bathing bar for babies click on the link down in the description box do not forget to apply [00:13:58] the special discount C on to get 21% off on your order there are five foods that are proven to melt your body fat to find out click on this video my name is VI I thank you so much for watching [Music]"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1137,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: fb5gHqmreas",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 1341 | Replies: 194 | Published: 2023-12-15T13:41:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "In Type 1 diabetes, the pancreas gets completely damaged and stops making insulin. While in Type 2 diabetes, there is excess insulin in the blood. This also makes sense as to why people with Type 2 diabetes put on body fat while in Type 1 diabetes people become thin. Almost 95% of people suffer from Type 2 diabetes whereas only 5% of people get Type 1 diabetes. Generally, if Type 2 diabetes is not cured, it leads to type 1 diabetes. Have no doubt that the 3 steps mentioned in this video will work to reverse both type 1 and type 2 diabetes. If you would want me to talk about 5 Products that every Diabetic/Pre diabetic should try then leave a like #youropinionmatters",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @arasiselvaraj2214 | Likes: 18 | Replies: 0 | Published: 2023-12-15T13:51:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Thank you very much bhaiya. Much sought after video. I earnestly want my mother diabetes free",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @aaradhyashahi9085 | Likes: 7 | Replies: 0 | Published: 2023-12-15T13:53:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Please make a video on how to cure Deviated nasal septum DNS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @chandrakanta565 | Likes: 14 | Replies: 0 | Published: 2023-12-15T13:54:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Yes I want. Plz make such videos, it is very helpful.and also in hindi",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @RameshKumaar | Likes: 1 | Replies: 0 | Published: 2023-12-15T13:56:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Diabetes mafia will attack you Vivek so be ready to give it back.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @RameshKumaar | Likes: 0 | Replies: 0 | Published: 2023-12-15T13:58:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Diabetes ma fia will attack you Vivek so be ready to give it back.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @chhayagautam6724 | Likes: 1017 | Replies: 37 | Published: 2023-12-16T09:19:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "I am a doctor and it's amazing how correctly he explained the pathology behind diabetes.. kudos to you ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @RGZShorts | Likes: 22 | Replies: 0 | Published: 2023-12-17T08:23:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "You are a doctor😂😂😂😂😂😂....... YouTube ki video dekh kr hi doctor bne ho kya... Tabhi to abhi bhi yhi video dekh rhe ho 😂😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @chhayagautam6724 | Likes: 96 | Replies: 0 | Published: 2023-12-17T10:08:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "@RGZShorts Is there any rule against watching YT videos for doctors?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "I am just appreciating that instead of spreading misinformation this video is well informed.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "[COMMENT 10] Author: @RGZShorts | Likes: 12 | Replies: 0 | Published: 2023-12-17T10:12:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "@chhayagautam6724aisa koi rule nhi hai .... Fake comment karna galat hai ... Tum doctor nhi ho....tum paid commenter ho",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "[COMMENT 11] Author: @amitkumarjha3809 | Likes: 6 | Replies: 0 | Published: 2023-12-18T13:26:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "You should watch Rajiv Dixit's Ayurvedic videos on YouTube, you will get so much knowledge about Ayurveda and you will be free of all diseases and you can treat many people with only home remedy.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "[COMMENT 12] Author: @RGZShorts | Likes: 1 | Replies: 0 | Published: 2023-12-18T13:33:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "@@anonymousseeker7470 I am 100% sure . Every YouTube channel have some paid commentator .They post comment in favour of channel and then the got pinned by the channel 😂😂 ..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "Do you really think that doctors watch these kind of YouTube video and then they immediately do a long comment 😂😂😂😂......",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "You are also a paid person of channel 😂😂😂 that's why you are supporting that fake id doctor 😂😂😂 YouTube doctor",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Bimar hone par offline jakar doctor se hi ilaaj karwana padta hai online video dekh kar ilaaj nhi hota",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 13] Author: @nikss7076 | Likes: 195 | Replies: 7 | Published: 2024-04-07T17:55:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Why GovernMENT not giving HIM a good award?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 14] Author: @GlenroseMakgorogo | Likes: 1 | Replies: 0 | Published: 2024-07-12T23:47:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "They won't",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 15] Author: @avishekgurung5297 | Likes: 9 | Replies: 0 | Published: 2024-07-20T08:09:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "because he is not promoting govt",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 16] Author: @lifeinbeta2025 | Likes: 7 | Replies: 0 | Published: 2024-08-19T01:02:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "Bcz govt works for corporates and least bothered about citizens",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "[COMMENT 17] Author: @DEMON-cl5nb | Likes: 0 | Replies: 0 | Published: 2024-09-08T08:32:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "@lifeinbeta2025 exactly",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "[COMMENT 18] Author: @DEMON-cl5nb | Likes: 1 | Replies: 0 | Published: 2024-09-08T08:32:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "@avishekgurung5297 exactly",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 19] Author: @Kisalens24 | Likes: 79 | Replies: 0 | Published: 2024-05-21T01:08:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "FIT Tubers is much better than 1000 doctors in the country. His explanation on health issues is holistic and practical. I have tried some tips myself based on his explanation",
+                "likes": null
+              },
+              {
+                "comment_id": "c00072",
+                "author": "",
+                "text": "[COMMENT 20] Author: @kolkatakakalakar | Likes: 736 | Replies: 33 | Published: 2023-12-20T14:54:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "[COMMENT 476] Author: @novfalmohammed1732 | Likes: 0 | Replies: 0 | Published: 2024-02-04T21:17:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "Thanx for the video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "[COMMENT 477] Author: @sahilshahzaib-r4k | Likes: 0 | Replies: 0 | Published: 2024-01-28T09:05:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "very nice awsome video sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c01591",
+                "author": "",
+                "text": "[COMMENT 478] Author: @Vaibhavvipulmotupatlu | Likes: 0 | Replies: 0 | Published: 2024-05-15T13:26:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "Thanks a lot",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "[COMMENT 479] Author: @gautambhindwar | Likes: 0 | Replies: 0 | Published: 2024-06-26T13:14:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "This is best habit go for it it work",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "[COMMENT 480] Author: @RaviKumar-ce2nh | Likes: 0 | Replies: 0 | Published: 2025-06-11T05:30:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "Thanks for your video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "[COMMENT 481] Author: @abhisheksrivastava9016 | Likes: 0 | Replies: 0 | Published: 2024-02-24T17:37:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "I was searching sir... kaha thay abhi tak",
+                "likes": null
+              },
+              {
+                "comment_id": "c01603",
+                "author": "",
+                "text": "[COMMENT 482] Author: @jyo9310 | Likes: 0 | Replies: 0 | Published: 2024-03-12T17:50:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "A video on migrane and vertigo plzz",
+                "likes": null
+              },
+              {
+                "comment_id": "c01606",
+                "author": "",
+                "text": "[COMMENT 483] Author: @adimension-11 | Likes: 0 | Replies: 0 | Published: 2024-02-04T15:06:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "Nice Information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01609",
+                "author": "",
+                "text": "[COMMENT 484] Author: @meharoshmulla5842 | Likes: 0 | Replies: 0 | Published: 2024-02-21T13:42:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "What an explanation 👏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01612",
+                "author": "",
+                "text": "[COMMENT 485] Author: @Kanikasharma-kk5vx | Likes: 0 | Replies: 0 | Published: 2025-09-23T19:24:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "Thankyou bhaiya 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01615",
+                "author": "",
+                "text": "[COMMENT 486] Author: @athenarockett3088 | Likes: 0 | Replies: 0 | Published: 2024-01-29T02:16:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "Thank you sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c01618",
+                "author": "",
+                "text": "[COMMENT 487] Author: @Shim-l1d | Likes: 0 | Replies: 0 | Published: 2024-02-24T05:38:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "Thank you Fit tuber very grateful 🙏 if you are Jain and don’t eat onion is there an alternative please?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01621",
+                "author": "",
+                "text": "[COMMENT 488] Author: @financeidentified8015 | Likes: 0 | Replies: 0 | Published: 2024-02-05T14:25:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "Hello bro, could you please make a video on high blood pressure",
+                "likes": null
+              },
+              {
+                "comment_id": "c01624",
+                "author": "",
+                "text": "[COMMENT 489] Author: @tosendhil | Likes: 0 | Replies: 0 | Published: 2025-11-14T15:29:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "[COMMENT 490] Author: @samirgurung221 | Likes: 0 | Replies: 0 | Published: 2024-02-08T10:41:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "Wow..Nice information..sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "[COMMENT 491] Author: @PinkyJain-yw4wz | Likes: 0 | Replies: 0 | Published: 2024-04-30T08:24:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01631",
+                "author": "",
+                "text": "Hats off to you",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "[COMMENT 492] Author: @ajaysuri3101 | Likes: 0 | Replies: 0 | Published: 2024-03-06T12:04:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01634",
+                "author": "",
+                "text": "Very well explained.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01636",
+                "author": "",
+                "text": "[COMMENT 493] Author: @NikiReti | Likes: 0 | Replies: 0 | Published: 2024-03-15T18:35:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "Thenkiu so much❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "[COMMENT 494] Author: @anumikram7150 | Likes: 0 | Replies: 0 | Published: 2025-09-01T21:47:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01640",
+                "author": "",
+                "text": "great research... keep it up bro..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "[COMMENT 495] Author: @AnjumdiyaSachan | Likes: 0 | Replies: 0 | Published: 2024-02-25T12:37:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01643",
+                "author": "",
+                "text": "U r really jem for us",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "[COMMENT 496] Author: @Chloe-sg4yi | Likes: 0 | Replies: 0 | Published: 2024-08-11T09:08:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01646",
+                "author": "",
+                "text": "THANK YOU SO MUCH 🙏🙏🙏🫶",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "[COMMENT 497] Author: @madhup2400 | Likes: 0 | Replies: 0 | Published: 2024-01-24T13:53:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01649",
+                "author": "",
+                "text": "Good info SIR,Thanks.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "[COMMENT 498] Author: @martiniandice | Likes: 0 | Replies: 0 | Published: 2024-05-07T06:24:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01652",
+                "author": "",
+                "text": "Bless you!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "[COMMENT 499] Author: @vaibhav7vm | Likes: 0 | Replies: 0 | Published: 2024-03-04T18:15:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01655",
+                "author": "",
+                "text": "Thank you sir ❤️🙏❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "[COMMENT 500] Author: @selvivenkat7786 | Likes: 0 | Replies: 0 | Published: 2024-02-01T09:31:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01658",
+                "author": "",
+                "text": "Really its of more use",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

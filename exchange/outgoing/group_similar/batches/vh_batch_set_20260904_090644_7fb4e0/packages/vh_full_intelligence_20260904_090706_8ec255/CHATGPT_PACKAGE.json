@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090706_8ec255",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "FULL_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090706_8ec255",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Kidney health",
+      "batch_number": 46,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "batch_instruction": "This is independently importable batch 46 of 71 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260904_090706_8ec255",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260904_090706_8ec255"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090706_8ec255",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Kidney health",
+      "batch_number": 46,
+      "batch_total": 71,
+      "batch_size": 12
+    }
+  },
+  "manifest": {
+    "request_id": "f298e11f-0783-4287-9d1d-db654ca1b852",
+    "package_id": "vh_full_intelligence_20260904_090706_8ec255",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "Qd_SOd9RAeg"
+    ],
+    "evidence_grades": {
+      "Qd_SOd9RAeg": "A"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Kidney health",
+      "batch_number": 46,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "hashes": {
+      "evidence.json": "16074ee52e93af173d9ab6eedd9287c0793142e5228509ea55affd8407dbda56",
+      "prompt.json": "9219823322d1b5faed4842abab03cff013382ce60104db9aae55aac92e725e9e",
+      "schema.json": "9351a21bbdf04f78e97468053eea1cb397aab986faf3ab95fd99c06b99e79dab"
+    },
+    "created_at": "2026-09-04 09:07:06",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "Qd_SOd9RAeg",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=Qd_SOd9RAeg",
+        "original_title": "6 Early Warning Signs of Kidney Disease",
+        "clean_title": "6 Early Warning Signs of Kidney Disease",
+        "channel": "Fit Tuber",
+        "upload_date": "2024-08-09",
+        "description": "6 Signs Your Kidneys Are Crying For Help and in most cases at least one of these 6 signs is seen before kidney failure\n\nBuy Mamaearth Unadulterated Rosemary Essential Oil for Hair Growth - https://mamaearth.oia.link/k3x8a\n(Apply code FITTUBER21 to get 21% off)\n\n00:00 - Introduction\n00:43 - Why are kidneys so important?\n02:10 - #6 Sign - The most reliable of all symptoms that can almost immediately indicate a kidney problem\n03:51 - #5 Sign - Check these two body parts. If there is a swelling, it can be a kidney problem.\n04:47 - #4 Sign - Back pain. But how to differentiate if it is normal back pain or kidney back pain?\n06:21 - #3 Sign - Tiredness - If you feel tired even after sleeping well at night, don't ignore\n08:00 - #2 Sign - This skin problem, often considered minor, can be an early sign of kidney problem\n09:00 - #1 Sign - These are not really signs but a potent cause for kidney disease\n10:58 - How to improve kidney health in a few simple steps?\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nThermosteel water bottle (1 litre) - https://amzn.to/4cjJyCZ\nThermosteel water bottle (750ml) - https://amzn.to/4dU7iPp\nGreen Moong Dal whole - https://amzn.to/3UMtnch \nBlack Urad Dal whole - https://amzn.to/49Nfq1J\nCashews raw - https://amzn.to/3OTkGJe\nCashews Roasted in Pink Salt - https://amzn.to/49mFxgv\nHandpounded Rice - https://amzn.to/3uy9SJS\nPumpkin and Sunflower Seeds combo - https://amzn.to/3uI5CaE\nFlax seeds - https://amzn.to/3UUbd8n\nChia seeds - https://amzn.to/48rsx7U\nBhuna Chana ( Rs 75/500g) - https://amzn.to/46YV7Ns\nBhuna Chana (Rs 170/kg) - https://amzn.to/3QoPhzH\nChana Sattu - Stone grounded (Rs 320/kg) - https://amzn.to/3QoPliV\nChana Sattu (Rs 160/kg) - https://amzn.to/3Qm5TIa\nA2 milk Powder (Rs 600/kg) - https://amzn.to/3QpqTOg\nDried Green Peas for Sabzi (Rs 170/kg) - https://amzn.to/40jnQL7\nRoasted Unsalted Peanuts (Rs 400/900g) - https://amzn.to/3FoK8Bf\nRoasted Unsalted Peanuts (Rs 175/360g) - https://amzn.to/46znl1y\nOrganic Peanuts Raw (Rs 153/500g) - https://amzn.to/3tFGZKM\nPeanuts Raw (Rs 84/500g) - https://amzn.to/3rPWmjr\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\nReverse Diabetes Permanently in 3 Steps (100% Guaranteed)\nhttps://youtu.be/fb5gHqmreas?si=Eq57cIjfX53O-Izj\n30 Min Daily Yoga Routine for Beginners (Follow Along)\nhttps://youtu.be/dAqQqmaI9vY?si=5BxIG6CGNuvtlKfS\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n13:22 - Segment Partner - Mamaearth Pure and Unadulterated Rosemary Essential Oil for Hair Growth\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "high",
+          "completeness": "complete",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:15] Today, kidney diseases have become one of the fastest growing causes of deaths in the world. And the sad part is that 90% people don't even know that they are suffering from it. In this video, I'm going to share with you six signs that can give you an idea that something is going wrong with your kidneys. Towards [00:00:31] the end of this video, we will also discuss a few simple things by which you can take good care of your kidneys. So without any further delay, let's get started. [music] Hello friends, welcome to Fit Tuber. Kidneys which are located at the [00:00:47] two sides of our lower back filter the waste products from the blood which are then excreted through urine. This we all know but not many know that it is because of kidneys that your blood pressure remains normal. Not just this, kidneys also make blood and keep our [00:01:03] hemoglobin levels in check. Vitamin D which we take from sunlight or food has no use unless it is activated by the kidneys. Your kidneys also remove the excess uric acid and maintains a healthy balance of minerals like calcium, sodium [00:01:19] and phosphorus in the body. So when such an important organ like kidneys are not functioning properly, all these functions are affected. But the main problem is that in the initial stages of kidney malfunction, hardly any symptoms show up. Until it is diagnosed that [00:01:34] kidneys are not working properly, 70 to 80% kidney damage has already been done. This is the reason medically kidney failure is called silent killer. The reports clearly state that in just 10 [music] years kidney failure cases in India have increased by 50%. But don't [00:01:52] worry if you stay a little proactive you can easily find out at an early stage that something is going wrong with your kidneys. [music] And that's exactly the purpose behind making this video. The most reliable of all symptoms that can almost immediately indicate that kidneys [00:02:09] are not working properly show up in the form of changes in urine. An average person passes urine 6 to 10 times in a day. But if your urine passing frequency has suddenly decreased or increased, especially if you have to wake up many a [00:02:24] times during the night to pee, then this could be alarming. Some people might feel the urge to parse urine but when they go to the washroom they hardly pee. This unsatisfactory urination is a sign that there may be a kidney stone which has now traveled to urator. Apart from [00:02:41] this if on passing urine you see a lot of foam forming or a foul smell then this is a sign that filters of the kidneys are not working properly because of which protein is getting leaked through urine. See if we normally pass urine due to pressure or little bubbles [00:02:58] are anyway formed but they soon disappear. However, when kidneys are not working properly the foam resembles like surf and also stays for a significant amount of time. This protein leak in the urine is an early sign of kidney disease and hence should not be neglected [00:03:15] because creatinine levels begin to rise much higher but the protein begins to leak much earlier. Basically, protein should remain in blood. But because the holes of the kidney filters have widened, [music] it begins to move out through urine. It's like straining tea with broken strainer. Unwanted stuff is [00:03:32] passing to the cup. Then if you notice a burning sensation while peeing [music] or that urine doesn't come in one flow, then this could be a sign of infection in the kidneys. Basically, kidneys make urine. So when the kidneys are not functioning properly, changes in urine [00:03:48] are obvious. [music] The next symptom of kidney malfunction is swelling. If you notice swelling in your ankles or puffiness under the eyes almost every morning, do not ignore it. That's because an important function of kidneys is [music] to get rid of excess [00:04:03] fluids and maintain the balance of minerals like sodium. [music] But when kidneys are not functioning properly, it is not able to filter the excess sodium in blood. And this we know that when sodium increases, [music] it retains fluid. And in the case of kidney damage due to gravity this fluid gets [00:04:20] accumulated in the form of swollen ankles. Low levels of protein called elbumin can also contribute [music] to edema. It's a pitted edema where when you press a dent is formed. This symptom is also seen in liver disease because essentially kidneys and liver both work [00:04:36] together. In the morning this fluid creates puffiness under the eyes. So see if you continuously experience swelling at these two places. it can be a sign of kidney problem. Next is back pain. Kidneys since they are located on the either side of your lower back. If you [00:04:52] often experience pain there for no good reason, then this could be an indication of kidney problem. But before we jump the gun, back pain is very common and could happen due to various reasons. But how can we know if the pain caused is due to some posture problem or kidney [00:05:09] problem? Firstly, normal back pain which is often caused by lifting heavy weight or wrong posture stays almost always. Whereas back pain due to kidney problem comes up suddenly then goes away to come up again. Urologists call it [00:05:24] intermittent [music] pain. Second difference is that kidney pain doesn't increase due to external factors but normal back pain can increase or decrease due to posture change. Third, kidney pain can start from lower back and can move to front in the stomach and [00:05:40] down to the pelvic region whereas normal back pain remains where it is. Fourth, often with kidney pain, symptoms like fever, vomiting, feeling cold and trouble in urination are experienced which is not the case in the regular back pain. [music] Sometimes you can [00:05:56] experience a pain only on the one side of your lower back which is an indication that one of the kidneys is not functioning properly. So see and try to understand what kind of pain you are experiencing [music] and accordingly derive at a conclusion. Do not just suppress the pain by taking [00:06:12] over-the-counter painkillers. In fact, studies have shown that people who take a lot of painkillers are at a higher risk of kidney disease. The next symptom is tiredness. Our blood contains red blood cells that carry oxygen to different organs of the body to produce [00:06:28] energy. This we know. But how are these red blood cells related to kidneys? So the thing is that to make red blood cells body requires a hormone called EPO and this hormone is produced by the kidneys. Now when the kidneys are not [00:06:43] functioning properly [music] they fail to produce this hormone in adequate quantity. As a result the number of red blood cells decrease [music] and when red blood cells decrease obviously less oxygen will reach the organs. Less oxygen means less energy. This is the [00:06:59] reason feeling fatigue or tired even after sleeping well at night is considered an early sign of kidney problem. Nephologists say that if the tiredness is caused due to kidney problem, the person doesn't even feel an energy to do daily life small tasks like [00:07:15] going for bath or walking a 50 steps. [music] One can experience shortness of breath in climbing a few stairs. However, we can't be sure and tiredness can be caused due to many reasons. So to be on a safer side, it's best to get a blood test done. And if the reports show [00:07:31] low number of red blood cells or low hemoglobin, it may be an indication of kidney problem. Still, there is no need to panic. [music] I had shared with you a juice recipe which requires just three ingredients. [music] Beetroot, carrot and amla. Drink this juice for 10 15 [00:07:47] days and your red blood cells will increase very fast. One of the main functions of kidneys is to purify the blood. But when kidneys are not able to do this properly, it gives rise to this symptom called itching. If you feel an itchy sensation all the time or you see [00:08:03] patches like this being formed on [music] the skin, then this is an indication that impure blood is being circulated in the body which kidneys have not been able to filter. Some people can experience itching at only one part of the body. For others, it can spread to other areas as well. Color of [00:08:20] the skin can also change from yellow to brownish indicating toxins underlying. [music] This makes sense why in 10% of the cases kidney problems are being diagnosed by a dermatologist. Since kidneys are responsible for maintaining the right balance of minerals in the [00:08:36] body, at times in case of kidney malfunction, people can experience dry [music] skin irrespective of the season. Applying lotions, creams won't help as the problem is on the inside. So if you are experiencing skin problems for long and have tried all things still not [00:08:53] getting a relief don't ignore because chances [music] are that there could be a problem in kidneys. Next is high blood pressure and diabetes. Now these are not really symptoms but one thing is for sure that if you have high blood pressure or your blood sugar remains [00:09:08] high then you are at a higher risk of kidney [music] disease. That's because in 40% of the kidney failure cases high blood pressure becomes the main cause. And out of every three diabetic patients, one suffers from kidney damage. That's because when sugar [00:09:23] remains beyond control, blood thickens and as a result, it ruptures the tiny blood vessels of the kidney. And in the same way, high pressure of blood damages the small kidney vessels. In fact, blood pressure is not just the cause but also the result of kidney disease. That's [00:09:39] because one of the functions of kidneys is to [music] maintain blood pressure. But when kidneys don't function properly, it can result in high blood pressure. In the past decade or two, diabetes and high blood pressure cases have gone over the roof, which [music] is why kidney failure has become so [00:09:55] common. Experienced doctors say that 20 years ago, diialysis machine was hardly needed in hospitals. But today, diialysis machine has become a demand of every small hospital. So if you want to keep your kidneys healthy, it will greatly help you if you keep your blood [00:10:11] pressure and blood sugar in check. A couple of months ago, I had shared with you how you can not just control but cure your diabetes by eating the [music] right food. I highly recommend that you check out that video. Since the work of kidneys is to filter the blood, but when it fails to do so properly, toxins begin [00:10:28] to deposit in different parts of the body. If they deposit in the stomach area, one experiences loss of appetite, vomit sensation. If they get deposited in brain, symptoms like loss of concentration and trouble sleeping crop [music] up. If in the lungs, one [00:10:43] experiences shortness of breath. Beneath the skin, they cause itching. These are early symptoms and are often ignored as minor. It's only after 70 to 80% kidney damage that these more prominent symptoms come [music] up. But even then, kidney damage can be reversed if you [00:11:00] just take care of a few things. First is to drink enough water. Doctors agree that a major reason behind kidney stones and kidney infections is dehydration. But how do you know if you are drinking enough? Check the color of your urine. It should be clear. [music] Drinking warm or hot water is even more [00:11:17] beneficial. In a study when kidney patients drank a liter of hot water in a short period of 30 minutes, [music] creatinine levels were reduced by 20% and ura was reduced by 40%. You can keep a thermosel water bottle handy with you. Second, it's extremely important that [00:11:34] you avoid taking antibiotics and painkillers casually. Take [music] them only when really needed. Gym goers who take steroids often end up damaging their kidneys. So be aware. If creatinine levels are increasing, reduce the amount of protein in [music] your [00:11:49] diet. Often not taken seriously. But truth is that if one does rapid exhalation daily for just [music] 10 minutes, endstage kidney disease can be reversed within 6 months. Then note that more you eat that outside [music] junk food, more load you are putting on your [00:12:05] kidneys. Kidneys are nature's that powerful detox system which we [music] often take for granted. But once kidneys fail, it's very hard to recover and diialysis is not only expensive but is also [music] very painful. So note these six signs and work on your lifestyle so [00:12:21] that your kidneys remain [music] healthy. If you experience one or more of these symptoms, it's best to get a KFT done that is kidney function test. It will hardly cost you rupees 350. If you're suffering from hair thinning, then there [music] is one thing that you can use on your hair that has been [00:12:38] scientifically proven to reduce it and increase [music] hair growth. No, it's not minoxidil. It's rosemary essential oil. In 2015, when rosemary essential oil was used against minoxidil solution on a group of patients with alopeescia, [00:12:53] the result showed that rosemary essential oil worked [music] just as well as the popular minoxidil solution. Plus, there was no side effect. [music] But rosemary essential oil should be unadulterated and 100% pure. That's why Mama Earth's rosemary essential oil. [00:13:09] Turn the pack and you will find that it has just one ingredient [music] and that is 100% pure and natural rosemary essential oil. Now how you use it is also very important. This essential oil should never be directly applied on the scalp [music] else it can irritate the [00:13:24] scalp. Always take three to four drops of it and dilute it with your hair oil and then massage the mixture on your scalp and hair. Why rosemary is so effective on hair is due to the fact that it's anti-inflammatory. It promotes nerve growth and increases blood [00:13:39] circulation at the same time. But don't overdo with it. You can apply daily or at least thrice a week. Mammoth Earth's 15 ml bottle of rosemary essential oil will cost you rupees 450. Apply 21% off and you will get it for rupees 355. [00:13:55] Considering its effectiveness, it's worth it. So to buy pure rosemary essential oil for your hair, click on the link in the description box. Stop controlling diabetes. It can [music] be permanently cured. To know how, check out this video. My name is Vive and [00:14:11] thank you so much for watching. [music]"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1103,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: Qd_SOd9RAeg",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @aviii_kun | Likes: 1671 | Replies: 98 | Published: 2024-08-09T14:23:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "My sister got a kidney stone operation today....I sent her this vid... I pray that she recovers soon🙂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @kavitakhadka7458 | Likes: 85 | Replies: 0 | Published: 2024-08-09T14:40:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Nice script to get like mf",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @ninadjoshi4200 | Likes: 72 | Replies: 0 | Published: 2024-08-09T15:06:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Ab kya jale pe namak chidakne bheja hai😆",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @aviii_kun | Likes: 1 | Replies: 0 | Published: 2024-08-09T15:24:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "@kavitakhadka7458 kal ko likes ke liye kya behen marwadunga?...mtlb kuch bhi",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @aviii_kun | Likes: 84 | Replies: 0 | Published: 2024-08-09T15:25:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "@kavitakhadka7458 kids with bad parenting be like :",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @AviEditz-ve7xf | Likes: 0 | Replies: 0 | Published: 2024-08-09T15:28:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "@kavitakhadka7458 Y abusing anyone",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @islamdiaries517 | Likes: 513 | Replies: 41 | Published: 2024-08-14T12:59:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Pray for my Son 😔 He will be going through a kidney surgery next month",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @simplyhuman8601 | Likes: 11 | Replies: 0 | Published: 2024-08-17T10:44:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "May god bless him",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @hiraksonowal6602 | Likes: 4 | Replies: 0 | Published: 2024-08-17T19:16:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Don't worry he will be okay🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @Harekrishnamah23 | Likes: 6 | Replies: 0 | Published: 2024-08-17T20:49:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "🙏🏼🙏🏻☸️🕉🧿🧿",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @abhinavpawar3231 | Likes: 3 | Replies: 0 | Published: 2024-08-17T22:24:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "God bless❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @islamdiaries517 | Likes: 4 | Replies: 0 | Published: 2024-08-18T08:04:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Thank you so much all of you for your prayers ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @jyotishmitasaikia3724 | Likes: 402 | Replies: 31 | Published: 2024-08-14T15:13:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "My father is on thrice weekly dialysis from 9 months and his transplant is scheduled next week,he had high bp and high blood sugar from 10 years and despite of taking medicines,his kidneys failed.This Last stage Kidney Failure came to notice when his ankles started to sweal and I cannot describe in words the sufferings my father and I going through.This video is well informative and should be shared to everybody.Thank you 🌻",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 14] Author: @shivwavdane566 | Likes: 4 | Replies: 0 | Published: 2024-08-16T07:44:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Do pranayam everyday.।it's really work 💯",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 15] Author: @mahima7510 | Likes: 0 | Replies: 0 | Published: 2024-08-17T13:29:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Yeah i wnted can i give my DOB @devikaSingh-f6c",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 16] Author: @realheroshankar-h3e | Likes: 0 | Replies: 0 | Published: 2024-08-19T15:50:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": ",,siddha,,medisanc trri kariyee,,",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 17] Author: @debadattaroy1247 | Likes: 17 | Replies: 0 | Published: 2024-08-21T05:01:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Sending lots of good wishes for your father’s transplant . All will be fine .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "Have faith in the Almighty and be strong .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "My son ( 23 years ) had a kidney transplant in 2022 .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 18] Author: @omishukla8534 | Likes: 4 | Replies: 0 | Published: 2024-08-25T04:45:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "I wish him quick recovery",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 19] Author: @sangitaghoshsg | Likes: 2 | Replies: 0 | Published: 2026-08-01T15:33:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "I don't claim any negative energy form this video and comment section. I am releasing all the nagative energy from me .Thank you Universe for protecting me and my family ❤ 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 20] Author: @Banjarahills9009 | Likes: 12 | Replies: 0 | Published: 2024-08-26T15:24:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "My father died of kidney failure..both the kidneys damaged due to hefty alcohol..he struggled for more than 10 years in dialysis centre..plz don’t be addicted to alcohol..take care of your health..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "[COMMENT 21] Author: @Annesha-y4c | Likes: 17 | Replies: 0 | Published: 2025-05-23T11:59:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01544",
+              "author": "",
+              "text": "namaste vivek bhaiya🤗 Thank you so much for your videos🤎you littarly changed my life🛐I have a request for you can you please🫂 please 🙏 make video about▶️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01545",
+              "author": "",
+              "text": "\"fully packed healthy weekly diet plan - includes all melas of the day for 7 days\" we all need that video 🤝where you talk about how we can get all the 7 nutritious 🍽️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01546",
+              "author": "",
+              "text": "[water,4 main types of nutrients, vitamins & minerals-only vegetarian] in enough & balanced amount & best way to consume it!👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01547",
+              "author": "",
+              "text": "so this will be like conclusion for all of your video about nutritions & foods! 💯📈",
+              "likes": null
+            },
+            {
+              "comment_id": "c01548",
+              "author": "",
+              "text": "I know it will be takes lots of efforts💪👊but it will be worth it🤘",
+              "likes": null
+            },
+            {
+              "comment_id": "c01549",
+              "author": "",
+              "text": "Love you🫶",
+              "likes": null
+            },
+            {
+              "comment_id": "c01551",
+              "author": "",
+              "text": "[COMMENT 480] Author: @jyotishukla6004 | Likes: 0 | Replies: 0 | Published: 2024-08-13T04:47:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01552",
+              "author": "",
+              "text": "Please make a video for asthma",
+              "likes": null
+            },
+            {
+              "comment_id": "c01554",
+              "author": "",
+              "text": "[COMMENT 481] Author: @riyaroy2890 | Likes: 0 | Replies: 0 | Published: 2025-07-04T06:37:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01555",
+              "author": "",
+              "text": "Please suggest some herbs and more yoga postures for reversing kidney damage. Really need it.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01557",
+              "author": "",
+              "text": "[COMMENT 482] Author: @CoderrX | Likes: 0 | Replies: 0 | Published: 2024-09-14T08:00:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01558",
+              "author": "",
+              "text": "Thanks buddy.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01560",
+              "author": "",
+              "text": "[COMMENT 483] Author: @Shamienaki | Likes: 0 | Replies: 0 | Published: 2024-11-11T08:38:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01561",
+              "author": "",
+              "text": "You are so intelligent",
+              "likes": null
+            },
+            {
+              "comment_id": "c01563",
+              "author": "",
+              "text": "[COMMENT 484] Author: @AmitabhBachchan-g4k | Likes: 0 | Replies: 0 | Published: 2024-08-16T07:38:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01564",
+              "author": "",
+              "text": "Sir make a video on man matters biotin gummies and minoxidil.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01566",
+              "author": "",
+              "text": "[COMMENT 485] Author: @PriyanshiSingh-vr3gj | Likes: 1 | Replies: 0 | Published: 2024-08-18T15:38:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01567",
+              "author": "",
+              "text": "I am 19 and I had mid back pain due to long setting position because I am a btech student so did I was too suffering from kidney disease 😢",
+              "likes": null
+            },
+            {
+              "comment_id": "c01569",
+              "author": "",
+              "text": "[COMMENT 486] Author: @og.energy | Likes: 0 | Replies: 0 | Published: 2024-08-26T16:41:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01570",
+              "author": "",
+              "text": "Please do a video on \"Minoxidil\"",
+              "likes": null
+            },
+            {
+              "comment_id": "c01572",
+              "author": "",
+              "text": "[COMMENT 487] Author: @chetna1124 | Likes: 0 | Replies: 0 | Published: 2024-08-17T16:10:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01573",
+              "author": "",
+              "text": "Please make a video on migraine relief",
+              "likes": null
+            },
+            {
+              "comment_id": "c01575",
+              "author": "",
+              "text": "[COMMENT 488] Author: @Ritakesharwani | Likes: 0 | Replies: 0 | Published: 2024-10-13T03:34:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01576",
+              "author": "",
+              "text": "Tysm sir for information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01578",
+              "author": "",
+              "text": "[COMMENT 489] Author: @manojmanu1413 | Likes: 0 | Replies: 0 | Published: 2024-08-13T10:49:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01579",
+              "author": "",
+              "text": "Good information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01581",
+              "author": "",
+              "text": "[COMMENT 490] Author: @YoyoLucky-q9i | Likes: 0 | Replies: 0 | Published: 2024-08-14T17:48:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "Please make a video on gallstones",
+              "likes": null
+            },
+            {
+              "comment_id": "c01584",
+              "author": "",
+              "text": "[COMMENT 491] Author: @supriyamahato1554 | Likes: 0 | Replies: 0 | Published: 2024-09-12T14:46:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "Ur videos are Very helpful 🎉",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "[COMMENT 492] Author: @netrippers72 | Likes: 0 | Replies: 0 | Published: 2024-08-12T16:18:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "Bro one videos on children's care please 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "[COMMENT 493] Author: @muneebnasir8600 | Likes: 0 | Replies: 0 | Published: 2024-09-18T16:00:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01591",
+              "author": "",
+              "text": "very informative video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "[COMMENT 494] Author: @sivaraja6766 | Likes: 0 | Replies: 0 | Published: 2024-08-17T03:48:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "Very useful",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "[COMMENT 495] Author: @shubhamsaurabh2631 | Likes: 0 | Replies: 0 | Published: 2025-02-08T17:19:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "bhai you are one gem of a person",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "[COMMENT 496] Author: @navyad.3527 | Likes: 0 | Replies: 0 | Published: 2024-08-16T14:04:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "2 days before I got urine infection and now checked fit tuber tips posted in 6 days ego and by watching I breath normal than before",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "Thank you and God bless u vivek bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "Continue to give as good health",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "[COMMENT 497] Author: @jyotsanasingh9371 | Likes: 0 | Replies: 0 | Published: 2024-08-11T01:11:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "Great video 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "[COMMENT 498] Author: @gunjangandhi585 | Likes: 0 | Replies: 0 | Published: 2025-03-17T07:52:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "Please a video on cavities reversal",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "[COMMENT 499] Author: @swapnabarman674 | Likes: 0 | Replies: 0 | Published: 2024-08-15T03:40:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "Thank u",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "[COMMENT 500] Author: @HolyRoller778 | Likes: 1 | Replies: 0 | Published: 2025-04-12T20:05:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "This is an excellent video. 😊",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "Qd_SOd9RAeg",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\6 Early Warning Signs of Kidney Disease\\6 Early Warning Signs of Kidney Disease.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\6 Early Warning Signs of Kidney Disease",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\Qd_SOd9RAeg",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "Qd_SOd9RAeg",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "high",
+            "transcript_completeness": "complete",
+            "timestamp_count": 53,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 14601,
+            "transcript_words": 2676,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "A",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "high",
+              "completeness": "complete",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:15] Today, kidney diseases have become one of the fastest growing causes of deaths in the world. And the sad part is that 90% people don't even know that they are suffering from it. In this video, I'm going to share with you six signs that can give you an idea that something is going wrong with your kidneys. Towards [00:00:31] the end of this video, we will also discuss a few simple things by which you can take good care of your kidneys. So without any further delay, let's get started. [music] Hello friends, welcome to Fit Tuber. Kidneys which are located at the [00:00:47] two sides of our lower back filter the waste products from the blood which are then excreted through urine. This we all know but not many know that it is because of kidneys that your blood pressure remains normal. Not just this, kidneys also make blood and keep our [00:01:03] hemoglobin levels in check. Vitamin D which we take from sunlight or food has no use unless it is activated by the kidneys. Your kidneys also remove the excess uric acid and maintains a healthy balance of minerals like calcium, sodium [00:01:19] and phosphorus in the body. So when such an important organ like kidneys are not functioning properly, all these functions are affected. But the main problem is that in the initial stages of kidney malfunction, hardly any symptoms show up. Until it is diagnosed that [00:01:34] kidneys are not working properly, 70 to 80% kidney damage has already been done. This is the reason medically kidney failure is called silent killer. The reports clearly state that in just 10 [music] years kidney failure cases in India have increased by 50%. But don't [00:01:52] worry if you stay a little proactive you can easily find out at an early stage that something is going wrong with your kidneys. [music] And that's exactly the purpose behind making this video. The most reliable of all symptoms that can almost immediately indicate that kidneys [00:02:09] are not working properly show up in the form of changes in urine. An average person passes urine 6 to 10 times in a day. But if your urine passing frequency has suddenly decreased or increased, especially if you have to wake up many a [00:02:24] times during the night to pee, then this could be alarming. Some people might feel the urge to parse urine but when they go to the washroom they hardly pee. This unsatisfactory urination is a sign that there may be a kidney stone which has now traveled to urator. Apart from [00:02:41] this if on passing urine you see a lot of foam forming or a foul smell then this is a sign that filters of the kidneys are not working properly because of which protein is getting leaked through urine. See if we normally pass urine due to pressure or little bubbles [00:02:58] are anyway formed but they soon disappear. However, when kidneys are not working properly the foam resembles like surf and also stays for a significant amount of time. This protein leak in the urine is an early sign of kidney disease and hence should not be neglected [00:03:15] because creatinine levels begin to rise much higher but the protein begins to leak much earlier. Basically, protein should remain in blood. But because the holes of the kidney filters have widened, [music] it begins to move out through urine. It's like straining tea with broken strainer. Unwanted stuff is [00:03:32] passing to the cup. Then if you notice a burning sensation while peeing [music] or that urine doesn't come in one flow, then this could be a sign of infection in the kidneys. Basically, kidneys make urine. So when the kidneys are not functioning properly, changes in urine [00:03:48] are obvious. [music] The next symptom of kidney malfunction is swelling. If you notice swelling in your ankles or puffiness under the eyes almost every morning, do not ignore it. That's because an important function of kidneys is [music] to get rid of excess [00:04:03] fluids and maintain the balance of minerals like sodium. [music] But when kidneys are not functioning properly, it is not able to filter the excess sodium in blood. And this we know that when sodium increases, [music] it retains fluid. And in the case of kidney damage due to gravity this fluid gets [00:04:20] accumulated in the form of swollen ankles. Low levels of protein called elbumin can also contribute [music] to edema. It's a pitted edema where when you press a dent is formed. This symptom is also seen in liver disease because essentially kidneys and liver both work [00:04:36] together. In the morning this fluid creates puffiness under the eyes. So see if you continuously experience swelling at these two places. it can be a sign of kidney problem. Next is back pain. Kidneys since they are located on the either side of your lower back. If you [00:04:52] often experience pain there for no good reason, then this could be an indication of kidney problem. But before we jump the gun, back pain is very common and could happen due to various reasons. But how can we know if the pain caused is due to some posture problem or kidney [00:05:09] problem? Firstly, normal back pain which is often caused by lifting heavy weight or wrong posture stays almost always. Whereas back pain due to kidney problem comes up suddenly then goes away to come up again. Urologists call it [00:05:24] intermittent [music] pain. Second difference is that kidney pain doesn't increase due to external factors but normal back pain can increase or decrease due to posture change. Third, kidney pain can start from lower back and can move to front in the stomach and [00:05:40] down to the pelvic region whereas normal back pain remains where it is. Fourth, often with kidney pain, symptoms like fever, vomiting, feeling cold and trouble in urination are experienced which is not the case in the regular back pain. [music] Sometimes you can [00:05:56] experience a pain only on the one side of your lower back which is an indication that one of the kidneys is not functioning properly. So see and try to understand what kind of pain you are experiencing [music] and accordingly derive at a conclusion. Do not just suppress the pain by taking [00:06:12] over-the-counter painkillers. In fact, studies have shown that people who take a lot of painkillers are at a higher risk of kidney disease. The next symptom is tiredness. Our blood contains red blood cells that carry oxygen to different organs of the body to produce [00:06:28] energy. This we know. But how are these red blood cells related to kidneys? So the thing is that to make red blood cells body requires a hormone called EPO and this hormone is produced by the kidneys. Now when the kidneys are not [00:06:43] functioning properly [music] they fail to produce this hormone in adequate quantity. As a result the number of red blood cells decrease [music] and when red blood cells decrease obviously less oxygen will reach the organs. Less oxygen means less energy. This is the [00:06:59] reason feeling fatigue or tired even after sleeping well at night is considered an early sign of kidney problem. Nephologists say that if the tiredness is caused due to kidney problem, the person doesn't even feel an energy to do daily life small tasks like [00:07:15] going for bath or walking a 50 steps. [music] One can experience shortness of breath in climbing a few stairs. However, we can't be sure and tiredness can be caused due to many reasons. So to be on a safer side, it's best to get a blood test done. And if the reports show [00:07:31] low number of red blood cells or low hemoglobin, it may be an indication of kidney problem. Still, there is no need to panic. [music] I had shared with you a juice recipe which requires just three ingredients. [music] Beetroot, carrot and amla. Drink this juice for 10 15 [00:07:47] days and your red blood cells will increase very fast. One of the main functions of kidneys is to purify the blood. But when kidneys are not able to do this properly, it gives rise to this symptom called itching. If you feel an itchy sensation all the time or you see [00:08:03] patches like this being formed on [music] the skin, then this is an indication that impure blood is being circulated in the body which kidneys have not been able to filter. Some people can experience itching at only one part of the body. For others, it can spread to other areas as well. Color of [00:08:20] the skin can also change from yellow to brownish indicating toxins underlying. [music] This makes sense why in 10% of the cases kidney problems are being diagnosed by a dermatologist. Since kidneys are responsible for maintaining the right balance of minerals in the [00:08:36] body, at times in case of kidney malfunction, people can experience dry [music] skin irrespective of the season. Applying lotions, creams won't help as the problem is on the inside. So if you are experiencing skin problems for long and have tried all things still not [00:08:53] getting a relief don't ignore because chances [music] are that there could be a problem in kidneys. Next is high blood pressure and diabetes. Now these are not really symptoms but one thing is for sure that if you have high blood pressure or your blood sugar remains [00:09:08] high then you are at a higher risk of kidney [music] disease. That's because in 40% of the kidney failure cases high blood pressure becomes the main cause. And out of every three diabetic patients, one suffers from kidney damage. That's because when sugar [00:09:23] remains beyond control, blood thickens and as a result, it ruptures the tiny blood vessels of the kidney. And in the same way, high pressure of blood damages the small kidney vessels. In fact, blood pressure is not just the cause but also the result of kidney disease. That's [00:09:39] because one of the functions of kidneys is to [music] maintain blood pressure. But when kidneys don't function properly, it can result in high blood pressure. In the past decade or two, diabetes and high blood pressure cases have gone over the roof, which [music] is why kidney failure has become so [00:09:55] common. Experienced doctors say that 20 years ago, diialysis machine was hardly needed in hospitals. But today, diialysis machine has become a demand of every small hospital. So if you want to keep your kidneys healthy, it will greatly help you if you keep your blood [00:10:11] pressure and blood sugar in check. A couple of months ago, I had shared with you how you can not just control but cure your diabetes by eating the [music] right food. I highly recommend that you check out that video. Since the work of kidneys is to filter the blood, but when it fails to do so properly, toxins begin [00:10:28] to deposit in different parts of the body. If they deposit in the stomach area, one experiences loss of appetite, vomit sensation. If they get deposited in brain, symptoms like loss of concentration and trouble sleeping crop [music] up. If in the lungs, one [00:10:43] experiences shortness of breath. Beneath the skin, they cause itching. These are early symptoms and are often ignored as minor. It's only after 70 to 80% kidney damage that these more prominent symptoms come [music] up. But even then, kidney damage can be reversed if you [00:11:00] just take care of a few things. First is to drink enough water. Doctors agree that a major reason behind kidney stones and kidney infections is dehydration. But how do you know if you are drinking enough? Check the color of your urine. It should be clear. [music] Drinking warm or hot water is even more [00:11:17] beneficial. In a study when kidney patients drank a liter of hot water in a short period of 30 minutes, [music] creatinine levels were reduced by 20% and ura was reduced by 40%. You can keep a thermosel water bottle handy with you. Second, it's extremely important that [00:11:34] you avoid taking antibiotics and painkillers casually. Take [music] them only when really needed. Gym goers who take steroids often end up damaging their kidneys. So be aware. If creatinine levels are increasing, reduce the amount of protein in [music] your [00:11:49] diet. Often not taken seriously. But truth is that if one does rapid exhalation daily for just [music] 10 minutes, endstage kidney disease can be reversed within 6 months. Then note that more you eat that outside [music] junk food, more load you are putting on your [00:12:05] kidneys. Kidneys are nature's that powerful detox system which we [music] often take for granted. But once kidneys fail, it's very hard to recover and diialysis is not only expensive but is also [music] very painful. So note these six signs and work on your lifestyle so [00:12:21] that your kidneys remain [music] healthy. If you experience one or more of these symptoms, it's best to get a KFT done that is kidney function test. It will hardly cost you rupees 350. If you're suffering from hair thinning, then there [music] is one thing that you can use on your hair that has been [00:12:38] scientifically proven to reduce it and increase [music] hair growth. No, it's not minoxidil. It's rosemary essential oil. In 2015, when rosemary essential oil was used against minoxidil solution on a group of patients with alopeescia, [00:12:53] the result showed that rosemary essential oil worked [music] just as well as the popular minoxidil solution. Plus, there was no side effect. [music] But rosemary essential oil should be unadulterated and 100% pure. That's why Mama Earth's rosemary essential oil. [00:13:09] Turn the pack and you will find that it has just one ingredient [music] and that is 100% pure and natural rosemary essential oil. Now how you use it is also very important. This essential oil should never be directly applied on the scalp [music] else it can irritate the [00:13:24] scalp. Always take three to four drops of it and dilute it with your hair oil and then massage the mixture on your scalp and hair. Why rosemary is so effective on hair is due to the fact that it's anti-inflammatory. It promotes nerve growth and increases blood [00:13:39] circulation at the same time. But don't overdo with it. You can apply daily or at least thrice a week. Mammoth Earth's 15 ml bottle of rosemary essential oil will cost you rupees 450. Apply 21% off and you will get it for rupees 355. [00:13:55] Considering its effectiveness, it's worth it. So to buy pure rosemary essential oil for your hair, click on the link in the description box. Stop controlling diabetes. It can [music] be permanently cured. To know how, check out this video. My name is Vive and [00:14:11] thank you so much for watching. [music]"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1103,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: Qd_SOd9RAeg",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @aviii_kun | Likes: 1671 | Replies: 98 | Published: 2024-08-09T14:23:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "My sister got a kidney stone operation today....I sent her this vid... I pray that she recovers soon🙂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @kavitakhadka7458 | Likes: 85 | Replies: 0 | Published: 2024-08-09T14:40:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Nice script to get like mf",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @ninadjoshi4200 | Likes: 72 | Replies: 0 | Published: 2024-08-09T15:06:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Ab kya jale pe namak chidakne bheja hai😆",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @aviii_kun | Likes: 1 | Replies: 0 | Published: 2024-08-09T15:24:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "@kavitakhadka7458 kal ko likes ke liye kya behen marwadunga?...mtlb kuch bhi",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @aviii_kun | Likes: 84 | Replies: 0 | Published: 2024-08-09T15:25:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "@kavitakhadka7458 kids with bad parenting be like :",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @AviEditz-ve7xf | Likes: 0 | Replies: 0 | Published: 2024-08-09T15:28:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "@kavitakhadka7458 Y abusing anyone",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @islamdiaries517 | Likes: 513 | Replies: 41 | Published: 2024-08-14T12:59:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Pray for my Son 😔 He will be going through a kidney surgery next month",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @simplyhuman8601 | Likes: 11 | Replies: 0 | Published: 2024-08-17T10:44:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "May god bless him",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @hiraksonowal6602 | Likes: 4 | Replies: 0 | Published: 2024-08-17T19:16:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Don't worry he will be okay🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @Harekrishnamah23 | Likes: 6 | Replies: 0 | Published: 2024-08-17T20:49:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "🙏🏼🙏🏻☸️🕉🧿🧿",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @abhinavpawar3231 | Likes: 3 | Replies: 0 | Published: 2024-08-17T22:24:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "God bless❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @islamdiaries517 | Likes: 4 | Replies: 0 | Published: 2024-08-18T08:04:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Thank you so much all of you for your prayers ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @jyotishmitasaikia3724 | Likes: 402 | Replies: 31 | Published: 2024-08-14T15:13:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "My father is on thrice weekly dialysis from 9 months and his transplant is scheduled next week,he had high bp and high blood sugar from 10 years and despite of taking medicines,his kidneys failed.This Last stage Kidney Failure came to notice when his ankles started to sweal and I cannot describe in words the sufferings my father and I going through.This video is well informative and should be shared to everybody.Thank you 🌻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @shivwavdane566 | Likes: 4 | Replies: 0 | Published: 2024-08-16T07:44:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Do pranayam everyday.।it's really work 💯",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @mahima7510 | Likes: 0 | Replies: 0 | Published: 2024-08-17T13:29:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Yeah i wnted can i give my DOB @devikaSingh-f6c",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @realheroshankar-h3e | Likes: 0 | Replies: 0 | Published: 2024-08-19T15:50:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": ",,siddha,,medisanc trri kariyee,,",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @debadattaroy1247 | Likes: 17 | Replies: 0 | Published: 2024-08-21T05:01:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Sending lots of good wishes for your father’s transplant . All will be fine .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "Have faith in the Almighty and be strong .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "My son ( 23 years ) had a kidney transplant in 2022 .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @omishukla8534 | Likes: 4 | Replies: 0 | Published: 2024-08-25T04:45:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "I wish him quick recovery",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @sangitaghoshsg | Likes: 2 | Replies: 0 | Published: 2026-08-01T15:33:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "I don't claim any negative energy form this video and comment section. I am releasing all the nagative energy from me .Thank you Universe for protecting me and my family ❤ 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @Banjarahills9009 | Likes: 12 | Replies: 0 | Published: 2024-08-26T15:24:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "My father died of kidney failure..both the kidneys damaged due to hefty alcohol..he struggled for more than 10 years in dialysis centre..plz don’t be addicted to alcohol..take care of your health..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @Annesha-y4c | Likes: 17 | Replies: 0 | Published: 2025-05-23T11:59:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01544",
+                  "author": "",
+                  "text": "namaste vivek bhaiya🤗 Thank you so much for your videos🤎you littarly changed my life🛐I have a request for you can you please🫂 please 🙏 make video about▶️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01545",
+                  "author": "",
+                  "text": "\"fully packed healthy weekly diet plan - includes all melas of the day for 7 days\" we all need that video 🤝where you talk about how we can get all the 7 nutritious 🍽️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01546",
+                  "author": "",
+                  "text": "[water,4 main types of nutrients, vitamins & minerals-only vegetarian] in enough & balanced amount & best way to consume it!👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01547",
+                  "author": "",
+                  "text": "so this will be like conclusion for all of your video about nutritions & foods! 💯📈",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01548",
+                  "author": "",
+                  "text": "I know it will be takes lots of efforts💪👊but it will be worth it🤘",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01549",
+                  "author": "",
+                  "text": "Love you🫶",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01551",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @jyotishukla6004 | Likes: 0 | Replies: 0 | Published: 2024-08-13T04:47:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01552",
+                  "author": "",
+                  "text": "Please make a video for asthma",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01554",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @riyaroy2890 | Likes: 0 | Replies: 0 | Published: 2025-07-04T06:37:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01555",
+                  "author": "",
+                  "text": "Please suggest some herbs and more yoga postures for reversing kidney damage. Really need it.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01557",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @CoderrX | Likes: 0 | Replies: 0 | Published: 2024-09-14T08:00:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01558",
+                  "author": "",
+                  "text": "Thanks buddy.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01560",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @Shamienaki | Likes: 0 | Replies: 0 | Published: 2024-11-11T08:38:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01561",
+                  "author": "",
+                  "text": "You are so intelligent",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01563",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @AmitabhBachchan-g4k | Likes: 0 | Replies: 0 | Published: 2024-08-16T07:38:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01564",
+                  "author": "",
+                  "text": "Sir make a video on man matters biotin gummies and minoxidil.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01566",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @PriyanshiSingh-vr3gj | Likes: 1 | Replies: 0 | Published: 2024-08-18T15:38:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01567",
+                  "author": "",
+                  "text": "I am 19 and I had mid back pain due to long setting position because I am a btech student so did I was too suffering from kidney disease 😢",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01569",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @og.energy | Likes: 0 | Replies: 0 | Published: 2024-08-26T16:41:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01570",
+                  "author": "",
+                  "text": "Please do a video on \"Minoxidil\"",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01572",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @chetna1124 | Likes: 0 | Replies: 0 | Published: 2024-08-17T16:10:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01573",
+                  "author": "",
+                  "text": "Please make a video on migraine relief",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01575",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @Ritakesharwani | Likes: 0 | Replies: 0 | Published: 2024-10-13T03:34:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01576",
+                  "author": "",
+                  "text": "Tysm sir for information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01578",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @manojmanu1413 | Likes: 0 | Replies: 0 | Published: 2024-08-13T10:49:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01579",
+                  "author": "",
+                  "text": "Good information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01581",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @YoyoLucky-q9i | Likes: 0 | Replies: 0 | Published: 2024-08-14T17:48:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "Please make a video on gallstones",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01584",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @supriyamahato1554 | Likes: 0 | Replies: 0 | Published: 2024-09-12T14:46:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "Ur videos are Very helpful 🎉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @netrippers72 | Likes: 0 | Replies: 0 | Published: 2024-08-12T16:18:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "Bro one videos on children's care please 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @muneebnasir8600 | Likes: 0 | Replies: 0 | Published: 2024-09-18T16:00:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01591",
+                  "author": "",
+                  "text": "very informative video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @sivaraja6766 | Likes: 0 | Replies: 0 | Published: 2024-08-17T03:48:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "Very useful",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @shubhamsaurabh2631 | Likes: 0 | Replies: 0 | Published: 2025-02-08T17:19:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "bhai you are one gem of a person",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @navyad.3527 | Likes: 0 | Replies: 0 | Published: 2024-08-16T14:04:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "2 days before I got urine infection and now checked fit tuber tips posted in 6 days ego and by watching I breath normal than before",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "Thank you and God bless u vivek bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "Continue to give as good health",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @jyotsanasingh9371 | Likes: 0 | Replies: 0 | Published: 2024-08-11T01:11:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "Great video 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @gunjangandhi585 | Likes: 0 | Replies: 0 | Published: 2025-03-17T07:52:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "Please a video on cavities reversal",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @swapnabarman674 | Likes: 0 | Replies: 0 | Published: 2024-08-15T03:40:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "Thank u",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @HolyRoller778 | Likes: 1 | Replies: 0 | Published: 2025-04-12T20:05:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "This is an excellent video. 😊",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "Qd_SOd9RAeg",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "high",
+          "transcript_completeness": "complete",
+          "timestamp_count": 53,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 14601,
+          "transcript_words": 2676,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "A",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "high",
+            "completeness": "complete",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:15] Today, kidney diseases have become one of the fastest growing causes of deaths in the world. And the sad part is that 90% people don't even know that they are suffering from it. In this video, I'm going to share with you six signs that can give you an idea that something is going wrong with your kidneys. Towards [00:00:31] the end of this video, we will also discuss a few simple things by which you can take good care of your kidneys. So without any further delay, let's get started. [music] Hello friends, welcome to Fit Tuber. Kidneys which are located at the [00:00:47] two sides of our lower back filter the waste products from the blood which are then excreted through urine. This we all know but not many know that it is because of kidneys that your blood pressure remains normal. Not just this, kidneys also make blood and keep our [00:01:03] hemoglobin levels in check. Vitamin D which we take from sunlight or food has no use unless it is activated by the kidneys. Your kidneys also remove the excess uric acid and maintains a healthy balance of minerals like calcium, sodium [00:01:19] and phosphorus in the body. So when such an important organ like kidneys are not functioning properly, all these functions are affected. But the main problem is that in the initial stages of kidney malfunction, hardly any symptoms show up. Until it is diagnosed that [00:01:34] kidneys are not working properly, 70 to 80% kidney damage has already been done. This is the reason medically kidney failure is called silent killer. The reports clearly state that in just 10 [music] years kidney failure cases in India have increased by 50%. But don't [00:01:52] worry if you stay a little proactive you can easily find out at an early stage that something is going wrong with your kidneys. [music] And that's exactly the purpose behind making this video. The most reliable of all symptoms that can almost immediately indicate that kidneys [00:02:09] are not working properly show up in the form of changes in urine. An average person passes urine 6 to 10 times in a day. But if your urine passing frequency has suddenly decreased or increased, especially if you have to wake up many a [00:02:24] times during the night to pee, then this could be alarming. Some people might feel the urge to parse urine but when they go to the washroom they hardly pee. This unsatisfactory urination is a sign that there may be a kidney stone which has now traveled to urator. Apart from [00:02:41] this if on passing urine you see a lot of foam forming or a foul smell then this is a sign that filters of the kidneys are not working properly because of which protein is getting leaked through urine. See if we normally pass urine due to pressure or little bubbles [00:02:58] are anyway formed but they soon disappear. However, when kidneys are not working properly the foam resembles like surf and also stays for a significant amount of time. This protein leak in the urine is an early sign of kidney disease and hence should not be neglected [00:03:15] because creatinine levels begin to rise much higher but the protein begins to leak much earlier. Basically, protein should remain in blood. But because the holes of the kidney filters have widened, [music] it begins to move out through urine. It's like straining tea with broken strainer. Unwanted stuff is [00:03:32] passing to the cup. Then if you notice a burning sensation while peeing [music] or that urine doesn't come in one flow, then this could be a sign of infection in the kidneys. Basically, kidneys make urine. So when the kidneys are not functioning properly, changes in urine [00:03:48] are obvious. [music] The next symptom of kidney malfunction is swelling. If you notice swelling in your ankles or puffiness under the eyes almost every morning, do not ignore it. That's because an important function of kidneys is [music] to get rid of excess [00:04:03] fluids and maintain the balance of minerals like sodium. [music] But when kidneys are not functioning properly, it is not able to filter the excess sodium in blood. And this we know that when sodium increases, [music] it retains fluid. And in the case of kidney damage due to gravity this fluid gets [00:04:20] accumulated in the form of swollen ankles. Low levels of protein called elbumin can also contribute [music] to edema. It's a pitted edema where when you press a dent is formed. This symptom is also seen in liver disease because essentially kidneys and liver both work [00:04:36] together. In the morning this fluid creates puffiness under the eyes. So see if you continuously experience swelling at these two places. it can be a sign of kidney problem. Next is back pain. Kidneys since they are located on the either side of your lower back. If you [00:04:52] often experience pain there for no good reason, then this could be an indication of kidney problem. But before we jump the gun, back pain is very common and could happen due to various reasons. But how can we know if the pain caused is due to some posture problem or kidney [00:05:09] problem? Firstly, normal back pain which is often caused by lifting heavy weight or wrong posture stays almost always. Whereas back pain due to kidney problem comes up suddenly then goes away to come up again. Urologists call it [00:05:24] intermittent [music] pain. Second difference is that kidney pain doesn't increase due to external factors but normal back pain can increase or decrease due to posture change. Third, kidney pain can start from lower back and can move to front in the stomach and [00:05:40] down to the pelvic region whereas normal back pain remains where it is. Fourth, often with kidney pain, symptoms like fever, vomiting, feeling cold and trouble in urination are experienced which is not the case in the regular back pain. [music] Sometimes you can [00:05:56] experience a pain only on the one side of your lower back which is an indication that one of the kidneys is not functioning properly. So see and try to understand what kind of pain you are experiencing [music] and accordingly derive at a conclusion. Do not just suppress the pain by taking [00:06:12] over-the-counter painkillers. In fact, studies have shown that people who take a lot of painkillers are at a higher risk of kidney disease. The next symptom is tiredness. Our blood contains red blood cells that carry oxygen to different organs of the body to produce [00:06:28] energy. This we know. But how are these red blood cells related to kidneys? So the thing is that to make red blood cells body requires a hormone called EPO and this hormone is produced by the kidneys. Now when the kidneys are not [00:06:43] functioning properly [music] they fail to produce this hormone in adequate quantity. As a result the number of red blood cells decrease [music] and when red blood cells decrease obviously less oxygen will reach the organs. Less oxygen means less energy. This is the [00:06:59] reason feeling fatigue or tired even after sleeping well at night is considered an early sign of kidney problem. Nephologists say that if the tiredness is caused due to kidney problem, the person doesn't even feel an energy to do daily life small tasks like [00:07:15] going for bath or walking a 50 steps. [music] One can experience shortness of breath in climbing a few stairs. However, we can't be sure and tiredness can be caused due to many reasons. So to be on a safer side, it's best to get a blood test done. And if the reports show [00:07:31] low number of red blood cells or low hemoglobin, it may be an indication of kidney problem. Still, there is no need to panic. [music] I had shared with you a juice recipe which requires just three ingredients. [music] Beetroot, carrot and amla. Drink this juice for 10 15 [00:07:47] days and your red blood cells will increase very fast. One of the main functions of kidneys is to purify the blood. But when kidneys are not able to do this properly, it gives rise to this symptom called itching. If you feel an itchy sensation all the time or you see [00:08:03] patches like this being formed on [music] the skin, then this is an indication that impure blood is being circulated in the body which kidneys have not been able to filter. Some people can experience itching at only one part of the body. For others, it can spread to other areas as well. Color of [00:08:20] the skin can also change from yellow to brownish indicating toxins underlying. [music] This makes sense why in 10% of the cases kidney problems are being diagnosed by a dermatologist. Since kidneys are responsible for maintaining the right balance of minerals in the [00:08:36] body, at times in case of kidney malfunction, people can experience dry [music] skin irrespective of the season. Applying lotions, creams won't help as the problem is on the inside. So if you are experiencing skin problems for long and have tried all things still not [00:08:53] getting a relief don't ignore because chances [music] are that there could be a problem in kidneys. Next is high blood pressure and diabetes. Now these are not really symptoms but one thing is for sure that if you have high blood pressure or your blood sugar remains [00:09:08] high then you are at a higher risk of kidney [music] disease. That's because in 40% of the kidney failure cases high blood pressure becomes the main cause. And out of every three diabetic patients, one suffers from kidney damage. That's because when sugar [00:09:23] remains beyond control, blood thickens and as a result, it ruptures the tiny blood vessels of the kidney. And in the same way, high pressure of blood damages the small kidney vessels. In fact, blood pressure is not just the cause but also the result of kidney disease. That's [00:09:39] because one of the functions of kidneys is to [music] maintain blood pressure. But when kidneys don't function properly, it can result in high blood pressure. In the past decade or two, diabetes and high blood pressure cases have gone over the roof, which [music] is why kidney failure has become so [00:09:55] common. Experienced doctors say that 20 years ago, diialysis machine was hardly needed in hospitals. But today, diialysis machine has become a demand of every small hospital. So if you want to keep your kidneys healthy, it will greatly help you if you keep your blood [00:10:11] pressure and blood sugar in check. A couple of months ago, I had shared with you how you can not just control but cure your diabetes by eating the [music] right food. I highly recommend that you check out that video. Since the work of kidneys is to filter the blood, but when it fails to do so properly, toxins begin [00:10:28] to deposit in different parts of the body. If they deposit in the stomach area, one experiences loss of appetite, vomit sensation. If they get deposited in brain, symptoms like loss of concentration and trouble sleeping crop [music] up. If in the lungs, one [00:10:43] experiences shortness of breath. Beneath the skin, they cause itching. These are early symptoms and are often ignored as minor. It's only after 70 to 80% kidney damage that these more prominent symptoms come [music] up. But even then, kidney damage can be reversed if you [00:11:00] just take care of a few things. First is to drink enough water. Doctors agree that a major reason behind kidney stones and kidney infections is dehydration. But how do you know if you are drinking enough? Check the color of your urine. It should be clear. [music] Drinking warm or hot water is even more [00:11:17] beneficial. In a study when kidney patients drank a liter of hot water in a short period of 30 minutes, [music] creatinine levels were reduced by 20% and ura was reduced by 40%. You can keep a thermosel water bottle handy with you. Second, it's extremely important that [00:11:34] you avoid taking antibiotics and painkillers casually. Take [music] them only when really needed. Gym goers who take steroids often end up damaging their kidneys. So be aware. If creatinine levels are increasing, reduce the amount of protein in [music] your [00:11:49] diet. Often not taken seriously. But truth is that if one does rapid exhalation daily for just [music] 10 minutes, endstage kidney disease can be reversed within 6 months. Then note that more you eat that outside [music] junk food, more load you are putting on your [00:12:05] kidneys. Kidneys are nature's that powerful detox system which we [music] often take for granted. But once kidneys fail, it's very hard to recover and diialysis is not only expensive but is also [music] very painful. So note these six signs and work on your lifestyle so [00:12:21] that your kidneys remain [music] healthy. If you experience one or more of these symptoms, it's best to get a KFT done that is kidney function test. It will hardly cost you rupees 350. If you're suffering from hair thinning, then there [music] is one thing that you can use on your hair that has been [00:12:38] scientifically proven to reduce it and increase [music] hair growth. No, it's not minoxidil. It's rosemary essential oil. In 2015, when rosemary essential oil was used against minoxidil solution on a group of patients with alopeescia, [00:12:53] the result showed that rosemary essential oil worked [music] just as well as the popular minoxidil solution. Plus, there was no side effect. [music] But rosemary essential oil should be unadulterated and 100% pure. That's why Mama Earth's rosemary essential oil. [00:13:09] Turn the pack and you will find that it has just one ingredient [music] and that is 100% pure and natural rosemary essential oil. Now how you use it is also very important. This essential oil should never be directly applied on the scalp [music] else it can irritate the [00:13:24] scalp. Always take three to four drops of it and dilute it with your hair oil and then massage the mixture on your scalp and hair. Why rosemary is so effective on hair is due to the fact that it's anti-inflammatory. It promotes nerve growth and increases blood [00:13:39] circulation at the same time. But don't overdo with it. You can apply daily or at least thrice a week. Mammoth Earth's 15 ml bottle of rosemary essential oil will cost you rupees 450. Apply 21% off and you will get it for rupees 355. [00:13:55] Considering its effectiveness, it's worth it. So to buy pure rosemary essential oil for your hair, click on the link in the description box. Stop controlling diabetes. It can [music] be permanently cured. To know how, check out this video. My name is Vive and [00:14:11] thank you so much for watching. [music]"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1103,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: Qd_SOd9RAeg",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @aviii_kun | Likes: 1671 | Replies: 98 | Published: 2024-08-09T14:23:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "My sister got a kidney stone operation today....I sent her this vid... I pray that she recovers soon🙂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @kavitakhadka7458 | Likes: 85 | Replies: 0 | Published: 2024-08-09T14:40:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Nice script to get like mf",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @ninadjoshi4200 | Likes: 72 | Replies: 0 | Published: 2024-08-09T15:06:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Ab kya jale pe namak chidakne bheja hai😆",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @aviii_kun | Likes: 1 | Replies: 0 | Published: 2024-08-09T15:24:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "@kavitakhadka7458 kal ko likes ke liye kya behen marwadunga?...mtlb kuch bhi",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @aviii_kun | Likes: 84 | Replies: 0 | Published: 2024-08-09T15:25:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "@kavitakhadka7458 kids with bad parenting be like :",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @AviEditz-ve7xf | Likes: 0 | Replies: 0 | Published: 2024-08-09T15:28:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "@kavitakhadka7458 Y abusing anyone",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @islamdiaries517 | Likes: 513 | Replies: 41 | Published: 2024-08-14T12:59:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Pray for my Son 😔 He will be going through a kidney surgery next month",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @simplyhuman8601 | Likes: 11 | Replies: 0 | Published: 2024-08-17T10:44:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "May god bless him",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @hiraksonowal6602 | Likes: 4 | Replies: 0 | Published: 2024-08-17T19:16:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Don't worry he will be okay🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @Harekrishnamah23 | Likes: 6 | Replies: 0 | Published: 2024-08-17T20:49:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "🙏🏼🙏🏻☸️🕉🧿🧿",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @abhinavpawar3231 | Likes: 3 | Replies: 0 | Published: 2024-08-17T22:24:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "God bless❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @islamdiaries517 | Likes: 4 | Replies: 0 | Published: 2024-08-18T08:04:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Thank you so much all of you for your prayers ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @jyotishmitasaikia3724 | Likes: 402 | Replies: 31 | Published: 2024-08-14T15:13:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "My father is on thrice weekly dialysis from 9 months and his transplant is scheduled next week,he had high bp and high blood sugar from 10 years and despite of taking medicines,his kidneys failed.This Last stage Kidney Failure came to notice when his ankles started to sweal and I cannot describe in words the sufferings my father and I going through.This video is well informative and should be shared to everybody.Thank you 🌻",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 14] Author: @shivwavdane566 | Likes: 4 | Replies: 0 | Published: 2024-08-16T07:44:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Do pranayam everyday.।it's really work 💯",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 15] Author: @mahima7510 | Likes: 0 | Replies: 0 | Published: 2024-08-17T13:29:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Yeah i wnted can i give my DOB @devikaSingh-f6c",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 16] Author: @realheroshankar-h3e | Likes: 0 | Replies: 0 | Published: 2024-08-19T15:50:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": ",,siddha,,medisanc trri kariyee,,",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 17] Author: @debadattaroy1247 | Likes: 17 | Replies: 0 | Published: 2024-08-21T05:01:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Sending lots of good wishes for your father’s transplant . All will be fine .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "Have faith in the Almighty and be strong .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "My son ( 23 years ) had a kidney transplant in 2022 .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 18] Author: @omishukla8534 | Likes: 4 | Replies: 0 | Published: 2024-08-25T04:45:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "I wish him quick recovery",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 19] Author: @sangitaghoshsg | Likes: 2 | Replies: 0 | Published: 2026-08-01T15:33:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "I don't claim any negative energy form this video and comment section. I am releasing all the nagative energy from me .Thank you Universe for protecting me and my family ❤ 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 20] Author: @Banjarahills9009 | Likes: 12 | Replies: 0 | Published: 2024-08-26T15:24:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "My father died of kidney failure..both the kidneys damaged due to hefty alcohol..he struggled for more than 10 years in dialysis centre..plz don’t be addicted to alcohol..take care of your health..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "[COMMENT 21] Author: @Annesha-y4c | Likes: 17 | Replies: 0 | Published: 2025-05-23T11:59:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01544",
+                "author": "",
+                "text": "namaste vivek bhaiya🤗 Thank you so much for your videos🤎you littarly changed my life🛐I have a request for you can you please🫂 please 🙏 make video about▶️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01545",
+                "author": "",
+                "text": "\"fully packed healthy weekly diet plan - includes all melas of the day for 7 days\" we all need that video 🤝where you talk about how we can get all the 7 nutritious 🍽️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01546",
+                "author": "",
+                "text": "[water,4 main types of nutrients, vitamins & minerals-only vegetarian] in enough & balanced amount & best way to consume it!👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01547",
+                "author": "",
+                "text": "so this will be like conclusion for all of your video about nutritions & foods! 💯📈",
+                "likes": null
+              },
+              {
+                "comment_id": "c01548",
+                "author": "",
+                "text": "I know it will be takes lots of efforts💪👊but it will be worth it🤘",
+                "likes": null
+              },
+              {
+                "comment_id": "c01549",
+                "author": "",
+                "text": "Love you🫶",
+                "likes": null
+              },
+              {
+                "comment_id": "c01551",
+                "author": "",
+                "text": "[COMMENT 480] Author: @jyotishukla6004 | Likes: 0 | Replies: 0 | Published: 2024-08-13T04:47:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01552",
+                "author": "",
+                "text": "Please make a video for asthma",
+                "likes": null
+              },
+              {
+                "comment_id": "c01554",
+                "author": "",
+                "text": "[COMMENT 481] Author: @riyaroy2890 | Likes: 0 | Replies: 0 | Published: 2025-07-04T06:37:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01555",
+                "author": "",
+                "text": "Please suggest some herbs and more yoga postures for reversing kidney damage. Really need it.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01557",
+                "author": "",
+                "text": "[COMMENT 482] Author: @CoderrX | Likes: 0 | Replies: 0 | Published: 2024-09-14T08:00:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01558",
+                "author": "",
+                "text": "Thanks buddy.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01560",
+                "author": "",
+                "text": "[COMMENT 483] Author: @Shamienaki | Likes: 0 | Replies: 0 | Published: 2024-11-11T08:38:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01561",
+                "author": "",
+                "text": "You are so intelligent",
+                "likes": null
+              },
+              {
+                "comment_id": "c01563",
+                "author": "",
+                "text": "[COMMENT 484] Author: @AmitabhBachchan-g4k | Likes: 0 | Replies: 0 | Published: 2024-08-16T07:38:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01564",
+                "author": "",
+                "text": "Sir make a video on man matters biotin gummies and minoxidil.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01566",
+                "author": "",
+                "text": "[COMMENT 485] Author: @PriyanshiSingh-vr3gj | Likes: 1 | Replies: 0 | Published: 2024-08-18T15:38:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01567",
+                "author": "",
+                "text": "I am 19 and I had mid back pain due to long setting position because I am a btech student so did I was too suffering from kidney disease 😢",
+                "likes": null
+              },
+              {
+                "comment_id": "c01569",
+                "author": "",
+                "text": "[COMMENT 486] Author: @og.energy | Likes: 0 | Replies: 0 | Published: 2024-08-26T16:41:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01570",
+                "author": "",
+                "text": "Please do a video on \"Minoxidil\"",
+                "likes": null
+              },
+              {
+                "comment_id": "c01572",
+                "author": "",
+                "text": "[COMMENT 487] Author: @chetna1124 | Likes: 0 | Replies: 0 | Published: 2024-08-17T16:10:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01573",
+                "author": "",
+                "text": "Please make a video on migraine relief",
+                "likes": null
+              },
+              {
+                "comment_id": "c01575",
+                "author": "",
+                "text": "[COMMENT 488] Author: @Ritakesharwani | Likes: 0 | Replies: 0 | Published: 2024-10-13T03:34:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01576",
+                "author": "",
+                "text": "Tysm sir for information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01578",
+                "author": "",
+                "text": "[COMMENT 489] Author: @manojmanu1413 | Likes: 0 | Replies: 0 | Published: 2024-08-13T10:49:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01579",
+                "author": "",
+                "text": "Good information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01581",
+                "author": "",
+                "text": "[COMMENT 490] Author: @YoyoLucky-q9i | Likes: 0 | Replies: 0 | Published: 2024-08-14T17:48:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "Please make a video on gallstones",
+                "likes": null
+              },
+              {
+                "comment_id": "c01584",
+                "author": "",
+                "text": "[COMMENT 491] Author: @supriyamahato1554 | Likes: 0 | Replies: 0 | Published: 2024-09-12T14:46:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "Ur videos are Very helpful 🎉",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "[COMMENT 492] Author: @netrippers72 | Likes: 0 | Replies: 0 | Published: 2024-08-12T16:18:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "Bro one videos on children's care please 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "[COMMENT 493] Author: @muneebnasir8600 | Likes: 0 | Replies: 0 | Published: 2024-09-18T16:00:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01591",
+                "author": "",
+                "text": "very informative video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "[COMMENT 494] Author: @sivaraja6766 | Likes: 0 | Replies: 0 | Published: 2024-08-17T03:48:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "Very useful",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "[COMMENT 495] Author: @shubhamsaurabh2631 | Likes: 0 | Replies: 0 | Published: 2025-02-08T17:19:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "bhai you are one gem of a person",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "[COMMENT 496] Author: @navyad.3527 | Likes: 0 | Replies: 0 | Published: 2024-08-16T14:04:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "2 days before I got urine infection and now checked fit tuber tips posted in 6 days ego and by watching I breath normal than before",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "Thank you and God bless u vivek bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "Continue to give as good health",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "[COMMENT 497] Author: @jyotsanasingh9371 | Likes: 0 | Replies: 0 | Published: 2024-08-11T01:11:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "Great video 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "[COMMENT 498] Author: @gunjangandhi585 | Likes: 0 | Replies: 0 | Published: 2025-03-17T07:52:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "Please a video on cavities reversal",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "[COMMENT 499] Author: @swapnabarman674 | Likes: 0 | Replies: 0 | Published: 2024-08-15T03:40:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "Thank u",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "[COMMENT 500] Author: @HolyRoller778 | Likes: 1 | Replies: 0 | Published: 2025-04-12T20:05:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "This is an excellent video. 😊",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

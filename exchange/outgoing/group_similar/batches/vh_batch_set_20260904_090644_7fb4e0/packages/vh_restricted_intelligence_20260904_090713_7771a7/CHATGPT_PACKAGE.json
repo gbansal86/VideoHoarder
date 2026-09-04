@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_restricted_intelligence_20260904_090713_7771a7",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090713_7771a7",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Food comparisons and everyday nutrition choices — partial transcript",
+      "batch_number": 15,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "batch_instruction": "This is independently importable batch 15 of 35 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260904_090713_7771a7",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260904_090713_7771a7"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090713_7771a7",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Food comparisons and everyday nutrition choices — partial transcript",
+      "batch_number": 15,
+      "batch_total": 35,
+      "batch_size": 8
+    }
+  },
+  "manifest": {
+    "request_id": "5d17b2c7-18fc-4827-9b70-5fd2389bec78",
+    "package_id": "vh_restricted_intelligence_20260904_090713_7771a7",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "1Zgnl189KcM"
+    ],
+    "evidence_grades": {
+      "1Zgnl189KcM": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Food comparisons and everyday nutrition choices — partial transcript",
+      "batch_number": 15,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "hashes": {
+      "evidence.json": "da703357e2dc5a33cde54653cb1c218aaa3102271d995344032b124748a7ff2c",
+      "prompt.json": "8afddd1e01abb36455701cfe6c941fb6bd74d31ed3c6a41ccf254c2de885c7f5",
+      "schema.json": "589070f3d6ec2b4272cf3200348342677ca0495b3bd246259678b99e2019822c"
+    },
+    "created_at": "2026-09-04 09:07:13",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "1Zgnl189KcM",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=1Zgnl189KcM",
+        "original_title": "Soak and Eat These 4 Things Every Morning 🔥",
+        "clean_title": "Soak and Eat These 4 Things Every Morning",
+        "channel": "Fit Tuber",
+        "upload_date": "2024-04-05",
+        "description": "Today I want to share with you 4 foods. Well, it will be wrong to call them just foods. All these are superfoods but when we soak them at night and then eat them in the morning, its their combination which will help you get relief in more than 100 health issues. \n\nBuy Mamaearth Milky Soft Sunscreen - https://mamaearth.oia.bio/a9nme\n(Apply code FITTUBER21 to get 21% off)\n\n00:00 - Which is the most common health problem?\n02:20 - #1Food that you must soak before eating in morning - DRY FIGS - How to eat them?\n04:05 - #2 Food that you must soak before eating in morning - WALNUT - But how many?\n05:14 - #3 Food that you must soak before eating in morning - RAISINS - Can Diabetics eat them?\n06:19 - #4 Food that you must soak before eating in morning  - ALMONDS - Which almonds?\n08:01 - How and in How much quantity should you eat them?\n10:17 - When should we eat them?\n11:15 - Proof that this combination works\n11:45 - Can diabetics eat figs and raisins?\n12:00 - Can these things cause body heat?\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nDry Figs (Anjeer - option 1) - https://amzn.to/4aISBNq\nDry Figs (Anjeer - option 2) - https://amzn.to/4cOnWjF\nWalnut Kernels (option 1) - https://amzn.to/49sf7Jj\nWalnut Kernels (option 2) - https://amzn.to/3JrpYc5\nRaisins (option 1) - https://amzn.to/3TGrxHE\nRaisins (option 2) - https://amzn.to/3J4Ou2v\nDesi Gurbani Almonds (option 1) - https://amzn.to/3TOWA4c\nDesi Gurbandi Almonds (option 2) - https://amzn.to/3J7aPwd\nMamra Badam Afghani (option 1) - https://amzn.to/3TMyrv9\nMamra badam Afghani (option 2) - https://amzn.to/3JbXAu0\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n7 Refreshing & Tasty Milkshakes You Must Try this Summer\nhttps://youtu.be/px7qgNyf7kM?si=pTSJtjLJarGiW0PD\nOil your Navel for 21 days & Results will Surprise You\nhttps://youtu.be/92MmoC7mtSc?si=mEM3pRaawZ0Z2w3r\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n12:28 - Segment Partner - Mamaearth Milky Soft Sunscreen for Babies\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:23] if I ask you which is the most common health problem then I'm sure that each one of us will have a different answer some will say digest problems others might say heart problems for many it's weight loss for some it's diabetes a few will say skin problems some might even [00:00:40] say brain disorders and that's true as well because there is no one most common problem in fact all these problems have become very common nowadays if you look around it is very likely that you will find someone or the other suffering from [00:00:55] one of these problems but is there anything that if we include in our diet will help us get relief from almost all these common problems yes today I want to share with you four Foods well it will be wrong to call them Just Foods [00:01:11] all these are super foods but when we soak them at night and then eat them in the morning it's their combination which will help you get relief in more than 100 health issues mentioned clearly in ayurvedic scriptures and also today [00:01:26] validated by modern science what are these four superfoods in how much quantity should we consume them what is the right time to eat them why you should not eat them without soaking we will talk about each of these aspects in [00:01:41] detail so to get the maximum benefit from this miraculous combination I recommend that you watch this video till the very end so without any further delay let's get started Hello friends welcome to fit tuber often we try to find solution to [00:01:59] our health problem s in Market's expensive supplements but believe it or not Nature has given us such amazing foods which obviously are 100% natural they provide numerous benefits without causing any side effects today let's [00:02:15] talk about four such Foods let's begin with the first super food which is Tri fig figs commonly known as anjir is a fruit which when ripe is dark purple in color and has many small small seeds but most of us are familiar with their dried [00:02:31] version which is sold in ropes anjir is not only high in fiber but the quality of its fiber is top class this is why anjir is considered among the top foods for Digestive Health if you have constipation or you don't feel satisfied [00:02:47] after going to toilet then you should start eating anjir Studies have confirmed that dried figs are a natural Lexa which is why eating anjir increases the speed at which waste passes through the intestines and leaves the system anjir is no less than a supplement for [00:03:03] your reproductive Health in males it increases sperm count and sexual stamina while in women it balances the hormones regulates ovulation cycle and increases fertility figs are extremely effective in skin problems that's because first [00:03:19] anir is anti-inflammatory and secondly it's rich in antioxidants including vitamins a c and e as a result it kills skin damaging free radic and cools down inflammation caused in any layer of the skin so much so that in a study when 45 [00:03:36] children who were suffering from dermatitis applied anjer fruit extract twice daily for 2 weeks it was found to be more effective than its standard treatment green anjir has massive amount of nutrients that help regulate various [00:03:51] functions of the body be it for reducing triglyceride levels to reduce fatty liver to give relief from joint pains or for increasing hair growth provided you eat them the right way second food that you will need is a walnut if you notice [00:04:07] wallnut looks very similar to a human brain Perhaps it is Nature's way of telling us because not just in ayura even modern studies today have no doubt about the fact that Walnut is a super food for your brain it is one of those [00:04:22] rare vegetarian foods on which you can depend for omega-3 fatty acids without having to buy a supplement this is one reason walnuts are known to sharpen the memory increase concentration power improve neurological Pathways and grow [00:04:37] the number of brain cells which is why any disorder related to brain walnuts are helpful being an excellent source of healthy fat it reduces the bad cholesterol in the body and increases good cholesterol it softens the arteries protects them from calcification as a [00:04:55] result blood passes swiftly and the chances of a heart attack come down another interesting benefit of eating walnuts which most people are unaware of is that it helps kill cancer cells in the body but how many walnuts should you consume daily that we will talk further [00:05:11] in this video third superfood is raisins when grapes are dried they turn into raisins commonly known as kishmish it is naturally sweet but because it is very high in antioxidants and fiber it helps digest food well even after sleeping [00:05:27] well at night if you feel low on energy a sense of fatigue surrounds you throughout the day and you have tried all expensive supplements then once turn to raisins what proves this point is the research that showed that athletes can perform just as well on raisins as they [00:05:45] can on a sports drink people who have low blood pressure who often feel dizzy uneasy or low on energy kishmish should be their go-to choice if you are iron deficient have less blood count and want to increase hemoglobin level raisins are [00:06:02] a natural remedy for it raisins have boron in them which combines with calcium and vitamin D in the body to make bones stronger any problem related to teeth and gums raisins comes to your rescue but can diabetics eat them we [00:06:17] will see this later finally at number four are almonds almonds commonly known as badam not just have copper magnesium and phosphorus but they are especially rich in selenium selenium is a powerful antioxidant that strengthens the hair [00:06:33] follicles helps reverse thyroid disorders and has been proven to lower the risk of cancers amond is hands down one of the best sources of vitamin E and it is this vitamin E that plays a major role in keeping your skin soft and clear [00:06:48] vitamin E is medicinal For Eyes heart and fatty liver regular consumption of alond makes your teeth and bones stronger increases brain power and scientifically speaking it even helps lose weight because almonds are low in carbs but high in protein healthy fats [00:07:06] and fiber it brings down blood sugar as well this has been well established by many Studies armonds have uncountable benefits but which armonds we are talking about our local variety of almonds like the gurbandi almonds and mamra these Indian subcontinent armonds [00:07:24] in comparison to California armonds are smaller in size but way bigger in terms of nutrients actually these almonds have more amount of oil in them in contrast to the California almonds and it is this oil in almonds which is beneficial for heart brain skin hair bones and eyes so [00:07:42] always try buying the dacy variety of armonds every grocery store has them for your convenience I have also given their Link in the description box if still for some reason you don't get them you can use the regular California armor as well now this much is clear that all four are [00:07:59] super foods but it's important to know how and in how much quantity should we take them else instead of getting the benefit it can harm you it's simple before going to sleep at night in a small bowl put four almonds prefer using [00:08:14] small DIY almonds as discussed earlier in the same Bowl put one Walnut as well add some water so that both almonds and walnut get soaked in it now in another Bowl put two pieces of dried fix and four raisins not more than that in this [00:08:30] bowl put just as much water as is enough to soak them now notice we have soaked almonds and walnut in one bowl while figs and raisins in a separate bowl there is a reason behind it it's that the water in which Walnut and almonds [00:08:46] are soaked it should not be consumed that's because almonds walnuts and other nuts have anti-nutrients like ftic acid that are removed in the water in which they are soaked on the other hand the water in which dried fruits like figs and raisins get soaked should definitely [00:09:03] be used this water has energy and some water soluble nutrients get added as well so we don't have to throw fig raisins water now in the morning first peel the skin of armonds yes often people doubt that since the peel of almonds has nutrients then why should we [00:09:19] remove it contrary to modern science ayura is clear that the peel of almonds no matter how nutritious it is creates hindrance in their digestion what's the use you eat almonds and you don't even get proper benefits this is the reason our mothers and grandmothers [00:09:36] have always advised us to soak the almonds and then peel off their skin before eating them Walnut skin isn't as problematic in digestion still try to remove it as much as possible figs and raisins would also have swelled up by then now eat all these food together [00:09:53] chew them properly in such a way that they turn into a paste in your mouth if you will gulp them fast they won't get absorbed properly and you will fail to reap its benefits while if you spend some time chewing them in your mouth your stomach won't have to do much [00:10:09] effort and the results will be instant also don't forget to drink the Ang raisin water along now comes another question when should we eat it be clear in the morning just after waking up first drink plain water then go freshen [00:10:24] up and then you can have it after eating these four it would be ideal not to eat anything for the next 1 hour after that you can have your regular breakfast but just in case you don't get that much time in morning in that case you can have this just before you start eating [00:10:40] your breakfast have no doubt that the combination of almonds walnuts figs and raisins is such a powerful supplement that even the most expensive multivitamins can't stand its Effectiveness according to ayura it has such a penetrating effect on the body [00:10:56] that all the seven main bodily tissues get nourished body weakness can't stay if you are regularly eating it your blood count will increase hemoglobin level will rise face will begin to Glow trust me within a few days you will experience such benefits that you might [00:11:13] regret why you didn't do it earlier still not sure check the comments of people who have already tried it for someone it has increased their energy level some have experienced positive changes in their skin and digestion a comment says that she has got regular [00:11:29] periods for the first time after consuming this others too have found it to be effective in some way or the other even its taste has a good fan base one more comment that came into my notice was that can diabetics eat figs and raisins yes since it's a natural food [00:11:46] and quantity is in moderation it can easily be consumed by diabetics basically it checks all the boxes you can have it daily it has no side effects at least take it for 2 months consistently and if you're bothered that it's summer time and these things can [00:12:03] cause body heat then hold on first of all the quantity of each food is very limited secondly we have soaked all four of them and most importantly as per ayurvedic scriptures almonds and walnuts are heating for the body but figs and [00:12:18] raisins are cooling for the body overall it's a balanced combination so no matter what your body type is it is 100% safe for you summer is Round the Corner and if there is one skin product which I genuinely believe comes under the category of Essentials it is a sunscreen [00:12:36] see I'm not against sun in fact sun is the unpolluted natural doctor but there is also no doubt that 11:00 a.m. to 4:00 p.m. the sun rays in a tropical country like India are very harsh and it's best we protect our skin in this duration as [00:12:52] you won't just get tan but your skin will age faster so either cover your skin or use a sunscreen Mama Earths milky soft mineral-based sunscreen for babies is not only a toxin-free option but even price-wise it's very economical [00:13:07] no doubt popular sunscreens work but recently concerns have been shown by both FDA and European Union regarding oxybenzone and Evo benzone used in them in 2020 a study pointed out that oxybenzone in sunscreens when applied on [00:13:23] rats may cause thyroid tumors so it's best to avoid a Benzene based sunscreen and choose a mineral based sunscreen that's why Mama Earths this sunscreen which is a zinc oxide based sunscreen along with mild chemicals it does have the natural goodness of cocoa seed [00:13:40] butter Shia butter almond oil calendula flour milk and oats SPF 30 its sun protection factor is well suitable for Indian climate even though it's a baby product it can be used by men and women of all skin types it's non- greasy and [00:13:57] water resistant as well it is g pack will cost you rupees 329 apply 21% special discount coupon and you will get it for 260 rupe check anywhere this price is very competitive so protect your skin naturally and buy Mama this [00:14:13] mineral based sunscreen the link is in the description box there are some very effective ways to reduce body heat to know them check out this video my name is VI I thank you for [00:14:30] watching he"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1155,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: 1Zgnl189KcM",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @nishachirania1245 | Likes: 2149 | Replies: 69 | Published: 2024-04-17T16:18:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "I have been consuming these dry fruits since past 2 yrs. I also include 1 date, few soaked groundnuts, a small quantity of sprouts and 1 fresh fruit for breakfast. I'm energetic with no health issues even at the age of 56. Everyone says I look like 35 yrs. I exercise regularly for 2 hrs.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @Mohit_Yadav168 | Likes: 40 | Replies: 0 | Published: 2024-04-20T13:24:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "How many walnuts do u use, in this video he says use only 1 but he puts 2 in the bowl, I'm kinda confused lol.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @Aayush_rana-r3v | Likes: 38 | Replies: 0 | Published: 2024-04-20T14:26:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "That was 1 only broken into 2 pieces",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @nishachirania1245 | Likes: 14 | Replies: 0 | Published: 2024-04-21T15:23:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "1 walnut",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @songoku-san7688 | Likes: 0 | Replies: 0 | Published: 2024-04-21T18:35:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "@Mohit_Yadav168 Stop being dumb",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @Idontknowwhome765 | Likes: 6 | Replies: 0 | Published: 2024-04-24T05:17:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "⁠@Mohit_Yadav168yeah I'm confused too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @aartih8280 | Likes: 661 | Replies: 2 | Published: 2024-04-22T12:16:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Every mother might be dreaming of having a son like you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "God bless you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "[COMMENT 8] Author: @vanamala4751 | Likes: 2 | Replies: 0 | Published: 2024-07-18T06:56:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "We like your explanation with a moderate tone.🎉",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "[COMMENT 9] Author: @elanalina2648 | Likes: 1 | Replies: 0 | Published: 2025-08-07T04:59:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "Do you know him personally? What you are saying is very sensitive",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "[COMMENT 10] Author: @shubhamrai9151 | Likes: 381 | Replies: 13 | Published: 2024-07-08T16:04:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "1. Figs",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "2. Walnut",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "3.Raisins",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "4.Almonds",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "[COMMENT 11] Author: @vinapatel8265 | Likes: 5 | Replies: 0 | Published: 2024-07-13T18:35:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "[COMMENT 12] Author: @Hemendra_rajput25 | Likes: 4 | Replies: 0 | Published: 2024-07-17T04:27:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "Thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "[COMMENT 13] Author: @ashimkakati9119 | Likes: 4 | Replies: 0 | Published: 2024-07-28T03:18:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "Thanks bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 14] Author: @santoshkumarkeshari5135 | Likes: 4 | Replies: 0 | Published: 2024-08-01T15:13:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "Can it help in weight loose also",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 15] Author: @shubhamrai9151 | Likes: 8 | Replies: 0 | Published: 2024-08-01T15:42:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "@santoshkumarkeshari5135 Having good Diet will always help you to control weight and if you are doing exercises regularly that can be very effective.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 16] Author: @-EE-yadi | Likes: 2102 | Replies: 88 | Published: 2024-04-05T13:34:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "Please make video( healthy food ) for students who live in pg or hostel",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 17] Author: @bhuvaneshwari135 | Likes: 12 | Replies: 0 | Published: 2024-04-05T13:49:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "Yes please... 🙏🙏🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 18] Author: @payaljain4717 | Likes: 19 | Replies: 0 | Published: 2024-04-05T13:52:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "He already made a video about it",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 19] Author: @saswatikapanda5730 | Likes: 5 | Replies: 0 | Published: 2024-04-05T13:53:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "I agree",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "[COMMENT 20] Author: @Padhnahipadega | Likes: 5 | Replies: 0 | Published: 2024-04-05T14:06:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "Black raisins with seeds are much more beneficial than seedless ones.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "[COMMENT 478] Author: @satyam1202 | Likes: 0 | Replies: 0 | Published: 2024-05-13T05:05:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "He's back 🎉",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "[COMMENT 479] Author: @meghnagarg | Likes: 0 | Replies: 0 | Published: 2025-03-23T09:05:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01631",
+              "author": "",
+              "text": "Hi, can you please share some references for ayurvedic books …",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "[COMMENT 480] Author: @ramanaguduri2325 | Likes: 0 | Replies: 0 | Published: 2024-07-07T07:05:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01634",
+              "author": "",
+              "text": "Plz tell us about food for Hepataitis b .....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01636",
+              "author": "",
+              "text": "[COMMENT 481] Author: @kambhampativenkateswararao9902 | Likes: 0 | Replies: 0 | Published: 2025-08-22T16:33:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "Thanks a lot bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "[COMMENT 482] Author: @khaany888 | Likes: 0 | Replies: 0 | Published: 2024-04-23T05:41:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01640",
+              "author": "",
+              "text": "Nice information 😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "[COMMENT 483] Author: @SR-kj5bx | Likes: 1 | Replies: 0 | Published: 2024-06-18T08:50:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01643",
+              "author": "",
+              "text": "Would you plz make video for liver cirosis",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "[COMMENT 484] Author: @goldymehra00786 | Likes: 0 | Replies: 0 | Published: 2024-04-23T16:29:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01646",
+              "author": "",
+              "text": "Tks Sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "[COMMENT 485] Author: @renukakoorse3895 | Likes: 0 | Replies: 0 | Published: 2024-04-29T05:22:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01649",
+              "author": "",
+              "text": "Tq dear ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "[COMMENT 486] Author: @factchecker2090 | Likes: 2 | Replies: 0 | Published: 2024-05-31T07:01:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01652",
+              "author": "",
+              "text": "A lot of pesticides are sprayed on grapes.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "When Grapes are dried and become raisins what about the pesticide residue on them?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Do they dissolve in the water when soaked and if yes should the water be consumed?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01655",
+              "author": "",
+              "text": "Secondly most pesticides are not water soluble, so then how are these raisins safe for consumption even after being soaked?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "[COMMENT 487] Author: @chandshahi3563 | Likes: 0 | Replies: 0 | Published: 2024-07-01T16:52:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01658",
+              "author": "",
+              "text": "Thank u fit tuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "[COMMENT 488] Author: @anshikaashi4476 | Likes: 0 | Replies: 0 | Published: 2024-07-16T05:41:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01661",
+              "author": "",
+              "text": "I do yoga in morning so , all of this should be taken before yoga or after that . As you said that it is to ne taken after waking up @fittuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "[COMMENT 489] Author: @janhavisingh_11 | Likes: 0 | Replies: 0 | Published: 2024-08-23T13:59:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01664",
+              "author": "",
+              "text": "Kindly make a detailed video on migraine",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "[COMMENT 490] Author: @hemalathar8038 | Likes: 0 | Replies: 0 | Published: 2024-07-04T16:12:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01667",
+              "author": "",
+              "text": "Sir can Ulcerative colitis patients take figs. Pl. Guide",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "[COMMENT 491] Author: @Divya-ux8lk | Likes: 0 | Replies: 0 | Published: 2024-06-16T08:38:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01670",
+              "author": "",
+              "text": "Can you please share the ayurveda’s books you read?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "[COMMENT 492] Author: @vinumourya4093 | Likes: 0 | Replies: 0 | Published: 2025-05-24T09:11:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01673",
+              "author": "",
+              "text": "Very informative",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "[COMMENT 493] Author: @priyasamant26 | Likes: 0 | Replies: 0 | Published: 2024-04-28T04:55:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01676",
+              "author": "",
+              "text": "Sir please make video on cyst and lipoma",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "[COMMENT 494] Author: @lavanyajkramu. | Likes: 0 | Replies: 0 | Published: 2024-07-05T13:46:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01679",
+              "author": "",
+              "text": "Vivek sir please Suggest dry fruits and food can take after delivery",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "[COMMENT 495] Author: @dancingnachos3634 | Likes: 0 | Replies: 0 | Published: 2024-06-28T11:07:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01682",
+              "author": "",
+              "text": "God bless you ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "[COMMENT 496] Author: @Priyankasharma-t9f1u | Likes: 0 | Replies: 0 | Published: 2024-04-20T10:09:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01685",
+              "author": "",
+              "text": "Please make video for babies (1-2 years) diet",
+              "likes": null
+            },
+            {
+              "comment_id": "c01687",
+              "author": "",
+              "text": "[COMMENT 497] Author: @emiliadias7753 | Likes: 0 | Replies: 0 | Published: 2024-08-01T09:35:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01688",
+              "author": "",
+              "text": "Thank you Vivek",
+              "likes": null
+            },
+            {
+              "comment_id": "c01690",
+              "author": "",
+              "text": "[COMMENT 498] Author: @rakshitasharma8747 | Likes: 0 | Replies: 0 | Published: 2024-08-14T15:28:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01691",
+              "author": "",
+              "text": "Sir please make a video on protein shake for kids 🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01693",
+              "author": "",
+              "text": "[COMMENT 499] Author: @NusratAnjum-qm6ld | Likes: 0 | Replies: 0 | Published: 2024-04-24T09:44:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01694",
+              "author": "",
+              "text": "Video on hormonal balance please......🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01696",
+              "author": "",
+              "text": "[COMMENT 500] Author: @BhanuSk-qf4xi | Likes: 0 | Replies: 0 | Published: 2025-08-07T03:10:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01697",
+              "author": "",
+              "text": "Please say about muskmelon sunflower seeds please",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "1Zgnl189KcM",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Soak and Eat These 4 Things Every Morning 🔥\\Soak and Eat These 4 Things Every Morning 🔥.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Soak and Eat These 4 Things Every Morning 🔥",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\1Zgnl189KcM",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "1Zgnl189KcM",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 55,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 13376,
+            "transcript_words": 2542,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:23] if I ask you which is the most common health problem then I'm sure that each one of us will have a different answer some will say digest problems others might say heart problems for many it's weight loss for some it's diabetes a few will say skin problems some might even [00:00:40] say brain disorders and that's true as well because there is no one most common problem in fact all these problems have become very common nowadays if you look around it is very likely that you will find someone or the other suffering from [00:00:55] one of these problems but is there anything that if we include in our diet will help us get relief from almost all these common problems yes today I want to share with you four Foods well it will be wrong to call them Just Foods [00:01:11] all these are super foods but when we soak them at night and then eat them in the morning it's their combination which will help you get relief in more than 100 health issues mentioned clearly in ayurvedic scriptures and also today [00:01:26] validated by modern science what are these four superfoods in how much quantity should we consume them what is the right time to eat them why you should not eat them without soaking we will talk about each of these aspects in [00:01:41] detail so to get the maximum benefit from this miraculous combination I recommend that you watch this video till the very end so without any further delay let's get started Hello friends welcome to fit tuber often we try to find solution to [00:01:59] our health problem s in Market's expensive supplements but believe it or not Nature has given us such amazing foods which obviously are 100% natural they provide numerous benefits without causing any side effects today let's [00:02:15] talk about four such Foods let's begin with the first super food which is Tri fig figs commonly known as anjir is a fruit which when ripe is dark purple in color and has many small small seeds but most of us are familiar with their dried [00:02:31] version which is sold in ropes anjir is not only high in fiber but the quality of its fiber is top class this is why anjir is considered among the top foods for Digestive Health if you have constipation or you don't feel satisfied [00:02:47] after going to toilet then you should start eating anjir Studies have confirmed that dried figs are a natural Lexa which is why eating anjir increases the speed at which waste passes through the intestines and leaves the system anjir is no less than a supplement for [00:03:03] your reproductive Health in males it increases sperm count and sexual stamina while in women it balances the hormones regulates ovulation cycle and increases fertility figs are extremely effective in skin problems that's because first [00:03:19] anir is anti-inflammatory and secondly it's rich in antioxidants including vitamins a c and e as a result it kills skin damaging free radic and cools down inflammation caused in any layer of the skin so much so that in a study when 45 [00:03:36] children who were suffering from dermatitis applied anjer fruit extract twice daily for 2 weeks it was found to be more effective than its standard treatment green anjir has massive amount of nutrients that help regulate various [00:03:51] functions of the body be it for reducing triglyceride levels to reduce fatty liver to give relief from joint pains or for increasing hair growth provided you eat them the right way second food that you will need is a walnut if you notice [00:04:07] wallnut looks very similar to a human brain Perhaps it is Nature's way of telling us because not just in ayura even modern studies today have no doubt about the fact that Walnut is a super food for your brain it is one of those [00:04:22] rare vegetarian foods on which you can depend for omega-3 fatty acids without having to buy a supplement this is one reason walnuts are known to sharpen the memory increase concentration power improve neurological Pathways and grow [00:04:37] the number of brain cells which is why any disorder related to brain walnuts are helpful being an excellent source of healthy fat it reduces the bad cholesterol in the body and increases good cholesterol it softens the arteries protects them from calcification as a [00:04:55] result blood passes swiftly and the chances of a heart attack come down another interesting benefit of eating walnuts which most people are unaware of is that it helps kill cancer cells in the body but how many walnuts should you consume daily that we will talk further [00:05:11] in this video third superfood is raisins when grapes are dried they turn into raisins commonly known as kishmish it is naturally sweet but because it is very high in antioxidants and fiber it helps digest food well even after sleeping [00:05:27] well at night if you feel low on energy a sense of fatigue surrounds you throughout the day and you have tried all expensive supplements then once turn to raisins what proves this point is the research that showed that athletes can perform just as well on raisins as they [00:05:45] can on a sports drink people who have low blood pressure who often feel dizzy uneasy or low on energy kishmish should be their go-to choice if you are iron deficient have less blood count and want to increase hemoglobin level raisins are [00:06:02] a natural remedy for it raisins have boron in them which combines with calcium and vitamin D in the body to make bones stronger any problem related to teeth and gums raisins comes to your rescue but can diabetics eat them we [00:06:17] will see this later finally at number four are almonds almonds commonly known as badam not just have copper magnesium and phosphorus but they are especially rich in selenium selenium is a powerful antioxidant that strengthens the hair [00:06:33] follicles helps reverse thyroid disorders and has been proven to lower the risk of cancers amond is hands down one of the best sources of vitamin E and it is this vitamin E that plays a major role in keeping your skin soft and clear [00:06:48] vitamin E is medicinal For Eyes heart and fatty liver regular consumption of alond makes your teeth and bones stronger increases brain power and scientifically speaking it even helps lose weight because almonds are low in carbs but high in protein healthy fats [00:07:06] and fiber it brings down blood sugar as well this has been well established by many Studies armonds have uncountable benefits but which armonds we are talking about our local variety of almonds like the gurbandi almonds and mamra these Indian subcontinent armonds [00:07:24] in comparison to California armonds are smaller in size but way bigger in terms of nutrients actually these almonds have more amount of oil in them in contrast to the California almonds and it is this oil in almonds which is beneficial for heart brain skin hair bones and eyes so [00:07:42] always try buying the dacy variety of armonds every grocery store has them for your convenience I have also given their Link in the description box if still for some reason you don't get them you can use the regular California armor as well now this much is clear that all four are [00:07:59] super foods but it's important to know how and in how much quantity should we take them else instead of getting the benefit it can harm you it's simple before going to sleep at night in a small bowl put four almonds prefer using [00:08:14] small DIY almonds as discussed earlier in the same Bowl put one Walnut as well add some water so that both almonds and walnut get soaked in it now in another Bowl put two pieces of dried fix and four raisins not more than that in this [00:08:30] bowl put just as much water as is enough to soak them now notice we have soaked almonds and walnut in one bowl while figs and raisins in a separate bowl there is a reason behind it it's that the water in which Walnut and almonds [00:08:46] are soaked it should not be consumed that's because almonds walnuts and other nuts have anti-nutrients like ftic acid that are removed in the water in which they are soaked on the other hand the water in which dried fruits like figs and raisins get soaked should definitely [00:09:03] be used this water has energy and some water soluble nutrients get added as well so we don't have to throw fig raisins water now in the morning first peel the skin of armonds yes often people doubt that since the peel of almonds has nutrients then why should we [00:09:19] remove it contrary to modern science ayura is clear that the peel of almonds no matter how nutritious it is creates hindrance in their digestion what's the use you eat almonds and you don't even get proper benefits this is the reason our mothers and grandmothers [00:09:36] have always advised us to soak the almonds and then peel off their skin before eating them Walnut skin isn't as problematic in digestion still try to remove it as much as possible figs and raisins would also have swelled up by then now eat all these food together [00:09:53] chew them properly in such a way that they turn into a paste in your mouth if you will gulp them fast they won't get absorbed properly and you will fail to reap its benefits while if you spend some time chewing them in your mouth your stomach won't have to do much [00:10:09] effort and the results will be instant also don't forget to drink the Ang raisin water along now comes another question when should we eat it be clear in the morning just after waking up first drink plain water then go freshen [00:10:24] up and then you can have it after eating these four it would be ideal not to eat anything for the next 1 hour after that you can have your regular breakfast but just in case you don't get that much time in morning in that case you can have this just before you start eating [00:10:40] your breakfast have no doubt that the combination of almonds walnuts figs and raisins is such a powerful supplement that even the most expensive multivitamins can't stand its Effectiveness according to ayura it has such a penetrating effect on the body [00:10:56] that all the seven main bodily tissues get nourished body weakness can't stay if you are regularly eating it your blood count will increase hemoglobin level will rise face will begin to Glow trust me within a few days you will experience such benefits that you might [00:11:13] regret why you didn't do it earlier still not sure check the comments of people who have already tried it for someone it has increased their energy level some have experienced positive changes in their skin and digestion a comment says that she has got regular [00:11:29] periods for the first time after consuming this others too have found it to be effective in some way or the other even its taste has a good fan base one more comment that came into my notice was that can diabetics eat figs and raisins yes since it's a natural food [00:11:46] and quantity is in moderation it can easily be consumed by diabetics basically it checks all the boxes you can have it daily it has no side effects at least take it for 2 months consistently and if you're bothered that it's summer time and these things can [00:12:03] cause body heat then hold on first of all the quantity of each food is very limited secondly we have soaked all four of them and most importantly as per ayurvedic scriptures almonds and walnuts are heating for the body but figs and [00:12:18] raisins are cooling for the body overall it's a balanced combination so no matter what your body type is it is 100% safe for you summer is Round the Corner and if there is one skin product which I genuinely believe comes under the category of Essentials it is a sunscreen [00:12:36] see I'm not against sun in fact sun is the unpolluted natural doctor but there is also no doubt that 11:00 a.m. to 4:00 p.m. the sun rays in a tropical country like India are very harsh and it's best we protect our skin in this duration as [00:12:52] you won't just get tan but your skin will age faster so either cover your skin or use a sunscreen Mama Earths milky soft mineral-based sunscreen for babies is not only a toxin-free option but even price-wise it's very economical [00:13:07] no doubt popular sunscreens work but recently concerns have been shown by both FDA and European Union regarding oxybenzone and Evo benzone used in them in 2020 a study pointed out that oxybenzone in sunscreens when applied on [00:13:23] rats may cause thyroid tumors so it's best to avoid a Benzene based sunscreen and choose a mineral based sunscreen that's why Mama Earths this sunscreen which is a zinc oxide based sunscreen along with mild chemicals it does have the natural goodness of cocoa seed [00:13:40] butter Shia butter almond oil calendula flour milk and oats SPF 30 its sun protection factor is well suitable for Indian climate even though it's a baby product it can be used by men and women of all skin types it's non- greasy and [00:13:57] water resistant as well it is g pack will cost you rupees 329 apply 21% special discount coupon and you will get it for 260 rupe check anywhere this price is very competitive so protect your skin naturally and buy Mama this [00:14:13] mineral based sunscreen the link is in the description box there are some very effective ways to reduce body heat to know them check out this video my name is VI I thank you for [00:14:30] watching he"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1155,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: 1Zgnl189KcM",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @nishachirania1245 | Likes: 2149 | Replies: 69 | Published: 2024-04-17T16:18:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "I have been consuming these dry fruits since past 2 yrs. I also include 1 date, few soaked groundnuts, a small quantity of sprouts and 1 fresh fruit for breakfast. I'm energetic with no health issues even at the age of 56. Everyone says I look like 35 yrs. I exercise regularly for 2 hrs.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @Mohit_Yadav168 | Likes: 40 | Replies: 0 | Published: 2024-04-20T13:24:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "How many walnuts do u use, in this video he says use only 1 but he puts 2 in the bowl, I'm kinda confused lol.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @Aayush_rana-r3v | Likes: 38 | Replies: 0 | Published: 2024-04-20T14:26:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "That was 1 only broken into 2 pieces",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @nishachirania1245 | Likes: 14 | Replies: 0 | Published: 2024-04-21T15:23:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "1 walnut",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @songoku-san7688 | Likes: 0 | Replies: 0 | Published: 2024-04-21T18:35:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "@Mohit_Yadav168 Stop being dumb",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @Idontknowwhome765 | Likes: 6 | Replies: 0 | Published: 2024-04-24T05:17:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "⁠@Mohit_Yadav168yeah I'm confused too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @aartih8280 | Likes: 661 | Replies: 2 | Published: 2024-04-22T12:16:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Every mother might be dreaming of having a son like you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "God bless you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @vanamala4751 | Likes: 2 | Replies: 0 | Published: 2024-07-18T06:56:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "We like your explanation with a moderate tone.🎉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @elanalina2648 | Likes: 1 | Replies: 0 | Published: 2025-08-07T04:59:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "Do you know him personally? What you are saying is very sensitive",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @shubhamrai9151 | Likes: 381 | Replies: 13 | Published: 2024-07-08T16:04:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "1. Figs",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "2. Walnut",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "3.Raisins",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "4.Almonds",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @vinapatel8265 | Likes: 5 | Replies: 0 | Published: 2024-07-13T18:35:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @Hemendra_rajput25 | Likes: 4 | Replies: 0 | Published: 2024-07-17T04:27:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "Thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @ashimkakati9119 | Likes: 4 | Replies: 0 | Published: 2024-07-28T03:18:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "Thanks bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @santoshkumarkeshari5135 | Likes: 4 | Replies: 0 | Published: 2024-08-01T15:13:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "Can it help in weight loose also",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @shubhamrai9151 | Likes: 8 | Replies: 0 | Published: 2024-08-01T15:42:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "@santoshkumarkeshari5135 Having good Diet will always help you to control weight and if you are doing exercises regularly that can be very effective.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @-EE-yadi | Likes: 2102 | Replies: 88 | Published: 2024-04-05T13:34:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "Please make video( healthy food ) for students who live in pg or hostel",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @bhuvaneshwari135 | Likes: 12 | Replies: 0 | Published: 2024-04-05T13:49:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "Yes please... 🙏🙏🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @payaljain4717 | Likes: 19 | Replies: 0 | Published: 2024-04-05T13:52:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "He already made a video about it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @saswatikapanda5730 | Likes: 5 | Replies: 0 | Published: 2024-04-05T13:53:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "I agree",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @Padhnahipadega | Likes: 5 | Replies: 0 | Published: 2024-04-05T14:06:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "Black raisins with seeds are much more beneficial than seedless ones.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @satyam1202 | Likes: 0 | Replies: 0 | Published: 2024-05-13T05:05:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "He's back 🎉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @meghnagarg | Likes: 0 | Replies: 0 | Published: 2025-03-23T09:05:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01631",
+                  "author": "",
+                  "text": "Hi, can you please share some references for ayurvedic books …",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @ramanaguduri2325 | Likes: 0 | Replies: 0 | Published: 2024-07-07T07:05:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01634",
+                  "author": "",
+                  "text": "Plz tell us about food for Hepataitis b .....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01636",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @kambhampativenkateswararao9902 | Likes: 0 | Replies: 0 | Published: 2025-08-22T16:33:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "Thanks a lot bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @khaany888 | Likes: 0 | Replies: 0 | Published: 2024-04-23T05:41:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01640",
+                  "author": "",
+                  "text": "Nice information 😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @SR-kj5bx | Likes: 1 | Replies: 0 | Published: 2024-06-18T08:50:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01643",
+                  "author": "",
+                  "text": "Would you plz make video for liver cirosis",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @goldymehra00786 | Likes: 0 | Replies: 0 | Published: 2024-04-23T16:29:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01646",
+                  "author": "",
+                  "text": "Tks Sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @renukakoorse3895 | Likes: 0 | Replies: 0 | Published: 2024-04-29T05:22:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01649",
+                  "author": "",
+                  "text": "Tq dear ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @factchecker2090 | Likes: 2 | Replies: 0 | Published: 2024-05-31T07:01:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01652",
+                  "author": "",
+                  "text": "A lot of pesticides are sprayed on grapes.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "When Grapes are dried and become raisins what about the pesticide residue on them?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Do they dissolve in the water when soaked and if yes should the water be consumed?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01655",
+                  "author": "",
+                  "text": "Secondly most pesticides are not water soluble, so then how are these raisins safe for consumption even after being soaked?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @chandshahi3563 | Likes: 0 | Replies: 0 | Published: 2024-07-01T16:52:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01658",
+                  "author": "",
+                  "text": "Thank u fit tuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @anshikaashi4476 | Likes: 0 | Replies: 0 | Published: 2024-07-16T05:41:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01661",
+                  "author": "",
+                  "text": "I do yoga in morning so , all of this should be taken before yoga or after that . As you said that it is to ne taken after waking up @fittuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @janhavisingh_11 | Likes: 0 | Replies: 0 | Published: 2024-08-23T13:59:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01664",
+                  "author": "",
+                  "text": "Kindly make a detailed video on migraine",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @hemalathar8038 | Likes: 0 | Replies: 0 | Published: 2024-07-04T16:12:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01667",
+                  "author": "",
+                  "text": "Sir can Ulcerative colitis patients take figs. Pl. Guide",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @Divya-ux8lk | Likes: 0 | Replies: 0 | Published: 2024-06-16T08:38:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01670",
+                  "author": "",
+                  "text": "Can you please share the ayurveda’s books you read?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @vinumourya4093 | Likes: 0 | Replies: 0 | Published: 2025-05-24T09:11:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01673",
+                  "author": "",
+                  "text": "Very informative",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @priyasamant26 | Likes: 0 | Replies: 0 | Published: 2024-04-28T04:55:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01676",
+                  "author": "",
+                  "text": "Sir please make video on cyst and lipoma",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @lavanyajkramu. | Likes: 0 | Replies: 0 | Published: 2024-07-05T13:46:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01679",
+                  "author": "",
+                  "text": "Vivek sir please Suggest dry fruits and food can take after delivery",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @dancingnachos3634 | Likes: 0 | Replies: 0 | Published: 2024-06-28T11:07:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01682",
+                  "author": "",
+                  "text": "God bless you ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @Priyankasharma-t9f1u | Likes: 0 | Replies: 0 | Published: 2024-04-20T10:09:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01685",
+                  "author": "",
+                  "text": "Please make video for babies (1-2 years) diet",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01687",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @emiliadias7753 | Likes: 0 | Replies: 0 | Published: 2024-08-01T09:35:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01688",
+                  "author": "",
+                  "text": "Thank you Vivek",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01690",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @rakshitasharma8747 | Likes: 0 | Replies: 0 | Published: 2024-08-14T15:28:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01691",
+                  "author": "",
+                  "text": "Sir please make a video on protein shake for kids 🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01693",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @NusratAnjum-qm6ld | Likes: 0 | Replies: 0 | Published: 2024-04-24T09:44:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01694",
+                  "author": "",
+                  "text": "Video on hormonal balance please......🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01696",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @BhanuSk-qf4xi | Likes: 0 | Replies: 0 | Published: 2025-08-07T03:10:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01697",
+                  "author": "",
+                  "text": "Please say about muskmelon sunflower seeds please",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "1Zgnl189KcM",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 55,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 13376,
+          "transcript_words": 2542,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:23] if I ask you which is the most common health problem then I'm sure that each one of us will have a different answer some will say digest problems others might say heart problems for many it's weight loss for some it's diabetes a few will say skin problems some might even [00:00:40] say brain disorders and that's true as well because there is no one most common problem in fact all these problems have become very common nowadays if you look around it is very likely that you will find someone or the other suffering from [00:00:55] one of these problems but is there anything that if we include in our diet will help us get relief from almost all these common problems yes today I want to share with you four Foods well it will be wrong to call them Just Foods [00:01:11] all these are super foods but when we soak them at night and then eat them in the morning it's their combination which will help you get relief in more than 100 health issues mentioned clearly in ayurvedic scriptures and also today [00:01:26] validated by modern science what are these four superfoods in how much quantity should we consume them what is the right time to eat them why you should not eat them without soaking we will talk about each of these aspects in [00:01:41] detail so to get the maximum benefit from this miraculous combination I recommend that you watch this video till the very end so without any further delay let's get started Hello friends welcome to fit tuber often we try to find solution to [00:01:59] our health problem s in Market's expensive supplements but believe it or not Nature has given us such amazing foods which obviously are 100% natural they provide numerous benefits without causing any side effects today let's [00:02:15] talk about four such Foods let's begin with the first super food which is Tri fig figs commonly known as anjir is a fruit which when ripe is dark purple in color and has many small small seeds but most of us are familiar with their dried [00:02:31] version which is sold in ropes anjir is not only high in fiber but the quality of its fiber is top class this is why anjir is considered among the top foods for Digestive Health if you have constipation or you don't feel satisfied [00:02:47] after going to toilet then you should start eating anjir Studies have confirmed that dried figs are a natural Lexa which is why eating anjir increases the speed at which waste passes through the intestines and leaves the system anjir is no less than a supplement for [00:03:03] your reproductive Health in males it increases sperm count and sexual stamina while in women it balances the hormones regulates ovulation cycle and increases fertility figs are extremely effective in skin problems that's because first [00:03:19] anir is anti-inflammatory and secondly it's rich in antioxidants including vitamins a c and e as a result it kills skin damaging free radic and cools down inflammation caused in any layer of the skin so much so that in a study when 45 [00:03:36] children who were suffering from dermatitis applied anjer fruit extract twice daily for 2 weeks it was found to be more effective than its standard treatment green anjir has massive amount of nutrients that help regulate various [00:03:51] functions of the body be it for reducing triglyceride levels to reduce fatty liver to give relief from joint pains or for increasing hair growth provided you eat them the right way second food that you will need is a walnut if you notice [00:04:07] wallnut looks very similar to a human brain Perhaps it is Nature's way of telling us because not just in ayura even modern studies today have no doubt about the fact that Walnut is a super food for your brain it is one of those [00:04:22] rare vegetarian foods on which you can depend for omega-3 fatty acids without having to buy a supplement this is one reason walnuts are known to sharpen the memory increase concentration power improve neurological Pathways and grow [00:04:37] the number of brain cells which is why any disorder related to brain walnuts are helpful being an excellent source of healthy fat it reduces the bad cholesterol in the body and increases good cholesterol it softens the arteries protects them from calcification as a [00:04:55] result blood passes swiftly and the chances of a heart attack come down another interesting benefit of eating walnuts which most people are unaware of is that it helps kill cancer cells in the body but how many walnuts should you consume daily that we will talk further [00:05:11] in this video third superfood is raisins when grapes are dried they turn into raisins commonly known as kishmish it is naturally sweet but because it is very high in antioxidants and fiber it helps digest food well even after sleeping [00:05:27] well at night if you feel low on energy a sense of fatigue surrounds you throughout the day and you have tried all expensive supplements then once turn to raisins what proves this point is the research that showed that athletes can perform just as well on raisins as they [00:05:45] can on a sports drink people who have low blood pressure who often feel dizzy uneasy or low on energy kishmish should be their go-to choice if you are iron deficient have less blood count and want to increase hemoglobin level raisins are [00:06:02] a natural remedy for it raisins have boron in them which combines with calcium and vitamin D in the body to make bones stronger any problem related to teeth and gums raisins comes to your rescue but can diabetics eat them we [00:06:17] will see this later finally at number four are almonds almonds commonly known as badam not just have copper magnesium and phosphorus but they are especially rich in selenium selenium is a powerful antioxidant that strengthens the hair [00:06:33] follicles helps reverse thyroid disorders and has been proven to lower the risk of cancers amond is hands down one of the best sources of vitamin E and it is this vitamin E that plays a major role in keeping your skin soft and clear [00:06:48] vitamin E is medicinal For Eyes heart and fatty liver regular consumption of alond makes your teeth and bones stronger increases brain power and scientifically speaking it even helps lose weight because almonds are low in carbs but high in protein healthy fats [00:07:06] and fiber it brings down blood sugar as well this has been well established by many Studies armonds have uncountable benefits but which armonds we are talking about our local variety of almonds like the gurbandi almonds and mamra these Indian subcontinent armonds [00:07:24] in comparison to California armonds are smaller in size but way bigger in terms of nutrients actually these almonds have more amount of oil in them in contrast to the California almonds and it is this oil in almonds which is beneficial for heart brain skin hair bones and eyes so [00:07:42] always try buying the dacy variety of armonds every grocery store has them for your convenience I have also given their Link in the description box if still for some reason you don't get them you can use the regular California armor as well now this much is clear that all four are [00:07:59] super foods but it's important to know how and in how much quantity should we take them else instead of getting the benefit it can harm you it's simple before going to sleep at night in a small bowl put four almonds prefer using [00:08:14] small DIY almonds as discussed earlier in the same Bowl put one Walnut as well add some water so that both almonds and walnut get soaked in it now in another Bowl put two pieces of dried fix and four raisins not more than that in this [00:08:30] bowl put just as much water as is enough to soak them now notice we have soaked almonds and walnut in one bowl while figs and raisins in a separate bowl there is a reason behind it it's that the water in which Walnut and almonds [00:08:46] are soaked it should not be consumed that's because almonds walnuts and other nuts have anti-nutrients like ftic acid that are removed in the water in which they are soaked on the other hand the water in which dried fruits like figs and raisins get soaked should definitely [00:09:03] be used this water has energy and some water soluble nutrients get added as well so we don't have to throw fig raisins water now in the morning first peel the skin of armonds yes often people doubt that since the peel of almonds has nutrients then why should we [00:09:19] remove it contrary to modern science ayura is clear that the peel of almonds no matter how nutritious it is creates hindrance in their digestion what's the use you eat almonds and you don't even get proper benefits this is the reason our mothers and grandmothers [00:09:36] have always advised us to soak the almonds and then peel off their skin before eating them Walnut skin isn't as problematic in digestion still try to remove it as much as possible figs and raisins would also have swelled up by then now eat all these food together [00:09:53] chew them properly in such a way that they turn into a paste in your mouth if you will gulp them fast they won't get absorbed properly and you will fail to reap its benefits while if you spend some time chewing them in your mouth your stomach won't have to do much [00:10:09] effort and the results will be instant also don't forget to drink the Ang raisin water along now comes another question when should we eat it be clear in the morning just after waking up first drink plain water then go freshen [00:10:24] up and then you can have it after eating these four it would be ideal not to eat anything for the next 1 hour after that you can have your regular breakfast but just in case you don't get that much time in morning in that case you can have this just before you start eating [00:10:40] your breakfast have no doubt that the combination of almonds walnuts figs and raisins is such a powerful supplement that even the most expensive multivitamins can't stand its Effectiveness according to ayura it has such a penetrating effect on the body [00:10:56] that all the seven main bodily tissues get nourished body weakness can't stay if you are regularly eating it your blood count will increase hemoglobin level will rise face will begin to Glow trust me within a few days you will experience such benefits that you might [00:11:13] regret why you didn't do it earlier still not sure check the comments of people who have already tried it for someone it has increased their energy level some have experienced positive changes in their skin and digestion a comment says that she has got regular [00:11:29] periods for the first time after consuming this others too have found it to be effective in some way or the other even its taste has a good fan base one more comment that came into my notice was that can diabetics eat figs and raisins yes since it's a natural food [00:11:46] and quantity is in moderation it can easily be consumed by diabetics basically it checks all the boxes you can have it daily it has no side effects at least take it for 2 months consistently and if you're bothered that it's summer time and these things can [00:12:03] cause body heat then hold on first of all the quantity of each food is very limited secondly we have soaked all four of them and most importantly as per ayurvedic scriptures almonds and walnuts are heating for the body but figs and [00:12:18] raisins are cooling for the body overall it's a balanced combination so no matter what your body type is it is 100% safe for you summer is Round the Corner and if there is one skin product which I genuinely believe comes under the category of Essentials it is a sunscreen [00:12:36] see I'm not against sun in fact sun is the unpolluted natural doctor but there is also no doubt that 11:00 a.m. to 4:00 p.m. the sun rays in a tropical country like India are very harsh and it's best we protect our skin in this duration as [00:12:52] you won't just get tan but your skin will age faster so either cover your skin or use a sunscreen Mama Earths milky soft mineral-based sunscreen for babies is not only a toxin-free option but even price-wise it's very economical [00:13:07] no doubt popular sunscreens work but recently concerns have been shown by both FDA and European Union regarding oxybenzone and Evo benzone used in them in 2020 a study pointed out that oxybenzone in sunscreens when applied on [00:13:23] rats may cause thyroid tumors so it's best to avoid a Benzene based sunscreen and choose a mineral based sunscreen that's why Mama Earths this sunscreen which is a zinc oxide based sunscreen along with mild chemicals it does have the natural goodness of cocoa seed [00:13:40] butter Shia butter almond oil calendula flour milk and oats SPF 30 its sun protection factor is well suitable for Indian climate even though it's a baby product it can be used by men and women of all skin types it's non- greasy and [00:13:57] water resistant as well it is g pack will cost you rupees 329 apply 21% special discount coupon and you will get it for 260 rupe check anywhere this price is very competitive so protect your skin naturally and buy Mama this [00:14:13] mineral based sunscreen the link is in the description box there are some very effective ways to reduce body heat to know them check out this video my name is VI I thank you for [00:14:30] watching he"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1155,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: 1Zgnl189KcM",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @nishachirania1245 | Likes: 2149 | Replies: 69 | Published: 2024-04-17T16:18:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "I have been consuming these dry fruits since past 2 yrs. I also include 1 date, few soaked groundnuts, a small quantity of sprouts and 1 fresh fruit for breakfast. I'm energetic with no health issues even at the age of 56. Everyone says I look like 35 yrs. I exercise regularly for 2 hrs.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @Mohit_Yadav168 | Likes: 40 | Replies: 0 | Published: 2024-04-20T13:24:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "How many walnuts do u use, in this video he says use only 1 but he puts 2 in the bowl, I'm kinda confused lol.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @Aayush_rana-r3v | Likes: 38 | Replies: 0 | Published: 2024-04-20T14:26:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "That was 1 only broken into 2 pieces",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @nishachirania1245 | Likes: 14 | Replies: 0 | Published: 2024-04-21T15:23:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "1 walnut",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @songoku-san7688 | Likes: 0 | Replies: 0 | Published: 2024-04-21T18:35:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "@Mohit_Yadav168 Stop being dumb",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @Idontknowwhome765 | Likes: 6 | Replies: 0 | Published: 2024-04-24T05:17:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "⁠@Mohit_Yadav168yeah I'm confused too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @aartih8280 | Likes: 661 | Replies: 2 | Published: 2024-04-22T12:16:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Every mother might be dreaming of having a son like you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "God bless you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "[COMMENT 8] Author: @vanamala4751 | Likes: 2 | Replies: 0 | Published: 2024-07-18T06:56:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "We like your explanation with a moderate tone.🎉",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "[COMMENT 9] Author: @elanalina2648 | Likes: 1 | Replies: 0 | Published: 2025-08-07T04:59:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "Do you know him personally? What you are saying is very sensitive",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "[COMMENT 10] Author: @shubhamrai9151 | Likes: 381 | Replies: 13 | Published: 2024-07-08T16:04:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "1. Figs",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "2. Walnut",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "3.Raisins",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "4.Almonds",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "[COMMENT 11] Author: @vinapatel8265 | Likes: 5 | Replies: 0 | Published: 2024-07-13T18:35:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "[COMMENT 12] Author: @Hemendra_rajput25 | Likes: 4 | Replies: 0 | Published: 2024-07-17T04:27:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "Thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "[COMMENT 13] Author: @ashimkakati9119 | Likes: 4 | Replies: 0 | Published: 2024-07-28T03:18:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "Thanks bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 14] Author: @santoshkumarkeshari5135 | Likes: 4 | Replies: 0 | Published: 2024-08-01T15:13:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "Can it help in weight loose also",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 15] Author: @shubhamrai9151 | Likes: 8 | Replies: 0 | Published: 2024-08-01T15:42:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "@santoshkumarkeshari5135 Having good Diet will always help you to control weight and if you are doing exercises regularly that can be very effective.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 16] Author: @-EE-yadi | Likes: 2102 | Replies: 88 | Published: 2024-04-05T13:34:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "Please make video( healthy food ) for students who live in pg or hostel",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 17] Author: @bhuvaneshwari135 | Likes: 12 | Replies: 0 | Published: 2024-04-05T13:49:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "Yes please... 🙏🙏🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 18] Author: @payaljain4717 | Likes: 19 | Replies: 0 | Published: 2024-04-05T13:52:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "He already made a video about it",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 19] Author: @saswatikapanda5730 | Likes: 5 | Replies: 0 | Published: 2024-04-05T13:53:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "I agree",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "[COMMENT 20] Author: @Padhnahipadega | Likes: 5 | Replies: 0 | Published: 2024-04-05T14:06:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "Black raisins with seeds are much more beneficial than seedless ones.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "[COMMENT 478] Author: @satyam1202 | Likes: 0 | Replies: 0 | Published: 2024-05-13T05:05:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "He's back 🎉",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "[COMMENT 479] Author: @meghnagarg | Likes: 0 | Replies: 0 | Published: 2025-03-23T09:05:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01631",
+                "author": "",
+                "text": "Hi, can you please share some references for ayurvedic books …",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "[COMMENT 480] Author: @ramanaguduri2325 | Likes: 0 | Replies: 0 | Published: 2024-07-07T07:05:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01634",
+                "author": "",
+                "text": "Plz tell us about food for Hepataitis b .....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01636",
+                "author": "",
+                "text": "[COMMENT 481] Author: @kambhampativenkateswararao9902 | Likes: 0 | Replies: 0 | Published: 2025-08-22T16:33:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "Thanks a lot bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "[COMMENT 482] Author: @khaany888 | Likes: 0 | Replies: 0 | Published: 2024-04-23T05:41:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01640",
+                "author": "",
+                "text": "Nice information 😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "[COMMENT 483] Author: @SR-kj5bx | Likes: 1 | Replies: 0 | Published: 2024-06-18T08:50:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01643",
+                "author": "",
+                "text": "Would you plz make video for liver cirosis",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "[COMMENT 484] Author: @goldymehra00786 | Likes: 0 | Replies: 0 | Published: 2024-04-23T16:29:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01646",
+                "author": "",
+                "text": "Tks Sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "[COMMENT 485] Author: @renukakoorse3895 | Likes: 0 | Replies: 0 | Published: 2024-04-29T05:22:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01649",
+                "author": "",
+                "text": "Tq dear ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "[COMMENT 486] Author: @factchecker2090 | Likes: 2 | Replies: 0 | Published: 2024-05-31T07:01:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01652",
+                "author": "",
+                "text": "A lot of pesticides are sprayed on grapes.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "When Grapes are dried and become raisins what about the pesticide residue on them?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Do they dissolve in the water when soaked and if yes should the water be consumed?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01655",
+                "author": "",
+                "text": "Secondly most pesticides are not water soluble, so then how are these raisins safe for consumption even after being soaked?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "[COMMENT 487] Author: @chandshahi3563 | Likes: 0 | Replies: 0 | Published: 2024-07-01T16:52:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01658",
+                "author": "",
+                "text": "Thank u fit tuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "[COMMENT 488] Author: @anshikaashi4476 | Likes: 0 | Replies: 0 | Published: 2024-07-16T05:41:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01661",
+                "author": "",
+                "text": "I do yoga in morning so , all of this should be taken before yoga or after that . As you said that it is to ne taken after waking up @fittuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "[COMMENT 489] Author: @janhavisingh_11 | Likes: 0 | Replies: 0 | Published: 2024-08-23T13:59:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01664",
+                "author": "",
+                "text": "Kindly make a detailed video on migraine",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "[COMMENT 490] Author: @hemalathar8038 | Likes: 0 | Replies: 0 | Published: 2024-07-04T16:12:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01667",
+                "author": "",
+                "text": "Sir can Ulcerative colitis patients take figs. Pl. Guide",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "[COMMENT 491] Author: @Divya-ux8lk | Likes: 0 | Replies: 0 | Published: 2024-06-16T08:38:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01670",
+                "author": "",
+                "text": "Can you please share the ayurveda’s books you read?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "[COMMENT 492] Author: @vinumourya4093 | Likes: 0 | Replies: 0 | Published: 2025-05-24T09:11:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01673",
+                "author": "",
+                "text": "Very informative",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "[COMMENT 493] Author: @priyasamant26 | Likes: 0 | Replies: 0 | Published: 2024-04-28T04:55:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01676",
+                "author": "",
+                "text": "Sir please make video on cyst and lipoma",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "[COMMENT 494] Author: @lavanyajkramu. | Likes: 0 | Replies: 0 | Published: 2024-07-05T13:46:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01679",
+                "author": "",
+                "text": "Vivek sir please Suggest dry fruits and food can take after delivery",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "[COMMENT 495] Author: @dancingnachos3634 | Likes: 0 | Replies: 0 | Published: 2024-06-28T11:07:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01682",
+                "author": "",
+                "text": "God bless you ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "[COMMENT 496] Author: @Priyankasharma-t9f1u | Likes: 0 | Replies: 0 | Published: 2024-04-20T10:09:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01685",
+                "author": "",
+                "text": "Please make video for babies (1-2 years) diet",
+                "likes": null
+              },
+              {
+                "comment_id": "c01687",
+                "author": "",
+                "text": "[COMMENT 497] Author: @emiliadias7753 | Likes: 0 | Replies: 0 | Published: 2024-08-01T09:35:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01688",
+                "author": "",
+                "text": "Thank you Vivek",
+                "likes": null
+              },
+              {
+                "comment_id": "c01690",
+                "author": "",
+                "text": "[COMMENT 498] Author: @rakshitasharma8747 | Likes: 0 | Replies: 0 | Published: 2024-08-14T15:28:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01691",
+                "author": "",
+                "text": "Sir please make a video on protein shake for kids 🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01693",
+                "author": "",
+                "text": "[COMMENT 499] Author: @NusratAnjum-qm6ld | Likes: 0 | Replies: 0 | Published: 2024-04-24T09:44:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01694",
+                "author": "",
+                "text": "Video on hormonal balance please......🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01696",
+                "author": "",
+                "text": "[COMMENT 500] Author: @BhanuSk-qf4xi | Likes: 0 | Replies: 0 | Published: 2025-08-07T03:10:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01697",
+                "author": "",
+                "text": "Please say about muskmelon sunflower seeds please",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

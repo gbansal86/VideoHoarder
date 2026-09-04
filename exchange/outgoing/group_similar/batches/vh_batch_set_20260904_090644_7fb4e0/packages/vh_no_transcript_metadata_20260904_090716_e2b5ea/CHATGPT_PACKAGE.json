@@ -1,0 +1,3031 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090716_e2b5ea",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090716_e2b5ea",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Face wash, moisturizers, creams, and skin products",
+      "batch_number": 11,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 11 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090716_e2b5ea",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090716_e2b5ea"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090716_e2b5ea",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Face wash, moisturizers, creams, and skin products",
+      "batch_number": 11,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "63717d7d-4b11-4110-a3e9-54b2210a3784",
+    "package_id": "vh_no_transcript_metadata_20260904_090716_e2b5ea",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "TPP-TeV0BDU"
+    ],
+    "evidence_grades": {
+      "TPP-TeV0BDU": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Face wash, moisturizers, creams, and skin products",
+      "batch_number": 11,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "576ddfa2bcc3d20266da4f56b67c3c8cffa1a39e57984e2adb241b7edbba4ef4",
+      "prompt.json": "4eabb511aab8661e8e9c8e44a1cd14566ea3fd66ac7813efaa6ec122b4d92f63",
+      "schema.json": "5cbaeff5dfa795507e42ed6aa4b0aeb81acea9c55e0cd9c98a780a4658b90a58"
+    },
+    "created_at": "2026-09-04 09:07:16",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "TPP-TeV0BDU",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=TPP-TeV0BDU",
+        "original_title": "20 Face Washes in India Ranked from Worst to Best",
+        "clean_title": "20 Face Washes in India Ranked from Worst to Best",
+        "channel": "Fit Tuber",
+        "upload_date": "2018-03-02",
+        "description": "Which is the Best Face Wash in the Indian Market?\n\nWhich face wash do you use? Himalaya, Patanjali, Clean and clear, Everyuth, Garnier or fair and handsome? Because if you are using one of these, you surely are unaware of the high number of toxic chemicals present in them. It is unfortunate that most face washes in the market today are full of harmful chemicals. \nFrom Parabens to sulfates to alcohols to synthetic colors and fragrances face washes have them all. Many of these synthetic chemicals are skin irritants, skin penetrators and even carcinogenic. The skin on our face is much thinner than that on our body and accordingly needs more care. However, using a toxic face wash on a daily basis does more harm to it than good. \n\nThere are chemicals which are safe. There are chemicals which are not exactly safe but are also not very toxic. However, there are some chemicals which are extremely toxic and should be avoided at all costs. I have segregated all these face washes into 4 categories on the basis of number of these highly toxic chemicals in them.\n\n01:33 - CATEGORY 1 - These are the worst of the kind. They have over 10 toxic chemicals along with harmful preservatives, artificial fragrances and synthetic colors.\n\n02:23 - CATEGORY 2 - These are better than those in the category #1 but are far from the best. They too have 5-7 toxic chemicals in them. They however are free from sulphates.\n\n02:47 - CATEGORY 3 - These are one of its kind. They do not mention the complete list of their ingredients. However, they do contain harmful and toxic preservatives.\n\n04:13 - CATEGORY 4 - These are best in the market, free from toxic chemicals, harmful preservatives, artificial colors, fragrances and even excipients.\n\nSource: http://www.biodizionario.it/\n\nAroma Magic Face Wash- http://amzn.to/2FKXqsd\nRustic Art Face Wash- http://amzn.to/2CTDlg4\nGulnare Face Wash - http://www.gulnareskincare.com\n\nBEST PRODUCTS FROM WORST TO BEST SERIES\n\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\n\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nI hope you found this video helpful. Well, if you did, please do \n\nLIKE | SHARE | COMMENT \n\nPlease SUBSCRIBE https://www.youtube.com/channel/UCYC6... \n\nAlready subscribed? Hit the bell Icon \n\nSOME OF MY MOST POPULAR VIDEOS: \n\nWhich Toothpaste is the best?\nhttps://www.youtube.com/watch?v=RfinWpg9MYY&t=3s\n\nWhich bathing soap is the best?\nhttps://www.youtube.com/watch?v=bgx6nHUNILg&t=140s\n\n10 Foods you will never eat knowing how they are made.\nhttps://www.youtube.com/watch?v=ci6viCNdAjI&t=673s\n\n5 Foods Wrongly Marketed as Healthy\nhttps://www.youtube.com/watch?v=peM93I89TQU&t=414s\n\nFull day of eating for muscle gains\nhttps://www.youtube.com/watch?v=2knVu... \n\nHow to reduce belly fat in 1 week? \nhttps://www.youtube.com/watch?v=718DN... \n\nTop 10 Cheapest Protein Foods in India \nhttps://www.youtube.com/watch?v=TOAaM... \n\nHow to get rid of Man Boobs? \nhttps://www.youtube.com/watch?v=WLsl3... \n\nCheapest fat burner in Rs 3 \nhttps://www.youtube.com/watch?v=wtN6u... \n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nGrocery Shopping for a Healthy and Balanced diet. https://www.youtube.com/watch?v=6whI1... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber.",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 1104,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: TPP-TeV0BDU",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 501",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 1630 | Replies: 221 | Published: 2018-10-22T05:20:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Hello Friends! Lately, I have been posting regularly on Instagram. If you are interested to get daily updates about my personal fitness journey, behind the scenes of my YouTube videos, you can follow me there. Link: https://www.instagram.com/fittuber/",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "I wish you good health.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Fit Tuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 2] Author: @asmitatutorial1404 | Likes: 8 | Replies: 0 | Published: 2018-10-24T18:21:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Ahaglow face wash is it safe or harmful",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 3] Author: @rajuldhila2414 | Likes: 10 | Replies: 0 | Published: 2018-10-30T15:23:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Organic harvest uses 100% organic ingredients. It's an Indian brand and it's free from harmful chemicals. Please add this to ur list as well!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 4] Author: @josephadithya | Likes: 6 | Replies: 0 | Published: 2018-11-01T18:09:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Why the heck then patanjali is banned in many foreign countries",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 5] Author: @022emiliano | Likes: 3 | Replies: 0 | Published: 2018-11-05T07:57:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Fit Tuber Why are you so God given handsome, love that bears, please kiss me!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 6] Author: @022emiliano | Likes: 3 | Replies: 0 | Published: 2018-11-05T07:57:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Fit Tuber Please do a shirtless video!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 7] Author: @pinkshinycurtain | Likes: 5919 | Replies: 133 | Published: 2020-08-27T15:31:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "Before buying anything the first thing which I do is watch fit tuber 😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 8] Author: @heenarao014 | Likes: 26 | Replies: 0 | Published: 2020-08-30T14:03:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Hahahahaha me too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 9] Author: @subhi222 | Likes: 18 | Replies: 0 | Published: 2020-08-31T09:36:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Same here😁😁",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 10] Author: @Yashwant_Tripathi | Likes: 7 | Replies: 0 | Published: 2020-09-05T03:17:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "Me too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 11] Author: @amlinprinson5000 | Likes: 2 | Replies: 0 | Published: 2020-09-05T06:38:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Me too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 12] Author: @Sumanlata-it2ob | Likes: 2 | Replies: 0 | Published: 2020-09-05T10:05:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "Me too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 13] Author: @fakeeraa | Likes: 5926 | Replies: 34 | Published: 2018-06-09T15:59:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "I really want u to continue with ur worst to best series but be honest everytime",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "People trust u dont betraye them",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "Best of luck",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "[COMMENT 14] Author: @akshaytechhindi | Likes: 47 | Replies: 0 | Published: 2019-07-07T08:34:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "Not a paid review. But, he got a link.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 15] Author: @palashyadav4204 | Likes: 132 | Replies: 0 | Published: 2019-07-12T05:51:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "@akshaytechhindi dude.. it's not a big deal to put a link. He puts link for even sugar and salt for our comfort.. Watch his videos.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 16] Author: @aislinnli5355 | Likes: 38 | Replies: 0 | Published: 2019-08-12T09:30:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "@akshaytechhindi he does better than u tho. Next",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 17] Author: @Sai.Goud_ambati | Likes: 5 | Replies: 0 | Published: 2019-08-19T05:54:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "@aislinnli5355 yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 18] Author: @AjmalKhan-cp3vy | Likes: 18 | Replies: 0 | Published: 2019-09-08T06:11:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "@akshaytechhindi bro he gets 10% profit on mrp of product from amazon if he puts that link",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 19] Author: @RajatBapna | Likes: 579 | Replies: 0 | Published: 2020-11-22T14:31:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "Companies: our face wash is best.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "Fit tuber : Hold my video.😎",
+              "likes": null
+            },
+            {
+              "comment_id": "c01543",
+              "author": "",
+              "text": "Sir I'm using cetfair facewash if I change face wash suddenly and use aroma magic there is no side effect",
+              "likes": null
+            },
+            {
+              "comment_id": "c01545",
+              "author": "",
+              "text": "[COMMENT 480] Author: @yashgumber8144 | Likes: 0 | Replies: 0 | Published: 2019-01-14T09:28:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01546",
+              "author": "",
+              "text": "No",
+              "likes": null
+            },
+            {
+              "comment_id": "c01548",
+              "author": "",
+              "text": "[COMMENT 481] Author: @abhishekm3752 | Likes: 54 | Replies: 5 | Published: 2019-12-28T08:48:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01549",
+              "author": "",
+              "text": "What if they are actually using chemicals but mentioning entirely else on the label",
+              "likes": null
+            },
+            {
+              "comment_id": "c01551",
+              "author": "",
+              "text": "[COMMENT 482] Author: @ajayshinz8427 | Likes: 12 | Replies: 0 | Published: 2020-01-09T12:38:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01552",
+              "author": "",
+              "text": "They would never do that! If they gey caught they would have to pay a hefty amount as penalty n they wouldn't be able to manufacture any more products. So I don't think they would take that risk.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01554",
+              "author": "",
+              "text": "[COMMENT 483] Author: @LeMoN-vb4pe | Likes: 2 | Replies: 0 | Published: 2020-01-14T08:37:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01555",
+              "author": "",
+              "text": "@ajayshinz8427 yep",
+              "likes": null
+            },
+            {
+              "comment_id": "c01557",
+              "author": "",
+              "text": "[COMMENT 484] Author: @indusood7799 | Likes: 0 | Replies: 0 | Published: 2020-02-28T17:08:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01558",
+              "author": "",
+              "text": "It can't be done as it's illegal",
+              "likes": null
+            },
+            {
+              "comment_id": "c01560",
+              "author": "",
+              "text": "[COMMENT 485] Author: @manasvi2758 | Likes: 0 | Replies: 0 | Published: 2020-07-08T08:05:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01561",
+              "author": "",
+              "text": "No that can't be done ...that not allowed",
+              "likes": null
+            },
+            {
+              "comment_id": "c01563",
+              "author": "",
+              "text": "[COMMENT 486] Author: @akash4700 | Likes: 0 | Replies: 0 | Published: 2020-07-31T08:57:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01564",
+              "author": "",
+              "text": "It was tested on labs by govt officials",
+              "likes": null
+            },
+            {
+              "comment_id": "c01566",
+              "author": "",
+              "text": "[COMMENT 487] Author: @kirtisinghchauhan6459 | Likes: 0 | Replies: 0 | Published: 2021-08-11T07:29:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01567",
+              "author": "",
+              "text": "Thanks for all your videos....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01568",
+              "author": "",
+              "text": "They are answering my questions... What to use 😑",
+              "likes": null
+            },
+            {
+              "comment_id": "c01570",
+              "author": "",
+              "text": "[COMMENT 488] Author: @IndiaUnbound-123 | Likes: 20 | Replies: 2 | Published: 2018-03-02T20:42:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01571",
+              "author": "",
+              "text": "What about khadi facewashes are they good? Do a separate vdo on khadi n vadi herbals as they are affordable too",
+              "likes": null
+            },
+            {
+              "comment_id": "c01573",
+              "author": "",
+              "text": "[COMMENT 489] Author: @reachwintersun | Likes: 1 | Replies: 0 | Published: 2018-03-04T07:02:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "I have used khadi face washes, they are natural. But there are so many choices that you will have to buy a different one every time until you end up with the one that suits you the best. And it will take a LONG time since even the smaller ones last for about a month for one person and to properly check whether they suit you, you will need to use it for at least 2 months. Best of luck!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01576",
+              "author": "",
+              "text": "[COMMENT 490] Author: @IndiaUnbound-123 | Likes: 2 | Replies: 0 | Published: 2018-03-04T10:37:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "Nidhi Chauhan thank you. I will try som then.. most of the items I m using have loads of chemicals (pears, everyouth, Citra, ponds etc)😢",
+              "likes": null
+            },
+            {
+              "comment_id": "c01579",
+              "author": "",
+              "text": "[COMMENT 491] Author: @rajivdalal8557 | Likes: 11 | Replies: 0 | Published: 2018-09-19T11:26:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "Guys guys the actual truth is that alcohol, siliyic acid, BHP etc. are included in your face cleansers because there is a reason behind it for example if you have oily skin and then you are thinking that hydrating your skin may cause more pimples but this is wrong as pimples are caused by the excessive amount of sebum in our pores so hydrating your skin lessons the amount of SI been created so it's necessary to use this but you should definitely give a try to Dermatologist if you have more problem",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "Nothing is actually oil free there's a dolphin because the old doesn't include these is ingredients so do check",
+              "likes": null
+            },
+            {
+              "comment_id": "c01584",
+              "author": "",
+              "text": "[COMMENT 492] Author: @arjunastra_3 | Likes: 13 | Replies: 1 | Published: 2018-03-31T17:51:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "Garnier oil clear is best for me and individual suits different facewash according to their skin...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "[COMMENT 493] Author: @deepeshsahu2906 | Likes: 0 | Replies: 0 | Published: 2018-04-11T08:49:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "ArjunAstra it's having high level of chemicals!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "I can prove it!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "Contact me on 7786040655",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "[COMMENT 494] Author: @neetprepmedicos | Likes: 0 | Replies: 0 | Published: 2022-10-13T16:37:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "Your video really help us a lot ,thank you 💜",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "[COMMENT 495] Author: @IronEraRestorations | Likes: 6 | Replies: 1 | Published: 2018-03-02T20:49:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "Use fresh tomato 🍅 on face instead of ( any face wash) eat🍽️ clean 🍎🥗 no junk 🍕 & drink lots of water 😉",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "[COMMENT 496] Author: @kajalsharma-ee3vk | Likes: 0 | Replies: 0 | Published: 2019-02-13T10:25:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "Thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01603",
+              "author": "",
+              "text": "[COMMENT 497] Author: @priyavadhana77 | Likes: 9 | Replies: 2 | Published: 2020-05-02T08:47:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "I used fair and lovely for just once. It made my skin so dry. I wouldn't recommend. It looks very harmful.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01606",
+              "author": "",
+              "text": "[COMMENT 498] Author: @noopurjainyoutubeblogger3868 | Likes: 0 | Replies: 0 | Published: 2020-07-27T10:13:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "Meri skin toh itni oily h.. ki 1 saal ho gya Fair & lovely use krte hue..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "But abhi tak oily hi h skin..🙄",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "[COMMENT 499] Author: @priyavadhana77 | Likes: 0 | Replies: 0 | Published: 2020-07-27T10:38:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "@noopurjainyoutubeblogger3868 May be it depends on the skin type a lot. But better to avpid such chemical laden products.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "[COMMENT 500] Author: @TrishaDutta | Likes: 10 | Replies: 1 | Published: 2018-12-28T13:36:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "Completely agree n can vouch for aroma magic products. The face wash, cleanser, toner, everything...suits my skin the most n I've had much clearer, brighter skin ever since I started using them",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "[COMMENT 501] Author: @mahinpathan1431 | Likes: 0 | Replies: 0 | Published: 2019-03-21T11:45:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "Trisha Dutta aroma magic face wash acha hai kya skin soft huti hai na",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "TPP-TeV0BDU",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\20 Face Washes in India Ranked from Worst to Best\\20 Face Washes in India Ranked from Worst to Best.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\20 Face Washes in India Ranked from Worst to Best",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\TPP-TeV0BDU",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "TPP-TeV0BDU",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 1104,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: TPP-TeV0BDU",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 501",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 1630 | Replies: 221 | Published: 2018-10-22T05:20:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Hello Friends! Lately, I have been posting regularly on Instagram. If you are interested to get daily updates about my personal fitness journey, behind the scenes of my YouTube videos, you can follow me there. Link: https://www.instagram.com/fittuber/",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "I wish you good health.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Fit Tuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @asmitatutorial1404 | Likes: 8 | Replies: 0 | Published: 2018-10-24T18:21:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Ahaglow face wash is it safe or harmful",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @rajuldhila2414 | Likes: 10 | Replies: 0 | Published: 2018-10-30T15:23:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Organic harvest uses 100% organic ingredients. It's an Indian brand and it's free from harmful chemicals. Please add this to ur list as well!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @josephadithya | Likes: 6 | Replies: 0 | Published: 2018-11-01T18:09:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Why the heck then patanjali is banned in many foreign countries",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @022emiliano | Likes: 3 | Replies: 0 | Published: 2018-11-05T07:57:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Fit Tuber Why are you so God given handsome, love that bears, please kiss me!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @022emiliano | Likes: 3 | Replies: 0 | Published: 2018-11-05T07:57:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Fit Tuber Please do a shirtless video!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @pinkshinycurtain | Likes: 5919 | Replies: 133 | Published: 2020-08-27T15:31:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "Before buying anything the first thing which I do is watch fit tuber 😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @heenarao014 | Likes: 26 | Replies: 0 | Published: 2020-08-30T14:03:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Hahahahaha me too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @subhi222 | Likes: 18 | Replies: 0 | Published: 2020-08-31T09:36:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Same here😁😁",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @Yashwant_Tripathi | Likes: 7 | Replies: 0 | Published: 2020-09-05T03:17:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "Me too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @amlinprinson5000 | Likes: 2 | Replies: 0 | Published: 2020-09-05T06:38:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Me too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @Sumanlata-it2ob | Likes: 2 | Replies: 0 | Published: 2020-09-05T10:05:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "Me too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @fakeeraa | Likes: 5926 | Replies: 34 | Published: 2018-06-09T15:59:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "I really want u to continue with ur worst to best series but be honest everytime",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "People trust u dont betraye them",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "Best of luck",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @akshaytechhindi | Likes: 47 | Replies: 0 | Published: 2019-07-07T08:34:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "Not a paid review. But, he got a link.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @palashyadav4204 | Likes: 132 | Replies: 0 | Published: 2019-07-12T05:51:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "@akshaytechhindi dude.. it's not a big deal to put a link. He puts link for even sugar and salt for our comfort.. Watch his videos.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @aislinnli5355 | Likes: 38 | Replies: 0 | Published: 2019-08-12T09:30:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "@akshaytechhindi he does better than u tho. Next",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @Sai.Goud_ambati | Likes: 5 | Replies: 0 | Published: 2019-08-19T05:54:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "@aislinnli5355 yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @AjmalKhan-cp3vy | Likes: 18 | Replies: 0 | Published: 2019-09-08T06:11:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "@akshaytechhindi bro he gets 10% profit on mrp of product from amazon if he puts that link",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @RajatBapna | Likes: 579 | Replies: 0 | Published: 2020-11-22T14:31:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "Companies: our face wash is best.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "Fit tuber : Hold my video.😎",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01543",
+                  "author": "",
+                  "text": "Sir I'm using cetfair facewash if I change face wash suddenly and use aroma magic there is no side effect",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01545",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @yashgumber8144 | Likes: 0 | Replies: 0 | Published: 2019-01-14T09:28:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01546",
+                  "author": "",
+                  "text": "No",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01548",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @abhishekm3752 | Likes: 54 | Replies: 5 | Published: 2019-12-28T08:48:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01549",
+                  "author": "",
+                  "text": "What if they are actually using chemicals but mentioning entirely else on the label",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01551",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @ajayshinz8427 | Likes: 12 | Replies: 0 | Published: 2020-01-09T12:38:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01552",
+                  "author": "",
+                  "text": "They would never do that! If they gey caught they would have to pay a hefty amount as penalty n they wouldn't be able to manufacture any more products. So I don't think they would take that risk.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01554",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @LeMoN-vb4pe | Likes: 2 | Replies: 0 | Published: 2020-01-14T08:37:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01555",
+                  "author": "",
+                  "text": "@ajayshinz8427 yep",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01557",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @indusood7799 | Likes: 0 | Replies: 0 | Published: 2020-02-28T17:08:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01558",
+                  "author": "",
+                  "text": "It can't be done as it's illegal",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01560",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @manasvi2758 | Likes: 0 | Replies: 0 | Published: 2020-07-08T08:05:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01561",
+                  "author": "",
+                  "text": "No that can't be done ...that not allowed",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01563",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @akash4700 | Likes: 0 | Replies: 0 | Published: 2020-07-31T08:57:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01564",
+                  "author": "",
+                  "text": "It was tested on labs by govt officials",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01566",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @kirtisinghchauhan6459 | Likes: 0 | Replies: 0 | Published: 2021-08-11T07:29:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01567",
+                  "author": "",
+                  "text": "Thanks for all your videos....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01568",
+                  "author": "",
+                  "text": "They are answering my questions... What to use 😑",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01570",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @IndiaUnbound-123 | Likes: 20 | Replies: 2 | Published: 2018-03-02T20:42:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01571",
+                  "author": "",
+                  "text": "What about khadi facewashes are they good? Do a separate vdo on khadi n vadi herbals as they are affordable too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01573",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @reachwintersun | Likes: 1 | Replies: 0 | Published: 2018-03-04T07:02:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "I have used khadi face washes, they are natural. But there are so many choices that you will have to buy a different one every time until you end up with the one that suits you the best. And it will take a LONG time since even the smaller ones last for about a month for one person and to properly check whether they suit you, you will need to use it for at least 2 months. Best of luck!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01576",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @IndiaUnbound-123 | Likes: 2 | Replies: 0 | Published: 2018-03-04T10:37:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "Nidhi Chauhan thank you. I will try som then.. most of the items I m using have loads of chemicals (pears, everyouth, Citra, ponds etc)😢",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01579",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @rajivdalal8557 | Likes: 11 | Replies: 0 | Published: 2018-09-19T11:26:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "Guys guys the actual truth is that alcohol, siliyic acid, BHP etc. are included in your face cleansers because there is a reason behind it for example if you have oily skin and then you are thinking that hydrating your skin may cause more pimples but this is wrong as pimples are caused by the excessive amount of sebum in our pores so hydrating your skin lessons the amount of SI been created so it's necessary to use this but you should definitely give a try to Dermatologist if you have more problem",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "Nothing is actually oil free there's a dolphin because the old doesn't include these is ingredients so do check",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01584",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @arjunastra_3 | Likes: 13 | Replies: 1 | Published: 2018-03-31T17:51:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "Garnier oil clear is best for me and individual suits different facewash according to their skin...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @deepeshsahu2906 | Likes: 0 | Replies: 0 | Published: 2018-04-11T08:49:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "ArjunAstra it's having high level of chemicals!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "I can prove it!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "Contact me on 7786040655",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @neetprepmedicos | Likes: 0 | Replies: 0 | Published: 2022-10-13T16:37:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "Your video really help us a lot ,thank you 💜",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @IronEraRestorations | Likes: 6 | Replies: 1 | Published: 2018-03-02T20:49:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "Use fresh tomato 🍅 on face instead of ( any face wash) eat🍽️ clean 🍎🥗 no junk 🍕 & drink lots of water 😉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @kajalsharma-ee3vk | Likes: 0 | Replies: 0 | Published: 2019-02-13T10:25:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "Thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01603",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @priyavadhana77 | Likes: 9 | Replies: 2 | Published: 2020-05-02T08:47:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "I used fair and lovely for just once. It made my skin so dry. I wouldn't recommend. It looks very harmful.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01606",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @noopurjainyoutubeblogger3868 | Likes: 0 | Replies: 0 | Published: 2020-07-27T10:13:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "Meri skin toh itni oily h.. ki 1 saal ho gya Fair & lovely use krte hue..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "But abhi tak oily hi h skin..🙄",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @priyavadhana77 | Likes: 0 | Replies: 0 | Published: 2020-07-27T10:38:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "@noopurjainyoutubeblogger3868 May be it depends on the skin type a lot. But better to avpid such chemical laden products.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @TrishaDutta | Likes: 10 | Replies: 1 | Published: 2018-12-28T13:36:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "Completely agree n can vouch for aroma magic products. The face wash, cleanser, toner, everything...suits my skin the most n I've had much clearer, brighter skin ever since I started using them",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "[COMMENT 501] Author: @mahinpathan1431 | Likes: 0 | Replies: 0 | Published: 2019-03-21T11:45:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "Trisha Dutta aroma magic face wash acha hai kya skin soft huti hai na",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "TPP-TeV0BDU",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 1104,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: TPP-TeV0BDU",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 501",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 1630 | Replies: 221 | Published: 2018-10-22T05:20:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Hello Friends! Lately, I have been posting regularly on Instagram. If you are interested to get daily updates about my personal fitness journey, behind the scenes of my YouTube videos, you can follow me there. Link: https://www.instagram.com/fittuber/",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "I wish you good health.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Fit Tuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 2] Author: @asmitatutorial1404 | Likes: 8 | Replies: 0 | Published: 2018-10-24T18:21:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Ahaglow face wash is it safe or harmful",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 3] Author: @rajuldhila2414 | Likes: 10 | Replies: 0 | Published: 2018-10-30T15:23:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Organic harvest uses 100% organic ingredients. It's an Indian brand and it's free from harmful chemicals. Please add this to ur list as well!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 4] Author: @josephadithya | Likes: 6 | Replies: 0 | Published: 2018-11-01T18:09:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Why the heck then patanjali is banned in many foreign countries",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 5] Author: @022emiliano | Likes: 3 | Replies: 0 | Published: 2018-11-05T07:57:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Fit Tuber Why are you so God given handsome, love that bears, please kiss me!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 6] Author: @022emiliano | Likes: 3 | Replies: 0 | Published: 2018-11-05T07:57:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Fit Tuber Please do a shirtless video!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 7] Author: @pinkshinycurtain | Likes: 5919 | Replies: 133 | Published: 2020-08-27T15:31:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "Before buying anything the first thing which I do is watch fit tuber 😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 8] Author: @heenarao014 | Likes: 26 | Replies: 0 | Published: 2020-08-30T14:03:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Hahahahaha me too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 9] Author: @subhi222 | Likes: 18 | Replies: 0 | Published: 2020-08-31T09:36:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Same here😁😁",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 10] Author: @Yashwant_Tripathi | Likes: 7 | Replies: 0 | Published: 2020-09-05T03:17:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "Me too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 11] Author: @amlinprinson5000 | Likes: 2 | Replies: 0 | Published: 2020-09-05T06:38:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Me too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 12] Author: @Sumanlata-it2ob | Likes: 2 | Replies: 0 | Published: 2020-09-05T10:05:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "Me too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 13] Author: @fakeeraa | Likes: 5926 | Replies: 34 | Published: 2018-06-09T15:59:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "I really want u to continue with ur worst to best series but be honest everytime",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "People trust u dont betraye them",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "Best of luck",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "[COMMENT 14] Author: @akshaytechhindi | Likes: 47 | Replies: 0 | Published: 2019-07-07T08:34:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "Not a paid review. But, he got a link.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 15] Author: @palashyadav4204 | Likes: 132 | Replies: 0 | Published: 2019-07-12T05:51:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "@akshaytechhindi dude.. it's not a big deal to put a link. He puts link for even sugar and salt for our comfort.. Watch his videos.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 16] Author: @aislinnli5355 | Likes: 38 | Replies: 0 | Published: 2019-08-12T09:30:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "@akshaytechhindi he does better than u tho. Next",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 17] Author: @Sai.Goud_ambati | Likes: 5 | Replies: 0 | Published: 2019-08-19T05:54:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "@aislinnli5355 yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 18] Author: @AjmalKhan-cp3vy | Likes: 18 | Replies: 0 | Published: 2019-09-08T06:11:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "@akshaytechhindi bro he gets 10% profit on mrp of product from amazon if he puts that link",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 19] Author: @RajatBapna | Likes: 579 | Replies: 0 | Published: 2020-11-22T14:31:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "Companies: our face wash is best.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "Fit tuber : Hold my video.😎",
+                "likes": null
+              },
+              {
+                "comment_id": "c01543",
+                "author": "",
+                "text": "Sir I'm using cetfair facewash if I change face wash suddenly and use aroma magic there is no side effect",
+                "likes": null
+              },
+              {
+                "comment_id": "c01545",
+                "author": "",
+                "text": "[COMMENT 480] Author: @yashgumber8144 | Likes: 0 | Replies: 0 | Published: 2019-01-14T09:28:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01546",
+                "author": "",
+                "text": "No",
+                "likes": null
+              },
+              {
+                "comment_id": "c01548",
+                "author": "",
+                "text": "[COMMENT 481] Author: @abhishekm3752 | Likes: 54 | Replies: 5 | Published: 2019-12-28T08:48:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01549",
+                "author": "",
+                "text": "What if they are actually using chemicals but mentioning entirely else on the label",
+                "likes": null
+              },
+              {
+                "comment_id": "c01551",
+                "author": "",
+                "text": "[COMMENT 482] Author: @ajayshinz8427 | Likes: 12 | Replies: 0 | Published: 2020-01-09T12:38:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01552",
+                "author": "",
+                "text": "They would never do that! If they gey caught they would have to pay a hefty amount as penalty n they wouldn't be able to manufacture any more products. So I don't think they would take that risk.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01554",
+                "author": "",
+                "text": "[COMMENT 483] Author: @LeMoN-vb4pe | Likes: 2 | Replies: 0 | Published: 2020-01-14T08:37:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01555",
+                "author": "",
+                "text": "@ajayshinz8427 yep",
+                "likes": null
+              },
+              {
+                "comment_id": "c01557",
+                "author": "",
+                "text": "[COMMENT 484] Author: @indusood7799 | Likes: 0 | Replies: 0 | Published: 2020-02-28T17:08:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01558",
+                "author": "",
+                "text": "It can't be done as it's illegal",
+                "likes": null
+              },
+              {
+                "comment_id": "c01560",
+                "author": "",
+                "text": "[COMMENT 485] Author: @manasvi2758 | Likes: 0 | Replies: 0 | Published: 2020-07-08T08:05:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01561",
+                "author": "",
+                "text": "No that can't be done ...that not allowed",
+                "likes": null
+              },
+              {
+                "comment_id": "c01563",
+                "author": "",
+                "text": "[COMMENT 486] Author: @akash4700 | Likes: 0 | Replies: 0 | Published: 2020-07-31T08:57:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01564",
+                "author": "",
+                "text": "It was tested on labs by govt officials",
+                "likes": null
+              },
+              {
+                "comment_id": "c01566",
+                "author": "",
+                "text": "[COMMENT 487] Author: @kirtisinghchauhan6459 | Likes: 0 | Replies: 0 | Published: 2021-08-11T07:29:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01567",
+                "author": "",
+                "text": "Thanks for all your videos....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01568",
+                "author": "",
+                "text": "They are answering my questions... What to use 😑",
+                "likes": null
+              },
+              {
+                "comment_id": "c01570",
+                "author": "",
+                "text": "[COMMENT 488] Author: @IndiaUnbound-123 | Likes: 20 | Replies: 2 | Published: 2018-03-02T20:42:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01571",
+                "author": "",
+                "text": "What about khadi facewashes are they good? Do a separate vdo on khadi n vadi herbals as they are affordable too",
+                "likes": null
+              },
+              {
+                "comment_id": "c01573",
+                "author": "",
+                "text": "[COMMENT 489] Author: @reachwintersun | Likes: 1 | Replies: 0 | Published: 2018-03-04T07:02:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "I have used khadi face washes, they are natural. But there are so many choices that you will have to buy a different one every time until you end up with the one that suits you the best. And it will take a LONG time since even the smaller ones last for about a month for one person and to properly check whether they suit you, you will need to use it for at least 2 months. Best of luck!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01576",
+                "author": "",
+                "text": "[COMMENT 490] Author: @IndiaUnbound-123 | Likes: 2 | Replies: 0 | Published: 2018-03-04T10:37:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "Nidhi Chauhan thank you. I will try som then.. most of the items I m using have loads of chemicals (pears, everyouth, Citra, ponds etc)😢",
+                "likes": null
+              },
+              {
+                "comment_id": "c01579",
+                "author": "",
+                "text": "[COMMENT 491] Author: @rajivdalal8557 | Likes: 11 | Replies: 0 | Published: 2018-09-19T11:26:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "Guys guys the actual truth is that alcohol, siliyic acid, BHP etc. are included in your face cleansers because there is a reason behind it for example if you have oily skin and then you are thinking that hydrating your skin may cause more pimples but this is wrong as pimples are caused by the excessive amount of sebum in our pores so hydrating your skin lessons the amount of SI been created so it's necessary to use this but you should definitely give a try to Dermatologist if you have more problem",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "Nothing is actually oil free there's a dolphin because the old doesn't include these is ingredients so do check",
+                "likes": null
+              },
+              {
+                "comment_id": "c01584",
+                "author": "",
+                "text": "[COMMENT 492] Author: @arjunastra_3 | Likes: 13 | Replies: 1 | Published: 2018-03-31T17:51:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "Garnier oil clear is best for me and individual suits different facewash according to their skin...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "[COMMENT 493] Author: @deepeshsahu2906 | Likes: 0 | Replies: 0 | Published: 2018-04-11T08:49:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "ArjunAstra it's having high level of chemicals!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "I can prove it!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "Contact me on 7786040655",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "[COMMENT 494] Author: @neetprepmedicos | Likes: 0 | Replies: 0 | Published: 2022-10-13T16:37:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "Your video really help us a lot ,thank you 💜",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "[COMMENT 495] Author: @IronEraRestorations | Likes: 6 | Replies: 1 | Published: 2018-03-02T20:49:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "Use fresh tomato 🍅 on face instead of ( any face wash) eat🍽️ clean 🍎🥗 no junk 🍕 & drink lots of water 😉",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "[COMMENT 496] Author: @kajalsharma-ee3vk | Likes: 0 | Replies: 0 | Published: 2019-02-13T10:25:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "Thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01603",
+                "author": "",
+                "text": "[COMMENT 497] Author: @priyavadhana77 | Likes: 9 | Replies: 2 | Published: 2020-05-02T08:47:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "I used fair and lovely for just once. It made my skin so dry. I wouldn't recommend. It looks very harmful.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01606",
+                "author": "",
+                "text": "[COMMENT 498] Author: @noopurjainyoutubeblogger3868 | Likes: 0 | Replies: 0 | Published: 2020-07-27T10:13:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "Meri skin toh itni oily h.. ki 1 saal ho gya Fair & lovely use krte hue..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "But abhi tak oily hi h skin..🙄",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "[COMMENT 499] Author: @priyavadhana77 | Likes: 0 | Replies: 0 | Published: 2020-07-27T10:38:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "@noopurjainyoutubeblogger3868 May be it depends on the skin type a lot. But better to avpid such chemical laden products.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "[COMMENT 500] Author: @TrishaDutta | Likes: 10 | Replies: 1 | Published: 2018-12-28T13:36:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "Completely agree n can vouch for aroma magic products. The face wash, cleanser, toner, everything...suits my skin the most n I've had much clearer, brighter skin ever since I started using them",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "[COMMENT 501] Author: @mahinpathan1431 | Likes: 0 | Replies: 0 | Published: 2019-03-21T11:45:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "Trisha Dutta aroma magic face wash acha hai kya skin soft huti hai na",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

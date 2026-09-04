@@ -1,0 +1,3031 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090717_510577",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090717_510577",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Phone addiction and digital wellbeing",
+      "batch_number": 29,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 29 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090717_510577",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090717_510577"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090717_510577",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Phone addiction and digital wellbeing",
+      "batch_number": 29,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "e07cedd1-ca24-4069-a126-d2a64b62982e",
+    "package_id": "vh_no_transcript_metadata_20260904_090717_510577",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "vuk3HX4HgwE"
+    ],
+    "evidence_grades": {
+      "vuk3HX4HgwE": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Phone addiction and digital wellbeing",
+      "batch_number": 29,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "94c6a4783da653490627ba349323bd08fb3aa247ef6b1eb4c8c1b82a08241ab2",
+      "prompt.json": "8d026f41589a0e37380d1001551909c0e444db4649a076a5ed452ea9a6d2f5ff",
+      "schema.json": "e417b6398e846e037f5318fdb8b9c43737b3defb86da859379b743c1416048c1"
+    },
+    "created_at": "2026-09-04 09:07:17",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "vuk3HX4HgwE",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=vuk3HX4HgwE",
+        "original_title": "Get Over Phone Addiction in 4 Simple Steps (Practical Solution)",
+        "clean_title": "Get Over Phone Addiction in 4 Simple Steps (Practical Solution)",
+        "channel": "Fit Tuber",
+        "upload_date": "2019-08-02",
+        "description": "How to get over Smart Phone Addiction Forever in 4 Simple Steps. Get over Mobile Phone Addiction. Cell Phone addiction and the ways to get over it.\n\nBUY Mamaearth - http://bit.ly/2SMz0Vy\n(Use Discount Code - FITTUBER21 to get 21% OFF on your order)\nBuy Mamaearth from Amazon - https://amzn.to/2GI548s\n\n0:01- How bad is smart phone addiction today?\n0:38 - What can this video benefit you to get over smart phone addiction?\n0:53 - What is the problem if we I use my phone for 5 hours a day?\n01:01 - What do studies on mobile phone addiction suggest?\n01:27 - How to get over smartphone addiction?\n01:39 - STEP 1 to get over smartphone addiction.\n02:40 - STEP 2 to get over smartphone addiction.\n04:00 - STEP 3 to get over smartphone addiction.\n05:02 - STEP 4 to get over addiction addiction.\n\nDownload A4 Size Posters and Phone Wallpapers -https://ibb.co/album/nRs01F\n\nPRODUCTS RELATED TO THE VIDEO (NOT SPONSORED)\nVintage Alarm Clock - https://amzn.to/2SQqxkc\nAlarm Clock (option 2) - https://amzn.to/2Y9tW3I\n\nMY FAVOURITE BOOKS\n\nA Thousand Splendid Suns (FICTION) - https://amzn.to/2Yxaf0U\nThe Wellness Sense (HEALTH) - https://amzn.to/2SPUdOE\nPower of Now (SPIRITUALITY) - https://amzn.to/312netg\nApprenticed to Himalayan Master (AUTOBIOGRAPHY) - https://amzn.to/2Yiy81i\nFreedom from the Known (SELF ENQUIRY) - https://amzn.to/2YuuTyT\nAutobiography of a Yogi (SPIRITUALITY) - https://amzn.to/2SS4zNY\nAshtang Hridyam (AYURVEDA) - https://amzn.to/318byFx\nEveryday Ayurveda (AYURVEDA) - https://amzn.to/2MmNQku\nRich Dad Poor Dad (FINANCE) - https://amzn.to/2YdJpQ9\nGaban by Munshi Premchand (HINDI) - https://amzn.to/2Yer4Cs\n\n06:32 - Video Partner - Mamaearth - An Indian brand that makes toxin free cosmetic products for men, women and babies.\nBUY Mamaearth - http://bit.ly/2SMz0Vy\n(Use Discount Code - FITTUBER21 to get 21% OFF on your order)\nBuy Mamaearth from Amazon - https://amzn.to/2YbaK5D\n\nBEST PRODUCTS FROM WORST TO BEST SERIES (My Recommendations) (NOT SPONSORED)\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nMORE USEFUL LINKS\n\nCopper Jug that I recommend -https://amzn.to/2Gxth3I\nBrass Kadhai that I recommend - https://amzn.to/2R48zfV\nWater bottle that I use - https://amzn.to/2KtbcBg\nGram Flour to prepare Chilla - https://amzn.to/2A7CZUA\nSemi Brown Rice that I use - https://amzn.to/2GxWGuF\nMulti grain Atta that I have used - https://amzn.to/2UTIwqR\nBhuna Chana - https://amzn.to/2tOFdVa\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON FIT TUBER\n\n5 Amazing Patanjali products you should try\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\n10 Toothpastes in India Ranked from Worst to Best?\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZgDcm-M&t=29s\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns9LDyHU\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVuQrz0oQ&t=294s\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/\n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 1174,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: vuk3HX4HgwE",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 4351 | Replies: 120 | Published: 2019-08-02T13:34:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "How many of you feel that you are addicted to your Phone? Leave a like. If liked, then take a challenge and share your progress with me on Instagram. I will repost it on my stories. Let's be smarter than our smartphone. My Instagram - https://www.instagram.com/fittuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "I wish you good health",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Fit Tuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 2] Author: @SlimShady-nx6mz | Likes: 21 | Replies: 0 | Published: 2019-08-02T13:58:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Please Heart my comment Vivek",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 3] Author: @sangeethajoshi4877 | Likes: 8 | Replies: 0 | Published: 2019-08-02T14:07:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Yes ,I too. I don't have Instagram account . As you mentioned it rightly ,will try to become smarter than our smartphones ,Mr.Vivek n thanks once again !!👍👌",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 4] Author: @anirudhbapusadguru4857 | Likes: 2 | Replies: 0 | Published: 2019-08-02T14:10:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Sir role model of mine",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 5] Author: @dangerman2850 | Likes: 4 | Replies: 0 | Published: 2019-08-02T14:13:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Pls make video on acupressure for hair growth pls pls pls",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 6] Author: @pinkys12 | Likes: 0 | Replies: 0 | Published: 2019-08-02T14:19:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "How to get rid of hyper pigmentation??",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 7] Author: @FRehan-pe8ww | Likes: 13750 | Replies: 510 | Published: 2019-08-21T13:26:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "I uninstalled Facebook , Instagram and snapchat ,But now I'm addicted to YouTube",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 8] Author: @creamypandacakes9215 | Likes: 340 | Replies: 0 | Published: 2019-08-22T15:31:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Me tooo",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 9] Author: @mohammad4685 | Likes: 192 | Replies: 0 | Published: 2019-08-23T16:52:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Same",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 10] Author: @chanchalpurwar2952 | Likes: 130 | Replies: 0 | Published: 2019-08-24T06:22:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "Mee too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 11] Author: @AbhishekTiwari-fq7fp | Likes: 372 | Replies: 0 | Published: 2019-08-24T06:34:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Yes same I'm also uninstall all or these apps evem whatsapp but now I west more then 5+hours in YouTube",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 12] Author: @popatmohabat7849 | Likes: 113 | Replies: 0 | Published: 2019-08-25T07:48:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "Tera kuch nai ho sakta",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 13] Author: @shristisingh1808 | Likes: 3912 | Replies: 168 | Published: 2020-12-01T10:05:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "I was not addicted to phone but this lockdown made me addicted to phone I think most of the people have the same story.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "Guys, I read the comments and I feel like phone has became a drug now",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Nevertheless, we would now stay away from phone and control ourselves as much as possible",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "Fighting 🔥",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 14] Author: @sanjanakommera7608 | Likes: 16 | Replies: 0 | Published: 2021-01-28T11:41:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "Yeah true 😔☹😟😭",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 15] Author: @suryakalaturaga414 | Likes: 7 | Replies: 0 | Published: 2021-01-30T05:40:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 16] Author: @SohaM-7 | Likes: 3 | Replies: 0 | Published: 2021-02-01T15:51:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "Yesss",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "Same with me",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "[COMMENT 17] Author: @tannusharma1927 | Likes: 1 | Replies: 0 | Published: 2021-02-02T10:35:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "@True BLINK same here 🙃",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 18] Author: @familytime8994 | Likes: 1 | Replies: 0 | Published: 2021-02-03T11:11:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "Yah same here!!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00072",
+              "author": "",
+              "text": "[COMMENT 19] Author: @himanigautam3995 | Likes: 1317 | Replies: 36 | Published: 2020-03-09T05:25:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "[COMMENT 479] Author: @vaideej9462 | Likes: 0 | Replies: 0 | Published: 2021-01-26T04:50:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "Then how we can watch your videos 😄.. really useful video bro keep it up it works if we compell ourselves",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "[COMMENT 480] Author: @Tarun-n9d | Likes: 0 | Replies: 0 | Published: 2024-01-21T15:34:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "I totally agree with all the facts u showed at the startin.... 😢😢 E1 I'm a part of it 😢😢 from based posture to poor sleep quality, evrythn was so ri8 😢😢",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "[COMMENT 481] Author: @kittyarts3548 | Likes: 0 | Replies: 0 | Published: 2021-04-19T01:30:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "Thanks so much you replay inspiration Me a lot... Thanks 😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "[COMMENT 482] Author: @himanshuagrawal792 | Likes: 1 | Replies: 0 | Published: 2021-04-24T13:22:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01636",
+              "author": "",
+              "text": "It is the best video I have seen on YouTube thanks sir i really salute your hard work thanks a lot👌👌",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "[COMMENT 483] Author: @yadunath3504 | Likes: 1 | Replies: 0 | Published: 2020-10-29T11:26:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "Fit tuber vivek sir I watch your videos for learning English.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "[COMMENT 484] Author: @foxylilween1730 | Likes: 0 | Replies: 0 | Published: 2021-08-20T06:36:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "Thanks a lot may God bless you with your life💗💗💗",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "[COMMENT 485] Author: @AcsahJohn | Likes: 1 | Replies: 0 | Published: 2020-09-30T03:56:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "How to get control over our mind.....need a video on this topic.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "[COMMENT 486] Author: @arnavrock1320 | Likes: 0 | Replies: 0 | Published: 2020-10-19T15:17:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "Fit tuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c01649",
+              "author": "",
+              "text": "Thanks a lot for this video..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "Amazing work..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "Please keep it up",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 487] Author: @pravinjadhav2764 | Likes: 0 | Replies: 0 | Published: 2021-01-09T19:23:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Thanks it helped me too much to get rid out of mobile addiction.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "[COMMENT 488] Author: @shailxverse | Likes: 2 | Replies: 0 | Published: 2020-09-26T11:21:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "Thank you so much for the grey scale mode.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "[COMMENT 489] Author: @37.sourjyaghosh67 | Likes: 0 | Replies: 0 | Published: 2021-04-15T10:44:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "Hi fit tuber thanks for giving us such information... THANK YOU !!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01662",
+              "author": "",
+              "text": "[COMMENT 490] Author: @anukumari139 | Likes: 0 | Replies: 0 | Published: 2022-04-01T15:34:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "I have deleted all the social media platforms except ,.. YouTube and what's aap ...and now I use my phone for gaining alot of knowledge 🙂",
+              "likes": null
+            },
+            {
+              "comment_id": "c01665",
+              "author": "",
+              "text": "[COMMENT 491] Author: @nikitamalviya007 | Likes: 0 | Replies: 0 | Published: 2020-11-17T12:16:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "The last has proved very useful to me.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01667",
+              "author": "",
+              "text": "I always try to reduce the screen time every week after a weekly notification comes to me on sunday evening",
+              "likes": null
+            },
+            {
+              "comment_id": "c01668",
+              "author": "",
+              "text": "\"U have used your phone x% less than laat week\"",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "This is a great motivator....👍🏻👍🏻",
+              "likes": null
+            },
+            {
+              "comment_id": "c01671",
+              "author": "",
+              "text": "[COMMENT 492] Author: @craveleaks8102 | Likes: 0 | Replies: 0 | Published: 2021-04-25T13:14:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "Brillant video. Thanks this will help many people.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01674",
+              "author": "",
+              "text": "[COMMENT 493] Author: @komalsinha3379 | Likes: 1 | Replies: 0 | Published: 2021-06-14T18:55:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "Lots of respect for you vivek ... Keep going with your ur good work 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01677",
+              "author": "",
+              "text": "[COMMENT 494] Author: @Riddlez-v8f | Likes: 0 | Replies: 0 | Published: 2021-04-29T12:09:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "I am a 12 year boy and I am addictave to the phone after seeeing this video its good",
+              "likes": null
+            },
+            {
+              "comment_id": "c01680",
+              "author": "",
+              "text": "[COMMENT 495] Author: @Queenofriders | Likes: 1 | Replies: 0 | Published: 2021-07-03T14:33:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "Good video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01683",
+              "author": "",
+              "text": "[COMMENT 496] Author: @nancythakur4185 | Likes: 0 | Replies: 0 | Published: 2022-08-20T06:51:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "Thank you very much 💯....this works like magic.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01686",
+              "author": "",
+              "text": "[COMMENT 497] Author: @comeon6867 | Likes: 0 | Replies: 0 | Published: 2020-10-01T11:59:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01687",
+              "author": "",
+              "text": "Very true.! Mobile is my biggest addiction but many people use to addicted with masturbation please post any video regarding it",
+              "likes": null
+            },
+            {
+              "comment_id": "c01689",
+              "author": "",
+              "text": "[COMMENT 498] Author: @john_nissi | Likes: 0 | Replies: 0 | Published: 2021-08-19T06:32:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01690",
+              "author": "",
+              "text": "Very good steps to remove from addiction of phone",
+              "likes": null
+            },
+            {
+              "comment_id": "c01692",
+              "author": "",
+              "text": "[COMMENT 499] Author: @shri1125 | Likes: 0 | Replies: 0 | Published: 2020-12-19T02:19:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01693",
+              "author": "",
+              "text": "Really very useful info. I was looking for this👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01695",
+              "author": "",
+              "text": "[COMMENT 500] Author: @ansumangoswami4865 | Likes: 1 | Replies: 0 | Published: 2021-03-24T03:48:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01696",
+              "author": "",
+              "text": "Fit tuber's one of the most lovable video",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "vuk3HX4HgwE",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Get Over Phone Addiction in 4 Simple Steps (Practical Solution)\\Get Over Phone Addiction in 4 Simple Steps (Practical Solution).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Get Over Phone Addiction in 4 Simple Steps (Practical Solution)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\vuk3HX4HgwE",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "vuk3HX4HgwE",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 1174,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: vuk3HX4HgwE",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 4351 | Replies: 120 | Published: 2019-08-02T13:34:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "How many of you feel that you are addicted to your Phone? Leave a like. If liked, then take a challenge and share your progress with me on Instagram. I will repost it on my stories. Let's be smarter than our smartphone. My Instagram - https://www.instagram.com/fittuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "I wish you good health",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Fit Tuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @SlimShady-nx6mz | Likes: 21 | Replies: 0 | Published: 2019-08-02T13:58:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Please Heart my comment Vivek",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @sangeethajoshi4877 | Likes: 8 | Replies: 0 | Published: 2019-08-02T14:07:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Yes ,I too. I don't have Instagram account . As you mentioned it rightly ,will try to become smarter than our smartphones ,Mr.Vivek n thanks once again !!👍👌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @anirudhbapusadguru4857 | Likes: 2 | Replies: 0 | Published: 2019-08-02T14:10:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Sir role model of mine",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @dangerman2850 | Likes: 4 | Replies: 0 | Published: 2019-08-02T14:13:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Pls make video on acupressure for hair growth pls pls pls",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @pinkys12 | Likes: 0 | Replies: 0 | Published: 2019-08-02T14:19:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "How to get rid of hyper pigmentation??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @FRehan-pe8ww | Likes: 13750 | Replies: 510 | Published: 2019-08-21T13:26:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "I uninstalled Facebook , Instagram and snapchat ,But now I'm addicted to YouTube",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @creamypandacakes9215 | Likes: 340 | Replies: 0 | Published: 2019-08-22T15:31:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Me tooo",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @mohammad4685 | Likes: 192 | Replies: 0 | Published: 2019-08-23T16:52:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Same",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @chanchalpurwar2952 | Likes: 130 | Replies: 0 | Published: 2019-08-24T06:22:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "Mee too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @AbhishekTiwari-fq7fp | Likes: 372 | Replies: 0 | Published: 2019-08-24T06:34:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Yes same I'm also uninstall all or these apps evem whatsapp but now I west more then 5+hours in YouTube",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @popatmohabat7849 | Likes: 113 | Replies: 0 | Published: 2019-08-25T07:48:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "Tera kuch nai ho sakta",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @shristisingh1808 | Likes: 3912 | Replies: 168 | Published: 2020-12-01T10:05:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "I was not addicted to phone but this lockdown made me addicted to phone I think most of the people have the same story.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "Guys, I read the comments and I feel like phone has became a drug now",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Nevertheless, we would now stay away from phone and control ourselves as much as possible",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "Fighting 🔥",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @sanjanakommera7608 | Likes: 16 | Replies: 0 | Published: 2021-01-28T11:41:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "Yeah true 😔☹😟😭",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @suryakalaturaga414 | Likes: 7 | Replies: 0 | Published: 2021-01-30T05:40:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @SohaM-7 | Likes: 3 | Replies: 0 | Published: 2021-02-01T15:51:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "Yesss",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "Same with me",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @tannusharma1927 | Likes: 1 | Replies: 0 | Published: 2021-02-02T10:35:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "@True BLINK same here 🙃",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @familytime8994 | Likes: 1 | Replies: 0 | Published: 2021-02-03T11:11:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "Yah same here!!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00072",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @himanigautam3995 | Likes: 1317 | Replies: 36 | Published: 2020-03-09T05:25:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @vaideej9462 | Likes: 0 | Replies: 0 | Published: 2021-01-26T04:50:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "Then how we can watch your videos 😄.. really useful video bro keep it up it works if we compell ourselves",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @Tarun-n9d | Likes: 0 | Replies: 0 | Published: 2024-01-21T15:34:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "I totally agree with all the facts u showed at the startin.... 😢😢 E1 I'm a part of it 😢😢 from based posture to poor sleep quality, evrythn was so ri8 😢😢",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @kittyarts3548 | Likes: 0 | Replies: 0 | Published: 2021-04-19T01:30:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "Thanks so much you replay inspiration Me a lot... Thanks 😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @himanshuagrawal792 | Likes: 1 | Replies: 0 | Published: 2021-04-24T13:22:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01636",
+                  "author": "",
+                  "text": "It is the best video I have seen on YouTube thanks sir i really salute your hard work thanks a lot👌👌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @yadunath3504 | Likes: 1 | Replies: 0 | Published: 2020-10-29T11:26:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "Fit tuber vivek sir I watch your videos for learning English.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @foxylilween1730 | Likes: 0 | Replies: 0 | Published: 2021-08-20T06:36:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "Thanks a lot may God bless you with your life💗💗💗",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @AcsahJohn | Likes: 1 | Replies: 0 | Published: 2020-09-30T03:56:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "How to get control over our mind.....need a video on this topic.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @arnavrock1320 | Likes: 0 | Replies: 0 | Published: 2020-10-19T15:17:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "Fit tuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01649",
+                  "author": "",
+                  "text": "Thanks a lot for this video..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "Amazing work..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "Please keep it up",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @pravinjadhav2764 | Likes: 0 | Replies: 0 | Published: 2021-01-09T19:23:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Thanks it helped me too much to get rid out of mobile addiction.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @shailxverse | Likes: 2 | Replies: 0 | Published: 2020-09-26T11:21:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "Thank you so much for the grey scale mode.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @37.sourjyaghosh67 | Likes: 0 | Replies: 0 | Published: 2021-04-15T10:44:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "Hi fit tuber thanks for giving us such information... THANK YOU !!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01662",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @anukumari139 | Likes: 0 | Replies: 0 | Published: 2022-04-01T15:34:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "I have deleted all the social media platforms except ,.. YouTube and what's aap ...and now I use my phone for gaining alot of knowledge 🙂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01665",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @nikitamalviya007 | Likes: 0 | Replies: 0 | Published: 2020-11-17T12:16:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "The last has proved very useful to me.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01667",
+                  "author": "",
+                  "text": "I always try to reduce the screen time every week after a weekly notification comes to me on sunday evening",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01668",
+                  "author": "",
+                  "text": "\"U have used your phone x% less than laat week\"",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "This is a great motivator....👍🏻👍🏻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01671",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @craveleaks8102 | Likes: 0 | Replies: 0 | Published: 2021-04-25T13:14:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "Brillant video. Thanks this will help many people.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01674",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @komalsinha3379 | Likes: 1 | Replies: 0 | Published: 2021-06-14T18:55:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "Lots of respect for you vivek ... Keep going with your ur good work 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01677",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @Riddlez-v8f | Likes: 0 | Replies: 0 | Published: 2021-04-29T12:09:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "I am a 12 year boy and I am addictave to the phone after seeeing this video its good",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01680",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @Queenofriders | Likes: 1 | Replies: 0 | Published: 2021-07-03T14:33:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "Good video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01683",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @nancythakur4185 | Likes: 0 | Replies: 0 | Published: 2022-08-20T06:51:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "Thank you very much 💯....this works like magic.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01686",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @comeon6867 | Likes: 0 | Replies: 0 | Published: 2020-10-01T11:59:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01687",
+                  "author": "",
+                  "text": "Very true.! Mobile is my biggest addiction but many people use to addicted with masturbation please post any video regarding it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01689",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @john_nissi | Likes: 0 | Replies: 0 | Published: 2021-08-19T06:32:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01690",
+                  "author": "",
+                  "text": "Very good steps to remove from addiction of phone",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01692",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @shri1125 | Likes: 0 | Replies: 0 | Published: 2020-12-19T02:19:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01693",
+                  "author": "",
+                  "text": "Really very useful info. I was looking for this👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01695",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @ansumangoswami4865 | Likes: 1 | Replies: 0 | Published: 2021-03-24T03:48:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01696",
+                  "author": "",
+                  "text": "Fit tuber's one of the most lovable video",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "vuk3HX4HgwE",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 1174,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: vuk3HX4HgwE",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 4351 | Replies: 120 | Published: 2019-08-02T13:34:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "How many of you feel that you are addicted to your Phone? Leave a like. If liked, then take a challenge and share your progress with me on Instagram. I will repost it on my stories. Let's be smarter than our smartphone. My Instagram - https://www.instagram.com/fittuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "I wish you good health",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Fit Tuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 2] Author: @SlimShady-nx6mz | Likes: 21 | Replies: 0 | Published: 2019-08-02T13:58:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Please Heart my comment Vivek",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 3] Author: @sangeethajoshi4877 | Likes: 8 | Replies: 0 | Published: 2019-08-02T14:07:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Yes ,I too. I don't have Instagram account . As you mentioned it rightly ,will try to become smarter than our smartphones ,Mr.Vivek n thanks once again !!👍👌",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 4] Author: @anirudhbapusadguru4857 | Likes: 2 | Replies: 0 | Published: 2019-08-02T14:10:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Sir role model of mine",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 5] Author: @dangerman2850 | Likes: 4 | Replies: 0 | Published: 2019-08-02T14:13:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Pls make video on acupressure for hair growth pls pls pls",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 6] Author: @pinkys12 | Likes: 0 | Replies: 0 | Published: 2019-08-02T14:19:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "How to get rid of hyper pigmentation??",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 7] Author: @FRehan-pe8ww | Likes: 13750 | Replies: 510 | Published: 2019-08-21T13:26:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "I uninstalled Facebook , Instagram and snapchat ,But now I'm addicted to YouTube",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 8] Author: @creamypandacakes9215 | Likes: 340 | Replies: 0 | Published: 2019-08-22T15:31:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Me tooo",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 9] Author: @mohammad4685 | Likes: 192 | Replies: 0 | Published: 2019-08-23T16:52:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Same",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 10] Author: @chanchalpurwar2952 | Likes: 130 | Replies: 0 | Published: 2019-08-24T06:22:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "Mee too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 11] Author: @AbhishekTiwari-fq7fp | Likes: 372 | Replies: 0 | Published: 2019-08-24T06:34:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Yes same I'm also uninstall all or these apps evem whatsapp but now I west more then 5+hours in YouTube",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 12] Author: @popatmohabat7849 | Likes: 113 | Replies: 0 | Published: 2019-08-25T07:48:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "Tera kuch nai ho sakta",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 13] Author: @shristisingh1808 | Likes: 3912 | Replies: 168 | Published: 2020-12-01T10:05:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "I was not addicted to phone but this lockdown made me addicted to phone I think most of the people have the same story.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "Guys, I read the comments and I feel like phone has became a drug now",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Nevertheless, we would now stay away from phone and control ourselves as much as possible",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "Fighting 🔥",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 14] Author: @sanjanakommera7608 | Likes: 16 | Replies: 0 | Published: 2021-01-28T11:41:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "Yeah true 😔☹😟😭",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 15] Author: @suryakalaturaga414 | Likes: 7 | Replies: 0 | Published: 2021-01-30T05:40:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 16] Author: @SohaM-7 | Likes: 3 | Replies: 0 | Published: 2021-02-01T15:51:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "Yesss",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "Same with me",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "[COMMENT 17] Author: @tannusharma1927 | Likes: 1 | Replies: 0 | Published: 2021-02-02T10:35:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "@True BLINK same here 🙃",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 18] Author: @familytime8994 | Likes: 1 | Replies: 0 | Published: 2021-02-03T11:11:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "Yah same here!!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00072",
+                "author": "",
+                "text": "[COMMENT 19] Author: @himanigautam3995 | Likes: 1317 | Replies: 36 | Published: 2020-03-09T05:25:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "[COMMENT 479] Author: @vaideej9462 | Likes: 0 | Replies: 0 | Published: 2021-01-26T04:50:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "Then how we can watch your videos 😄.. really useful video bro keep it up it works if we compell ourselves",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "[COMMENT 480] Author: @Tarun-n9d | Likes: 0 | Replies: 0 | Published: 2024-01-21T15:34:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "I totally agree with all the facts u showed at the startin.... 😢😢 E1 I'm a part of it 😢😢 from based posture to poor sleep quality, evrythn was so ri8 😢😢",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "[COMMENT 481] Author: @kittyarts3548 | Likes: 0 | Replies: 0 | Published: 2021-04-19T01:30:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "Thanks so much you replay inspiration Me a lot... Thanks 😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "[COMMENT 482] Author: @himanshuagrawal792 | Likes: 1 | Replies: 0 | Published: 2021-04-24T13:22:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01636",
+                "author": "",
+                "text": "It is the best video I have seen on YouTube thanks sir i really salute your hard work thanks a lot👌👌",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "[COMMENT 483] Author: @yadunath3504 | Likes: 1 | Replies: 0 | Published: 2020-10-29T11:26:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "Fit tuber vivek sir I watch your videos for learning English.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "[COMMENT 484] Author: @foxylilween1730 | Likes: 0 | Replies: 0 | Published: 2021-08-20T06:36:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "Thanks a lot may God bless you with your life💗💗💗",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "[COMMENT 485] Author: @AcsahJohn | Likes: 1 | Replies: 0 | Published: 2020-09-30T03:56:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "How to get control over our mind.....need a video on this topic.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "[COMMENT 486] Author: @arnavrock1320 | Likes: 0 | Replies: 0 | Published: 2020-10-19T15:17:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "Fit tuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c01649",
+                "author": "",
+                "text": "Thanks a lot for this video..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "Amazing work..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "Please keep it up",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 487] Author: @pravinjadhav2764 | Likes: 0 | Replies: 0 | Published: 2021-01-09T19:23:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Thanks it helped me too much to get rid out of mobile addiction.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "[COMMENT 488] Author: @shailxverse | Likes: 2 | Replies: 0 | Published: 2020-09-26T11:21:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "Thank you so much for the grey scale mode.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "[COMMENT 489] Author: @37.sourjyaghosh67 | Likes: 0 | Replies: 0 | Published: 2021-04-15T10:44:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "Hi fit tuber thanks for giving us such information... THANK YOU !!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01662",
+                "author": "",
+                "text": "[COMMENT 490] Author: @anukumari139 | Likes: 0 | Replies: 0 | Published: 2022-04-01T15:34:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "I have deleted all the social media platforms except ,.. YouTube and what's aap ...and now I use my phone for gaining alot of knowledge 🙂",
+                "likes": null
+              },
+              {
+                "comment_id": "c01665",
+                "author": "",
+                "text": "[COMMENT 491] Author: @nikitamalviya007 | Likes: 0 | Replies: 0 | Published: 2020-11-17T12:16:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "The last has proved very useful to me.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01667",
+                "author": "",
+                "text": "I always try to reduce the screen time every week after a weekly notification comes to me on sunday evening",
+                "likes": null
+              },
+              {
+                "comment_id": "c01668",
+                "author": "",
+                "text": "\"U have used your phone x% less than laat week\"",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "This is a great motivator....👍🏻👍🏻",
+                "likes": null
+              },
+              {
+                "comment_id": "c01671",
+                "author": "",
+                "text": "[COMMENT 492] Author: @craveleaks8102 | Likes: 0 | Replies: 0 | Published: 2021-04-25T13:14:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "Brillant video. Thanks this will help many people.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01674",
+                "author": "",
+                "text": "[COMMENT 493] Author: @komalsinha3379 | Likes: 1 | Replies: 0 | Published: 2021-06-14T18:55:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "Lots of respect for you vivek ... Keep going with your ur good work 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01677",
+                "author": "",
+                "text": "[COMMENT 494] Author: @Riddlez-v8f | Likes: 0 | Replies: 0 | Published: 2021-04-29T12:09:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "I am a 12 year boy and I am addictave to the phone after seeeing this video its good",
+                "likes": null
+              },
+              {
+                "comment_id": "c01680",
+                "author": "",
+                "text": "[COMMENT 495] Author: @Queenofriders | Likes: 1 | Replies: 0 | Published: 2021-07-03T14:33:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "Good video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01683",
+                "author": "",
+                "text": "[COMMENT 496] Author: @nancythakur4185 | Likes: 0 | Replies: 0 | Published: 2022-08-20T06:51:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "Thank you very much 💯....this works like magic.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01686",
+                "author": "",
+                "text": "[COMMENT 497] Author: @comeon6867 | Likes: 0 | Replies: 0 | Published: 2020-10-01T11:59:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01687",
+                "author": "",
+                "text": "Very true.! Mobile is my biggest addiction but many people use to addicted with masturbation please post any video regarding it",
+                "likes": null
+              },
+              {
+                "comment_id": "c01689",
+                "author": "",
+                "text": "[COMMENT 498] Author: @john_nissi | Likes: 0 | Replies: 0 | Published: 2021-08-19T06:32:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01690",
+                "author": "",
+                "text": "Very good steps to remove from addiction of phone",
+                "likes": null
+              },
+              {
+                "comment_id": "c01692",
+                "author": "",
+                "text": "[COMMENT 499] Author: @shri1125 | Likes: 0 | Replies: 0 | Published: 2020-12-19T02:19:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01693",
+                "author": "",
+                "text": "Really very useful info. I was looking for this👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01695",
+                "author": "",
+                "text": "[COMMENT 500] Author: @ansumangoswami4865 | Likes: 1 | Replies: 0 | Published: 2021-03-24T03:48:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01696",
+                "author": "",
+                "text": "Fit tuber's one of the most lovable video",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

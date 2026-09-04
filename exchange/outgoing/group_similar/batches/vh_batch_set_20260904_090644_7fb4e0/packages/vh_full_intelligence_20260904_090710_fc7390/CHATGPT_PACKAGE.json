@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090710_fc7390",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "FULL_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090710_fc7390",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Sunscreen, tanning, and sun protection",
+      "batch_number": 64,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "batch_instruction": "This is independently importable batch 64 of 71 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260904_090710_fc7390",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260904_090710_fc7390"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090710_fc7390",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Sunscreen, tanning, and sun protection",
+      "batch_number": 64,
+      "batch_total": 71,
+      "batch_size": 12
+    }
+  },
+  "manifest": {
+    "request_id": "3e3bdbde-e08e-442c-b765-c083412024d3",
+    "package_id": "vh_full_intelligence_20260904_090710_fc7390",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "9g3cF-DIY_c"
+    ],
+    "evidence_grades": {
+      "9g3cF-DIY_c": "B"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Sunscreen, tanning, and sun protection",
+      "batch_number": 64,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "hashes": {
+      "evidence.json": "e6fb862614341635ee4fd5b656cb694732b5e8eb811b011163e21b553b503fb8",
+      "prompt.json": "f96cfbe6e351633d80e5fa57c6af316f7fdf40f08e104181d919bf0090e1691b",
+      "schema.json": "9034ec55045a95db44a9d45c96296b8f53a4e16098b2940650b2bc03abcfb98f"
+    },
+    "created_at": "2026-09-04 09:07:10",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "9g3cF-DIY_c",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=9g3cF-DIY_c",
+        "original_title": "Most Effective Sun Tan Removal Home Remedy (My De Tan Secret)",
+        "clean_title": "Most Effective Sun Tan Removal Home Remedy (My De Tan Secret)",
+        "channel": "Fit Tuber",
+        "upload_date": "2019-04-05",
+        "description": "Sun tan removal home remedy (Most effective sun tan removal home remedy) How to remove sun tan instantly.\n\nIf you want to de tan your skin and get your original skin tone back then keep watching this video as in this video, I am going to share with you one simple but highly effective home remedy which just works like magic. Just one wash and your tan will reduce. I can bet on it. \n\n0:19 - Why does our body tan?\n0:34 - How important is fairness?\n0:47 - The most effective sun tan removal home remedy (my detan secret)\n02:41 - The truth about fairness creams in Indian market\n03:51 - The best time to apply this sun tan home remedy\n\nYOU MAY NEED\nGram Flour - https://amzn.to/2CIohVu\nKasthuri Turmeric (Recommended) - https://amzn.to/2CJaIFu\nSandalwood Powder - https://amzn.to/2HP19J6\nHoney - https://amzn.to/2HOWYwS\nRose water - https://amzn.to/2CLG1Q2\n\nBEST PRODUCTS FROM WORST TO BEST SERIES (My Recommendations) (NOT SPONSORED)\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nMORE USEFUL LINKS\n\nCopper Jug that I recommend -https://amzn.to/2Gxth3I\nBrass Kadhai that I recommend - https://amzn.to/2R48zfV\nWater bottle that I use - https://amzn.to/2KtbcBg\nGram Flour to prepare Chilla - https://amzn.to/2A7CZUA\nSemi Brown Rice that I use - https://amzn.to/2GxWGuF\nMulti grain Atta that I have used - https://amzn.to/2UTIwqR\nBhuna Chana - https://amzn.to/2tOFdVa\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON FIT TUBER\n\n5 Amazing Patanjali products you should try\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\n10 Toothpastes in India Ranked from Worst to Best?\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZgDcm-M&t=29s\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns9LDyHU\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVuQrz0oQ&t=294s\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/\n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "medium",
+          "completeness": "usable",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] If you want to detan your skin and get your original skin tone back, then keep watching this video as today I'm going to share with you a very simple but highly effective home remedy which just works like magic. Just one wash and your tan will reduce. I can bet on it. So, let's get started. [00:00:17] Hello friends, welcome to Fit Tuber. Tanning is your body's natural shield against the ultraviolet rays of the sun which can damage the skin tissue in the form of a sunburn. Excessive exposure to the UV rays of the sun causes the skin cells to produce a pigment called melanin which causes a tan. Well, it's [00:00:34] not about fair skin or dark skin. It's about getting your original skin tone back. It's about removing the dead skin layer that gets accumulated on the skin due to excessive [music] sun exposure. It's about getting healthy and glowing skin. So, let me share with you one easy tried and tested remedy by [00:00:49] me. A homemade face mask which naturally deans your skin in just one B. To start with, take 1 tbsp of gram flour. Graram flour or basin has been used for danning and brightening one's skin tone for centuries and its super cleansing properties leave your face looking its [00:01:06] best [music] ever. Mix 1 tbsp of kurd in it. Enriched with lactic acid, kurd is a natural bleaching agent to fight sunt tan quickly. Next ingredient that goes in is a pinch of turmeric. Known for its anti-aging properties, turmeric repairs the damaged skin and lightens the skin [00:01:23] tone. Add one teaspoon of honey to it. Honey has the ability to open up the pores and unclog them of the dead skin cells. Full of antioxidants, a natural moisturizer and soother, honey gives a glow to the [music] skin. You can use any honey for this. Next goes half [00:01:39] teaspoon of pure sandalwood powder. The natural oils present in sandalwood effectively helps get rid of suntan. Sandalwood powder can be easily purchased from a grocery shop. For your convenience, I have even linked it down in the description box. Last but not the least, we will add rose water just to [00:01:56] make it a pastel-like consistency. Rose water due to its estringent properties helps clean pores and tone the skin. Once you have put all the ingredients in the bowl, mix them thoroughly to make a smooth pastel-like consistency. Your magic dan face pack is ready. Using your [00:02:12] clean hands, apply the mixture on the face and other tan parts of the body. While applying, gently massage with your fingers in a circular motion for about a minute or two. Once the paste is evenly masked, let it sit and [music] do its action for about 20 to 30 minutes. [00:02:27] Finally, wash it off using running cool tap water. [music] In just one wash, you will see a significant reduction in tanning. Really, do not just believe me. Try it out for yourself and then come [music] back and comment below your amazing results. No D10 or fairness creams [music] can ever give you the results [00:02:43] what this face pack will give you. What most companies do is that they use one or two natural ingredients and along with that they add a lot of harsh chemicals. Do not waste your money on such creams and stick to [music] basics. Since childhood, if there has been any rejime that I follow to detan my skin, [00:02:59] it's [music] this. It just works like magic. Now you need not avoid the sun, go out and play, enjoy the beach side. Basically, enjoy the sun because now you know that tanning is not more a problem for you. As for this pack, just once try it out for my sake and don't forget to [00:03:15] come back and share your results in the comment section. I'm very confident that this pack will do wonders to your skin. It has [music] no side effects whatsoever and can be a part of your daily beauty regime. It can be [music] applied at any time of the day. Although if you ask me, it is best to apply it [00:03:31] half an hour before going [music] for bath in morning. It doesn't matter if you are dark or fair. If your skin is healthy and you wear a smile on it, it will glow naturally. So friends, that's all for this video. I [music] hope you found it to be helpful. If yes, then please show me your support by giving this video a big thumbs up. Try this [00:03:47] home remedy. Take your before and after picture and post it on Instagram. Don't forget to tag me. I'll repost it. What next would you like to see? A home remedy on pimples, dark circles or hair fall. Comment below. Please do remember to subscribe to my channel. Hit that bell icon so that you never miss a video [00:04:03] from me. My name is Vive. I thank you so much for watching."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1166,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: 9g3cF-DIY_c",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 1979 | Replies: 500 | Published: 2019-04-05T13:40:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "What next? A video on Pimples, Dark Circles or Hair Fall? Also, try this remedy and share your results through an Insta story. Don't forget to tag me. My Instagram - https://www.instagram.com/fittuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @bedprakashbehera6564 | Likes: 74 | Replies: 0 | Published: 2019-04-05T13:41:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Dark circles",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @coco_catitude | Likes: 91 | Replies: 0 | Published: 2019-04-05T13:41:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Hairfall",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @advzanaalif1966 | Likes: 71 | Replies: 0 | Published: 2019-04-05T13:42:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Acne scars on face😓",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @jamunak616 | Likes: 37 | Replies: 0 | Published: 2019-04-05T13:42:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Dark circles",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @nivinpauli6012 | Likes: 22 | Replies: 0 | Published: 2019-04-05T13:42:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Always thumps up👍🏻 for your video.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00026",
+              "author": "",
+              "text": "My suggestions:",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "1.About beer, wine;merits & demerits of consumption. Safety level of consumption.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "2.Types of rice, how to buy good quality of rice",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "3.Types of milk/milk packets",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "[COMMENT 7] Author: @yungchangsta | Likes: 7500 | Replies: 39 | Published: 2020-11-06T12:43:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "I swear every guide on YouTube is made by an Indian guy. Which I find cool because it shows how chill Indians are. Love from Philippines",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "[COMMENT 8] Author: @harshvardhan_aryaa | Likes: 395 | Replies: 0 | Published: 2020-11-07T11:15:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "Still indians get so much hate on internet just cuz of PewDiePie",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "[COMMENT 9] Author: @shikherjaitly353 | Likes: 41 | Replies: 0 | Published: 2020-11-15T10:07:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "@harshvardhan_aryaa lmao",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "[COMMENT 10] Author: @harishanjali9350 | Likes: 16 | Replies: 0 | Published: 2020-11-17T08:26:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "@harshvardhan_aryaa 👌",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "[COMMENT 11] Author: @Rippedskull | Likes: 120 | Replies: 0 | Published: 2020-11-21T14:40:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "@harshvardhan_aryaa There are fools everywhere. Though he opposed the bullying & tried to convince the toxic audience to take all these as a joke & not spread hate.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "We know how all that ended up.🙄",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 12] Author: @chhayanksahu | Likes: 26 | Replies: 0 | Published: 2020-11-23T06:42:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Love from India 🌸❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 13] Author: @tusharkapoor24 | Likes: 4998 | Replies: 16 | Published: 2020-02-24T06:08:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "This guy is a national asset. We should preserve him consciously so he keeps making the videos he is making.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 14] Author: @lakers38 | Likes: 5 | Replies: 0 | Published: 2020-03-20T18:01:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "True",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 15] Author: @scribblershe9360 | Likes: 10 | Replies: 0 | Published: 2020-06-18T06:48:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Haa nice comment brother 😅😅",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 16] Author: @adwinmasih5186 | Likes: 11 | Replies: 0 | Published: 2020-06-27T15:59:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "Very true instead of those people who put bad words to other we should boycott those stupid people carry and bhau and more",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "[COMMENT 17] Author: @RajbirSingh-rd7qg | Likes: 4 | Replies: 0 | Published: 2020-08-07T11:02:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "\"Preserve\"?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "[COMMENT 18] Author: @MarathaYoudhha | Likes: 0 | Replies: 0 | Published: 2020-11-01T05:51:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "🤔😜",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 19] Author: @sanjaymunru3871 | Likes: 1668 | Replies: 17 | Published: 2019-04-05T14:32:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "How many want next week video on hairfall? Like here please so Vivek bro will do it",
+              "likes": null
+            },
+            {
+              "comment_id": "c01624",
+              "author": "",
+              "text": "Mrudula my face and hands are brown but body is pure white. Does it makes my face white? My face is not white from my childhood because of tan. Can it remove long tan?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "[COMMENT 480] Author: @lodhinamrata | Likes: 2 | Replies: 0 | Published: 2023-04-06T14:56:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "@Gagedz long time tan....longer the remedy. But it works. Try it then trust it later",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "[COMMENT 481] Author: @iadityajais | Likes: 0 | Replies: 0 | Published: 2023-04-11T11:40:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "Mrudula does it work for you now??",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "[COMMENT 482] Author: @percysrawvlogs | Likes: 47 | Replies: 5 | Published: 2019-04-06T00:03:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "I have purchased aroma magic face wash coz of your recomendation and I am loving it since the 1st wash, thank you so much😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "[COMMENT 483] Author: @SiddharthGargYT | Likes: 0 | Replies: 0 | Published: 2019-04-07T13:15:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01636",
+              "author": "",
+              "text": "Neem flavour?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "[COMMENT 484] Author: @mahwishfatima6762 | Likes: 0 | Replies: 0 | Published: 2019-04-07T16:11:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "which one? lavender or tea tree ya pir charcoal",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "[COMMENT 485] Author: @percysrawvlogs | Likes: 0 | Replies: 0 | Published: 2019-04-07T17:37:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "@mahwishfatima6762 charcoal👩",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "[COMMENT 486] Author: @jyotidey948 | Likes: 0 | Replies: 0 | Published: 2019-04-07T19:56:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "Mam can you please give us the link to purchase.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "[COMMENT 487] Author: @mahwishfatima6762 | Likes: 0 | Replies: 0 | Published: 2019-04-13T09:39:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "@jyotidey948 u can purchase it on nykaa flipkart and amazon",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "[COMMENT 488] Author: @faizasaeed4408 | Likes: 10 | Replies: 2 | Published: 2019-06-21T23:27:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "I came across this mask on another YouTube video long time a go and ever since I’ve been doing this face mask religiously (I only came across sandalwood powder recently tho) but honestly it made all the bumps on my forehead go and I’ve seen a big improvement in my skin texture and tone as well. Seriously it’s the first time I can comment on a remedy and say it actually works. This is not even hard if you can’t get your hands on sandalwood powder try orange peel or liquorice powder they all brighten and remove tan on your skin but I’ve only recently started adding these extra powders in (orange peel powder/liquorice/sandalwood powder) even tho they speed up the process in clearing the skin but if you can’t get these then till then using yogurt, gram flour, honey and turmeric is still gonna do wonders to your skin ✌🏻",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 489] Author: @sasmitatripathy327 | Likes: 0 | Replies: 0 | Published: 2022-01-30T19:10:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Can I use this to remove tan from my hands? Please tell",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "[COMMENT 490] Author: @justanotherpasserby1 | Likes: 0 | Replies: 0 | Published: 2023-08-02T08:06:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "mrudula6274 did you face any other side effects beside itchiness?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "[COMMENT 491] Author: @Yashi_singh1.7327 | Likes: 0 | Replies: 0 | Published: 2023-09-17T10:08:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "This is the best remedy I have ever used ❤️go for it guyz",
+              "likes": null
+            },
+            {
+              "comment_id": "c01662",
+              "author": "",
+              "text": "[COMMENT 492] Author: @AltafKhan-5 | Likes: 13 | Replies: 1 | Published: 2019-04-28T10:09:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "Bhai It helped me a lot this give me a original skin back to me I am happy bro very happy😊😊😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01665",
+              "author": "",
+              "text": "[COMMENT 493] Author: @deveshrajput682 | Likes: 0 | Replies: 0 | Published: 2019-05-02T06:25:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "Week m kitni baar use kiya",
+              "likes": null
+            },
+            {
+              "comment_id": "c01668",
+              "author": "",
+              "text": "[COMMENT 494] Author: @forestfairy18 | Likes: 45 | Replies: 2 | Published: 2020-07-05T10:16:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "Reminder for me:",
+              "likes": null
+            },
+            {
+              "comment_id": "c01670",
+              "author": "",
+              "text": "Besan",
+              "likes": null
+            },
+            {
+              "comment_id": "c01671",
+              "author": "",
+              "text": "Curd",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "Turmeric",
+              "likes": null
+            },
+            {
+              "comment_id": "c01673",
+              "author": "",
+              "text": "Honey",
+              "likes": null
+            },
+            {
+              "comment_id": "c01674",
+              "author": "",
+              "text": "Rose Water",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "Sandalwood powder",
+              "likes": null
+            },
+            {
+              "comment_id": "c01677",
+              "author": "",
+              "text": "[COMMENT 495] Author: @forestfairy18 | Likes: 1 | Replies: 0 | Published: 2020-07-07T16:12:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "@Ńëýmãř đâ Śíľvā šäńťøś júńîøř oo yaaa thanks for reminding!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01680",
+              "author": "",
+              "text": "[COMMENT 496] Author: @devikavarala5099 | Likes: 1 | Replies: 0 | Published: 2020-07-08T13:22:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "Sandal wood powder",
+              "likes": null
+            },
+            {
+              "comment_id": "c01682",
+              "author": "",
+              "text": "Rose water",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "[COMMENT 497] Author: @bidyutmanna3973 | Likes: 11 | Replies: 3 | Published: 2019-10-29T07:40:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01685",
+              "author": "",
+              "text": "I came here for giving my honest result..it really worked for me...as my tan was very deep...so it clear my 40% tan...I think I have to use 3-4 times more...😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01687",
+              "author": "",
+              "text": "[COMMENT 498] Author: @athulraj5941 | Likes: 0 | Replies: 0 | Published: 2019-10-29T15:01:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01688",
+              "author": "",
+              "text": "Thanks bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01690",
+              "author": "",
+              "text": "[COMMENT 499] Author: @bidyutmanna3973 | Likes: 1 | Replies: 0 | Published: 2019-10-29T17:54:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01691",
+              "author": "",
+              "text": "@athulraj5941 😁😁",
+              "likes": null
+            },
+            {
+              "comment_id": "c01693",
+              "author": "",
+              "text": "[COMMENT 500] Author: @kazekagetech988 | Likes: 1 | Replies: 0 | Published: 2019-11-03T18:12:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01694",
+              "author": "",
+              "text": "Bro. My 4th day and no change in tan. But pimples are going slowly",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "9g3cF-DIY_c",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Most Effective Sun Tan Removal Home Remedy (My De Tan Secret)\\Most Effective Sun Tan Removal Home Remedy (My De Tan Secret).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Most Effective Sun Tan Removal Home Remedy (My De Tan Secret)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\9g3cF-DIY_c",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "9g3cF-DIY_c",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "medium",
+            "transcript_completeness": "usable",
+            "timestamp_count": 16,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 4663,
+            "transcript_words": 906,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "B",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "medium",
+              "completeness": "usable",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] If you want to detan your skin and get your original skin tone back, then keep watching this video as today I'm going to share with you a very simple but highly effective home remedy which just works like magic. Just one wash and your tan will reduce. I can bet on it. So, let's get started. [00:00:17] Hello friends, welcome to Fit Tuber. Tanning is your body's natural shield against the ultraviolet rays of the sun which can damage the skin tissue in the form of a sunburn. Excessive exposure to the UV rays of the sun causes the skin cells to produce a pigment called melanin which causes a tan. Well, it's [00:00:34] not about fair skin or dark skin. It's about getting your original skin tone back. It's about removing the dead skin layer that gets accumulated on the skin due to excessive [music] sun exposure. It's about getting healthy and glowing skin. So, let me share with you one easy tried and tested remedy by [00:00:49] me. A homemade face mask which naturally deans your skin in just one B. To start with, take 1 tbsp of gram flour. Graram flour or basin has been used for danning and brightening one's skin tone for centuries and its super cleansing properties leave your face looking its [00:01:06] best [music] ever. Mix 1 tbsp of kurd in it. Enriched with lactic acid, kurd is a natural bleaching agent to fight sunt tan quickly. Next ingredient that goes in is a pinch of turmeric. Known for its anti-aging properties, turmeric repairs the damaged skin and lightens the skin [00:01:23] tone. Add one teaspoon of honey to it. Honey has the ability to open up the pores and unclog them of the dead skin cells. Full of antioxidants, a natural moisturizer and soother, honey gives a glow to the [music] skin. You can use any honey for this. Next goes half [00:01:39] teaspoon of pure sandalwood powder. The natural oils present in sandalwood effectively helps get rid of suntan. Sandalwood powder can be easily purchased from a grocery shop. For your convenience, I have even linked it down in the description box. Last but not the least, we will add rose water just to [00:01:56] make it a pastel-like consistency. Rose water due to its estringent properties helps clean pores and tone the skin. Once you have put all the ingredients in the bowl, mix them thoroughly to make a smooth pastel-like consistency. Your magic dan face pack is ready. Using your [00:02:12] clean hands, apply the mixture on the face and other tan parts of the body. While applying, gently massage with your fingers in a circular motion for about a minute or two. Once the paste is evenly masked, let it sit and [music] do its action for about 20 to 30 minutes. [00:02:27] Finally, wash it off using running cool tap water. [music] In just one wash, you will see a significant reduction in tanning. Really, do not just believe me. Try it out for yourself and then come [music] back and comment below your amazing results. No D10 or fairness creams [music] can ever give you the results [00:02:43] what this face pack will give you. What most companies do is that they use one or two natural ingredients and along with that they add a lot of harsh chemicals. Do not waste your money on such creams and stick to [music] basics. Since childhood, if there has been any rejime that I follow to detan my skin, [00:02:59] it's [music] this. It just works like magic. Now you need not avoid the sun, go out and play, enjoy the beach side. Basically, enjoy the sun because now you know that tanning is not more a problem for you. As for this pack, just once try it out for my sake and don't forget to [00:03:15] come back and share your results in the comment section. I'm very confident that this pack will do wonders to your skin. It has [music] no side effects whatsoever and can be a part of your daily beauty regime. It can be [music] applied at any time of the day. Although if you ask me, it is best to apply it [00:03:31] half an hour before going [music] for bath in morning. It doesn't matter if you are dark or fair. If your skin is healthy and you wear a smile on it, it will glow naturally. So friends, that's all for this video. I [music] hope you found it to be helpful. If yes, then please show me your support by giving this video a big thumbs up. Try this [00:03:47] home remedy. Take your before and after picture and post it on Instagram. Don't forget to tag me. I'll repost it. What next would you like to see? A home remedy on pimples, dark circles or hair fall. Comment below. Please do remember to subscribe to my channel. Hit that bell icon so that you never miss a video [00:04:03] from me. My name is Vive. I thank you so much for watching."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1166,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: 9g3cF-DIY_c",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 1979 | Replies: 500 | Published: 2019-04-05T13:40:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "What next? A video on Pimples, Dark Circles or Hair Fall? Also, try this remedy and share your results through an Insta story. Don't forget to tag me. My Instagram - https://www.instagram.com/fittuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @bedprakashbehera6564 | Likes: 74 | Replies: 0 | Published: 2019-04-05T13:41:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Dark circles",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @coco_catitude | Likes: 91 | Replies: 0 | Published: 2019-04-05T13:41:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Hairfall",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @advzanaalif1966 | Likes: 71 | Replies: 0 | Published: 2019-04-05T13:42:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Acne scars on face😓",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @jamunak616 | Likes: 37 | Replies: 0 | Published: 2019-04-05T13:42:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Dark circles",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @nivinpauli6012 | Likes: 22 | Replies: 0 | Published: 2019-04-05T13:42:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Always thumps up👍🏻 for your video.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00026",
+                  "author": "",
+                  "text": "My suggestions:",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "1.About beer, wine;merits & demerits of consumption. Safety level of consumption.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "2.Types of rice, how to buy good quality of rice",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "3.Types of milk/milk packets",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @yungchangsta | Likes: 7500 | Replies: 39 | Published: 2020-11-06T12:43:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "I swear every guide on YouTube is made by an Indian guy. Which I find cool because it shows how chill Indians are. Love from Philippines",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @harshvardhan_aryaa | Likes: 395 | Replies: 0 | Published: 2020-11-07T11:15:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "Still indians get so much hate on internet just cuz of PewDiePie",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @shikherjaitly353 | Likes: 41 | Replies: 0 | Published: 2020-11-15T10:07:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "@harshvardhan_aryaa lmao",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @harishanjali9350 | Likes: 16 | Replies: 0 | Published: 2020-11-17T08:26:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "@harshvardhan_aryaa 👌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @Rippedskull | Likes: 120 | Replies: 0 | Published: 2020-11-21T14:40:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "@harshvardhan_aryaa There are fools everywhere. Though he opposed the bullying & tried to convince the toxic audience to take all these as a joke & not spread hate.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "We know how all that ended up.🙄",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @chhayanksahu | Likes: 26 | Replies: 0 | Published: 2020-11-23T06:42:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Love from India 🌸❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @tusharkapoor24 | Likes: 4998 | Replies: 16 | Published: 2020-02-24T06:08:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "This guy is a national asset. We should preserve him consciously so he keeps making the videos he is making.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @lakers38 | Likes: 5 | Replies: 0 | Published: 2020-03-20T18:01:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "True",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @scribblershe9360 | Likes: 10 | Replies: 0 | Published: 2020-06-18T06:48:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Haa nice comment brother 😅😅",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @adwinmasih5186 | Likes: 11 | Replies: 0 | Published: 2020-06-27T15:59:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "Very true instead of those people who put bad words to other we should boycott those stupid people carry and bhau and more",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @RajbirSingh-rd7qg | Likes: 4 | Replies: 0 | Published: 2020-08-07T11:02:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "\"Preserve\"?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @MarathaYoudhha | Likes: 0 | Replies: 0 | Published: 2020-11-01T05:51:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "🤔😜",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @sanjaymunru3871 | Likes: 1668 | Replies: 17 | Published: 2019-04-05T14:32:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "How many want next week video on hairfall? Like here please so Vivek bro will do it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01624",
+                  "author": "",
+                  "text": "Mrudula my face and hands are brown but body is pure white. Does it makes my face white? My face is not white from my childhood because of tan. Can it remove long tan?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @lodhinamrata | Likes: 2 | Replies: 0 | Published: 2023-04-06T14:56:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "@Gagedz long time tan....longer the remedy. But it works. Try it then trust it later",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @iadityajais | Likes: 0 | Replies: 0 | Published: 2023-04-11T11:40:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "Mrudula does it work for you now??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @percysrawvlogs | Likes: 47 | Replies: 5 | Published: 2019-04-06T00:03:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "I have purchased aroma magic face wash coz of your recomendation and I am loving it since the 1st wash, thank you so much😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @SiddharthGargYT | Likes: 0 | Replies: 0 | Published: 2019-04-07T13:15:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01636",
+                  "author": "",
+                  "text": "Neem flavour?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @mahwishfatima6762 | Likes: 0 | Replies: 0 | Published: 2019-04-07T16:11:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "which one? lavender or tea tree ya pir charcoal",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @percysrawvlogs | Likes: 0 | Replies: 0 | Published: 2019-04-07T17:37:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "@mahwishfatima6762 charcoal👩",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @jyotidey948 | Likes: 0 | Replies: 0 | Published: 2019-04-07T19:56:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "Mam can you please give us the link to purchase.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @mahwishfatima6762 | Likes: 0 | Replies: 0 | Published: 2019-04-13T09:39:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "@jyotidey948 u can purchase it on nykaa flipkart and amazon",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @faizasaeed4408 | Likes: 10 | Replies: 2 | Published: 2019-06-21T23:27:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "I came across this mask on another YouTube video long time a go and ever since I’ve been doing this face mask religiously (I only came across sandalwood powder recently tho) but honestly it made all the bumps on my forehead go and I’ve seen a big improvement in my skin texture and tone as well. Seriously it’s the first time I can comment on a remedy and say it actually works. This is not even hard if you can’t get your hands on sandalwood powder try orange peel or liquorice powder they all brighten and remove tan on your skin but I’ve only recently started adding these extra powders in (orange peel powder/liquorice/sandalwood powder) even tho they speed up the process in clearing the skin but if you can’t get these then till then using yogurt, gram flour, honey and turmeric is still gonna do wonders to your skin ✌🏻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @sasmitatripathy327 | Likes: 0 | Replies: 0 | Published: 2022-01-30T19:10:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Can I use this to remove tan from my hands? Please tell",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @justanotherpasserby1 | Likes: 0 | Replies: 0 | Published: 2023-08-02T08:06:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "mrudula6274 did you face any other side effects beside itchiness?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @Yashi_singh1.7327 | Likes: 0 | Replies: 0 | Published: 2023-09-17T10:08:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "This is the best remedy I have ever used ❤️go for it guyz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01662",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @AltafKhan-5 | Likes: 13 | Replies: 1 | Published: 2019-04-28T10:09:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "Bhai It helped me a lot this give me a original skin back to me I am happy bro very happy😊😊😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01665",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @deveshrajput682 | Likes: 0 | Replies: 0 | Published: 2019-05-02T06:25:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "Week m kitni baar use kiya",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01668",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @forestfairy18 | Likes: 45 | Replies: 2 | Published: 2020-07-05T10:16:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "Reminder for me:",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01670",
+                  "author": "",
+                  "text": "Besan",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01671",
+                  "author": "",
+                  "text": "Curd",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "Turmeric",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01673",
+                  "author": "",
+                  "text": "Honey",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01674",
+                  "author": "",
+                  "text": "Rose Water",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "Sandalwood powder",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01677",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @forestfairy18 | Likes: 1 | Replies: 0 | Published: 2020-07-07T16:12:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "@Ńëýmãř đâ Śíľvā šäńťøś júńîøř oo yaaa thanks for reminding!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01680",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @devikavarala5099 | Likes: 1 | Replies: 0 | Published: 2020-07-08T13:22:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "Sandal wood powder",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01682",
+                  "author": "",
+                  "text": "Rose water",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @bidyutmanna3973 | Likes: 11 | Replies: 3 | Published: 2019-10-29T07:40:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01685",
+                  "author": "",
+                  "text": "I came here for giving my honest result..it really worked for me...as my tan was very deep...so it clear my 40% tan...I think I have to use 3-4 times more...😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01687",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @athulraj5941 | Likes: 0 | Replies: 0 | Published: 2019-10-29T15:01:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01688",
+                  "author": "",
+                  "text": "Thanks bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01690",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @bidyutmanna3973 | Likes: 1 | Replies: 0 | Published: 2019-10-29T17:54:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01691",
+                  "author": "",
+                  "text": "@athulraj5941 😁😁",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01693",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @kazekagetech988 | Likes: 1 | Replies: 0 | Published: 2019-11-03T18:12:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01694",
+                  "author": "",
+                  "text": "Bro. My 4th day and no change in tan. But pimples are going slowly",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "9g3cF-DIY_c",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "medium",
+          "transcript_completeness": "usable",
+          "timestamp_count": 16,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 4663,
+          "transcript_words": 906,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "B",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "medium",
+            "completeness": "usable",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] If you want to detan your skin and get your original skin tone back, then keep watching this video as today I'm going to share with you a very simple but highly effective home remedy which just works like magic. Just one wash and your tan will reduce. I can bet on it. So, let's get started. [00:00:17] Hello friends, welcome to Fit Tuber. Tanning is your body's natural shield against the ultraviolet rays of the sun which can damage the skin tissue in the form of a sunburn. Excessive exposure to the UV rays of the sun causes the skin cells to produce a pigment called melanin which causes a tan. Well, it's [00:00:34] not about fair skin or dark skin. It's about getting your original skin tone back. It's about removing the dead skin layer that gets accumulated on the skin due to excessive [music] sun exposure. It's about getting healthy and glowing skin. So, let me share with you one easy tried and tested remedy by [00:00:49] me. A homemade face mask which naturally deans your skin in just one B. To start with, take 1 tbsp of gram flour. Graram flour or basin has been used for danning and brightening one's skin tone for centuries and its super cleansing properties leave your face looking its [00:01:06] best [music] ever. Mix 1 tbsp of kurd in it. Enriched with lactic acid, kurd is a natural bleaching agent to fight sunt tan quickly. Next ingredient that goes in is a pinch of turmeric. Known for its anti-aging properties, turmeric repairs the damaged skin and lightens the skin [00:01:23] tone. Add one teaspoon of honey to it. Honey has the ability to open up the pores and unclog them of the dead skin cells. Full of antioxidants, a natural moisturizer and soother, honey gives a glow to the [music] skin. You can use any honey for this. Next goes half [00:01:39] teaspoon of pure sandalwood powder. The natural oils present in sandalwood effectively helps get rid of suntan. Sandalwood powder can be easily purchased from a grocery shop. For your convenience, I have even linked it down in the description box. Last but not the least, we will add rose water just to [00:01:56] make it a pastel-like consistency. Rose water due to its estringent properties helps clean pores and tone the skin. Once you have put all the ingredients in the bowl, mix them thoroughly to make a smooth pastel-like consistency. Your magic dan face pack is ready. Using your [00:02:12] clean hands, apply the mixture on the face and other tan parts of the body. While applying, gently massage with your fingers in a circular motion for about a minute or two. Once the paste is evenly masked, let it sit and [music] do its action for about 20 to 30 minutes. [00:02:27] Finally, wash it off using running cool tap water. [music] In just one wash, you will see a significant reduction in tanning. Really, do not just believe me. Try it out for yourself and then come [music] back and comment below your amazing results. No D10 or fairness creams [music] can ever give you the results [00:02:43] what this face pack will give you. What most companies do is that they use one or two natural ingredients and along with that they add a lot of harsh chemicals. Do not waste your money on such creams and stick to [music] basics. Since childhood, if there has been any rejime that I follow to detan my skin, [00:02:59] it's [music] this. It just works like magic. Now you need not avoid the sun, go out and play, enjoy the beach side. Basically, enjoy the sun because now you know that tanning is not more a problem for you. As for this pack, just once try it out for my sake and don't forget to [00:03:15] come back and share your results in the comment section. I'm very confident that this pack will do wonders to your skin. It has [music] no side effects whatsoever and can be a part of your daily beauty regime. It can be [music] applied at any time of the day. Although if you ask me, it is best to apply it [00:03:31] half an hour before going [music] for bath in morning. It doesn't matter if you are dark or fair. If your skin is healthy and you wear a smile on it, it will glow naturally. So friends, that's all for this video. I [music] hope you found it to be helpful. If yes, then please show me your support by giving this video a big thumbs up. Try this [00:03:47] home remedy. Take your before and after picture and post it on Instagram. Don't forget to tag me. I'll repost it. What next would you like to see? A home remedy on pimples, dark circles or hair fall. Comment below. Please do remember to subscribe to my channel. Hit that bell icon so that you never miss a video [00:04:03] from me. My name is Vive. I thank you so much for watching."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1166,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: 9g3cF-DIY_c",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 1979 | Replies: 500 | Published: 2019-04-05T13:40:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "What next? A video on Pimples, Dark Circles or Hair Fall? Also, try this remedy and share your results through an Insta story. Don't forget to tag me. My Instagram - https://www.instagram.com/fittuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @bedprakashbehera6564 | Likes: 74 | Replies: 0 | Published: 2019-04-05T13:41:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Dark circles",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @coco_catitude | Likes: 91 | Replies: 0 | Published: 2019-04-05T13:41:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Hairfall",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @advzanaalif1966 | Likes: 71 | Replies: 0 | Published: 2019-04-05T13:42:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Acne scars on face😓",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @jamunak616 | Likes: 37 | Replies: 0 | Published: 2019-04-05T13:42:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Dark circles",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @nivinpauli6012 | Likes: 22 | Replies: 0 | Published: 2019-04-05T13:42:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Always thumps up👍🏻 for your video.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00026",
+                "author": "",
+                "text": "My suggestions:",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "1.About beer, wine;merits & demerits of consumption. Safety level of consumption.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "2.Types of rice, how to buy good quality of rice",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "3.Types of milk/milk packets",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "[COMMENT 7] Author: @yungchangsta | Likes: 7500 | Replies: 39 | Published: 2020-11-06T12:43:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "I swear every guide on YouTube is made by an Indian guy. Which I find cool because it shows how chill Indians are. Love from Philippines",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "[COMMENT 8] Author: @harshvardhan_aryaa | Likes: 395 | Replies: 0 | Published: 2020-11-07T11:15:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "Still indians get so much hate on internet just cuz of PewDiePie",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "[COMMENT 9] Author: @shikherjaitly353 | Likes: 41 | Replies: 0 | Published: 2020-11-15T10:07:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "@harshvardhan_aryaa lmao",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "[COMMENT 10] Author: @harishanjali9350 | Likes: 16 | Replies: 0 | Published: 2020-11-17T08:26:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "@harshvardhan_aryaa 👌",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "[COMMENT 11] Author: @Rippedskull | Likes: 120 | Replies: 0 | Published: 2020-11-21T14:40:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "@harshvardhan_aryaa There are fools everywhere. Though he opposed the bullying & tried to convince the toxic audience to take all these as a joke & not spread hate.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "We know how all that ended up.🙄",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 12] Author: @chhayanksahu | Likes: 26 | Replies: 0 | Published: 2020-11-23T06:42:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Love from India 🌸❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 13] Author: @tusharkapoor24 | Likes: 4998 | Replies: 16 | Published: 2020-02-24T06:08:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "This guy is a national asset. We should preserve him consciously so he keeps making the videos he is making.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 14] Author: @lakers38 | Likes: 5 | Replies: 0 | Published: 2020-03-20T18:01:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "True",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 15] Author: @scribblershe9360 | Likes: 10 | Replies: 0 | Published: 2020-06-18T06:48:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Haa nice comment brother 😅😅",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 16] Author: @adwinmasih5186 | Likes: 11 | Replies: 0 | Published: 2020-06-27T15:59:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "Very true instead of those people who put bad words to other we should boycott those stupid people carry and bhau and more",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "[COMMENT 17] Author: @RajbirSingh-rd7qg | Likes: 4 | Replies: 0 | Published: 2020-08-07T11:02:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "\"Preserve\"?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "[COMMENT 18] Author: @MarathaYoudhha | Likes: 0 | Replies: 0 | Published: 2020-11-01T05:51:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "🤔😜",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 19] Author: @sanjaymunru3871 | Likes: 1668 | Replies: 17 | Published: 2019-04-05T14:32:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "How many want next week video on hairfall? Like here please so Vivek bro will do it",
+                "likes": null
+              },
+              {
+                "comment_id": "c01624",
+                "author": "",
+                "text": "Mrudula my face and hands are brown but body is pure white. Does it makes my face white? My face is not white from my childhood because of tan. Can it remove long tan?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "[COMMENT 480] Author: @lodhinamrata | Likes: 2 | Replies: 0 | Published: 2023-04-06T14:56:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "@Gagedz long time tan....longer the remedy. But it works. Try it then trust it later",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "[COMMENT 481] Author: @iadityajais | Likes: 0 | Replies: 0 | Published: 2023-04-11T11:40:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "Mrudula does it work for you now??",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "[COMMENT 482] Author: @percysrawvlogs | Likes: 47 | Replies: 5 | Published: 2019-04-06T00:03:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "I have purchased aroma magic face wash coz of your recomendation and I am loving it since the 1st wash, thank you so much😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "[COMMENT 483] Author: @SiddharthGargYT | Likes: 0 | Replies: 0 | Published: 2019-04-07T13:15:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01636",
+                "author": "",
+                "text": "Neem flavour?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "[COMMENT 484] Author: @mahwishfatima6762 | Likes: 0 | Replies: 0 | Published: 2019-04-07T16:11:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "which one? lavender or tea tree ya pir charcoal",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "[COMMENT 485] Author: @percysrawvlogs | Likes: 0 | Replies: 0 | Published: 2019-04-07T17:37:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "@mahwishfatima6762 charcoal👩",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "[COMMENT 486] Author: @jyotidey948 | Likes: 0 | Replies: 0 | Published: 2019-04-07T19:56:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "Mam can you please give us the link to purchase.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "[COMMENT 487] Author: @mahwishfatima6762 | Likes: 0 | Replies: 0 | Published: 2019-04-13T09:39:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "@jyotidey948 u can purchase it on nykaa flipkart and amazon",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "[COMMENT 488] Author: @faizasaeed4408 | Likes: 10 | Replies: 2 | Published: 2019-06-21T23:27:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "I came across this mask on another YouTube video long time a go and ever since I’ve been doing this face mask religiously (I only came across sandalwood powder recently tho) but honestly it made all the bumps on my forehead go and I’ve seen a big improvement in my skin texture and tone as well. Seriously it’s the first time I can comment on a remedy and say it actually works. This is not even hard if you can’t get your hands on sandalwood powder try orange peel or liquorice powder they all brighten and remove tan on your skin but I’ve only recently started adding these extra powders in (orange peel powder/liquorice/sandalwood powder) even tho they speed up the process in clearing the skin but if you can’t get these then till then using yogurt, gram flour, honey and turmeric is still gonna do wonders to your skin ✌🏻",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 489] Author: @sasmitatripathy327 | Likes: 0 | Replies: 0 | Published: 2022-01-30T19:10:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Can I use this to remove tan from my hands? Please tell",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "[COMMENT 490] Author: @justanotherpasserby1 | Likes: 0 | Replies: 0 | Published: 2023-08-02T08:06:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "mrudula6274 did you face any other side effects beside itchiness?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "[COMMENT 491] Author: @Yashi_singh1.7327 | Likes: 0 | Replies: 0 | Published: 2023-09-17T10:08:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "This is the best remedy I have ever used ❤️go for it guyz",
+                "likes": null
+              },
+              {
+                "comment_id": "c01662",
+                "author": "",
+                "text": "[COMMENT 492] Author: @AltafKhan-5 | Likes: 13 | Replies: 1 | Published: 2019-04-28T10:09:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "Bhai It helped me a lot this give me a original skin back to me I am happy bro very happy😊😊😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01665",
+                "author": "",
+                "text": "[COMMENT 493] Author: @deveshrajput682 | Likes: 0 | Replies: 0 | Published: 2019-05-02T06:25:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "Week m kitni baar use kiya",
+                "likes": null
+              },
+              {
+                "comment_id": "c01668",
+                "author": "",
+                "text": "[COMMENT 494] Author: @forestfairy18 | Likes: 45 | Replies: 2 | Published: 2020-07-05T10:16:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "Reminder for me:",
+                "likes": null
+              },
+              {
+                "comment_id": "c01670",
+                "author": "",
+                "text": "Besan",
+                "likes": null
+              },
+              {
+                "comment_id": "c01671",
+                "author": "",
+                "text": "Curd",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "Turmeric",
+                "likes": null
+              },
+              {
+                "comment_id": "c01673",
+                "author": "",
+                "text": "Honey",
+                "likes": null
+              },
+              {
+                "comment_id": "c01674",
+                "author": "",
+                "text": "Rose Water",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "Sandalwood powder",
+                "likes": null
+              },
+              {
+                "comment_id": "c01677",
+                "author": "",
+                "text": "[COMMENT 495] Author: @forestfairy18 | Likes: 1 | Replies: 0 | Published: 2020-07-07T16:12:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "@Ńëýmãř đâ Śíľvā šäńťøś júńîøř oo yaaa thanks for reminding!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01680",
+                "author": "",
+                "text": "[COMMENT 496] Author: @devikavarala5099 | Likes: 1 | Replies: 0 | Published: 2020-07-08T13:22:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "Sandal wood powder",
+                "likes": null
+              },
+              {
+                "comment_id": "c01682",
+                "author": "",
+                "text": "Rose water",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "[COMMENT 497] Author: @bidyutmanna3973 | Likes: 11 | Replies: 3 | Published: 2019-10-29T07:40:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01685",
+                "author": "",
+                "text": "I came here for giving my honest result..it really worked for me...as my tan was very deep...so it clear my 40% tan...I think I have to use 3-4 times more...😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01687",
+                "author": "",
+                "text": "[COMMENT 498] Author: @athulraj5941 | Likes: 0 | Replies: 0 | Published: 2019-10-29T15:01:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01688",
+                "author": "",
+                "text": "Thanks bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01690",
+                "author": "",
+                "text": "[COMMENT 499] Author: @bidyutmanna3973 | Likes: 1 | Replies: 0 | Published: 2019-10-29T17:54:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01691",
+                "author": "",
+                "text": "@athulraj5941 😁😁",
+                "likes": null
+              },
+              {
+                "comment_id": "c01693",
+                "author": "",
+                "text": "[COMMENT 500] Author: @kazekagetech988 | Likes: 1 | Replies: 0 | Published: 2019-11-03T18:12:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01694",
+                "author": "",
+                "text": "Bro. My 4th day and no change in tan. But pimples are going slowly",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

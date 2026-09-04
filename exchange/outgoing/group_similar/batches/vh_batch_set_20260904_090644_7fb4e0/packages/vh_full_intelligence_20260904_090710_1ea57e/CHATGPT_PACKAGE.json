@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090710_1ea57e",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "FULL_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090710_1ea57e",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Testosterone support",
+      "batch_number": 65,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "batch_instruction": "This is independently importable batch 65 of 71 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260904_090710_1ea57e",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260904_090710_1ea57e"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260904_090710_1ea57e",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Testosterone support",
+      "batch_number": 65,
+      "batch_total": 71,
+      "batch_size": 12
+    }
+  },
+  "manifest": {
+    "request_id": "7dfff023-4639-4369-b004-03077e0f9020",
+    "package_id": "vh_full_intelligence_20260904_090710_1ea57e",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "Rpj-O4Lk6QI"
+    ],
+    "evidence_grades": {
+      "Rpj-O4Lk6QI": "B"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Testosterone support",
+      "batch_number": 65,
+      "batch_total": 71,
+      "batch_size": 12
+    },
+    "hashes": {
+      "evidence.json": "64a9b1bf9a94184b21fe86317d9888b078063074504bf98e981a2372f795b6c5",
+      "prompt.json": "f47dac97bc16464fee5e44a71bb79ee25720c040620d4825c736822411d87c78",
+      "schema.json": "c53b7b973cf39816a8e7a791c9597ae8d0bd4ba78e7b914239f06f4e4cfb2435"
+    },
+    "created_at": "2026-09-04 09:07:10",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "Rpj-O4Lk6QI",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=Rpj-O4Lk6QI",
+        "original_title": "How to Boost Testosterone Naturally - 6 WAYS",
+        "clean_title": "How to Boost Testosterone Naturally - 6 WAYS",
+        "channel": "Fit Tuber",
+        "upload_date": "2017-08-11",
+        "description": "6 Ways to Boost Testosterone Naturally? \n\nTestosterone is a male hormone which is responsible for the growth of muscle mass. It is responsible for the growth of hair on your body. It improves sex drive, bone density and strength. \nOur body produces testosterone naturally. But because of poor lifestyle, low test levels in males is a common problem. Because of which they find it difficult to build muscles. They start to lose out hair at a very early age and many other problems. Some people inject testosterone in the form of drugs. We must know that once we start doing this, our body stops producing testosterone naturally. This is not an ideal condition and it has a lot of side effects. \n\nSo in this video I’m going to share with you 6 ways by which you can boost your testosterone naturally. \n\n#1 WAY - NUTRITION - 00:51 \n\n The foods that we eat impact our hormones in a positive or a negative way. Needless to say, one should maintain a balanced diet. Specifically talking about testosterone, there are three ingredients that should be in your diet on a daily basis. These are Zinc, Vitamin D and Fats. \n\n#2 WAY - EXERCISE - 02:00\n\n The right type of exercise can have a dramatic effect on the production of testosterone. Specially weight training, when done even 3 to 4 times a week can boost your testosterone levels considerably. Studies have suggested that the higher the intensity of workout is, the greater will the response of testosterone. \n\n#3 WAY - SLEEP - 02:41\n\n When it comes to sleep, it is always about quality and not quantity. After you wake up in the morning from a good sound sleep, your test levels are at peak and slowly they drop by the evening. In order to have deep sleep, you can do two things.\n\n#4 WAY - REDUCE STRESS - 03:14\n\n When we are stressed out, our body produces a hormone called cortisol. Cortisol is inversely proportional to testosterone. That means the higher the level of cortisol in the body, the lower will be the testosterone. Apart from this, there are many disadvantages of having a high cortisol levels in the body. So one should make an effort to reduce the stress levels. \n\n#5 WAY - AVOID SOME THINGS - 03:43\n\n Now, there are 3 things that you should avoid or keep them in moderation when it comes to boosting your testosterone levels.  All three effect the body in such a way that it starts producing less amount of testosterone. \n\n# 6 WAY - LOSE WEIGHT - 03:58\n\nIf you are overweight, shedding a few kilos can increase your testosterone levels. According to studies, overweight men are more likely to have low testosterone levels. So basically, if you follow the points that we have already discussed, you will be able to optimise your bodyweight. \n\nSo friends, these were some of the best and the most effective ways to boost your testosterone levels naturally. \n\nI hope you found this video helpful. Well, if you did, please do \n\nLIKE | SHARE | COMMENT\n\nPlease SUBSCRIBE\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw\n\nThanks for visiting.\n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "medium",
+          "completeness": "usable",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] Hello friends welcome to fit tuber let us talk about testosterone testosterone is a male hormone which is responsible for the growth of muscle mass it is responsible for the growth of hair on your body it improves sex drive bone density and strength our body produces testosterone naturally but because of [00:00:18] poor lifestyle low test levels in males is a common problem because of which they find it difficult to build muscles they start to lose out hair at a very early age and many other problems some some people inject testosterone in the form of drugs we must know that once we [00:00:34] start doing this our body stops producing testosterone naturally this is not an ideal condition and it has a lot of side effects so in this video I'm going to share with you six ways by which you can boost your testosterone [00:00:52] naturally the number one way by which you can boost your testosterone levels is by taking care of your diet and nutrition the foods that we eat impact our hormones in a POS positive or A negative way needless to say one should maintain a balanced di specifically talking about testosterone there are three ingredients that should be in your [00:01:08] diet on a daily basis these are zinc vitamin D and fats the foods which are rich in zinc are spinach kidney beans flax seeds garlic peanuts eggs brown rice Etc talking about vitamin D the best natural source available to us is [00:01:25] sunlight so one can sit in sunlight for 15 to 20 minutes on a daily basis however the foods rich in vitamin D are mushrooms tuna salmon eggs milk Etc fats especially saturated fat is very helpful in boosting the testosterone levels [00:01:42] however one should keep in mind that the daily recommended intake of saturated fat is not more than 20 G so some of the foods that are rich in saturated fats are egg yolks chicken coconut paner and other dairy products so if you include these Foods in your diet you will see [00:01:57] that your test levels will start increasing in second is exercise the right type of exercise can have a dramatic effect on the production of testosterone especially weight training when done even 3 to four times a week can boost your testosterone levels considerably Studies have shown that the [00:02:13] higher the intensity of workout is the greater will be the response of testosterone so doing short workouts of not more than 45 minutes to 1 hour with least amount of rest periods in between is very beneficial also do not miss a leg day legs have the biggest muscles in [00:02:29] your your body and training them on a regular basis can improve your testosterone levels substantially so weight training or any form of resistance training is one of the best ways to increase the production of testosterone third is sleep when it comes to sleep it is always about [00:02:44] quality and not quantity after you wake up in the morning from a good sound sleep your test levels are at Peak and slowly they drop by the evening so I would suggest you to have a sound sleep for about 7 to 8 hours in order to have a deep sleep you can do two things one [00:03:00] is that you maintain sleep timings other is that you stay away from your phone laptop and other electronic gadgets half an hour before you sleep believe me it will help you sleep very easily and you will have a sound sleep this in turn will boost your testosterone levels rapidly fourth is reduce stress when we [00:03:17] are stressed out our body produces a hormone called cortisol cortisol is inversely proportional to testosterone that means the higher the level of cortisol in the body the lower will be the testosterone apart from this there are a lot of disadvantages of having a high cortisol levels in the body so one [00:03:34] should make an effort to reduce the stress levels you can work out meditate or the best way is to spend some time doing something that you really love now there are three things that you should avoid or keep them in moderation when it comes to boosting your testosterone [00:03:49] levels these are alcohol cigarettes and processed sugar all three affect the body in such a way that it starts producing less amount of testosterone next is lose weight weight if you are overweight shedding a few kilos can increase your testosterone levels [00:04:04] according to studies overweight men are more likely to have low testosterone levels so basically if you follow the points that we have already discussed you will be able to optimize your body weight so friends these were some of the best and the most effective ways to boost your testosterone levels naturally [00:04:21] I hope you found this video helpful well if you did please do give it a thumbs up and also please do remember to subscribe to my channel my name is I thank you so much for watching"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1061,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: Rpj-O4Lk6QI",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @zhardik3teen | Likes: 1151 | Replies: 22 | Published: 2021-03-04T09:19:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "1. Nutrition... 00:51",
+              "likes": null
+            },
+            {
+              "comment_id": "c00011",
+              "author": "",
+              "text": "2. Exercise... 02:00",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "3. Sleep... 02:41",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "4. Reduce stress... 03:14",
+              "likes": null
+            },
+            {
+              "comment_id": "c00014",
+              "author": "",
+              "text": "5. Things to avoid (alchohol, tabacco, sugar)... 03:43",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "6. Lose weight... 03:58",
+              "likes": null
+            },
+            {
+              "comment_id": "c00017",
+              "author": "",
+              "text": "[COMMENT 2] Author: @gothicfps6240 | Likes: 15 | Replies: 0 | Published: 2021-06-25T23:44:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "Cigarettes only right. Weed can?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00020",
+              "author": "",
+              "text": "[COMMENT 3] Author: @ricoisthegoat4342 | Likes: 31 | Replies: 0 | Published: 2021-07-06T06:30:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "@gothicfps6240 weed kills brain cells homie. Not here to correct you but in my opinion you should stop smoking",
+              "likes": null
+            },
+            {
+              "comment_id": "c00023",
+              "author": "",
+              "text": "[COMMENT 4] Author: @barqodahabiya7483 | Likes: 4 | Replies: 0 | Published: 2021-07-18T15:34:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "Thnkz",
+              "likes": null
+            },
+            {
+              "comment_id": "c00026",
+              "author": "",
+              "text": "[COMMENT 5] Author: @adixen3889 | Likes: 4 | Replies: 0 | Published: 2021-07-30T20:43:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "thanku bhai🤗",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "[COMMENT 6] Author: @sahilgovekar5086 | Likes: 4 | Replies: 0 | Published: 2021-08-17T09:08:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "@ricoisthegoat4342 op bhai next level",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "[COMMENT 7] Author: @anandpandey7164 | Likes: 2749 | Replies: 47 | Published: 2018-01-25T13:13:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "You sound like Mahendra Singh dhoni and you look like narendra modi of younger days.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "[COMMENT 8] Author: @rahulgoyal4463 | Likes: 68 | Replies: 0 | Published: 2018-06-16T06:56:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "Brilliant judgement",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 9] Author: @a-nuuj | Likes: 30 | Replies: 0 | Published: 2018-11-19T14:07:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "Wow . Really he does ...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 10] Author: @mulnivasibhim8045 | Likes: 37 | Replies: 0 | Published: 2018-11-24T07:06:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "Why Modi came here .....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 11] Author: @HimanshuSingh-kw3no | Likes: 4 | Replies: 0 | Published: 2018-12-17T16:05:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "Hahaha",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "[COMMENT 12] Author: @nitishtherealbeast5063 | Likes: 82 | Replies: 0 | Published: 2018-12-23T02:07:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "AANAD. Dhoni + Modi = Dhodi 🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "[COMMENT 13] Author: @surajkolhe8962 | Likes: 96 | Replies: 5 | Published: 2024-04-19T00:56:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "Legends are watching in 2024😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "[COMMENT 14] Author: @yashodharmogaveer | Likes: 0 | Replies: 0 | Published: 2024-05-16T14:22:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "😅",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 15] Author: @aleemuddintameem6383 | Likes: 0 | Replies: 0 | Published: 2024-08-29T18:05:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "Me ❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 16] Author: @merigavedardhi6051 | Likes: 0 | Replies: 0 | Published: 2024-11-21T05:57:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "😅😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 17] Author: @srinivasduggi | Likes: 1 | Replies: 0 | Published: 2024-12-01T10:59:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 18] Author: @mogesh23 | Likes: 1 | Replies: 0 | Published: 2025-05-28T12:28:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "Ultra legends in 2025",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 19] Author: @vishalgaire4767 | Likes: 109 | Replies: 0 | Published: 2019-07-14T07:50:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "1:25 feels like \"Every-day is awesome.\"🤩",
+              "likes": null
+            },
+            {
+              "comment_id": "c01492",
+              "author": "",
+              "text": "[COMMENT 476] Author: @mandalashashidhargoud2287 | Likes: 0 | Replies: 0 | Published: 2020-08-04T10:12:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01493",
+              "author": "",
+              "text": "Awesome bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01495",
+              "author": "",
+              "text": "[COMMENT 477] Author: @bhuneshwarsingh630 | Likes: 0 | Replies: 0 | Published: 2023-03-13T17:29:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01496",
+              "author": "",
+              "text": "i love your show",
+              "likes": null
+            },
+            {
+              "comment_id": "c01498",
+              "author": "",
+              "text": "[COMMENT 478] Author: @mohmoudfarah1897 | Likes: 0 | Replies: 0 | Published: 2022-02-21T08:14:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01499",
+              "author": "",
+              "text": "Thank you, buddy!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01501",
+              "author": "",
+              "text": "[COMMENT 479] Author: @chudark9277 | Likes: 0 | Replies: 0 | Published: 2019-11-30T13:00:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01502",
+              "author": "",
+              "text": "it is really helpful vivek",
+              "likes": null
+            },
+            {
+              "comment_id": "c01504",
+              "author": "",
+              "text": "[COMMENT 480] Author: @dhananjaysawai1456 | Likes: 0 | Replies: 0 | Published: 2019-07-14T07:17:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01505",
+              "author": "",
+              "text": "Awesome",
+              "likes": null
+            },
+            {
+              "comment_id": "c01507",
+              "author": "",
+              "text": "[COMMENT 481] Author: @surajghosh2.O | Likes: 0 | Replies: 0 | Published: 2022-11-21T15:44:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01508",
+              "author": "",
+              "text": "Thank you bro ❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01510",
+              "author": "",
+              "text": "[COMMENT 482] Author: @tejapandruvada7164 | Likes: 0 | Replies: 0 | Published: 2022-06-24T16:04:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01511",
+              "author": "",
+              "text": "Bro are you from Vizag I just saw kailasagiri when you saying about vitamin d",
+              "likes": null
+            },
+            {
+              "comment_id": "c01513",
+              "author": "",
+              "text": "[COMMENT 483] Author: @vedantsuryawanshi617 | Likes: 0 | Replies: 0 | Published: 2021-06-24T16:14:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01514",
+              "author": "",
+              "text": "Thanks vivek ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01516",
+              "author": "",
+              "text": "[COMMENT 484] Author: @nareshbhujade2697 | Likes: 0 | Replies: 0 | Published: 2021-05-02T04:51:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01517",
+              "author": "",
+              "text": "Very nice",
+              "likes": null
+            },
+            {
+              "comment_id": "c01519",
+              "author": "",
+              "text": "[COMMENT 485] Author: @amardeepmastker1417 | Likes: 0 | Replies: 0 | Published: 2022-07-03T17:36:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01520",
+              "author": "",
+              "text": "Superb sir",
+              "likes": null
+            },
+            {
+              "comment_id": "c01522",
+              "author": "",
+              "text": "[COMMENT 486] Author: @rainloxbu13.hesabimlasanaa15 | Likes: 0 | Replies: 0 | Published: 2021-02-13T09:03:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01523",
+              "author": "",
+              "text": "Nice video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01525",
+              "author": "",
+              "text": "[COMMENT 487] Author: @ibbrahm | Likes: 0 | Replies: 0 | Published: 2021-01-30T08:00:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01526",
+              "author": "",
+              "text": "Nice video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01528",
+              "author": "",
+              "text": "[COMMENT 488] Author: @aliniiiz_15 | Likes: 0 | Replies: 0 | Published: 2021-01-26T06:54:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01529",
+              "author": "",
+              "text": "Nice video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01531",
+              "author": "",
+              "text": "[COMMENT 489] Author: @zeynepileeglence2491 | Likes: 0 | Replies: 0 | Published: 2021-01-09T05:59:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01532",
+              "author": "",
+              "text": "Nice video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01534",
+              "author": "",
+              "text": "[COMMENT 490] Author: @assasionking7882 | Likes: 0 | Replies: 0 | Published: 2020-12-15T12:57:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01535",
+              "author": "",
+              "text": "Bro perfection",
+              "likes": null
+            },
+            {
+              "comment_id": "c01537",
+              "author": "",
+              "text": "[COMMENT 491] Author: @Actor_PRABHAS_08 | Likes: 1 | Replies: 0 | Published: 2022-07-16T11:53:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01538",
+              "author": "",
+              "text": "Most important video❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01540",
+              "author": "",
+              "text": "[COMMENT 492] Author: @moneymatters..07 | Likes: 0 | Replies: 0 | Published: 2019-02-16T00:54:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01541",
+              "author": "",
+              "text": "thnx bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01543",
+              "author": "",
+              "text": "[COMMENT 493] Author: @yudhistarsingh5954 | Likes: 0 | Replies: 0 | Published: 2021-05-10T11:36:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01544",
+              "author": "",
+              "text": "Artificial food colour in sweets n other food is harmful for human body n its alternative par plz ek video banaye.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01546",
+              "author": "",
+              "text": "[COMMENT 494] Author: @ajaysemwal6168 | Likes: 0 | Replies: 0 | Published: 2020-12-26T05:32:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01547",
+              "author": "",
+              "text": "Ur English is superb",
+              "likes": null
+            },
+            {
+              "comment_id": "c01549",
+              "author": "",
+              "text": "[COMMENT 495] Author: @Jsrdm | Likes: 0 | Replies: 0 | Published: 2023-01-12T16:15:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01550",
+              "author": "",
+              "text": "Superb bro 😎 😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01552",
+              "author": "",
+              "text": "[COMMENT 496] Author: @НурманАбдибаитов | Likes: 1 | Replies: 0 | Published: 2022-04-09T05:39:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01553",
+              "author": "",
+              "text": "Good job 💪",
+              "likes": null
+            },
+            {
+              "comment_id": "c01555",
+              "author": "",
+              "text": "[COMMENT 497] Author: @eneesy | Likes: 0 | Replies: 0 | Published: 2021-01-09T05:59:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01556",
+              "author": "",
+              "text": "Great",
+              "likes": null
+            },
+            {
+              "comment_id": "c01558",
+              "author": "",
+              "text": "[COMMENT 498] Author: @cumalibozdag1507 | Likes: 0 | Replies: 0 | Published: 2021-01-26T06:54:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01559",
+              "author": "",
+              "text": "Great",
+              "likes": null
+            },
+            {
+              "comment_id": "c01561",
+              "author": "",
+              "text": "[COMMENT 499] Author: @pmug04 | Likes: 0 | Replies: 0 | Published: 2021-02-13T07:25:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01562",
+              "author": "",
+              "text": "Great",
+              "likes": null
+            },
+            {
+              "comment_id": "c01564",
+              "author": "",
+              "text": "[COMMENT 500] Author: @avtarpanesar2179 | Likes: 0 | Replies: 0 | Published: 2022-06-21T11:07:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01565",
+              "author": "",
+              "text": "Good",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "Rpj-O4Lk6QI",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Boost Testosterone Naturally - 6 WAYS\\How to Boost Testosterone Naturally - 6 WAYS.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Boost Testosterone Naturally - 6 WAYS",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\Rpj-O4Lk6QI",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "Rpj-O4Lk6QI",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "medium",
+            "transcript_completeness": "usable",
+            "timestamp_count": 17,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 4816,
+            "transcript_words": 897,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "B",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "medium",
+              "completeness": "usable",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] Hello friends welcome to fit tuber let us talk about testosterone testosterone is a male hormone which is responsible for the growth of muscle mass it is responsible for the growth of hair on your body it improves sex drive bone density and strength our body produces testosterone naturally but because of [00:00:18] poor lifestyle low test levels in males is a common problem because of which they find it difficult to build muscles they start to lose out hair at a very early age and many other problems some some people inject testosterone in the form of drugs we must know that once we [00:00:34] start doing this our body stops producing testosterone naturally this is not an ideal condition and it has a lot of side effects so in this video I'm going to share with you six ways by which you can boost your testosterone [00:00:52] naturally the number one way by which you can boost your testosterone levels is by taking care of your diet and nutrition the foods that we eat impact our hormones in a POS positive or A negative way needless to say one should maintain a balanced di specifically talking about testosterone there are three ingredients that should be in your [00:01:08] diet on a daily basis these are zinc vitamin D and fats the foods which are rich in zinc are spinach kidney beans flax seeds garlic peanuts eggs brown rice Etc talking about vitamin D the best natural source available to us is [00:01:25] sunlight so one can sit in sunlight for 15 to 20 minutes on a daily basis however the foods rich in vitamin D are mushrooms tuna salmon eggs milk Etc fats especially saturated fat is very helpful in boosting the testosterone levels [00:01:42] however one should keep in mind that the daily recommended intake of saturated fat is not more than 20 G so some of the foods that are rich in saturated fats are egg yolks chicken coconut paner and other dairy products so if you include these Foods in your diet you will see [00:01:57] that your test levels will start increasing in second is exercise the right type of exercise can have a dramatic effect on the production of testosterone especially weight training when done even 3 to four times a week can boost your testosterone levels considerably Studies have shown that the [00:02:13] higher the intensity of workout is the greater will be the response of testosterone so doing short workouts of not more than 45 minutes to 1 hour with least amount of rest periods in between is very beneficial also do not miss a leg day legs have the biggest muscles in [00:02:29] your your body and training them on a regular basis can improve your testosterone levels substantially so weight training or any form of resistance training is one of the best ways to increase the production of testosterone third is sleep when it comes to sleep it is always about [00:02:44] quality and not quantity after you wake up in the morning from a good sound sleep your test levels are at Peak and slowly they drop by the evening so I would suggest you to have a sound sleep for about 7 to 8 hours in order to have a deep sleep you can do two things one [00:03:00] is that you maintain sleep timings other is that you stay away from your phone laptop and other electronic gadgets half an hour before you sleep believe me it will help you sleep very easily and you will have a sound sleep this in turn will boost your testosterone levels rapidly fourth is reduce stress when we [00:03:17] are stressed out our body produces a hormone called cortisol cortisol is inversely proportional to testosterone that means the higher the level of cortisol in the body the lower will be the testosterone apart from this there are a lot of disadvantages of having a high cortisol levels in the body so one [00:03:34] should make an effort to reduce the stress levels you can work out meditate or the best way is to spend some time doing something that you really love now there are three things that you should avoid or keep them in moderation when it comes to boosting your testosterone [00:03:49] levels these are alcohol cigarettes and processed sugar all three affect the body in such a way that it starts producing less amount of testosterone next is lose weight weight if you are overweight shedding a few kilos can increase your testosterone levels [00:04:04] according to studies overweight men are more likely to have low testosterone levels so basically if you follow the points that we have already discussed you will be able to optimize your body weight so friends these were some of the best and the most effective ways to boost your testosterone levels naturally [00:04:21] I hope you found this video helpful well if you did please do give it a thumbs up and also please do remember to subscribe to my channel my name is I thank you so much for watching"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1061,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: Rpj-O4Lk6QI",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @zhardik3teen | Likes: 1151 | Replies: 22 | Published: 2021-03-04T09:19:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "1. Nutrition... 00:51",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00011",
+                  "author": "",
+                  "text": "2. Exercise... 02:00",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "3. Sleep... 02:41",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "4. Reduce stress... 03:14",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00014",
+                  "author": "",
+                  "text": "5. Things to avoid (alchohol, tabacco, sugar)... 03:43",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "6. Lose weight... 03:58",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00017",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @gothicfps6240 | Likes: 15 | Replies: 0 | Published: 2021-06-25T23:44:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "Cigarettes only right. Weed can?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00020",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @ricoisthegoat4342 | Likes: 31 | Replies: 0 | Published: 2021-07-06T06:30:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "@gothicfps6240 weed kills brain cells homie. Not here to correct you but in my opinion you should stop smoking",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00023",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @barqodahabiya7483 | Likes: 4 | Replies: 0 | Published: 2021-07-18T15:34:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "Thnkz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00026",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @adixen3889 | Likes: 4 | Replies: 0 | Published: 2021-07-30T20:43:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "thanku bhai🤗",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @sahilgovekar5086 | Likes: 4 | Replies: 0 | Published: 2021-08-17T09:08:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "@ricoisthegoat4342 op bhai next level",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @anandpandey7164 | Likes: 2749 | Replies: 47 | Published: 2018-01-25T13:13:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "You sound like Mahendra Singh dhoni and you look like narendra modi of younger days.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @rahulgoyal4463 | Likes: 68 | Replies: 0 | Published: 2018-06-16T06:56:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "Brilliant judgement",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @a-nuuj | Likes: 30 | Replies: 0 | Published: 2018-11-19T14:07:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "Wow . Really he does ...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @mulnivasibhim8045 | Likes: 37 | Replies: 0 | Published: 2018-11-24T07:06:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "Why Modi came here .....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @HimanshuSingh-kw3no | Likes: 4 | Replies: 0 | Published: 2018-12-17T16:05:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "Hahaha",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @nitishtherealbeast5063 | Likes: 82 | Replies: 0 | Published: 2018-12-23T02:07:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "AANAD. Dhoni + Modi = Dhodi 🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @surajkolhe8962 | Likes: 96 | Replies: 5 | Published: 2024-04-19T00:56:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "Legends are watching in 2024😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @yashodharmogaveer | Likes: 0 | Replies: 0 | Published: 2024-05-16T14:22:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "😅",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @aleemuddintameem6383 | Likes: 0 | Replies: 0 | Published: 2024-08-29T18:05:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "Me ❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @merigavedardhi6051 | Likes: 0 | Replies: 0 | Published: 2024-11-21T05:57:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "😅😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @srinivasduggi | Likes: 1 | Replies: 0 | Published: 2024-12-01T10:59:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @mogesh23 | Likes: 1 | Replies: 0 | Published: 2025-05-28T12:28:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "Ultra legends in 2025",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @vishalgaire4767 | Likes: 109 | Replies: 0 | Published: 2019-07-14T07:50:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "1:25 feels like \"Every-day is awesome.\"🤩",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01492",
+                  "author": "",
+                  "text": "[COMMENT 476] Author: @mandalashashidhargoud2287 | Likes: 0 | Replies: 0 | Published: 2020-08-04T10:12:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01493",
+                  "author": "",
+                  "text": "Awesome bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01495",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @bhuneshwarsingh630 | Likes: 0 | Replies: 0 | Published: 2023-03-13T17:29:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01496",
+                  "author": "",
+                  "text": "i love your show",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01498",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @mohmoudfarah1897 | Likes: 0 | Replies: 0 | Published: 2022-02-21T08:14:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01499",
+                  "author": "",
+                  "text": "Thank you, buddy!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01501",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @chudark9277 | Likes: 0 | Replies: 0 | Published: 2019-11-30T13:00:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01502",
+                  "author": "",
+                  "text": "it is really helpful vivek",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01504",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @dhananjaysawai1456 | Likes: 0 | Replies: 0 | Published: 2019-07-14T07:17:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01505",
+                  "author": "",
+                  "text": "Awesome",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01507",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @surajghosh2.O | Likes: 0 | Replies: 0 | Published: 2022-11-21T15:44:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01508",
+                  "author": "",
+                  "text": "Thank you bro ❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01510",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @tejapandruvada7164 | Likes: 0 | Replies: 0 | Published: 2022-06-24T16:04:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01511",
+                  "author": "",
+                  "text": "Bro are you from Vizag I just saw kailasagiri when you saying about vitamin d",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01513",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @vedantsuryawanshi617 | Likes: 0 | Replies: 0 | Published: 2021-06-24T16:14:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01514",
+                  "author": "",
+                  "text": "Thanks vivek ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01516",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @nareshbhujade2697 | Likes: 0 | Replies: 0 | Published: 2021-05-02T04:51:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01517",
+                  "author": "",
+                  "text": "Very nice",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01519",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @amardeepmastker1417 | Likes: 0 | Replies: 0 | Published: 2022-07-03T17:36:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01520",
+                  "author": "",
+                  "text": "Superb sir",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01522",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @rainloxbu13.hesabimlasanaa15 | Likes: 0 | Replies: 0 | Published: 2021-02-13T09:03:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01523",
+                  "author": "",
+                  "text": "Nice video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01525",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @ibbrahm | Likes: 0 | Replies: 0 | Published: 2021-01-30T08:00:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01526",
+                  "author": "",
+                  "text": "Nice video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01528",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @aliniiiz_15 | Likes: 0 | Replies: 0 | Published: 2021-01-26T06:54:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01529",
+                  "author": "",
+                  "text": "Nice video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01531",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @zeynepileeglence2491 | Likes: 0 | Replies: 0 | Published: 2021-01-09T05:59:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01532",
+                  "author": "",
+                  "text": "Nice video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01534",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @assasionking7882 | Likes: 0 | Replies: 0 | Published: 2020-12-15T12:57:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01535",
+                  "author": "",
+                  "text": "Bro perfection",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01537",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @Actor_PRABHAS_08 | Likes: 1 | Replies: 0 | Published: 2022-07-16T11:53:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01538",
+                  "author": "",
+                  "text": "Most important video❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01540",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @moneymatters..07 | Likes: 0 | Replies: 0 | Published: 2019-02-16T00:54:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01541",
+                  "author": "",
+                  "text": "thnx bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01543",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @yudhistarsingh5954 | Likes: 0 | Replies: 0 | Published: 2021-05-10T11:36:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01544",
+                  "author": "",
+                  "text": "Artificial food colour in sweets n other food is harmful for human body n its alternative par plz ek video banaye.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01546",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @ajaysemwal6168 | Likes: 0 | Replies: 0 | Published: 2020-12-26T05:32:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01547",
+                  "author": "",
+                  "text": "Ur English is superb",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01549",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @Jsrdm | Likes: 0 | Replies: 0 | Published: 2023-01-12T16:15:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01550",
+                  "author": "",
+                  "text": "Superb bro 😎 😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01552",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @НурманАбдибаитов | Likes: 1 | Replies: 0 | Published: 2022-04-09T05:39:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01553",
+                  "author": "",
+                  "text": "Good job 💪",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01555",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @eneesy | Likes: 0 | Replies: 0 | Published: 2021-01-09T05:59:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01556",
+                  "author": "",
+                  "text": "Great",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01558",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @cumalibozdag1507 | Likes: 0 | Replies: 0 | Published: 2021-01-26T06:54:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01559",
+                  "author": "",
+                  "text": "Great",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01561",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @pmug04 | Likes: 0 | Replies: 0 | Published: 2021-02-13T07:25:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01562",
+                  "author": "",
+                  "text": "Great",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01564",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @avtarpanesar2179 | Likes: 0 | Replies: 0 | Published: 2022-06-21T11:07:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01565",
+                  "author": "",
+                  "text": "Good",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "Rpj-O4Lk6QI",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "medium",
+          "transcript_completeness": "usable",
+          "timestamp_count": 17,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 4816,
+          "transcript_words": 897,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "B",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "medium",
+            "completeness": "usable",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] Hello friends welcome to fit tuber let us talk about testosterone testosterone is a male hormone which is responsible for the growth of muscle mass it is responsible for the growth of hair on your body it improves sex drive bone density and strength our body produces testosterone naturally but because of [00:00:18] poor lifestyle low test levels in males is a common problem because of which they find it difficult to build muscles they start to lose out hair at a very early age and many other problems some some people inject testosterone in the form of drugs we must know that once we [00:00:34] start doing this our body stops producing testosterone naturally this is not an ideal condition and it has a lot of side effects so in this video I'm going to share with you six ways by which you can boost your testosterone [00:00:52] naturally the number one way by which you can boost your testosterone levels is by taking care of your diet and nutrition the foods that we eat impact our hormones in a POS positive or A negative way needless to say one should maintain a balanced di specifically talking about testosterone there are three ingredients that should be in your [00:01:08] diet on a daily basis these are zinc vitamin D and fats the foods which are rich in zinc are spinach kidney beans flax seeds garlic peanuts eggs brown rice Etc talking about vitamin D the best natural source available to us is [00:01:25] sunlight so one can sit in sunlight for 15 to 20 minutes on a daily basis however the foods rich in vitamin D are mushrooms tuna salmon eggs milk Etc fats especially saturated fat is very helpful in boosting the testosterone levels [00:01:42] however one should keep in mind that the daily recommended intake of saturated fat is not more than 20 G so some of the foods that are rich in saturated fats are egg yolks chicken coconut paner and other dairy products so if you include these Foods in your diet you will see [00:01:57] that your test levels will start increasing in second is exercise the right type of exercise can have a dramatic effect on the production of testosterone especially weight training when done even 3 to four times a week can boost your testosterone levels considerably Studies have shown that the [00:02:13] higher the intensity of workout is the greater will be the response of testosterone so doing short workouts of not more than 45 minutes to 1 hour with least amount of rest periods in between is very beneficial also do not miss a leg day legs have the biggest muscles in [00:02:29] your your body and training them on a regular basis can improve your testosterone levels substantially so weight training or any form of resistance training is one of the best ways to increase the production of testosterone third is sleep when it comes to sleep it is always about [00:02:44] quality and not quantity after you wake up in the morning from a good sound sleep your test levels are at Peak and slowly they drop by the evening so I would suggest you to have a sound sleep for about 7 to 8 hours in order to have a deep sleep you can do two things one [00:03:00] is that you maintain sleep timings other is that you stay away from your phone laptop and other electronic gadgets half an hour before you sleep believe me it will help you sleep very easily and you will have a sound sleep this in turn will boost your testosterone levels rapidly fourth is reduce stress when we [00:03:17] are stressed out our body produces a hormone called cortisol cortisol is inversely proportional to testosterone that means the higher the level of cortisol in the body the lower will be the testosterone apart from this there are a lot of disadvantages of having a high cortisol levels in the body so one [00:03:34] should make an effort to reduce the stress levels you can work out meditate or the best way is to spend some time doing something that you really love now there are three things that you should avoid or keep them in moderation when it comes to boosting your testosterone [00:03:49] levels these are alcohol cigarettes and processed sugar all three affect the body in such a way that it starts producing less amount of testosterone next is lose weight weight if you are overweight shedding a few kilos can increase your testosterone levels [00:04:04] according to studies overweight men are more likely to have low testosterone levels so basically if you follow the points that we have already discussed you will be able to optimize your body weight so friends these were some of the best and the most effective ways to boost your testosterone levels naturally [00:04:21] I hope you found this video helpful well if you did please do give it a thumbs up and also please do remember to subscribe to my channel my name is I thank you so much for watching"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1061,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: Rpj-O4Lk6QI",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @zhardik3teen | Likes: 1151 | Replies: 22 | Published: 2021-03-04T09:19:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "1. Nutrition... 00:51",
+                "likes": null
+              },
+              {
+                "comment_id": "c00011",
+                "author": "",
+                "text": "2. Exercise... 02:00",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "3. Sleep... 02:41",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "4. Reduce stress... 03:14",
+                "likes": null
+              },
+              {
+                "comment_id": "c00014",
+                "author": "",
+                "text": "5. Things to avoid (alchohol, tabacco, sugar)... 03:43",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "6. Lose weight... 03:58",
+                "likes": null
+              },
+              {
+                "comment_id": "c00017",
+                "author": "",
+                "text": "[COMMENT 2] Author: @gothicfps6240 | Likes: 15 | Replies: 0 | Published: 2021-06-25T23:44:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "Cigarettes only right. Weed can?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00020",
+                "author": "",
+                "text": "[COMMENT 3] Author: @ricoisthegoat4342 | Likes: 31 | Replies: 0 | Published: 2021-07-06T06:30:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "@gothicfps6240 weed kills brain cells homie. Not here to correct you but in my opinion you should stop smoking",
+                "likes": null
+              },
+              {
+                "comment_id": "c00023",
+                "author": "",
+                "text": "[COMMENT 4] Author: @barqodahabiya7483 | Likes: 4 | Replies: 0 | Published: 2021-07-18T15:34:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "Thnkz",
+                "likes": null
+              },
+              {
+                "comment_id": "c00026",
+                "author": "",
+                "text": "[COMMENT 5] Author: @adixen3889 | Likes: 4 | Replies: 0 | Published: 2021-07-30T20:43:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "thanku bhai🤗",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "[COMMENT 6] Author: @sahilgovekar5086 | Likes: 4 | Replies: 0 | Published: 2021-08-17T09:08:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "@ricoisthegoat4342 op bhai next level",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "[COMMENT 7] Author: @anandpandey7164 | Likes: 2749 | Replies: 47 | Published: 2018-01-25T13:13:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "You sound like Mahendra Singh dhoni and you look like narendra modi of younger days.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "[COMMENT 8] Author: @rahulgoyal4463 | Likes: 68 | Replies: 0 | Published: 2018-06-16T06:56:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "Brilliant judgement",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 9] Author: @a-nuuj | Likes: 30 | Replies: 0 | Published: 2018-11-19T14:07:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "Wow . Really he does ...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 10] Author: @mulnivasibhim8045 | Likes: 37 | Replies: 0 | Published: 2018-11-24T07:06:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "Why Modi came here .....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 11] Author: @HimanshuSingh-kw3no | Likes: 4 | Replies: 0 | Published: 2018-12-17T16:05:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "Hahaha",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "[COMMENT 12] Author: @nitishtherealbeast5063 | Likes: 82 | Replies: 0 | Published: 2018-12-23T02:07:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "AANAD. Dhoni + Modi = Dhodi 🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "[COMMENT 13] Author: @surajkolhe8962 | Likes: 96 | Replies: 5 | Published: 2024-04-19T00:56:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "Legends are watching in 2024😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "[COMMENT 14] Author: @yashodharmogaveer | Likes: 0 | Replies: 0 | Published: 2024-05-16T14:22:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "😅",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 15] Author: @aleemuddintameem6383 | Likes: 0 | Replies: 0 | Published: 2024-08-29T18:05:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "Me ❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 16] Author: @merigavedardhi6051 | Likes: 0 | Replies: 0 | Published: 2024-11-21T05:57:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "😅😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 17] Author: @srinivasduggi | Likes: 1 | Replies: 0 | Published: 2024-12-01T10:59:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 18] Author: @mogesh23 | Likes: 1 | Replies: 0 | Published: 2025-05-28T12:28:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "Ultra legends in 2025",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 19] Author: @vishalgaire4767 | Likes: 109 | Replies: 0 | Published: 2019-07-14T07:50:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "1:25 feels like \"Every-day is awesome.\"🤩",
+                "likes": null
+              },
+              {
+                "comment_id": "c01492",
+                "author": "",
+                "text": "[COMMENT 476] Author: @mandalashashidhargoud2287 | Likes: 0 | Replies: 0 | Published: 2020-08-04T10:12:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01493",
+                "author": "",
+                "text": "Awesome bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01495",
+                "author": "",
+                "text": "[COMMENT 477] Author: @bhuneshwarsingh630 | Likes: 0 | Replies: 0 | Published: 2023-03-13T17:29:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01496",
+                "author": "",
+                "text": "i love your show",
+                "likes": null
+              },
+              {
+                "comment_id": "c01498",
+                "author": "",
+                "text": "[COMMENT 478] Author: @mohmoudfarah1897 | Likes: 0 | Replies: 0 | Published: 2022-02-21T08:14:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01499",
+                "author": "",
+                "text": "Thank you, buddy!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01501",
+                "author": "",
+                "text": "[COMMENT 479] Author: @chudark9277 | Likes: 0 | Replies: 0 | Published: 2019-11-30T13:00:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01502",
+                "author": "",
+                "text": "it is really helpful vivek",
+                "likes": null
+              },
+              {
+                "comment_id": "c01504",
+                "author": "",
+                "text": "[COMMENT 480] Author: @dhananjaysawai1456 | Likes: 0 | Replies: 0 | Published: 2019-07-14T07:17:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01505",
+                "author": "",
+                "text": "Awesome",
+                "likes": null
+              },
+              {
+                "comment_id": "c01507",
+                "author": "",
+                "text": "[COMMENT 481] Author: @surajghosh2.O | Likes: 0 | Replies: 0 | Published: 2022-11-21T15:44:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01508",
+                "author": "",
+                "text": "Thank you bro ❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01510",
+                "author": "",
+                "text": "[COMMENT 482] Author: @tejapandruvada7164 | Likes: 0 | Replies: 0 | Published: 2022-06-24T16:04:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01511",
+                "author": "",
+                "text": "Bro are you from Vizag I just saw kailasagiri when you saying about vitamin d",
+                "likes": null
+              },
+              {
+                "comment_id": "c01513",
+                "author": "",
+                "text": "[COMMENT 483] Author: @vedantsuryawanshi617 | Likes: 0 | Replies: 0 | Published: 2021-06-24T16:14:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01514",
+                "author": "",
+                "text": "Thanks vivek ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01516",
+                "author": "",
+                "text": "[COMMENT 484] Author: @nareshbhujade2697 | Likes: 0 | Replies: 0 | Published: 2021-05-02T04:51:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01517",
+                "author": "",
+                "text": "Very nice",
+                "likes": null
+              },
+              {
+                "comment_id": "c01519",
+                "author": "",
+                "text": "[COMMENT 485] Author: @amardeepmastker1417 | Likes: 0 | Replies: 0 | Published: 2022-07-03T17:36:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01520",
+                "author": "",
+                "text": "Superb sir",
+                "likes": null
+              },
+              {
+                "comment_id": "c01522",
+                "author": "",
+                "text": "[COMMENT 486] Author: @rainloxbu13.hesabimlasanaa15 | Likes: 0 | Replies: 0 | Published: 2021-02-13T09:03:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01523",
+                "author": "",
+                "text": "Nice video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01525",
+                "author": "",
+                "text": "[COMMENT 487] Author: @ibbrahm | Likes: 0 | Replies: 0 | Published: 2021-01-30T08:00:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01526",
+                "author": "",
+                "text": "Nice video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01528",
+                "author": "",
+                "text": "[COMMENT 488] Author: @aliniiiz_15 | Likes: 0 | Replies: 0 | Published: 2021-01-26T06:54:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01529",
+                "author": "",
+                "text": "Nice video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01531",
+                "author": "",
+                "text": "[COMMENT 489] Author: @zeynepileeglence2491 | Likes: 0 | Replies: 0 | Published: 2021-01-09T05:59:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01532",
+                "author": "",
+                "text": "Nice video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01534",
+                "author": "",
+                "text": "[COMMENT 490] Author: @assasionking7882 | Likes: 0 | Replies: 0 | Published: 2020-12-15T12:57:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01535",
+                "author": "",
+                "text": "Bro perfection",
+                "likes": null
+              },
+              {
+                "comment_id": "c01537",
+                "author": "",
+                "text": "[COMMENT 491] Author: @Actor_PRABHAS_08 | Likes: 1 | Replies: 0 | Published: 2022-07-16T11:53:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01538",
+                "author": "",
+                "text": "Most important video❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01540",
+                "author": "",
+                "text": "[COMMENT 492] Author: @moneymatters..07 | Likes: 0 | Replies: 0 | Published: 2019-02-16T00:54:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01541",
+                "author": "",
+                "text": "thnx bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01543",
+                "author": "",
+                "text": "[COMMENT 493] Author: @yudhistarsingh5954 | Likes: 0 | Replies: 0 | Published: 2021-05-10T11:36:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01544",
+                "author": "",
+                "text": "Artificial food colour in sweets n other food is harmful for human body n its alternative par plz ek video banaye.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01546",
+                "author": "",
+                "text": "[COMMENT 494] Author: @ajaysemwal6168 | Likes: 0 | Replies: 0 | Published: 2020-12-26T05:32:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01547",
+                "author": "",
+                "text": "Ur English is superb",
+                "likes": null
+              },
+              {
+                "comment_id": "c01549",
+                "author": "",
+                "text": "[COMMENT 495] Author: @Jsrdm | Likes: 0 | Replies: 0 | Published: 2023-01-12T16:15:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01550",
+                "author": "",
+                "text": "Superb bro 😎 😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01552",
+                "author": "",
+                "text": "[COMMENT 496] Author: @НурманАбдибаитов | Likes: 1 | Replies: 0 | Published: 2022-04-09T05:39:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01553",
+                "author": "",
+                "text": "Good job 💪",
+                "likes": null
+              },
+              {
+                "comment_id": "c01555",
+                "author": "",
+                "text": "[COMMENT 497] Author: @eneesy | Likes: 0 | Replies: 0 | Published: 2021-01-09T05:59:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01556",
+                "author": "",
+                "text": "Great",
+                "likes": null
+              },
+              {
+                "comment_id": "c01558",
+                "author": "",
+                "text": "[COMMENT 498] Author: @cumalibozdag1507 | Likes: 0 | Replies: 0 | Published: 2021-01-26T06:54:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01559",
+                "author": "",
+                "text": "Great",
+                "likes": null
+              },
+              {
+                "comment_id": "c01561",
+                "author": "",
+                "text": "[COMMENT 499] Author: @pmug04 | Likes: 0 | Replies: 0 | Published: 2021-02-13T07:25:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01562",
+                "author": "",
+                "text": "Great",
+                "likes": null
+              },
+              {
+                "comment_id": "c01564",
+                "author": "",
+                "text": "[COMMENT 500] Author: @avtarpanesar2179 | Likes: 0 | Replies: 0 | Published: 2022-06-21T11:07:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01565",
+                "author": "",
+                "text": "Good",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_restricted_intelligence_20260904_090714_8ddbdc",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090714_8ddbdc",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Healthy lifestyle hacks and general wellness — partial transcript",
+      "batch_number": 25,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "batch_instruction": "This is independently importable batch 25 of 35 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260904_090714_8ddbdc",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260904_090714_8ddbdc"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090714_8ddbdc",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Healthy lifestyle hacks and general wellness — partial transcript",
+      "batch_number": 25,
+      "batch_total": 35,
+      "batch_size": 8
+    }
+  },
+  "manifest": {
+    "request_id": "72faa77e-0429-4cba-aadf-99eff5bba611",
+    "package_id": "vh_restricted_intelligence_20260904_090714_8ddbdc",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "rEPsDiWn9O0"
+    ],
+    "evidence_grades": {
+      "rEPsDiWn9O0": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Healthy lifestyle hacks and general wellness — partial transcript",
+      "batch_number": 25,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "hashes": {
+      "evidence.json": "e2e4cef03fe4bf821c724edc3282f5ddcf1918e7ec98a248f3aa70beda4384ef",
+      "prompt.json": "7bf11efbd72c936e4cea73f51c0438e06fdc6c40ae81c6447a20e45caad224e4",
+      "schema.json": "65a758a6f87c2365b94d379446ddc69730634db7a8ff1541833bdf9501f0c777"
+    },
+    "created_at": "2026-09-04 09:07:14",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "rEPsDiWn9O0",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=rEPsDiWn9O0",
+        "original_title": "How to Take Care of Your Parents' Health? (Before It's Too Late)",
+        "clean_title": "How to Take Care of Your Parents' Health (Before It's Too Late)",
+        "channel": "Fit Tuber",
+        "upload_date": "2025-03-07",
+        "description": "How to take good care of our ageing parents' health - 5 Simple and Effective\n👉 Register for 3 hour Hands on Training on AI for FREE:  https://link.growthschool.io/RFE\n👉 100% Discount + ₹5000 BONUS for first 1500 people \n👉 Join Exclusive WhatsApp community For Regular and important updates : https://link.growthschool.io/RFW\n\n00:00 - Introduction\n01:03 - 3 Most Important Vitamins that can change the health of your parents fast\n03:36 - Shift them from 3 Grain meals to 2 Grain meals - this is why\n05:02 - 3 Simple Tips to amp up digestion of the elderly\n06:00 - Encourage your parents to stay active - 3 simple ways\n08:04 - Encourage them to have early dinner\n09:11 - Best Supplement for parents\n10:23 - Do this to instantly improve your parents' health \n14:03 - The most important point to improve parents' health\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored & Amazon Affiliate Links)\nVitamin D Supplement (take after consulting a doctor)  - https://amzn.to/3FbtuZa\nVitamin D Supplement (option 2) - https://amzn.to/41xH3cC\nMoringa Powder to be mixed in dough - https://amzn.to/41HrQqR\nWheatgrass Juice - https://amzn.to/4kwtbIr\nPlant Based B12 Supplement - https://amzn.to/4byDYO5\nPlant Based B12 Supplement (option 2) - https://amzn.to/3DiO8WH\nFlaxseeds (option 1) - https://amzn.to/3AyDzgK\nFlaxseeds (option 2) - https://amzn.to/3Cix0iQ\nRaisins - https://amzn.to/3DlGuuB\nWalnuts (option 1) - https://amzn.to/4esbhCE\nWalnuts (option 2) - https://amzn.to/40Ds7Ly\nOrganic Chia Seed Powder (option 1) - https://amzn.to/3CdEHHc\nChia Seeds Whole (option 2) - https://amzn.to/48AZxMN\nSabja Seeds (option 1) - https://amzn.to/3UEyEBL\nSabja Seeds (option 2) - https://amzn.to/3UFJc3q\nOrganic Kaali Urad dal - https://amzn.to/3YWCYyA\nNormal Kaali Urad dal (option 2) - https://amzn.to/3Cjonoj\nOrganic Rajma (option 1) - https://amzn.to/4eiScmi\nNormal Rajma (option 2) - https://amzn.to/3YGHMXw\nNon GMO SoyabeanTofu (option 1) - https://amzn.to/3YKQnsC\nCold Pressed Mustard oil (option 1) - https://amzn.to/3UFJxDe\nCold Pressed Mustard oil (option 2) - https://amzn.to/40B1uqg\nA2 Cow Ghee (Non Bilona) - https://amzn.to/3UGcjnw\nA2 cow ghee (Bilona) - https://amzn.to/3AzVnbh\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n5 Best Sunscreens in India (in 2025)\nhttps://youtu.be/gaMrnhFILJc?si=6TVWP-6W3wemIkxR\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored & Amazon Affiliate Links)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:14] [Music] wow we can never truly estimate how many difficulties our parents faced while raising us when we were children whether it was Financial struggles finding time for us or dealing with other challenges they always put our upbringing above every everything else often sacrificing [00:00:32] their own needs of course we all want to help them but sometimes we just don't know how there are many things that if done now can significantly benefit their health in the long run and that's exactly the purpose of this video in this video we will discuss five things [00:00:47] that I believe can help us take better care of our parents we'll try to keep this video practical and interesting so without any further delay let's get started Hello friends welcome to Fed tuber as we age our bone density starts [00:01:03] decreasing energy levels drop brain cells weaken and the risk of diabetes and blood pressure increases while a balanced diet is essential there are three nutrients that deserve special attention first is vitamin D if the body lacks Vitamin D it fails to absorb [00:01:20] calcium from food since bones weaken with age it is crucial to focus on maintaining adequate vitamin D levels vitamin D also strengthens immunity keeps the mood positive and prevents muscle weakness but how do we get it no doubt the best source of vitamin D is [00:01:36] sunlight if your parents can sit in the Sun for about 30 to 40 minutes every morning while wearing white cotton clothes their vitamin D levels will shoot up if that's not possible Vitamin D supplements can also be taken after Consulting a doctor second is vitamin [00:01:52] B12 you may have noticed that memory loss and cognitive decline are very common in old age however if a person starts taking care of their vitamin B12 intake from the age of 40 to 50 these problems can be avoided that's because B12 keeps the brain sharp and active [00:02:10] additionally it helps prevent fatigue anemia and eye degeneration the best vegetarian sources of vitamin B12 are Moringa leaves and wheat grass juice wheat grass juice is easily available and If you have a moringa tree nearby you can use its leaves in dough to make [00:02:27] roties if fresh leaves are not available Moringa powder is a great alternative and can be mixed into dough or used as a spice in vegetables and dlls I've also shared some plant-based B12 supplements in this video which can be used as well third are omega-3 fatty acids for heart [00:02:45] health brain function preventing autoimmune diseases and reducing inflammation in the body omega-3 is most effective the best sources of omega3 are flax seeds chia seeds basil seeds saja seeds walnuts black UR Dal spinach [00:03:01] kidney beans cold pressed mustard oil and a to Bona goe so I think we should forget about regular meals and make them eat only these three nutrients all day of course not the key is to ensure that your parents maintain a balanced homecooked diet while keeping these [00:03:17] three micronutrients in mind it's not necessary to consume them daily just incorporate them into their diet based on time and season be sure that doing this will make their old age much easier and healthier the second thing that will further help in absorbing the three [00:03:33] essential nutrients is to encourage your parents to shift from three grain meals to two grain meals a day see as we age our digestion also slows down and it is a fact that as compared to other Foods grains take the longest time to digest after the age of 4050 their digestive [00:03:50] system will get a lot of relief if you help them transition from three grain meals to two for example they can have breakfast around 10 11 a.m. and then dinner by 600 7: p.m. in between whenever they feel hungry they can eat fruits dry fruits salad vegetable juice [00:04:07] or in Winter flax seed or Sesame jagy lados this will give them two benefits first it will reduce the load on their digestive system while ensuring their body absorbs more nutrients second the energy that was earlier being used to digest food will now be used for healing [00:04:24] as a result diseases will start reversing and they will live longer because even science to does not doubt the fact that eating less leads to a longer and healthier life yes beta it is true that as we age digestion weakens can you share some more tips that will [00:04:40] help improve digestion in old age when the digestive system is strong even the unhealthiest of food might not show any major impact on the body but if digestion is weak even healthy food has to be consumed carefully in old age this is a natural problem you can understand [00:04:56] how important digestion is from the fact that 95% % of diseases originate from the stomach in such a situation two three simple things can be done Roi is heavy to digest but it is also a staple food of India so to make Roti more digestible while kneading the dough add [00:05:13] half to 1 teaspoon of agne this simple step will make the Roti much easier to digest another option is fermented RTI while kneading the dough add one or two spoons of curd along with water then knead it well cover it and let it sit for 6 to 8 hours the dough will will [00:05:29] ferment and Rise slightly now make Roti from this dough this fermented Roy will increase the quantity of good bacteria in the gut similarly fermented rice is commonly eaten in many parts of India basically cooked rice is soaked in water mixed with curd and left overnight in [00:05:46] the morning spices are added and then it is eaten in the same way consuming probiotic Rich fermented foods and fiber rich Prebiotic foods helps maintain a healthy gut which keeps digestion strong the next point point is to encourage your parents to stay active think of it [00:06:03] this way if you stop using a machine for a long time it starts rusting similarly if we don't move our bodies their flexibility strength and capacity begins to decline in the younger years most people stay active due to work and daily responsibilities but after 50 60 their [00:06:20] activity levels drop significantly there are three simple ways to help your parents stay active the first and the best way is walking whether it's a morning walk and after dinner walk or just a casual stroll in fresh air walking is not only great for physical [00:06:35] health but also works wonders for mental well-being in fact for those with diabetes and high blood pressure walking after meals is one of the best exercises the second is stretching exercises these days if you go to any park in the morning you are likely to see groups of [00:06:50] people doing stretching exercises together encourage your parents to join such groups it will not only improve their health but will also provide social interaction which is also important for their well-being the third is pranayam breathing exercises like kapal bhati anulom vom and Bram improve [00:07:07] blood circulation and release Feelgood hormones in the brain if your parents can practice 15 20 minutes of yoga daily it will benefit them immensely they can do it in an open park or simply follow a guided video at home but what about weight training there is no doubt that [00:07:23] weight training helps increase bone density and muscle strength making it a great form of exercise if your parents are interested that's amazing but if they are not Don't force them in fact I have seen many young people forcing their 60 year-old parents to drink protein shakes please don't do this at [00:07:41] this age there is no need for protein shakes while protein is an essential macronutrient they can get plenty of it from lentils and Natural Foods the key takeaway is instead of forcing them encourage them to stay active in a way they enjoy initially they may hesitate [00:07:56] but once they get used to it they will not only like but they will also experience great benefits another important thing you can help them with is encouraging them to have an early dinner ideally everyone should eat dinner early and go to bed by 10: 11:00 p.m. however even if you stay up late [00:08:13] try to ensure that at least your parents have their dinner by 6:00 700 p.m. and they go to bed by 10:00 p.m. night sleep is meant for the night and as age increases if the body does not function according to the Circadian rhythm the risk of health problems Rises imagine a [00:08:30] 20-year-old working a Night Shift versus a 60-year-old working a night shift do you think their bodies will respond in the same way a 20-year-old might not even notice that their body is putting in extra effort but in old age the effects of such changes become visible [00:08:45] much more quickly it's like sitting on two different chairs one weak and one strong if you sit on a weak chair it might break making you fall but a strong chair will easily bear your weight similarly you need to understand that your parents are aging create an environment for them where they [00:09:01] naturally fall asleep by 10 11:00 p.m. this will give them quality sleep along with 36 other benefits that science might not have even discovered yet can you suggest some supplements for parents look the first thing that I would say is that you shouldn't get caught up in taking too many supplements if someone [00:09:18] eats seasonal vegetables fruits and grains in rotation they don't need many supplements companies want you to believe that you need a pill for everything however still if I have to suggest something one one tablet of ashwagandha and shatavari taken at night [00:09:34] with milk or water are not only safe but also highly effective take them continuously for 2 months and then stop for 15 20 days similarly in Winters a small amount of shilajit can be taken with milk or water these two supplements strengthen the body's core and prevent [00:09:51] weakness raisins are also a great natural supplement take a handful of raisins rinse them and soak them in half a glass of water for for 8 to 10 hours when they feel hungry in the afternoon they can eat the soaked raisins along with the water this not only increases [00:10:06] blood count but also provide multiple health benefits additionally foods like amla Moringa wheat grass and flax seeds are no less than supplements themselves there is no need to get too caught up in market-based products eat less but eat nutritious my parents have major health [00:10:24] issues can you suggest something that will instantly improve their health yes there is one thing that that will instantly benefit your parents and that is undergoing punch Karma therapy punch karma is an ayurvedic practice that removes toxins from the body through five different methods regardless of [00:10:40] whether your parents have any health issues undergoing punch Karma treatment will immediately improve their well-being of course they should not be done at home but under the supervision of an ayurvedic expert at a punch Karma Center there are many such centers but I will only recommend those where I have [00:10:56] firsthand experience but before I mention that let me clarify that these are not sponsored names I have no association with these institutions either I or my close family members have availed Services here as regular clients and I'm sharing those experiences with [00:11:12] you first is the patanjali yog P Center in harid run under the guidance of Baba ramdev and achara Bal Krishna this punch Karma Center offers consultations with doctors who suggest ayurvedic and naturopathy therapies accordingly a minimum stay of 7 days is required [00:11:28] during which a strict diet is suggested there are yoga and pranayam sessions in the morning and evening along with anutra therapy all included in one package comfortable double bedrooms are provided and the facilities are good regardless of your parents health status [00:11:44] they will feel better after staying here for a week the second option is the natural Lifestyle Center in New Delhi this Center is based on naturopathy while the accommodation facilities are okay okay the therapies and diet are highly effective after spending a few days here your parents bodies will [00:12:00] detoxify leading to noticeable health benefits in terms of pricing pangali is more economical compared to Natural Lifestyle the third option is the Arya vya Shala kakal punch Karma Center in Kerala the ayurvedic therapies here are good but there is no strict control over [00:12:17] diet which is why I would rate it a bit low a better option is Shri daram punch Karma Center also in Kerala this is an authentic ayurvedic punch Karma Center where special attention is given to diet and and other subtle aspects of healing these four punch Karma centers are those [00:12:33] which I have firsthand experien there may be many other such centers across India and you can check according to your preference ayura states that undergoing punch Karma can add a few years to one's life essentially the point is that you should send your parents to a punch Karma Center for at [00:12:50] least a week every 2 years this will help detoxify their bodies regularly and prevent diseases from taking hold now let's discuss the most rated but perhaps the most important point but before that I want to talk about growth school friends in today's time having knowledge [00:13:06] of artificial intelligence can make it much easier to find a new job or excel in a current one this is a paid Workshop but it is completely free for the first 1500 members of the fit T Community not only that after completing this Workshop you will also receive a 5,000 rupees [00:13:23] bonus whether your background is technical or non-technical this Workshop will be helpful for you in this training you will learn job hunting strategies salary hike strategies how to solve complex data problems using AI presentation skills personal branding among many other things over 1 million [00:13:40] people have attended this training and based on reviews I think it is definitely worth doing moreover it's free so you can comfortably attend from your home so register as soon as possible the link is provided in the description box you can also join their WhatsApp group to receive all updates I [00:13:55] think it will be beneficial for generating side income in 2025 now let's shift from artificial intelligence to emotional intelligence emotionally support your parents all other points aside this single point outweighs them all it is often seen that as children [00:14:11] grow up they start communicating less openly with their parents but this should not happen and this is not just an opinion Studies have shown that emotional disconnect can lead to physical illnesses on the other hand if parents receive emotional support in old [00:14:26] age the recovery can be significant ly faster essentially it is now your turn to take care of them taking care does not just mean providing them with facilities while you stay busy with your own life talk to them ask them how they're doing even if it is just over the phone they should feel that they are [00:14:43] important to you I don't think we need a scientific study to understand this what do you think to quickly recap ensure your parents TI includes vitamin D vitamin B12 and omega-3 fatty acids encourage them to shift from three grain meals to two grain meals in between they [00:14:59] can have fruits dry fruits salads milk or juice keep them active with regular walking stretching pranam or weight training whatever they enjoy create a home environment where they have dinner by 600 700 p.m. and sleep by 10:00 p.m. ashwagandha shavi in summers and [00:15:16] shilajit in Winters along with amla soaked raisins are highly nutritious supplements for them every 2 years send them to a punch Karma Center for a few days to detoxify their bodies and instantly improve their health and most importantly stay emotionally connected [00:15:31] with them which point do you think is most helpful let me know in the comments if you want to know the best sunscreen in India in 2025 check out this video my name is VI I thank you so much for watching"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1089,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: rEPsDiWn9O0",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @ayush.kumar1 | Likes: 532 | Replies: 3 | Published: 2025-03-07T13:45:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "That \" Before its too late \" in the video title is the sole reason any son/daughter will watch this video.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @j-svn | Likes: 8 | Replies: 0 | Published: 2025-03-07T14:13:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "And that's a nice thing",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @ayush.kumar1 | Likes: 2 | Replies: 0 | Published: 2025-03-07T14:53:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "@jeevan-gjj yes!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @_Rachna_Kumari_ | Likes: 2 | Replies: 0 | Published: 2025-03-07T16:49:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "That's because I am watching it",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @shaunak1963 | Likes: 1162 | Replies: 32 | Published: 2025-03-07T13:33:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Who else agrees that he is the best content creator ♥️",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @umadammani643 | Likes: 0 | Replies: 0 | Published: 2025-03-07T14:23:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Beta bahut hi acha bataya nacho one to Dhyan rakhnahi chahiye par hamne bhi hamara Dhyan Rachna jaruri hai bathrum Sidhiy pe rod achi slipper n last wala to tumne bahut hi acha bataya ma bap bachhoko rah dekh te hai ki wo kab hamare pas aayega poochega bahut hi badhiya vid aashirwad",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @rishabhverma3704 | Likes: 1 | Replies: 0 | Published: 2025-03-07T14:48:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "I ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @rasowye1139 | Likes: 4 | Replies: 0 | Published: 2025-03-07T16:19:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "Absolutely no doubt.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @sukantadatta7003 | Likes: 4 | Replies: 0 | Published: 2025-03-07T16:30:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "Absolutely.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @priyanshunaithani3711 | Likes: 2 | Replies: 0 | Published: 2025-03-07T16:32:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Absolutely iam following fituber from past 5 years and my life changed....no words can express my feelings to fituber ❤❤❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @sunshinee0695 | Likes: 276 | Replies: 7 | Published: 2025-03-07T14:13:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "My parents are in thier 50's, I always take care of thier deit, massage their feet at night, castor oil for eye lids. Try to cook traditional food..They literally call me dadi ma of the house. 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @SujataPalMathematicstrader | Likes: 13 | Replies: 0 | Published: 2025-03-07T16:53:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "You are so caring❤❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @harendrapratap1247 | Likes: 9 | Replies: 0 | Published: 2025-03-07T17:44:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "That's great work 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 14] Author: @roniths9293 | Likes: 19 | Replies: 0 | Published: 2025-03-07T18:45:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "They are really blessed to have you as their child! 😇",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 15] Author: @niharika2053 | Likes: 5 | Replies: 0 | Published: 2025-03-10T12:35:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Caring cool dadimaa❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 16] Author: @lakshmi1994-d4t | Likes: 0 | Replies: 0 | Published: 2025-03-12T05:34:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "I too want such kids",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 17] Author: @rasowye1139 | Likes: 354 | Replies: 17 | Published: 2025-03-07T17:05:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Modi govt ne ek kuch faltu bematlab ke you tube infuencers ko award de diya. Par Vivek bhaiyya jaise acche aur sacche highly creative content creators ki taraf dhyan nahi diya. Maine vote diya tha Fittuber channel ko ki ye deserving hai aur award jite. Par jab winners dekhe to laga ki ye award hi kabil nahi hai Vivek bhaiyya jaise genuine you tubers ke liye.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "Aapne mere jaise anek logo ki zindagi badal di hai. Aap hum sab se aise syncronise ho gaye ho jaise Ishwar hum sab mai jaise ek hota hai par abhivyakti alag alag hoti hai. Apko koti koti dhanyawad aur khub sara pyar! 🙏🏼❤🙏🏼",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "Long live Fittuber!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "Love you Vivek bhaiyya!! ❤❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 18] Author: @lucksheme243 | Likes: 3 | Replies: 0 | Published: 2025-03-08T03:27:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "Exactly 💯",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 19] Author: @journal_freak | Likes: 2 | Replies: 0 | Published: 2025-03-08T05:21:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "So true!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "[COMMENT 20] Author: @pdeepa12 | Likes: 13 | Replies: 0 | Published: 2025-03-08T05:26:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00072",
+              "author": "",
+              "text": "Yeh public ek mauka nahi chodti government lo blame Karne",
+              "likes": null
+            },
+            {
+              "comment_id": "c01532",
+              "author": "",
+              "text": "[COMMENT 477] Author: @bishnudev1760 | Likes: 0 | Replies: 0 | Published: 2025-03-12T15:10:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01533",
+              "author": "",
+              "text": "We need a video on how to take care of our Beard in the right way sir.!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01535",
+              "author": "",
+              "text": "[COMMENT 478] Author: @krishl8621 | Likes: 0 | Replies: 0 | Published: 2025-03-12T08:34:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01536",
+              "author": "",
+              "text": "Do a video on sibo and sifo plzz",
+              "likes": null
+            },
+            {
+              "comment_id": "c01538",
+              "author": "",
+              "text": "[COMMENT 479] Author: @nusratzamal2252 | Likes: 0 | Replies: 0 | Published: 2025-03-09T09:40:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01539",
+              "author": "",
+              "text": "Please make video on respiratory masks 3M 9504 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01541",
+              "author": "",
+              "text": "[COMMENT 480] Author: @sumaila7015 | Likes: 1 | Replies: 0 | Published: 2025-03-08T06:49:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01542",
+              "author": "",
+              "text": "Plzz make a video on spondylitis L4-L5 pain ....mere papa ko kuch mahine se ye problem hai and unko bht chakkar bhi aate hai bht se doctor ko dikha kr thak chuke h lekin kuch fayda nh hai ...plz plz plz vivek i trust you plz make a video on it plz",
+              "likes": null
+            },
+            {
+              "comment_id": "c01544",
+              "author": "",
+              "text": "[COMMENT 481] Author: @spiritualpath4724 | Likes: 0 | Replies: 0 | Published: 2025-05-21T20:50:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01545",
+              "author": "",
+              "text": "Sir, Teether, Diapers and baby care products pe video bnayie. We must need to know for the best products for our baby.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01547",
+              "author": "",
+              "text": "[COMMENT 482] Author: @G3Talkies3691 | Likes: 0 | Replies: 0 | Published: 2025-03-10T14:17:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01548",
+              "author": "",
+              "text": "Hi Sir ,Can you Make a video about how to reduce anti TPO for thyroid naturally Hadmitotos thyroid please sir do. A video plz…it will help to Me plz….",
+              "likes": null
+            },
+            {
+              "comment_id": "c01550",
+              "author": "",
+              "text": "[COMMENT 483] Author: @PrachiGupta-dm5zt | Likes: 0 | Replies: 0 | Published: 2025-03-11T04:28:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01551",
+              "author": "",
+              "text": "Best hair color in market",
+              "likes": null
+            },
+            {
+              "comment_id": "c01553",
+              "author": "",
+              "text": "[COMMENT 484] Author: @Annie-it4ev | Likes: 0 | Replies: 0 | Published: 2025-03-10T05:59:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01554",
+              "author": "",
+              "text": "Pls make a video on treating blood like coming from stools maybe due to stomach ulcer",
+              "likes": null
+            },
+            {
+              "comment_id": "c01555",
+              "author": "",
+              "text": "Previously i did got it thtought acidity.. ulcers and blood in stools ...to which i was recovering my self with other videos such on stomach ulcer i was recovering but still it comes back.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01557",
+              "author": "",
+              "text": "[COMMENT 485] Author: @dominic_zzz | Likes: 0 | Replies: 0 | Published: 2025-03-08T17:32:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01558",
+              "author": "",
+              "text": "Sir why in men center part of sclap hair loss ??. Make video on this and root cause & remady",
+              "likes": null
+            },
+            {
+              "comment_id": "c01560",
+              "author": "",
+              "text": "[COMMENT 486] Author: @yashvashistha7804 | Likes: 0 | Replies: 0 | Published: 2025-03-14T06:54:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01561",
+              "author": "",
+              "text": "My parents sent me this video asked me to do this 😅",
+              "likes": null
+            },
+            {
+              "comment_id": "c01563",
+              "author": "",
+              "text": "[COMMENT 487] Author: @karankurzekar6130 | Likes: 0 | Replies: 0 | Published: 2025-03-10T05:53:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01564",
+              "author": "",
+              "text": "Make video on body sunscreen",
+              "likes": null
+            },
+            {
+              "comment_id": "c01566",
+              "author": "",
+              "text": "[COMMENT 488] Author: @kusumavenkatesh2012 | Likes: 0 | Replies: 0 | Published: 2025-03-09T05:14:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01567",
+              "author": "",
+              "text": "Please make video for those aged between 40-50",
+              "likes": null
+            },
+            {
+              "comment_id": "c01569",
+              "author": "",
+              "text": "[COMMENT 489] Author: @TejasPawar-n5f | Likes: 0 | Replies: 0 | Published: 2026-03-23T04:57:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01570",
+              "author": "",
+              "text": "In my home garden i already have a moringa tree but never thought we could eat their leaves",
+              "likes": null
+            },
+            {
+              "comment_id": "c01571",
+              "author": "",
+              "text": "😮",
+              "likes": null
+            },
+            {
+              "comment_id": "c01573",
+              "author": "",
+              "text": "[COMMENT 490] Author: @shiv6464 | Likes: 0 | Replies: 0 | Published: 2025-03-08T06:02:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "A video on how to remove darkness around mouth",
+              "likes": null
+            },
+            {
+              "comment_id": "c01576",
+              "author": "",
+              "text": "[COMMENT 491] Author: @LeonardoDeFreitas-p5h | Likes: 0 | Replies: 0 | Published: 2025-06-19T22:11:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "I ❤ all🎉🎉🎉",
+              "likes": null
+            },
+            {
+              "comment_id": "c01579",
+              "author": "",
+              "text": "[COMMENT 492] Author: @aabrakadabra7611 | Likes: 0 | Replies: 0 | Published: 2025-03-19T04:06:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "Make a vid on 5 white poison and alternative that we eat daily sugar,salt,milk,rice,maidaetc",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "[COMMENT 493] Author: @rahimlive0076 | Likes: 1 | Replies: 0 | Published: 2025-03-07T14:04:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01583",
+              "author": "",
+              "text": "I'm watching him 4yrs ago lekin parents ko English m smjh nhi ata Plz Vivek bhya hindi m bhi same upload kra kro",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "[COMMENT 494] Author: @jonathanramadurg7960 | Likes: 0 | Replies: 0 | Published: 2025-03-08T16:59:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "Bro please talk about soujanya case Karnataka'",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "[COMMENT 495] Author: @111foralien5 | Likes: 0 | Replies: 0 | Published: 2025-03-09T02:54:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "Yar launda bhut shi hai yee..ek number",
+              "likes": null
+            },
+            {
+              "comment_id": "c01591",
+              "author": "",
+              "text": "[COMMENT 496] Author: @Piyush-h3n1q | Likes: 0 | Replies: 0 | Published: 2025-03-19T07:31:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "Plz make DIY moringa tablets ❤❤❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "[COMMENT 497] Author: @kadirali4589 | Likes: 0 | Replies: 0 | Published: 2025-03-18T08:07:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "Vivek sir aapka \"the almost perfect recipe\" wala video upload kar do ya uska link dedo sir pls",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "[COMMENT 498] Author: @AnakhasreeSR | Likes: 1 | Replies: 0 | Published: 2025-03-15T04:03:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "Can you suggest a diabetic friendly diet for parents... especially which can help them gain weight",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "[COMMENT 499] Author: @u.a.j8488 | Likes: 0 | Replies: 0 | Published: 2025-03-10T11:32:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "Vivek pls face mein pigmentation ke liye video banao. Cream kaun sa use karen pigmentation mein after 40 age?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01603",
+              "author": "",
+              "text": "[COMMENT 500] Author: @ArpithaMS-d9c | Likes: 0 | Replies: 0 | Published: 2025-03-19T10:12:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "Sir , black neck and underarms, please do vedio to get rid of acranthosis nigricans",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "rEPsDiWn9O0",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Take Care of Your Parents' Health (Before It's Too Late)\\How to Take Care of Your Parents' Health (Before It's Too Late).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Take Care of Your Parents' Health (Before It's Too Late)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\rEPsDiWn9O0",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "rEPsDiWn9O0",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 62,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 16184,
+            "transcript_words": 2987,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:14] [Music] wow we can never truly estimate how many difficulties our parents faced while raising us when we were children whether it was Financial struggles finding time for us or dealing with other challenges they always put our upbringing above every everything else often sacrificing [00:00:32] their own needs of course we all want to help them but sometimes we just don't know how there are many things that if done now can significantly benefit their health in the long run and that's exactly the purpose of this video in this video we will discuss five things [00:00:47] that I believe can help us take better care of our parents we'll try to keep this video practical and interesting so without any further delay let's get started Hello friends welcome to Fed tuber as we age our bone density starts [00:01:03] decreasing energy levels drop brain cells weaken and the risk of diabetes and blood pressure increases while a balanced diet is essential there are three nutrients that deserve special attention first is vitamin D if the body lacks Vitamin D it fails to absorb [00:01:20] calcium from food since bones weaken with age it is crucial to focus on maintaining adequate vitamin D levels vitamin D also strengthens immunity keeps the mood positive and prevents muscle weakness but how do we get it no doubt the best source of vitamin D is [00:01:36] sunlight if your parents can sit in the Sun for about 30 to 40 minutes every morning while wearing white cotton clothes their vitamin D levels will shoot up if that's not possible Vitamin D supplements can also be taken after Consulting a doctor second is vitamin [00:01:52] B12 you may have noticed that memory loss and cognitive decline are very common in old age however if a person starts taking care of their vitamin B12 intake from the age of 40 to 50 these problems can be avoided that's because B12 keeps the brain sharp and active [00:02:10] additionally it helps prevent fatigue anemia and eye degeneration the best vegetarian sources of vitamin B12 are Moringa leaves and wheat grass juice wheat grass juice is easily available and If you have a moringa tree nearby you can use its leaves in dough to make [00:02:27] roties if fresh leaves are not available Moringa powder is a great alternative and can be mixed into dough or used as a spice in vegetables and dlls I've also shared some plant-based B12 supplements in this video which can be used as well third are omega-3 fatty acids for heart [00:02:45] health brain function preventing autoimmune diseases and reducing inflammation in the body omega-3 is most effective the best sources of omega3 are flax seeds chia seeds basil seeds saja seeds walnuts black UR Dal spinach [00:03:01] kidney beans cold pressed mustard oil and a to Bona goe so I think we should forget about regular meals and make them eat only these three nutrients all day of course not the key is to ensure that your parents maintain a balanced homecooked diet while keeping these [00:03:17] three micronutrients in mind it's not necessary to consume them daily just incorporate them into their diet based on time and season be sure that doing this will make their old age much easier and healthier the second thing that will further help in absorbing the three [00:03:33] essential nutrients is to encourage your parents to shift from three grain meals to two grain meals a day see as we age our digestion also slows down and it is a fact that as compared to other Foods grains take the longest time to digest after the age of 4050 their digestive [00:03:50] system will get a lot of relief if you help them transition from three grain meals to two for example they can have breakfast around 10 11 a.m. and then dinner by 600 7: p.m. in between whenever they feel hungry they can eat fruits dry fruits salad vegetable juice [00:04:07] or in Winter flax seed or Sesame jagy lados this will give them two benefits first it will reduce the load on their digestive system while ensuring their body absorbs more nutrients second the energy that was earlier being used to digest food will now be used for healing [00:04:24] as a result diseases will start reversing and they will live longer because even science to does not doubt the fact that eating less leads to a longer and healthier life yes beta it is true that as we age digestion weakens can you share some more tips that will [00:04:40] help improve digestion in old age when the digestive system is strong even the unhealthiest of food might not show any major impact on the body but if digestion is weak even healthy food has to be consumed carefully in old age this is a natural problem you can understand [00:04:56] how important digestion is from the fact that 95% % of diseases originate from the stomach in such a situation two three simple things can be done Roi is heavy to digest but it is also a staple food of India so to make Roti more digestible while kneading the dough add [00:05:13] half to 1 teaspoon of agne this simple step will make the Roti much easier to digest another option is fermented RTI while kneading the dough add one or two spoons of curd along with water then knead it well cover it and let it sit for 6 to 8 hours the dough will will [00:05:29] ferment and Rise slightly now make Roti from this dough this fermented Roy will increase the quantity of good bacteria in the gut similarly fermented rice is commonly eaten in many parts of India basically cooked rice is soaked in water mixed with curd and left overnight in [00:05:46] the morning spices are added and then it is eaten in the same way consuming probiotic Rich fermented foods and fiber rich Prebiotic foods helps maintain a healthy gut which keeps digestion strong the next point point is to encourage your parents to stay active think of it [00:06:03] this way if you stop using a machine for a long time it starts rusting similarly if we don't move our bodies their flexibility strength and capacity begins to decline in the younger years most people stay active due to work and daily responsibilities but after 50 60 their [00:06:20] activity levels drop significantly there are three simple ways to help your parents stay active the first and the best way is walking whether it's a morning walk and after dinner walk or just a casual stroll in fresh air walking is not only great for physical [00:06:35] health but also works wonders for mental well-being in fact for those with diabetes and high blood pressure walking after meals is one of the best exercises the second is stretching exercises these days if you go to any park in the morning you are likely to see groups of [00:06:50] people doing stretching exercises together encourage your parents to join such groups it will not only improve their health but will also provide social interaction which is also important for their well-being the third is pranayam breathing exercises like kapal bhati anulom vom and Bram improve [00:07:07] blood circulation and release Feelgood hormones in the brain if your parents can practice 15 20 minutes of yoga daily it will benefit them immensely they can do it in an open park or simply follow a guided video at home but what about weight training there is no doubt that [00:07:23] weight training helps increase bone density and muscle strength making it a great form of exercise if your parents are interested that's amazing but if they are not Don't force them in fact I have seen many young people forcing their 60 year-old parents to drink protein shakes please don't do this at [00:07:41] this age there is no need for protein shakes while protein is an essential macronutrient they can get plenty of it from lentils and Natural Foods the key takeaway is instead of forcing them encourage them to stay active in a way they enjoy initially they may hesitate [00:07:56] but once they get used to it they will not only like but they will also experience great benefits another important thing you can help them with is encouraging them to have an early dinner ideally everyone should eat dinner early and go to bed by 10: 11:00 p.m. however even if you stay up late [00:08:13] try to ensure that at least your parents have their dinner by 6:00 700 p.m. and they go to bed by 10:00 p.m. night sleep is meant for the night and as age increases if the body does not function according to the Circadian rhythm the risk of health problems Rises imagine a [00:08:30] 20-year-old working a Night Shift versus a 60-year-old working a night shift do you think their bodies will respond in the same way a 20-year-old might not even notice that their body is putting in extra effort but in old age the effects of such changes become visible [00:08:45] much more quickly it's like sitting on two different chairs one weak and one strong if you sit on a weak chair it might break making you fall but a strong chair will easily bear your weight similarly you need to understand that your parents are aging create an environment for them where they [00:09:01] naturally fall asleep by 10 11:00 p.m. this will give them quality sleep along with 36 other benefits that science might not have even discovered yet can you suggest some supplements for parents look the first thing that I would say is that you shouldn't get caught up in taking too many supplements if someone [00:09:18] eats seasonal vegetables fruits and grains in rotation they don't need many supplements companies want you to believe that you need a pill for everything however still if I have to suggest something one one tablet of ashwagandha and shatavari taken at night [00:09:34] with milk or water are not only safe but also highly effective take them continuously for 2 months and then stop for 15 20 days similarly in Winters a small amount of shilajit can be taken with milk or water these two supplements strengthen the body's core and prevent [00:09:51] weakness raisins are also a great natural supplement take a handful of raisins rinse them and soak them in half a glass of water for for 8 to 10 hours when they feel hungry in the afternoon they can eat the soaked raisins along with the water this not only increases [00:10:06] blood count but also provide multiple health benefits additionally foods like amla Moringa wheat grass and flax seeds are no less than supplements themselves there is no need to get too caught up in market-based products eat less but eat nutritious my parents have major health [00:10:24] issues can you suggest something that will instantly improve their health yes there is one thing that that will instantly benefit your parents and that is undergoing punch Karma therapy punch karma is an ayurvedic practice that removes toxins from the body through five different methods regardless of [00:10:40] whether your parents have any health issues undergoing punch Karma treatment will immediately improve their well-being of course they should not be done at home but under the supervision of an ayurvedic expert at a punch Karma Center there are many such centers but I will only recommend those where I have [00:10:56] firsthand experience but before I mention that let me clarify that these are not sponsored names I have no association with these institutions either I or my close family members have availed Services here as regular clients and I'm sharing those experiences with [00:11:12] you first is the patanjali yog P Center in harid run under the guidance of Baba ramdev and achara Bal Krishna this punch Karma Center offers consultations with doctors who suggest ayurvedic and naturopathy therapies accordingly a minimum stay of 7 days is required [00:11:28] during which a strict diet is suggested there are yoga and pranayam sessions in the morning and evening along with anutra therapy all included in one package comfortable double bedrooms are provided and the facilities are good regardless of your parents health status [00:11:44] they will feel better after staying here for a week the second option is the natural Lifestyle Center in New Delhi this Center is based on naturopathy while the accommodation facilities are okay okay the therapies and diet are highly effective after spending a few days here your parents bodies will [00:12:00] detoxify leading to noticeable health benefits in terms of pricing pangali is more economical compared to Natural Lifestyle the third option is the Arya vya Shala kakal punch Karma Center in Kerala the ayurvedic therapies here are good but there is no strict control over [00:12:17] diet which is why I would rate it a bit low a better option is Shri daram punch Karma Center also in Kerala this is an authentic ayurvedic punch Karma Center where special attention is given to diet and and other subtle aspects of healing these four punch Karma centers are those [00:12:33] which I have firsthand experien there may be many other such centers across India and you can check according to your preference ayura states that undergoing punch Karma can add a few years to one's life essentially the point is that you should send your parents to a punch Karma Center for at [00:12:50] least a week every 2 years this will help detoxify their bodies regularly and prevent diseases from taking hold now let's discuss the most rated but perhaps the most important point but before that I want to talk about growth school friends in today's time having knowledge [00:13:06] of artificial intelligence can make it much easier to find a new job or excel in a current one this is a paid Workshop but it is completely free for the first 1500 members of the fit T Community not only that after completing this Workshop you will also receive a 5,000 rupees [00:13:23] bonus whether your background is technical or non-technical this Workshop will be helpful for you in this training you will learn job hunting strategies salary hike strategies how to solve complex data problems using AI presentation skills personal branding among many other things over 1 million [00:13:40] people have attended this training and based on reviews I think it is definitely worth doing moreover it's free so you can comfortably attend from your home so register as soon as possible the link is provided in the description box you can also join their WhatsApp group to receive all updates I [00:13:55] think it will be beneficial for generating side income in 2025 now let's shift from artificial intelligence to emotional intelligence emotionally support your parents all other points aside this single point outweighs them all it is often seen that as children [00:14:11] grow up they start communicating less openly with their parents but this should not happen and this is not just an opinion Studies have shown that emotional disconnect can lead to physical illnesses on the other hand if parents receive emotional support in old [00:14:26] age the recovery can be significant ly faster essentially it is now your turn to take care of them taking care does not just mean providing them with facilities while you stay busy with your own life talk to them ask them how they're doing even if it is just over the phone they should feel that they are [00:14:43] important to you I don't think we need a scientific study to understand this what do you think to quickly recap ensure your parents TI includes vitamin D vitamin B12 and omega-3 fatty acids encourage them to shift from three grain meals to two grain meals in between they [00:14:59] can have fruits dry fruits salads milk or juice keep them active with regular walking stretching pranam or weight training whatever they enjoy create a home environment where they have dinner by 600 700 p.m. and sleep by 10:00 p.m. ashwagandha shavi in summers and [00:15:16] shilajit in Winters along with amla soaked raisins are highly nutritious supplements for them every 2 years send them to a punch Karma Center for a few days to detoxify their bodies and instantly improve their health and most importantly stay emotionally connected [00:15:31] with them which point do you think is most helpful let me know in the comments if you want to know the best sunscreen in India in 2025 check out this video my name is VI I thank you so much for watching"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1089,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: rEPsDiWn9O0",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @ayush.kumar1 | Likes: 532 | Replies: 3 | Published: 2025-03-07T13:45:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "That \" Before its too late \" in the video title is the sole reason any son/daughter will watch this video.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @j-svn | Likes: 8 | Replies: 0 | Published: 2025-03-07T14:13:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "And that's a nice thing",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @ayush.kumar1 | Likes: 2 | Replies: 0 | Published: 2025-03-07T14:53:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "@jeevan-gjj yes!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @_Rachna_Kumari_ | Likes: 2 | Replies: 0 | Published: 2025-03-07T16:49:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "That's because I am watching it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @shaunak1963 | Likes: 1162 | Replies: 32 | Published: 2025-03-07T13:33:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Who else agrees that he is the best content creator ♥️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @umadammani643 | Likes: 0 | Replies: 0 | Published: 2025-03-07T14:23:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Beta bahut hi acha bataya nacho one to Dhyan rakhnahi chahiye par hamne bhi hamara Dhyan Rachna jaruri hai bathrum Sidhiy pe rod achi slipper n last wala to tumne bahut hi acha bataya ma bap bachhoko rah dekh te hai ki wo kab hamare pas aayega poochega bahut hi badhiya vid aashirwad",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @rishabhverma3704 | Likes: 1 | Replies: 0 | Published: 2025-03-07T14:48:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "I ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @rasowye1139 | Likes: 4 | Replies: 0 | Published: 2025-03-07T16:19:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "Absolutely no doubt.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @sukantadatta7003 | Likes: 4 | Replies: 0 | Published: 2025-03-07T16:30:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "Absolutely.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @priyanshunaithani3711 | Likes: 2 | Replies: 0 | Published: 2025-03-07T16:32:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Absolutely iam following fituber from past 5 years and my life changed....no words can express my feelings to fituber ❤❤❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @sunshinee0695 | Likes: 276 | Replies: 7 | Published: 2025-03-07T14:13:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "My parents are in thier 50's, I always take care of thier deit, massage their feet at night, castor oil for eye lids. Try to cook traditional food..They literally call me dadi ma of the house. 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @SujataPalMathematicstrader | Likes: 13 | Replies: 0 | Published: 2025-03-07T16:53:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "You are so caring❤❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @harendrapratap1247 | Likes: 9 | Replies: 0 | Published: 2025-03-07T17:44:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "That's great work 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @roniths9293 | Likes: 19 | Replies: 0 | Published: 2025-03-07T18:45:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "They are really blessed to have you as their child! 😇",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @niharika2053 | Likes: 5 | Replies: 0 | Published: 2025-03-10T12:35:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Caring cool dadimaa❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @lakshmi1994-d4t | Likes: 0 | Replies: 0 | Published: 2025-03-12T05:34:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "I too want such kids",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @rasowye1139 | Likes: 354 | Replies: 17 | Published: 2025-03-07T17:05:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Modi govt ne ek kuch faltu bematlab ke you tube infuencers ko award de diya. Par Vivek bhaiyya jaise acche aur sacche highly creative content creators ki taraf dhyan nahi diya. Maine vote diya tha Fittuber channel ko ki ye deserving hai aur award jite. Par jab winners dekhe to laga ki ye award hi kabil nahi hai Vivek bhaiyya jaise genuine you tubers ke liye.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "Aapne mere jaise anek logo ki zindagi badal di hai. Aap hum sab se aise syncronise ho gaye ho jaise Ishwar hum sab mai jaise ek hota hai par abhivyakti alag alag hoti hai. Apko koti koti dhanyawad aur khub sara pyar! 🙏🏼❤🙏🏼",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "Long live Fittuber!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "Love you Vivek bhaiyya!! ❤❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @lucksheme243 | Likes: 3 | Replies: 0 | Published: 2025-03-08T03:27:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "Exactly 💯",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @journal_freak | Likes: 2 | Replies: 0 | Published: 2025-03-08T05:21:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "So true!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @pdeepa12 | Likes: 13 | Replies: 0 | Published: 2025-03-08T05:26:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00072",
+                  "author": "",
+                  "text": "Yeh public ek mauka nahi chodti government lo blame Karne",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01532",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @bishnudev1760 | Likes: 0 | Replies: 0 | Published: 2025-03-12T15:10:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01533",
+                  "author": "",
+                  "text": "We need a video on how to take care of our Beard in the right way sir.!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01535",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @krishl8621 | Likes: 0 | Replies: 0 | Published: 2025-03-12T08:34:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01536",
+                  "author": "",
+                  "text": "Do a video on sibo and sifo plzz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01538",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @nusratzamal2252 | Likes: 0 | Replies: 0 | Published: 2025-03-09T09:40:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01539",
+                  "author": "",
+                  "text": "Please make video on respiratory masks 3M 9504 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01541",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @sumaila7015 | Likes: 1 | Replies: 0 | Published: 2025-03-08T06:49:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01542",
+                  "author": "",
+                  "text": "Plzz make a video on spondylitis L4-L5 pain ....mere papa ko kuch mahine se ye problem hai and unko bht chakkar bhi aate hai bht se doctor ko dikha kr thak chuke h lekin kuch fayda nh hai ...plz plz plz vivek i trust you plz make a video on it plz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01544",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @spiritualpath4724 | Likes: 0 | Replies: 0 | Published: 2025-05-21T20:50:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01545",
+                  "author": "",
+                  "text": "Sir, Teether, Diapers and baby care products pe video bnayie. We must need to know for the best products for our baby.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01547",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @G3Talkies3691 | Likes: 0 | Replies: 0 | Published: 2025-03-10T14:17:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01548",
+                  "author": "",
+                  "text": "Hi Sir ,Can you Make a video about how to reduce anti TPO for thyroid naturally Hadmitotos thyroid please sir do. A video plz…it will help to Me plz….",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01550",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @PrachiGupta-dm5zt | Likes: 0 | Replies: 0 | Published: 2025-03-11T04:28:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01551",
+                  "author": "",
+                  "text": "Best hair color in market",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01553",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @Annie-it4ev | Likes: 0 | Replies: 0 | Published: 2025-03-10T05:59:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01554",
+                  "author": "",
+                  "text": "Pls make a video on treating blood like coming from stools maybe due to stomach ulcer",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01555",
+                  "author": "",
+                  "text": "Previously i did got it thtought acidity.. ulcers and blood in stools ...to which i was recovering my self with other videos such on stomach ulcer i was recovering but still it comes back.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01557",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @dominic_zzz | Likes: 0 | Replies: 0 | Published: 2025-03-08T17:32:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01558",
+                  "author": "",
+                  "text": "Sir why in men center part of sclap hair loss ??. Make video on this and root cause & remady",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01560",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @yashvashistha7804 | Likes: 0 | Replies: 0 | Published: 2025-03-14T06:54:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01561",
+                  "author": "",
+                  "text": "My parents sent me this video asked me to do this 😅",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01563",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @karankurzekar6130 | Likes: 0 | Replies: 0 | Published: 2025-03-10T05:53:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01564",
+                  "author": "",
+                  "text": "Make video on body sunscreen",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01566",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @kusumavenkatesh2012 | Likes: 0 | Replies: 0 | Published: 2025-03-09T05:14:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01567",
+                  "author": "",
+                  "text": "Please make video for those aged between 40-50",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01569",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @TejasPawar-n5f | Likes: 0 | Replies: 0 | Published: 2026-03-23T04:57:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01570",
+                  "author": "",
+                  "text": "In my home garden i already have a moringa tree but never thought we could eat their leaves",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01571",
+                  "author": "",
+                  "text": "😮",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01573",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @shiv6464 | Likes: 0 | Replies: 0 | Published: 2025-03-08T06:02:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "A video on how to remove darkness around mouth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01576",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @LeonardoDeFreitas-p5h | Likes: 0 | Replies: 0 | Published: 2025-06-19T22:11:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "I ❤ all🎉🎉🎉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01579",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @aabrakadabra7611 | Likes: 0 | Replies: 0 | Published: 2025-03-19T04:06:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "Make a vid on 5 white poison and alternative that we eat daily sugar,salt,milk,rice,maidaetc",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @rahimlive0076 | Likes: 1 | Replies: 0 | Published: 2025-03-07T14:04:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01583",
+                  "author": "",
+                  "text": "I'm watching him 4yrs ago lekin parents ko English m smjh nhi ata Plz Vivek bhya hindi m bhi same upload kra kro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @jonathanramadurg7960 | Likes: 0 | Replies: 0 | Published: 2025-03-08T16:59:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "Bro please talk about soujanya case Karnataka'",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @111foralien5 | Likes: 0 | Replies: 0 | Published: 2025-03-09T02:54:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "Yar launda bhut shi hai yee..ek number",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01591",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @Piyush-h3n1q | Likes: 0 | Replies: 0 | Published: 2025-03-19T07:31:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "Plz make DIY moringa tablets ❤❤❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @kadirali4589 | Likes: 0 | Replies: 0 | Published: 2025-03-18T08:07:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "Vivek sir aapka \"the almost perfect recipe\" wala video upload kar do ya uska link dedo sir pls",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @AnakhasreeSR | Likes: 1 | Replies: 0 | Published: 2025-03-15T04:03:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "Can you suggest a diabetic friendly diet for parents... especially which can help them gain weight",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @u.a.j8488 | Likes: 0 | Replies: 0 | Published: 2025-03-10T11:32:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "Vivek pls face mein pigmentation ke liye video banao. Cream kaun sa use karen pigmentation mein after 40 age?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01603",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @ArpithaMS-d9c | Likes: 0 | Replies: 0 | Published: 2025-03-19T10:12:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "Sir , black neck and underarms, please do vedio to get rid of acranthosis nigricans",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "rEPsDiWn9O0",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 62,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 16184,
+          "transcript_words": 2987,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:14] [Music] wow we can never truly estimate how many difficulties our parents faced while raising us when we were children whether it was Financial struggles finding time for us or dealing with other challenges they always put our upbringing above every everything else often sacrificing [00:00:32] their own needs of course we all want to help them but sometimes we just don't know how there are many things that if done now can significantly benefit their health in the long run and that's exactly the purpose of this video in this video we will discuss five things [00:00:47] that I believe can help us take better care of our parents we'll try to keep this video practical and interesting so without any further delay let's get started Hello friends welcome to Fed tuber as we age our bone density starts [00:01:03] decreasing energy levels drop brain cells weaken and the risk of diabetes and blood pressure increases while a balanced diet is essential there are three nutrients that deserve special attention first is vitamin D if the body lacks Vitamin D it fails to absorb [00:01:20] calcium from food since bones weaken with age it is crucial to focus on maintaining adequate vitamin D levels vitamin D also strengthens immunity keeps the mood positive and prevents muscle weakness but how do we get it no doubt the best source of vitamin D is [00:01:36] sunlight if your parents can sit in the Sun for about 30 to 40 minutes every morning while wearing white cotton clothes their vitamin D levels will shoot up if that's not possible Vitamin D supplements can also be taken after Consulting a doctor second is vitamin [00:01:52] B12 you may have noticed that memory loss and cognitive decline are very common in old age however if a person starts taking care of their vitamin B12 intake from the age of 40 to 50 these problems can be avoided that's because B12 keeps the brain sharp and active [00:02:10] additionally it helps prevent fatigue anemia and eye degeneration the best vegetarian sources of vitamin B12 are Moringa leaves and wheat grass juice wheat grass juice is easily available and If you have a moringa tree nearby you can use its leaves in dough to make [00:02:27] roties if fresh leaves are not available Moringa powder is a great alternative and can be mixed into dough or used as a spice in vegetables and dlls I've also shared some plant-based B12 supplements in this video which can be used as well third are omega-3 fatty acids for heart [00:02:45] health brain function preventing autoimmune diseases and reducing inflammation in the body omega-3 is most effective the best sources of omega3 are flax seeds chia seeds basil seeds saja seeds walnuts black UR Dal spinach [00:03:01] kidney beans cold pressed mustard oil and a to Bona goe so I think we should forget about regular meals and make them eat only these three nutrients all day of course not the key is to ensure that your parents maintain a balanced homecooked diet while keeping these [00:03:17] three micronutrients in mind it's not necessary to consume them daily just incorporate them into their diet based on time and season be sure that doing this will make their old age much easier and healthier the second thing that will further help in absorbing the three [00:03:33] essential nutrients is to encourage your parents to shift from three grain meals to two grain meals a day see as we age our digestion also slows down and it is a fact that as compared to other Foods grains take the longest time to digest after the age of 4050 their digestive [00:03:50] system will get a lot of relief if you help them transition from three grain meals to two for example they can have breakfast around 10 11 a.m. and then dinner by 600 7: p.m. in between whenever they feel hungry they can eat fruits dry fruits salad vegetable juice [00:04:07] or in Winter flax seed or Sesame jagy lados this will give them two benefits first it will reduce the load on their digestive system while ensuring their body absorbs more nutrients second the energy that was earlier being used to digest food will now be used for healing [00:04:24] as a result diseases will start reversing and they will live longer because even science to does not doubt the fact that eating less leads to a longer and healthier life yes beta it is true that as we age digestion weakens can you share some more tips that will [00:04:40] help improve digestion in old age when the digestive system is strong even the unhealthiest of food might not show any major impact on the body but if digestion is weak even healthy food has to be consumed carefully in old age this is a natural problem you can understand [00:04:56] how important digestion is from the fact that 95% % of diseases originate from the stomach in such a situation two three simple things can be done Roi is heavy to digest but it is also a staple food of India so to make Roti more digestible while kneading the dough add [00:05:13] half to 1 teaspoon of agne this simple step will make the Roti much easier to digest another option is fermented RTI while kneading the dough add one or two spoons of curd along with water then knead it well cover it and let it sit for 6 to 8 hours the dough will will [00:05:29] ferment and Rise slightly now make Roti from this dough this fermented Roy will increase the quantity of good bacteria in the gut similarly fermented rice is commonly eaten in many parts of India basically cooked rice is soaked in water mixed with curd and left overnight in [00:05:46] the morning spices are added and then it is eaten in the same way consuming probiotic Rich fermented foods and fiber rich Prebiotic foods helps maintain a healthy gut which keeps digestion strong the next point point is to encourage your parents to stay active think of it [00:06:03] this way if you stop using a machine for a long time it starts rusting similarly if we don't move our bodies their flexibility strength and capacity begins to decline in the younger years most people stay active due to work and daily responsibilities but after 50 60 their [00:06:20] activity levels drop significantly there are three simple ways to help your parents stay active the first and the best way is walking whether it's a morning walk and after dinner walk or just a casual stroll in fresh air walking is not only great for physical [00:06:35] health but also works wonders for mental well-being in fact for those with diabetes and high blood pressure walking after meals is one of the best exercises the second is stretching exercises these days if you go to any park in the morning you are likely to see groups of [00:06:50] people doing stretching exercises together encourage your parents to join such groups it will not only improve their health but will also provide social interaction which is also important for their well-being the third is pranayam breathing exercises like kapal bhati anulom vom and Bram improve [00:07:07] blood circulation and release Feelgood hormones in the brain if your parents can practice 15 20 minutes of yoga daily it will benefit them immensely they can do it in an open park or simply follow a guided video at home but what about weight training there is no doubt that [00:07:23] weight training helps increase bone density and muscle strength making it a great form of exercise if your parents are interested that's amazing but if they are not Don't force them in fact I have seen many young people forcing their 60 year-old parents to drink protein shakes please don't do this at [00:07:41] this age there is no need for protein shakes while protein is an essential macronutrient they can get plenty of it from lentils and Natural Foods the key takeaway is instead of forcing them encourage them to stay active in a way they enjoy initially they may hesitate [00:07:56] but once they get used to it they will not only like but they will also experience great benefits another important thing you can help them with is encouraging them to have an early dinner ideally everyone should eat dinner early and go to bed by 10: 11:00 p.m. however even if you stay up late [00:08:13] try to ensure that at least your parents have their dinner by 6:00 700 p.m. and they go to bed by 10:00 p.m. night sleep is meant for the night and as age increases if the body does not function according to the Circadian rhythm the risk of health problems Rises imagine a [00:08:30] 20-year-old working a Night Shift versus a 60-year-old working a night shift do you think their bodies will respond in the same way a 20-year-old might not even notice that their body is putting in extra effort but in old age the effects of such changes become visible [00:08:45] much more quickly it's like sitting on two different chairs one weak and one strong if you sit on a weak chair it might break making you fall but a strong chair will easily bear your weight similarly you need to understand that your parents are aging create an environment for them where they [00:09:01] naturally fall asleep by 10 11:00 p.m. this will give them quality sleep along with 36 other benefits that science might not have even discovered yet can you suggest some supplements for parents look the first thing that I would say is that you shouldn't get caught up in taking too many supplements if someone [00:09:18] eats seasonal vegetables fruits and grains in rotation they don't need many supplements companies want you to believe that you need a pill for everything however still if I have to suggest something one one tablet of ashwagandha and shatavari taken at night [00:09:34] with milk or water are not only safe but also highly effective take them continuously for 2 months and then stop for 15 20 days similarly in Winters a small amount of shilajit can be taken with milk or water these two supplements strengthen the body's core and prevent [00:09:51] weakness raisins are also a great natural supplement take a handful of raisins rinse them and soak them in half a glass of water for for 8 to 10 hours when they feel hungry in the afternoon they can eat the soaked raisins along with the water this not only increases [00:10:06] blood count but also provide multiple health benefits additionally foods like amla Moringa wheat grass and flax seeds are no less than supplements themselves there is no need to get too caught up in market-based products eat less but eat nutritious my parents have major health [00:10:24] issues can you suggest something that will instantly improve their health yes there is one thing that that will instantly benefit your parents and that is undergoing punch Karma therapy punch karma is an ayurvedic practice that removes toxins from the body through five different methods regardless of [00:10:40] whether your parents have any health issues undergoing punch Karma treatment will immediately improve their well-being of course they should not be done at home but under the supervision of an ayurvedic expert at a punch Karma Center there are many such centers but I will only recommend those where I have [00:10:56] firsthand experience but before I mention that let me clarify that these are not sponsored names I have no association with these institutions either I or my close family members have availed Services here as regular clients and I'm sharing those experiences with [00:11:12] you first is the patanjali yog P Center in harid run under the guidance of Baba ramdev and achara Bal Krishna this punch Karma Center offers consultations with doctors who suggest ayurvedic and naturopathy therapies accordingly a minimum stay of 7 days is required [00:11:28] during which a strict diet is suggested there are yoga and pranayam sessions in the morning and evening along with anutra therapy all included in one package comfortable double bedrooms are provided and the facilities are good regardless of your parents health status [00:11:44] they will feel better after staying here for a week the second option is the natural Lifestyle Center in New Delhi this Center is based on naturopathy while the accommodation facilities are okay okay the therapies and diet are highly effective after spending a few days here your parents bodies will [00:12:00] detoxify leading to noticeable health benefits in terms of pricing pangali is more economical compared to Natural Lifestyle the third option is the Arya vya Shala kakal punch Karma Center in Kerala the ayurvedic therapies here are good but there is no strict control over [00:12:17] diet which is why I would rate it a bit low a better option is Shri daram punch Karma Center also in Kerala this is an authentic ayurvedic punch Karma Center where special attention is given to diet and and other subtle aspects of healing these four punch Karma centers are those [00:12:33] which I have firsthand experien there may be many other such centers across India and you can check according to your preference ayura states that undergoing punch Karma can add a few years to one's life essentially the point is that you should send your parents to a punch Karma Center for at [00:12:50] least a week every 2 years this will help detoxify their bodies regularly and prevent diseases from taking hold now let's discuss the most rated but perhaps the most important point but before that I want to talk about growth school friends in today's time having knowledge [00:13:06] of artificial intelligence can make it much easier to find a new job or excel in a current one this is a paid Workshop but it is completely free for the first 1500 members of the fit T Community not only that after completing this Workshop you will also receive a 5,000 rupees [00:13:23] bonus whether your background is technical or non-technical this Workshop will be helpful for you in this training you will learn job hunting strategies salary hike strategies how to solve complex data problems using AI presentation skills personal branding among many other things over 1 million [00:13:40] people have attended this training and based on reviews I think it is definitely worth doing moreover it's free so you can comfortably attend from your home so register as soon as possible the link is provided in the description box you can also join their WhatsApp group to receive all updates I [00:13:55] think it will be beneficial for generating side income in 2025 now let's shift from artificial intelligence to emotional intelligence emotionally support your parents all other points aside this single point outweighs them all it is often seen that as children [00:14:11] grow up they start communicating less openly with their parents but this should not happen and this is not just an opinion Studies have shown that emotional disconnect can lead to physical illnesses on the other hand if parents receive emotional support in old [00:14:26] age the recovery can be significant ly faster essentially it is now your turn to take care of them taking care does not just mean providing them with facilities while you stay busy with your own life talk to them ask them how they're doing even if it is just over the phone they should feel that they are [00:14:43] important to you I don't think we need a scientific study to understand this what do you think to quickly recap ensure your parents TI includes vitamin D vitamin B12 and omega-3 fatty acids encourage them to shift from three grain meals to two grain meals in between they [00:14:59] can have fruits dry fruits salads milk or juice keep them active with regular walking stretching pranam or weight training whatever they enjoy create a home environment where they have dinner by 600 700 p.m. and sleep by 10:00 p.m. ashwagandha shavi in summers and [00:15:16] shilajit in Winters along with amla soaked raisins are highly nutritious supplements for them every 2 years send them to a punch Karma Center for a few days to detoxify their bodies and instantly improve their health and most importantly stay emotionally connected [00:15:31] with them which point do you think is most helpful let me know in the comments if you want to know the best sunscreen in India in 2025 check out this video my name is VI I thank you so much for watching"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1089,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: rEPsDiWn9O0",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @ayush.kumar1 | Likes: 532 | Replies: 3 | Published: 2025-03-07T13:45:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "That \" Before its too late \" in the video title is the sole reason any son/daughter will watch this video.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @j-svn | Likes: 8 | Replies: 0 | Published: 2025-03-07T14:13:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "And that's a nice thing",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @ayush.kumar1 | Likes: 2 | Replies: 0 | Published: 2025-03-07T14:53:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "@jeevan-gjj yes!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @_Rachna_Kumari_ | Likes: 2 | Replies: 0 | Published: 2025-03-07T16:49:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "That's because I am watching it",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @shaunak1963 | Likes: 1162 | Replies: 32 | Published: 2025-03-07T13:33:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Who else agrees that he is the best content creator ♥️",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @umadammani643 | Likes: 0 | Replies: 0 | Published: 2025-03-07T14:23:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Beta bahut hi acha bataya nacho one to Dhyan rakhnahi chahiye par hamne bhi hamara Dhyan Rachna jaruri hai bathrum Sidhiy pe rod achi slipper n last wala to tumne bahut hi acha bataya ma bap bachhoko rah dekh te hai ki wo kab hamare pas aayega poochega bahut hi badhiya vid aashirwad",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @rishabhverma3704 | Likes: 1 | Replies: 0 | Published: 2025-03-07T14:48:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "I ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @rasowye1139 | Likes: 4 | Replies: 0 | Published: 2025-03-07T16:19:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "Absolutely no doubt.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @sukantadatta7003 | Likes: 4 | Replies: 0 | Published: 2025-03-07T16:30:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "Absolutely.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @priyanshunaithani3711 | Likes: 2 | Replies: 0 | Published: 2025-03-07T16:32:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Absolutely iam following fituber from past 5 years and my life changed....no words can express my feelings to fituber ❤❤❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @sunshinee0695 | Likes: 276 | Replies: 7 | Published: 2025-03-07T14:13:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "My parents are in thier 50's, I always take care of thier deit, massage their feet at night, castor oil for eye lids. Try to cook traditional food..They literally call me dadi ma of the house. 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @SujataPalMathematicstrader | Likes: 13 | Replies: 0 | Published: 2025-03-07T16:53:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "You are so caring❤❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @harendrapratap1247 | Likes: 9 | Replies: 0 | Published: 2025-03-07T17:44:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "That's great work 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 14] Author: @roniths9293 | Likes: 19 | Replies: 0 | Published: 2025-03-07T18:45:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "They are really blessed to have you as their child! 😇",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 15] Author: @niharika2053 | Likes: 5 | Replies: 0 | Published: 2025-03-10T12:35:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Caring cool dadimaa❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 16] Author: @lakshmi1994-d4t | Likes: 0 | Replies: 0 | Published: 2025-03-12T05:34:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "I too want such kids",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 17] Author: @rasowye1139 | Likes: 354 | Replies: 17 | Published: 2025-03-07T17:05:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Modi govt ne ek kuch faltu bematlab ke you tube infuencers ko award de diya. Par Vivek bhaiyya jaise acche aur sacche highly creative content creators ki taraf dhyan nahi diya. Maine vote diya tha Fittuber channel ko ki ye deserving hai aur award jite. Par jab winners dekhe to laga ki ye award hi kabil nahi hai Vivek bhaiyya jaise genuine you tubers ke liye.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "Aapne mere jaise anek logo ki zindagi badal di hai. Aap hum sab se aise syncronise ho gaye ho jaise Ishwar hum sab mai jaise ek hota hai par abhivyakti alag alag hoti hai. Apko koti koti dhanyawad aur khub sara pyar! 🙏🏼❤🙏🏼",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "Long live Fittuber!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "Love you Vivek bhaiyya!! ❤❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 18] Author: @lucksheme243 | Likes: 3 | Replies: 0 | Published: 2025-03-08T03:27:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "Exactly 💯",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 19] Author: @journal_freak | Likes: 2 | Replies: 0 | Published: 2025-03-08T05:21:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "So true!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "[COMMENT 20] Author: @pdeepa12 | Likes: 13 | Replies: 0 | Published: 2025-03-08T05:26:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00072",
+                "author": "",
+                "text": "Yeh public ek mauka nahi chodti government lo blame Karne",
+                "likes": null
+              },
+              {
+                "comment_id": "c01532",
+                "author": "",
+                "text": "[COMMENT 477] Author: @bishnudev1760 | Likes: 0 | Replies: 0 | Published: 2025-03-12T15:10:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01533",
+                "author": "",
+                "text": "We need a video on how to take care of our Beard in the right way sir.!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01535",
+                "author": "",
+                "text": "[COMMENT 478] Author: @krishl8621 | Likes: 0 | Replies: 0 | Published: 2025-03-12T08:34:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01536",
+                "author": "",
+                "text": "Do a video on sibo and sifo plzz",
+                "likes": null
+              },
+              {
+                "comment_id": "c01538",
+                "author": "",
+                "text": "[COMMENT 479] Author: @nusratzamal2252 | Likes: 0 | Replies: 0 | Published: 2025-03-09T09:40:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01539",
+                "author": "",
+                "text": "Please make video on respiratory masks 3M 9504 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01541",
+                "author": "",
+                "text": "[COMMENT 480] Author: @sumaila7015 | Likes: 1 | Replies: 0 | Published: 2025-03-08T06:49:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01542",
+                "author": "",
+                "text": "Plzz make a video on spondylitis L4-L5 pain ....mere papa ko kuch mahine se ye problem hai and unko bht chakkar bhi aate hai bht se doctor ko dikha kr thak chuke h lekin kuch fayda nh hai ...plz plz plz vivek i trust you plz make a video on it plz",
+                "likes": null
+              },
+              {
+                "comment_id": "c01544",
+                "author": "",
+                "text": "[COMMENT 481] Author: @spiritualpath4724 | Likes: 0 | Replies: 0 | Published: 2025-05-21T20:50:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01545",
+                "author": "",
+                "text": "Sir, Teether, Diapers and baby care products pe video bnayie. We must need to know for the best products for our baby.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01547",
+                "author": "",
+                "text": "[COMMENT 482] Author: @G3Talkies3691 | Likes: 0 | Replies: 0 | Published: 2025-03-10T14:17:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01548",
+                "author": "",
+                "text": "Hi Sir ,Can you Make a video about how to reduce anti TPO for thyroid naturally Hadmitotos thyroid please sir do. A video plz…it will help to Me plz….",
+                "likes": null
+              },
+              {
+                "comment_id": "c01550",
+                "author": "",
+                "text": "[COMMENT 483] Author: @PrachiGupta-dm5zt | Likes: 0 | Replies: 0 | Published: 2025-03-11T04:28:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01551",
+                "author": "",
+                "text": "Best hair color in market",
+                "likes": null
+              },
+              {
+                "comment_id": "c01553",
+                "author": "",
+                "text": "[COMMENT 484] Author: @Annie-it4ev | Likes: 0 | Replies: 0 | Published: 2025-03-10T05:59:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01554",
+                "author": "",
+                "text": "Pls make a video on treating blood like coming from stools maybe due to stomach ulcer",
+                "likes": null
+              },
+              {
+                "comment_id": "c01555",
+                "author": "",
+                "text": "Previously i did got it thtought acidity.. ulcers and blood in stools ...to which i was recovering my self with other videos such on stomach ulcer i was recovering but still it comes back.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01557",
+                "author": "",
+                "text": "[COMMENT 485] Author: @dominic_zzz | Likes: 0 | Replies: 0 | Published: 2025-03-08T17:32:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01558",
+                "author": "",
+                "text": "Sir why in men center part of sclap hair loss ??. Make video on this and root cause & remady",
+                "likes": null
+              },
+              {
+                "comment_id": "c01560",
+                "author": "",
+                "text": "[COMMENT 486] Author: @yashvashistha7804 | Likes: 0 | Replies: 0 | Published: 2025-03-14T06:54:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01561",
+                "author": "",
+                "text": "My parents sent me this video asked me to do this 😅",
+                "likes": null
+              },
+              {
+                "comment_id": "c01563",
+                "author": "",
+                "text": "[COMMENT 487] Author: @karankurzekar6130 | Likes: 0 | Replies: 0 | Published: 2025-03-10T05:53:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01564",
+                "author": "",
+                "text": "Make video on body sunscreen",
+                "likes": null
+              },
+              {
+                "comment_id": "c01566",
+                "author": "",
+                "text": "[COMMENT 488] Author: @kusumavenkatesh2012 | Likes: 0 | Replies: 0 | Published: 2025-03-09T05:14:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01567",
+                "author": "",
+                "text": "Please make video for those aged between 40-50",
+                "likes": null
+              },
+              {
+                "comment_id": "c01569",
+                "author": "",
+                "text": "[COMMENT 489] Author: @TejasPawar-n5f | Likes: 0 | Replies: 0 | Published: 2026-03-23T04:57:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01570",
+                "author": "",
+                "text": "In my home garden i already have a moringa tree but never thought we could eat their leaves",
+                "likes": null
+              },
+              {
+                "comment_id": "c01571",
+                "author": "",
+                "text": "😮",
+                "likes": null
+              },
+              {
+                "comment_id": "c01573",
+                "author": "",
+                "text": "[COMMENT 490] Author: @shiv6464 | Likes: 0 | Replies: 0 | Published: 2025-03-08T06:02:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "A video on how to remove darkness around mouth",
+                "likes": null
+              },
+              {
+                "comment_id": "c01576",
+                "author": "",
+                "text": "[COMMENT 491] Author: @LeonardoDeFreitas-p5h | Likes: 0 | Replies: 0 | Published: 2025-06-19T22:11:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "I ❤ all🎉🎉🎉",
+                "likes": null
+              },
+              {
+                "comment_id": "c01579",
+                "author": "",
+                "text": "[COMMENT 492] Author: @aabrakadabra7611 | Likes: 0 | Replies: 0 | Published: 2025-03-19T04:06:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "Make a vid on 5 white poison and alternative that we eat daily sugar,salt,milk,rice,maidaetc",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "[COMMENT 493] Author: @rahimlive0076 | Likes: 1 | Replies: 0 | Published: 2025-03-07T14:04:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01583",
+                "author": "",
+                "text": "I'm watching him 4yrs ago lekin parents ko English m smjh nhi ata Plz Vivek bhya hindi m bhi same upload kra kro",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "[COMMENT 494] Author: @jonathanramadurg7960 | Likes: 0 | Replies: 0 | Published: 2025-03-08T16:59:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "Bro please talk about soujanya case Karnataka'",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "[COMMENT 495] Author: @111foralien5 | Likes: 0 | Replies: 0 | Published: 2025-03-09T02:54:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "Yar launda bhut shi hai yee..ek number",
+                "likes": null
+              },
+              {
+                "comment_id": "c01591",
+                "author": "",
+                "text": "[COMMENT 496] Author: @Piyush-h3n1q | Likes: 0 | Replies: 0 | Published: 2025-03-19T07:31:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "Plz make DIY moringa tablets ❤❤❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "[COMMENT 497] Author: @kadirali4589 | Likes: 0 | Replies: 0 | Published: 2025-03-18T08:07:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "Vivek sir aapka \"the almost perfect recipe\" wala video upload kar do ya uska link dedo sir pls",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "[COMMENT 498] Author: @AnakhasreeSR | Likes: 1 | Replies: 0 | Published: 2025-03-15T04:03:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "Can you suggest a diabetic friendly diet for parents... especially which can help them gain weight",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "[COMMENT 499] Author: @u.a.j8488 | Likes: 0 | Replies: 0 | Published: 2025-03-10T11:32:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "Vivek pls face mein pigmentation ke liye video banao. Cream kaun sa use karen pigmentation mein after 40 age?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01603",
+                "author": "",
+                "text": "[COMMENT 500] Author: @ArpithaMS-d9c | Likes: 0 | Replies: 0 | Published: 2025-03-19T10:12:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "Sir , black neck and underarms, please do vedio to get rid of acranthosis nigricans",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

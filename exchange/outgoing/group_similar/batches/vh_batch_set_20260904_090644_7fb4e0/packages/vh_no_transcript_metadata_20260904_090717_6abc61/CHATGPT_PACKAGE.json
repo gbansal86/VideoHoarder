@@ -1,0 +1,3031 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090717_6abc61",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090717_6abc61",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Oral care, teeth, tongue, and bad breath",
+      "batch_number": 26,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 26 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090717_6abc61",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090717_6abc61"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090717_6abc61",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Oral care, teeth, tongue, and bad breath",
+      "batch_number": 26,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "961adc20-2103-4ab4-934b-dfe8f7b25b11",
+    "package_id": "vh_no_transcript_metadata_20260904_090717_6abc61",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "Ke5JKC87qac"
+    ],
+    "evidence_grades": {
+      "Ke5JKC87qac": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Oral care, teeth, tongue, and bad breath",
+      "batch_number": 26,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "27a81d3079c318fa28603b1f9ee054a9b30f599578be22c1829464cbf05a8586",
+      "prompt.json": "01889e0085b997d2d66ea007f816c24ca072f76e16fe6c4940ee34d74dbe49fa",
+      "schema.json": "59b19378e6191184b862e1200b1791fec522003e134a5a344e9fd5e6fe9d48d3"
+    },
+    "created_at": "2026-09-04 09:07:17",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "Ke5JKC87qac",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=Ke5JKC87qac",
+        "original_title": "10 Oral Care Habits Ranked from Worst to Best",
+        "clean_title": "10 Oral Care Habits Ranked from Worst to Best",
+        "channel": "Fit Tuber",
+        "upload_date": "2019-10-11",
+        "description": "Oral Care Habits Ranked from Worst to Best. How to maintain oral hygiene. How to prevent oral problems like plaque buildup, mouth ulcers, tooth decay, bad breath, tooth sensitivity, tooth carries.\n\nBUY Authentic PROBURST Whey Protein Supreme - https://amzn.to/2M4kebg\nBuy from Proburst Website - https://www.proburst.com/product-category/whey-protein/\n(40% OFF Sale from Oct 13- Oct 17)\n\n✅  SUPPORT MY WORK and get exclusive perks : https://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\nINSTAGRAM - https://www.instagram.com/fittuber\n\nOur mouth is the reflection of our overall health. It is said that your oral health is the mirror of your internal body.So for optimal health, it is extremely important to maintain proper oral hygiene. So, in this video I have comprehensively discussed what exactly we should do and what we should not do to keep our teeth shining and gums strong.\n\n01:16 - Worst Oral Care Habits that damage your teeth and gums.most people on a daily basis are knowing or unknowingly doing things which is spoiling their teeth and gums. As a result, tooth decay, bleeding gums, bad breath, cavities, sensitivity are common problems today.\n\n05:01 - 5 Best Habits that can revive back your oral health.  The good news is that over 90% of oral diseases can easily be prevented. All you need to do is inculcate these oral care habits.\n\n09:45 - Video Partner - PROBURST, an authentic whey protein brand available in the Indian market. If you regularly workout, you can have one scoop of this protein with water.\nBUY Authentic PROBURST Whey Protein Supreme - https://amzn.to/2M4kebg\nBuy from Proburst Website - https://www.proburst.com/product-category/whey-protein/\n(40% OFF Sale from Oct 13- Oct 17)\n\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)\nPatanjali Dant Manjan - https://amzn.to/2nSC3A8\nVicco Tooth Powder - https://amzn.to/2ozvHq5\nDabur Red Tooth Powder - https://amzn.to/2n0tTWw\nCopper Tongue Cleaner - https://amzn.to/2mkihxm\nBamboo Soft Tooth Brush - https://amzn.to/2miQ9KY\nColgate Soft Tooth Brush - https://amzn.to/2nU8jD1\nCoconut Oil for Oil Pulling - https://amzn.to/2n4pVfB\nSesame Oil for Oil Pulling - https://amzn.to/2n2zJ9J\nMustard Oil for Oil Pulling - https://amzn.to/2n2KQzv\nClove Oil for Tooth Cavity - https://amzn.to/2nKhru1\nOrganic Natural Neem Twigs - https://amzn.to/2n2QuSd\n\nBEST PRODUCTS FROM WORST TO BEST SERIES (My Recommendations) (NOT SPONSORED)\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nMORE USEFUL LINKS\n\nCopper Jug that I recommend -https://amzn.to/2Gxth3I\nBrass Kadhai that I recommend - https://amzn.to/2R48zfV\nWater bottle that I use - https://amzn.to/2KtbcBg\nGram Flour to prepare Chilla - https://amzn.to/2A7CZUA\nSemi Brown Rice that I use - https://amzn.to/2GxWGuF\nMulti grain Atta that I have used - https://amzn.to/2UTIwqR\nBhuna Chana - https://amzn.to/2tOFdVa\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON FIT TUBER\n\n5 Amazing Patanjali products you should try\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\n10 Toothpastes in India Ranked from Worst to Best?\nhttps://www.youtube.com/watch?v=RWRDGnsQX_k&t=261s&frags=pl%2Cwn\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZgDcm-M&t=29s\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns9LDyHU\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVuQrz0oQ&t=294s\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/\n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 1153,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: Ke5JKC87qac",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 3828 | Replies: 170 | Published: 2019-10-11T13:48:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "\"Smile is the best thing that you can wear\" - Said a person who practiced the best habits mentioned in this video 😉",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @snehilmalviya531 | Likes: 13 | Replies: 0 | Published: 2019-10-11T13:49:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "bhai how to use dant manjan.... aisehi ya fir oil k saath?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @alenc5242 | Likes: 6 | Replies: 0 | Published: 2019-10-11T13:50:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "😄😄😂😂😂🤣🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @dietitianriyankadas | Likes: 21 | Replies: 0 | Published: 2019-10-11T13:50:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Please make a video on hypothyroidism. It is very necessary for everyone in now-a-days...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @prabhatmohapatra1400 | Likes: 6 | Replies: 0 | Published: 2019-10-11T13:53:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "But many shops don't keep dabur red paste and vicco",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @yashnagar4519 | Likes: 3 | Replies: 0 | Published: 2019-10-11T13:53:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Something related to exercise",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @niyamat_vlogs | Likes: 11565 | Replies: 279 | Published: 2019-10-12T05:16:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "As a Dentist... I declare all the points of fit tuber valid..😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @UMASOOT | Likes: 213 | Replies: 0 | Published: 2019-10-29T17:30:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "So u recommend brush and toothpaste over Datun and tooth powder for just of less than 2ppm of fluoride an SLS .why not ask people to use wood bark and straw ,salt or sand to brush teeth",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @markbaba2485 | Likes: 52 | Replies: 0 | Published: 2019-11-10T02:16:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "So tell me plz which is best vico dant or paste ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @markbaba2485 | Likes: 13 | Replies: 0 | Published: 2020-01-05T00:48:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "@Akanksha_S1ngh thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @djharshboss5128 | Likes: 112 | Replies: 0 | Published: 2020-01-16T03:22:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "I don't think you are dentist because your name is sapna Chaudhary 🤔",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @deepm7487 | Likes: 12 | Replies: 0 | Published: 2020-01-19T12:33:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Good to see ur comment.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @sowrabbm2364 | Likes: 3443 | Replies: 25 | Published: 2020-06-14T05:55:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "2016 : Graduated as Engineer.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "2020 : Learnt how to brush.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "[COMMENT 14] Author: @bhavishyarathore3097 | Likes: 26 | Replies: 0 | Published: 2020-06-18T00:01:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "Lmao 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 15] Author: @siddharthgarg1501 | Likes: 7 | Replies: 0 | Published: 2020-07-29T20:01:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 16] Author: @simransingh3399 | Likes: 6 | Replies: 0 | Published: 2020-08-27T04:05:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "😂😂 lol",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 17] Author: @user-ImNoBody | Likes: 70 | Replies: 0 | Published: 2020-08-27T11:25:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "Learning isn't crime",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 18] Author: @maxnmom67 | Likes: 55 | Replies: 0 | Published: 2020-08-27T12:50:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "There is always something new to learn",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 19] Author: @lokeycreations9292 | Likes: 4172 | Replies: 68 | Published: 2020-06-28T19:06:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "Me : im going to die",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "Fit tuber: Ur dying in a wrong way",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "😂😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 20] Author: @shiwangiswaraj2108 | Likes: 26 | Replies: 0 | Published: 2020-07-04T15:05:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "😂😂😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "Super duper explanation and true information ❤ thanks to ur good heart",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "[COMMENT 477] Author: @aparnavipat2547 | Likes: 0 | Replies: 0 | Published: 2022-10-09T11:21:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "Wooow wonderful 👌👌👌 cleaning gums properly specially with toothpowder and it's connected with intestine that really too informative .superb Vivek sir,👏👏👏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "[COMMENT 478] Author: @Blackhearteds | Likes: 0 | Replies: 0 | Published: 2021-08-20T20:38:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01620",
+              "author": "",
+              "text": "his every point has a big work",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "[COMMENT 479] Author: @laxmikhanayat6283 | Likes: 1 | Replies: 0 | Published: 2021-03-02T14:37:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01623",
+              "author": "",
+              "text": "Imagine getting heart form best fit Tuber ❤️❤️❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "[COMMENT 480] Author: @abhishekgudisa8644 | Likes: 0 | Replies: 0 | Published: 2021-02-25T18:46:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "Nice explanation bro and that video is very useful for who r Suffering with the problems of teeth",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "[COMMENT 481] Author: @angelinagokhale9309 | Likes: 0 | Replies: 0 | Published: 2022-07-27T17:45:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "Thank you Vivek for this informative video! I had a query about using a dental floss regularly. Is that a good habit?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01631",
+              "author": "",
+              "text": "[COMMENT 482] Author: @biniart1017 | Likes: 0 | Replies: 0 | Published: 2021-09-15T05:22:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "Hello... i want to request to make videos related to improve your eye sight, especially for the people with high myopia. Thank you ... keep it up. Good luck.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01634",
+              "author": "",
+              "text": "[COMMENT 483] Author: @01.himadriahuja98 | Likes: 1 | Replies: 0 | Published: 2021-04-26T22:17:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "Fluoride is important to prevent & treat dental caries",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "[COMMENT 484] Author: @bilalmalik728 | Likes: 0 | Replies: 0 | Published: 2024-02-11T10:30:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "Amazing video....such a beautiful acting; content and interesting knowledge",
+              "likes": null
+            },
+            {
+              "comment_id": "c01640",
+              "author": "",
+              "text": "[COMMENT 485] Author: @aicreatorshub69 | Likes: 0 | Replies: 0 | Published: 2022-08-22T16:59:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "Dnt rush when we brush ! noted ✅️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01643",
+              "author": "",
+              "text": "[COMMENT 486] Author: @supriyamulkvana | Likes: 0 | Replies: 0 | Published: 2022-10-08T17:52:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "Hi Vivek, first of all thank you for sharing the tremendous information through your youtube channel. :) I have seen most of your videos, but I have a very big confusion as to what should be the first thing to be performed in the morning, if you can put this in one order it will be helpful. Hope you read this comment and respond.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "Oil Pulling, brushing teeth, lime honey warm water with aloe vera and giloy juice (I am used to drink this before brushing), chewing curry leaves.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "[COMMENT 487] Author: @pappythind | Likes: 0 | Replies: 0 | Published: 2022-02-04T11:13:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "New to your Chanel , all videos are worth watching Please make video for Osteoarthritis",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "[COMMENT 488] Author: @elcucuy6172 | Likes: 2 | Replies: 0 | Published: 2021-06-19T17:20:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "04:45 kya acting krte ho bhai aap🤣🤣🤣🤣❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 489] Author: @hitesh155 | Likes: 0 | Replies: 0 | Published: 2021-06-05T09:02:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Thank you, this is really helpful",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "[COMMENT 490] Author: @yogeshverma94 | Likes: 0 | Replies: 0 | Published: 2021-06-04T16:30:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "Bro your smile is too good",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "[COMMENT 491] Author: @bigyanghartichhetri6221 | Likes: 0 | Replies: 0 | Published: 2022-03-10T04:06:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "I just love this guy's each and every videos ❤️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01662",
+              "author": "",
+              "text": "[COMMENT 492] Author: @wjharrison6641 | Likes: 0 | Replies: 0 | Published: 2021-02-14T13:27:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "🌼Life changing to massage gums in evening, such fantastic suggestions, will do😎do take walnuts and natural toothpaste 🌼🍀",
+              "likes": null
+            },
+            {
+              "comment_id": "c01665",
+              "author": "",
+              "text": "[COMMENT 493] Author: @saranya9497 | Likes: 1 | Replies: 0 | Published: 2023-06-23T10:40:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "You are great 🙏🙏🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01668",
+              "author": "",
+              "text": "[COMMENT 494] Author: @aicreatorshub69 | Likes: 0 | Replies: 0 | Published: 2022-08-22T16:57:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "Ancient time guru ji is back 🙌",
+              "likes": null
+            },
+            {
+              "comment_id": "c01671",
+              "author": "",
+              "text": "[COMMENT 495] Author: @aniskalick5607 | Likes: 0 | Replies: 0 | Published: 2022-03-02T18:52:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "Thanks for the info God bless you please talk about thyroid problem",
+              "likes": null
+            },
+            {
+              "comment_id": "c01674",
+              "author": "",
+              "text": "[COMMENT 496] Author: @ramandahiyafunnyandvlogcha9877 | Likes: 0 | Replies: 0 | Published: 2022-06-21T17:26:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "Wow that's an amazing knowledge 😌 Dr. Be nhi bataye gea ye sb to",
+              "likes": null
+            },
+            {
+              "comment_id": "c01677",
+              "author": "",
+              "text": "[COMMENT 497] Author: @b.h.shashaank8713 | Likes: 1 | Replies: 0 | Published: 2023-04-10T17:08:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "Would you please post a video on some Ayurvedic herbs to fight and prevent Cancer?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01680",
+              "author": "",
+              "text": "[COMMENT 498] Author: @persistent-s | Likes: 1 | Replies: 0 | Published: 2023-05-27T10:24:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "Thanks bhaiya🙏🏻❤❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01683",
+              "author": "",
+              "text": "[COMMENT 499] Author: @parwati7460 | Likes: 1 | Replies: 0 | Published: 2021-01-25T13:01:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "Plz make video on RCM products",
+              "likes": null
+            },
+            {
+              "comment_id": "c01686",
+              "author": "",
+              "text": "[COMMENT 500] Author: @beannyjane1 | Likes: 0 | Replies: 0 | Published: 2022-07-28T01:50:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01687",
+              "author": "",
+              "text": "So much great information thanks so much, Beana NZ",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "Ke5JKC87qac",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\10 Oral Care Habits Ranked from Worst to Best\\10 Oral Care Habits Ranked from Worst to Best.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\10 Oral Care Habits Ranked from Worst to Best",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\Ke5JKC87qac",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "Ke5JKC87qac",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 1153,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: Ke5JKC87qac",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 3828 | Replies: 170 | Published: 2019-10-11T13:48:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "\"Smile is the best thing that you can wear\" - Said a person who practiced the best habits mentioned in this video 😉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @snehilmalviya531 | Likes: 13 | Replies: 0 | Published: 2019-10-11T13:49:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "bhai how to use dant manjan.... aisehi ya fir oil k saath?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @alenc5242 | Likes: 6 | Replies: 0 | Published: 2019-10-11T13:50:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "😄😄😂😂😂🤣🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @dietitianriyankadas | Likes: 21 | Replies: 0 | Published: 2019-10-11T13:50:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Please make a video on hypothyroidism. It is very necessary for everyone in now-a-days...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @prabhatmohapatra1400 | Likes: 6 | Replies: 0 | Published: 2019-10-11T13:53:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "But many shops don't keep dabur red paste and vicco",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @yashnagar4519 | Likes: 3 | Replies: 0 | Published: 2019-10-11T13:53:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Something related to exercise",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @niyamat_vlogs | Likes: 11565 | Replies: 279 | Published: 2019-10-12T05:16:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "As a Dentist... I declare all the points of fit tuber valid..😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @UMASOOT | Likes: 213 | Replies: 0 | Published: 2019-10-29T17:30:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "So u recommend brush and toothpaste over Datun and tooth powder for just of less than 2ppm of fluoride an SLS .why not ask people to use wood bark and straw ,salt or sand to brush teeth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @markbaba2485 | Likes: 52 | Replies: 0 | Published: 2019-11-10T02:16:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "So tell me plz which is best vico dant or paste ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @markbaba2485 | Likes: 13 | Replies: 0 | Published: 2020-01-05T00:48:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "@Akanksha_S1ngh thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @djharshboss5128 | Likes: 112 | Replies: 0 | Published: 2020-01-16T03:22:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "I don't think you are dentist because your name is sapna Chaudhary 🤔",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @deepm7487 | Likes: 12 | Replies: 0 | Published: 2020-01-19T12:33:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Good to see ur comment.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @sowrabbm2364 | Likes: 3443 | Replies: 25 | Published: 2020-06-14T05:55:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "2016 : Graduated as Engineer.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "2020 : Learnt how to brush.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @bhavishyarathore3097 | Likes: 26 | Replies: 0 | Published: 2020-06-18T00:01:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "Lmao 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @siddharthgarg1501 | Likes: 7 | Replies: 0 | Published: 2020-07-29T20:01:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @simransingh3399 | Likes: 6 | Replies: 0 | Published: 2020-08-27T04:05:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "😂😂 lol",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @user-ImNoBody | Likes: 70 | Replies: 0 | Published: 2020-08-27T11:25:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "Learning isn't crime",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @maxnmom67 | Likes: 55 | Replies: 0 | Published: 2020-08-27T12:50:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "There is always something new to learn",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @lokeycreations9292 | Likes: 4172 | Replies: 68 | Published: 2020-06-28T19:06:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "Me : im going to die",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "Fit tuber: Ur dying in a wrong way",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "😂😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @shiwangiswaraj2108 | Likes: 26 | Replies: 0 | Published: 2020-07-04T15:05:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "😂😂😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "Super duper explanation and true information ❤ thanks to ur good heart",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @aparnavipat2547 | Likes: 0 | Replies: 0 | Published: 2022-10-09T11:21:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "Wooow wonderful 👌👌👌 cleaning gums properly specially with toothpowder and it's connected with intestine that really too informative .superb Vivek sir,👏👏👏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @Blackhearteds | Likes: 0 | Replies: 0 | Published: 2021-08-20T20:38:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01620",
+                  "author": "",
+                  "text": "his every point has a big work",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @laxmikhanayat6283 | Likes: 1 | Replies: 0 | Published: 2021-03-02T14:37:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01623",
+                  "author": "",
+                  "text": "Imagine getting heart form best fit Tuber ❤️❤️❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @abhishekgudisa8644 | Likes: 0 | Replies: 0 | Published: 2021-02-25T18:46:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "Nice explanation bro and that video is very useful for who r Suffering with the problems of teeth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @angelinagokhale9309 | Likes: 0 | Replies: 0 | Published: 2022-07-27T17:45:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "Thank you Vivek for this informative video! I had a query about using a dental floss regularly. Is that a good habit?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01631",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @biniart1017 | Likes: 0 | Replies: 0 | Published: 2021-09-15T05:22:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "Hello... i want to request to make videos related to improve your eye sight, especially for the people with high myopia. Thank you ... keep it up. Good luck.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01634",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @01.himadriahuja98 | Likes: 1 | Replies: 0 | Published: 2021-04-26T22:17:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "Fluoride is important to prevent & treat dental caries",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @bilalmalik728 | Likes: 0 | Replies: 0 | Published: 2024-02-11T10:30:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "Amazing video....such a beautiful acting; content and interesting knowledge",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01640",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @aicreatorshub69 | Likes: 0 | Replies: 0 | Published: 2022-08-22T16:59:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "Dnt rush when we brush ! noted ✅️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01643",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @supriyamulkvana | Likes: 0 | Replies: 0 | Published: 2022-10-08T17:52:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "Hi Vivek, first of all thank you for sharing the tremendous information through your youtube channel. :) I have seen most of your videos, but I have a very big confusion as to what should be the first thing to be performed in the morning, if you can put this in one order it will be helpful. Hope you read this comment and respond.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "Oil Pulling, brushing teeth, lime honey warm water with aloe vera and giloy juice (I am used to drink this before brushing), chewing curry leaves.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @pappythind | Likes: 0 | Replies: 0 | Published: 2022-02-04T11:13:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "New to your Chanel , all videos are worth watching Please make video for Osteoarthritis",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @elcucuy6172 | Likes: 2 | Replies: 0 | Published: 2021-06-19T17:20:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "04:45 kya acting krte ho bhai aap🤣🤣🤣🤣❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @hitesh155 | Likes: 0 | Replies: 0 | Published: 2021-06-05T09:02:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Thank you, this is really helpful",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @yogeshverma94 | Likes: 0 | Replies: 0 | Published: 2021-06-04T16:30:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "Bro your smile is too good",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @bigyanghartichhetri6221 | Likes: 0 | Replies: 0 | Published: 2022-03-10T04:06:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "I just love this guy's each and every videos ❤️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01662",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @wjharrison6641 | Likes: 0 | Replies: 0 | Published: 2021-02-14T13:27:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "🌼Life changing to massage gums in evening, such fantastic suggestions, will do😎do take walnuts and natural toothpaste 🌼🍀",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01665",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @saranya9497 | Likes: 1 | Replies: 0 | Published: 2023-06-23T10:40:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "You are great 🙏🙏🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01668",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @aicreatorshub69 | Likes: 0 | Replies: 0 | Published: 2022-08-22T16:57:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "Ancient time guru ji is back 🙌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01671",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @aniskalick5607 | Likes: 0 | Replies: 0 | Published: 2022-03-02T18:52:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "Thanks for the info God bless you please talk about thyroid problem",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01674",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @ramandahiyafunnyandvlogcha9877 | Likes: 0 | Replies: 0 | Published: 2022-06-21T17:26:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "Wow that's an amazing knowledge 😌 Dr. Be nhi bataye gea ye sb to",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01677",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @b.h.shashaank8713 | Likes: 1 | Replies: 0 | Published: 2023-04-10T17:08:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "Would you please post a video on some Ayurvedic herbs to fight and prevent Cancer?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01680",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @persistent-s | Likes: 1 | Replies: 0 | Published: 2023-05-27T10:24:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "Thanks bhaiya🙏🏻❤❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01683",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @parwati7460 | Likes: 1 | Replies: 0 | Published: 2021-01-25T13:01:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "Plz make video on RCM products",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01686",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @beannyjane1 | Likes: 0 | Replies: 0 | Published: 2022-07-28T01:50:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01687",
+                  "author": "",
+                  "text": "So much great information thanks so much, Beana NZ",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "Ke5JKC87qac",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 1153,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: Ke5JKC87qac",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 3828 | Replies: 170 | Published: 2019-10-11T13:48:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "\"Smile is the best thing that you can wear\" - Said a person who practiced the best habits mentioned in this video 😉",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @snehilmalviya531 | Likes: 13 | Replies: 0 | Published: 2019-10-11T13:49:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "bhai how to use dant manjan.... aisehi ya fir oil k saath?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @alenc5242 | Likes: 6 | Replies: 0 | Published: 2019-10-11T13:50:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "😄😄😂😂😂🤣🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @dietitianriyankadas | Likes: 21 | Replies: 0 | Published: 2019-10-11T13:50:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Please make a video on hypothyroidism. It is very necessary for everyone in now-a-days...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @prabhatmohapatra1400 | Likes: 6 | Replies: 0 | Published: 2019-10-11T13:53:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "But many shops don't keep dabur red paste and vicco",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @yashnagar4519 | Likes: 3 | Replies: 0 | Published: 2019-10-11T13:53:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Something related to exercise",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @niyamat_vlogs | Likes: 11565 | Replies: 279 | Published: 2019-10-12T05:16:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "As a Dentist... I declare all the points of fit tuber valid..😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @UMASOOT | Likes: 213 | Replies: 0 | Published: 2019-10-29T17:30:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "So u recommend brush and toothpaste over Datun and tooth powder for just of less than 2ppm of fluoride an SLS .why not ask people to use wood bark and straw ,salt or sand to brush teeth",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @markbaba2485 | Likes: 52 | Replies: 0 | Published: 2019-11-10T02:16:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "So tell me plz which is best vico dant or paste ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @markbaba2485 | Likes: 13 | Replies: 0 | Published: 2020-01-05T00:48:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "@Akanksha_S1ngh thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @djharshboss5128 | Likes: 112 | Replies: 0 | Published: 2020-01-16T03:22:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "I don't think you are dentist because your name is sapna Chaudhary 🤔",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @deepm7487 | Likes: 12 | Replies: 0 | Published: 2020-01-19T12:33:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Good to see ur comment.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @sowrabbm2364 | Likes: 3443 | Replies: 25 | Published: 2020-06-14T05:55:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "2016 : Graduated as Engineer.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "2020 : Learnt how to brush.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "[COMMENT 14] Author: @bhavishyarathore3097 | Likes: 26 | Replies: 0 | Published: 2020-06-18T00:01:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "Lmao 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 15] Author: @siddharthgarg1501 | Likes: 7 | Replies: 0 | Published: 2020-07-29T20:01:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 16] Author: @simransingh3399 | Likes: 6 | Replies: 0 | Published: 2020-08-27T04:05:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "😂😂 lol",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 17] Author: @user-ImNoBody | Likes: 70 | Replies: 0 | Published: 2020-08-27T11:25:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "Learning isn't crime",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 18] Author: @maxnmom67 | Likes: 55 | Replies: 0 | Published: 2020-08-27T12:50:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "There is always something new to learn",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 19] Author: @lokeycreations9292 | Likes: 4172 | Replies: 68 | Published: 2020-06-28T19:06:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "Me : im going to die",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "Fit tuber: Ur dying in a wrong way",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "😂😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 20] Author: @shiwangiswaraj2108 | Likes: 26 | Replies: 0 | Published: 2020-07-04T15:05:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "😂😂😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "Super duper explanation and true information ❤ thanks to ur good heart",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "[COMMENT 477] Author: @aparnavipat2547 | Likes: 0 | Replies: 0 | Published: 2022-10-09T11:21:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "Wooow wonderful 👌👌👌 cleaning gums properly specially with toothpowder and it's connected with intestine that really too informative .superb Vivek sir,👏👏👏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "[COMMENT 478] Author: @Blackhearteds | Likes: 0 | Replies: 0 | Published: 2021-08-20T20:38:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01620",
+                "author": "",
+                "text": "his every point has a big work",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "[COMMENT 479] Author: @laxmikhanayat6283 | Likes: 1 | Replies: 0 | Published: 2021-03-02T14:37:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01623",
+                "author": "",
+                "text": "Imagine getting heart form best fit Tuber ❤️❤️❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "[COMMENT 480] Author: @abhishekgudisa8644 | Likes: 0 | Replies: 0 | Published: 2021-02-25T18:46:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "Nice explanation bro and that video is very useful for who r Suffering with the problems of teeth",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "[COMMENT 481] Author: @angelinagokhale9309 | Likes: 0 | Replies: 0 | Published: 2022-07-27T17:45:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "Thank you Vivek for this informative video! I had a query about using a dental floss regularly. Is that a good habit?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01631",
+                "author": "",
+                "text": "[COMMENT 482] Author: @biniart1017 | Likes: 0 | Replies: 0 | Published: 2021-09-15T05:22:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "Hello... i want to request to make videos related to improve your eye sight, especially for the people with high myopia. Thank you ... keep it up. Good luck.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01634",
+                "author": "",
+                "text": "[COMMENT 483] Author: @01.himadriahuja98 | Likes: 1 | Replies: 0 | Published: 2021-04-26T22:17:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "Fluoride is important to prevent & treat dental caries",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "[COMMENT 484] Author: @bilalmalik728 | Likes: 0 | Replies: 0 | Published: 2024-02-11T10:30:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "Amazing video....such a beautiful acting; content and interesting knowledge",
+                "likes": null
+              },
+              {
+                "comment_id": "c01640",
+                "author": "",
+                "text": "[COMMENT 485] Author: @aicreatorshub69 | Likes: 0 | Replies: 0 | Published: 2022-08-22T16:59:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "Dnt rush when we brush ! noted ✅️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01643",
+                "author": "",
+                "text": "[COMMENT 486] Author: @supriyamulkvana | Likes: 0 | Replies: 0 | Published: 2022-10-08T17:52:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "Hi Vivek, first of all thank you for sharing the tremendous information through your youtube channel. :) I have seen most of your videos, but I have a very big confusion as to what should be the first thing to be performed in the morning, if you can put this in one order it will be helpful. Hope you read this comment and respond.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "Oil Pulling, brushing teeth, lime honey warm water with aloe vera and giloy juice (I am used to drink this before brushing), chewing curry leaves.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "[COMMENT 487] Author: @pappythind | Likes: 0 | Replies: 0 | Published: 2022-02-04T11:13:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "New to your Chanel , all videos are worth watching Please make video for Osteoarthritis",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "[COMMENT 488] Author: @elcucuy6172 | Likes: 2 | Replies: 0 | Published: 2021-06-19T17:20:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "04:45 kya acting krte ho bhai aap🤣🤣🤣🤣❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 489] Author: @hitesh155 | Likes: 0 | Replies: 0 | Published: 2021-06-05T09:02:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Thank you, this is really helpful",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "[COMMENT 490] Author: @yogeshverma94 | Likes: 0 | Replies: 0 | Published: 2021-06-04T16:30:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "Bro your smile is too good",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "[COMMENT 491] Author: @bigyanghartichhetri6221 | Likes: 0 | Replies: 0 | Published: 2022-03-10T04:06:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "I just love this guy's each and every videos ❤️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01662",
+                "author": "",
+                "text": "[COMMENT 492] Author: @wjharrison6641 | Likes: 0 | Replies: 0 | Published: 2021-02-14T13:27:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "🌼Life changing to massage gums in evening, such fantastic suggestions, will do😎do take walnuts and natural toothpaste 🌼🍀",
+                "likes": null
+              },
+              {
+                "comment_id": "c01665",
+                "author": "",
+                "text": "[COMMENT 493] Author: @saranya9497 | Likes: 1 | Replies: 0 | Published: 2023-06-23T10:40:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "You are great 🙏🙏🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01668",
+                "author": "",
+                "text": "[COMMENT 494] Author: @aicreatorshub69 | Likes: 0 | Replies: 0 | Published: 2022-08-22T16:57:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "Ancient time guru ji is back 🙌",
+                "likes": null
+              },
+              {
+                "comment_id": "c01671",
+                "author": "",
+                "text": "[COMMENT 495] Author: @aniskalick5607 | Likes: 0 | Replies: 0 | Published: 2022-03-02T18:52:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "Thanks for the info God bless you please talk about thyroid problem",
+                "likes": null
+              },
+              {
+                "comment_id": "c01674",
+                "author": "",
+                "text": "[COMMENT 496] Author: @ramandahiyafunnyandvlogcha9877 | Likes: 0 | Replies: 0 | Published: 2022-06-21T17:26:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "Wow that's an amazing knowledge 😌 Dr. Be nhi bataye gea ye sb to",
+                "likes": null
+              },
+              {
+                "comment_id": "c01677",
+                "author": "",
+                "text": "[COMMENT 497] Author: @b.h.shashaank8713 | Likes: 1 | Replies: 0 | Published: 2023-04-10T17:08:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "Would you please post a video on some Ayurvedic herbs to fight and prevent Cancer?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01680",
+                "author": "",
+                "text": "[COMMENT 498] Author: @persistent-s | Likes: 1 | Replies: 0 | Published: 2023-05-27T10:24:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "Thanks bhaiya🙏🏻❤❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01683",
+                "author": "",
+                "text": "[COMMENT 499] Author: @parwati7460 | Likes: 1 | Replies: 0 | Published: 2021-01-25T13:01:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "Plz make video on RCM products",
+                "likes": null
+              },
+              {
+                "comment_id": "c01686",
+                "author": "",
+                "text": "[COMMENT 500] Author: @beannyjane1 | Likes: 0 | Replies: 0 | Published: 2022-07-28T01:50:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01687",
+                "author": "",
+                "text": "So much great information thanks so much, Beana NZ",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

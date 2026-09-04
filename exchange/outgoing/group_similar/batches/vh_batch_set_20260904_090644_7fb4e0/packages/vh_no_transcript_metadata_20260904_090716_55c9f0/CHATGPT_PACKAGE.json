@@ -1,0 +1,3031 @@
+{
+  "package_id": "vh_no_transcript_metadata_20260904_090716_55c9f0",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090716_55c9f0",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Gym fundamentals, warm-ups, stretches, and training",
+      "batch_number": 17,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "batch_instruction": "This is independently importable batch 17 of 36 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This is a NO-TRANSCRIPT package: use only title, description, metadata and comments. Do not invent transcript summaries, timeline sections, timestamps, claims, or clip plans."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_no_transcript_metadata_20260904_090716_55c9f0",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_no_transcript_metadata_20260904_090716_55c9f0"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "entities.v2",
+                  "viewer_comment_intelligence.v2",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_no_transcript_metadata_20260904_090716_55c9f0",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Gym fundamentals, warm-ups, stretches, and training",
+      "batch_number": 17,
+      "batch_total": 36,
+      "batch_size": 50
+    }
+  },
+  "manifest": {
+    "request_id": "616771bd-e4e7-40ff-bffb-5dbcd2601e59",
+    "package_id": "vh_no_transcript_metadata_20260904_090716_55c9f0",
+    "mode": "NO_TRANSCRIPT_METADATA",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "entities.v2",
+      "viewer_comment_intelligence.v2",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "ouneTsdk46w"
+    ],
+    "evidence_grades": {
+      "ouneTsdk46w": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "NO_TRANSCRIPT_METADATA",
+      "group_name": "Gym fundamentals, warm-ups, stretches, and training",
+      "batch_number": 17,
+      "batch_total": 36,
+      "batch_size": 50
+    },
+    "hashes": {
+      "evidence.json": "ad82d89473f4bf8b1fe44765083625c16996b186216ccd47d7b7f421d9d1f9be",
+      "prompt.json": "44b23ae56b031aa398131d9a365dac97718021002806706daa8ca0626dc1815b",
+      "schema.json": "0b256eb88e4395d0bbb61f35dfac7b4af36600c74644b6417c008a039d214b33"
+    },
+    "created_at": "2026-09-04 09:07:16",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "ouneTsdk46w",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=ouneTsdk46w",
+        "original_title": "Cool down Exercises after Workout | Post Workout Stretches",
+        "clean_title": "Cool down Exercises after Workout | Post Workout Stretches",
+        "channel": "Fit Tuber",
+        "upload_date": "2017-03-07",
+        "description": "A cool down post workout is as important as a warm up before workout.\nA proper cool down is helps bring the breathing, body temperature and heart rate back to normal slowly.\nCool down allows the blood to properly redistribute itself to the heart.\nThis redistribution helps aid the muscles get rid of lactic acid which can build up around the muscles during workout.\nLactic acid can lead to muscle cramping and stiffness.\n\nA 5 minute cool down is good enough. \n\n1. Flyers (3 times) - 5 second rest in between.\n\nAfter flyers, take 10 second rest.\n\n2. Floaters (3 times) - 5 seconds rest in between.\n\nAfter floaters, again take 10 seconds rest.\n\n3. Chakraasana (2 times) - Take 5 seconds rest in between.\n\nAgain 10 seconds rest.\n\n4. Neck diggers (2 times) - 5 seconds rest in between.\n\nAgain rest for 10 seconds.\n\nNow slowly turn to your right side. Relax and slowly breathe.\n\nSlowly get up from the right side.\n\nThat's a good enough 5 minute cool down.\n\nIf you find this video helpful do\n\nLIKE | SHARE | COMMENT\n\nTo SUBSCRIBE\"\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw\n\nThanks for your time.\n\nI wish you good health.\n\nFit Tuber.",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "entities.v2",
+        "viewer_comment_intelligence.v2",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "unknown",
+          "quality": "failed",
+          "completeness": "none",
+          "video_duration_seconds": 0,
+          "segments": []
+        },
+        "comments": {
+          "total_comments": 331,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: ouneTsdk46w",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 151",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @vijina8865 | Likes: 19 | Replies: 1 | Published: 2020-06-20T13:47:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Well...I was doing this in the morning..when my amma saw me doing the neck diggers she thought I was going through a seizure on the floor...and she screamed so loud that the entire household jumped from bed...😶😶",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @deepu_bsr | Likes: 2 | Replies: 0 | Published: 2021-01-22T15:47:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @shadysmarty5465 | Likes: 91 | Replies: 10 | Published: 2017-03-07T16:09:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "This helped me today after my tedious 7 hr study session too ...wonderful benefit apart from workout ... that was amazing .. good one vivek bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @FitTuber | Likes: 11 | Replies: 0 | Published: 2017-03-09T18:47:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "+Shady Smarty Haha... That's great. I'm so glad :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @peterpace3379 | Likes: 8 | Replies: 0 | Published: 2017-03-22T10:46:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Shady Smarty Bro are you preparing for JEE? Because only JEE students have studies this rigorous.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @shadysmarty5465 | Likes: 3 | Replies: 0 | Published: 2017-03-22T17:05:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Yeah peter , i m preparing for jee , i generally study 7 to 8 hrs and on holidays to peak of 12 hrs ... btw nice guess",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @rameshbabu5933 | Likes: 5 | Replies: 0 | Published: 2019-11-03T10:22:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "@shadysmarty5465 which college",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "are u studying now my friend",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "[COMMENT 8] Author: @miikkii8theglobe | Likes: 0 | Replies: 0 | Published: 2022-06-27T16:06:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "@shadysmarty5465 have you cracked it out yet I mean it's been 5 yrs ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "[COMMENT 9] Author: @RameshKumar-sz6pv | Likes: 16 | Replies: 0 | Published: 2019-03-23T08:04:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "We are roaming around YouTube and Gym.. but no one says importance of post workout stretches...thks for the sharing valuable knowledge to others .. 👏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "[COMMENT 10] Author: @rabiyasonia1856 | Likes: 23 | Replies: 0 | Published: 2018-07-16T19:26:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "Ur smile is masallah cute....May almighty allah bless you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "[COMMENT 11] Author: @bhojrajsingh7821 | Likes: 33 | Replies: 1 | Published: 2017-03-07T16:01:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "I never knew about the importance of after workout excercises. All thanks to u man, now I have proper knowledge about it.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "[COMMENT 12] Author: @FitTuber | Likes: 9 | Replies: 0 | Published: 2017-03-09T18:43:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "+Bhojraj Singh I'm so glad you liked it brother. Yes, cool down is as important as a warm up.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "[COMMENT 13] Author: @p.m.132 | Likes: 23 | Replies: 1 | Published: 2017-03-08T01:40:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "Perfect! And the background music too. helped me focus. :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "[COMMENT 14] Author: @FitTuber | Likes: 3 | Replies: 0 | Published: 2017-03-09T18:54:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "+Pradeeta Mishra Thanks. I'm so glad you found it helpful :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 15] Author: @vijayvarmabellamkonda4284 | Likes: 9 | Replies: 0 | Published: 2017-10-28T19:22:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "Brilliant explanation of science with workout...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 16] Author: @FraserWilsonFit | Likes: 22 | Replies: 3 | Published: 2017-03-08T02:23:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "Relaxing :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 17] Author: @FitTuber | Likes: 10 | Replies: 0 | Published: 2017-03-09T18:54:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "+Fraser Wilson Thanks :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 18] Author: @samdam9568 | Likes: 0 | Replies: 0 | Published: 2021-01-16T08:04:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "@FitTuber wlc but answer me",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 19] Author: @donthiaiswarya8944 | Likes: 0 | Replies: 0 | Published: 2021-02-03T14:52:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "@FitTuber Can u please share an alternative exercise to chakrasana?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 20] Author: @rameshbabu5933 | Likes: 2 | Replies: 0 | Published: 2019-11-02T12:53:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "Thalaiva ur channel is like gold mine & every videos u post is like gold🕉️🇮🇳🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "[COMMENT 21] Author: @varunbhalla7855 | Likes: 4 | Replies: 0 | Published: 2019-01-31T14:50:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "You never fail to help👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00414",
+              "author": "",
+              "text": "[COMMENT 130] Author: @rohitram533 | Likes: 0 | Replies: 0 | Published: 2017-03-11T04:24:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00415",
+              "author": "",
+              "text": "I stay in a hostel and it is very difficult for me to follow the diets......what do i do....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00416",
+              "author": "",
+              "text": "Secondly, of all the different workouts given by you....how should it be done....for eg. one day i did all of them chest,shoulder etc. But the next day as i was so tired, i couldnt do any.... How should I follow so that i stay fit and also lost tummy(im not fat, only little tummy) and gaim muscles.....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00418",
+              "author": "",
+              "text": "[COMMENT 131] Author: @tanyadas1660 | Likes: 1 | Replies: 1 | Published: 2017-06-17T03:18:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00419",
+              "author": "",
+              "text": "Do you live in ooty?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00421",
+              "author": "",
+              "text": "[COMMENT 132] Author: @anandthethriller4362 | Likes: 1 | Replies: 0 | Published: 2018-07-16T11:29:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00422",
+              "author": "",
+              "text": "thats Visakhapatnam",
+              "likes": null
+            },
+            {
+              "comment_id": "c00424",
+              "author": "",
+              "text": "[COMMENT 133] Author: @soujanyaabbigeri4202 | Likes: 44 | Replies: 10 | Published: 2017-07-02T17:22:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00425",
+              "author": "",
+              "text": "can running helps to increase height?ans please",
+              "likes": null
+            },
+            {
+              "comment_id": "c00427",
+              "author": "",
+              "text": "[COMMENT 134] Author: @FitTuber | Likes: 34 | Replies: 0 | Published: 2017-07-08T10:57:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00428",
+              "author": "",
+              "text": "Yes. Checkout my detailed video on how to increase height.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00430",
+              "author": "",
+              "text": "[COMMENT 135] Author: @darshansnkini5299 | Likes: 1 | Replies: 0 | Published: 2020-07-27T06:06:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00431",
+              "author": "",
+              "text": "No",
+              "likes": null
+            },
+            {
+              "comment_id": "c00433",
+              "author": "",
+              "text": "[COMMENT 136] Author: @sikla.72 | Likes: 9 | Replies: 0 | Published: 2020-07-28T18:01:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00434",
+              "author": "",
+              "text": "@darshansnkini5299 then you are fool mine height is 8 inches more then my mother father by running workout and just yoga",
+              "likes": null
+            },
+            {
+              "comment_id": "c00436",
+              "author": "",
+              "text": "[COMMENT 137] Author: @neelmenon5115 | Likes: 10 | Replies: 0 | Published: 2020-09-09T11:55:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00437",
+              "author": "",
+              "text": "Any form of exercise increases HGH production, which increases height. There is no direct connection between running and increased height, although running (since it involves your core, hips and back, among others) can lead to better posture which makes you appear taller. However, to really grow taller you need to stay active, eat a balanced diet and get good sleep. :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00439",
+              "author": "",
+              "text": "[COMMENT 138] Author: @anaskv7667 | Likes: 1 | Replies: 0 | Published: 2020-10-11T05:34:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00440",
+              "author": "",
+              "text": "@FitTuber can you share exercise to increase height",
+              "likes": null
+            },
+            {
+              "comment_id": "c00442",
+              "author": "",
+              "text": "[COMMENT 139] Author: @declan-Vrgpsl | Likes: 0 | Replies: 0 | Published: 2021-01-29T13:41:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00443",
+              "author": "",
+              "text": "Hurts to lie on my side 🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00445",
+              "author": "",
+              "text": "[COMMENT 140] Author: @toshiropacino8299 | Likes: 0 | Replies: 2 | Published: 2017-03-10T07:32:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00446",
+              "author": "",
+              "text": "Hey Vivek can you tell me whether I should eat before or after workout? Thanks😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c00448",
+              "author": "",
+              "text": "[COMMENT 141] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2017-03-10T14:14:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00449",
+              "author": "",
+              "text": "+toshiro pacino You should definitely eat before and after workout. Checkout my pre and post workout meal options videos. :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00451",
+              "author": "",
+              "text": "[COMMENT 142] Author: @toshiropacino8299 | Likes: 0 | Replies: 0 | Published: 2017-03-10T14:29:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00452",
+              "author": "",
+              "text": "Thanks . Cheers mate",
+              "likes": null
+            },
+            {
+              "comment_id": "c00454",
+              "author": "",
+              "text": "[COMMENT 143] Author: @LadiDineshKumar | Likes: 0 | Replies: 1 | Published: 2017-03-07T16:41:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00455",
+              "author": "",
+              "text": "Is that Vizag ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00457",
+              "author": "",
+              "text": "[COMMENT 144] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-03-09T18:48:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00458",
+              "author": "",
+              "text": "+Dinesh Ladi Yes, it is :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00460",
+              "author": "",
+              "text": "[COMMENT 145] Author: @samdam9568 | Likes: 0 | Replies: 1 | Published: 2021-01-16T08:03:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00461",
+              "author": "",
+              "text": "I drink 8 litre of water daily . Is it normal plse answer me. Age 18.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00463",
+              "author": "",
+              "text": "[COMMENT 146] Author: @shawnfrost-o7f | Likes: 0 | Replies: 0 | Published: 2024-08-14T15:21:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00464",
+              "author": "",
+              "text": "No bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00466",
+              "author": "",
+              "text": "[COMMENT 147] Author: @himanshumakkar5 | Likes: 0 | Replies: 0 | Published: 2019-05-29T11:44:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00467",
+              "author": "",
+              "text": "Hi sir,",
+              "likes": null
+            },
+            {
+              "comment_id": "c00468",
+              "author": "",
+              "text": "I think Ayurveda says opposite about time of inhaling and exhaling will you kindly check and confirm again",
+              "likes": null
+            },
+            {
+              "comment_id": "c00470",
+              "author": "",
+              "text": "[COMMENT 148] Author: @dr.amrinderkler8465 | Likes: 1 | Replies: 2 | Published: 2017-05-08T14:24:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00471",
+              "author": "",
+              "text": "bro m having back pain problem please tell me perfect diet for it.shld i take some calcium supllements ? multivitamin ??",
+              "likes": null
+            },
+            {
+              "comment_id": "c00473",
+              "author": "",
+              "text": "[COMMENT 149] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2017-05-13T15:45:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00474",
+              "author": "",
+              "text": "+Ammy Brar Yes, you can take calcium and multivitamin supplements. But make sure you do these cool down exercises. They are great for back.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00476",
+              "author": "",
+              "text": "[COMMENT 150] Author: @anjalirani4932 | Likes: 0 | Replies: 0 | Published: 2019-04-06T14:48:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00477",
+              "author": "",
+              "text": "Hi.. I. Ws facing much back pain for 4/5 years.... But from 1 month m taking 1 spoon flax seeds... Everyday.. Its tasty n healthy.. N doing 7 min workout lucy winhym-read which have 32 million views bcz i want to reduce belly fat.. N also do.. 5 min warm up before it..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00478",
+              "author": "",
+              "text": "I noticed more energetic n.. My back pain is reduced to 90% now..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00480",
+              "author": "",
+              "text": "Try once.. Also try.. Back pain excercise from brite size on youtube.. I saw it working n everyone comments positive on it..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00482",
+              "author": "",
+              "text": "I hope.. This will help u..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00483",
+              "author": "",
+              "text": "Welcome.. 😄",
+              "likes": null
+            },
+            {
+              "comment_id": "c00485",
+              "author": "",
+              "text": "[COMMENT 151] Author: @vidushichoudhary7131 | Likes: 0 | Replies: 0 | Published: 2017-05-23T14:17:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00486",
+              "author": "",
+              "text": "is there an alternative for chakarasana?",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": false,
+          "canonical_segment_count": 0,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "ouneTsdk46w",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Cool down Exercises after Workout - Post Workout Stretches\\source.f251.webm",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Cool down Exercises after Workout - Post Workout Stretches",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\ouneTsdk46w",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "ouneTsdk46w",
+            "transcript_available": false,
+            "transcript_source": "no_transcript",
+            "transcript_language": "unknown",
+            "transcript_quality": "failed",
+            "transcript_completeness": "none",
+            "timestamp_count": 0,
+            "canonical_segment_count": 0,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0,
+            "transcript_characters": 0,
+            "transcript_words": 0,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "insufficient_evidence",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "unknown",
+              "quality": "failed",
+              "completeness": "none",
+              "video_duration_seconds": 0,
+              "segments": []
+            },
+            "comments": {
+              "total_comments": 331,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: ouneTsdk46w",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 151",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @vijina8865 | Likes: 19 | Replies: 1 | Published: 2020-06-20T13:47:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Well...I was doing this in the morning..when my amma saw me doing the neck diggers she thought I was going through a seizure on the floor...and she screamed so loud that the entire household jumped from bed...😶😶",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @deepu_bsr | Likes: 2 | Replies: 0 | Published: 2021-01-22T15:47:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @shadysmarty5465 | Likes: 91 | Replies: 10 | Published: 2017-03-07T16:09:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "This helped me today after my tedious 7 hr study session too ...wonderful benefit apart from workout ... that was amazing .. good one vivek bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @FitTuber | Likes: 11 | Replies: 0 | Published: 2017-03-09T18:47:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "+Shady Smarty Haha... That's great. I'm so glad :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @peterpace3379 | Likes: 8 | Replies: 0 | Published: 2017-03-22T10:46:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Shady Smarty Bro are you preparing for JEE? Because only JEE students have studies this rigorous.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @shadysmarty5465 | Likes: 3 | Replies: 0 | Published: 2017-03-22T17:05:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Yeah peter , i m preparing for jee , i generally study 7 to 8 hrs and on holidays to peak of 12 hrs ... btw nice guess",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @rameshbabu5933 | Likes: 5 | Replies: 0 | Published: 2019-11-03T10:22:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "@shadysmarty5465 which college",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "are u studying now my friend",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @miikkii8theglobe | Likes: 0 | Replies: 0 | Published: 2022-06-27T16:06:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "@shadysmarty5465 have you cracked it out yet I mean it's been 5 yrs ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @RameshKumar-sz6pv | Likes: 16 | Replies: 0 | Published: 2019-03-23T08:04:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "We are roaming around YouTube and Gym.. but no one says importance of post workout stretches...thks for the sharing valuable knowledge to others .. 👏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @rabiyasonia1856 | Likes: 23 | Replies: 0 | Published: 2018-07-16T19:26:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "Ur smile is masallah cute....May almighty allah bless you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @bhojrajsingh7821 | Likes: 33 | Replies: 1 | Published: 2017-03-07T16:01:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "I never knew about the importance of after workout excercises. All thanks to u man, now I have proper knowledge about it.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @FitTuber | Likes: 9 | Replies: 0 | Published: 2017-03-09T18:43:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "+Bhojraj Singh I'm so glad you liked it brother. Yes, cool down is as important as a warm up.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @p.m.132 | Likes: 23 | Replies: 1 | Published: 2017-03-08T01:40:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "Perfect! And the background music too. helped me focus. :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @FitTuber | Likes: 3 | Replies: 0 | Published: 2017-03-09T18:54:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "+Pradeeta Mishra Thanks. I'm so glad you found it helpful :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @vijayvarmabellamkonda4284 | Likes: 9 | Replies: 0 | Published: 2017-10-28T19:22:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "Brilliant explanation of science with workout...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @FraserWilsonFit | Likes: 22 | Replies: 3 | Published: 2017-03-08T02:23:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "Relaxing :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @FitTuber | Likes: 10 | Replies: 0 | Published: 2017-03-09T18:54:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "+Fraser Wilson Thanks :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @samdam9568 | Likes: 0 | Replies: 0 | Published: 2021-01-16T08:04:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "@FitTuber wlc but answer me",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @donthiaiswarya8944 | Likes: 0 | Replies: 0 | Published: 2021-02-03T14:52:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "@FitTuber Can u please share an alternative exercise to chakrasana?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @rameshbabu5933 | Likes: 2 | Replies: 0 | Published: 2019-11-02T12:53:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "Thalaiva ur channel is like gold mine & every videos u post is like gold🕉️🇮🇳🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @varunbhalla7855 | Likes: 4 | Replies: 0 | Published: 2019-01-31T14:50:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "You never fail to help👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00414",
+                  "author": "",
+                  "text": "[COMMENT 130] Author: @rohitram533 | Likes: 0 | Replies: 0 | Published: 2017-03-11T04:24:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00415",
+                  "author": "",
+                  "text": "I stay in a hostel and it is very difficult for me to follow the diets......what do i do....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00416",
+                  "author": "",
+                  "text": "Secondly, of all the different workouts given by you....how should it be done....for eg. one day i did all of them chest,shoulder etc. But the next day as i was so tired, i couldnt do any.... How should I follow so that i stay fit and also lost tummy(im not fat, only little tummy) and gaim muscles.....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00418",
+                  "author": "",
+                  "text": "[COMMENT 131] Author: @tanyadas1660 | Likes: 1 | Replies: 1 | Published: 2017-06-17T03:18:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00419",
+                  "author": "",
+                  "text": "Do you live in ooty?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00421",
+                  "author": "",
+                  "text": "[COMMENT 132] Author: @anandthethriller4362 | Likes: 1 | Replies: 0 | Published: 2018-07-16T11:29:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00422",
+                  "author": "",
+                  "text": "thats Visakhapatnam",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00424",
+                  "author": "",
+                  "text": "[COMMENT 133] Author: @soujanyaabbigeri4202 | Likes: 44 | Replies: 10 | Published: 2017-07-02T17:22:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00425",
+                  "author": "",
+                  "text": "can running helps to increase height?ans please",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00427",
+                  "author": "",
+                  "text": "[COMMENT 134] Author: @FitTuber | Likes: 34 | Replies: 0 | Published: 2017-07-08T10:57:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00428",
+                  "author": "",
+                  "text": "Yes. Checkout my detailed video on how to increase height.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00430",
+                  "author": "",
+                  "text": "[COMMENT 135] Author: @darshansnkini5299 | Likes: 1 | Replies: 0 | Published: 2020-07-27T06:06:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00431",
+                  "author": "",
+                  "text": "No",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00433",
+                  "author": "",
+                  "text": "[COMMENT 136] Author: @sikla.72 | Likes: 9 | Replies: 0 | Published: 2020-07-28T18:01:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00434",
+                  "author": "",
+                  "text": "@darshansnkini5299 then you are fool mine height is 8 inches more then my mother father by running workout and just yoga",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00436",
+                  "author": "",
+                  "text": "[COMMENT 137] Author: @neelmenon5115 | Likes: 10 | Replies: 0 | Published: 2020-09-09T11:55:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00437",
+                  "author": "",
+                  "text": "Any form of exercise increases HGH production, which increases height. There is no direct connection between running and increased height, although running (since it involves your core, hips and back, among others) can lead to better posture which makes you appear taller. However, to really grow taller you need to stay active, eat a balanced diet and get good sleep. :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00439",
+                  "author": "",
+                  "text": "[COMMENT 138] Author: @anaskv7667 | Likes: 1 | Replies: 0 | Published: 2020-10-11T05:34:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00440",
+                  "author": "",
+                  "text": "@FitTuber can you share exercise to increase height",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00442",
+                  "author": "",
+                  "text": "[COMMENT 139] Author: @declan-Vrgpsl | Likes: 0 | Replies: 0 | Published: 2021-01-29T13:41:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00443",
+                  "author": "",
+                  "text": "Hurts to lie on my side 🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00445",
+                  "author": "",
+                  "text": "[COMMENT 140] Author: @toshiropacino8299 | Likes: 0 | Replies: 2 | Published: 2017-03-10T07:32:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00446",
+                  "author": "",
+                  "text": "Hey Vivek can you tell me whether I should eat before or after workout? Thanks😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00448",
+                  "author": "",
+                  "text": "[COMMENT 141] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2017-03-10T14:14:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00449",
+                  "author": "",
+                  "text": "+toshiro pacino You should definitely eat before and after workout. Checkout my pre and post workout meal options videos. :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00451",
+                  "author": "",
+                  "text": "[COMMENT 142] Author: @toshiropacino8299 | Likes: 0 | Replies: 0 | Published: 2017-03-10T14:29:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00452",
+                  "author": "",
+                  "text": "Thanks . Cheers mate",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00454",
+                  "author": "",
+                  "text": "[COMMENT 143] Author: @LadiDineshKumar | Likes: 0 | Replies: 1 | Published: 2017-03-07T16:41:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00455",
+                  "author": "",
+                  "text": "Is that Vizag ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00457",
+                  "author": "",
+                  "text": "[COMMENT 144] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-03-09T18:48:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00458",
+                  "author": "",
+                  "text": "+Dinesh Ladi Yes, it is :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00460",
+                  "author": "",
+                  "text": "[COMMENT 145] Author: @samdam9568 | Likes: 0 | Replies: 1 | Published: 2021-01-16T08:03:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00461",
+                  "author": "",
+                  "text": "I drink 8 litre of water daily . Is it normal plse answer me. Age 18.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00463",
+                  "author": "",
+                  "text": "[COMMENT 146] Author: @shawnfrost-o7f | Likes: 0 | Replies: 0 | Published: 2024-08-14T15:21:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00464",
+                  "author": "",
+                  "text": "No bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00466",
+                  "author": "",
+                  "text": "[COMMENT 147] Author: @himanshumakkar5 | Likes: 0 | Replies: 0 | Published: 2019-05-29T11:44:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00467",
+                  "author": "",
+                  "text": "Hi sir,",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00468",
+                  "author": "",
+                  "text": "I think Ayurveda says opposite about time of inhaling and exhaling will you kindly check and confirm again",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00470",
+                  "author": "",
+                  "text": "[COMMENT 148] Author: @dr.amrinderkler8465 | Likes: 1 | Replies: 2 | Published: 2017-05-08T14:24:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00471",
+                  "author": "",
+                  "text": "bro m having back pain problem please tell me perfect diet for it.shld i take some calcium supllements ? multivitamin ??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00473",
+                  "author": "",
+                  "text": "[COMMENT 149] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2017-05-13T15:45:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00474",
+                  "author": "",
+                  "text": "+Ammy Brar Yes, you can take calcium and multivitamin supplements. But make sure you do these cool down exercises. They are great for back.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00476",
+                  "author": "",
+                  "text": "[COMMENT 150] Author: @anjalirani4932 | Likes: 0 | Replies: 0 | Published: 2019-04-06T14:48:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00477",
+                  "author": "",
+                  "text": "Hi.. I. Ws facing much back pain for 4/5 years.... But from 1 month m taking 1 spoon flax seeds... Everyday.. Its tasty n healthy.. N doing 7 min workout lucy winhym-read which have 32 million views bcz i want to reduce belly fat.. N also do.. 5 min warm up before it..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00478",
+                  "author": "",
+                  "text": "I noticed more energetic n.. My back pain is reduced to 90% now..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00480",
+                  "author": "",
+                  "text": "Try once.. Also try.. Back pain excercise from brite size on youtube.. I saw it working n everyone comments positive on it..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00482",
+                  "author": "",
+                  "text": "I hope.. This will help u..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00483",
+                  "author": "",
+                  "text": "Welcome.. 😄",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00485",
+                  "author": "",
+                  "text": "[COMMENT 151] Author: @vidushichoudhary7131 | Likes: 0 | Replies: 0 | Published: 2017-05-23T14:17:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00486",
+                  "author": "",
+                  "text": "is there an alternative for chakarasana?",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "ouneTsdk46w",
+          "transcript_available": false,
+          "transcript_source": "no_transcript",
+          "transcript_language": "unknown",
+          "transcript_quality": "failed",
+          "transcript_completeness": "none",
+          "timestamp_count": 0,
+          "canonical_segment_count": 0,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0,
+          "transcript_characters": 0,
+          "transcript_words": 0,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "insufficient_evidence",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "unknown",
+            "quality": "failed",
+            "completeness": "none",
+            "video_duration_seconds": 0,
+            "segments": []
+          },
+          "comments": {
+            "total_comments": 331,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: ouneTsdk46w",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 151",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @vijina8865 | Likes: 19 | Replies: 1 | Published: 2020-06-20T13:47:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Well...I was doing this in the morning..when my amma saw me doing the neck diggers she thought I was going through a seizure on the floor...and she screamed so loud that the entire household jumped from bed...😶😶",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @deepu_bsr | Likes: 2 | Replies: 0 | Published: 2021-01-22T15:47:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @shadysmarty5465 | Likes: 91 | Replies: 10 | Published: 2017-03-07T16:09:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "This helped me today after my tedious 7 hr study session too ...wonderful benefit apart from workout ... that was amazing .. good one vivek bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @FitTuber | Likes: 11 | Replies: 0 | Published: 2017-03-09T18:47:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "+Shady Smarty Haha... That's great. I'm so glad :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @peterpace3379 | Likes: 8 | Replies: 0 | Published: 2017-03-22T10:46:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Shady Smarty Bro are you preparing for JEE? Because only JEE students have studies this rigorous.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @shadysmarty5465 | Likes: 3 | Replies: 0 | Published: 2017-03-22T17:05:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Yeah peter , i m preparing for jee , i generally study 7 to 8 hrs and on holidays to peak of 12 hrs ... btw nice guess",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @rameshbabu5933 | Likes: 5 | Replies: 0 | Published: 2019-11-03T10:22:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "@shadysmarty5465 which college",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "are u studying now my friend",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "[COMMENT 8] Author: @miikkii8theglobe | Likes: 0 | Replies: 0 | Published: 2022-06-27T16:06:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "@shadysmarty5465 have you cracked it out yet I mean it's been 5 yrs ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "[COMMENT 9] Author: @RameshKumar-sz6pv | Likes: 16 | Replies: 0 | Published: 2019-03-23T08:04:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "We are roaming around YouTube and Gym.. but no one says importance of post workout stretches...thks for the sharing valuable knowledge to others .. 👏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "[COMMENT 10] Author: @rabiyasonia1856 | Likes: 23 | Replies: 0 | Published: 2018-07-16T19:26:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "Ur smile is masallah cute....May almighty allah bless you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "[COMMENT 11] Author: @bhojrajsingh7821 | Likes: 33 | Replies: 1 | Published: 2017-03-07T16:01:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "I never knew about the importance of after workout excercises. All thanks to u man, now I have proper knowledge about it.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "[COMMENT 12] Author: @FitTuber | Likes: 9 | Replies: 0 | Published: 2017-03-09T18:43:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "+Bhojraj Singh I'm so glad you liked it brother. Yes, cool down is as important as a warm up.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "[COMMENT 13] Author: @p.m.132 | Likes: 23 | Replies: 1 | Published: 2017-03-08T01:40:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "Perfect! And the background music too. helped me focus. :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "[COMMENT 14] Author: @FitTuber | Likes: 3 | Replies: 0 | Published: 2017-03-09T18:54:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "+Pradeeta Mishra Thanks. I'm so glad you found it helpful :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 15] Author: @vijayvarmabellamkonda4284 | Likes: 9 | Replies: 0 | Published: 2017-10-28T19:22:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "Brilliant explanation of science with workout...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 16] Author: @FraserWilsonFit | Likes: 22 | Replies: 3 | Published: 2017-03-08T02:23:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "Relaxing :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 17] Author: @FitTuber | Likes: 10 | Replies: 0 | Published: 2017-03-09T18:54:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "+Fraser Wilson Thanks :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 18] Author: @samdam9568 | Likes: 0 | Replies: 0 | Published: 2021-01-16T08:04:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "@FitTuber wlc but answer me",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 19] Author: @donthiaiswarya8944 | Likes: 0 | Replies: 0 | Published: 2021-02-03T14:52:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "@FitTuber Can u please share an alternative exercise to chakrasana?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 20] Author: @rameshbabu5933 | Likes: 2 | Replies: 0 | Published: 2019-11-02T12:53:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "Thalaiva ur channel is like gold mine & every videos u post is like gold🕉️🇮🇳🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "[COMMENT 21] Author: @varunbhalla7855 | Likes: 4 | Replies: 0 | Published: 2019-01-31T14:50:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "You never fail to help👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00414",
+                "author": "",
+                "text": "[COMMENT 130] Author: @rohitram533 | Likes: 0 | Replies: 0 | Published: 2017-03-11T04:24:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00415",
+                "author": "",
+                "text": "I stay in a hostel and it is very difficult for me to follow the diets......what do i do....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00416",
+                "author": "",
+                "text": "Secondly, of all the different workouts given by you....how should it be done....for eg. one day i did all of them chest,shoulder etc. But the next day as i was so tired, i couldnt do any.... How should I follow so that i stay fit and also lost tummy(im not fat, only little tummy) and gaim muscles.....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00418",
+                "author": "",
+                "text": "[COMMENT 131] Author: @tanyadas1660 | Likes: 1 | Replies: 1 | Published: 2017-06-17T03:18:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00419",
+                "author": "",
+                "text": "Do you live in ooty?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00421",
+                "author": "",
+                "text": "[COMMENT 132] Author: @anandthethriller4362 | Likes: 1 | Replies: 0 | Published: 2018-07-16T11:29:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00422",
+                "author": "",
+                "text": "thats Visakhapatnam",
+                "likes": null
+              },
+              {
+                "comment_id": "c00424",
+                "author": "",
+                "text": "[COMMENT 133] Author: @soujanyaabbigeri4202 | Likes: 44 | Replies: 10 | Published: 2017-07-02T17:22:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00425",
+                "author": "",
+                "text": "can running helps to increase height?ans please",
+                "likes": null
+              },
+              {
+                "comment_id": "c00427",
+                "author": "",
+                "text": "[COMMENT 134] Author: @FitTuber | Likes: 34 | Replies: 0 | Published: 2017-07-08T10:57:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00428",
+                "author": "",
+                "text": "Yes. Checkout my detailed video on how to increase height.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00430",
+                "author": "",
+                "text": "[COMMENT 135] Author: @darshansnkini5299 | Likes: 1 | Replies: 0 | Published: 2020-07-27T06:06:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00431",
+                "author": "",
+                "text": "No",
+                "likes": null
+              },
+              {
+                "comment_id": "c00433",
+                "author": "",
+                "text": "[COMMENT 136] Author: @sikla.72 | Likes: 9 | Replies: 0 | Published: 2020-07-28T18:01:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00434",
+                "author": "",
+                "text": "@darshansnkini5299 then you are fool mine height is 8 inches more then my mother father by running workout and just yoga",
+                "likes": null
+              },
+              {
+                "comment_id": "c00436",
+                "author": "",
+                "text": "[COMMENT 137] Author: @neelmenon5115 | Likes: 10 | Replies: 0 | Published: 2020-09-09T11:55:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00437",
+                "author": "",
+                "text": "Any form of exercise increases HGH production, which increases height. There is no direct connection between running and increased height, although running (since it involves your core, hips and back, among others) can lead to better posture which makes you appear taller. However, to really grow taller you need to stay active, eat a balanced diet and get good sleep. :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00439",
+                "author": "",
+                "text": "[COMMENT 138] Author: @anaskv7667 | Likes: 1 | Replies: 0 | Published: 2020-10-11T05:34:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00440",
+                "author": "",
+                "text": "@FitTuber can you share exercise to increase height",
+                "likes": null
+              },
+              {
+                "comment_id": "c00442",
+                "author": "",
+                "text": "[COMMENT 139] Author: @declan-Vrgpsl | Likes: 0 | Replies: 0 | Published: 2021-01-29T13:41:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00443",
+                "author": "",
+                "text": "Hurts to lie on my side 🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00445",
+                "author": "",
+                "text": "[COMMENT 140] Author: @toshiropacino8299 | Likes: 0 | Replies: 2 | Published: 2017-03-10T07:32:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00446",
+                "author": "",
+                "text": "Hey Vivek can you tell me whether I should eat before or after workout? Thanks😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c00448",
+                "author": "",
+                "text": "[COMMENT 141] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2017-03-10T14:14:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00449",
+                "author": "",
+                "text": "+toshiro pacino You should definitely eat before and after workout. Checkout my pre and post workout meal options videos. :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00451",
+                "author": "",
+                "text": "[COMMENT 142] Author: @toshiropacino8299 | Likes: 0 | Replies: 0 | Published: 2017-03-10T14:29:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00452",
+                "author": "",
+                "text": "Thanks . Cheers mate",
+                "likes": null
+              },
+              {
+                "comment_id": "c00454",
+                "author": "",
+                "text": "[COMMENT 143] Author: @LadiDineshKumar | Likes: 0 | Replies: 1 | Published: 2017-03-07T16:41:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00455",
+                "author": "",
+                "text": "Is that Vizag ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00457",
+                "author": "",
+                "text": "[COMMENT 144] Author: @FitTuber | Likes: 1 | Replies: 0 | Published: 2017-03-09T18:48:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00458",
+                "author": "",
+                "text": "+Dinesh Ladi Yes, it is :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00460",
+                "author": "",
+                "text": "[COMMENT 145] Author: @samdam9568 | Likes: 0 | Replies: 1 | Published: 2021-01-16T08:03:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00461",
+                "author": "",
+                "text": "I drink 8 litre of water daily . Is it normal plse answer me. Age 18.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00463",
+                "author": "",
+                "text": "[COMMENT 146] Author: @shawnfrost-o7f | Likes: 0 | Replies: 0 | Published: 2024-08-14T15:21:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00464",
+                "author": "",
+                "text": "No bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00466",
+                "author": "",
+                "text": "[COMMENT 147] Author: @himanshumakkar5 | Likes: 0 | Replies: 0 | Published: 2019-05-29T11:44:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00467",
+                "author": "",
+                "text": "Hi sir,",
+                "likes": null
+              },
+              {
+                "comment_id": "c00468",
+                "author": "",
+                "text": "I think Ayurveda says opposite about time of inhaling and exhaling will you kindly check and confirm again",
+                "likes": null
+              },
+              {
+                "comment_id": "c00470",
+                "author": "",
+                "text": "[COMMENT 148] Author: @dr.amrinderkler8465 | Likes: 1 | Replies: 2 | Published: 2017-05-08T14:24:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00471",
+                "author": "",
+                "text": "bro m having back pain problem please tell me perfect diet for it.shld i take some calcium supllements ? multivitamin ??",
+                "likes": null
+              },
+              {
+                "comment_id": "c00473",
+                "author": "",
+                "text": "[COMMENT 149] Author: @FitTuber | Likes: 0 | Replies: 0 | Published: 2017-05-13T15:45:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00474",
+                "author": "",
+                "text": "+Ammy Brar Yes, you can take calcium and multivitamin supplements. But make sure you do these cool down exercises. They are great for back.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00476",
+                "author": "",
+                "text": "[COMMENT 150] Author: @anjalirani4932 | Likes: 0 | Replies: 0 | Published: 2019-04-06T14:48:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00477",
+                "author": "",
+                "text": "Hi.. I. Ws facing much back pain for 4/5 years.... But from 1 month m taking 1 spoon flax seeds... Everyday.. Its tasty n healthy.. N doing 7 min workout lucy winhym-read which have 32 million views bcz i want to reduce belly fat.. N also do.. 5 min warm up before it..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00478",
+                "author": "",
+                "text": "I noticed more energetic n.. My back pain is reduced to 90% now..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00480",
+                "author": "",
+                "text": "Try once.. Also try.. Back pain excercise from brite size on youtube.. I saw it working n everyone comments positive on it..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00482",
+                "author": "",
+                "text": "I hope.. This will help u..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00483",
+                "author": "",
+                "text": "Welcome.. 😄",
+                "likes": null
+              },
+              {
+                "comment_id": "c00485",
+                "author": "",
+                "text": "[COMMENT 151] Author: @vidushichoudhary7131 | Likes: 0 | Replies: 0 | Published: 2017-05-23T14:17:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00486",
+                "author": "",
+                "text": "is there an alternative for chakarasana?",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

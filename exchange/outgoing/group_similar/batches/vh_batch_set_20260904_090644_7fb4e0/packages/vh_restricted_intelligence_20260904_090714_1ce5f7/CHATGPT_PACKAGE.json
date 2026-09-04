@@ -1,0 +1,3433 @@
+{
+  "package_id": "vh_restricted_intelligence_20260904_090714_1ce5f7",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Thinking / strongest reasoning mode available",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and every requested feature.",
+      "semantic_synthesis": "Write semantic summaries that consolidate meaning, argument, method and implications; do not concatenate or lightly rewrite transcript lines.",
+      "timeline": "Create boundaries only when the substantive topic changes; merge adjacent fragments about the same point.",
+      "claims": "Extract all consequential factual, medical, safety, financial, legal, causal, quantitative and recommendation claims; grade risk and external-verification need.",
+      "entities": "Perform named-entity recognition, merge aliases, type entities using the controlled list, and omit generic nouns.",
+      "taxonomy": "Use only controlled categories and canonical non-promotional tags.",
+      "editorial": "Make assessments specific to this video's evidence, value, limitations and audience; never reuse boilerplate.",
+      "consistency": "Use the same canonical evidence across summaries, timeline, claims, intake and editorial assessment.",
+      "specificity": "Preserve useful names, quantities, steps and qualifications; avoid generic filler.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and external-verification needs.",
+      "comments": "Cluster only structured supplied comment records and report total, included count and sampling limitations; popularity is not factual verification.",
+      "clips": "Select only self-contained clips lasting 30-180 seconds, with valid non-overlapping timestamps and a video-specific purpose."
+    },
+    "instructions": "Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. All features must use the same canonical sentence-level transcript segments. Do not claim that you watched or listened to a video. Produce semantic synthesis rather than extractive transcript rewrites. Build timelines from meaningful topic boundaries. Perform complete risk-aware claim extraction and proper named-entity recognition. Make editorial_assessment.v1 a video-specific ChatGPT's Take, not boilerplate. Separate: (1) what the source says, (2) what the supplied evidence supports, (3) your interpretation, and (4) what remains uncertain or requires external verification. Cite canonical transcript segment_ids for transcript-derived conclusions. Downgrade confidence for partial/low evidence. If canonical segments are absent, do not produce transcript-derived summaries, timelines, claims, transcript-derived entities, or clips; metadata/comment-derived fields must identify their source and unsupported fields must be empty/unknown with the limitation. Validate structure, semantics, provenance, duplicates, timestamps, word counts and cross-feature consistency before returning PASS, PASS_WITH_WARNINGS or FAIL.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090714_1ce5f7",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "PCOS and PCOD management — partial transcript",
+      "batch_number": 29,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "batch_instruction": "This is independently importable batch 29 of 35 in master set vh_batch_set_20260904_090644_7fb4e0. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260904_090714_1ce5f7",
+    "manual_exchange_only": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "title 5-14 words; short_title 3-8 words",
+          "Do not add facts absent from evidence"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "executive_summary.v2": {
+        "fields": {
+          "summary": "string",
+          "key_takeaways": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "80-160 words",
+          "3-7 non-duplicative takeaways",
+          "State the source's position without presenting it as independently verified"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "entities.v2": {
+        "fields": {
+          "entities": "object[]"
+        },
+        "rules": [
+          "Each entity has name, type, context, confidence and segment_ids",
+          "Allowed types: person, organization, place, product, work, event, concept, law, study, other",
+          "Merge aliases and omit generic nouns"
+        ]
+      },
+      "claims_warnings.v2": {
+        "fields": {
+          "claims": "object[]",
+          "warnings": "object[]",
+          "overall_risk": "none|low|medium|high|unknown"
+        },
+        "rules": [
+          "Each claim has text, claim_type, verification_status, severity, confidence and segment_ids",
+          "verification_status: source_claim_only, supported_by_supplied_evidence, contradicted_in_source, or needs_external_verification",
+          "severity: informational, low, medium, high, critical",
+          "Never label a claim externally verified unless external evidence is supplied"
+        ]
+      },
+      "viewer_comment_intelligence.v2": {
+        "fields": {
+          "total_comments": "integer",
+          "included_comments": "integer",
+          "sampling_method": "string",
+          "themes": "object[]",
+          "agreements": "string[]",
+          "disagreements": "string[]",
+          "questions": "string[]",
+          "useful_corrections": "string[]",
+          "sentiment": "object",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Copy total_comments, included_comments and sampling_method from supplied structured comment evidence",
+          "Analyze only supplied comment records",
+          "Cluster semantically similar comments and report approximate counts",
+          "Separate popularity from factual reliability",
+          "Quote no more than a short phrase when needed; otherwise paraphrase"
+        ]
+      },
+      "same_topic_clip_plan.v1": {
+        "fields": {
+          "clips": "object[]",
+          "selection_rationale": "string",
+          "total_selected_duration_seconds": "number"
+        },
+        "rules": [
+          "Each clip has start_timestamp, end_timestamp, duration_seconds, title, purpose, segment_ids and include",
+          "Prefer self-contained 30-180 second clips; allow exceptions only with explanation",
+          "No overlaps, timestamps within evidence, and clips are suggestions only"
+        ]
+      },
+      "evidence_assessment.v1": {
+        "fields": {
+          "grade": "A|B|C|D|E",
+          "completeness": "complete|usable|partial|none",
+          "source_consistency": "consistent|minor_conflict|major_conflict|insufficient_evidence",
+          "conflicts": "string[]",
+          "limitations": "string[]"
+        },
+        "rules": [
+          "Use the supplied evidence assessment as the baseline",
+          "Explain downgrades and conflicts"
+        ]
+      },
+      "video_intake.v1": {
+        "fields": {
+          "actual_subject": "string",
+          "strongest_takeaway": "string",
+          "strengths": "string[]",
+          "weaknesses": "string[]",
+          "worth_keeping": "yes|no|unknown",
+          "worth_rewatching": "yes|no|unknown",
+          "reason": "string"
+        },
+        "rules": [
+          "Judge usefulness from supplied evidence only",
+          "Do not confuse production popularity with information quality"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "what_is_new_or_distinctive": "string[]",
+          "practical_value": "object",
+          "credibility_assessment": "object",
+          "evidence_strength": "high|medium|low|insufficient",
+          "possible_bias_or_agenda": "string[]",
+          "important_missing_context": "string[]",
+          "who_should_watch": "string[]",
+          "who_can_skip": "string[]",
+          "recommended_actions": "string[]",
+          "questions_left_unanswered": "string[]",
+          "contradictions_or_doubts": "string[]",
+          "comparison_opportunities": "string[]",
+          "overall_score": "object",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "rewatch_sections": "object[]",
+          "interpretation_limits": "string"
+        },
+        "rules": [
+          "This is a distinct synthesis, not another summary",
+          "overall_score contains score_0_to_100 and explanation",
+          "Rewatch sections contain valid timestamps, reason and segment_ids",
+          "Separate interpretation from factual verification"
+        ]
+      },
+      "quality_validation.v1": {
+        "fields": {
+          "status": "PASS|PASS_WITH_WARNINGS|FAIL",
+          "warnings": "string[]",
+          "cross_feature_consistency": "string",
+          "repair_attempts": "integer"
+        },
+        "rules": [
+          "Check IDs, provenance, timestamps, contradictions, missing fields and unsupported certainty",
+          "FAIL rather than fabricate required content"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260904_090714_1ce5f7"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "executive_summary.v2",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "entities.v2",
+                  "claims_warnings.v2",
+                  "viewer_comment_intelligence.v2",
+                  "same_topic_clip_plan.v1",
+                  "evidence_assessment.v1",
+                  "video_intake.v1",
+                  "editorial_assessment.v1",
+                  "quality_validation.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "executive_summary.v2": {
+                    "type": "object",
+                    "required": [
+                      "summary",
+                      "key_takeaways",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "summary": {
+                        "type": "string"
+                      },
+                      "key_takeaways": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "entities.v2": {
+                    "type": "object",
+                    "required": [
+                      "entities"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "type",
+                            "context",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "enum": [
+                                "person",
+                                "organization",
+                                "place",
+                                "product",
+                                "work",
+                                "event",
+                                "concept",
+                                "law",
+                                "study",
+                                "other"
+                              ]
+                            },
+                            "context": {
+                              "type": "string"
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "claims_warnings.v2": {
+                    "type": "object",
+                    "required": [
+                      "claims",
+                      "warnings",
+                      "overall_risk"
+                    ],
+                    "properties": {
+                      "claims": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "text",
+                            "claim_type",
+                            "verification_status",
+                            "severity",
+                            "confidence",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "text": {
+                              "type": "string"
+                            },
+                            "claim_type": {
+                              "type": "string"
+                            },
+                            "verification_status": {
+                              "enum": [
+                                "source_claim_only",
+                                "supported_by_supplied_evidence",
+                                "contradicted_in_source",
+                                "needs_external_verification"
+                              ]
+                            },
+                            "severity": {
+                              "enum": [
+                                "informational",
+                                "low",
+                                "medium",
+                                "high",
+                                "critical"
+                              ]
+                            },
+                            "confidence": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "overall_risk": {
+                        "type": "string",
+                        "enum": [
+                          "none",
+                          "low",
+                          "medium",
+                          "high",
+                          "unknown"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewer_comment_intelligence.v2": {
+                    "type": "object",
+                    "required": [
+                      "total_comments",
+                      "included_comments",
+                      "sampling_method",
+                      "themes",
+                      "agreements",
+                      "disagreements",
+                      "questions",
+                      "useful_corrections",
+                      "sentiment",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "total_comments": {
+                        "type": "integer"
+                      },
+                      "included_comments": {
+                        "type": "integer"
+                      },
+                      "sampling_method": {
+                        "type": "string"
+                      },
+                      "themes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "agreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "disagreements": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "useful_corrections": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "sentiment": {
+                        "type": "object"
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "same_topic_clip_plan.v1": {
+                    "type": "object",
+                    "required": [
+                      "clips",
+                      "selection_rationale",
+                      "total_selected_duration_seconds"
+                    ],
+                    "properties": {
+                      "clips": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "duration_seconds",
+                            "title",
+                            "purpose",
+                            "segment_ids",
+                            "include"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "duration_seconds": {
+                              "type": "number",
+                              "minimum": 30,
+                              "maximum": 180
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "purpose": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "include": {
+                              "type": "boolean"
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      },
+                      "selection_rationale": {
+                        "type": "string"
+                      },
+                      "total_selected_duration_seconds": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "evidence_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "grade",
+                      "completeness",
+                      "source_consistency",
+                      "conflicts",
+                      "limitations"
+                    ],
+                    "properties": {
+                      "grade": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D",
+                          "E"
+                        ]
+                      },
+                      "completeness": {
+                        "type": "string",
+                        "enum": [
+                          "complete",
+                          "usable",
+                          "partial",
+                          "none"
+                        ]
+                      },
+                      "source_consistency": {
+                        "type": "string",
+                        "enum": [
+                          "consistent",
+                          "minor_conflict",
+                          "major_conflict",
+                          "insufficient_evidence"
+                        ]
+                      },
+                      "conflicts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "video_intake.v1": {
+                    "type": "object",
+                    "required": [
+                      "actual_subject",
+                      "strongest_takeaway",
+                      "strengths",
+                      "weaknesses",
+                      "worth_keeping",
+                      "worth_rewatching",
+                      "reason"
+                    ],
+                    "properties": {
+                      "actual_subject": {
+                        "type": "string"
+                      },
+                      "strongest_takeaway": {
+                        "type": "string"
+                      },
+                      "strengths": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "weaknesses": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "worth_keeping": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "worth_rewatching": {
+                        "type": "string",
+                        "enum": [
+                          "yes",
+                          "no",
+                          "unknown"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "what_is_new_or_distinctive",
+                      "practical_value",
+                      "credibility_assessment",
+                      "evidence_strength",
+                      "possible_bias_or_agenda",
+                      "important_missing_context",
+                      "who_should_watch",
+                      "who_can_skip",
+                      "recommended_actions",
+                      "questions_left_unanswered",
+                      "contradictions_or_doubts",
+                      "comparison_opportunities",
+                      "overall_score",
+                      "keep_priority",
+                      "rewatch_sections",
+                      "interpretation_limits"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "what_is_new_or_distinctive": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "practical_value": {
+                        "type": "object"
+                      },
+                      "credibility_assessment": {
+                        "type": "object"
+                      },
+                      "evidence_strength": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "insufficient"
+                        ]
+                      },
+                      "possible_bias_or_agenda": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "important_missing_context": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_should_watch": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "who_can_skip": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "recommended_actions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "questions_left_unanswered": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "contradictions_or_doubts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "comparison_opportunities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "overall_score": {
+                        "type": "object",
+                        "required": [
+                          "score_0_to_100",
+                          "explanation"
+                        ],
+                        "properties": {
+                          "score_0_to_100": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                          },
+                          "explanation": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "keep_priority": {
+                        "type": "string",
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "rewatch_sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "reason",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "reason": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      },
+                      "interpretation_limits": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "quality_validation.v1": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "warnings",
+                      "cross_feature_consistency",
+                      "repair_attempts"
+                    ],
+                    "properties": {
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "PASS",
+                          "PASS_WITH_WARNINGS",
+                          "FAIL"
+                        ]
+                      },
+                      "warnings": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "cross_feature_consistency": {
+                        "type": "string"
+                      },
+                      "repair_attempts": {
+                        "type": "integer"
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260904_090714_1ce5f7",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Example title"
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "keywords": [
+                "example"
+              ]
+            },
+            "video_intake.v1": {
+              "actual_subject": "Evidence-based subject",
+              "strongest_takeaway": "Evidence-based takeaway",
+              "strengths": [],
+              "weaknesses": [],
+              "worth_keeping": "unknown",
+              "worth_rewatching": "unknown"
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "A concise, evidence-grounded interpretation—not a repetition of the summary.",
+              "bottom_line": "The single most important conclusion.",
+              "what_is_new_or_distinctive": [],
+              "practical_value": {
+                "level": "medium",
+                "explanation": "Why the material is or is not useful."
+              },
+              "credibility_assessment": {
+                "level": "uncertain",
+                "explanation": "Assess presentation and supplied support without pretending to externally fact-check."
+              },
+              "evidence_strength": "medium",
+              "possible_bias_or_agenda": [],
+              "important_missing_context": [],
+              "who_should_watch": [],
+              "who_can_skip": [],
+              "recommended_actions": [],
+              "questions_left_unanswered": [],
+              "contradictions_or_doubts": [],
+              "comparison_opportunities": [],
+              "overall_score": {
+                "score_0_to_100": 50,
+                "explanation": "Evidence-grounded reason for the score."
+              },
+              "keep_priority": "medium",
+              "rewatch_sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "reason": "Why this supplied segment matters.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "interpretation_limits": "What cannot be concluded from the supplied evidence."
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "PCOS and PCOD management — partial transcript",
+      "batch_number": 29,
+      "batch_total": 35,
+      "batch_size": 8
+    }
+  },
+  "manifest": {
+    "request_id": "d4244672-8fd5-4170-92f9-548ca3a43606",
+    "package_id": "vh_restricted_intelligence_20260904_090714_1ce5f7",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "executive_summary.v2",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "editorial_assessment.v1",
+      "quality_validation.v1"
+    ],
+    "video_ids": [
+      "x3MVEwkIQro"
+    ],
+    "evidence_grades": {
+      "x3MVEwkIQro": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260904_090644_7fb4e0",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "PCOS and PCOD management — partial transcript",
+      "batch_number": 29,
+      "batch_total": 35,
+      "batch_size": 8
+    },
+    "hashes": {
+      "evidence.json": "a766450a64c7401c74ea1974ac8c904b3b7de3c84346026b6fd35044449f4dc7",
+      "prompt.json": "a8bbd60b9d8db3275f13497f18f1dadb533be6541b914f76e3fb7abd78dc8236",
+      "schema.json": "9635a42f05cae808f692a5753f4362a4c022b3faa778d696133063d072cc1f58"
+    },
+    "created_at": "2026-09-04 09:07:14",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "x3MVEwkIQro",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=x3MVEwkIQro",
+        "original_title": "Full day Diet Plan to Cure PCOS/PCOD Permanently",
+        "clean_title": "Full day Diet Plan to Cure PCOS PCOD Permanently",
+        "channel": "Fit Tuber",
+        "upload_date": "2019-11-29",
+        "description": "Full day Diet Plan to Cure PCOS/PCOD Permanently\n\nBuy AURIC - http://bit.ly/2Z0vfOY\n(Use Code FT25 to get 25% OFF on a pack of 12 and 24 bottles)\nBUY AURIC from Amazon (Pack of 12) - https://amzn.to/2NvvkYG\n\nAURIC latest Weight Loss Drink : https://www.theauric.com/weight-balance/\nAURIC latest for Hair Fall : https://www.theauric.com/hair-boost/\n\n✅  SUPPORT MY WORK and get exclusive perks : https://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nThis video is about a  full day diet plan to root out Poly cystic ovarian disease from its very root. If you think that by just popping pills you will get over this condition then let me put forward a simple fact that, modern science is so clueless about the PCOD that they call it a syndrome. On the other hand Ayurvedic texts have clearly mentioned it’s causes along with a detailed solution 1000s of years ago when it was not even common while it so rampant in today’s generation. So based on these ancient texts and considering our modern lifestyle I will share with you a diet plan that checks all the boxes. If you follow this diet plan 100% I can assure that you can push PCOD out of your life forever. \n\n0:21 - Why you should watch this PCOD diet plan video?\n01:01 - What you need to know this PCOD diet plan?\n01:24 - Just after waking up drink this\n02:05 - After you have started your day well do this to boost recovery\n02:16 - The most important step to root out PCOD from its very cause\n03:13 - Meal 1 - Breakfast to cure PCOS/PCOD\n04:34  - Meal 2 - Lunch to cure PCOS/PCOD\n05:53 - Meal 3 - Snack to cure PCOS/PCOD\n06:05 - Meal 4 - Dinner to cure PCOS/PCOD\n07:10 - Extremely important that you do this after dinner to cure PCOS/PCOD\n07:31 - Meal 5 - Before bed drink to cure PCOS/PCOD\n08:05 - Your diet post the 15 day detox period\n\nFOODS & PRODUCTS TO CURE PCOS/PCOD (Not Sponsored)\nA2 Cow Ghee (Option 1) - https://amzn.to/2qMVf4w\nA2 Cow Ghee (Option 2) - https://amzn.to/2L6jGR5\nGlass Jug for moon charged water - https://amzn.to/2OxLqQX\nMultigrain Flour - https://amzn.to/2OvIbJw\nStainless Steel Lunch box - https://amzn.to/35NArs6\nGlass Lunch Box - https://amzn.to/34xNazc\nSemi Brown Rice - https://amzn.to/2L6vx1z\nClay Pots - https://amzn.to/37LiLPQ\nIron Kadhai - https://amzn.to/2L7d2dp\nBrass Kadhai - https://amzn.to/35NCEDU\nWhole Turmeric - https://amzn.to/2XiU1tt\nWhole Black Pepper - https://amzn.to/33S63fI\n\nRELATED VIDEOS TO CURE PCOS/PCOD\n\nPCOD Tips and Tricks - https://www.youtube.com/watch?v=wY44LKLysHg&frags=pl%2Cwn\nFull Body Strength Training Workout - https://www.youtube.com/watch?v=tamUJ23i33k&frags=pl%2Cwn\nSolution to period problems - https://www.youtube.com/watch?v=lGUoBm0FCZQ&t=60s&frags=pl%2Cwn\n\n\n09:03 - Video Partner - AURIC - Buy AURIC - http://bit.ly/2Z0vfOY\n(Use Code FT25 to get 25% OFF on a pack of 12 and 24 bottles)\nBUY AURIC from Amazon (Pack of 12) - https://amzn.to/2NvvkYG\n\nBEST PRODUCTS FROM WORST TO BEST SERIES (My Recommendations) (NOT SPONSORED)\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nMORE USEFUL LINKS\n\nCopper Jug that I recommend -https://amzn.to/2Gxth3I\nBrass Kadhai that I recommend - https://amzn.to/2R48zfV\nWater bottle that I use - https://amzn.to/2KtbcBg\nGram Flour to prepare Chilla - https://amzn.to/2A7CZUA\nSemi Brown Rice that I use - https://amzn.to/2GxWGuF\nMulti grain Atta that I have used - https://amzn.to/2UTIwqR\nBhuna Chana - https://amzn.to/2tOFdVa\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON FIT TUBER\n\n5 Amazing Patanjali products you should try\nhttps://www.youtube.com/watch?v=RWRDG...\n\n10 Toothpastes in India Ranked from Worst to Best?\nhttps://www.youtube.com/watch?v=RWRDG...\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZ...\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns...\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVu...\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/\n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "executive_summary.v2",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "entities.v2",
+        "claims_warnings.v2",
+        "viewer_comment_intelligence.v2",
+        "same_topic_clip_plan.v1",
+        "evidence_assessment.v1",
+        "video_intake.v1",
+        "editorial_assessment.v1",
+        "quality_validation.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] This is a full day diet plan to root out polycystic ovarian disease from its very cause. If you think that by just popping some pills you can get over this condition, then let me put forward a simple fact that modern science is so clueless about the cause of PCOD that they call it a syndrome. On the other [00:00:18] hand, Ayurvedic texts have clearly mentioned its causes along with a detailed solution thousands of years ago when PCOD was not even common while it is rampant in today's generation. Based on these ancient texts and considering our modern lifestyles, I'll share with [00:00:33] you diet plan that checks all the boxes. If you follow this diet plan 100%, I can assure that you can push PCOD out of your life forever. As always, I've tried to keep this video pretty comprehensive. Not only I'll share with you the preparation of each meal, but also when [00:00:49] and how to consume them so that you can get maximum benefit. PCOD is a serious disorder, but yes, it can be completely cured provided that you are really serious about it. If not, you should stop watching this video right here. I have broken down this diet plan into two [00:01:05] parts. First is a 15-day strict detox plan which will cleanse out the toxins from your body and prepare it for quick recovery. Post that, it's fairly relaxed diet to ensure that PCOD is rooted from its very cause. So without any further delay, let's get started. [00:01:25] Hello friends, welcome to FitTuber. First thing upon waking up, you need to drink water. But wait, it's no normal water. It's moon charged water. Yes, I have already discussed with you how strongly a woman's body is connected with the moon. The 28-day cycle of moon and the 28-day menstrual cycle of women [00:01:41] is not merely a coincidence. So keep a glass bottle full of drinking water overnight in the moonlight and drink it first thing in the morning. The moonlight charges the water appropriately which when drunk first thing in the morning becomes the best medicine for a woman to balance her [00:01:56] hormones. Yes, it's no superstition. Drink it slowly sip by sip. Okay, then after you have started your day well, you can make it better by doing body massage with sesame oil. Oil your navel as well. Do some exercise, pranayama, etc. It greatly helps in curing PCOD. [00:02:13] Now get ready for the day. After moon charged water, this is the second most important step for the proper detox and to bring about an ideal hormonal balance. You need to drink ghee. Yes, suffering from PCOD, a woman's body gets dry internally. This [00:02:29] is where ghee provides the much needed lubrication. And when I say ghee, do not mistake it to be any ghee. It has to be A2 cow ghee, that is desi cow ghee. It's only then you will get the best result. I know it's not easy to find an authentic desi ghee nowadays. Don't [00:02:45] worry, I have handpicked some brands that make A2 cow ghee and have linked them down in the description box. Even better if you can find a gaushala near you. You need to drink three to four tablespoons of desi cow ghee just like that. It won't make you gain weight. On the contrary, it will help you shed some [00:03:02] extra weight releasing out the much needed overload from your ovaries. You might feel pukish for the first couple of times. It's okay, do not resist. Let the toxins be pushed out. After having ghee, it's unlikely that you will have any hunger for breakfast. Although if [00:03:17] you do wish to have something, prepare something light like fresh clear vegetable soup. It's crunchy, healthy, and super easy to make. Simply put a pan on low flame. Add one glass of water to it. Put rock salt to taste, some freshly crushed black pepper, grated ginger, [00:03:33] chopped green chili, turmeric, bay leaf, and cumin seeds. Mix the spices well. Now add fresh seasonal vegetables like carrots, radish, green peas, beans, and capsicum. Cover the pan and let them boil for about 10 minutes. That's all. [00:03:50] Put off the gas, pour it in a bowl, garnish it with fresh coriander leaves, sprinkle some lemon juice, and serve hot. With fresh seasonal vegetables and carefully added whole spices, this soup is detoxifying. We have consciously not added onions and tomatoes to maximize [00:04:07] the benefit. Needless to say, suffering from PCOD, don't even think to replace this soup with any packaged soup. Actually, make sure to stay away from all packaged foods for at least this 15-day detox period. On some days, if you want, you can replace this soup with [00:04:22] vegetable oats or dalia. All right then, I'll enjoy this soup and see you for the next meal of the day, which is lunch. It's lunch time, and for lunch we will have one multigrain roti along with [00:04:37] paneer bhurji and a little bit of salad. To make paneer bhurji, take 1 tsp of cow ghee. Add cumin seeds to it, a green chili chopped, grated ginger, and chopped capsicum. Saute them for a while. Now, add rock salt to taste, a pinch of black pepper, and turmeric [00:04:53] powder. Mix well. Now, add about 100 g of fresh paneer. Mix well so that all the spices get seeped into paneer. Cook for another 2 minutes and turn off the gas. Finally, top it up with freshly cut coriander leaves. Serve hot. Start with salad and then have this curry with one [00:05:10] multigrain chapati. Paneer and other fermented foods being rich in vitamin B12 are priceless for the ovaries. Although in lunch, if you want, you can replace paneer with any other curry. And whenever possible, end your meal with chaas. Now, here's the thing. If your [00:05:26] periods are delayed, have the salty version. And if excessive bleeding is your problem, choose sweet lassi over it. Also, when you take your lunch to your workplace, ensure that you avoid plastic containers. Last thing that you would want is plastic interfering with your hormones, isn't it? Use stainless [00:05:42] steel or glass is even better. Okay, so So, enjoy this lunch and I'll meet you for the next meal of the day, which is dinner. Okay, wait. If you feel hungry between lunch and dinner, feel free to hop on [00:05:57] any seasonal fruit, apple, banana, oranges, etc. Make sure to keep it handy with yourself. Moving to the last meal of the day, which is dinner. It's time for dinner, and for dinner, we will have dal khichdi. Not only it's among the best dinner options for PCOD, but it's [00:06:13] also light, filling, and hardly requires any effort. Just ensure that you have semi-brown rice and lentils soaked in the morning. To make khichdi, take a soaked mixture of 1/4 cup of semi-brown rice and 1/4 cup of green moong dal with four times the water, that is 1 cup. Put [00:06:29] rock salt to taste, 1/4 tsp of turmeric powder, 1/4 tsp of crushed black pepper, one bay leaf, cumin seeds, grated ginger, green chili, and mix well. Cover the pan and let it cook on a low flame for about 20 to 25 minutes. That's all. [00:06:46] Your khichdi will be ready. Top it up with fresh coriander leaves and 1 tsp of cow ghee. I highly recommend that you have your dinner by 7:00 p.m. so that it gets digested well before you sleep. Food made in a clay pot without the use of pressure cooker digests fast, retains [00:07:02] maximum nutrients, and maintains proper hormonal balance. It will also greatly help you if you stop using aluminum and nonstick cookware and switch to clay, iron, and brass pots. After dinner, make sure that you walk out and spend at least 15 minutes under moonlight. The [00:07:18] more moonlight you will absorb, the better your hormones will function. Okay, now it's time to enjoy the humble khichdi. Half an hour before going to sleep at night, if you feel hungry, simply have a glass of warm milk. [00:07:39] Finally, before falling asleep, make sure to keep water bottle out in the moonlight to be consumed next morning. It is also extremely important that you do not compromise on sleep. For ideal hormonal function, 9:00 p.m. to 6:00 a.m. is considered best for sleeping. All right, then. Good night. [00:07:59] Follow this diet religiously for 15 days. Consider this as your healing period. And if you successfully do so, you can assure yourself of a faster recovery. After 15 days, you can get a bit more relaxed with your diet, but follow healthy plate method. You can start eating two chapatis. You can put [00:08:14] onions and tomatoes while making curries. Desi cow ghee should be a part of your diet. Top it over the curries. Avoid oily junk and packaged foods as much as possible. Also, avoid green tea, black tea, or black coffee. You should be very regular with your workouts. [00:08:30] Focus on strength training, practice butterfly pose, and regularly do breathing exercises. It has been explicitly mentioned that a disease can take hold of a woman only when her body is out of sync with the moon. Even though you will be able to see a significant difference within one or two [00:08:46] menstrual cycles, I suggest that you keep following a healthy lifestyle. Check out this video for more details. Yes, PCOD is a serious disorder, but don't worry and be certain that this diet has the power to push it out of the gate. If you are mentally convinced about this fact, half your work is done. [00:09:03] I want to thank Aoric for partnering with us for this video. Aoric, based on the goodness of Ayurveda, is one of the healthiest packaged drinks available in the market. Aoric brings to you three drinks. One for the skin, second for the mind, and third for the body. Each of these drinks is 100% plant-based, made [00:09:20] with a concoction of powerful herbs like Ashwagandha, Brahmi, Shankhpushpi, Gotu Kola, Aloe Vera, Amla, along with tender coconut water and juice concentrates. These ready-to-drink beverages have no added sweeteners, no artificial flavors, no colors, no preservatives at all. 100 [00:09:36] ml of Aoric will give you just 14 calories. The company claims that Auric is a beauty and wellness beverage that actually helps improve your mind, body, and skin if consumed daily for 24 days. Buy Auric at 25% discount by using a special discount coupon on a pack of 12 [00:09:52] and 24 bottles. They also offer free shipping to your doorstep. Link is in the description box. So friends, that's all for this video. I hope you found it to be helpful. If yes, then please show me your support by giving this video a big thumbs up. What next would you like to see on this channel? Comment below. [00:10:09] You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell icon so that you never miss a video from me. You can also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. I thank you so much for [00:10:26] watching."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1184,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: x3MVEwkIQro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 4026 | Replies: 179 | Published: 2019-11-29T13:56:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "The journey from \"I have PCOD\" to \"I had PCOD\" might be a bit tough but not long, for sure. Our Ancient texts promise that. Go girl! You can do it.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @letswander5615 | Likes: 19 | Replies: 0 | Published: 2019-11-29T13:59:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Is green tea harmful in pcod?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @the_poo_bear | Likes: 12 | Replies: 0 | Published: 2019-11-29T14:02:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Is this diet also for hypothyroidism ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @itsshree5809 | Likes: 13 | Replies: 0 | Published: 2019-11-29T14:05:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Can I take egg for first 15 days instead of panner ? Is it necessary to follow vegan diet for pcod?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00020",
+              "author": "",
+              "text": "Pls reply .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "Btw thank u so much for this video. ❤ It's very helpful for me at least. 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00023",
+              "author": "",
+              "text": "[COMMENT 5] Author: @kedarjawali | Likes: 5 | Replies: 0 | Published: 2019-11-29T14:06:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "Can you make video on 7 quick and healthy dinner (Vegetarian)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00026",
+              "author": "",
+              "text": "[COMMENT 6] Author: @krishn735 | Likes: 1 | Replies: 0 | Published: 2019-11-29T14:09:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "Actually I'm a awful coffee person now I have to control 🤔",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "[COMMENT 7] Author: @P.P.13 | Likes: 3667 | Replies: 28 | Published: 2019-11-29T15:14:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "A day will come when people will realize that how much your contributing towards society without even charging a single penny💯",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "[COMMENT 8] Author: @aayushi2277 | Likes: 39 | Replies: 0 | Published: 2019-11-29T16:33:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "I respect ur opinion bt he isnt doing it for free, he does get alot",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "[COMMENT 9] Author: @P.P.13 | Likes: 79 | Replies: 0 | Published: 2019-11-29T16:35:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "@aayushi2277 but he is not directly charging anything from us ( he is earning from ads and sponsorships)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 10] Author: @anilgold96 | Likes: 3 | Replies: 0 | Published: 2019-12-10T18:39:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "@P.P.13 yes that is his job",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 11] Author: @octadec1572 | Likes: 7 | Replies: 0 | Published: 2019-12-22T22:48:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "@P.P.13 so you get free data package right....and all others here are goons who pay for a 399 recharge",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 12] Author: @ঐশিকাবেরা | Likes: 0 | Replies: 0 | Published: 2019-12-26T05:33:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "Right bhai",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "[COMMENT 13] Author: @grace-vm5gm | Likes: 2255 | Replies: 16 | Published: 2019-12-06T10:49:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "It feels so good to see a guy taking interest and doing research about women health problems . So progressive .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "[COMMENT 14] Author: @maggied2886 | Likes: 8 | Replies: 0 | Published: 2020-02-02T05:38:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "Respect for you man",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "[COMMENT 15] Author: @deepachoudhary302 | Likes: 4 | Replies: 0 | Published: 2020-05-24T08:37:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "Hey guys can we use buffalo ghee plz tell me.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 16] Author: @pinrayi7909 | Likes: 3 | Replies: 0 | Published: 2020-07-07T12:24:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "@deepachoudhary302 he specifically mentioned three times in the video that ghee should be only A2 cow ghee and he has mentioned the brand as well.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 17] Author: @pinrayi7909 | Likes: 0 | Replies: 0 | Published: 2020-07-07T12:25:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "@manishsinghchouhan2067 he specifically mentioned three times in the video that ghee should be A2 cow ghee. Heart patients have to evaluate their diet plan too. Ask Fit tuber what should heart patient do",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 18] Author: @geetikadwivedi1624 | Likes: 0 | Replies: 0 | Published: 2020-07-13T16:05:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "Hi, the dietitian says that consuming milk increases the pcod. Could you please tell me is it a myth?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 19] Author: @seenlikesummer | Likes: 48 | Replies: 4 | Published: 2021-11-16T01:50:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "I’m very thin, I can’t fulfill my hunger with soup in the morning. All the diet plans on Internet are for PCOS + Weight loss. Nobody takes into consideration that even thin women can have PCOS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 20] Author: @lost_butterfly314 | Likes: 0 | Replies: 0 | Published: 2022-01-15T05:16:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "Exactly",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "[COMMENT 21] Author: @Desiii_Tadka | Likes: 1 | Replies: 0 | Published: 2022-01-19T18:14:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "Man you are such a positive energy..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "[COMMENT 479] Author: @anupriya6248 | Likes: 0 | Replies: 0 | Published: 2024-03-16T16:17:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "Bro!!! I was just day before yesterday diagnosed with pcos and i vowed not to take medicines. I came across your video and didn't even did full day thing yet. I am on day 1 and just had my dinner only to find my eriods started. Now i don't know how the rest will go, but this is really a miracle. Typing this comment while moonbathing 😅 thank you so much! P. S. I also did hatha yoga today and all the others things mentioned here",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "[COMMENT 480] Author: @princyprasad5362 | Likes: 0 | Replies: 0 | Published: 2021-09-04T02:38:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "Thank u so much for all the tips..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "[COMMENT 481] Author: @tm7518 | Likes: 0 | Replies: 0 | Published: 2021-07-12T10:14:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "Please make video on excessive and prolonged bleeding during mensuration and auto immune disease",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 482] Author: @Adhyashakti123 | Likes: 0 | Replies: 0 | Published: 2024-02-26T19:28:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Superb as ever! Video for Menopause please 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "[COMMENT 483] Author: @kimberlycole727 | Likes: 0 | Replies: 0 | Published: 2022-08-22T18:49:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "@ fit tubber I’ve seen a lot of positive feedback on this video. Is there a plan for someone that suffers from uterine fibroids?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "[COMMENT 484] Author: @preethibattu2494 | Likes: 0 | Replies: 0 | Published: 2023-06-23T06:30:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "Thank you vivek .. Along with your diet plan and yoga , my periods are regular..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01662",
+              "author": "",
+              "text": "[COMMENT 485] Author: @sampadas96 | Likes: 0 | Replies: 0 | Published: 2021-08-14T06:27:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "Please bring one video on the topic of....WHAT KIND OF EXERCISE SHOULD DO DURING PREGNANCY & WHY . AND WHAT IS THE BENEFITS OF IT. Please 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01665",
+              "author": "",
+              "text": "[COMMENT 486] Author: @vinnettepope8255 | Likes: 0 | Replies: 0 | Published: 2023-11-18T15:40:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "Awesome 👌 👏 👍 😍 tutorial video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01668",
+              "author": "",
+              "text": "[COMMENT 487] Author: @nabanita8587 | Likes: 1 | Replies: 0 | Published: 2022-02-03T09:54:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "Hello vivek! You are amazing and helping a lot of people!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01670",
+              "author": "",
+              "text": "I have a question. I heard dairy is bad for PCOS! So is it okay to drink a cup of warm milk?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "[COMMENT 488] Author: @amanwahre5135 | Likes: 0 | Replies: 0 | Published: 2023-04-28T05:37:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01673",
+              "author": "",
+              "text": "Very informative video...💯💯💯👌👌",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "[COMMENT 489] Author: @birinaL | Likes: 0 | Replies: 0 | Published: 2023-10-23T20:01:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01676",
+              "author": "",
+              "text": "Thanku brother... Its really helpful😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "[COMMENT 490] Author: @spiritualjourney852 | Likes: 0 | Replies: 0 | Published: 2022-12-09T16:14:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01679",
+              "author": "",
+              "text": "Sir plz make a diet plan if a person is suffering from both PCOD and Thyroid",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "[COMMENT 491] Author: @saicharanreddy3222 | Likes: 0 | Replies: 0 | Published: 2022-01-01T04:53:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01682",
+              "author": "",
+              "text": "Sir, please make a video on overall nutrition of women(above30-40yrs) for their over all health. mainly on...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01683",
+              "author": "",
+              "text": "1)JOINT PAINS.....(general protein,calcium,vitamin deficiencies)",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "2)HAEMOGLOBIN",
+              "likes": null
+            },
+            {
+              "comment_id": "c01685",
+              "author": "",
+              "text": "3)LOOKING OVER AGED(collagen....)",
+              "likes": null
+            },
+            {
+              "comment_id": "c01686",
+              "author": "",
+              "text": "4)B.P & SUGAR(heart related problems).",
+              "likes": null
+            },
+            {
+              "comment_id": "c01688",
+              "author": "",
+              "text": "[COMMENT 492] Author: @harshikapaliwal6620 | Likes: 0 | Replies: 0 | Published: 2022-09-04T13:42:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01689",
+              "author": "",
+              "text": "I followed this diet for 1 week i see my inches loss. I am so happy 😊😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01691",
+              "author": "",
+              "text": "[COMMENT 493] Author: @Akanksha-2085 | Likes: 0 | Replies: 0 | Published: 2023-06-29T18:51:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01692",
+              "author": "",
+              "text": "Thank you so much @FitTuber I have pcod from a very long time after following this diet I got my periods on 4th day and I followed everything just as I had tea in evening with roasted channa. It really works I am amazed. I am also feeling very light and less bloated.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01694",
+              "author": "",
+              "text": "[COMMENT 494] Author: @supriyac3046 | Likes: 0 | Replies: 0 | Published: 2022-09-28T12:51:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01695",
+              "author": "",
+              "text": "It would be very helpful if you come up with video of pcos. In the recent times there are many things like gluten free, dairy free diet claiming that they help in JUST managing BUT NOT CURING pcos. Kindly guide us regarding these things whether it's good for our indian culture.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01697",
+              "author": "",
+              "text": "[COMMENT 495] Author: @muskanshaw8793 | Likes: 0 | Replies: 0 | Published: 2022-01-26T09:07:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01698",
+              "author": "",
+              "text": "Please make a video on diet for ovarian cyst patients",
+              "likes": null
+            },
+            {
+              "comment_id": "c01700",
+              "author": "",
+              "text": "[COMMENT 496] Author: @renubishnoi8918 | Likes: 0 | Replies: 0 | Published: 2021-06-28T12:37:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01701",
+              "author": "",
+              "text": "Thank u vivek u understand girls problem very well",
+              "likes": null
+            },
+            {
+              "comment_id": "c01703",
+              "author": "",
+              "text": "[COMMENT 497] Author: @riturajmarkam6425 | Likes: 0 | Replies: 0 | Published: 2024-03-26T07:04:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01704",
+              "author": "",
+              "text": "You are such a great person ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01706",
+              "author": "",
+              "text": "[COMMENT 498] Author: @open2unlearn | Likes: 0 | Replies: 0 | Published: 2022-08-14T04:11:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01707",
+              "author": "",
+              "text": "Like Jindal nature cure. Fittuber should also start a health center",
+              "likes": null
+            },
+            {
+              "comment_id": "c01709",
+              "author": "",
+              "text": "[COMMENT 499] Author: @umamanimandiram514 | Likes: 0 | Replies: 0 | Published: 2023-02-19T15:06:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01710",
+              "author": "",
+              "text": "Hi Vivek, request you to share diet plan for thyroid problem, this will help many. thankyou",
+              "likes": null
+            },
+            {
+              "comment_id": "c01712",
+              "author": "",
+              "text": "[COMMENT 500] Author: @walidhogan5995 | Likes: 0 | Replies: 0 | Published: 2021-05-08T12:02:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01713",
+              "author": "",
+              "text": "Thank you 🙏",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "x3MVEwkIQro",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Full day Diet Plan to Cure PCOS - PCOD Permanently\\Full day Diet Plan to Cure PCOS - PCOD Permanently.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Full day Diet Plan to Cure PCOS - PCOD Permanently",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\x3MVEwkIQro",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "x3MVEwkIQro",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 42,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 10827,
+            "transcript_words": 2056,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] This is a full day diet plan to root out polycystic ovarian disease from its very cause. If you think that by just popping some pills you can get over this condition, then let me put forward a simple fact that modern science is so clueless about the cause of PCOD that they call it a syndrome. On the other [00:00:18] hand, Ayurvedic texts have clearly mentioned its causes along with a detailed solution thousands of years ago when PCOD was not even common while it is rampant in today's generation. Based on these ancient texts and considering our modern lifestyles, I'll share with [00:00:33] you diet plan that checks all the boxes. If you follow this diet plan 100%, I can assure that you can push PCOD out of your life forever. As always, I've tried to keep this video pretty comprehensive. Not only I'll share with you the preparation of each meal, but also when [00:00:49] and how to consume them so that you can get maximum benefit. PCOD is a serious disorder, but yes, it can be completely cured provided that you are really serious about it. If not, you should stop watching this video right here. I have broken down this diet plan into two [00:01:05] parts. First is a 15-day strict detox plan which will cleanse out the toxins from your body and prepare it for quick recovery. Post that, it's fairly relaxed diet to ensure that PCOD is rooted from its very cause. So without any further delay, let's get started. [00:01:25] Hello friends, welcome to FitTuber. First thing upon waking up, you need to drink water. But wait, it's no normal water. It's moon charged water. Yes, I have already discussed with you how strongly a woman's body is connected with the moon. The 28-day cycle of moon and the 28-day menstrual cycle of women [00:01:41] is not merely a coincidence. So keep a glass bottle full of drinking water overnight in the moonlight and drink it first thing in the morning. The moonlight charges the water appropriately which when drunk first thing in the morning becomes the best medicine for a woman to balance her [00:01:56] hormones. Yes, it's no superstition. Drink it slowly sip by sip. Okay, then after you have started your day well, you can make it better by doing body massage with sesame oil. Oil your navel as well. Do some exercise, pranayama, etc. It greatly helps in curing PCOD. [00:02:13] Now get ready for the day. After moon charged water, this is the second most important step for the proper detox and to bring about an ideal hormonal balance. You need to drink ghee. Yes, suffering from PCOD, a woman's body gets dry internally. This [00:02:29] is where ghee provides the much needed lubrication. And when I say ghee, do not mistake it to be any ghee. It has to be A2 cow ghee, that is desi cow ghee. It's only then you will get the best result. I know it's not easy to find an authentic desi ghee nowadays. Don't [00:02:45] worry, I have handpicked some brands that make A2 cow ghee and have linked them down in the description box. Even better if you can find a gaushala near you. You need to drink three to four tablespoons of desi cow ghee just like that. It won't make you gain weight. On the contrary, it will help you shed some [00:03:02] extra weight releasing out the much needed overload from your ovaries. You might feel pukish for the first couple of times. It's okay, do not resist. Let the toxins be pushed out. After having ghee, it's unlikely that you will have any hunger for breakfast. Although if [00:03:17] you do wish to have something, prepare something light like fresh clear vegetable soup. It's crunchy, healthy, and super easy to make. Simply put a pan on low flame. Add one glass of water to it. Put rock salt to taste, some freshly crushed black pepper, grated ginger, [00:03:33] chopped green chili, turmeric, bay leaf, and cumin seeds. Mix the spices well. Now add fresh seasonal vegetables like carrots, radish, green peas, beans, and capsicum. Cover the pan and let them boil for about 10 minutes. That's all. [00:03:50] Put off the gas, pour it in a bowl, garnish it with fresh coriander leaves, sprinkle some lemon juice, and serve hot. With fresh seasonal vegetables and carefully added whole spices, this soup is detoxifying. We have consciously not added onions and tomatoes to maximize [00:04:07] the benefit. Needless to say, suffering from PCOD, don't even think to replace this soup with any packaged soup. Actually, make sure to stay away from all packaged foods for at least this 15-day detox period. On some days, if you want, you can replace this soup with [00:04:22] vegetable oats or dalia. All right then, I'll enjoy this soup and see you for the next meal of the day, which is lunch. It's lunch time, and for lunch we will have one multigrain roti along with [00:04:37] paneer bhurji and a little bit of salad. To make paneer bhurji, take 1 tsp of cow ghee. Add cumin seeds to it, a green chili chopped, grated ginger, and chopped capsicum. Saute them for a while. Now, add rock salt to taste, a pinch of black pepper, and turmeric [00:04:53] powder. Mix well. Now, add about 100 g of fresh paneer. Mix well so that all the spices get seeped into paneer. Cook for another 2 minutes and turn off the gas. Finally, top it up with freshly cut coriander leaves. Serve hot. Start with salad and then have this curry with one [00:05:10] multigrain chapati. Paneer and other fermented foods being rich in vitamin B12 are priceless for the ovaries. Although in lunch, if you want, you can replace paneer with any other curry. And whenever possible, end your meal with chaas. Now, here's the thing. If your [00:05:26] periods are delayed, have the salty version. And if excessive bleeding is your problem, choose sweet lassi over it. Also, when you take your lunch to your workplace, ensure that you avoid plastic containers. Last thing that you would want is plastic interfering with your hormones, isn't it? Use stainless [00:05:42] steel or glass is even better. Okay, so So, enjoy this lunch and I'll meet you for the next meal of the day, which is dinner. Okay, wait. If you feel hungry between lunch and dinner, feel free to hop on [00:05:57] any seasonal fruit, apple, banana, oranges, etc. Make sure to keep it handy with yourself. Moving to the last meal of the day, which is dinner. It's time for dinner, and for dinner, we will have dal khichdi. Not only it's among the best dinner options for PCOD, but it's [00:06:13] also light, filling, and hardly requires any effort. Just ensure that you have semi-brown rice and lentils soaked in the morning. To make khichdi, take a soaked mixture of 1/4 cup of semi-brown rice and 1/4 cup of green moong dal with four times the water, that is 1 cup. Put [00:06:29] rock salt to taste, 1/4 tsp of turmeric powder, 1/4 tsp of crushed black pepper, one bay leaf, cumin seeds, grated ginger, green chili, and mix well. Cover the pan and let it cook on a low flame for about 20 to 25 minutes. That's all. [00:06:46] Your khichdi will be ready. Top it up with fresh coriander leaves and 1 tsp of cow ghee. I highly recommend that you have your dinner by 7:00 p.m. so that it gets digested well before you sleep. Food made in a clay pot without the use of pressure cooker digests fast, retains [00:07:02] maximum nutrients, and maintains proper hormonal balance. It will also greatly help you if you stop using aluminum and nonstick cookware and switch to clay, iron, and brass pots. After dinner, make sure that you walk out and spend at least 15 minutes under moonlight. The [00:07:18] more moonlight you will absorb, the better your hormones will function. Okay, now it's time to enjoy the humble khichdi. Half an hour before going to sleep at night, if you feel hungry, simply have a glass of warm milk. [00:07:39] Finally, before falling asleep, make sure to keep water bottle out in the moonlight to be consumed next morning. It is also extremely important that you do not compromise on sleep. For ideal hormonal function, 9:00 p.m. to 6:00 a.m. is considered best for sleeping. All right, then. Good night. [00:07:59] Follow this diet religiously for 15 days. Consider this as your healing period. And if you successfully do so, you can assure yourself of a faster recovery. After 15 days, you can get a bit more relaxed with your diet, but follow healthy plate method. You can start eating two chapatis. You can put [00:08:14] onions and tomatoes while making curries. Desi cow ghee should be a part of your diet. Top it over the curries. Avoid oily junk and packaged foods as much as possible. Also, avoid green tea, black tea, or black coffee. You should be very regular with your workouts. [00:08:30] Focus on strength training, practice butterfly pose, and regularly do breathing exercises. It has been explicitly mentioned that a disease can take hold of a woman only when her body is out of sync with the moon. Even though you will be able to see a significant difference within one or two [00:08:46] menstrual cycles, I suggest that you keep following a healthy lifestyle. Check out this video for more details. Yes, PCOD is a serious disorder, but don't worry and be certain that this diet has the power to push it out of the gate. If you are mentally convinced about this fact, half your work is done. [00:09:03] I want to thank Aoric for partnering with us for this video. Aoric, based on the goodness of Ayurveda, is one of the healthiest packaged drinks available in the market. Aoric brings to you three drinks. One for the skin, second for the mind, and third for the body. Each of these drinks is 100% plant-based, made [00:09:20] with a concoction of powerful herbs like Ashwagandha, Brahmi, Shankhpushpi, Gotu Kola, Aloe Vera, Amla, along with tender coconut water and juice concentrates. These ready-to-drink beverages have no added sweeteners, no artificial flavors, no colors, no preservatives at all. 100 [00:09:36] ml of Aoric will give you just 14 calories. The company claims that Auric is a beauty and wellness beverage that actually helps improve your mind, body, and skin if consumed daily for 24 days. Buy Auric at 25% discount by using a special discount coupon on a pack of 12 [00:09:52] and 24 bottles. They also offer free shipping to your doorstep. Link is in the description box. So friends, that's all for this video. I hope you found it to be helpful. If yes, then please show me your support by giving this video a big thumbs up. What next would you like to see on this channel? Comment below. [00:10:09] You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell icon so that you never miss a video from me. You can also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. I thank you so much for [00:10:26] watching."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1184,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: x3MVEwkIQro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 4026 | Replies: 179 | Published: 2019-11-29T13:56:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "The journey from \"I have PCOD\" to \"I had PCOD\" might be a bit tough but not long, for sure. Our Ancient texts promise that. Go girl! You can do it.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @letswander5615 | Likes: 19 | Replies: 0 | Published: 2019-11-29T13:59:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Is green tea harmful in pcod?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @the_poo_bear | Likes: 12 | Replies: 0 | Published: 2019-11-29T14:02:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Is this diet also for hypothyroidism ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @itsshree5809 | Likes: 13 | Replies: 0 | Published: 2019-11-29T14:05:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Can I take egg for first 15 days instead of panner ? Is it necessary to follow vegan diet for pcod?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00020",
+                  "author": "",
+                  "text": "Pls reply .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "Btw thank u so much for this video. ❤ It's very helpful for me at least. 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00023",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @kedarjawali | Likes: 5 | Replies: 0 | Published: 2019-11-29T14:06:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "Can you make video on 7 quick and healthy dinner (Vegetarian)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00026",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @krishn735 | Likes: 1 | Replies: 0 | Published: 2019-11-29T14:09:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "Actually I'm a awful coffee person now I have to control 🤔",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @P.P.13 | Likes: 3667 | Replies: 28 | Published: 2019-11-29T15:14:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "A day will come when people will realize that how much your contributing towards society without even charging a single penny💯",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @aayushi2277 | Likes: 39 | Replies: 0 | Published: 2019-11-29T16:33:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "I respect ur opinion bt he isnt doing it for free, he does get alot",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @P.P.13 | Likes: 79 | Replies: 0 | Published: 2019-11-29T16:35:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "@aayushi2277 but he is not directly charging anything from us ( he is earning from ads and sponsorships)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @anilgold96 | Likes: 3 | Replies: 0 | Published: 2019-12-10T18:39:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "@P.P.13 yes that is his job",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @octadec1572 | Likes: 7 | Replies: 0 | Published: 2019-12-22T22:48:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "@P.P.13 so you get free data package right....and all others here are goons who pay for a 399 recharge",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @ঐশিকাবেরা | Likes: 0 | Replies: 0 | Published: 2019-12-26T05:33:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "Right bhai",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @grace-vm5gm | Likes: 2255 | Replies: 16 | Published: 2019-12-06T10:49:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "It feels so good to see a guy taking interest and doing research about women health problems . So progressive .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @maggied2886 | Likes: 8 | Replies: 0 | Published: 2020-02-02T05:38:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "Respect for you man",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @deepachoudhary302 | Likes: 4 | Replies: 0 | Published: 2020-05-24T08:37:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "Hey guys can we use buffalo ghee plz tell me.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @pinrayi7909 | Likes: 3 | Replies: 0 | Published: 2020-07-07T12:24:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "@deepachoudhary302 he specifically mentioned three times in the video that ghee should be only A2 cow ghee and he has mentioned the brand as well.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @pinrayi7909 | Likes: 0 | Replies: 0 | Published: 2020-07-07T12:25:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "@manishsinghchouhan2067 he specifically mentioned three times in the video that ghee should be A2 cow ghee. Heart patients have to evaluate their diet plan too. Ask Fit tuber what should heart patient do",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @geetikadwivedi1624 | Likes: 0 | Replies: 0 | Published: 2020-07-13T16:05:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "Hi, the dietitian says that consuming milk increases the pcod. Could you please tell me is it a myth?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @seenlikesummer | Likes: 48 | Replies: 4 | Published: 2021-11-16T01:50:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "I’m very thin, I can’t fulfill my hunger with soup in the morning. All the diet plans on Internet are for PCOS + Weight loss. Nobody takes into consideration that even thin women can have PCOS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @lost_butterfly314 | Likes: 0 | Replies: 0 | Published: 2022-01-15T05:16:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "Exactly",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @Desiii_Tadka | Likes: 1 | Replies: 0 | Published: 2022-01-19T18:14:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "Man you are such a positive energy..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @anupriya6248 | Likes: 0 | Replies: 0 | Published: 2024-03-16T16:17:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "Bro!!! I was just day before yesterday diagnosed with pcos and i vowed not to take medicines. I came across your video and didn't even did full day thing yet. I am on day 1 and just had my dinner only to find my eriods started. Now i don't know how the rest will go, but this is really a miracle. Typing this comment while moonbathing 😅 thank you so much! P. S. I also did hatha yoga today and all the others things mentioned here",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @princyprasad5362 | Likes: 0 | Replies: 0 | Published: 2021-09-04T02:38:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "Thank u so much for all the tips..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @tm7518 | Likes: 0 | Replies: 0 | Published: 2021-07-12T10:14:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "Please make video on excessive and prolonged bleeding during mensuration and auto immune disease",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @Adhyashakti123 | Likes: 0 | Replies: 0 | Published: 2024-02-26T19:28:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Superb as ever! Video for Menopause please 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @kimberlycole727 | Likes: 0 | Replies: 0 | Published: 2022-08-22T18:49:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "@ fit tubber I’ve seen a lot of positive feedback on this video. Is there a plan for someone that suffers from uterine fibroids?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @preethibattu2494 | Likes: 0 | Replies: 0 | Published: 2023-06-23T06:30:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "Thank you vivek .. Along with your diet plan and yoga , my periods are regular..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01662",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @sampadas96 | Likes: 0 | Replies: 0 | Published: 2021-08-14T06:27:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "Please bring one video on the topic of....WHAT KIND OF EXERCISE SHOULD DO DURING PREGNANCY & WHY . AND WHAT IS THE BENEFITS OF IT. Please 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01665",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @vinnettepope8255 | Likes: 0 | Replies: 0 | Published: 2023-11-18T15:40:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "Awesome 👌 👏 👍 😍 tutorial video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01668",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @nabanita8587 | Likes: 1 | Replies: 0 | Published: 2022-02-03T09:54:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "Hello vivek! You are amazing and helping a lot of people!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01670",
+                  "author": "",
+                  "text": "I have a question. I heard dairy is bad for PCOS! So is it okay to drink a cup of warm milk?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @amanwahre5135 | Likes: 0 | Replies: 0 | Published: 2023-04-28T05:37:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01673",
+                  "author": "",
+                  "text": "Very informative video...💯💯💯👌👌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @birinaL | Likes: 0 | Replies: 0 | Published: 2023-10-23T20:01:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01676",
+                  "author": "",
+                  "text": "Thanku brother... Its really helpful😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @spiritualjourney852 | Likes: 0 | Replies: 0 | Published: 2022-12-09T16:14:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01679",
+                  "author": "",
+                  "text": "Sir plz make a diet plan if a person is suffering from both PCOD and Thyroid",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @saicharanreddy3222 | Likes: 0 | Replies: 0 | Published: 2022-01-01T04:53:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01682",
+                  "author": "",
+                  "text": "Sir, please make a video on overall nutrition of women(above30-40yrs) for their over all health. mainly on...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01683",
+                  "author": "",
+                  "text": "1)JOINT PAINS.....(general protein,calcium,vitamin deficiencies)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "2)HAEMOGLOBIN",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01685",
+                  "author": "",
+                  "text": "3)LOOKING OVER AGED(collagen....)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01686",
+                  "author": "",
+                  "text": "4)B.P & SUGAR(heart related problems).",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01688",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @harshikapaliwal6620 | Likes: 0 | Replies: 0 | Published: 2022-09-04T13:42:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01689",
+                  "author": "",
+                  "text": "I followed this diet for 1 week i see my inches loss. I am so happy 😊😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01691",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @Akanksha-2085 | Likes: 0 | Replies: 0 | Published: 2023-06-29T18:51:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01692",
+                  "author": "",
+                  "text": "Thank you so much @FitTuber I have pcod from a very long time after following this diet I got my periods on 4th day and I followed everything just as I had tea in evening with roasted channa. It really works I am amazed. I am also feeling very light and less bloated.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01694",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @supriyac3046 | Likes: 0 | Replies: 0 | Published: 2022-09-28T12:51:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01695",
+                  "author": "",
+                  "text": "It would be very helpful if you come up with video of pcos. In the recent times there are many things like gluten free, dairy free diet claiming that they help in JUST managing BUT NOT CURING pcos. Kindly guide us regarding these things whether it's good for our indian culture.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01697",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @muskanshaw8793 | Likes: 0 | Replies: 0 | Published: 2022-01-26T09:07:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01698",
+                  "author": "",
+                  "text": "Please make a video on diet for ovarian cyst patients",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01700",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @renubishnoi8918 | Likes: 0 | Replies: 0 | Published: 2021-06-28T12:37:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01701",
+                  "author": "",
+                  "text": "Thank u vivek u understand girls problem very well",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01703",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @riturajmarkam6425 | Likes: 0 | Replies: 0 | Published: 2024-03-26T07:04:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01704",
+                  "author": "",
+                  "text": "You are such a great person ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01706",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @open2unlearn | Likes: 0 | Replies: 0 | Published: 2022-08-14T04:11:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01707",
+                  "author": "",
+                  "text": "Like Jindal nature cure. Fittuber should also start a health center",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01709",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @umamanimandiram514 | Likes: 0 | Replies: 0 | Published: 2023-02-19T15:06:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01710",
+                  "author": "",
+                  "text": "Hi Vivek, request you to share diet plan for thyroid problem, this will help many. thankyou",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01712",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @walidhogan5995 | Likes: 0 | Replies: 0 | Published: 2021-05-08T12:02:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01713",
+                  "author": "",
+                  "text": "Thank you 🙏",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "x3MVEwkIQro",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 42,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 10827,
+          "transcript_words": 2056,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] This is a full day diet plan to root out polycystic ovarian disease from its very cause. If you think that by just popping some pills you can get over this condition, then let me put forward a simple fact that modern science is so clueless about the cause of PCOD that they call it a syndrome. On the other [00:00:18] hand, Ayurvedic texts have clearly mentioned its causes along with a detailed solution thousands of years ago when PCOD was not even common while it is rampant in today's generation. Based on these ancient texts and considering our modern lifestyles, I'll share with [00:00:33] you diet plan that checks all the boxes. If you follow this diet plan 100%, I can assure that you can push PCOD out of your life forever. As always, I've tried to keep this video pretty comprehensive. Not only I'll share with you the preparation of each meal, but also when [00:00:49] and how to consume them so that you can get maximum benefit. PCOD is a serious disorder, but yes, it can be completely cured provided that you are really serious about it. If not, you should stop watching this video right here. I have broken down this diet plan into two [00:01:05] parts. First is a 15-day strict detox plan which will cleanse out the toxins from your body and prepare it for quick recovery. Post that, it's fairly relaxed diet to ensure that PCOD is rooted from its very cause. So without any further delay, let's get started. [00:01:25] Hello friends, welcome to FitTuber. First thing upon waking up, you need to drink water. But wait, it's no normal water. It's moon charged water. Yes, I have already discussed with you how strongly a woman's body is connected with the moon. The 28-day cycle of moon and the 28-day menstrual cycle of women [00:01:41] is not merely a coincidence. So keep a glass bottle full of drinking water overnight in the moonlight and drink it first thing in the morning. The moonlight charges the water appropriately which when drunk first thing in the morning becomes the best medicine for a woman to balance her [00:01:56] hormones. Yes, it's no superstition. Drink it slowly sip by sip. Okay, then after you have started your day well, you can make it better by doing body massage with sesame oil. Oil your navel as well. Do some exercise, pranayama, etc. It greatly helps in curing PCOD. [00:02:13] Now get ready for the day. After moon charged water, this is the second most important step for the proper detox and to bring about an ideal hormonal balance. You need to drink ghee. Yes, suffering from PCOD, a woman's body gets dry internally. This [00:02:29] is where ghee provides the much needed lubrication. And when I say ghee, do not mistake it to be any ghee. It has to be A2 cow ghee, that is desi cow ghee. It's only then you will get the best result. I know it's not easy to find an authentic desi ghee nowadays. Don't [00:02:45] worry, I have handpicked some brands that make A2 cow ghee and have linked them down in the description box. Even better if you can find a gaushala near you. You need to drink three to four tablespoons of desi cow ghee just like that. It won't make you gain weight. On the contrary, it will help you shed some [00:03:02] extra weight releasing out the much needed overload from your ovaries. You might feel pukish for the first couple of times. It's okay, do not resist. Let the toxins be pushed out. After having ghee, it's unlikely that you will have any hunger for breakfast. Although if [00:03:17] you do wish to have something, prepare something light like fresh clear vegetable soup. It's crunchy, healthy, and super easy to make. Simply put a pan on low flame. Add one glass of water to it. Put rock salt to taste, some freshly crushed black pepper, grated ginger, [00:03:33] chopped green chili, turmeric, bay leaf, and cumin seeds. Mix the spices well. Now add fresh seasonal vegetables like carrots, radish, green peas, beans, and capsicum. Cover the pan and let them boil for about 10 minutes. That's all. [00:03:50] Put off the gas, pour it in a bowl, garnish it with fresh coriander leaves, sprinkle some lemon juice, and serve hot. With fresh seasonal vegetables and carefully added whole spices, this soup is detoxifying. We have consciously not added onions and tomatoes to maximize [00:04:07] the benefit. Needless to say, suffering from PCOD, don't even think to replace this soup with any packaged soup. Actually, make sure to stay away from all packaged foods for at least this 15-day detox period. On some days, if you want, you can replace this soup with [00:04:22] vegetable oats or dalia. All right then, I'll enjoy this soup and see you for the next meal of the day, which is lunch. It's lunch time, and for lunch we will have one multigrain roti along with [00:04:37] paneer bhurji and a little bit of salad. To make paneer bhurji, take 1 tsp of cow ghee. Add cumin seeds to it, a green chili chopped, grated ginger, and chopped capsicum. Saute them for a while. Now, add rock salt to taste, a pinch of black pepper, and turmeric [00:04:53] powder. Mix well. Now, add about 100 g of fresh paneer. Mix well so that all the spices get seeped into paneer. Cook for another 2 minutes and turn off the gas. Finally, top it up with freshly cut coriander leaves. Serve hot. Start with salad and then have this curry with one [00:05:10] multigrain chapati. Paneer and other fermented foods being rich in vitamin B12 are priceless for the ovaries. Although in lunch, if you want, you can replace paneer with any other curry. And whenever possible, end your meal with chaas. Now, here's the thing. If your [00:05:26] periods are delayed, have the salty version. And if excessive bleeding is your problem, choose sweet lassi over it. Also, when you take your lunch to your workplace, ensure that you avoid plastic containers. Last thing that you would want is plastic interfering with your hormones, isn't it? Use stainless [00:05:42] steel or glass is even better. Okay, so So, enjoy this lunch and I'll meet you for the next meal of the day, which is dinner. Okay, wait. If you feel hungry between lunch and dinner, feel free to hop on [00:05:57] any seasonal fruit, apple, banana, oranges, etc. Make sure to keep it handy with yourself. Moving to the last meal of the day, which is dinner. It's time for dinner, and for dinner, we will have dal khichdi. Not only it's among the best dinner options for PCOD, but it's [00:06:13] also light, filling, and hardly requires any effort. Just ensure that you have semi-brown rice and lentils soaked in the morning. To make khichdi, take a soaked mixture of 1/4 cup of semi-brown rice and 1/4 cup of green moong dal with four times the water, that is 1 cup. Put [00:06:29] rock salt to taste, 1/4 tsp of turmeric powder, 1/4 tsp of crushed black pepper, one bay leaf, cumin seeds, grated ginger, green chili, and mix well. Cover the pan and let it cook on a low flame for about 20 to 25 minutes. That's all. [00:06:46] Your khichdi will be ready. Top it up with fresh coriander leaves and 1 tsp of cow ghee. I highly recommend that you have your dinner by 7:00 p.m. so that it gets digested well before you sleep. Food made in a clay pot without the use of pressure cooker digests fast, retains [00:07:02] maximum nutrients, and maintains proper hormonal balance. It will also greatly help you if you stop using aluminum and nonstick cookware and switch to clay, iron, and brass pots. After dinner, make sure that you walk out and spend at least 15 minutes under moonlight. The [00:07:18] more moonlight you will absorb, the better your hormones will function. Okay, now it's time to enjoy the humble khichdi. Half an hour before going to sleep at night, if you feel hungry, simply have a glass of warm milk. [00:07:39] Finally, before falling asleep, make sure to keep water bottle out in the moonlight to be consumed next morning. It is also extremely important that you do not compromise on sleep. For ideal hormonal function, 9:00 p.m. to 6:00 a.m. is considered best for sleeping. All right, then. Good night. [00:07:59] Follow this diet religiously for 15 days. Consider this as your healing period. And if you successfully do so, you can assure yourself of a faster recovery. After 15 days, you can get a bit more relaxed with your diet, but follow healthy plate method. You can start eating two chapatis. You can put [00:08:14] onions and tomatoes while making curries. Desi cow ghee should be a part of your diet. Top it over the curries. Avoid oily junk and packaged foods as much as possible. Also, avoid green tea, black tea, or black coffee. You should be very regular with your workouts. [00:08:30] Focus on strength training, practice butterfly pose, and regularly do breathing exercises. It has been explicitly mentioned that a disease can take hold of a woman only when her body is out of sync with the moon. Even though you will be able to see a significant difference within one or two [00:08:46] menstrual cycles, I suggest that you keep following a healthy lifestyle. Check out this video for more details. Yes, PCOD is a serious disorder, but don't worry and be certain that this diet has the power to push it out of the gate. If you are mentally convinced about this fact, half your work is done. [00:09:03] I want to thank Aoric for partnering with us for this video. Aoric, based on the goodness of Ayurveda, is one of the healthiest packaged drinks available in the market. Aoric brings to you three drinks. One for the skin, second for the mind, and third for the body. Each of these drinks is 100% plant-based, made [00:09:20] with a concoction of powerful herbs like Ashwagandha, Brahmi, Shankhpushpi, Gotu Kola, Aloe Vera, Amla, along with tender coconut water and juice concentrates. These ready-to-drink beverages have no added sweeteners, no artificial flavors, no colors, no preservatives at all. 100 [00:09:36] ml of Aoric will give you just 14 calories. The company claims that Auric is a beauty and wellness beverage that actually helps improve your mind, body, and skin if consumed daily for 24 days. Buy Auric at 25% discount by using a special discount coupon on a pack of 12 [00:09:52] and 24 bottles. They also offer free shipping to your doorstep. Link is in the description box. So friends, that's all for this video. I hope you found it to be helpful. If yes, then please show me your support by giving this video a big thumbs up. What next would you like to see on this channel? Comment below. [00:10:09] You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell icon so that you never miss a video from me. You can also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. I thank you so much for [00:10:26] watching."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1184,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: x3MVEwkIQro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 4026 | Replies: 179 | Published: 2019-11-29T13:56:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "The journey from \"I have PCOD\" to \"I had PCOD\" might be a bit tough but not long, for sure. Our Ancient texts promise that. Go girl! You can do it.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @letswander5615 | Likes: 19 | Replies: 0 | Published: 2019-11-29T13:59:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Is green tea harmful in pcod?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @the_poo_bear | Likes: 12 | Replies: 0 | Published: 2019-11-29T14:02:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Is this diet also for hypothyroidism ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @itsshree5809 | Likes: 13 | Replies: 0 | Published: 2019-11-29T14:05:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Can I take egg for first 15 days instead of panner ? Is it necessary to follow vegan diet for pcod?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00020",
+                "author": "",
+                "text": "Pls reply .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "Btw thank u so much for this video. ❤ It's very helpful for me at least. 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00023",
+                "author": "",
+                "text": "[COMMENT 5] Author: @kedarjawali | Likes: 5 | Replies: 0 | Published: 2019-11-29T14:06:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "Can you make video on 7 quick and healthy dinner (Vegetarian)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00026",
+                "author": "",
+                "text": "[COMMENT 6] Author: @krishn735 | Likes: 1 | Replies: 0 | Published: 2019-11-29T14:09:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "Actually I'm a awful coffee person now I have to control 🤔",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "[COMMENT 7] Author: @P.P.13 | Likes: 3667 | Replies: 28 | Published: 2019-11-29T15:14:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "A day will come when people will realize that how much your contributing towards society without even charging a single penny💯",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "[COMMENT 8] Author: @aayushi2277 | Likes: 39 | Replies: 0 | Published: 2019-11-29T16:33:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "I respect ur opinion bt he isnt doing it for free, he does get alot",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "[COMMENT 9] Author: @P.P.13 | Likes: 79 | Replies: 0 | Published: 2019-11-29T16:35:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "@aayushi2277 but he is not directly charging anything from us ( he is earning from ads and sponsorships)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 10] Author: @anilgold96 | Likes: 3 | Replies: 0 | Published: 2019-12-10T18:39:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "@P.P.13 yes that is his job",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 11] Author: @octadec1572 | Likes: 7 | Replies: 0 | Published: 2019-12-22T22:48:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "@P.P.13 so you get free data package right....and all others here are goons who pay for a 399 recharge",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 12] Author: @ঐশিকাবেরা | Likes: 0 | Replies: 0 | Published: 2019-12-26T05:33:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "Right bhai",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "[COMMENT 13] Author: @grace-vm5gm | Likes: 2255 | Replies: 16 | Published: 2019-12-06T10:49:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "It feels so good to see a guy taking interest and doing research about women health problems . So progressive .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "[COMMENT 14] Author: @maggied2886 | Likes: 8 | Replies: 0 | Published: 2020-02-02T05:38:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "Respect for you man",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "[COMMENT 15] Author: @deepachoudhary302 | Likes: 4 | Replies: 0 | Published: 2020-05-24T08:37:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "Hey guys can we use buffalo ghee plz tell me.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 16] Author: @pinrayi7909 | Likes: 3 | Replies: 0 | Published: 2020-07-07T12:24:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "@deepachoudhary302 he specifically mentioned three times in the video that ghee should be only A2 cow ghee and he has mentioned the brand as well.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 17] Author: @pinrayi7909 | Likes: 0 | Replies: 0 | Published: 2020-07-07T12:25:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "@manishsinghchouhan2067 he specifically mentioned three times in the video that ghee should be A2 cow ghee. Heart patients have to evaluate their diet plan too. Ask Fit tuber what should heart patient do",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 18] Author: @geetikadwivedi1624 | Likes: 0 | Replies: 0 | Published: 2020-07-13T16:05:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "Hi, the dietitian says that consuming milk increases the pcod. Could you please tell me is it a myth?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 19] Author: @seenlikesummer | Likes: 48 | Replies: 4 | Published: 2021-11-16T01:50:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "I’m very thin, I can’t fulfill my hunger with soup in the morning. All the diet plans on Internet are for PCOS + Weight loss. Nobody takes into consideration that even thin women can have PCOS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 20] Author: @lost_butterfly314 | Likes: 0 | Replies: 0 | Published: 2022-01-15T05:16:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "Exactly",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "[COMMENT 21] Author: @Desiii_Tadka | Likes: 1 | Replies: 0 | Published: 2022-01-19T18:14:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "Man you are such a positive energy..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "[COMMENT 479] Author: @anupriya6248 | Likes: 0 | Replies: 0 | Published: 2024-03-16T16:17:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "Bro!!! I was just day before yesterday diagnosed with pcos and i vowed not to take medicines. I came across your video and didn't even did full day thing yet. I am on day 1 and just had my dinner only to find my eriods started. Now i don't know how the rest will go, but this is really a miracle. Typing this comment while moonbathing 😅 thank you so much! P. S. I also did hatha yoga today and all the others things mentioned here",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "[COMMENT 480] Author: @princyprasad5362 | Likes: 0 | Replies: 0 | Published: 2021-09-04T02:38:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "Thank u so much for all the tips..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "[COMMENT 481] Author: @tm7518 | Likes: 0 | Replies: 0 | Published: 2021-07-12T10:14:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "Please make video on excessive and prolonged bleeding during mensuration and auto immune disease",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 482] Author: @Adhyashakti123 | Likes: 0 | Replies: 0 | Published: 2024-02-26T19:28:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Superb as ever! Video for Menopause please 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "[COMMENT 483] Author: @kimberlycole727 | Likes: 0 | Replies: 0 | Published: 2022-08-22T18:49:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "@ fit tubber I’ve seen a lot of positive feedback on this video. Is there a plan for someone that suffers from uterine fibroids?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "[COMMENT 484] Author: @preethibattu2494 | Likes: 0 | Replies: 0 | Published: 2023-06-23T06:30:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "Thank you vivek .. Along with your diet plan and yoga , my periods are regular..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01662",
+                "author": "",
+                "text": "[COMMENT 485] Author: @sampadas96 | Likes: 0 | Replies: 0 | Published: 2021-08-14T06:27:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "Please bring one video on the topic of....WHAT KIND OF EXERCISE SHOULD DO DURING PREGNANCY & WHY . AND WHAT IS THE BENEFITS OF IT. Please 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01665",
+                "author": "",
+                "text": "[COMMENT 486] Author: @vinnettepope8255 | Likes: 0 | Replies: 0 | Published: 2023-11-18T15:40:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "Awesome 👌 👏 👍 😍 tutorial video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01668",
+                "author": "",
+                "text": "[COMMENT 487] Author: @nabanita8587 | Likes: 1 | Replies: 0 | Published: 2022-02-03T09:54:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "Hello vivek! You are amazing and helping a lot of people!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01670",
+                "author": "",
+                "text": "I have a question. I heard dairy is bad for PCOS! So is it okay to drink a cup of warm milk?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "[COMMENT 488] Author: @amanwahre5135 | Likes: 0 | Replies: 0 | Published: 2023-04-28T05:37:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01673",
+                "author": "",
+                "text": "Very informative video...💯💯💯👌👌",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "[COMMENT 489] Author: @birinaL | Likes: 0 | Replies: 0 | Published: 2023-10-23T20:01:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01676",
+                "author": "",
+                "text": "Thanku brother... Its really helpful😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "[COMMENT 490] Author: @spiritualjourney852 | Likes: 0 | Replies: 0 | Published: 2022-12-09T16:14:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01679",
+                "author": "",
+                "text": "Sir plz make a diet plan if a person is suffering from both PCOD and Thyroid",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "[COMMENT 491] Author: @saicharanreddy3222 | Likes: 0 | Replies: 0 | Published: 2022-01-01T04:53:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01682",
+                "author": "",
+                "text": "Sir, please make a video on overall nutrition of women(above30-40yrs) for their over all health. mainly on...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01683",
+                "author": "",
+                "text": "1)JOINT PAINS.....(general protein,calcium,vitamin deficiencies)",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "2)HAEMOGLOBIN",
+                "likes": null
+              },
+              {
+                "comment_id": "c01685",
+                "author": "",
+                "text": "3)LOOKING OVER AGED(collagen....)",
+                "likes": null
+              },
+              {
+                "comment_id": "c01686",
+                "author": "",
+                "text": "4)B.P & SUGAR(heart related problems).",
+                "likes": null
+              },
+              {
+                "comment_id": "c01688",
+                "author": "",
+                "text": "[COMMENT 492] Author: @harshikapaliwal6620 | Likes: 0 | Replies: 0 | Published: 2022-09-04T13:42:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01689",
+                "author": "",
+                "text": "I followed this diet for 1 week i see my inches loss. I am so happy 😊😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01691",
+                "author": "",
+                "text": "[COMMENT 493] Author: @Akanksha-2085 | Likes: 0 | Replies: 0 | Published: 2023-06-29T18:51:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01692",
+                "author": "",
+                "text": "Thank you so much @FitTuber I have pcod from a very long time after following this diet I got my periods on 4th day and I followed everything just as I had tea in evening with roasted channa. It really works I am amazed. I am also feeling very light and less bloated.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01694",
+                "author": "",
+                "text": "[COMMENT 494] Author: @supriyac3046 | Likes: 0 | Replies: 0 | Published: 2022-09-28T12:51:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01695",
+                "author": "",
+                "text": "It would be very helpful if you come up with video of pcos. In the recent times there are many things like gluten free, dairy free diet claiming that they help in JUST managing BUT NOT CURING pcos. Kindly guide us regarding these things whether it's good for our indian culture.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01697",
+                "author": "",
+                "text": "[COMMENT 495] Author: @muskanshaw8793 | Likes: 0 | Replies: 0 | Published: 2022-01-26T09:07:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01698",
+                "author": "",
+                "text": "Please make a video on diet for ovarian cyst patients",
+                "likes": null
+              },
+              {
+                "comment_id": "c01700",
+                "author": "",
+                "text": "[COMMENT 496] Author: @renubishnoi8918 | Likes: 0 | Replies: 0 | Published: 2021-06-28T12:37:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01701",
+                "author": "",
+                "text": "Thank u vivek u understand girls problem very well",
+                "likes": null
+              },
+              {
+                "comment_id": "c01703",
+                "author": "",
+                "text": "[COMMENT 497] Author: @riturajmarkam6425 | Likes: 0 | Replies: 0 | Published: 2024-03-26T07:04:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01704",
+                "author": "",
+                "text": "You are such a great person ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01706",
+                "author": "",
+                "text": "[COMMENT 498] Author: @open2unlearn | Likes: 0 | Replies: 0 | Published: 2022-08-14T04:11:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01707",
+                "author": "",
+                "text": "Like Jindal nature cure. Fittuber should also start a health center",
+                "likes": null
+              },
+              {
+                "comment_id": "c01709",
+                "author": "",
+                "text": "[COMMENT 499] Author: @umamanimandiram514 | Likes: 0 | Replies: 0 | Published: 2023-02-19T15:06:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01710",
+                "author": "",
+                "text": "Hi Vivek, request you to share diet plan for thyroid problem, this will help many. thankyou",
+                "likes": null
+              },
+              {
+                "comment_id": "c01712",
+                "author": "",
+                "text": "[COMMENT 500] Author: @walidhogan5995 | Likes: 0 | Replies: 0 | Published: 2021-05-08T12:02:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01713",
+                "author": "",
+                "text": "Thank you 🙏",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
