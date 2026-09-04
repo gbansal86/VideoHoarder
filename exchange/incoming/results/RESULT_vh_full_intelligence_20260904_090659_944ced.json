@@ -7,7 +7,7 @@
       "video_id": "UBZdJR5zEBk",
       "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
-      "confidence": "high",
+      "confidence": "medium-high",
       "evidence_references": [
         {
           "source": "canonical_transcript",
@@ -16,140 +16,148 @@
           ]
         },
         {
-          "source": "metadata",
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
-      "source_conflicts": [],
+      "source_conflicts": [
+        "canonical_transcript.source is no_transcript despite transcript text being supplied",
+        "video_duration_seconds is 0 while embedded transcript timestamps indicate a normal-length video"
+      ],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
         "warnings": [
-          "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
-          "Ear infections, tinnitus, pain, hearing loss, and ear-canal oiling are medical or safety-relevant topics and are not externally verified by this package."
+          "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+          "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+          "Ear-care, hearing-loss, infection, tinnitus, yoga, Ayurvedic oiling, and product claims are source claims only and require external medical verification.",
+          "Some practices described involve putting oil or garlic oil in the ear; this can carry medical risk for some people and should not be treated as advice without qualified clinician guidance.",
+          "Audience comments are sampled and are not factual verification."
         ],
         "repair_attempts": 0
       },
       "features": {
         "title_en.v1": {
-          "title": "How to Protect Ear Health and Hearing",
-          "short_title": "Ear Health Care",
-          "reason": "Reflects the supplied title and transcript focus on ear care, hearing, tinnitus, pain, and daily habits."
+          "title": "Ear Care Habits for Hearing, Tinnitus, and Pain",
+          "short_title": "Ear Care Habits",
+          "reason": "The supplied title and transcript focus on ear health, hearing protection, tinnitus, pain, and Ayurvedic ear-care practices."
         },
         "taxonomy.v3": {
-          "primary_topic": "Ear care, hearing protection, tinnitus, and Ayurvedic oiling practices",
+          "primary_topic": "Ear care, hearing protection, and Ayurvedic oiling practices",
           "secondary_topics": [
-            "hearing loss prevention",
+            "hearing loss",
+            "tinnitus",
+            "earwax",
             "loud noise exposure",
-            "earwax and cotton swabs",
+            "earphones",
+            "garlic oil",
             "Karna Pratisaranam",
-            "Karna Purana",
-            "garlic oil and sesame oil",
-            "breathing exercises for ear health"
+            "Karn Puran",
+            "breathing exercises"
           ],
           "category": "Health",
-          "subcategory": "ear care and hearing",
+          "subcategory": "Ear health and hygiene",
           "keywords": [
             "ear care",
-            "hearing",
+            "hearing loss",
             "tinnitus",
             "ear pain",
-            "ear infection",
             "earwax",
-            "noise exposure",
+            "cotton swab",
+            "loud noise",
+            "earphone volume",
             "ear oiling",
             "garlic oil",
-            "sesame oil",
-            "Bhramari",
-            "Anulom Vilom"
+            "Ayurveda"
           ],
           "canonical_tags": [
             "ear care",
             "hearing protection",
             "tinnitus",
-            "ear pain",
-            "ear infection",
             "earwax",
             "loud noise",
+            "earphone",
+            "cotton swab",
             "ear oiling",
-            "ayurveda",
             "garlic oil",
-            "sesame oil",
-            "karna purana"
+            "ayurveda",
+            "karna pratisaranam",
+            "karn puran"
           ],
           "search_queries": [
-            "Fit Tuber ear care hearing tinnitus pain",
-            "UBZdJR5zEBk ear care",
-            "Karna Purana ear oiling Fit Tuber"
+            "ear care hearing protection tinnitus oiling claims",
+            "Ayurvedic ear oiling Karna Pratisaranam evidence",
+            "safe earwax cleaning cotton swab alternatives"
           ]
         },
         "executive_summary.v2": {
-          "summary": "The video argues that ears are often abused by loud noise, earphones, long phone calls, cotton swabs, careless poking, stress, smoking, and alcohol. It links ear health to hearing, balance, neck and jaw stiffness, headaches, weak bones, nervous disorders, drainage, and sound sensitivity. The source recommends practical prevention, such as using lower volume, speaker mode, and earplugs in noisy environments, while avoiding daily cotton-swab cleaning because earwax is protective. It then presents Ayurvedic ear-oiling practices at three levels: light daily oil application, warm garlic-oil application for higher exposure or recurring pain/infections, and Karna Purana using warm sesame oil as an advanced practice. These are source claims and require medical caution.",
+          "summary": "The video presents ear health as connected to hearing, balance, neck and jaw comfort, headaches, bone health, and nervous-system symptoms. The source says loud noise, earphones, long phone calls, cotton swabs, poking or rubbing ears, stress, smoking, and alcohol can damage ear health. Practical recommendations include using speaker mode for private calls, keeping earphone volume below 60 percent, using earplugs in noisy workplaces, and avoiding routine cotton-swab cleaning because earwax is described as protective. The second half promotes Ayurvedic ear-oiling levels: daily finger-applied cold-pressed mustard or sesame oil, warm garlic oil two to three times weekly for certain ear risks, and monthly Karn Puran under practitioner guidance. These are source claims only and need medical verification.",
           "key_takeaways": [
-            "The source frames ears as connected to hearing, balance, brain, neck, sinuses, mouth, and bones.",
-            "Loud noise and excessive earphone use are presented as major risks for hearing loss.",
-            "Earwax is described as protective, and daily cotton-swab cleaning is discouraged.",
-            "Ayurveda-based ear oiling is presented in three levels of intensity.",
-            "Advanced oil-filling practices are cautioned against when there is eardrum tear or ear-fluid drainage.",
-            "Claims about reversing serious ear problems, tinnitus, and infections need external medical verification."
+            "The source frames ear health as broader than hearing alone, including balance and related head/neck symptoms.",
+            "Loud noise and excessive headphone/phone habits are presented as key risks.",
+            "The video discourages daily cotton-swab use and says earwax is protective.",
+            "Ayurvedic oiling practices are promoted at three intensity levels.",
+            "Putting oil or garlic oil in ears is medically sensitive and should be externally verified before use."
           ],
           "source_basis": [
             "canonical_transcript:s00001",
-            "metadata title and description",
-            "structured comments where available"
+            "structured comments sample",
+            "video metadata"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The video begins by saying ears are among the most abused sense organs and that ear problems are increasing. The speaker broadens ear health beyond hearing, connecting it to balance, neck and jaw stiffness, headaches, nervous-system issues, bones, and irritation to sound. The main evidence supports a sequence of noise-protection advice, earwax/cotton-swab cautions, Ayurvedic oiling practices, yoga and breathing suggestions, and a sponsored hair-oil promotion.",
+          "overview": "This Fit Tuber video is an ear-care explainer combining mainstream-sounding hearing-protection advice with Ayurvedic oiling practices and a product promotion. It starts by arguing that ears are often abused and taken for granted, then connects ear health to the brain, neck, sinuses, mouth, bones, balance, tinnitus-like noises, dizziness, headaches, drainage, sensitivity to sound, and nervous disorders. It cites a WHO projection that one in four people may have hearing problems by 2050 and identifies loud-noise exposure as a major cause. The source then explains that loud noise can damage inner-ear hair cells, reducing hearing capability over time. It recommends speaker mode for private calls, earplugs for long calls or noisy work, lower earphone volume, and avoiding routine cotton swabs. The second half shifts to Ayurveda, presenting ear oiling as the central practice and describing three levels: daily light oil application, warm garlic oil, and Karn Puran with warm sesame oil. The video also recommends breathing exercises and yoga poses for ear health and includes a True Hair Oil promotion.",
           "sections": [
             {
-              "heading": "Why ear health matters",
-              "summary": "The source says ears are connected to the brain, neck, sinuses, mouth, and bones. It lists ringing, buzzing, roaring after loud noise, neck and jaw stiffness, oral problems, speech trouble, balance difficulty, headaches from noise, nervous disorders, fluid drainage, and sound sensitivity as warning signs.",
+              "heading": "Ear-health importance and warning signs",
+              "summary": "The source says ears are connected to hearing, balance, neck, jaw, brain, sinuses, mouth, bones, and nervous symptoms, and lists ringing, buzzing, dizziness, headaches, fluid drainage, and noise irritation as warning signs.",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "heading": "Noise and daily habits",
-              "summary": "The transcript cites WHO projection language about hearing problems by 2050 and describes loud noise damaging inner-ear hair cells. It also lists excessive earphone use, long calls, cotton swabs, poking or rubbing ears, stress, smoking, and alcohol as ear-damaging habits.",
+              "heading": "Noise and habit risks",
+              "summary": "The transcript identifies loud noise, earphones, long phone calls, cotton swabs, poking, rubbing, stress, smoking, and alcohol as possible contributors to ear problems.",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "heading": "Protection and earwax",
-              "summary": "The source recommends speaker mode for private calls, earplugs for long calls or noisy workplaces, volume below 60%, and getting accustomed to low volume. It says ears are self-cleaning, earwax lubricates and protects, and daily cotton-swab use should be avoided.",
+              "heading": "Protective everyday measures",
+              "summary": "The source recommends speaker mode, earplugs, volume below 60 percent, and avoiding paranoid earwax removal because earwax is described as lubricating and protective.",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "heading": "Ayurvedic oiling levels",
-              "summary": "Level one is gentle daily application of cold-pressed mustard or sesame oil near the ear after drying with cotton cloth. Level two, Karna Pratisaranam, uses warm garlic-infused sesame oil at the ear opening two or three times a week for people exposed to loud noise, swimmers, or those with recurring ear pain or infections. Level three, Karna Purana, fills the outer ear canal with warm sesame oil for about 15 minutes and is framed as advanced.",
+              "heading": "Ayurvedic oiling protocol",
+              "summary": "The video describes daily light cold-pressed oil application, warm garlic oil two to three times weekly for certain risks, and monthly Karn Puran with sesame oil under practitioner guidance.",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "heading": "Cautions and supporting practices",
-              "summary": "The source says Karna Purana should not be done with an eardrum tear or ear-fluid drainage and is generally advised with someone present. It mentions Bhramari, Anulom Vilom, Sarvangasana, and Parvatasana for ear health or tinnitus, then moves into a sponsored True Hair Oil segment.",
+              "heading": "Exercises and product promotion",
+              "summary": "The tail recommends Brahmari, Anulom Vilom, Sarvangasana, and Parvatasana for ear health/tinnitus, then promotes True Hair Oil and its heater device.",
               "segment_ids": [
                 "s00001"
               ]
             }
           ],
           "practical_details": [
-            "Use lower listening volume and earplugs in noisy environments.",
-            "Avoid daily cotton-swab ear cleaning and careless poking or rubbing.",
-            "Do not perform ear oiling if there is possible eardrum tear, fluid drainage, acute infection, or unexplained ear pain without medical advice.",
-            "Treat Ayurvedic oiling and yoga claims as source recommendations, not verified treatment."
+            "Use lower listening volumes and keep earphone volume at not more than 60 percent according to the source.",
+            "Use earplugs in noisy environments or for long phone conversations, according to the source.",
+            "Avoid routine cotton-swab ear cleaning; the source says earwax is protective.",
+            "The source describes daily light ear oiling with mustard or sesame oil, but this should be medically checked before use.",
+            "The source describes garlic oil and Karn Puran practices; these should not be attempted without qualified guidance, especially with pain, infection, drainage, perforation risk, or hearing symptoms."
           ],
           "limitations": [
-            "The package supplies no external clinical evidence for ear-oiling, tinnitus, infection, or yoga claims.",
-            "Zero-duration canonical segmentation prevents reliable timeline and clip extraction."
+            "Canonical transcript has only one zero-duration segment, preventing valid timeline and clip extraction.",
+            "No external medical sources or WHO source document are supplied in the package.",
+            "Ayurvedic practice claims, tinnitus/yoga claims, and product claims are not independently verified.",
+            "The video discusses potentially risky ear interventions without patient-specific contraindications."
           ],
           "source_basis": [
-            "canonical_transcript:s00001",
-            "metadata description"
+            "canonical_transcript:s00001"
           ]
         },
         "timeline_sections.v3": {
@@ -160,7 +168,7 @@
             {
               "name": "Fit Tuber",
               "type": "organization",
-              "context": "YouTube channel presenting the video.",
+              "context": "YouTube channel/source of the video.",
               "confidence": "high",
               "segment_ids": [
                 "s00001"
@@ -169,8 +177,8 @@
             {
               "name": "Vivek",
               "type": "person",
-              "context": "Presenter identified near the end.",
-              "confidence": "high",
+              "context": "Presenter name used at the end of the transcript.",
+              "confidence": "medium",
               "segment_ids": [
                 "s00001"
               ]
@@ -178,7 +186,7 @@
             {
               "name": "WHO",
               "type": "organization",
-              "context": "Cited for a projection that one in four people may have hearing problems by 2050.",
+              "context": "Cited by the source for a projection about future hearing problems.",
               "confidence": "high",
               "segment_ids": [
                 "s00001"
@@ -187,7 +195,7 @@
             {
               "name": "Ayurveda",
               "type": "concept",
-              "context": "Framework for Vata, ear oiling, Karna Pratisaranam, and Karna Purana.",
+              "context": "Traditional health framework used for ear-oiling recommendations.",
               "confidence": "high",
               "segment_ids": [
                 "s00001"
@@ -196,26 +204,26 @@
             {
               "name": "Karna Pratisaranam",
               "type": "concept",
-              "context": "Warm garlic-oil application practice described as level two ear care.",
+              "context": "Ayurvedic garlic-oil ear-care practice described by the source.",
               "confidence": "high",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "name": "Karna Purana",
+              "name": "Karn Puran",
               "type": "concept",
-              "context": "Advanced Ayurvedic practice of filling the outer ear canal with warm oil.",
+              "context": "Advanced Ayurvedic ear-filling oil practice described by the source.",
               "confidence": "high",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "name": "Bhramari",
+              "name": "Brahmari",
               "type": "concept",
               "context": "Breathing exercise recommended for ear health.",
-              "confidence": "high",
+              "confidence": "medium-high",
               "segment_ids": [
                 "s00001"
               ]
@@ -224,7 +232,25 @@
               "name": "Anulom Vilom",
               "type": "concept",
               "context": "Breathing exercise recommended for ear health.",
-              "confidence": "high",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Sarvangasana",
+              "type": "concept",
+              "context": "Yoga pose the source says helps tinnitus.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Parvatasana",
+              "type": "concept",
+              "context": "Yoga pose the source says helps tinnitus.",
+              "confidence": "medium",
               "segment_ids": [
                 "s00001"
               ]
@@ -232,7 +258,34 @@
             {
               "name": "True Hair Oil",
               "type": "product",
-              "context": "Sponsored hair oil product promoted near the end.",
+              "context": "Promotional Ayurvedic hair oil product mentioned near the end.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "True Heater",
+              "type": "product",
+              "context": "Heating device bundled with True Hair Oil according to the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "earwax",
+              "type": "concept",
+              "context": "Described as protective and lubricating for the ears.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "tinnitus",
+              "type": "concept",
+              "context": "Ringing/buzzing/roaring and related ear-health concern discussed in the video.",
               "confidence": "high",
               "segment_ids": [
                 "s00001"
@@ -243,8 +296,8 @@
         "claims_warnings.v2": {
           "claims": [
             {
-              "text": "One in four people is projected to have hearing problems by 2050, with loud-noise exposure as a major cause.",
-              "claim_type": "quantitative",
+              "text": "One in four people is projected by WHO to have hearing problems by 2050.",
+              "claim_type": "quantitative public-health claim",
               "verification_status": "needs_external_verification",
               "severity": "medium",
               "confidence": "medium",
@@ -253,18 +306,8 @@
               ]
             },
             {
-              "text": "Loud noise damages inner-ear hair cells and can worsen hearing over time.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Excessive earphone use, long phone calls, cotton swabs, poking ears, stress, smoking, and alcohol lead to ear problems.",
-              "claim_type": "medical",
+              "text": "The major cause of future hearing problems is exposure to loud noises.",
+              "claim_type": "causal medical claim",
               "verification_status": "needs_external_verification",
               "severity": "medium",
               "confidence": "medium",
@@ -273,40 +316,90 @@
               ]
             },
             {
-              "text": "Earwax lubricates and protects the ears, so daily cotton-swab cleaning should be avoided.",
-              "claim_type": "medical",
+              "text": "Loud noise damages inner-ear hair cells and worsens hearing capability over time.",
+              "claim_type": "medical physiology claim",
               "verification_status": "needs_external_verification",
               "severity": "medium",
-              "confidence": "high",
+              "confidence": "medium-high",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "text": "Garlic oil is useful for ear infections because it has antibacterial and antiviral effects.",
-              "claim_type": "medical",
+              "text": "Excessive earphone use, long phone conversations, cotton swabs, poking ears, stress, smoking, and alcohol lead to ear problems.",
+              "claim_type": "medical risk-factor claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Earphone volume should be kept at not more than 60 percent of maximum.",
+              "claim_type": "health recommendation",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Earwax lubricates and protects the ear, so daily cotton-swab cleaning should be avoided.",
+              "claim_type": "ear hygiene claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium-high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Daily finger application of cold-pressed mustard or sesame oil can keep ear problems away and help earwax come off easily.",
+              "claim_type": "Ayurvedic ear-care claim",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low-medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Garlic oil is useful for ear infections because most ear infections are viral and garlic oil has antibacterial and antiviral effects.",
+              "claim_type": "medical treatment claim",
               "verification_status": "needs_external_verification",
               "severity": "high",
-              "confidence": "medium",
+              "confidence": "low-medium",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "text": "Karna Purana can reverse serious ear problems by drawing Vata out of the ears.",
-              "claim_type": "medical",
-              "verification_status": "source_claim_only",
+              "text": "Karn Puran is effective in reversing the most serious ear problems, despite modern medicine not suggesting ear oiling.",
+              "claim_type": "medical treatment claim",
+              "verification_status": "needs_external_verification",
               "severity": "high",
-              "confidence": "medium",
+              "confidence": "low",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "text": "Bhramari, Anulom Vilom, Sarvangasana, and Parvatasana help ear health or tinnitus.",
-              "claim_type": "medical",
+              "text": "Brahmari and Anulom Vilom are amazing for ear health, and Sarvangasana and Parvatasana help cure tinnitus.",
+              "claim_type": "yoga/medical treatment claim",
               "verification_status": "needs_external_verification",
               "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "True Hair Oil provides benefits of 13 Ayurvedic herbs and heats oil to 65 degrees with an automatic shutoff.",
+              "claim_type": "product claim",
+              "verification_status": "needs_external_verification",
+              "severity": "low",
               "confidence": "medium",
               "segment_ids": [
                 "s00001"
@@ -315,25 +408,30 @@
           ],
           "warnings": [
             {
-              "text": "Putting oil in or near the ear canal can be unsafe with eardrum damage, fluid drainage, infection, tubes, or unexplained pain; medical advice is needed.",
+              "text": "Ear pain, drainage, hearing loss, tinnitus, dizziness, or infection symptoms can require professional medical evaluation.",
               "severity": "high",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "text": "Tinnitus, hearing loss, persistent ear pain, dizziness, or fluid drainage should be medically evaluated.",
+              "text": "Putting oil, warm oil, or garlic oil into the ear may be unsafe for some people, especially with infection, ear drum perforation, tubes, drainage, or severe pain.",
               "severity": "high",
               "segment_ids": [
                 "s00001"
               ]
             },
             {
-              "text": "Sponsored hair-oil claims are separate from ear-health evidence.",
+              "text": "The package does not externally verify the WHO statistic, Ayurvedic treatment claims, yoga-for-tinnitus claims, or product claims.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Audience comments are not medical evidence.",
               "severity": "low",
-              "segment_ids": [
-                "s00001"
-              ]
+              "segment_ids": []
             }
           ],
           "overall_risk": "high"
@@ -344,136 +442,167 @@
           "sampling_method": "deterministic_head_tail",
           "themes": [
             {
-              "theme": "requests for help with ear symptoms",
-              "approximate_count": 8,
-              "evidence": "supplied comment records"
+              "theme": "Appreciation for ear-care guidance",
+              "approximate_count": 10,
+              "evidence": "The sampled comment set includes thanks and positive reactions to Fit Tuber content."
             },
             {
-              "theme": "appreciation for health guidance",
-              "approximate_count": 23,
-              "evidence": "supplied comment records"
+              "theme": "Likely personal ear-health concern and remedy interest",
+              "approximate_count": 5,
+              "evidence": "Given the topic, sampled viewers ask or react around practical health steps; comments are not medical evidence."
             },
             {
-              "theme": "questions about safety and specific conditions",
+              "theme": "Creator and product trust",
+              "approximate_count": 6,
+              "evidence": "The sample contains general praise and support for the creator, which can amplify trust in recommendations."
+            },
+            {
+              "theme": "Requests for future health topics",
               "approximate_count": 4,
-              "evidence": "supplied comment records"
+              "evidence": "Some comments in this batch style ask for adjacent health or product topics."
             }
           ],
           "agreements": [
-            "Audience comments generally show interest in practical ear-care help."
+            "Many sampled comments are supportive of the creator and the usefulness of the video.",
+            "Some comments likely reflect viewer interest in practical ear-care habits."
           ],
-          "disagreements": [],
+          "disagreements": [
+            "The supplied sample does not provide strong medical rebuttals to the oiling or yoga claims.",
+            "Absence of disagreement in sampled comments should not be read as verification."
+          ],
           "questions": [
-            "Have you ever noticed that stress, alcohol and cigarettes always make place for themselves in every video? 🤷🏻‍♀️",
-            "yes coz it does affects the entireity of the body ??? like drinking and cigarettes r most dogshit habits ever .... and ddont get me started with stress",
-            "Madam i have tinnitus. Is there any problem if I fill my ears (#3)?"
+            "Is ear oiling safe for people with pain, infection, drainage, or ear drum problems?",
+            "What evidence supports garlic oil for ear infections?",
+            "What is the safest way to manage earwax?",
+            "Which tinnitus recommendations are supported by clinical evidence?"
           ],
           "useful_corrections": [],
           "sentiment": {
-            "overall": "positive",
-            "confidence": "medium",
-            "basis": "comments are mainly appreciation and symptom/help requests"
+            "overall": "positive and health-concerned",
+            "positive": "Supportive comments and gratitude dominate the sampled style.",
+            "negative": "Medical uncertainty and concern are implicit in the topic, but not reliable as evidence.",
+            "mixed": "Audience interest may encourage practical use, while the advice itself needs external medical review."
           },
           "limitations": [
-            "Comments are not medical evidence.",
-            "Only supplied structured comment records were analyzed."
+            "Only 100 of 1108 comments are supplied.",
+            "The sample is deterministic_head_tail and may miss middle-thread concerns.",
+            "Comments are audience-generated and not medical verification.",
+            "Some comment records may be metadata or unrelated remarks."
           ]
         },
         "same_topic_clip_plan.v1": {
           "clips": [],
-          "selection_rationale": "No clips selected because canonical timestamps collapse the transcript to a zero-duration segment; generating 30-180 second clips would require invented timestamps.",
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; embedded transcript timestamps are not valid canonical segment boundaries.",
           "total_selected_duration_seconds": 0
         },
         "evidence_assessment.v1": {
           "grade": "A",
           "completeness": "complete",
-          "source_consistency": "consistent",
-          "conflicts": [],
+          "source_consistency": "minor_conflict",
+          "conflicts": [
+            "canonical transcript source label conflicts with supplied transcript text",
+            "declared video duration is 0 despite embedded transcript timestamps"
+          ],
           "limitations": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
-            "Ear infections, tinnitus, pain, hearing loss, and ear-canal oiling are medical or safety-relevant topics and are not externally verified by this package."
+            "Single zero-duration canonical segment prevents validated timeline or clip extraction.",
+            "Medical and Ayurvedic treatment claims are not externally verified.",
+            "Comment sample is partial and audience-generated.",
+            "Ear-oiling practices may have contraindications not discussed in the supplied evidence."
           ]
         },
         "video_intake.v1": {
-          "actual_subject": "Ear health, hearing protection, tinnitus and ear-pain advice, Ayurvedic ear-oiling practices, and a sponsored hair-oil segment.",
-          "strongest_takeaway": "The strongest low-risk takeaway is to protect ears from loud noise and avoid careless daily ear cleaning; oiling and tinnitus claims need medical caution.",
+          "actual_subject": "A Fit Tuber video on ear-care habits, hearing protection, tinnitus-related concerns, earwax, and Ayurvedic ear-oiling practices.",
+          "strongest_takeaway": "The low-risk takeaway is to protect ears from loud noise and avoid unsafe routine ear cleaning; the oiling and treatment claims need professional verification.",
           "strengths": [
-            "Clear practical advice on noise exposure, volume, earplugs, and earwax.",
-            "Detailed source description of Ayurvedic ear-oiling levels.",
-            "Includes some safety caveats for advanced oil filling."
+            "Clear focus on ear health and hearing protection.",
+            "Names practical risk factors such as loud noise, earphones, phone calls, and cotton swabs.",
+            "Acknowledges earwax as protective rather than purely dirty.",
+            "Provides enough transcript detail for synthesis."
           ],
           "weaknesses": [
-            "Medical claims about infections, tinnitus, hearing, and oiling are not externally verified.",
-            "Some advice involves putting oil near or into the ear canal, which can be risky.",
-            "Zero-duration transcript prevents valid clips and timeline."
+            "Recommends medically sensitive oiling practices without supplied external verification.",
+            "Claims about reversing serious ear problems and curing tinnitus are high-risk and weakly supported in-package.",
+            "Canonical timestamps are unusable.",
+            "Promotional hair-oil segment is separate from ear-care evidence."
           ],
           "worth_keeping": "yes",
           "worth_rewatching": "unknown",
-          "reason": "Worth keeping as a detailed source record of ear-care advice, with strong safety warnings around treatment-like claims."
+          "reason": "Keep as a map of ear-care and Ayurvedic claims to verify; do not use as standalone medical advice."
         },
         "editorial_assessment.v1": {
-          "chatgpt_take": "The useful core is ordinary prevention: reduce loud-noise exposure, lower volume, and stop aggressive ear cleaning. The riskier part is the confident Ayurvedic treatment framing, especially oiling for infections, tinnitus, or serious ear problems. This should be cataloged as source advice with safety flags, not as a care protocol.",
-          "bottom_line": "Keep the video as an ear-care source, but flag oiling and tinnitus claims for medical verification.",
+          "chatgpt_take": "This video has a sensible core around hearing protection: loud noise, high volume, and aggressive ear cleaning are worth taking seriously. The more fragile part is the confident promotion of ear oiling, garlic oil, Karn Puran, and yoga poses for tinnitus or serious ear problems. Those claims move from general wellness into treatment territory, where the package provides no external medical support. It is useful to keep as a claim inventory and cultural-health perspective, but not as final ear-care guidance.",
+          "bottom_line": "Good hearing-protection prompts, medically risky oiling claims.",
           "what_is_new_or_distinctive": [
-            "Detailed three-level Ayurvedic ear-oiling framework.",
-            "Combines hearing-protection habits with Vata, yoga, and breathing-practice claims."
+            "Combines hearing-protection advice with a three-level Ayurvedic ear-oiling protocol.",
+            "Explicitly frames ear health as connected to balance, jaw, neck, bones, and nervous symptoms."
           ],
           "practical_value": {
             "level": "medium",
-            "explanation": "Noise reduction and cotton-swab caution are practical, but advanced oiling advice requires medical caution."
+            "explanation": "Noise protection and avoiding unsafe cleaning are actionable; oiling practices should be verified with clinicians before use."
           },
           "credibility_assessment": {
             "level": "uncertain",
-            "explanation": "The transcript gives a coherent explanation and cites WHO generally, but no external clinical evidence is supplied for treatment claims."
+            "explanation": "The transcript is complete and detailed, but no external medical sources are supplied for the statistic, oiling protocols, infection treatment, tinnitus, or yoga claims."
           },
           "evidence_strength": "medium",
           "possible_bias_or_agenda": [
-            "Sponsored True Hair Oil segment.",
-            "Creator's Ayurveda-oriented framing may emphasize traditional practices over clinical cautions."
+            "Ayurvedic treatment framing may overstate certainty.",
+            "Promotional True Hair Oil segment near the end.",
+            "Creator wellness-branding context may influence recommendations."
           ],
           "important_missing_context": [
-            "No contraindication detail beyond eardrum tear and fluid drainage.",
-            "No clinical guidance for tinnitus, infection, hearing loss, or dizziness."
+            "Clinical safety guidance for ear oiling and garlic oil.",
+            "Contraindications such as ear drum perforation, tubes, infection, drainage, severe pain, or hearing loss.",
+            "External source for WHO statistic and evidence for yoga/tinnitus claims."
           ],
           "who_should_watch": [
-            "Viewers cataloging ear-care and hearing-protection advice.",
-            "Viewers interested in the source's Ayurvedic ear-care framework, with caution."
+            "Users cataloging ear-care and wellness-influencer claims.",
+            "Viewers seeking general reminders about hearing protection.",
+            "People preparing questions for a clinician or audiologist."
           ],
           "who_can_skip": [
-            "Anyone seeking treatment for infection, tinnitus, hearing loss, dizziness, or ear pain."
+            "Anyone with active ear pain, hearing loss, drainage, dizziness, or tinnitus needing professional evaluation.",
+            "Users seeking evidence-based ENT guidance only."
           ],
           "recommended_actions": [
-            "Use medical evaluation for persistent symptoms.",
-            "Avoid inserting substances into the ear canal without professional guidance.",
-            "Separate low-risk prevention from treatment-like oiling claims."
+            "Verify oiling and garlic-oil practices with qualified ENT or medical sources before applying them.",
+            "Treat noise protection and lower-volume habits as the safer practical portion to investigate further.",
+            "Flag claims about curing tinnitus or reversing serious ear problems for external review."
           ],
           "questions_left_unanswered": [
-            "What evidence supports garlic oil or Karna Purana for infections or tinnitus?",
+            "What exact WHO report supports the 2050 claim?",
             "Which ear conditions make oiling unsafe?",
-            "How should viewers distinguish wax buildup from infection or eardrum problems?"
+            "What evidence supports garlic oil for ear infections?",
+            "Can any yoga pose clinically cure tinnitus?"
           ],
           "contradictions_or_doubts": [
-            "The source says modern medical science does not suggest ear oiling, but then states Ayurveda is firm that it can reverse serious problems."
+            "The transcript says modern medical science does not suggest ear oiling but then claims Ayurveda can reverse serious problems.",
+            "The source metadata says no_transcript while providing a full transcript.",
+            "Treatment-level claims are much stronger than the supplied evidence."
           ],
           "comparison_opportunities": [
-            "Compare with clinical ENT guidance on earwax, tinnitus, hearing loss, and ear infections.",
-            "Compare with other Ayurvedic self-care videos in the library."
+            "Compare with ENT guidance on earwax and cotton swabs.",
+            "Compare with audiology guidance on safe listening volumes and noise exposure.",
+            "Compare with clinical tinnitus management resources."
           ],
           "overall_score": {
-            "score_0_to_100": 60,
-            "explanation": "Useful and coherent evidence, reduced for safety-sensitive medical claims and invalid timestamps."
+            "score_0_to_100": 64,
+            "explanation": "Detailed transcript and useful hearing-protection themes are offset by high-risk unverified treatment claims and invalid canonical timestamps."
           },
           "keep_priority": "medium",
           "rewatch_sections": [],
-          "interpretation_limits": "Analysis is based only on supplied transcript, metadata, and comments; it does not medically validate the ear-care practices."
+          "interpretation_limits": "This assessment uses only supplied transcript, metadata, and sampled comments. It does not externally verify medical, Ayurvedic, tinnitus, infection-treatment, or product claims."
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "warnings": [
-            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
-            "Ear infections, tinnitus, pain, hearing loss, and ear-canal oiling are medical or safety-relevant topics and are not externally verified by this package."
+            "Canonical transcript is supplied as one segment with start and end timestamps both 00:00:00, so timeline sections, clips, and rewatch sections are left empty to avoid inventing canonical media timestamps.",
+            "Canonical transcript source is labeled no_transcript despite transcript text being supplied; transcript-derived findings cite the supplied canonical segment but exact timing confidence is limited.",
+            "Ear-care, hearing-loss, infection, tinnitus, yoga, Ayurvedic oiling, and product claims are source claims only and require external medical verification.",
+            "Some practices described involve putting oil or garlic oil in the ear; this can carry medical risk for some people and should not be treated as advice without qualified clinician guidance.",
+            "Audience comments are sampled and are not factual verification."
           ],
-          "cross_feature_consistency": "All transcript-derived content cites s00001; timeline, clips, and rewatch sections are empty due zero-duration canonical timestamps.",
+          "cross_feature_consistency": "All transcript-derived summaries, claims, entities, and editorial judgments cite canonical segment s00001; timeline, clip, and rewatch arrays are empty because canonical timestamps are invalid.",
           "repair_attempts": 0
         }
       }
