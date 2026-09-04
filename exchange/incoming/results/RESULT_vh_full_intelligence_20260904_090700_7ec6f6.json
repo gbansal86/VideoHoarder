@@ -1,0 +1,810 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090700_7ec6f6",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "8ToYJycXw0I",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "C",
+      "confidence": "low",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
+          "Transcript is noisy/garbled; claims and summaries are lower-confidence and partly supported by metadata."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Mosquito Repellent Risks and Natural Alternatives",
+          "short_title": "Mosquito Repellent Risks",
+          "reason": "Title reflects supplied metadata and canonical transcript topic."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Chemical mosquito repellents and natural alternatives",
+          "secondary_topics": [
+            "household health risk",
+            "environmental habits",
+            "consumer safety",
+            "natural alternatives",
+            "pollution and waste"
+          ],
+          "category": "Health",
+          "subcategory": "environmental and household risk",
+          "keywords": [
+            "environment",
+            "household",
+            "health risk",
+            "plastic",
+            "mosquito repellent",
+            "natural alternative",
+            "millets",
+            "meat reduction",
+            "microplastics",
+            "pollution"
+          ],
+          "canonical_tags": [
+            "environment",
+            "household risk",
+            "consumer safety",
+            "natural alternative",
+            "plastic waste",
+            "microplastic",
+            "mosquito repellent",
+            "millet",
+            "meat reduction",
+            "sustainability"
+          ],
+          "search_queries": [
+            "Chemical mosquito repellents and natural alternatives Fit Tuber",
+            "The Truth about Mosquito Repellents in India (WITH SOLUTION)",
+            "8ToYJycXw0I environmental household risk"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video discusses common Indian mosquito repellents such as All Out, Goodknight, Mortein, and Odomos and argues that viewers should read warning labels and consider alternatives. The transcript is noisy, but metadata and recognizable passages show that the source is concerned about active chemical ingredients, inhalation exposure, instructions to keep doors and windows partly open, and suspected health effects such as irritation, allergies, or poisoning symptoms. It recommends natural mosquito repellents, including essential-oil based products, and mentions citronella, basil, and eucalyptus-style oils as alternatives. A sponsored pickle segment appears near the end. Because the transcript is corrupted, details are lower-confidence and product-safety claims require external verification.",
+          "key_takeaways": [
+            "The source argues mosquitoes are dangerous but chemical repellents may carry health concerns.",
+            "Viewers are urged to read warning labels and usage instructions on repellent products.",
+            "Natural or essential-oil repellents are suggested as alternatives.",
+            "The mosquito-repellent transcript is garbled, so exact ingredient and claim extraction is limited.",
+            "Sponsored pickle content is unrelated to the repellent safety topic."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata title and description",
+            "structured comments where available"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video discusses common Indian mosquito repellents such as All Out, Goodknight, Mortein, and Odomos and argues that viewers should read warning labels and consider alternatives. The transcript is noisy, but metadata and recognizable passages show that the source is concerned about active chemical ingredients, inhalation exposure, instructions to keep doors and windows partly open, and suspected health effects such as irritation, allergies, or poisoning symptoms. It recommends natural mosquito repellents, including essential-oil based products, and mentions citronella, basil, and eucalyptus-style oils as alternatives. A sponsored pickle segment appears near the end. Because the transcript is corrupted, details are lower-confidence and product-safety claims require external verification.",
+          "sections": [
+            {
+              "heading": "Topic and concern",
+              "summary": "The video targets common mosquito repellent products and asks what goes into chemical-based repellents and what suspected health problems are associated with them.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Warning-label emphasis",
+              "summary": "Recognizable transcript passages focus on danger signs, inhalation warnings, and instructions that many users ignore.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Natural alternatives",
+              "summary": "The source recommends searching for or using natural mosquito repellents, including essential-oil based vaporizers, coils, screens, gels, sprays, fabric roll-ons, incense sticks, and eucalyptus-style oils.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Evidence limits",
+              "summary": "The transcript is heavily mistranscribed, so exact ingredient names, risk statements, and brand comparisons should be treated with caution.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Natural or essential-oil repellents are suggested as alternatives."
+          ],
+          "limitations": [
+            "Environmental, toxicology, medical, and quantitative claims are not externally verified in the package.",
+            "Zero-duration canonical segmentation prevents timeline and clip extraction.",
+            "Transcript corruption limits precise ingredient and risk extraction."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata description"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "All Out",
+              "type": "product",
+              "context": "Chemical mosquito repellent brand mentioned by the source.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Goodknight",
+              "type": "product",
+              "context": "Chemical mosquito repellent brand mentioned by the source.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Mortein",
+              "type": "product",
+              "context": "Chemical mosquito repellent brand mentioned by the source.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Odomos",
+              "type": "product",
+              "context": "Mosquito repellent brand mentioned by the source.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "Channel presenting the video.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Pickle Shickle",
+              "type": "product",
+              "context": "Sponsored pickle brand in the video.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "eucalyptus oil",
+              "type": "product",
+              "context": "Natural repellent ingredient mentioned in the transcript.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Chemical mosquito repellents may cause poisoning-like symptoms, skin allergy, sneezing, runny nose, irritation, or other health effects.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Warning labels instruct users to keep doors and windows open while using some repellents.",
+              "claim_type": "safety",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Natural mosquito repellents based on essential oils are safer alternatives.",
+              "claim_type": "safety",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Mosquito-borne diseases kill large numbers of people every year.",
+              "claim_type": "quantitative",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Environmental, chemical-safety, health, and quantitative claims require external verification before being treated as factual guidance.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Sponsored product content is separate from the evidence for household or environmental claims.",
+              "severity": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1100,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "appreciation and support",
+              "approximate_count": 11,
+              "evidence": "supplied comment records"
+            },
+            {
+              "theme": "requests for safer products or alternatives",
+              "approximate_count": 5,
+              "evidence": "supplied comment records"
+            },
+            {
+              "theme": "personal practice or concern",
+              "approximate_count": 12,
+              "evidence": "supplied comment records"
+            }
+          ],
+          "agreements": [
+            "Many supplied comments are supportive or interested in practical alternatives."
+          ],
+          "disagreements": [],
+          "questions": [
+            "God forbid, but what if he's met with an accident?",
+            "What about the old type of mat based mosquito repellent??"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive",
+            "confidence": "medium",
+            "basis": "available comments are mainly appreciation, requests, and practical reactions"
+          },
+          "limitations": [
+            "Comments are audience reactions, not scientific validation.",
+            "Only supplied comment records were analyzed."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; creating 30-180 second clips would require invented timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "C",
+          "completeness": "partial",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
+            "Transcript is noisy/garbled; claims and summaries are lower-confidence and partly supported by metadata."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A low-confidence transcript record about suspected risks of chemical mosquito repellents and safer natural options.",
+          "strongest_takeaway": "The source argues mosquitoes are dangerous but chemical repellents may carry health concerns.",
+          "strengths": [
+            "Clear catalog topic and practical action orientation."
+          ],
+          "weaknesses": [
+            "Claims are not externally verified.",
+            "Zero-duration transcript prevents valid clips and timeline.",
+            "Transcript is garbled and limits confidence."
+          ],
+          "worth_keeping": "unknown",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for cataloging environmental or household-risk content, with caution for unsupported claims."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This item is best kept as a pointer to the source's repellent-safety concerns, not as a precise toxicology summary, because the transcript quality is weak.",
+          "bottom_line": "The source argues mosquitoes are dangerous but chemical repellents may carry health concerns.",
+          "what_is_new_or_distinctive": [
+            "Connects household choices to broader health and environmental consequences."
+          ],
+          "practical_value": {
+            "level": "low",
+            "explanation": "Actions are understandable, but evidence strength varies."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The package supplies source transcript and metadata but no independent verification."
+          },
+          "evidence_strength": "low",
+          "possible_bias_or_agenda": [
+            "Sponsored product segment.",
+            "Advocacy framing may simplify complex environmental or toxicology issues."
+          ],
+          "important_missing_context": [
+            "No direct external sources or regulatory guidance are supplied."
+          ],
+          "who_should_watch": [
+            "Viewers cataloging household and environmental risk content."
+          ],
+          "who_can_skip": [
+            "Anyone needing regulatory, clinical, or toxicology-level guidance."
+          ],
+          "recommended_actions": [
+            "Verify quantitative and safety claims externally before relying on them.",
+            "Separate practical low-risk habits from stronger causal claims."
+          ],
+          "questions_left_unanswered": [
+            "Which claims are supported by authoritative environmental or health data?",
+            "Which products or practices are safest under current guidance?"
+          ],
+          "contradictions_or_doubts": [],
+          "comparison_opportunities": [
+            "Compare with other household-risk, plastic, food-system, and consumer-product videos."
+          ],
+          "overall_score": {
+            "score_0_to_100": 42,
+            "explanation": "Score reflects topic usefulness and evidence quality, reduced for unverified claims and invalid timestamps."
+          },
+          "keep_priority": "low",
+          "rewatch_sections": [],
+          "interpretation_limits": "Analysis is limited to supplied transcript, metadata, and comments; it does not externally verify environmental or safety claims."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated.",
+            "Transcript is noisy/garbled; claims and summaries are lower-confidence and partly supported by metadata."
+          ],
+          "cross_feature_consistency": "All transcript-derived content cites s00001; timeline, clips, and rewatch sections are empty due zero-duration timestamps.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "j8HApM9L0ss",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Five Daily Habits That Help the Environment",
+          "short_title": "Help the Environment",
+          "reason": "Title reflects supplied metadata and canonical transcript topic."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Individual environmental habits and household impact",
+          "secondary_topics": [
+            "household health risk",
+            "environmental habits",
+            "consumer safety",
+            "natural alternatives",
+            "pollution and waste"
+          ],
+          "category": "Health",
+          "subcategory": "environmental and household risk",
+          "keywords": [
+            "environment",
+            "household",
+            "health risk",
+            "plastic",
+            "mosquito repellent",
+            "natural alternative",
+            "millets",
+            "meat reduction",
+            "microplastics",
+            "pollution"
+          ],
+          "canonical_tags": [
+            "environment",
+            "household risk",
+            "consumer safety",
+            "natural alternative",
+            "plastic waste",
+            "microplastic",
+            "mosquito repellent",
+            "millet",
+            "meat reduction",
+            "sustainability"
+          ],
+          "search_queries": [
+            "Individual environmental habits and household impact Fit Tuber",
+            "5 Daily Mistakes that are Damaging the Planet ( is Easy)",
+            "j8HApM9L0ss environmental household risk"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video presents five things individuals can do for the environment. It recommends stopping hoarding by donating or selling unused items so they return to use and reduce carbon footprint. It encourages eating millets, describing them as water-efficient, pesticide-light, soil-supporting, nutritionally rich crops connected to Indian food traditions. It asks viewers to care for surroundings by feeding or watering local animals and planting trees. It then focuses on reducing single-use plastic, citing low recycling rates, landfill and water-body pollution, microplastics in water and bodies, and harm to wildlife. Finally, it urges reducing meat consumption, arguing that animal agriculture contributes heavily to greenhouse gases, land use, deforestation, antibiotic use, and environmental damage.",
+          "key_takeaways": [
+            "Unused possessions can be donated or sold to reduce waste and clutter.",
+            "Millets are presented as eco-friendly traditional crops with nutritional benefits.",
+            "Small local actions such as water bowls, feeding strays, and planting trees are framed as environmental care.",
+            "Single-use plastic reduction is a major recommendation, especially reusable bottles and cloth bags.",
+            "Cutting down meat is presented as a high-impact individual climate action."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata title and description",
+            "structured comments where available"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video presents five things individuals can do for the environment. It recommends stopping hoarding by donating or selling unused items so they return to use and reduce carbon footprint. It encourages eating millets, describing them as water-efficient, pesticide-light, soil-supporting, nutritionally rich crops connected to Indian food traditions. It asks viewers to care for surroundings by feeding or watering local animals and planting trees. It then focuses on reducing single-use plastic, citing low recycling rates, landfill and water-body pollution, microplastics in water and bodies, and harm to wildlife. Finally, it urges reducing meat consumption, arguing that animal agriculture contributes heavily to greenhouse gases, land use, deforestation, antibiotic use, and environmental damage.",
+          "sections": [
+            {
+              "heading": "Stop hoarding",
+              "summary": "The source recommends donating or selling unused items such as old clothes, headphones, furniture, or bags so they return to use and reduce carbon footprint.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Include millets",
+              "summary": "Millets are described as traditional, water-efficient, pesticide-light crops that support soils, farmers, animals, and nutrition.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Own your surroundings",
+              "summary": "The video encourages simple local care, such as providing water for birds, feeding nearby animals with appropriate leftovers, and planting trees.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Reduce single-use plastic",
+              "summary": "The source highlights low recycling, landfill and water pollution, wildlife harm, microplastics in water and bodies, and recommends reusable bottles, cloth bags, and minimizing disposable items.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Cut down meat",
+              "summary": "The final action argues that meat, especially beef, increases emissions, land use, deforestation, antibiotic use, and climate impact, while plant-based substitutions lower the footprint.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "Unused possessions can be donated or sold to reduce waste and clutter.",
+            "Single-use plastic reduction is a major recommendation, especially reusable bottles and cloth bags.",
+            "Cutting down meat is presented as a high-impact individual climate action."
+          ],
+          "limitations": [
+            "Environmental, toxicology, medical, and quantitative claims are not externally verified in the package.",
+            "Zero-duration canonical segmentation prevents timeline and clip extraction."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata description"
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "Channel presenting the environmental advice.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "millets",
+              "type": "concept",
+              "context": "Eco-friendly crop category promoted by the source.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "India",
+              "type": "place",
+              "context": "Country context for millets and environmental habits.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "United Nations",
+              "type": "organization",
+              "context": "Cited for a 2006 animal-agriculture emissions estimate.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayuga Kumkumadi Skin Radiance Face Oil",
+              "type": "product",
+              "context": "Sponsored product in metadata.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "microplastics",
+              "type": "concept",
+              "context": "Plastic breakdown particles discussed as environmental and health concern.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Millets can grow on marginal land without irrigation and save large amounts of water compared with rice.",
+              "claim_type": "environmental",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Only 9% of disposable plastic waste has been recycled, while 79% has accumulated in landfills or water bodies.",
+              "claim_type": "quantitative",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Plastic waste kills over 1 lakh mammals and over 1 million seabirds every year.",
+              "claim_type": "quantitative",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Packaged drinking water contains an average of 325 microplastic particles per liter.",
+              "claim_type": "quantitative",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Animal agriculture produces more carbon emissions than all transport combined, according to a 2006 UN estimate.",
+              "claim_type": "quantitative",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Reducing meat consumption is one of the most effective individual steps to reduce global warming.",
+              "claim_type": "environmental",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Environmental, chemical-safety, health, and quantitative claims require external verification before being treated as factual guidance.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Sponsored product content is separate from the evidence for household or environmental claims.",
+              "severity": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1125,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "appreciation and support",
+              "approximate_count": 12,
+              "evidence": "supplied comment records"
+            },
+            {
+              "theme": "requests for safer products or alternatives",
+              "approximate_count": 4,
+              "evidence": "supplied comment records"
+            },
+            {
+              "theme": "personal practice or concern",
+              "approximate_count": 6,
+              "evidence": "supplied comment records"
+            }
+          ],
+          "agreements": [
+            "Many supplied comments are supportive or interested in practical alternatives."
+          ],
+          "disagreements": [],
+          "questions": [
+            "Let's do our bit. Which one of the mentioned points did you find to be most doable? #youropinionmatters?",
+            "Can you make a video on period stain hacks ?",
+            "Amazing video....pls Give review about scar removal gel,ointments....which can be use?thanks in advance",
+            "Hi Vivek. @FitTuber. I am ready to be a part of being the change to bring the change to the environment. I belong from Pune. Can we make a team in every part of this country to make this thought come true?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive",
+            "confidence": "medium",
+            "basis": "available comments are mainly appreciation, requests, and practical reactions"
+          },
+          "limitations": [
+            "Comments are audience reactions, not scientific validation.",
+            "Only supplied comment records were analyzed."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because the canonical transcript has only a zero-duration segment; creating 30-180 second clips would require invented timestamps.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "Five individual lifestyle actions for reducing environmental impact, including decluttering, millets, local care, plastic reduction, and less meat.",
+          "strongest_takeaway": "Unused possessions can be donated or sold to reduce waste and clutter.",
+          "strengths": [
+            "Clear catalog topic and practical action orientation."
+          ],
+          "weaknesses": [
+            "Claims are not externally verified.",
+            "Zero-duration transcript prevents valid clips and timeline."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for cataloging environmental or household-risk content, with caution for unsupported claims."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is a practical environmental-habits video with clear actions and useful catalog value, though its numerical claims should be verified before reuse.",
+          "bottom_line": "Unused possessions can be donated or sold to reduce waste and clutter.",
+          "what_is_new_or_distinctive": [
+            "Connects household choices to broader health and environmental consequences."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Actions are understandable, but evidence strength varies."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The package supplies source transcript and metadata but no independent verification."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Sponsored product segment.",
+            "Advocacy framing may simplify complex environmental or toxicology issues."
+          ],
+          "important_missing_context": [
+            "No direct external sources or regulatory guidance are supplied."
+          ],
+          "who_should_watch": [
+            "Viewers cataloging household and environmental risk content."
+          ],
+          "who_can_skip": [
+            "Anyone needing regulatory, clinical, or toxicology-level guidance."
+          ],
+          "recommended_actions": [
+            "Verify quantitative and safety claims externally before relying on them.",
+            "Separate practical low-risk habits from stronger causal claims."
+          ],
+          "questions_left_unanswered": [
+            "Which claims are supported by authoritative environmental or health data?",
+            "Which products or practices are safest under current guidance?"
+          ],
+          "contradictions_or_doubts": [],
+          "comparison_opportunities": [
+            "Compare with other household-risk, plastic, food-system, and consumer-product videos."
+          ],
+          "overall_score": {
+            "score_0_to_100": 66,
+            "explanation": "Score reflects topic usefulness and evidence quality, reduced for unverified claims and invalid timestamps."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "Analysis is limited to supplied transcript, metadata, and comments; it does not externally verify environmental or safety claims."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript is collapsed into a single segment with start and end time 00:00:00, so timeline, clip, and rewatch timestamps cannot be safely generated."
+          ],
+          "cross_feature_consistency": "All transcript-derived content cites s00001; timeline, clips, and rewatch sections are empty due zero-duration timestamps.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
