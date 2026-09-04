@@ -1,11 +1,11 @@
 {
-  "batch_validation_status": "PASS_WITH_WARNINGS",
   "package_id": "vh_full_intelligence_20260904_090657_33228e",
   "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
   "video_updates": [
     {
       "video_id": "3TDm3fmgk3I",
-      "processing_status": "completed",
+      "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
       "confidence": "medium",
       "evidence_references": [
@@ -16,310 +16,342 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "high",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Spirulina supplementation reduces body weight, body fat percentage, and BMI in overweight or obese adults.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Grapefruit or naringenin improves insulin sensitivity and shifts the body toward fat use.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Specific foods can support visceral-fat loss through inflammation, appetite, and hormone pathways.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Client transformation averages in the description are representative of the presenter's program data, not independently verified here.",
-              "verification_status": "source_claim_only"
-            }
+        "title_en.v1": {
+          "title": "Ten Foods Claimed to Support Visceral-Fat Loss",
+          "short_title": "Foods for Visceral Fat",
+          "reason": "Names the ten-food list while avoiding endorsement of the fat-loss claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Foods and supplements claimed to support visceral-fat reduction",
+          "secondary_topics": [
+            "protein and satiety",
+            "inflammation and insulin resistance",
+            "polyphenols and metabolism",
+            "calorie deficit support"
           ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
+          "category": "Health",
+          "subcategory": "Weight loss and nutrition",
+          "keywords": [
+            "visceral fat",
+            "spirulina",
+            "grapefruit",
+            "salmon",
+            "green tea",
+            "chili peppers",
+            "avocado",
+            "chia seeds",
+            "cinnamon",
+            "ginger",
+            "extra virgin olive oil"
+          ],
+          "canonical_tags": [
+            "visceral fat",
+            "weight loss",
+            "nutrition",
+            "satiety",
+            "metabolism",
+            "anti-inflammatory foods"
+          ],
+          "search_queries": [
+            "Doctor Mike Diamonds visceral fat superfoods",
+            "spirulina grapefruit salmon green tea visceral fat",
+            "foods claimed to reduce belly fat evidence"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video argues that many superfood claims are weak but presents ten foods the speaker says have human or mechanistic evidence relevant to visceral-fat loss. The list includes spirulina, grapefruit, salmon, green tea, chili peppers, avocado, chia seeds, cinnamon, ginger, and extra virgin olive oil. The speaker frames these foods as supports for satiety, inflammation control, insulin sensitivity, thermogenesis, or metabolic health, while repeatedly tying useful weight loss to a calorie deficit. The package provides the transcript and the speaker's study references only as narrated claims, so the clinical strength of each claim remains externally unverified.",
+          "key_takeaways": [
+            "The video's most grounded practical theme is adding satiating, minimally processed foods rather than expecting any food to melt fat by itself.",
+            "The speaker distinguishes supportive foods from calorie-deficit fundamentals but still makes multiple strong metabolic claims.",
+            "Several claims cite meta-analyses or trials in narration, but the underlying research is not supplied in the package.",
+            "Commercial coaching links in the metadata are relevant context for interpreting the call to action."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The presenter argues that some foods commonly framed as superfoods have human evidence relevant to appetite, insulin sensitivity, inflammation, or fat metabolism. He discusses spirulina, grapefruit, salmon, green tea, chilli peppers, avocado, extra virgin olive oil, and related dietary additions as supports for a calorie deficit rather than instant fat-loss cures.",
+          "overview": "This is a science-style nutrition listicle that connects ten foods to pathways the speaker says matter for visceral fat: appetite regulation, inflammation, insulin signaling, fatty-acid effects, thermogenesis, and post-meal glucose control. It is more specific than a generic superfood video because it names compounds such as phycocyanin, naringin, EGCG, capsaicin, cinnamaldehyde, and gingerols, but it still relies on the speaker's narration rather than supplied citations.",
           "sections": [
             {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Frames visceral fat as metabolically risky because it surrounds organs and is linked in the video to inflammation and insulin resistance. Distinguishes exaggerated superfood marketing from foods the presenter says have clinical or mechanistic support."
+              "heading": "Framing and credentials",
+              "summary": "The source rejects vague superfood marketing, introduces the speaker as a medical doctor and bodybuilder, and promises foods with stronger evidence for visceral-fat support.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             },
             {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Gives practical serving suggestions such as adding spirulina to smoothies and using strongly flavored fruit to mask taste. Commercial context is present through coaching links and transformation claims in the metadata."
+              "heading": "Foods one through five",
+              "summary": "Spirulina, grapefruit, salmon, green tea, and chili peppers are connected to protein satiety, inflammatory pathways, insulin sensitivity, omega-3 effects, catechins, caffeine, and capsaicin-linked appetite effects.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Foods six through ten",
+              "summary": "Avocado, chia seeds, cinnamon, ginger, and extra virgin olive oil are presented as tools for fiber, satiety, glucose control, thermogenesis, and anti-inflammatory support when used inside an overall calorie-controlled diet.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Practical close",
+              "summary": "The speaker invites viewers to request a cooking video and promotes working with his team through the description link.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
             }
           ],
-          "practical_details": [
-            "Frames visceral fat as metabolically risky because it surrounds organs and is linked in the video to inflammation and insulin resistance.",
-            "Distinguishes exaggerated superfood marketing from foods the presenter says have clinical or mechanistic support.",
-            "Gives practical serving suggestions such as adding spirulina to smoothies and using strongly flavored fruit to mask taste.",
-            "Commercial context is present through coaching links and transformation claims in the metadata."
-          ],
           "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
           ]
         },
-        "editorial_assessment.v1": {
-          "bottom_line": "The presenter argues that some foods commonly framed as superfoods have human evidence relevant to appetite, insulin sensitivity, inflammation, or fat metabolism.",
-          "chatgpt_take": "The video is most useful as a nutrition for visceral-fat reduction note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "medium",
-          "keep_priority": "medium",
-          "overall_score": {
-            "score_0_to_100": 67,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "mixed",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "medium",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
         },
         "entities.v2": {
           "people": [
             "Dr. Michael Diamond"
           ],
-          "organizations": [],
-          "products_or_brands": [],
-          "topics": [
+          "organizations": [
+            "NASA"
+          ],
+          "products": [
+            "Sculpt by Science coaching"
+          ],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "visceral fat",
+            "peptide YY",
+            "macrophages",
+            "insulin resistance",
+            "EGCG",
+            "capsaicin",
+            "cinnamaldehyde",
+            "GLP-1"
+          ],
+          "foods_or_ingredients": [
             "spirulina",
             "grapefruit",
-            "naringenin",
-            "PPAR-alpha",
-            "PPAR-gamma",
             "salmon",
             "green tea",
-            "chilli peppers",
+            "chili peppers",
             "avocado",
+            "chia seeds",
+            "cinnamon",
+            "ginger",
             "extra virgin olive oil"
           ],
-          "places": []
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "Spirulina supplementation reduced body weight, body fat percentage, and BMI in overweight or obese adults in a cited meta-analysis.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Grapefruit or its compounds improve insulin resistance or fat-storage signaling.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Salmon supports fat loss through protein, omega-3 fats, and inflammation effects.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Green tea catechins and caffeine keep fat-burning signals active longer.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Chili peppers reduce later food intake through capsaicin.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Avocado can reduce visceral belly fat when replacing less helpful foods.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Chia, cinnamon, ginger, and olive oil can support satiety, glucose control, thermogenesis, or inflammation in ways relevant to belly-fat loss.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "People with medical conditions, medication use, pregnancy, eating disorders, or supplement sensitivities should not treat the list as personal medical advice.",
+            "Grapefruit can interact with some medications; the transcript does not provide individualized screening."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
           "evidence_grade": "A",
-          "confidence": "medium",
-          "source_quality": "complete canonical transcript available",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "The presenter argues that some foods commonly framed as superfoods have human evidence relevant to appetite, insulin sensitivity, inflammation, or fat metabolism. He discusses spirulina, grapefruit, salmon, green tea, chilli peppers, avocado, extra virgin olive oil, and related dietary additions as supports for a calorie deficit rather than instant fat-loss cures.",
-          "main_points": [
-            "Frames visceral fat as metabolically risky because it surrounds organs and is linked in the video to inflammation and insulin resistance.",
-            "Distinguishes exaggerated superfood marketing from foods the presenter says have clinical or mechanistic support.",
-            "Gives practical serving suggestions such as adding spirulina to smoothies and using strongly flavored fruit to mask taste.",
-            "Commercial context is present through coaching links and transformation claims in the metadata."
+        "video_intake.v1": {
+          "actual_subject": "A ten-item nutrition guide for foods the speaker says can support visceral-fat loss when combined with calorie control.",
+          "strongest_takeaway": "No single food is presented as sufficient; the useful practical idea is replacing low-satiety foods with higher-protein, higher-fiber, or minimally processed options.",
+          "strengths": [
+            "Specific food list with named compounds and mechanisms.",
+            "Acknowledges that the foods support rather than replace a calorie deficit."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "External studies are not supplied.",
+            "Some causal language is stronger than the package evidence can independently support."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "The video is most useful as a shopping-list prompt, not as proof that these foods target visceral fat. Its better moments are the reminders about satiety and replacement effects; its weaker moments are broad pathway claims that sound clinical without letting the viewer inspect the evidence.",
+          "bottom_line": "Use the food ideas cautiously as diet supports, not as visceral-fat treatments.",
+          "what_is_new_or_distinctive": [
+            "Combines mainstream foods with less common items such as spirulina and grapefruit.",
+            "Names mechanisms rather than only giving recipes."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful for building meals around protein, fiber, and less processed fats, provided claims are treated cautiously."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The transcript is detailed and medically styled, but cited evidence is not independently present and the video includes commercial coaching context."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Coaching program promotion",
+            "Possible incentive to make nutrition advice sound distinctive"
+          ],
+          "important_missing_context": [
+            "Actual study links or citations",
+            "Doses, contraindications, and medication interactions",
+            "Comparison with standard clinical weight-loss guidance"
+          ],
+          "who_should_watch": [
+            "Viewers seeking food swaps for satiety and diet structure"
+          ],
+          "who_can_skip": [
+            "Viewers looking for verified clinical guidance or individualized obesity care"
+          ],
+          "recommended_actions": [
+            "Discuss major dietary changes with a qualified clinician when relevant.",
+            "Prioritize sustainable calorie control, protein, fiber, and whole foods over superfood claims."
+          ],
+          "questions_left_unanswered": [
+            "Which cited trials apply to which population and dose?",
+            "Are effects clinically meaningful beyond calorie control?"
+          ],
+          "contradictions_or_doubts": [
+            "The video critiques superfood marketing while still using strong superfood framing."
+          ],
+          "comparison_opportunities": [
+            "Compare with registered-dietitian guidance on visceral fat and cardiometabolic risk."
+          ],
+          "overall_score": {
+            "score": 7,
+            "scale": 10,
+            "reason": "Specific and practical, but externally unverified and commercially contextualized."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "nutrition for visceral-fat reduction",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "educational advice",
-          "language": "en",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "high_stakes_health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "10 Superfoods You Should Be Eating To Lose Visceral Fat",
-          "language": "en",
-          "english_title": "10 Superfoods You Should Be Eating To Lose Visceral Fat"
-        },
-        "video_intake.v1": {
-          "video_id": "3TDm3fmgk3I",
-          "url": "https://www.youtube.com/watch?v=3TDm3fmgk3I",
-          "channel": "Doctor Mike Diamonds",
-          "original_title": "10 Superfoods You Should Be Eating To Lose Visceral Fat",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "A",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
     },
     {
       "video_id": "9BQ40Q8l7ek",
-      "processing_status": "completed",
+      "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
       "confidence": "medium",
       "evidence_references": [
@@ -330,310 +362,275 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "medium",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Eating below maintenance calories is required to reduce body fat.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Side crunches alone cannot reduce love handles without overall fat loss.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "A five-minute core routine strengthens core muscles and supports shaping the waist.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The video title's permanent or fastest-result framing overstates what the supplied evidence can prove.",
-              "verification_status": "source_claim_only"
-            }
+        "title_en.v1": {
+          "title": "Three-Step Plan Claimed to Reduce Love Handles",
+          "short_title": "Lose Love Handles",
+          "reason": "Captures the three-step structure and avoids promising permanent loss."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Love-handle fat reduction through calorie deficit, core training, and consistency",
+          "secondary_topics": [
+            "calorie deficit",
+            "core exercises",
+            "fitness consistency"
           ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
+          "category": "Health",
+          "subcategory": "Weight loss and exercise",
+          "keywords": [
+            "love handles",
+            "calorie deficit",
+            "core workout",
+            "side belly fat",
+            "plank",
+            "Russian twist"
+          ],
+          "canonical_tags": [
+            "love handles",
+            "fat loss",
+            "calorie deficit",
+            "core exercise",
+            "fitness"
+          ],
+          "search_queries": [
+            "Fit Tuber lose love handles calorie deficit core exercises"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video explains love handles as fat around the side belly and says the fastest reliable approach is not spot reduction but overall fat loss. It recommends a calorie deficit, then adds core-strengthening exercises for shape and muscle tone, and closes with consistency as the decisive factor. The advice is simple and broadly aligned with the idea that fat loss depends on energy balance, though exact exercise prescriptions and permanent-loss language are not externally verified by the package.",
+          "key_takeaways": [
+            "The source identifies calorie deficit as the first requirement for losing side-belly fat.",
+            "Core exercises are framed as strengthening and shaping support, not isolated fat burning.",
+            "Consistency is presented as more important than short-term intensity.",
+            "The video uses strong outcome language such as getting rid of love handles forever, which should be treated cautiously."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "This video presents a simple three-step plan for reducing love handles: maintain a calorie deficit, strengthen the core with a short home workout, and add consistent cardio. The useful core message is that side fat will not disappear from crunches alone; overall body-fat reduction is required.",
+          "overview": "This short Fit Tuber video gives a simple behavioral plan: reduce calories below maintenance, train core muscles, and keep going until visible fat loss occurs. It briefly explains maintenance calories and advises viewers not to stop after initial improvement.",
           "sections": [
             {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Defines love handles as fat at the side of the belly. Says nutrition must come first and that eating below maintenance calories is necessary for fat loss."
+              "heading": "Problem definition",
+              "summary": "Love handles are defined as excess fat on the sides of the belly, with reassurance that they can be reduced through three basic steps.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             },
             {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Recommends a balanced diet lower in refined carbohydrates, higher in protein, moderate in healthy fats, raw salads, and sufficient water. Demonstrates five one-minute core exercises: penguins, side climbers, cycling, side plank pulses, and Russian twists."
+              "heading": "Calorie deficit",
+              "summary": "The speaker explains maintenance calories and says reducing daily intake below that level is necessary for fat loss.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Core strengthening and consistency",
+              "summary": "The video recommends core exercises and sustained adherence, warning viewers not to stop once early progress appears.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             }
           ],
-          "practical_details": [
-            "Defines love handles as fat at the side of the belly.",
-            "Says nutrition must come first and that eating below maintenance calories is necessary for fat loss.",
-            "Recommends a balanced diet lower in refined carbohydrates, higher in protein, moderate in healthy fats, raw salads, and sufficient water.",
-            "Demonstrates five one-minute core exercises: penguins, side climbers, cycling, side plank pulses, and Russian twists."
-          ],
           "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
           ]
         },
-        "editorial_assessment.v1": {
-          "bottom_line": "This video presents a simple three-step plan for reducing love handles: maintain a calorie deficit, strengthen the core with a short home workout, and add consistent cardio.",
-          "chatgpt_take": "The video is most useful as a love-handle fat loss through calorie deficit and core training note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "medium",
-          "keep_priority": "medium",
-          "overall_score": {
-            "score_0_to_100": 72,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "mixed",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "medium",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
         },
         "entities.v2": {
           "people": [
+            "Viren Ved"
+          ],
+          "organizations": [
             "Fit Tuber"
           ],
-          "organizations": [],
-          "products_or_brands": [],
-          "topics": [
+          "products": [],
+          "places": [],
+          "medical_or_scientific_terms": [
             "maintenance calories",
             "calorie deficit",
-            "raw vegetable salad",
-            "penguins exercise",
-            "side climbers",
-            "cycling exercise",
-            "side plank pulses",
-            "Russian twists"
+            "spot reduction"
           ],
-          "places": []
+          "foods_or_ingredients": [],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "A calorie deficit is required to reduce body fat.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Strengthening core muscles can help improve the appearance of the love-handle area.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Following the three steps can remove love handles permanently.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Aggressive dieting or exercise can be inappropriate for some viewers; individual needs are not assessed."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
           "evidence_grade": "A",
-          "confidence": "medium",
-          "source_quality": "complete canonical transcript available",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "This video presents a simple three-step plan for reducing love handles: maintain a calorie deficit, strengthen the core with a short home workout, and add consistent cardio. The useful core message is that side fat will not disappear from crunches alone; overall body-fat reduction is required.",
-          "main_points": [
-            "Defines love handles as fat at the side of the belly.",
-            "Says nutrition must come first and that eating below maintenance calories is necessary for fat loss.",
-            "Recommends a balanced diet lower in refined carbohydrates, higher in protein, moderate in healthy fats, raw salads, and sufficient water.",
-            "Demonstrates five one-minute core exercises: penguins, side climbers, cycling, side plank pulses, and Russian twists."
+        "video_intake.v1": {
+          "actual_subject": "A short fat-loss primer focused on side-belly fat and core exercise.",
+          "strongest_takeaway": "The most useful point is that love-handle reduction depends on overall fat loss, especially calorie control.",
+          "strengths": [
+            "Clear and easy to follow.",
+            "Does not rely only on spot-reduction exercise claims."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "Permanent-loss promise is overstated.",
+            "Exercise details are limited in the supplied transcript."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "yes",
+          "worth_rewatching": "low"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is a tidy beginner explanation with one important correction: the target is overall fat loss, not magic side-fat exercises. The simplicity is its virtue, but the 'forever' framing should be softened into long-term habit maintenance.",
+          "bottom_line": "Useful starter advice, strongest on calorie deficit and weaker on outcome guarantees.",
+          "what_is_new_or_distinctive": [
+            "Very short three-step structure",
+            "Beginner-friendly maintenance-calorie framing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Good for orientation, but not enough for a complete plan."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Broad principles are plausible, but package evidence is only the transcript and no external support."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Channel growth call to subscribe"
+          ],
+          "important_missing_context": [
+            "Personal calorie targets",
+            "Progression details for exercises",
+            "Nutrition quality and health constraints"
+          ],
+          "who_should_watch": [
+            "Beginners confused about love handles"
+          ],
+          "who_can_skip": [
+            "People needing medical weight-management advice or a complete program"
+          ],
+          "recommended_actions": [
+            "Estimate maintenance calories carefully.",
+            "Pair a moderate deficit with sustainable activity and strength training."
+          ],
+          "questions_left_unanswered": [
+            "Which five core exercises were prescribed and at what progression?",
+            "How should viewers adjust if weight loss stalls?"
+          ],
+          "contradictions_or_doubts": [
+            "The title promises the fastest permanent outcome while the transcript supports only general guidance."
+          ],
+          "comparison_opportunities": [
+            "Compare with evidence-based fat-loss programming and strength-training progressions."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Helpful basics, but thin and promise-heavy."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "love-handle fat loss through calorie deficit and core training",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "educational advice",
-          "language": "en",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "Lose Love Handles in FOREVER (Men & Women) FASTEST WAY",
-          "language": "en",
-          "english_title": "Lose Love Handles in FOREVER (Men & Women) FASTEST WAY"
-        },
-        "video_intake.v1": {
-          "video_id": "9BQ40Q8l7ek",
-          "url": "https://www.youtube.com/watch?v=9BQ40Q8l7ek",
-          "channel": "Fit Tuber",
-          "original_title": "Lose Love Handles in FOREVER (Men & Women) FASTEST WAY",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "A",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
     },
     {
       "video_id": "GYYpP8ihJ20",
-      "processing_status": "completed",
-      "evidence_grade": "B",
-      "confidence": "low",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
       "evidence_references": [
         {
           "source": "canonical_transcript",
@@ -642,153 +639,119 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "medium",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The breakfast melted belly fat when eaten every morning.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Protein- and fiber-rich breakfast ingredients may support satiety, but the package does not prove fat loss from this recipe.",
-              "verification_status": "source_claim_only"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "No sugar and no cooking are recipe attributes, not evidence of weight-loss efficacy.",
-              "verification_status": "needs_external_verification"
-            }
+        "title_en.v1": {
+          "title": "No-Cook Overnight Oats Breakfast Presented for Belly-Fat Loss",
+          "short_title": "Belly-Fat Breakfast Jar",
+          "reason": "Describes the recipe and treats the belly-fat claim as presentation language."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Overnight oats breakfast recipe marketed for belly-fat reduction",
+          "secondary_topics": [
+            "meal prep",
+            "chia seeds",
+            "yogurt",
+            "banana",
+            "walnuts",
+            "no-cook breakfast"
           ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
+          "category": "Health",
+          "subcategory": "Healthy recipes",
+          "keywords": [
+            "overnight oats",
+            "chia seeds",
+            "yogurt",
+            "banana",
+            "walnuts",
+            "breakfast jar",
+            "belly fat"
+          ],
+          "canonical_tags": [
+            "overnight oats",
+            "meal prep",
+            "healthy breakfast",
+            "chia seeds",
+            "yogurt"
+          ],
+          "search_queries": [
+            "overnight oats chia yogurt banana walnuts belly fat recipe"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video is primarily a recipe demonstration, not a detailed health argument. It shows a no-cook breakfast jar using milk, chia seeds, yogurt, berries, banana, oat flakes, and walnuts, then instructs viewers to refrigerate it or leave it overnight. The title claims the breakfast melted belly fat, but the supplied transcript mostly gives ingredient steps and engagement prompts rather than evidence for targeted fat loss.",
+          "key_takeaways": [
+            "The usable content is a simple overnight breakfast recipe.",
+            "The belly-fat claim is not supported by evidence in the supplied transcript.",
+            "The ingredients are common meal-prep foods associated with fiber, protein, and satiety, but those broader nutrition inferences are not proven by the package.",
+            "Recipe timing and quantities are more reliable than the weight-loss title."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "This is primarily a no-cook breakfast recipe, not a strong evidence-based fat-loss explainer. It shows milk, chia seeds, yogurt, berries, banana, oats, and walnuts assembled and refrigerated overnight, while the title makes a belly-fat claim that the package does not substantiate.",
+          "overview": "This is a short, low-narration recipe video. It layers or mixes milk, chia seeds, yogurt, berries, banana, oats, and walnuts, asks viewers to comment and subscribe, and ends by chilling the jar overnight.",
           "sections": [
             {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "The transcript is sparse and recipe-oriented, with several channel-engagement prompts. Ingredients shown include milk, chia seeds, yogurt, berries, banana, oat flakes, and walnuts."
+              "heading": "Ingredient assembly",
+              "summary": "The transcript lists milk, chia seeds, yogurt, berries, banana, oat flakes, and walnuts with brief waiting or mixing instructions.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             },
             {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "The method involves letting chia hydrate, layering ingredients, and refrigerating the jar or leaving it overnight. No controlled evidence or individualized nutrition context is supplied for the belly-fat claim."
+              "heading": "Chilling and serving",
+              "summary": "The recipe is refrigerated or left overnight before eating.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Engagement prompts",
+              "summary": "The creator asks viewers to like, subscribe, comment, and share the recipe.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             }
           ],
-          "practical_details": [
-            "The transcript is sparse and recipe-oriented, with several channel-engagement prompts.",
-            "Ingredients shown include milk, chia seeds, yogurt, berries, banana, oat flakes, and walnuts.",
-            "The method involves letting chia hydrate, layering ingredients, and refrigerating the jar or leaving it overnight.",
-            "No controlled evidence or individualized nutrition context is supplied for the belly-fat claim."
-          ],
           "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
           ]
         },
-        "editorial_assessment.v1": {
-          "bottom_line": "This is primarily a no-cook breakfast recipe, not a strong evidence-based fat-loss explainer.",
-          "chatgpt_take": "The video is most useful as a overnight oats breakfast recipe note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "limited",
-          "keep_priority": "low",
-          "overall_score": {
-            "score_0_to_100": 48,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "low",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
         },
         "entities.v2": {
           "people": [],
           "organizations": [],
-          "products_or_brands": [],
-          "topics": [
+          "products": [],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "satiety"
+          ],
+          "foods_or_ingredients": [
             "milk",
             "chia seeds",
             "yogurt",
@@ -797,141 +760,151 @@
             "oat flakes",
             "walnuts"
           ],
-          "places": []
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "The breakfast melted belly fat or supports belly-fat reduction.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The recipe is quick, healthy, natural, and suitable for no-cook meal prep.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "No individualized dietary allergy, diabetes, calorie, or medical guidance is provided."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
-          "evidence_grade": "B",
-          "confidence": "low",
-          "source_quality": "canonical transcript available but lower quality or sparse",
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "This is primarily a no-cook breakfast recipe, not a strong evidence-based fat-loss explainer. It shows milk, chia seeds, yogurt, berries, banana, oats, and walnuts assembled and refrigerated overnight, while the title makes a belly-fat claim that the package does not substantiate.",
-          "main_points": [
-            "The transcript is sparse and recipe-oriented, with several channel-engagement prompts.",
-            "Ingredients shown include milk, chia seeds, yogurt, berries, banana, oat flakes, and walnuts.",
-            "The method involves letting chia hydrate, layering ingredients, and refrigerating the jar or leaving it overnight.",
-            "No controlled evidence or individualized nutrition context is supplied for the belly-fat claim."
+        "video_intake.v1": {
+          "actual_subject": "A no-cook overnight oats and yogurt jar recipe marketed with a belly-fat title.",
+          "strongest_takeaway": "Treat the video as a meal-prep recipe; the fat-loss claim is not substantiated in the transcript.",
+          "strengths": [
+            "Clear ingredient list.",
+            "Practical make-ahead preparation."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "Almost no explanatory evidence.",
+            "Title overstates targeted fat-loss effect."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "maybe",
+          "worth_rewatching": "low"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is useful if you want a breakfast jar, but it does not earn its belly-fat headline. The recipe itself may fit a satiating breakfast pattern; the targeted weight-loss promise is unsupported by the package.",
+          "bottom_line": "Recipe credible; belly-fat claim unsupported.",
+          "what_is_new_or_distinctive": [
+            "Minimal no-cook format",
+            "Simple pantry and fridge ingredients"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Practical as a breakfast idea, low value as health evidence."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Ingredient steps are directly supported; health outcome claims are not."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Engagement-driven recipe title"
+          ],
+          "important_missing_context": [
+            "Nutrition values",
+            "Serving size and calories",
+            "Evidence for belly-fat claims"
+          ],
+          "who_should_watch": [
+            "Viewers wanting an easy overnight breakfast"
+          ],
+          "who_can_skip": [
+            "Viewers seeking evidence-based fat-loss advice"
+          ],
+          "recommended_actions": [
+            "Use as one meal option within overall nutrition goals.",
+            "Adjust portions for calorie and sugar needs."
+          ],
+          "questions_left_unanswered": [
+            "What serving size and calories does the recipe provide?",
+            "What evidence supports the belly-fat wording?"
+          ],
+          "contradictions_or_doubts": [
+            "The transcript contains recipe steps, not proof of melting belly fat."
+          ],
+          "comparison_opportunities": [
+            "Compare with balanced breakfast recipes that provide nutrition facts."
+          ],
+          "overall_score": {
+            "score": 5,
+            "scale": 10,
+            "reason": "Useful recipe, weak evidence for the advertised outcome."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "overnight oats breakfast recipe",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "recipe demonstration",
-          "language": "en",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "This Breakfast MELTED My Belly Fat. I Eat It Every Morning - No Sugar, No Cooking",
-          "language": "en",
-          "english_title": "This Breakfast MELTED My Belly Fat. I Eat It Every Morning - No Sugar, No Cooking"
-        },
-        "video_intake.v1": {
-          "video_id": "GYYpP8ihJ20",
-          "url": "https://www.youtube.com/watch?v=GYYpP8ihJ20",
-          "channel": "Genuss im Glas",
-          "original_title": "This Breakfast MELTED My Belly Fat. I Eat It Every Morning - No Sugar, No Cooking",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "B",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
     },
     {
       "video_id": "XB_o_yKvQkI",
-      "processing_status": "completed",
-      "evidence_grade": "B",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
       "confidence": "medium",
       "evidence_references": [
         {
@@ -941,309 +914,283 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "medium",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Spot reduction is a myth and face fat reduces with overall body-fat loss.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Excess salt and dehydration can contribute to facial bloating.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Facial exercises may strengthen facial muscles but only help appearance if broader fat-loss habits are followed.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Rock salt and black salt are described as better than normal salt, a nutrition claim not verified in the package.",
-              "verification_status": "source_claim_only"
-            }
+        "title_en.v1": {
+          "title": "How to Reduce Face Fat Through Overall Fat Loss and Lower Bloating",
+          "short_title": "Reduce Face Fat",
+          "reason": "Reflects the source's main correction that spot reduction is a myth."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Face-fat reduction through overall fat loss, sodium reduction, hydration, sleep, and facial exercises",
+          "secondary_topics": [
+            "spot reduction myth",
+            "water retention",
+            "facial exercises",
+            "diet habits"
           ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
+          "category": "Health",
+          "subcategory": "Weight loss and appearance",
+          "keywords": [
+            "face fat",
+            "chubby cheeks",
+            "double chin",
+            "spot reduction",
+            "salt intake",
+            "water retention",
+            "facial exercises"
+          ],
+          "canonical_tags": [
+            "face fat",
+            "double chin",
+            "spot reduction",
+            "fat loss",
+            "bloating"
+          ],
+          "search_queries": [
+            "Fit Tuber reduce face fat chubby cheeks double chin spot reduction"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video says fat usually comes off the whole body rather than from a chosen body part, so reducing face fat mainly means reducing overall body fat. It also advises cutting excess salt and junk food to reduce water retention and facial bloating, drinking enough water, sleeping well, and using facial exercises as a supporting practice. The key distinction is useful: face exercises are not presented as the main fat-loss mechanism. The transcript appears duplicated or looped in the package, which lowers confidence in fine-grained detail.",
+          "key_takeaways": [
+            "Spot reduction is described as a myth.",
+            "The main recommendation is overall body-fat reduction through eating the right food in appropriate quantity.",
+            "Salt-heavy junk foods are linked to facial bloating through water retention.",
+            "Facial exercises are secondary and not enough without broader fat loss."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The presenter explains that spot reduction is a myth and that facial fat generally reduces as total body fat decreases. He adds practical anti-bloating advice such as reducing excess salt, avoiding alcohol, staying hydrated, and using facial exercises mainly for muscle tone rather than targeted fat burning.",
+          "overview": "This Fit Tuber video responds to concerns about chubby cheeks, double chin, and neck fat. It explains fat loss as body-wide, gives dietary and lifestyle suggestions for reducing bloating, and mentions facial exercises for appearance support.",
           "sections": [
             {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Compares fat loss to layers coming off the whole body rather than one chosen area. Identifies excess sodium and alcohol-related dehydration as contributors to facial puffiness or water retention."
+              "heading": "Spot reduction correction",
+              "summary": "The speaker explains that fat does not disappear only from one selected area and advises overall fat loss as the main strategy.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             },
             {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Recommends hydration and minimizing junk food because of sodium content. Lists facial exercises such as Simhasana, jaw opening, X-O movements, fish face, chin lifts, cheek puffs, and massage."
+              "heading": "Diet and bloating",
+              "summary": "The video recommends appropriate food quantity and reduced salt or junk food to limit water retention that can make the face look bloated.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Lifestyle and exercises",
+              "summary": "The source mentions hydration, sleep, and facial exercises as additional supports.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             }
           ],
-          "practical_details": [
-            "Compares fat loss to layers coming off the whole body rather than one chosen area.",
-            "Identifies excess sodium and alcohol-related dehydration as contributors to facial puffiness or water retention.",
-            "Recommends hydration and minimizing junk food because of sodium content.",
-            "Lists facial exercises such as Simhasana, jaw opening, X-O movements, fish face, chin lifts, cheek puffs, and massage."
-          ],
           "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
           ]
         },
-        "editorial_assessment.v1": {
-          "bottom_line": "The presenter explains that spot reduction is a myth and that facial fat generally reduces as total body fat decreases.",
-          "chatgpt_take": "The video is most useful as a face-fat reduction and facial bloating note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "limited",
-          "keep_priority": "medium",
-          "overall_score": {
-            "score_0_to_100": 69,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "mixed",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "medium",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
         },
         "entities.v2": {
-          "people": [
+          "people": [],
+          "organizations": [
             "Fit Tuber"
           ],
-          "organizations": [],
-          "products_or_brands": [],
-          "topics": [
+          "products": [],
+          "places": [],
+          "medical_or_scientific_terms": [
             "spot reduction",
             "water retention",
-            "sodium",
-            "rock salt",
-            "black salt",
-            "Simhasana",
-            "jaw exercise",
-            "fish face",
-            "chin lifts"
+            "double chin"
           ],
-          "places": []
+          "foods_or_ingredients": [
+            "salt",
+            "junk food"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "Spot reduction is a myth for most people.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Reducing overall body fat will slim the face over time.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Excess salt causes water retention and facial bloating.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Facial exercises can help improve the face-fat appearance.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "People with rapid swelling, thyroid symptoms, sleep apnea, or unexplained facial changes should seek medical evaluation rather than assuming fat or bloating."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
-          "evidence_grade": "B",
-          "confidence": "medium",
-          "source_quality": "canonical transcript available but lower quality or sparse",
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "The presenter explains that spot reduction is a myth and that facial fat generally reduces as total body fat decreases. He adds practical anti-bloating advice such as reducing excess salt, avoiding alcohol, staying hydrated, and using facial exercises mainly for muscle tone rather than targeted fat burning.",
-          "main_points": [
-            "Compares fat loss to layers coming off the whole body rather than one chosen area.",
-            "Identifies excess sodium and alcohol-related dehydration as contributors to facial puffiness or water retention.",
-            "Recommends hydration and minimizing junk food because of sodium content.",
-            "Lists facial exercises such as Simhasana, jaw opening, X-O movements, fish face, chin lifts, cheek puffs, and massage."
+        "video_intake.v1": {
+          "actual_subject": "A short explanation of face-fat reduction centered on total fat loss and bloating control.",
+          "strongest_takeaway": "The strongest message is that the face is usually changed through overall fat loss rather than isolated cheek exercises.",
+          "strengths": [
+            "Corrects spot-reduction expectations.",
+            "Gives practical lifestyle levers."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "Transcript appears repeated in the supplied package.",
+            "Specific exercise evidence is not supplied."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "yes",
+          "worth_rewatching": "low"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "The video is more sensible than its beauty-problem framing suggests because it puts spot reduction in its place. Its best use is expectation-setting; its weaker part is implying facial exercises have meaningful independent fat-loss value without evidence.",
+          "bottom_line": "Overall fat loss and reduced bloating matter more than face-specific tricks.",
+          "what_is_new_or_distinctive": [
+            "Connects chubby cheeks and double chin to body-wide fat patterns",
+            "Separates bloating from fat"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful beginner guidance, especially for correcting spot-reduction beliefs."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The central fat-loss principle is plausible, but the package transcript is duplicated and lacks external sources."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Channel subscription promotion"
+          ],
+          "important_missing_context": [
+            "Exercise protocol evidence",
+            "Medical causes of facial swelling",
+            "Individual nutrition targets"
+          ],
+          "who_should_watch": [
+            "Viewers asking about cheeks, neck fat, or double chin"
+          ],
+          "who_can_skip": [
+            "People with unexplained swelling or medical symptoms needing clinical care"
+          ],
+          "recommended_actions": [
+            "Address overall diet, activity, sleep, and sodium intake before relying on facial exercises."
+          ],
+          "questions_left_unanswered": [
+            "How much of visible change is fat versus water retention or anatomy?",
+            "Which exercises have evidence for appearance change?"
+          ],
+          "contradictions_or_doubts": [
+            "The supplied transcript repetition may omit or duplicate content."
+          ],
+          "comparison_opportunities": [
+            "Compare with dermatology or obesity-medicine guidance on facial fullness."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Good expectation-setting with limited depth."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "face-fat reduction and facial bloating",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "educational advice",
-          "language": "en",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "How to Reduce FACE FAT (Chubby Cheeks and Double Chin)",
-          "language": "en",
-          "english_title": "How to Reduce FACE FAT (Chubby Cheeks and Double Chin)"
-        },
-        "video_intake.v1": {
-          "video_id": "XB_o_yKvQkI",
-          "url": "https://www.youtube.com/watch?v=XB_o_yKvQkI",
-          "channel": "Fit Tuber",
-          "original_title": "How to Reduce FACE FAT (Chubby Cheeks and Double Chin)",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "B",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
     },
     {
       "video_id": "d02j1cBsdDQ",
-      "processing_status": "completed",
+      "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
       "confidence": "medium",
       "evidence_references": [
@@ -1254,311 +1201,305 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "high",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Chia seeds can slow gastric emptying and support satiety hormones.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Cinnamon can improve insulin sensitivity or blood-sugar regulation.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "A chia-cinnamon drink can mimic GLP-1 drugs without side effects.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The drink can melt stubborn belly fat while sleeping.",
-              "verification_status": "needs_external_verification"
-            }
-          ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
-          ]
+        "title_en.v1": {
+          "title": "Bedtime Chia and Cinnamon Drink Compared to GLP-1 Weight-Loss Drugs",
+          "short_title": "Chia Cinnamon Bedtime Drink",
+          "reason": "Preserves the central drink recipe and flags the medication comparison."
         },
-        "detailed_summary.v3": {
-          "overview": "The video promotes a bedtime drink made from chia seeds, cinnamon, and water as a natural way to curb appetite, balance blood sugar, support gut health, and influence GLP-1-related pathways. The transcript contains some plausible nutrition mechanisms around soluble fiber and satiety, but the comparison to Ozempic and claims of melting belly fat while sleeping are high-risk and not proven by the package.",
-          "sections": [
-            {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Chia seeds are described as swelling into a gel that slows digestion and promotes fullness. The presenter links soluble fiber fermentation to short-chain fatty acids and appetite-related hormones including GLP-1."
-            },
-            {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Cinnamon is framed as improving insulin sensitivity and blood-sugar regulation. The central remedy is positioned as low-risk, prescription-free, and helpful before bed, but no individualized contraindication review is supplied."
-            }
+        "taxonomy.v3": {
+          "primary_topic": "Natural bedtime drink claimed to support GLP-1, cravings, blood sugar, and belly-fat loss",
+          "secondary_topics": [
+            "chia seeds",
+            "cinnamon",
+            "satiety",
+            "blood sugar",
+            "GLP-1 comparison"
           ],
-          "practical_details": [
-            "Chia seeds are described as swelling into a gel that slows digestion and promotes fullness.",
-            "The presenter links soluble fiber fermentation to short-chain fatty acids and appetite-related hormones including GLP-1.",
-            "Cinnamon is framed as improving insulin sensitivity and blood-sugar regulation.",
-            "The central remedy is positioned as low-risk, prescription-free, and helpful before bed, but no individualized contraindication review is supplied."
-          ],
-          "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
-          ]
-        },
-        "editorial_assessment.v1": {
-          "bottom_line": "The video promotes a bedtime drink made from chia seeds, cinnamon, and water as a natural way to curb appetite, balance blood sugar, support gut health, and influence GLP-1-related pathways.",
-          "chatgpt_take": "The video is most useful as a chia-cinnamon bedtime drink and GLP-1-style claims note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "medium",
-          "keep_priority": "low",
-          "overall_score": {
-            "score_0_to_100": 55,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "low",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
-        },
-        "entities.v2": {
-          "people": [
-            "Dr. Mandell"
-          ],
-          "organizations": [],
-          "products_or_brands": [
-            "Ozempic",
-            "Wegovy"
-          ],
-          "topics": [
+          "category": "Health",
+          "subcategory": "Weight loss remedies",
+          "keywords": [
             "chia seeds",
             "cinnamon",
             "GLP-1",
-            "soluble fiber",
-            "short-chain fatty acids",
-            "insulin sensitivity",
-            "ghrelin",
-            "PYY"
+            "Ozempic",
+            "Wegovy",
+            "belly fat",
+            "blood sugar",
+            "bedtime drink"
           ],
-          "places": []
+          "canonical_tags": [
+            "chia seeds",
+            "cinnamon",
+            "GLP-1 claims",
+            "belly fat",
+            "blood sugar",
+            "natural remedy"
+          ],
+          "search_queries": [
+            "Dr Mandell chia cinnamon water GLP-1 Ozempic belly fat"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video presents a bedtime drink made from chia seeds, cinnamon, and water as a natural way to increase fullness, curb cravings, support blood sugar, and reduce belly fat. It explicitly compares the drink's effects to GLP-1 medications such as Ozempic and Wegovy while also discussing side effects and weight regain from those drugs. The transcript explains mechanisms around soluble fiber, slowed gastric emptying, blood-sugar stability, and cinnamon polyphenols, but the package does not provide external evidence that the drink mimics prescription GLP-1 therapy or causes overnight fat loss.",
+          "key_takeaways": [
+            "The core recipe is chia seeds plus cinnamon in water before bed.",
+            "The strongest risk issue is the source's comparison between a simple drink and GLP-1 medications.",
+            "Fiber and satiety claims are more plausible than claims about melting belly fat while sleeping.",
+            "Medication decisions should not be based on this video."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This motivationaldoc video uses a strong hook: a natural elixir allegedly tapping into the same appetite-reducing physiology as GLP-1 drugs. It builds the case through chia's gel-forming fiber, cinnamon's blood-sugar framing, and bedtime timing, while repeatedly promising easier cravings control and fat loss.",
+          "sections": [
+            {
+              "heading": "Medication comparison hook",
+              "summary": "The source opens by contrasting GLP-1 injections with a no-prescription chia-cinnamon drink and names drug side effects.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Ingredient mechanism",
+              "summary": "Chia seeds are said to expand into gel, slow stomach emptying, and support satiety; cinnamon is described as helping blood sugar and insulin sensitivity.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Bedtime routine",
+              "summary": "The drink is framed as a nightly practice that reduces cravings and supports fat loss during sleep.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "limitations": [
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Dr. Alan Mandell"
+          ],
+          "organizations": [],
+          "products": [
+            "Ozempic",
+            "Wegovy"
+          ],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "GLP-1",
+            "gastric emptying",
+            "blood sugar",
+            "insulin sensitivity",
+            "soluble fiber"
+          ],
+          "foods_or_ingredients": [
+            "chia seeds",
+            "cinnamon",
+            "water"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "A teaspoon before bed can mimic GLP-1 medication effects without injections.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The drink helps curb cravings, balance blood sugar, and melt stubborn belly fat while sleeping.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Chia gel slows gastric emptying and increases fullness.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Cinnamon improves insulin sensitivity or blood-sugar stability.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The drink has no risk and no side effects.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Do not replace prescribed GLP-1 or diabetes medication with this drink without medical supervision.",
+            "Chia seeds can cause choking or digestive issues if consumed dry or without enough fluid.",
+            "Cinnamon type, dose, liver risk, medication interactions, diabetes, pregnancy, and GI conditions are not individualized."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
           "evidence_grade": "A",
-          "confidence": "medium",
-          "source_quality": "complete canonical transcript available",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "The video promotes a bedtime drink made from chia seeds, cinnamon, and water as a natural way to curb appetite, balance blood sugar, support gut health, and influence GLP-1-related pathways. The transcript contains some plausible nutrition mechanisms around soluble fiber and satiety, but the comparison to Ozempic and claims of melting belly fat while sleeping are high-risk and not proven by the package.",
-          "main_points": [
-            "Chia seeds are described as swelling into a gel that slows digestion and promotes fullness.",
-            "The presenter links soluble fiber fermentation to short-chain fatty acids and appetite-related hormones including GLP-1.",
-            "Cinnamon is framed as improving insulin sensitivity and blood-sugar regulation.",
-            "The central remedy is positioned as low-risk, prescription-free, and helpful before bed, but no individualized contraindication review is supplied."
+        "video_intake.v1": {
+          "actual_subject": "A natural-remedy video promoting a chia-cinnamon bedtime drink as a GLP-1-like weight-loss aid.",
+          "strongest_takeaway": "The defensible practical idea is adding fiber-rich chia in a hydrated form for satiety; the medication comparison is not supported by the supplied package.",
+          "strengths": [
+            "Clear simple recipe concept.",
+            "Explains plausible satiety mechanism for soaked chia."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "Overstates similarity to GLP-1 drugs.",
+            "Uses strong fat-melting and no-side-effect language.",
+            "No independent citations supplied."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "maybe",
+          "worth_rewatching": "low"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This one needs a firm caution label. Chia and cinnamon can be ordinary foods in a diet, but comparing them to Ozempic or Wegovy makes the claim medically loaded. The practical recipe is low-complexity; the promised physiology is much bigger than the supplied evidence.",
+          "bottom_line": "Treat as a fiber drink idea, not a natural substitute for GLP-1 therapy.",
+          "what_is_new_or_distinctive": [
+            "Directly compares kitchen ingredients to prescription weight-loss drugs",
+            "Emphasizes bedtime timing"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Moderate if used as a satiating drink by appropriate viewers; low if interpreted as treatment."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Mechanism talk is plausible in parts but the no-risk and medication-equivalence claims are not established by supplied evidence."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Attention-grabbing medication comparison",
+            "Natural-remedy framing"
+          ],
+          "important_missing_context": [
+            "Clinical trials of this exact drink",
+            "Contraindications and safe dose ranges",
+            "Medication interaction guidance"
+          ],
+          "who_should_watch": [
+            "Viewers interested in fiber-based satiety routines"
+          ],
+          "who_can_skip": [
+            "People managing obesity, diabetes, or GLP-1 medication decisions"
+          ],
+          "recommended_actions": [
+            "Ask a clinician before changing diabetes, obesity, or prescription-medication plans.",
+            "Soak chia adequately and use sensible portions."
+          ],
+          "questions_left_unanswered": [
+            "Does the exact drink meaningfully change GLP-1 levels in humans?",
+            "What dose and cinnamon type are safe for different viewers?"
+          ],
+          "contradictions_or_doubts": [
+            "'No risk' is too absolute for a health intervention."
+          ],
+          "comparison_opportunities": [
+            "Compare with medical guidance on GLP-1 drugs, dietary fiber, and diabetes safety."
+          ],
+          "overall_score": {
+            "score": 4,
+            "scale": 10,
+            "reason": "Recipe is simple, but claims are medically overstated."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "chia-cinnamon bedtime drink and GLP-1-style claims",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "educational advice",
-          "language": "en",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "high_stakes_health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "Eat 1 Teaspoon Before Bed - Melts Belly Fat Like Ozempic Dr. Mandell",
-          "language": "en",
-          "english_title": "Eat 1 Teaspoon Before Bed - Melts Belly Fat Like Ozempic Dr. Mandell"
-        },
-        "video_intake.v1": {
-          "video_id": "d02j1cBsdDQ",
-          "url": "https://www.youtube.com/watch?v=d02j1cBsdDQ",
-          "channel": "motivationaldoc",
-          "original_title": "Eat 1 Teaspoon Before Bed - Melts Belly Fat Like Ozempic Dr. Mandell",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "A",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
     },
     {
       "video_id": "lYJDlH0CoE4",
-      "processing_status": "completed",
+      "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
       "confidence": "medium",
       "evidence_references": [
@@ -1569,309 +1510,329 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "high",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Cumin, carom, and fennel activate digestion, reduce bloating, boost metabolism, and reduce cravings.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Fenugreek and cinnamon stabilize blood sugar and shift the body from storing fat to burning it.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "A teaspoon of powder can keep the body burning fat for 24 hours.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Visible belly-fat reduction can begin in seven days.",
-              "verification_status": "needs_external_verification"
-            }
+        "title_en.v1": {
+          "title": "Five Hindi Home Remedies Claimed to Reduce Belly Fat",
+          "short_title": "Five Belly-Fat Remedies",
+          "reason": "Summarizes the Hindi remedy list and avoids endorsing seven-day fat-loss claims."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Homemade spice and herbal remedies claimed to support weight and belly-fat loss",
+          "secondary_topics": [
+            "cumin ajwain fennel",
+            "fenugreek cinnamon",
+            "dry ginger",
+            "triphala",
+            "turmeric black pepper"
           ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
+          "category": "Health",
+          "subcategory": "Ayurvedic and home remedies",
+          "keywords": [
+            "belly fat",
+            "home remedies",
+            "jeera",
+            "ajwain",
+            "saunf",
+            "methi",
+            "dalchini",
+            "sonth",
+            "triphala",
+            "haldi",
+            "kali mirch"
+          ],
+          "canonical_tags": [
+            "home remedies",
+            "belly fat",
+            "ayurveda",
+            "spices",
+            "weight loss"
+          ],
+          "search_queries": [
+            "Dr Saleem Zaidi one spoon belly fat remedies jeera ajwain saunf"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The Hindi video presents five home-remedy powders or combinations for weight loss and belly-fat reduction: cumin-ajwain-fennel, cinnamon-fenugreek, dry ginger, triphala, and turmeric with black pepper. It claims these improve digestion, metabolism, cravings, inflammation, and fat burning, and includes strong statements such as body fat burning for 24 hours and visible results in seven days or a few weeks. It also promotes an Ayurvedic ActivSlim juice in the metadata. The practical ingredient descriptions are clear, but the outcome claims, study references, and viewer-test claims require external verification.",
+          "key_takeaways": [
+            "The source gives five spice or herbal remedies and usage-style advice.",
+            "Claims about rapid belly-fat loss and 24-hour fat burning are high-risk marketing-style health claims.",
+            "The transcript mixes traditional remedy framing, science references, and product promotion.",
+            "Use caution with herbs and spices if taking medication or managing chronic disease."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The Hindi video presents five homemade remedies for weight loss and belly-fat reduction, including spice powders and drinks using cumin, carom, fennel, cinnamon, fenugreek, and other ingredients. It gives preparation and dosing directions, but also makes rapid-fat-loss and 24-hour fat-burning claims that require external verification.",
+          "overview": "This is a Hindi health-remedy video by Dr. Saleem Zaidi. It combines household spices and Ayurvedic ingredients into weight-loss remedies, gives preparation ratios for some powders, and says the remedies should be used consistently for weeks. The tone is strongly persuasive and includes numerical or testimonial claims.",
           "sections": [
             {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "The presenter says a one-teaspoon powder can help the body burn fat for 24 hours, based on his claimed viewer testing. One remedy combines roasted cumin, carom seeds, and fennel, taken with warm water before meals."
+              "heading": "Opening promise",
+              "summary": "The speaker says one spoon of a powder can keep the body burning fat for 24 hours and mentions testing remedies on more than 2,000 viewers.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             },
             {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Another combines fenugreek and Ceylon cinnamon, with warnings not to use cheaper cassia cinnamon. The description contains a coupon and link for an Ayurvedic ActivSlim product, creating commercial context."
+              "heading": "First two remedies",
+              "summary": "Cumin, ajwain, and fennel are presented for digestion, bloating, and metabolism; cinnamon and fenugreek are presented for belly fat and sugar-craving control.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Other remedies",
+              "summary": "Dry ginger, triphala, and turmeric with black pepper are framed as simple anti-inflammatory, digestive, or fat-loss supports.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Promotion context",
+              "summary": "The metadata includes a coupon and purchase link for Sesa Ayurvedic ActivSlim Juice.",
+              "source_basis": [
+                "metadata:description"
+              ]
             }
           ],
-          "practical_details": [
-            "The presenter says a one-teaspoon powder can help the body burn fat for 24 hours, based on his claimed viewer testing.",
-            "One remedy combines roasted cumin, carom seeds, and fennel, taken with warm water before meals.",
-            "Another combines fenugreek and Ceylon cinnamon, with warnings not to use cheaper cassia cinnamon.",
-            "The description contains a coupon and link for an Ayurvedic ActivSlim product, creating commercial context."
-          ],
           "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
           ]
         },
-        "editorial_assessment.v1": {
-          "bottom_line": "The Hindi video presents five homemade remedies for weight loss and belly-fat reduction, including spice powders and drinks using cumin, carom, fennel, cinnamon, fenugreek, and other ingredients.",
-          "chatgpt_take": "The video is most useful as a Hindi home remedies for belly-fat reduction note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "medium",
-          "keep_priority": "low",
-          "overall_score": {
-            "score_0_to_100": 54,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "low",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
         },
         "entities.v2": {
           "people": [
             "Dr. Saleem Zaidi"
           ],
           "organizations": [],
-          "products_or_brands": [
+          "products": [
             "Sesa Ayurvedic ActivSlim Juice"
           ],
-          "topics": [
+          "places": [],
+          "medical_or_scientific_terms": [
+            "metabolism",
+            "inflammation",
+            "curcumin",
+            "piperine",
+            "body fat"
+          ],
+          "foods_or_ingredients": [
             "jeera",
             "ajwain",
             "saunf",
             "methi",
-            "Ceylon cinnamon",
-            "cassia cinnamon",
-            "warm water"
+            "dalchini",
+            "sonth",
+            "triphala",
+            "amla",
+            "haritaki",
+            "bibhitaki",
+            "haldi",
+            "kali mirch"
           ],
-          "places": []
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "One spoon of a powder can make the body burn fat for 24 hours.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The remedies can reduce belly fat in seven days or show results in two to three weeks.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Cumin, ajwain, and fennel activate digestion and help shrink fat cells.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Fenugreek and cinnamon help belly fat and cravings.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Dry ginger, triphala, and turmeric with black pepper support fat loss through metabolism, digestion, or inflammation effects.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The speaker tested remedies on more than 2,000 viewers with surprising results.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Herbal powders can interact with medications, pregnancy, diabetes care, blood thinners, liver or gallbladder conditions, and gastrointestinal disorders.",
+            "Rapid weight-loss claims should not guide medical decisions."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
           "evidence_grade": "A",
-          "confidence": "medium",
-          "source_quality": "complete canonical transcript available",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "The Hindi video presents five homemade remedies for weight loss and belly-fat reduction, including spice powders and drinks using cumin, carom, fennel, cinnamon, fenugreek, and other ingredients. It gives preparation and dosing directions, but also makes rapid-fat-loss and 24-hour fat-burning claims that require external verification.",
-          "main_points": [
-            "The presenter says a one-teaspoon powder can help the body burn fat for 24 hours, based on his claimed viewer testing.",
-            "One remedy combines roasted cumin, carom seeds, and fennel, taken with warm water before meals.",
-            "Another combines fenugreek and Ceylon cinnamon, with warnings not to use cheaper cassia cinnamon.",
-            "The description contains a coupon and link for an Ayurvedic ActivSlim product, creating commercial context."
+        "video_intake.v1": {
+          "actual_subject": "A Hindi home-remedy list for belly-fat reduction using spices and Ayurvedic ingredients.",
+          "strongest_takeaway": "The safest useful takeaway is that spices may be used as part of diet routines; the rapid fat-burning promises are unverified.",
+          "strengths": [
+            "Specific remedy names and ratios.",
+            "Clear practical orientation for viewers familiar with these ingredients."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "Very strong rapid-loss claims.",
+            "Product-promotion context.",
+            "No underlying studies or viewer-test data supplied."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "maybe",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is valuable as a catalog of common South Asian home-remedy ideas, but it should be treated carefully because the claims jump from kitchen ingredients to fast body-fat outcomes. The product coupon in the metadata makes skepticism especially appropriate.",
+          "bottom_line": "Ingredient ideas are usable; fat-loss promises need verification and medical caution.",
+          "what_is_new_or_distinctive": [
+            "Hindi-language remedy framing",
+            "Combines kitchen spices with Ayurvedic ingredients and a product offer"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful only as cautious context for diet discussions, not as a proven fat-loss protocol."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Specific preparation claims are transcript-supported; efficacy claims are externally unverified and promotional context is present."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Affiliate or product-promotion possibility",
+            "Persuasive rapid-results framing"
+          ],
+          "important_missing_context": [
+            "Study citations and applicability",
+            "Dose safety",
+            "Data from the alleged 2,000 viewers"
+          ],
+          "who_should_watch": [
+            "Hindi-speaking viewers cataloging traditional remedies"
+          ],
+          "who_can_skip": [
+            "Anyone seeking clinically verified obesity treatment"
+          ],
+          "recommended_actions": [
+            "Check medication interactions before using concentrated spice or herbal powders.",
+            "Avoid relying on seven-day fat-loss promises."
+          ],
+          "questions_left_unanswered": [
+            "What were the actual viewer-test methods and results?",
+            "Which doses are safe over weeks or months?"
+          ],
+          "contradictions_or_doubts": [
+            "The 24-hour fat-burning and seven-day claims exceed the package evidence."
+          ],
+          "comparison_opportunities": [
+            "Compare with clinician-reviewed information on fenugreek, cinnamon, triphala, turmeric, and weight loss."
+          ],
+          "overall_score": {
+            "score": 4,
+            "scale": 10,
+            "reason": "Specific, but claim risk and promotional context are high."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "Hindi home remedies for belly-fat reduction",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "educational advice",
-          "language": "hi",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "high_stakes_health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "Sirf 1 Chammach Roz Khao - 7 Din Mein Pet Ki Charbi Kam Hone Lagegi",
-          "language": "hi",
-          "english_title": "Eat Just 1 Spoon Daily - Belly Fat May Start Reducing in 7 Days"
-        },
-        "video_intake.v1": {
-          "video_id": "lYJDlH0CoE4",
-          "url": "https://www.youtube.com/watch?v=lYJDlH0CoE4",
-          "channel": "Healthy Hamesha",
-          "original_title": "Sirf 1 Chammach Roz Khao - 7 Din Mein Pet Ki Charbi Kam Hone Lagegi",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "A",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
     },
     {
       "video_id": "x3UzDgOrnd8",
-      "processing_status": "completed",
+      "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
       "confidence": "medium",
       "evidence_references": [
@@ -1882,303 +1843,292 @@
           ]
         },
         {
-          "source": "structured_viewer_comments",
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
           "segment_ids": []
         }
       ],
       "source_conflicts": [],
       "validation": {
         "status": "PASS_WITH_WARNINGS",
-        "errors": [],
         "warnings": [
-          "Canonical transcript is collapsed into one zero-duration segment; no precise timestamp features were generated."
-        ]
+          "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+          "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+          "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
       },
       "features": {
-        "claims_warnings.v2": {
-          "overall_risk": "high",
-          "claims": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Adding acid to meals can reduce glucose spikes and increase chances of cutting body fat by about 40%.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "A tablespoon of apple cider vinegar before a meal reduces glucose spikes by about 34%.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Changing food order significantly affects whether the body stores fat.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Post-meal walking helps reduce glucose impact and supports belly-fat reduction.",
-              "verification_status": "needs_external_verification"
-            }
+        "title_en.v1": {
+          "title": "Five Habits Claimed to Help Burn Belly Fat",
+          "short_title": "Five Belly-Fat Habits",
+          "reason": "Reflects habit list and avoids guaranteeing fat loss."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Lifestyle habits for post-meal glucose control, satiety, sleep, and belly-fat reduction",
+          "secondary_topics": [
+            "vinegar or acid with meals",
+            "food order",
+            "post-meal walking",
+            "protein and fiber with carbs",
+            "sleep"
           ],
-          "warnings": [
-            {
-              "claim_type": "medical",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "Weight-loss, metabolic, glucose, hormone, or disease-risk claims in this video should be treated as source claims unless independently verified.",
-              "verification_status": "needs_external_verification"
-            },
-            {
-              "claim_type": "safety",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ],
-              "text": "The package does not provide individualized medical assessment, contraindication screening, or external verification of study citations.",
-              "verification_status": "needs_external_verification"
-            }
+          "category": "Health",
+          "subcategory": "Weight loss habits",
+          "keywords": [
+            "belly fat",
+            "apple cider vinegar",
+            "food order",
+            "post meal walk",
+            "naked carbs",
+            "sleep",
+            "glucose spike"
+          ],
+          "canonical_tags": [
+            "belly fat",
+            "glucose control",
+            "post meal walk",
+            "sleep",
+            "satiety"
+          ],
+          "search_queries": [
+            "Fit Tuber do these 5 things to burn belly fat food order sleep"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video gives five practical habits for reducing body fat: add an acidic element with meals, eat food in an order that starts with salad or protein before starch or sweets, move after eating, avoid eating carbohydrates alone, and protect sleep. The source connects these habits to post-meal glucose, cravings, hormones, and obesity risk. The advice is behaviorally practical, but exact quantitative claims such as a 35 percent higher obesity risk among night-shift workers and specific blood-sugar effects require external verification.",
+          "key_takeaways": [
+            "The video emphasizes small habit changes rather than a single fat-burning food.",
+            "Several recommendations focus on flattening glucose spikes and reducing cravings.",
+            "Sleep is framed as a major appetite-hormone lever.",
+            "Claims about study percentages and physiology are not independently supplied in the package."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "The presenter offers five practical habits for fat loss: adding acidic foods, eating meals in a glucose-friendly order, walking after meals, pairing carbohydrates with movement or other tactics, and improving sleep. The core advice is framed around reducing glucose spikes and supporting fat loss, but percentage claims and direct belly-fat guarantees are not independently verified in the package.",
+          "overview": "This Fit Tuber video structures belly-fat advice around five daily behaviors. It uses a glucose-control narrative for meal acids, food sequencing, walking after meals, and pairing carbohydrates, then adds sleep as a hormonal and appetite-regulation factor.",
           "sections": [
             {
-              "heading": "Main topic and method",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Suggests apple cider vinegar, lemon, curd, buttermilk, fermented foods, or pickles as acid sources before or with meals. Recommends eating vegetables or fiber first, then protein/fat, then carbohydrates to reduce glucose spikes."
+              "heading": "Acid and food order",
+              "summary": "The source recommends adding an acidic food with meals and eating salad or protein before carbohydrate or dessert to reduce glucose spikes and cravings.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             },
             {
-              "heading": "Practical advice or recipe",
-              "segment_ids": [
-                "s00001"
-              ],
-              "summary": "Encourages a short post-meal walk as a simple way to use glucose and support fat loss. Includes a Mamaearth sunscreen promotion in the description, separate from the nutrition advice."
+              "heading": "Post-meal movement and carb pairing",
+              "summary": "A short walk after eating and avoiding carbohydrates by themselves are presented as ways to use glucose and improve satiety.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Sleep",
+              "summary": "The video says sleep affects leptin and ghrelin and cites a higher obesity risk among night-shift workers.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
             }
           ],
-          "practical_details": [
-            "Suggests apple cider vinegar, lemon, curd, buttermilk, fermented foods, or pickles as acid sources before or with meals.",
-            "Recommends eating vegetables or fiber first, then protein/fat, then carbohydrates to reduce glucose spikes.",
-            "Encourages a short post-meal walk as a simple way to use glucose and support fat loss.",
-            "Includes a Mamaearth sunscreen promotion in the description, separate from the nutrition advice."
-          ],
           "limitations": [
-            "Canonical transcript is supplied as a single zero-duration segment, so exact timeline ranges cannot be safely normalized from segment boundaries.",
-            "The package supplies transcript/metadata evidence but no external fact checking of medical, nutrition, product, or study claims.",
-            "Advice may not apply to people with medical conditions, medication use, pregnancy, eating-disorder risk, allergies, or individualized nutrition needs."
-          ],
-          "source_basis": [
-            "Canonical transcript s00001",
-            "Supplied metadata and description",
-            "No external verification supplied"
+            "Supplied evidence is the video's transcript and metadata, not the external studies or clinical sources mentioned by the speaker.",
+            "The canonical package collapses transcript timing into one zero-duration segment, preventing reliable timed sections."
           ]
         },
-        "editorial_assessment.v1": {
-          "bottom_line": "The presenter offers five practical habits for fat loss: adding acidic foods, eating meals in a glucose-friendly order, walking after meals, pairing carbohydrates with movement or other tactics, and improving sleep.",
-          "chatgpt_take": "The video is most useful as a behavioral glucose-spike and belly-fat tips note, but its strongest causal and health claims should be verified before relying on them.",
-          "evidence_strength": "medium",
-          "keep_priority": "low",
-          "overall_score": {
-            "score_0_to_100": 62,
-            "explanation": "Score balances practical specificity against medical-claim risk and evidence limitations."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The transcript supports what the creator said, but the package does not independently establish the truth of external health or product claims."
-          },
-          "possible_bias_or_agenda": [
-            "Creator growth and engagement incentives are present.",
-            "Some titles use strong weight-loss framing.",
-            "Commercial links, coaching, coupons, or sponsorship context may influence framing where present."
-          ],
-          "important_missing_context": [
-            "External verification of cited studies and quantitative percentages",
-            "Viewer-specific health status and contraindications",
-            "Current product, recipe, dosage, or program context"
-          ],
-          "contradictions_or_doubts": [
-            "The transcript can support the creator's statement, but not necessarily the medical truth of the claim.",
-            "Rapid or guaranteed fat-loss framing is stronger than the evidence supplied."
-          ],
-          "comparison_opportunities": [
-            "Compare with guideline-based weight-loss advice.",
-            "Check claims against primary studies or clinical guidance."
-          ],
-          "interpretation_limits": "Use this as transcript-grounded intelligence, not medical advice or proof of efficacy.",
-          "practical_value": {
-            "level": "low",
-            "explanation": "Practical tips are present, but safety and evidence quality vary."
-          }
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "Canonical timestamps are zero-duration; inline transcript markers are not treated as validated canonical section boundaries.",
+          "sections": []
         },
         "entities.v2": {
-          "people": [
+          "people": [],
+          "organizations": [
             "Fit Tuber"
           ],
-          "organizations": [],
-          "products_or_brands": [
-            "Mamaearth"
+          "products": [],
+          "places": [],
+          "medical_or_scientific_terms": [
+            "glucose",
+            "leptin",
+            "ghrelin",
+            "insulin",
+            "obesity risk"
           ],
-          "topics": [
-            "apple cider vinegar",
-            "lemon water",
-            "citric acid",
-            "lactic acid",
-            "curd",
-            "buttermilk",
-            "homemade pickles",
-            "glucose spike"
+          "foods_or_ingredients": [
+            "acidic foods",
+            "vinegar",
+            "salad",
+            "protein",
+            "carbohydrates",
+            "dessert"
           ],
-          "places": []
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "Adding acid with meals helps cut extra body fat by affecting glucose response.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Changing food order can reduce cravings and fat gain.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Walking after meals helps muscles use glucose.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Avoiding naked carbohydrates improves satiety and glucose response.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Poor sleep changes leptin and ghrelin and night-shift workers have a 35 percent higher obesity risk.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Vinegar or acidic foods may worsen reflux, dental enamel issues, or interact with diabetes management if used aggressively.",
+            "People with sleep disorders or metabolic disease need individualized guidance."
+          ],
+          "medical_disclaimer": "This output summarizes source claims from the supplied package and is not medical advice.",
+          "confidence_notes": [
+            "No external fact checking was available inside the package."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were included for analysis."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are not available; no clips selected.",
+          "clips": []
         },
         "evidence_assessment.v1": {
           "evidence_grade": "A",
-          "confidence": "medium",
-          "source_quality": "complete canonical transcript available",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Exact video ID is present in the package.",
-            "Canonical transcript evidence is available as segment s00001."
+            "Substantial transcript text is available for semantic synthesis.",
+            "Metadata provides title, channel, description, and upload context."
           ],
           "weaknesses": [
-            "Segment timestamps collapse to 00:00:00.000, limiting timeline and clip extraction.",
-            "No external verification of medical, nutrition, or product claims is included."
+            "Canonical timing is unusable for timeline or clip creation.",
+            "Cited studies and claims are not included as independent source documents.",
+            "Commercial links or product references may influence presentation."
           ],
-          "recommended_use": "Use for search, retrieval, cautious summarization, and claim triage; verify high-stakes claims externally."
+          "confidence": "medium",
+          "source_conflicts": []
         },
-        "executive_summary.v2": {
-          "summary": "The presenter offers five practical habits for fat loss: adding acidic foods, eating meals in a glucose-friendly order, walking after meals, pairing carbohydrates with movement or other tactics, and improving sleep. The core advice is framed around reducing glucose spikes and supporting fat loss, but percentage claims and direct belly-fat guarantees are not independently verified in the package.",
-          "main_points": [
-            "Suggests apple cider vinegar, lemon, curd, buttermilk, fermented foods, or pickles as acid sources before or with meals.",
-            "Recommends eating vegetables or fiber first, then protein/fat, then carbohydrates to reduce glucose spikes.",
-            "Encourages a short post-meal walk as a simple way to use glucose and support fat loss.",
-            "Includes a Mamaearth sunscreen promotion in the description, separate from the nutrition advice."
+        "video_intake.v1": {
+          "actual_subject": "A five-habit belly-fat advice video centered on glucose control, movement after meals, carb pairing, and sleep.",
+          "strongest_takeaway": "The most practical takeaway is to combine meals with fiber or protein, move lightly after eating, and protect sleep.",
+          "strengths": [
+            "Actionable low-cost habits.",
+            "Less reliant on supplements than many belly-fat videos."
           ],
-          "best_for": [
-            "Topic recall",
-            "Claim triage",
-            "Finding practical steps mentioned by the creator"
+          "weaknesses": [
+            "Study claims are not supplied for inspection.",
+            "May overstate direct belly-fat effects from glucose hacks."
           ],
-          "avoid_using_for": [
-            "Medical advice",
-            "Proof of efficacy",
-            "Precise timestamp clipping"
-          ]
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is one of the more practical entries in the package because the habits are modest and easy to test. The video is still selling a belly-fat result, but the behaviors themselves are reasonable supports for appetite and routine management.",
+          "bottom_line": "Good habit checklist, with belly-fat claims needing external support.",
+          "what_is_new_or_distinctive": [
+            "Combines meal sequencing, post-meal movement, carb pairing, and sleep in one short list"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "High for everyday habit formation; medium for proven fat-loss specificity."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Practical suggestions are plausible, but transcript-only evidence cannot verify the cited studies or percentages."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Channel growth and simplified health-hack framing"
+          ],
+          "important_missing_context": [
+            "Exact study citations",
+            "Individual contraindications for acid intake",
+            "Total diet and calorie context"
+          ],
+          "who_should_watch": [
+            "Viewers wanting simple behavioral changes around meals and sleep"
+          ],
+          "who_can_skip": [
+            "Viewers needing individualized medical or diabetes advice"
+          ],
+          "recommended_actions": [
+            "Use gentle post-meal walking and balanced meals as sustainable habits.",
+            "Prioritize adequate sleep and seek help for persistent sleep problems."
+          ],
+          "questions_left_unanswered": [
+            "How large are the effects independent of calories and activity?",
+            "Which acid types and amounts were studied?"
+          ],
+          "contradictions_or_doubts": [
+            "The glucose-hack framing may imply more precise fat-loss effects than shown."
+          ],
+          "comparison_opportunities": [
+            "Compare with clinical guidance on postprandial glucose, sleep, and weight management."
+          ],
+          "overall_score": {
+            "score": 7,
+            "scale": 10,
+            "reason": "Practical and mostly moderate, though still externally unverified."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
           "checks": [
-            {
-              "name": "video_id_exact",
-              "status": "pass"
-            },
-            {
-              "name": "required_features_present",
-              "status": "pass"
-            },
-            {
-              "name": "grounded_to_canonical_segment_ids",
-              "status": "pass"
-            },
-            {
-              "name": "no_invented_precise_timestamps",
-              "status": "pass"
-            },
-            {
-              "name": "health_claims_flagged",
-              "status": "pass"
-            },
-            {
-              "name": "zero_duration_segment_warning",
-              "status": "warning"
-            }
+            "exact package video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented canonical timestamps",
+            "no duplicate video IDs"
           ],
-          "errors": [],
           "warnings": [
-            "Canonical transcript segment has zero-duration boundaries; timeline and clip outputs are intentionally conservative."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "notes": [
-            "No clips proposed because canonical segment boundaries are zero-duration even though timestamp text appears inside the segment body."
-          ]
-        },
-        "taxonomy.v3": {
-          "primary_category": "Health and fitness",
-          "secondary_categories": [
-            "Weight loss",
-            "Nutrition",
-            "Lifestyle advice"
-          ],
-          "topics": [
-            "behavioral glucose-spike and belly-fat tips",
-            "belly fat",
-            "body composition"
-          ],
-          "content_type": "educational advice",
-          "language": "en",
-          "audience": [
-            "general wellness viewers",
-            "weight-loss viewers"
-          ],
-          "risk_tags": [
-            "high_stakes_health_claims",
-            "needs_external_verification"
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": [],
-          "notes": [
-            "Canonical segment boundaries are not usable for precise timeline extraction."
-          ]
-        },
-        "title_en.v1": {
-          "title": "Do These 5 Things to Burn Belly Fat",
-          "language": "en",
-          "english_title": "Do These 5 Things to Burn Belly Fat"
-        },
-        "video_intake.v1": {
-          "video_id": "x3UzDgOrnd8",
-          "url": "https://www.youtube.com/watch?v=x3UzDgOrnd8",
-          "channel": "Fit Tuber",
-          "original_title": "Do These 5 Things to Burn Belly Fat",
-          "processing_profile": "FULL_INTELLIGENCE",
-          "evidence_grade": "A",
-          "canonical_transcript_available": true,
-          "canonical_segment_count": 1,
-          "duration_seconds": 0
-        },
-        "viewer_comment_intelligence.v2": {
-          "summary": "No structured viewer-comment evidence was analyzed for this package result.",
-          "sentiment": "unknown",
-          "recurring_questions": [],
-          "viewer_objections": [],
-          "notable_feedback": [],
-          "limitations": [
-            "No usable structured viewer-comment set was included in the generated analysis context."
+            "Canonical transcript is supplied as one segment only, so all transcript-derived conclusions cite s00001.",
+            "The package reports video_duration_seconds as 0 and segment timestamps as 00:00:00.000 to 00:00:00.000; timeline and clip timestamps are therefore not inferred.",
+            "Health, weight-loss, metabolic, medication-comparison, and study-reference claims are source claims requiring external verification."
           ]
         }
       }
