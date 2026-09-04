@@ -7,1294 +7,6 @@
       "video_id": "JhaFxsMp1sQ",
       "processing_status": "PASS_WITH_WARNINGS",
       "evidence_grade": "A",
-      "confidence": "medium_high",
-      "evidence_references": [
-        {
-          "source": "canonical_transcript",
-          "segment_ids": [
-            "s00001"
-          ]
-        },
-        {
-          "source": "structured_comments",
-          "segment_ids": []
-        }
-      ],
-      "source_conflicts": [],
-      "validation": {
-        "status": "PASS_WITH_WARNINGS",
-        "warnings": [
-          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-          "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-        ],
-        "repair_attempts": 0
-      },
-      "features": {
-        "title_en.v1": {
-          "title": "Best Healthier Chocolate Options in India",
-          "short_title": "Healthier Indian Chocolates",
-          "reason": "The video ranks chocolate options in India by ingredients, sugar source, cocoa content, taste, price, and availability."
-        },
-        "taxonomy.v3": {
-          "primary_topic": "Healthier chocolate product recommendations in India",
-          "secondary_topics": [
-            "ingredient label comparison",
-            "low-refined-sugar sweets",
-            "homemade chocolate"
-          ],
-          "category": "Food",
-          "subcategory": "Desserts and packaged snacks",
-          "keywords": [
-            "chocolate",
-            "cocoa",
-            "date powder",
-            "jaggery",
-            "A2 milk",
-            "dark chocolate",
-            "homemade chocolate"
-          ],
-          "canonical_tags": [
-            "chocolate",
-            "dark chocolate",
-            "ingredient label",
-            "cocoa",
-            "refined sugar",
-            "date powder",
-            "jaggery",
-            "healthy dessert",
-            "homemade chocolate",
-            "indian packaged food"
-          ],
-          "search_queries": [
-            "healthier chocolates in India ingredient comparison",
-            "Fit Tuber best chocolate India Foodpharmer",
-            "homemade chocolate cocoa coconut oil recipe"
-          ]
-        },
-        "executive_summary.v2": {
-          "summary": "The source argues that common Indian chocolates such as thick-center bars, wafers, and many milk bars are closer to sugar candy than real chocolate because they contain low cocoa, refined sugars, oils, and additives. It recommends The Whole Truth, Sante Foods, Aadvik, Anutamma, Amul Velvet Milk Chocolate, and Darkins as better occasional options based on cocoa percentage, sugar source, ingredient simplicity, and taste. It also gives a short homemade chocolate method using cocoa powder, coconut oil, milk powder, nuts, and a traditional sweetener. The source includes a sponsored hair-oil segment, which should be separated from the chocolate recommendations.",
-          "key_takeaways": [
-            "Judge chocolate mainly by cocoa content, sugar source, and unnecessary additives.",
-            "The Whole Truth products are praised for dates, nuts, and higher cocoa content.",
-            "Sante, Aadvik, Anutamma, Amul Velvet, and Darkins are presented as better market options with caveats on price or emulsifiers.",
-            "The homemade chocolate recipe is offered as a lower-cost alternative to premium bars.",
-            "Nutrition and health claims need external verification."
-          ],
-          "source_basis": [
-            "canonical transcript segment s00001",
-            "structured comments sample"
-          ]
-        },
-        "detailed_summary.v3": {
-          "overview": "This video is a consumer product ranking for chocolate in India, framed around the idea that many popular products are sugar-heavy confectionery rather than cocoa-rich chocolate. The source first distinguishes thick-center bars, wafer chocolates, and milk bars, then says the problem is not merely taste but low cocoa, refined sweeteners, oils, artificial flavors, and marketing around nuts or energy. It then presents a ranked set of alternatives: The Whole Truth products for simpler ingredient lists and date-based sweetness; Sante Foods dark chocolate as a Dairy Milk-style replacement with jaggery and herbs but some emulsifiers; Aadvik goat and camel milk chocolates as premium products with organic cocoa and unrefined sugar; Anutamma A2 milk chocolate as a low-sugar A2 milk option; Amul Velvet as an offline compromise; and Darkins 56 percent dark chocolate as a richer dark chocolate using organic unrefined cane sugar. The practical recipe uses a double-boiler method with cocoa powder, coconut oil, milk powder, nuts, and a traditional sweetener, then chills the mixture in a mold. The final section shifts into a sponsored Mamaearth rosemary hair-oil promotion, which is not central to the chocolate evaluation.",
-          "sections": [
-            {
-              "heading": "Problem framing",
-              "summary": "The source argues that many mainstream Indian chocolates are sugar candies with low cocoa and refined sweeteners.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Recommended chocolates",
-              "summary": "The video names several brands and explains each recommendation using ingredient lists, cocoa percentages, sweetness source, taste, price, and availability.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "DIY chocolate",
-              "summary": "A simple homemade chocolate method is proposed for users who want a cheaper cocoa-rich option.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Sponsored hair-oil segment",
-              "summary": "The closing promotion discusses Mamaearth rosemary hair-growth oil and should not be merged into the chocolate recommendation claims.",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "practical_details": [
-            "Check cocoa percentage and whether sweetness comes from dates, jaggery, khand, honey, or refined sugars.",
-            "For homemade chocolate, the source uses cocoa powder, coconut oil, milk powder, crushed nuts, and a traditional sweetener in a double boiler.",
-            "The source explicitly says chocolate should be occasional rather than daily."
-          ],
-          "limitations": [
-            "The ingredient and health comparisons are not externally verified in the package.",
-            "Formal canonical timestamps are zero-duration.",
-            "The source includes affiliate/product links and a sponsored closing segment."
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": []
-        },
-        "entities.v2": {
-          "entities": [
-            {
-              "name": "Fit Tuber",
-              "type": "organization",
-              "context": "Channel/source presenting the ranking.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Foodpharmer",
-              "type": "person",
-              "context": "Collaborator shown in the discussion of chocolate marketing.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "The Whole Truth",
-              "type": "organization",
-              "context": "Recommended chocolate and fudge-bar brand.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Sante Foods",
-              "type": "organization",
-              "context": "Recommended dark chocolate option with jaggery and herbs.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Aadvik Foods",
-              "type": "organization",
-              "context": "Goat and camel milk chocolate brand discussed as premium.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Anutamma",
-              "type": "organization",
-              "context": "A2 milk chocolate brand discussed as low-sugar.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Amul Velvet Milk Chocolate",
-              "type": "product",
-              "context": "Offline compromise option.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Darkins 56% Dark Chocolate",
-              "type": "product",
-              "context": "Recommended dark chocolate option.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Mamaearth Rosemary Hair Growth Oil",
-              "type": "product",
-              "context": "Sponsored segment partner unrelated to the chocolate ranking.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ]
-        },
-        "claims_warnings.v2": {
-          "claims": [
-            {
-              "text": "Common mainstream chocolates in India often contain more sugar than chocolate.",
-              "claim_type": "nutrition",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "The Whole Truth Badam Chocolate uses 31 percent cocoa, 25 percent almonds, 24 percent date powder, and 20 percent whole milk powder.",
-              "claim_type": "quantitative",
-              "verification_status": "source_claim_only",
-              "severity": "informational",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Snickers has only 7 percent peanuts while The Whole Truth Choco Peanut Fudge has 44 percent peanuts.",
-              "claim_type": "comparative",
-              "verification_status": "needs_external_verification",
-              "severity": "low",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Anutamma chocolate has 20 g of unrefined sugar per 100 g compared with Dairy Milk's 47 g refined sugar per 100 g.",
-              "claim_type": "quantitative",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Goat milk increases libido and camel milk can increase height according to the source's Ayurveda claim.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Mamaearth rosemary hair oil is bound to increase hair growth.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "warnings": [
-            {
-              "text": "The video contains medical and nutrition recommendations that may influence purchasing or health behavior.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "A sponsored hair-oil segment appears after the chocolate content and may introduce commercial bias.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "overall_risk": "medium"
-        },
-        "viewer_comment_intelligence.v2": {
-          "total_comments": 1120,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "Praise for Fit Tuber and Foodpharmer collaboration",
-              "approx_count": 20
-            },
-            {
-              "theme": "Requests and debate about brand recommendations",
-              "approx_count": 12
-            },
-            {
-              "theme": "General agreement with healthier-food framing",
-              "approx_count": 15
-            }
-          ],
-          "agreements": [
-            "Viewers frequently praised the collaboration and the ingredient-awareness message.",
-            "Several commenters treated the video as a useful brand-selection guide."
-          ],
-          "disagreements": [
-            "Some comments questioned whether recommendations themselves could be marketing.",
-            "The supplied sample contains little detailed ingredient-level correction."
-          ],
-          "questions": [
-            "Which recommended product is easiest to buy offline?",
-            "Are the ingredient claims current for the listed brands?"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "positive_count_estimate": 55,
-            "neutral_count_estimate": 35,
-            "negative_count_estimate": 10
-          },
-          "limitations": [
-            "Comments are audience-generated and are not factual verification.",
-            "Only the supplied deterministic comment sample was analyzed.",
-            "Several records include metadata/header lines rather than substantive comments."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
-          "total_selected_duration_seconds": 0
-        },
-        "evidence_assessment.v1": {
-          "grade": "A",
-          "completeness": "complete",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "Ranking healthier chocolate options in India and showing a homemade chocolate alternative.",
-          "strongest_takeaway": "Use ingredient labels, cocoa percentage, and sugar source to distinguish real chocolate from sugar-heavy confectionery.",
-          "strengths": [
-            "Specific brands, ingredient percentages, and price examples.",
-            "Separates premium store options from a homemade alternative."
-          ],
-          "weaknesses": [
-            "Many health implications are asserted without external evidence in the package.",
-            "Sponsored hair-oil segment is unrelated to the core topic."
-          ],
-          "worth_keeping": "yes",
-          "worth_rewatching": "unknown",
-          "reason": "Useful as a shopping shortlist, but claims should be checked against current labels and independent nutrition guidance."
-        },
-        "editorial_assessment.v1": {
-          "chatgpt_take": "This is strongest as a label-reading and shopping-orientation video, not as final nutritional authority. Its practical value comes from naming concrete products and explaining why cocoa content and sweetener source matter, while its weak point is the tendency to turn ingredient concerns into broad health conclusions without external support.",
-          "bottom_line": "Keep it as a practical chocolate comparison, with health claims treated cautiously.",
-          "what_is_new_or_distinctive": [
-            "Combines mainstream chocolate criticism with a current Indian-market shortlist.",
-            "Adds a low-cost homemade chocolate option."
-          ],
-          "practical_value": {
-            "level": "high",
-            "explanation": "It gives concrete product names, ingredient cues, and a recipe."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The supplied evidence supports what the source says, but ingredient labels and health claims are not independently verified."
-          },
-          "evidence_strength": "medium",
-          "possible_bias_or_agenda": [
-            "Affiliate/product links in the description.",
-            "Sponsored Mamaearth segment."
-          ],
-          "important_missing_context": [
-            "Independent label verification for each brand.",
-            "Dietary context for sugar, saturated fat, and calorie intake."
-          ],
-          "who_should_watch": [
-            "People comparing packaged chocolates in India.",
-            "Viewers who want homemade dessert alternatives."
-          ],
-          "who_can_skip": [
-            "Anyone seeking clinical nutrition advice or external lab verification."
-          ],
-          "recommended_actions": [
-            "Check current ingredient labels before buying.",
-            "Treat chocolate as occasional, even when ingredients look cleaner."
-          ],
-          "questions_left_unanswered": [
-            "How do these products compare on total calories and saturated fat?",
-            "Have ingredients changed since publication?"
-          ],
-          "contradictions_or_doubts": [
-            "The source calls some options healthier while still discussing expensive sweets that should remain occasional."
-          ],
-          "comparison_opportunities": [
-            "Compare with current labels from Cadbury, Amul, The Whole Truth, and Darkins."
-          ],
-          "overall_score": {
-            "score_0_to_100": 78,
-            "explanation": "High practical usefulness for shopping, reduced by unsupported health claims and commercial links."
-          },
-          "keep_priority": "high",
-          "rewatch_sections": [],
-          "interpretation_limits": "The package supports summarizing the source's ranking and rationale, but not externally verifying label accuracy or health outcomes."
-        },
-        "quality_validation.v1": {
-          "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ],
-          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
-          "repair_attempts": 0
-        }
-      }
-    },
-    {
-      "video_id": "OVAQXdFza54",
-      "processing_status": "PASS_WITH_WARNINGS",
-      "evidence_grade": "A",
-      "confidence": "medium_high",
-      "evidence_references": [
-        {
-          "source": "canonical_transcript",
-          "segment_ids": [
-            "s00001"
-          ]
-        },
-        {
-          "source": "structured_comments",
-          "segment_ids": []
-        }
-      ],
-      "source_conflicts": [],
-      "validation": {
-        "status": "PASS_WITH_WARNINGS",
-        "warnings": [
-          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-          "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-        ],
-        "repair_attempts": 0
-      },
-      "features": {
-        "title_en.v1": {
-          "title": "Twenty Indian Chocolates Ranked from Worst to Best",
-          "short_title": "Chocolate Ranking India",
-          "reason": "The source ranks common chocolates into categories and ends with a homemade chocolate recipe."
-        },
-        "taxonomy.v3": {
-          "primary_topic": "Chocolate ingredient ranking and homemade chocolate",
-          "secondary_topics": [
-            "packaged sweets",
-            "cocoa content",
-            "refined sugar"
-          ],
-          "category": "Food",
-          "subcategory": "Desserts and packaged snacks",
-          "keywords": [
-            "chocolate ranking",
-            "cocoa",
-            "commercial chocolates",
-            "dark chocolate",
-            "homemade chocolate",
-            "honey",
-            "coconut oil"
-          ],
-          "canonical_tags": [
-            "chocolate",
-            "cocoa",
-            "packaged snack",
-            "dark chocolate",
-            "sugar",
-            "hydrogenated fat",
-            "homemade dessert",
-            "ingredient comparison"
-          ],
-          "search_queries": [
-            "20 chocolates in India ranked worst to best Fit Tuber",
-            "homemade chocolate cocoa coconut oil honey recipe"
-          ]
-        },
-        "executive_summary.v2": {
-          "summary": "The video ranks 20 commonly eaten chocolates in India by ingredient quality. It says many mass-market chocolates are primarily sugar, hydrogenated oils, preservatives, stabilizers, artificial colors, and flavors, so the cocoa-related benefits of chocolate do not apply well to them. It places premium/imported or higher-cocoa chocolates above common sugar-heavy options, but says homemade chocolate is the best practical choice because it can be made quickly with cocoa powder, coconut oil, honey, and nuts. A protein-powder promotion appears near the end and should be viewed separately from the chocolate ranking.",
-          "key_takeaways": [
-            "The source distinguishes cocoa-rich chocolate from sugar-heavy confectionery.",
-            "Commercial chocolates are criticized for sugar, oils, preservatives, colors, and flavoring.",
-            "Premium chocolates are treated as better but expensive.",
-            "Homemade chocolate is positioned as the best affordable option.",
-            "The video includes a separate sponsored protein-powder segment."
-          ],
-          "source_basis": [
-            "canonical transcript segment s00001",
-            "structured comments sample"
-          ]
-        },
-        "detailed_summary.v3": {
-          "overview": "This older ranking video begins with the claim that chocolate can be beneficial because of cocoa, then immediately qualifies that most commonly consumed chocolates do not provide that benefit because they are closer to sugar candies. The source organizes 20 products into categories. The first category contains widely consumed commercial chocolates, criticized for sugar-first ingredient lists, low cocoa, hydrogenated oils, preservatives, synthetic colors, and artificial flavors. The second category contains so-called dark chocolates that may have higher cocoa but still include substantial sugar and additives. The third category includes higher-end chocolates such as Lindt, Just Ripe, and Belgian products, which the source describes as better because of higher cocoa and less refined sugar, while noting their higher price. The practical conclusion is that homemade chocolate offers better control: the recipe uses cold-pressed coconut oil, honey, natural unsweetened cocoa powder, nuts, and dried fruit, with a short heating and chilling process. The final portion promotes Olena plant-based protein powder for smoothies and protein intake, which is only loosely connected to the chocolate topic.",
-          "sections": [
-            {
-              "heading": "Commercial chocolate critique",
-              "summary": "Common chocolates are criticized as sugar-led products with low cocoa and additives.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Better but expensive options",
-              "summary": "Imported or premium chocolates are described as healthier but less affordable.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Homemade alternative",
-              "summary": "A fast cocoa, coconut-oil, honey, and nuts recipe is presented as the best practical choice.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Protein-powder promotion",
-              "summary": "A sponsored-style product mention discusses Olena plant protein for smoothies.",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "practical_details": [
-            "Use twice as much cocoa powder as coconut oil in the source's homemade recipe.",
-            "Heat only briefly to melt honey, then whisk cocoa into a glossy mixture.",
-            "Add nuts or dried fruit before refrigerating."
-          ],
-          "limitations": [
-            "Brand rankings may be outdated because the video was uploaded in 2018.",
-            "No external ingredient-label verification is supplied.",
-            "Formal canonical timestamps are zero-duration."
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": []
-        },
-        "entities.v2": {
-          "entities": [
-            {
-              "name": "Fit Tuber",
-              "type": "organization",
-              "context": "Channel/source presenting the ranking.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Lindt",
-              "type": "organization",
-              "context": "Premium chocolate brand named among better options.",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Just Ripe",
-              "type": "organization",
-              "context": "Premium chocolate brand named among better options.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Belgian",
-              "type": "product",
-              "context": "Named as a higher-quality chocolate category/brand in the source.",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Olena plant-based protein powder",
-              "type": "product",
-              "context": "Promoted near the end for smoothies and protein intake.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "cocoa",
-              "type": "concept",
-              "context": "Core ingredient used to distinguish real chocolate from sugar candy.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ]
-        },
-        "claims_warnings.v2": {
-          "claims": [
-            {
-              "text": "Cocoa is the ingredient that makes chocolate potentially beneficial.",
-              "claim_type": "nutrition",
-              "verification_status": "needs_external_verification",
-              "severity": "low",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Many commercial chocolates have sugar as the first ingredient and contain hydrogenated oils, preservatives, stabilizers, artificial colors, and flavors.",
-              "claim_type": "nutrition",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "A small commercial chocolate can provide almost six teaspoons of sugar.",
-              "claim_type": "quantitative",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Homemade chocolate using cocoa powder, coconut oil, honey, and nuts is the best affordable option according to the source.",
-              "claim_type": "recommendation",
-              "verification_status": "source_claim_only",
-              "severity": "low",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Olena plant protein provides 28 g protein in one serving and has a complete amino acid profile.",
-              "claim_type": "nutrition",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "warnings": [
-            {
-              "text": "The ranking is from 2018, so product formulations may have changed.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "The protein-powder discussion contains promotional claims that are not externally verified.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "overall_risk": "medium"
-        },
-        "viewer_comment_intelligence.v2": {
-          "total_comments": 1114,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "Humorous reactions to chocolate categories",
-              "approx_count": 20
-            },
-            {
-              "theme": "Trust in the creator's product rankings",
-              "approx_count": 18
-            },
-            {
-              "theme": "Viewers naming favorite chocolates",
-              "approx_count": 15
-            }
-          ],
-          "agreements": [
-            "Many commenters agreed with the criticism of common packaged chocolates.",
-            "Some viewers appreciated having a homemade option."
-          ],
-          "disagreements": [
-            "A few comments defended or joked about continuing to eat lower-ranked chocolates.",
-            "No strong technical corrections appear in the supplied sample."
-          ],
-          "questions": [
-            "Which category do specific favorite chocolates fall into?",
-            "Can the homemade recipe be adjusted for different sweeteners?"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "positive_count_estimate": 50,
-            "neutral_count_estimate": 40,
-            "negative_count_estimate": 10
-          },
-          "limitations": [
-            "Comments are audience-generated and are not factual verification.",
-            "Only the supplied deterministic comment sample was analyzed.",
-            "Several records include metadata/header lines rather than substantive comments."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
-          "total_selected_duration_seconds": 0
-        },
-        "evidence_assessment.v1": {
-          "grade": "A",
-          "completeness": "complete",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "Ranking common Indian chocolates by ingredient quality and presenting a homemade chocolate recipe.",
-          "strongest_takeaway": "The source prefers cocoa-rich and homemade chocolate over sugar-heavy commercial bars.",
-          "strengths": [
-            "Clear category framing.",
-            "Specific homemade method."
-          ],
-          "weaknesses": [
-            "Older product data may be stale.",
-            "Sponsored protein product claims distract from the ranking."
-          ],
-          "worth_keeping": "yes",
-          "worth_rewatching": "unknown",
-          "reason": "Still useful for label-reading principles, but not reliable as a current 2026 product ranking."
-        },
-        "editorial_assessment.v1": {
-          "chatgpt_take": "This is valuable less for the exact 2018 rankings and more for the habit it teaches: read the ingredient list before assuming a chocolate is meaningfully cocoa-based. The homemade recipe gives it lasting usefulness, while the brand-specific ordering should be treated as historical unless labels are checked again.",
-          "bottom_line": "Keep for the framework and recipe, not for current brand truth.",
-          "what_is_new_or_distinctive": [
-            "Simple three-category chocolate-quality framework.",
-            "Fast homemade chocolate recipe."
-          ],
-          "practical_value": {
-            "level": "medium",
-            "explanation": "Useful for learning what to inspect on labels and for making a simple alternative."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The transcript supports the source's claims but does not provide independent label evidence."
-          },
-          "evidence_strength": "medium",
-          "possible_bias_or_agenda": [
-            "Sponsored or promotional protein-powder mention."
-          ],
-          "important_missing_context": [
-            "Current formulations for each chocolate.",
-            "Calorie and portion-size comparisons."
-          ],
-          "who_should_watch": [
-            "People learning to read packaged dessert labels.",
-            "Viewers interested in homemade sweets."
-          ],
-          "who_can_skip": [
-            "People seeking current rankings of 2026 chocolate products."
-          ],
-          "recommended_actions": [
-            "Use the category logic but re-check labels.",
-            "Try the homemade recipe only if it fits dietary needs."
-          ],
-          "questions_left_unanswered": [
-            "Which exact 20 chocolates were placed in each rank?",
-            "How does the recipe store over time?"
-          ],
-          "contradictions_or_doubts": [
-            "The video begins with broad health framing but later recommends a sweet recipe that still needs portion control."
-          ],
-          "comparison_opportunities": [
-            "Compare this 2018 ranking with the 2024 chocolate video in the same package."
-          ],
-          "overall_score": {
-            "score_0_to_100": 70,
-            "explanation": "Good educational framing and recipe, but current brand usefulness is limited by age and lack of external verification."
-          },
-          "keep_priority": "medium",
-          "rewatch_sections": [],
-          "interpretation_limits": "No external verification of product labels, health benefits, or protein-powder claims is supplied."
-        },
-        "quality_validation.v1": {
-          "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ],
-          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
-          "repair_attempts": 0
-        }
-      }
-    },
-    {
-      "video_id": "POKzKwFqaNE",
-      "processing_status": "PASS_WITH_WARNINGS",
-      "evidence_grade": "A",
-      "confidence": "medium_high",
-      "evidence_references": [
-        {
-          "source": "canonical_transcript",
-          "segment_ids": [
-            "s00001"
-          ]
-        },
-        {
-          "source": "structured_comments",
-          "segment_ids": []
-        }
-      ],
-      "source_conflicts": [],
-      "validation": {
-        "status": "PASS_WITH_WARNINGS",
-        "warnings": [
-          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-          "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-        ],
-        "repair_attempts": 0
-      },
-      "features": {
-        "title_en.v1": {
-          "title": "Twenty Indian Ice Creams Ranked from Worst to Best",
-          "short_title": "Ice Cream Ranking",
-          "reason": "The source ranks Indian ice creams and frozen desserts into categories and recommends cleaner commercial and homemade alternatives."
-        },
-        "taxonomy.v3": {
-          "primary_topic": "Indian ice cream and frozen dessert ingredient ranking",
-          "secondary_topics": [
-            "frozen desserts",
-            "palm oil",
-            "sugar-free claims",
-            "homemade ice cream alternatives"
-          ],
-          "category": "Food",
-          "subcategory": "Desserts and packaged snacks",
-          "keywords": [
-            "ice cream",
-            "frozen dessert",
-            "palm oil",
-            "milk fat",
-            "Naturals",
-            "Amul",
-            "homemade ice cream",
-            "banana ice cream"
-          ],
-          "canonical_tags": [
-            "ice cream",
-            "frozen dessert",
-            "palm oil",
-            "milk fat",
-            "ingredient label",
-            "commercial dessert",
-            "homemade dessert",
-            "no added sugar",
-            "kulfi",
-            "protein ice cream"
-          ],
-          "search_queries": [
-            "20 ice creams in India ranked worst to best 2026 Fit Tuber",
-            "Indian ice cream frozen dessert palm oil labels",
-            "healthy homemade ice cream alternatives"
-          ]
-        },
-        "executive_summary.v2": {
-          "summary": "The 2026 video ranks Indian ice creams and frozen desserts by ingredient quality. The source criticizes products made with vegetable oils, hydrogenated or interesterified fats, artificial flavors, synthetic colors, stabilizers, liquid glucose, maltodextrin, and very high sugar. It separates frozen desserts from milk-fat ice cream, compares cones, sticks, tubs, kulfis, and sugar-free options, and generally rates Amul and dairy cooperatives above many mainstream brands while placing cleaner-ingredient brands such as Naturals, NIC, and selected Grameen products higher. It also recommends homemade alternatives including frozen banana ice cream, chilled oatmeal, fruit-and-cream blends, watermelon popsicles, falooda-like mixtures, date-hazelnut desserts, and paneer-based protein ice cream. Claims about trans fats, diabetes, liver heat, cholesterol, and ghee require external verification.",
-          "key_takeaways": [
-            "Distinguish frozen desserts from ice cream by whether milk fat or vegetable oil is used.",
-            "The source rates many common cones and sticks poorly because of palm oil, artificial additives, and high sugar.",
-            "Amul and state dairy cooperatives are presented as better mainstream choices, but not best overall.",
-            "Naturals, NIC, and limited Grameen products are praised for shorter ingredient lists.",
-            "Homemade fruit, milk, nut, and paneer desserts are positioned as the best category."
-          ],
-          "source_basis": [
-            "canonical transcript segment s00001",
-            "structured comments sample"
-          ]
-        },
-        "detailed_summary.v3": {
-          "overview": "This video is a broad 2026 ingredient-based ranking of Indian ice cream products. It begins by saying ice cream is not a health food but remains popular, then divides products into categories. Category One includes products such as Kwality Walls Cornetto, Cream Bell Cotton Candy Cone, Feast, Oreo and Cream tubs, and related items; the source argues many are frozen desserts made with oil rather than milk and criticizes their use of palm oil, hydrogenated or interesterified fats, artificial chocolate-like coatings, liquid glucose, and maltodextrin. Category Two covers products that qualify as ice cream but still include a lot of oil, sugar, processed sweeteners, and artificial ingredients. The video then asks product-comparison questions for mango sticks, general craving choices, choco-bar-style sticks, matka kulfi, no-sugar products, and vanilla tubs. It usually prefers products with more milk, no palm oil, simpler sweetening, and fewer additives, and names Amul as better than several mainstream alternatives while warning that it is still not ideal. Category Four elevates cleaner commercial products such as Naturals, NIC, and selected Grameen kulfi because of shorter ingredient lists. Category Five shifts to homemade options: frozen banana with peanut butter and cocoa, chilled oatmeal, cold kheer or phirni, mango with cream and honey, jackfruit or custard apple variants, watermelon popsicles, a falooda-like milk/nut/seed mix, date-hazelnut desserts, and paneer chenna protein ice cream. A ghee promotion appears mid-video and should be treated separately from the ice-cream analysis.",
-          "sections": [
-            {
-              "heading": "Frozen dessert critique",
-              "summary": "The source criticizes oil-based frozen desserts, artificial coatings, liquid glucose, maltodextrin, and trans-fat concerns.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Mainstream comparisons",
-              "summary": "Amul and some dairy cooperatives are often preferred over brands using more palm oil, water, processed sweeteners, colors, or flavors.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Cleaner commercial options",
-              "summary": "Naturals, NIC, and one Grameen kulfi product are praised for short ingredient lists and simpler formulations.",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "heading": "Homemade alternatives",
-              "summary": "The source gives many fruit, dairy, nut, seed, and paneer-based alternatives for cold desserts.",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "practical_details": [
-            "Check whether the label says ice cream or frozen dessert and whether vegetable oil replaces milk fat.",
-            "For mango ice cream, the source values mango pulp percentage and absence of added oil.",
-            "Homemade options rely on frozen fruit, milk or cream, nuts, seeds, honey, jaggery, dates, or paneer."
-          ],
-          "limitations": [
-            "Ingredient claims and brand rankings require current label verification.",
-            "The source makes several medical/nutrition claims not externally supported in the package.",
-            "Formal segment timestamps are zero-duration."
-          ]
-        },
-        "timeline_sections.v3": {
-          "sections": []
-        },
-        "entities.v2": {
-          "entities": [
-            {
-              "name": "Kwality Walls",
-              "type": "organization",
-              "context": "Brand criticized in frozen-dessert categories.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Cream Bell",
-              "type": "organization",
-              "context": "Brand compared across frozen dessert and ice cream products.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Amul",
-              "type": "organization",
-              "context": "Often preferred mainstream dairy brand in comparisons.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Baskin Robbins",
-              "type": "organization",
-              "context": "Winner in several specific product comparisons according to source.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Vadilal",
-              "type": "organization",
-              "context": "Brand compared and sometimes criticized for ingredients.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Naturals",
-              "type": "organization",
-              "context": "Clean-ingredient brand highly recommended by the source.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "NIC Ice Creams",
-              "type": "organization",
-              "context": "Clean-ingredient brand recommended by the source.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Grameen Desi Malai Kulfi",
-              "type": "product",
-              "context": "Named as a good online kulfi option.",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "FSSAI",
-              "type": "organization",
-              "context": "Referenced for ice cream labeling guideline on 10 percent milk fat.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Anveshan A2 Desi Cow Ghee",
-              "type": "product",
-              "context": "Sponsored/promotional ghee segment.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ]
-        },
-        "claims_warnings.v2": {
-          "claims": [
-            {
-              "text": "A product can be sold as ice cream only if it contains 10 percent milk fat under FSSAI guidelines.",
-              "claim_type": "legal",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Many frozen desserts use palm oil instead of milk fat and can contain trans fats due to hydrogenation or interesterification.",
-              "claim_type": "nutrition",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Some popular ice cream products contain very high sugar amounts, including examples framed as five to eight teaspoons.",
-              "claim_type": "quantitative",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Artificial sweeteners used in no-sugar ice creams are worse than sugar, and maltitol may cause stomach upset.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Naturals mango ice cream contains only milk, mango pulp, and sugar according to the source.",
-              "claim_type": "ingredient",
-              "verification_status": "source_claim_only",
-              "severity": "low",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Commercial ice creams heat up the liver and cause thirst.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Paneer chenna ice cream can provide about 25 g protein and calcium.",
-              "claim_type": "nutrition",
-              "verification_status": "source_claim_only",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "warnings": [
-            {
-              "text": "The video includes high-impact nutrition and medical-style claims about oils, sweeteners, diabetes, liver heat, and cholesterol.",
-              "severity": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "A ghee promotional segment should not be treated as neutral ice-cream evidence.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
-          ],
-          "overall_risk": "high"
-        },
-        "viewer_comment_intelligence.v2": {
-          "total_comments": 1084,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "Relief that frozen dessert labeling is being discussed",
-              "approx_count": 18
-            },
-            {
-              "theme": "Brand preferences such as Amul, Mother Dairy, and Hocco",
-              "approx_count": 20
-            },
-            {
-              "theme": "Requests for English subtitles and broader accessibility",
-              "approx_count": 8
-            },
-            {
-              "theme": "Interest in homemade alternatives",
-              "approx_count": 15
-            }
-          ],
-          "agreements": [
-            "Viewers often agreed that frozen dessert labeling matters.",
-            "Several comments favored Amul or dairy-based alternatives."
-          ],
-          "disagreements": [
-            "Some viewers suggested alternatives not covered in detail, such as flavored dahi.",
-            "No supplied comments independently verify product labels."
-          ],
-          "questions": [
-            "Which favorite ice cream is safest or best?",
-            "Which homemade alternative is most tempting?"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "positive_count_estimate": 48,
-            "neutral_count_estimate": 42,
-            "negative_count_estimate": 10
-          },
-          "limitations": [
-            "Comments are audience-generated and are not factual verification.",
-            "Only the supplied deterministic comment sample was analyzed.",
-            "Several records include metadata/header lines rather than substantive comments."
-          ]
-        },
-        "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
-          "total_selected_duration_seconds": 0
-        },
-        "evidence_assessment.v1": {
-          "grade": "A",
-          "completeness": "complete",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "A 2026 ranking of Indian ice creams and frozen desserts by ingredient quality, plus homemade cold-dessert alternatives.",
-          "strongest_takeaway": "The source urges viewers to distinguish milk-based ice cream from oil-based frozen desserts and to prefer short ingredient lists or homemade options.",
-          "strengths": [
-            "Broad product coverage across cones, sticks, tubs, kulfi, and sugar-free options.",
-            "Clear label-reading cues and many practical homemade alternatives."
-          ],
-          "weaknesses": [
-            "Contains several high-risk health claims without external evidence.",
-            "Promotional ghee segment interrupts the analysis."
-          ],
-          "worth_keeping": "yes",
-          "worth_rewatching": "unknown",
-          "reason": "Useful as a current product and label guide, but the medical claims and exact rankings require independent confirmation."
-        },
-        "editorial_assessment.v1": {
-          "chatgpt_take": "This is one of the more practically useful packages because it teaches the exact label distinction between ice cream and frozen dessert and then applies that distinction across common buying situations. Its weakness is overreach: some ingredient concerns are reasonable to investigate, but the source sometimes jumps from labels to medical consequences that the supplied evidence cannot prove.",
-          "bottom_line": "Strong shopping guide, but health-risk statements need verification.",
-          "what_is_new_or_distinctive": [
-            "Connects FSSAI labeling, milk fat, palm oil, sugar source, and real shopping choices.",
-            "Provides a large menu of homemade alternatives rather than only warning viewers."
-          ],
-          "practical_value": {
-            "level": "high",
-            "explanation": "It can help viewers read labels and choose cleaner commercial or homemade cold desserts."
-          },
-          "credibility_assessment": {
-            "level": "uncertain",
-            "explanation": "The transcript provides detailed source reasoning, but labels, regulations, and health claims are not independently verified."
-          },
-          "evidence_strength": "medium",
-          "possible_bias_or_agenda": [
-            "Sponsored Anveshan ghee segment.",
-            "Strong anti-processed-food framing may bias comparisons."
-          ],
-          "important_missing_context": [
-            "Current product labels from manufacturers.",
-            "Regulatory definitions and lab-tested trans-fat levels.",
-            "Individual dietary needs such as diabetes, lactose intolerance, allergies, and calorie targets."
-          ],
-          "who_should_watch": [
-            "People buying ice cream in India.",
-            "Viewers interested in homemade cold desserts."
-          ],
-          "who_can_skip": [
-            "Anyone looking for formal medical nutrition advice."
-          ],
-          "recommended_actions": [
-            "Check labels for vegetable oil, milk fat, sweetener type, and additives.",
-            "Use homemade options when ingredient control matters.",
-            "Moderate portions even for cleaner products."
-          ],
-          "questions_left_unanswered": [
-            "Which products changed formulation after publication?",
-            "How do the recommended alternatives compare nutritionally per serving?"
-          ],
-          "contradictions_or_doubts": [
-            "The source calls ice cream not a health food but gives many dessert recommendations, so portion control remains important."
-          ],
-          "comparison_opportunities": [
-            "Compare with actual FSSAI rules and manufacturer labels for each brand."
-          ],
-          "overall_score": {
-            "score_0_to_100": 82,
-            "explanation": "High practical shopping value and detail, reduced by unverified medical claims and promotional content."
-          },
-          "keep_priority": "high",
-          "rewatch_sections": [],
-          "interpretation_limits": "The supplied package allows source-grounded synthesis but not independent validation of labels, law, or health effects."
-        },
-        "quality_validation.v1": {
-          "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ],
-          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
-          "repair_attempts": 0
-        }
-      }
-    },
-    {
-      "video_id": "jwmNjJgZanM",
-      "processing_status": "PASS_WITH_WARNINGS",
-      "evidence_grade": "B",
       "confidence": "medium",
       "evidence_references": [
         {
@@ -1304,6 +16,10 @@
           ]
         },
         {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
           "source": "structured_comments",
           "segment_ids": []
         }
@@ -1312,369 +28,1155 @@
       "validation": {
         "status": "PASS_WITH_WARNINGS",
         "warnings": [
-          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-          "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
         ],
         "repair_attempts": 0
       },
       "features": {
         "title_en.v1": {
-          "title": "Five Minute Homemade Ice Cream Without Refrigerator",
-          "short_title": "Quick Homemade Ice Cream",
-          "reason": "The video teaches a quick bag-and-ice method for making chocolate, mango, and kulfi-style ice cream."
+          "title": "Five Healthier Chocolate Options in India According to the Source",
+          "short_title": "Best Chocolates in India",
+          "reason": "Frames the video as the source's Indian-market chocolate selection, not an independent ranking."
         },
         "taxonomy.v3": {
-          "primary_topic": "Quick homemade ice cream recipes without a refrigerator",
+          "primary_topic": "Healthier chocolate choices in the Indian market",
           "secondary_topics": [
-            "chocolate ice cream",
-            "mango ice cream",
-            "malai kulfi",
-            "natural dessert ingredients"
+            "sugar content",
+            "compound versus real chocolate",
+            "dark chocolate",
+            "homemade chocolate",
+            "brand comparison"
           ],
-          "category": "Food",
-          "subcategory": "Desserts and recipes",
+          "category": "Health",
+          "subcategory": "Packaged-food reviews",
           "keywords": [
-            "homemade ice cream",
-            "ziplock bag",
-            "rock salt",
-            "chocolate ice cream",
-            "mango ice cream",
-            "malai kulfi",
-            "mishri"
+            "chocolate India",
+            "Dairy Milk",
+            "5 Star",
+            "Snickers",
+            "dark chocolate",
+            "sugar",
+            "cocoa",
+            "homemade chocolate"
           ],
           "canonical_tags": [
-            "homemade ice cream",
-            "dessert recipe",
-            "rock salt",
-            "chocolate ice cream",
-            "mango ice cream",
-            "malai kulfi",
-            "natural ingredients",
-            "summer recipe"
+            "chocolate",
+            "packaged food",
+            "sugar",
+            "Indian market",
+            "product review"
           ],
           "search_queries": [
-            "5 minute ice cream without refrigerator Fit Tuber",
-            "homemade ice cream rock salt ziplock bag recipe",
-            "healthy mango ice cream without refrigerator"
+            "Fit Tuber best chocolate in India five healthy chocolates"
           ]
         },
         "executive_summary.v2": {
-          "summary": "The video shows how to make quick homemade ice cream using natural ingredients and a salt-and-ice bag method rather than relying on packaged ice creams. It first criticizes market ice creams for sugar, oils, emulsifiers, stabilizers, artificial flavors, and colors. The recipe mixes full-fat milk, thick cream, unsweetened cocoa powder, and mishri powder in a sealed bag, then places it inside a larger ice-and-rock-salt bag and shakes for about five minutes. The same method is adapted for mango ice cream, while malai kulfi is made by reducing full-fat milk, adding cardamom, cashews, jaggery, and optionally saffron, then refrigerating or cooling before bag-method freezing.",
+          "summary": "The video reviews common Indian chocolates and argues that many popular bars contain more sugar or filler than meaningful cocoa. It explains broad chocolate categories, criticizes thick-center and sugar-heavy products, recommends five healthier or comparatively better options, and gives a simple homemade chocolate recipe. It also includes a Mamaearth rosemary hair oil promotion, so the consumer guidance should be read with awareness of sponsorship context even though the chocolate ranking itself is presented as not sponsored.",
           "key_takeaways": [
-            "The core technique is a small sealed ice-cream mixture inside a larger ice-and-rock-salt bag.",
-            "Rock salt is said to lower ice temperature enough to freeze the mixture quickly.",
-            "Chocolate and mango variants use milk, cream, flavor base, and traditional sweeteners.",
-            "Malai kulfi requires reducing milk and can be refrigerated or adapted to the bag method after cooling.",
-            "Claims about packaged ice creams causing disease are not verified by supplied evidence."
+            "The core criterion is choosing chocolates with more cocoa and less sugar or artificial filler.",
+            "The speaker treats occasional consumption as the realistic use case, not daily health food.",
+            "A homemade chocolate recipe is offered as a cleaner alternative.",
+            "The video contains an unrelated hair-oil advertisement."
           ],
           "source_basis": [
-            "canonical transcript segment s00001",
-            "structured comments sample"
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
           ]
         },
         "detailed_summary.v3": {
-          "overview": "This short recipe video is focused on making ice cream quickly at home without a conventional refrigerator-freezing process. It opens by warning that market ice creams contain sugar, bad oils, emulsifiers, stabilizers, artificial flavors, and synthetic colors, then proposes homemade ice cream as a more natural alternative. For chocolate ice cream, the method combines roughly one glass of full-fat milk, three tablespoons of thick cream, one teaspoon of unsweetened cocoa powder, and about half a cup of mishri powder in an airtight bag. That small bag is placed inside a larger ziplock bag filled with ice and about half a cup of rock salt; the whole thing is wrapped in a towel and shaken for about five minutes. The source says this produces ice cream without ice crystals. Mango ice cream is made similarly with mango pulp, mishri powder, milk, and cream. The malai kulfi variant uses 500 ml full-fat milk reduced by half on low flame, then flavored with cardamom, cashews, jaggery, and optionally saffron, before molding and refrigerating for 8 to 10 hours or cooling and using the bag method. The video closes with a call for viewers to share attempts on Instagram.",
+          "overview": "This product-review video positions mainstream chocolates such as Dairy Milk-style bars, filled bars, and candy-like products as sugar-heavy, then guides viewers toward darker or cleaner-label options and a homemade version.",
           "sections": [
             {
-              "heading": "Packaged ice cream criticism",
-              "summary": "The source criticizes market ice creams for sugar, oils, additives, colors, and flavors.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Market framing",
+              "summary": "The source divides Indian chocolates into broad types and criticizes candy-like products for sugar and weak cocoa value.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "heading": "Bag method",
-              "summary": "A small bag of ice-cream mixture is shaken inside a larger ice-and-rock-salt bag for about five minutes.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Recommended options",
+              "summary": "Five chocolates are ranked or recommended as occasional guilt-reduced choices based on ingredients and nutrition claims.",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "heading": "Flavor variants",
-              "summary": "Chocolate and mango versions use the same quick method; malai kulfi uses reduced milk and flavorings.",
-              "segment_ids": [
-                "s00001"
+              "heading": "Homemade and sponsor close",
+              "summary": "The source shares a simple homemade chocolate idea and ends with a Mamaearth hair-oil promotion.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
               ]
             }
           ],
-          "practical_details": [
-            "Chocolate version: full-fat milk, thick cream, unsweetened cocoa powder, and mishri powder.",
-            "Freezing setup: small airtight mixture bag inside a larger bag with ice and about half a cup of rock salt.",
-            "Shake for about five minutes while wrapped in a towel.",
-            "Cool hot kulfi mixture before using plastic bags."
-          ],
           "limitations": [
-            "Safety and disease claims about packaged ice cream are not externally verified.",
-            "Plastic-bag heat safety is only briefly addressed by cooling the mixture.",
-            "Formal canonical timestamps are zero-duration."
+            "The package supplies transcript and metadata but not product labels, lab tests, or external nutrition evidence for verification.",
+            "Canonical timestamps are unusable for reliable timed chapters or clips."
           ]
         },
         "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
           "sections": []
         },
         "entities.v2": {
-          "entities": [
-            {
-              "name": "Fit Tuber",
-              "type": "organization",
-              "context": "Channel/source presenting the recipe.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "rock salt",
-              "type": "concept",
-              "context": "Used with ice to lower the freezing temperature in the bag method.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "mishri powder",
-              "type": "product",
-              "context": "Traditional sweetener used in chocolate and mango ice cream recipes.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "malai kulfi",
-              "type": "concept",
-              "context": "Desi ice cream variant taught in the recipe.",
-              "confidence": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "name": "Instagram",
-              "type": "organization",
-              "context": "Platform where the source asks viewers to share attempts.",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [
+            "Dairy Milk",
+            "5 Star",
+            "Snickers",
+            "Bar One",
+            "Mamaearth Rosemary Hair Growth Oil"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "cocoa",
+            "sugar content",
+            "compound chocolate",
+            "dark chocolate"
+          ],
+          "foods_or_ingredients": [
+            "chocolate",
+            "cocoa",
+            "sugar",
+            "homemade chocolate"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
           ]
         },
         "claims_warnings.v2": {
           "claims": [
             {
-              "text": "Market ice creams contain sugar, bad oils, emulsifiers, stabilizers, artificial flavors, and synthetic colors.",
-              "claim_type": "nutrition",
-              "verification_status": "needs_external_verification",
-              "severity": "medium",
-              "confidence": "medium",
-              "segment_ids": [
-                "s00001"
+              "claim": "Many popular Indian chocolates have more sugar than chocolate.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "Rock salt instantly lowers the temperature of ice further, enabling the bag method.",
-              "claim_type": "causal",
-              "verification_status": "supported_by_supplied_evidence",
-              "severity": "informational",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
+              "claim": "Some recommended chocolates are healthier choices for occasional consumption.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "The chocolate ice cream method can produce ice cream in about five minutes.",
-              "claim_type": "practical",
-              "verification_status": "source_claim_only",
-              "severity": "low",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
+              "claim": "Homemade chocolate can be easier than making tea.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             },
             {
-              "text": "The method can be adapted for vanilla, strawberry, mango, and malai kulfi.",
-              "claim_type": "practical",
-              "verification_status": "source_claim_only",
-              "severity": "low",
-              "confidence": "medium_high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Packaged ice creams are made of chemicals enough to bring deadly diseases.",
-              "claim_type": "medical",
-              "verification_status": "needs_external_verification",
-              "severity": "high",
-              "confidence": "low",
-              "segment_ids": [
-                "s00001"
+              "claim": "Mamaearth rosemary hair oil supports hair growth.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
               ]
             }
           ],
-          "warnings": [
-            {
-              "text": "The opening disease claim about packaged ice creams is high-impact and unsupported by supplied external evidence.",
-              "severity": "high",
-              "segment_ids": [
-                "s00001"
-              ]
-            },
-            {
-              "text": "Recipe users should consider food safety, allergies, and plastic-bag handling; the package does not supply safety testing.",
-              "severity": "medium",
-              "segment_ids": [
-                "s00001"
-              ]
-            }
+          "safety_warnings": [
+            "Chocolate remains calorie-dense and may be unsuitable in excess for people managing diabetes, weight, allergies, or caffeine sensitivity."
           ],
-          "overall_risk": "high"
+          "medical_disclaimer": "This summarizes source claims about food products and health only; it is not nutrition or medical advice.",
+          "confidence_notes": [
+            "Product rankings depend on the labels and criteria described by the source; no independent label verification is supplied."
+          ]
         },
         "viewer_comment_intelligence.v2": {
-          "total_comments": 1089,
-          "included_comments": 100,
-          "sampling_method": "deterministic_head_tail",
-          "themes": [
-            {
-              "theme": "Interest in trying the recipe",
-              "approx_count": 25
-            },
-            {
-              "theme": "Praise and thanks for the creator",
-              "approx_count": 25
-            },
-            {
-              "theme": "Requests for unrelated health topics",
-              "approx_count": 8
-            },
-            {
-              "theme": "Light jokes and fan reactions",
-              "approx_count": 15
-            }
-          ],
-          "agreements": [
-            "Viewers responded positively to the ice cream and kulfi recipes.",
-            "Several comments expressed intent to try and share the result."
-          ],
-          "disagreements": [
-            "The supplied sample contains no strong recipe corrections.",
-            "Some comments are unrelated health requests rather than feedback."
-          ],
-          "questions": [
-            "Which variant should viewers try first?",
-            "Can similar homemade summer drinks be covered?"
-          ],
-          "useful_corrections": [],
-          "sentiment": {
-            "overall": "positive",
-            "positive_count_estimate": 60,
-            "neutral_count_estimate": 35,
-            "negative_count_estimate": 5
-          },
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
           "limitations": [
-            "Comments are audience-generated and are not factual verification.",
-            "Only the supplied deterministic comment sample was analyzed.",
-            "Several records include metadata/header lines rather than substantive comments."
+            "No structured viewer comments were supplied."
           ]
         },
         "same_topic_clip_plan.v1": {
-          "clips": [],
-          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
-          "total_selected_duration_seconds": 0
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
         },
         "evidence_assessment.v1": {
-          "grade": "B",
-          "completeness": "usable",
-          "source_consistency": "consistent",
-          "conflicts": [],
-          "limitations": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
-          ]
-        },
-        "video_intake.v1": {
-          "actual_subject": "Quick homemade ice cream and kulfi recipes using ice, rock salt, milk, cream, fruit, cocoa, and traditional sweeteners.",
-          "strongest_takeaway": "A sealed mixture bag shaken inside an ice-and-rock-salt bag can make a quick soft ice cream-style dessert.",
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
           "strengths": [
-            "Clear method with quantities.",
-            "Multiple variants in a short video.",
-            "Practical workaround for not using a refrigerator for the freezing step."
+            "Clear product/recipe topic and source criteria are present.",
+            "Transcript supports semantic summary and claim extraction."
           ],
           "weaknesses": [
-            "Health warnings about market ice cream are overstated without evidence.",
-            "Food-safety and texture limitations are not deeply discussed."
+            "No original product label scans or lab evidence included.",
+            "Commercial sponsorship/affiliate context exists.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A consumer guide to comparatively healthier chocolates in India plus a homemade chocolate idea.",
+          "strongest_takeaway": "Read ingredient lists and sugar levels instead of assuming popular chocolate bars are healthy.",
+          "strengths": [
+            "Practical marketplace orientation.",
+            "Occasional-use framing."
+          ],
+          "weaknesses": [
+            "No independent label verification in the package.",
+            "Ranking criteria may be subjective."
           ],
           "worth_keeping": "yes",
-          "worth_rewatching": "yes",
-          "reason": "Worth keeping as a practical recipe reference, especially for the bag method and ingredient ratios."
+          "worth_rewatching": "maybe"
         },
         "editorial_assessment.v1": {
-          "chatgpt_take": "This is a simple, usable recipe video whose core technique is stronger than its health rhetoric. The salt-and-ice method is practical and memorable, and the variants are easy to adapt. The caution is that the video frames packaged ice cream in alarmist health terms, so keep the recipe and treat the disease claims as unverified.",
-          "bottom_line": "Keep it for the quick recipe; do not rely on its health claims without verification.",
+          "chatgpt_take": "Useful as a label-reading nudge for chocolate buyers. The best part is the ingredient skepticism; the exact top-five ranking should be verified against current labels and prices.",
+          "bottom_line": "Choose higher-cocoa, lower-sugar options if eating chocolate occasionally.",
           "what_is_new_or_distinctive": [
-            "Uses a bag, ice, and rock salt to make quick ice cream without a freezer cycle.",
-            "Offers chocolate, mango, and malai kulfi variants."
+            "Combines product ranking with homemade recipe"
           ],
           "practical_value": {
-            "level": "high",
-            "explanation": "Gives direct quantities and a clear physical method."
+            "level": "medium",
+            "explanation": "Useful for shopping decisions if labels are rechecked."
           },
           "credibility_assessment": {
-            "level": "mixed",
-            "explanation": "The recipe procedure is concrete, while the health claims are broad and unsupported by external evidence."
+            "level": "uncertain",
+            "explanation": "Transcript supports the criteria, but products and labels can change and no scans are supplied."
           },
           "evidence_strength": "medium",
           "possible_bias_or_agenda": [
-            "Strong natural-versus-market framing."
+            "Mamaearth sponsorship",
+            "Affiliate links"
           ],
           "important_missing_context": [
-            "Food-safety guidance for bags and dairy handling.",
-            "Expected yield and exact serving size.",
-            "Nutritional comparison with commercial ice cream."
+            "Exact ranked list in machine-readable form",
+            "Current label photos",
+            "Nutrition thresholds"
           ],
           "who_should_watch": [
-            "Home cooks wanting a quick dessert activity.",
-            "Viewers looking for simple summer recipes."
+            "Indian consumers comparing packaged chocolates"
           ],
           "who_can_skip": [
-            "People who need medically precise nutrition guidance."
+            "Viewers seeking clinical nutrition advice"
           ],
           "recommended_actions": [
-            "Cool any hot mixture before plastic-bag use.",
-            "Treat this as dessert and adjust sugar to dietary needs.",
-            "Use food-safe sealed bags."
+            "Check current ingredient lists and sugar per serving before buying."
           ],
           "questions_left_unanswered": [
-            "How long does the texture hold after serving?",
-            "Can lower-fat or non-dairy versions work as well?"
+            "Which exact five products remain best after current label changes?"
           ],
           "contradictions_or_doubts": [
-            "The video criticizes market ice cream as unhealthy while still using substantial sweeteners and dairy fat."
+            "Healthy chocolate framing can still underplay portion size."
           ],
           "comparison_opportunities": [
-            "Compare the quick bag method with conventional churned ice cream and freezer-only recipes."
+            "Compare with current FSSAI labels and independent nutrition reviews."
           ],
           "overall_score": {
-            "score_0_to_100": 80,
-            "explanation": "Very practical recipe value, reduced by unverified health rhetoric and sparse safety detail."
-          },
-          "keep_priority": "high",
-          "rewatch_sections": [],
-          "interpretation_limits": "The package supports recipe extraction and source-claim warnings but not medical conclusions about packaged ice cream."
+            "score": 7,
+            "scale": 10,
+            "reason": "Practical, but label-dependent."
+          }
         },
         "quality_validation.v1": {
           "status": "PASS_WITH_WARNINGS",
-          "warnings": [
-            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
-            "Health and nutrition claims are source claims only and require external verification before relying on them for diet, medical, or safety decisions.",
-            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
           ],
-          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
-          "repair_attempts": 0
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "OVAQXdFza54",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Twenty Indian Chocolates Ranked from Worst to Best by Ingredients",
+          "short_title": "20 Chocolates Ranked",
+          "reason": "Names the ranking basis and source scope."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Worst-to-best ranking of Indian chocolates by ingredients and nutrition",
+          "secondary_topics": [
+            "cocoa content",
+            "sugar candies",
+            "cheap chocolate",
+            "healthier chocolate"
+          ],
+          "category": "Health",
+          "subcategory": "Packaged-food rankings",
+          "keywords": [
+            "20 chocolates",
+            "worst to best",
+            "India",
+            "cocoa",
+            "sugar",
+            "Olena"
+          ],
+          "canonical_tags": [
+            "chocolate ranking",
+            "sugar",
+            "cocoa",
+            "packaged food",
+            "India"
+          ],
+          "search_queries": [
+            "Fit Tuber 20 chocolates India ranked worst to best"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video ranks 20 commonly eaten chocolates in India, grouping them by ingredients and nutrition information. Its central claim is that cocoa can have benefits, but many commercial chocolates contain little cocoa and function more like chocolate-colored sugar candies. The source says it identifies a healthier and cheaper chocolate option and asks viewers whether to continue the worst-to-best series. The video is powered by Olena, which is relevant sponsorship context.",
+          "key_takeaways": [
+            "Ranking criteria are ingredient quality and nutrition information, especially cocoa versus sugar.",
+            "The source distinguishes cocoa's potential benefits from the health value of commercial chocolate products.",
+            "The final product recommendation should be verified against current labels and prices.",
+            "Sponsorship by Olena may influence presentation context."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This is a broad marketplace comparison of 20 chocolates. It organizes products into tiers and argues that buyers should not infer health benefits from the word chocolate unless cocoa content and ingredients support that claim.",
+          "sections": [
+            {
+              "heading": "Cocoa versus candy framing",
+              "summary": "The source says cocoa may be beneficial but many chocolates contain little cocoa and much sugar.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Twenty-product ranking",
+              "summary": "The speaker categorizes 20 chocolates by ingredient and nutrition quality from worst to best.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Audience feedback",
+              "summary": "The video asks viewers whether to continue the worst-to-best format.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "limitations": [
+            "The package supplies transcript and metadata but not product labels, lab tests, or external nutrition evidence for verification.",
+            "Canonical timestamps are unusable for reliable timed chapters or clips."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [
+            "Olena"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "cocoa",
+            "sugar",
+            "nutrition information",
+            "ingredient quality"
+          ],
+          "foods_or_ingredients": [
+            "chocolate",
+            "cocoa",
+            "sugar"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "Cocoa has numerous health benefits.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Many Indian chocolates contain little cocoa and are no better than chocolate-colored sugar candies.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The source found the healthiest and cheapest chocolate among 20 options.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Rankings should not be used as medical advice; portion size, allergies, diabetes, and calorie needs still matter."
+          ],
+          "medical_disclaimer": "This summarizes source claims about food products and health only; it is not nutrition or medical advice.",
+          "confidence_notes": [
+            "Product rankings depend on the labels and criteria described by the source; no independent label verification is supplied."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Clear product/recipe topic and source criteria are present.",
+            "Transcript supports semantic summary and claim extraction."
+          ],
+          "weaknesses": [
+            "No original product label scans or lab evidence included.",
+            "Commercial sponsorship/affiliate context exists.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A 20-product chocolate ranking for the Indian market.",
+          "strongest_takeaway": "The best takeaway is to separate cocoa-rich chocolate from sugar-heavy confectionery.",
+          "strengths": [
+            "Comparative format is useful for shopping.",
+            "Clear ingredient-focused criteria."
+          ],
+          "weaknesses": [
+            "Exact labels and prices can change.",
+            "No independent label images or data table supplied."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "A useful consumer comparison if treated as a starting point. The ranking is only as current as the labels the source examined.",
+          "bottom_line": "Ingredient lists matter more than chocolate branding.",
+          "what_is_new_or_distinctive": [
+            "Ranks 20 products in one market-specific video"
+          ],
+          "practical_value": {
+            "level": "high",
+            "explanation": "Useful for product comparison when updated labels are checked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The approach is sensible, but package evidence is transcript-only and sponsor context exists."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Powered by Olena",
+            "Affiliate or series-growth incentives"
+          ],
+          "important_missing_context": [
+            "Full ranked list table",
+            "Label images",
+            "Updated prices"
+          ],
+          "who_should_watch": [
+            "Chocolate buyers in India"
+          ],
+          "who_can_skip": [
+            "People uninterested in product rankings"
+          ],
+          "recommended_actions": [
+            "Verify cocoa percentage, sugar, oils, and serving size on current packs."
+          ],
+          "questions_left_unanswered": [
+            "Which product was selected as healthiest and cheapest, and does that remain current?"
+          ],
+          "contradictions_or_doubts": [
+            "The health-benefit framing for cocoa may spill over into chocolate consumption."
+          ],
+          "comparison_opportunities": [
+            "Compare with current product labels and unsweetened cocoa/dark chocolate standards."
+          ],
+          "overall_score": {
+            "score": 7,
+            "scale": 10,
+            "reason": "Strong practical comparison, but data needs current verification."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "POKzKwFqaNE",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Twenty Indian Ice Creams Ranked from Worst to Better Alternatives",
+          "short_title": "20 Ice Creams Ranked",
+          "reason": "Reflects the source's five-category ranking and alternative suggestions."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Ingredient-based ranking of Indian ice creams and healthier alternatives",
+          "secondary_topics": [
+            "frozen desserts",
+            "sugar",
+            "artificial ingredients",
+            "marketing tricks",
+            "milkshake-based alternatives"
+          ],
+          "category": "Health",
+          "subcategory": "Packaged-food rankings",
+          "keywords": [
+            "ice cream India",
+            "frozen dessert",
+            "sugar",
+            "artificial ingredients",
+            "healthier alternatives",
+            "Anveshan ghee"
+          ],
+          "canonical_tags": [
+            "ice cream",
+            "packaged food",
+            "frozen dessert",
+            "sugar",
+            "ingredient review"
+          ],
+          "search_queries": [
+            "Fit Tuber 20 ice creams India ranked worst to best 2026"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video ranks 20 Indian ice creams or frozen desserts into five categories, from products the source calls highly artificial or not true ice cream through so-called healthy products and better alternatives. It emphasizes sugar load, artificial ingredients, marketing tricks, and ingredient quality, then suggests homemade frozen milkshake-style alternatives using ingredients such as gulkand, honey, and coconut milk cream. The metadata and close promote Anveshan A2 ghee and include affiliate links, so the ranking should be interpreted as a source assessment rather than independent lab evaluation.",
+          "key_takeaways": [
+            "The source distinguishes ice cream from frozen desserts and criticizes artificial ingredients and high sugar.",
+            "The five-category structure moves from worst products to better commercial choices and homemade alternatives.",
+            "Homemade alternatives are presented as healthier but still require portion and sugar awareness.",
+            "The product-promotion context is substantial."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This 2026 product-ranking video surveys Indian ice cream products and alternatives. It is less a recipe video than a label-reading and marketplace guide, with strong language around health problems from poorer products.",
+          "sections": [
+            {
+              "heading": "Worst categories",
+              "summary": "Several named ice creams or frozen desserts are criticized for artificial ingredients, high sugar, or not meeting the source's standard for real ice cream.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Middle and healthier products",
+              "summary": "The source discusses marketing tricks and so-called healthy options before identifying better commercial products.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Alternatives and promotion",
+              "summary": "The video recommends freezing milkshake recipes with condensed milk and points to ingredients and Anveshan ghee in the description.",
+              "source_basis": [
+                "canonical_transcript:s00001",
+                "metadata"
+              ]
+            }
+          ],
+          "limitations": [
+            "The package supplies transcript and metadata but not product labels, lab tests, or external nutrition evidence for verification.",
+            "Canonical timestamps are unusable for reliable timed chapters or clips."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [
+            "Kwality Walls Cornetto",
+            "Cream Bell Cotton Candy Cone",
+            "Feast",
+            "Oreo & Cream Tub",
+            "Cream Bell Sandwich",
+            "Cream Bell Vanilla",
+            "Anveshan A2 Gir Cow Ghee"
+          ],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "frozen dessert",
+            "artificial ingredients",
+            "sugar per 100 grams",
+            "condensed milk"
+          ],
+          "foods_or_ingredients": [
+            "ice cream",
+            "gulkand",
+            "honey",
+            "coconut milk cream",
+            "condensed milk"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "Some products sold like ice creams are not ice creams at all.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Regularly eating category-one products invites health problems.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Certain marketed healthy ice creams use cheap marketing tricks.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Homemade frozen milkshake alternatives are healthier than category-four products.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Ice cream and alternatives can be high in sugar, fat, and calories; people with diabetes, allergies, or dietary restrictions need individualized caution."
+          ],
+          "medical_disclaimer": "This summarizes source claims about food products and health only; it is not nutrition or medical advice.",
+          "confidence_notes": [
+            "Product rankings depend on the labels and criteria described by the source; no independent label verification is supplied."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Clear product/recipe topic and source criteria are present.",
+            "Transcript supports semantic summary and claim extraction."
+          ],
+          "weaknesses": [
+            "No original product label scans or lab evidence included.",
+            "Commercial sponsorship/affiliate context exists.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A five-category ranking of Indian ice creams and suggested healthier alternatives.",
+          "strongest_takeaway": "The most useful takeaway is to inspect whether a product is ice cream or frozen dessert and check sugar and additives.",
+          "strengths": [
+            "Current-market product focus.",
+            "Explains categories and alternatives."
+          ],
+          "weaknesses": [
+            "Strong disease-risk language without supplied evidence.",
+            "Labels can change quickly."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "Good as a shopping checklist, especially around frozen-dessert labeling and sugar. The disease-risk phrasing is more dramatic than the evidence package can verify.",
+          "bottom_line": "Check labels and treat even better ice creams as occasional foods.",
+          "what_is_new_or_distinctive": [
+            "Separates worst products, marketing tricks, better commercial products, and homemade alternatives"
+          ],
+          "practical_value": {
+            "level": "high",
+            "explanation": "Useful for Indian-market shoppers if labels are rechecked."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Transcript is detailed, but rankings rely on source inspection and are not independently verified."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Anveshan ghee promotion",
+            "Affiliate links",
+            "Strong anti-processed-food framing"
+          ],
+          "important_missing_context": [
+            "Full data table",
+            "Label images",
+            "Objective nutrition thresholds"
+          ],
+          "who_should_watch": [
+            "Consumers comparing ice creams in India"
+          ],
+          "who_can_skip": [
+            "Viewers wanting neutral lab-tested rankings"
+          ],
+          "recommended_actions": [
+            "Check current product type, sugar, fat, stabilizers, and serving size."
+          ],
+          "questions_left_unanswered": [
+            "Which products changed formulas after publication?",
+            "How do alternatives compare nutritionally per serving?"
+          ],
+          "contradictions_or_doubts": [
+            "Homemade alternatives may still be calorie-dense."
+          ],
+          "comparison_opportunities": [
+            "Compare with FSSAI labels and independent nutrition databases."
+          ],
+          "overall_score": {
+            "score": 7,
+            "scale": 10,
+            "reason": "Practical and detailed, but promotional and label-dependent."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+          ]
+        }
+      }
+    },
+    {
+      "video_id": "jwmNjJgZanM",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "metadata",
+          "segment_ids": []
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+          "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+          "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Quick Homemade Ice Cream Recipes Without a Refrigerator",
+          "short_title": "5-Minute Ice Cream",
+          "reason": "Names the recipe format and equipment claim."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Homemade healthier ice cream recipes using quick methods",
+          "secondary_topics": [
+            "market ice cream criticism",
+            "chocolate ice cream",
+            "mango ice cream",
+            "summer desserts",
+            "no refrigerator method"
+          ],
+          "category": "Health",
+          "subcategory": "Healthy recipes",
+          "keywords": [
+            "5 minute ice cream",
+            "homemade ice cream",
+            "without refrigerator",
+            "healthy ice cream",
+            "chocolate ice cream",
+            "mango ice cream"
+          ],
+          "canonical_tags": [
+            "homemade ice cream",
+            "healthy dessert",
+            "recipe",
+            "summer"
+          ],
+          "search_queries": [
+            "Fit Tuber 5 minute ice cream without refrigerator healthy tasty"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "The video criticizes market ice creams for sugar and chemical ingredients, then offers quick homemade ice-cream recipes that it says can be made in under 10 minutes without a refrigerator. The transcript indicates variants such as chocolate, mango, and other dessert flavors and frames them as healthier without compromising taste. The practical recipe concept is useful, but claims that commercial ice creams contain chemicals enough to bring deadly diseases are severe and not supported by external evidence in the package.",
+          "key_takeaways": [
+            "The usable content is quick homemade dessert preparation.",
+            "The source's criticism of market ice cream is health-risk heavy and should be externally verified.",
+            "Recipe value is separate from the claim that homemade versions are categorically healthy.",
+            "No-refrigerator method details should be checked directly before relying on the recipe."
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata:original_title_and_description"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This older Fit Tuber recipe video combines processed-food criticism with fast summer dessert recipes. It teaches homemade alternatives to market ice cream, including chocolate and mango versions, and ends with engagement prompts.",
+          "sections": [
+            {
+              "heading": "Market ice cream critique",
+              "summary": "The source says commercial ice creams contain sugar and chemicals and frames them as potentially harmful.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Homemade recipes",
+              "summary": "The video introduces quick homemade chocolate, mango, and other ice-cream-style recipes without a refrigerator.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "heading": "Close",
+              "summary": "The creator asks viewers which variant they will try and invites requests for homemade summer drinks.",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "limitations": [
+            "The package supplies transcript and metadata but not product labels, lab tests, or external nutrition evidence for verification.",
+            "Canonical timestamps are unusable for reliable timed chapters or clips."
+          ]
+        },
+        "timeline_sections.v3": {
+          "status": "unavailable",
+          "reason": "No validated nonzero canonical timestamps are supplied.",
+          "sections": []
+        },
+        "entities.v2": {
+          "people": [
+            "Vivek Mittal"
+          ],
+          "organizations": [
+            "Fit Tuber"
+          ],
+          "products": [],
+          "places": [
+            "India"
+          ],
+          "medical_or_scientific_terms": [
+            "artificial ingredients",
+            "sugar",
+            "homemade alternative"
+          ],
+          "foods_or_ingredients": [
+            "ice cream",
+            "chocolate ice cream",
+            "mango ice cream"
+          ],
+          "source_basis": [
+            "canonical_transcript:s00001",
+            "metadata"
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "claim": "Market ice cream is made with chemicals enough to cause deadly diseases.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "Homemade recipes can be healthier, tasty, and ready in under 10 minutes without a refrigerator.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            },
+            {
+              "claim": "The recipes do not compromise on taste.",
+              "risk_level": "medium",
+              "verification_need": "external_verification_required",
+              "source_basis": [
+                "canonical_transcript:s00001"
+              ]
+            }
+          ],
+          "safety_warnings": [
+            "Homemade desserts still need food-safety handling, allergy awareness, and portion control."
+          ],
+          "medical_disclaimer": "This summarizes source claims about food products and health only; it is not nutrition or medical advice.",
+          "confidence_notes": [
+            "Product rankings depend on the labels and criteria described by the source; no independent label verification is supplied."
+          ]
+        },
+        "viewer_comment_intelligence.v2": {
+          "comment_count": 0,
+          "included_count": 0,
+          "clusters": [],
+          "limitations": [
+            "No structured viewer comments were supplied."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "status": "unavailable",
+          "reason": "Validated canonical timestamps are unavailable.",
+          "clips": []
+        },
+        "evidence_assessment.v1": {
+          "evidence_grade": "A",
+          "transcript_quality": "complete single-segment transcript",
+          "strengths": [
+            "Clear product/recipe topic and source criteria are present.",
+            "Transcript supports semantic summary and claim extraction."
+          ],
+          "weaknesses": [
+            "No original product label scans or lab evidence included.",
+            "Commercial sponsorship/affiliate context exists.",
+            "Canonical timing is unusable."
+          ],
+          "confidence": "medium",
+          "source_conflicts": []
+        },
+        "video_intake.v1": {
+          "actual_subject": "A quick homemade ice-cream recipe video positioned as a healthier alternative to commercial ice cream.",
+          "strongest_takeaway": "The most reliable value is the recipe idea, not the broad disease claim about commercial ice cream.",
+          "strengths": [
+            "Practical and quick dessert format.",
+            "Multiple flavor variants."
+          ],
+          "weaknesses": [
+            "Health-risk claims are overstated.",
+            "Transcript excerpt does not preserve complete ingredient quantities in this summary."
+          ],
+          "worth_keeping": "maybe",
+          "worth_rewatching": "maybe"
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "Worth keeping for recipe inspiration, but the health messaging is too dramatic. Use it as a dessert method and verify ingredient ratios from the original.",
+          "bottom_line": "Recipe useful; commercial-ice-cream danger claims need evidence.",
+          "what_is_new_or_distinctive": [
+            "No-refrigerator quick method",
+            "Healthy dessert positioning"
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Useful if the recipe steps are followed from the source video."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "Recipe claims are source-supported; health danger claims are not independently verified."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Engagement request for future videos",
+            "Anti-market-food framing"
+          ],
+          "important_missing_context": [
+            "Full recipe quantities in structured form",
+            "Nutrition comparison",
+            "Evidence for disease claims"
+          ],
+          "who_should_watch": [
+            "Viewers wanting fast homemade dessert ideas"
+          ],
+          "who_can_skip": [
+            "Viewers seeking objective product safety analysis"
+          ],
+          "recommended_actions": [
+            "Verify ingredients and chilling method before preparing.",
+            "Treat homemade desserts as occasional foods too."
+          ],
+          "questions_left_unanswered": [
+            "What are exact ingredient quantities for each flavor?",
+            "How does the no-refrigerator method maintain texture and safety?"
+          ],
+          "contradictions_or_doubts": [
+            "No-refrigerator ice cream may differ from conventional texture."
+          ],
+          "comparison_opportunities": [
+            "Compare with tested homemade ice cream recipes and nutrition data."
+          ],
+          "overall_score": {
+            "score": 6,
+            "scale": 10,
+            "reason": "Useful recipe content, weak health substantiation."
+          }
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "checks": [
+            "exact video_id preserved",
+            "all requested features populated",
+            "transcript-derived conclusions grounded to s00001",
+            "no invented timestamps",
+            "no duplicate video IDs"
+          ],
+          "warnings": [
+            "Canonical transcript is supplied as one segment only, so transcript-derived conclusions cite s00001.",
+            "Canonical duration and segment timestamps are zero; timeline and same-topic clips are unavailable.",
+            "Ingredient, health-risk, product-ranking, and sponsor-related claims are source claims requiring external verification."
+          ]
         }
       }
     }
