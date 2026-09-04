@@ -1,0 +1,1255 @@
+{
+  "package_id": "vh_full_intelligence_20260904_090659_d63057",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "EExc6X58BTU",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium_high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Fit Tuber One Million Subscriber Q&A",
+          "short_title": "One Million Q&A",
+          "reason": "The video is a creator Q&A about Vivek Mittal, Fit Tuber, channel origins, personal life, work, and audience relationship."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Creator milestone Q&A and personal background",
+          "secondary_topics": [
+            "channel origin",
+            "personal biography",
+            "fitness philosophy",
+            "audience gratitude"
+          ],
+          "category": "Entertainment",
+          "subcategory": "Creator Q&A",
+          "keywords": [
+            "Fit Tuber",
+            "Vivek Mittal",
+            "Q&A",
+            "one million subscribers",
+            "personal life",
+            "YouTube channel"
+          ],
+          "canonical_tags": [
+            "creator q&a",
+            "fit tuber",
+            "vivek mittal",
+            "youtube milestone",
+            "personal update",
+            "channel origin",
+            "fitness philosophy",
+            "audience community"
+          ],
+          "search_queries": [
+            "Fit Tuber one million Q&A Vivek Mittal",
+            "Who is FitTuber personal life qualifications marital status"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "This Q&A marks Fit Tuber crossing one million subscribers and focuses on the creator rather than a fitness topic. Vivek Mittal says he is 29, from Bathinda, working in Kakinada, and studied information technology before working at Infosys. He says he is not a certified nutritionist but has read extensively on modern nutrition and Ayurveda. He explains that Fit Tuber began because he saw a gap for common-man fitness content beyond bodybuilding, says he scripts, shoots, and edits the channel himself, and frames the audience as part of the channel identity. He also discusses being single, earning more than at Infosys, feeling low, acting in videos, vegetarianism, and speaking Telugu/Punjabi lines.",
+          "key_takeaways": [
+            "The video is primarily personal and channel-background content, not fitness instruction.",
+            "Vivek presents himself as an engineer and self-taught fitness/Ayurveda learner, not a certified nutritionist.",
+            "The channel is framed as common-man fitness rather than bodybuilding content.",
+            "He says he personally handles scripting, filming, and editing at this stage.",
+            "Audience comments and support are described as emotionally important to him."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video opens as a thank-you Q&A after Fit Tuber crosses one million subscribers. Vivek Mittal describes his personal background: age 29, from Bathinda in Punjab, working in Kakinada, with a BTech in information technology and past work at Infosys. He explicitly states he is not a certified nutritionist, while saying he has read many books on modern nutrition science and Ayurveda. The origin story for Fit Tuber is that he noticed most YouTube fitness channels focused on bodybuilding while many viewers wanted accessible fitness for ordinary people. He advises new YouTubers to focus on content before buying expensive equipment, citing his own early videos shot with limited gear. A humorous team-introduction bit reveals that he scripts, shoots, and edits the channel himself. Personal answers include being single, not planning marriage, earning more than his Infosys salary but warning against starting YouTube only for money, using audience comments to lift his mood, having theater experience without an acting-career goal, becoming fully vegetarian, and trying Telugu/Punjabi lines. The video closes with gratitude and a promise to keep producing content to the best of his ability.",
+          "sections": [
+            {
+              "heading": "Personal background",
+              "summary": "Vivek gives age, hometown, education, job, and self-education context.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Channel origin",
+              "summary": "He says Fit Tuber was created to fill a gap for common-man fitness content beyond bodybuilding.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Work process and audience",
+              "summary": "He describes doing scripting, shooting, and editing himself and says audience comments motivate him.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Personal updates",
+              "summary": "He talks about being single, income, acting, vegetarianism, and language attempts.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "For new YouTubers, his advice is to focus on content before spending heavily on equipment.",
+            "He distinguishes personal reading from formal nutrition certification.",
+            "He frames audience support as part of the Fit Tuber identity."
+          ],
+          "limitations": [
+            "Claims are personal self-report and not independently verified.",
+            "Some transcript portions are garbled or contain music-only blanks.",
+            "Formal canonical timestamps are zero-duration."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Vivek Mittal",
+              "type": "person",
+              "context": "Creator behind Fit Tuber and subject of the Q&A.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "YouTube channel discussed in the milestone Q&A.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Bathinda",
+              "type": "place",
+              "context": "Creator's stated hometown.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Kakinada",
+              "type": "place",
+              "context": "Place where he says he is working/living.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Infosys",
+              "type": "organization",
+              "context": "Former employer mentioned by the creator.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Indraprastha University Delhi",
+              "type": "organization",
+              "context": "Stated BTech institution, with transcript spelling uncertainty.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Knowledge area the creator says he studies and values.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "Vivek Mittal is 29, from Bathinda, working in Kakinada, and studied information technology before working at Infosys.",
+              "claim_type": "biographical",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "He is not a certified nutritionist but has read dozens of books on modern nutrition science and Ayurveda.",
+              "claim_type": "credential",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "He scripts, shoots, and edits the Fit Tuber videos himself at this stage.",
+              "claim_type": "production",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "He believes Ayurveda is more accurate than modern nutrition science.",
+              "claim_type": "opinion",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "He has been completely vegetarian for one year at the time of recording.",
+              "claim_type": "biographical",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "The creator explicitly says he is not a certified nutritionist, so health guidance from the channel should be interpreted with that limitation.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Claims comparing Ayurveda and modern nutrition are opinion/source claims, not external validation.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1106,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Praise for humor and acting",
+              "approx_count": 25
+            },
+            {
+              "theme": "Engineer jokes and relatability",
+              "approx_count": 15
+            },
+            {
+              "theme": "Appreciation for self-made workflow",
+              "approx_count": 12
+            },
+            {
+              "theme": "General fan support",
+              "approx_count": 25
+            }
+          ],
+          "agreements": [
+            "Viewers frequently praised the creator's acting and humor.",
+            "Several comments appreciated the self-team reveal."
+          ],
+          "disagreements": [
+            "No strong substantive disagreements are visible in the supplied sample.",
+            "Some comments are jokes rather than analysis."
+          ],
+          "questions": [
+            "How does he manage production alone?",
+            "What is his full background and qualification level?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive",
+            "positive_count_estimate": 65,
+            "neutral_count_estimate": 30,
+            "negative_count_estimate": 5
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A one-million-subscriber Q&A about Fit Tuber's creator, background, channel origin, work process, and personal updates.",
+          "strongest_takeaway": "The creator positions Fit Tuber as a self-run, audience-supported channel for accessible fitness content, while acknowledging he is not a certified nutritionist.",
+          "strengths": [
+            "Direct creator background and channel-origin details.",
+            "Useful context for evaluating later Fit Tuber videos."
+          ],
+          "weaknesses": [
+            "Not an instructional fitness video.",
+            "Claims are self-reported and some transcript text is garbled."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful context for understanding the channel and creator credibility."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This Q&A is valuable as provenance. It tells you who is speaking in later Fit Tuber videos, what the creator claims his limits are, and why the channel emphasizes common-person fitness and Ayurveda. The most important credibility detail is the admission that he is not a certified nutritionist at this point.",
+          "bottom_line": "Keep as creator-context evidence, not as health instruction.",
+          "what_is_new_or_distinctive": [
+            "Early self-run production details.",
+            "Explicit non-certified-nutritionist disclosure."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "It helps interpret the channel but does not solve a health or product problem."
+          },
+          "credibility_assessment": {
+            "level": "mixed",
+            "explanation": "Personal claims are internally coherent but self-reported; credential limits are openly stated."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Creator self-presentation during a subscriber milestone."
+          ],
+          "important_missing_context": [
+            "Independent confirmation of qualifications and work history.",
+            "Broader context on how research is performed."
+          ],
+          "who_should_watch": [
+            "Viewers trying to understand Fit Tuber's background.",
+            "Anyone evaluating the channel's authority."
+          ],
+          "who_can_skip": [
+            "People looking for direct recipe, workout, or product advice."
+          ],
+          "recommended_actions": [
+            "Use this video as channel-context metadata.",
+            "Remember the stated credential limitation when interpreting health claims."
+          ],
+          "questions_left_unanswered": [
+            "What sources does he rely on for health claims?",
+            "How did the channel's production process change later?"
+          ],
+          "contradictions_or_doubts": [
+            "He values Ayurveda over modern nutrition despite acknowledging lack of certification."
+          ],
+          "comparison_opportunities": [
+            "Compare with later Q&A videos as the channel grows."
+          ],
+          "overall_score": {
+            "score_0_to_100": 72,
+            "explanation": "Good creator-context value, limited practical instruction."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "The evidence supports summarizing self-reported creator background, not verifying it."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "QC10nmqfekc",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium_high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Fit Tuber Two Million Subscriber Q&A",
+          "short_title": "Two Million Q&A",
+          "reason": "The video updates viewers on personal life, legal pressure, Patreon support, research plans, and channel direction."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Creator update on channel growth, legal issues, research, and personal life",
+          "secondary_topics": [
+            "Patreon funding",
+            "legal notices",
+            "YouTube research process",
+            "traditional Indian food"
+          ],
+          "category": "Entertainment",
+          "subcategory": "Creator Q&A",
+          "keywords": [
+            "Fit Tuber",
+            "Q&A",
+            "legal notices",
+            "Patreon",
+            "research",
+            "two million subscribers",
+            "personal life"
+          ],
+          "canonical_tags": [
+            "creator q&a",
+            "fit tuber",
+            "youtube milestone",
+            "legal pressure",
+            "patreon",
+            "channel funding",
+            "research process",
+            "personal update",
+            "traditional food"
+          ],
+          "search_queries": [
+            "FitTuber 2 million Q&A legal battles Patreon",
+            "Fit Tuber QNA legal battles marriage behind the scenes"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "This Q&A follows Fit Tuber crossing two million subscribers and gives a more operational update than the one-million video. Vivek says he has taken a sabbatical from his job, moved to Delhi, and is more consumed by running two channels. He jokes about being single and says marriage is on hold. He says the worst-to-best series led to video removals, legal notices, court humiliation, and fear, but he still stands by his videos. He explains a goal of deeper product research, including lab testing when possible, and starts Patreon support to fund lab testing, research, and litigation. He also discusses English practice, traditional Indian food, research methods, motivation, happiness, future desires, and a creator challenge.",
+          "key_takeaways": [
+            "The creator says he moved closer to full-time YouTube work after two million subscribers.",
+            "He reports legal pressure from brands over worst-to-best videos.",
+            "Patreon is framed as funding research, lab testing, and litigation rather than exclusive core content.",
+            "He says he researches through fieldwork, experts, Ayurveda texts, and product learning.",
+            "He rejects bland fitness dieting and says he usually eats authentic traditional Indian foods."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This video is a second milestone Q&A after the Fit Tuber community crosses two million subscribers. It begins with personal changes: Vivek says he took a sabbatical from his job, moved to Delhi, and became more occupied with two channels. He jokes about love life and says he is happily single and marriage is on hold. A major section addresses the worst-to-best series: he claims there have been five video removals, three legal notices, a humiliating episode at the Bombay High Court, and serious fear, but says he stands by what he said. The future-plan section explains an ambition to go beyond ingredient lists, including lab testing, while noting that lab testing can cost lakhs. He launches Patreon/Fit Tuber Club, saying funds will be used for research, lab testing, and fighting litigation while Fit Tuber content remains free. Other answers cover English fluency through practice, rejecting the idea that fitness requires bland non-Indian food, childhood photos, research through books, field visits, experts, Ayurveda, and product learning, and motivation from viewer comments. The video ends with reflections on happiness through giving, modest future desires, a Telugu attempt, and gratitude.",
+          "sections": [
+            {
+              "heading": "Personal changes",
+              "summary": "He says he took a sabbatical, moved to Delhi, and is busier with two channels.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Legal and brand pressure",
+              "summary": "He describes removals, legal notices, court humiliation, and fear related to worst-to-best videos.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Funding and research",
+              "summary": "Patreon is introduced as support for lab testing, research, and litigation while ordinary content remains free.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Personal philosophy",
+              "summary": "He discusses traditional food, research habits, happiness, and future desires.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "He advises against starting YouTube only for money.",
+            "He says product lab testing is expensive and one reason certain requested videos were delayed.",
+            "He frames authentic traditional Indian recipes, local fruits, and vegetables as his personal norm."
+          ],
+          "limitations": [
+            "Legal and financial claims are self-reported.",
+            "Some transcript text is garbled, especially jokes and multilingual portions.",
+            "Formal canonical timestamps are zero-duration."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Vivek Mittal",
+              "type": "person",
+              "context": "Creator answering Q&A questions.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "Channel and community discussed in the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Patreon",
+              "type": "organization",
+              "context": "Support platform launched for research and litigation funding.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Fit Tuber Club",
+              "type": "organization",
+              "context": "Supporter initiative named by the creator.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Bombay High Court",
+              "type": "organization",
+              "context": "Court referenced in the source's legal-pressure discussion.",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Delhi",
+              "type": "place",
+              "context": "Place the creator says he recently moved to.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Knowledge source he says he researches.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "The creator took a sabbatical from his job and moved to Delhi after the previous Q&A.",
+              "claim_type": "biographical",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Worst-to-best videos led to five video removals, three legal notices, a humiliating High Court episode, and severe pressure.",
+              "claim_type": "legal",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Patreon funds would solely be used for video research, lab testing, and litigation.",
+              "claim_type": "financial",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Lab testing some products costs in lakhs.",
+              "claim_type": "financial",
+              "verification_status": "source_claim_only",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Traditional Indian recipes, local fruits, and vegetables can be part of a healthy fitness lifestyle according to the source.",
+              "claim_type": "nutrition",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Ancient Ayurvedic texts are much more accurate and enough for the source's purposes.",
+              "claim_type": "opinion",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Legal, funding, and litigation statements are consequential but self-reported.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Nutrition and Ayurveda claims require external evidence before being used as health guidance.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1140,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Requests for future product tests such as milk, honey, probiotics, and gaumutra",
+              "approx_count": 20
+            },
+            {
+              "theme": "Support for the creator and congratulations",
+              "approx_count": 25
+            },
+            {
+              "theme": "Marriage and personal-life jokes",
+              "approx_count": 20
+            },
+            {
+              "theme": "Questions about products and protein powder",
+              "approx_count": 10
+            }
+          ],
+          "agreements": [
+            "Viewers congratulated the channel and praised his humility.",
+            "Many comments accepted Patreon as a route for requested research topics."
+          ],
+          "disagreements": [
+            "The supplied sample contains little direct dispute, but several comments push unrelated future topics.",
+            "Some personal-life jokes are not substantive feedback."
+          ],
+          "questions": [
+            "When will packet milk or honey videos be made?",
+            "Which protein powder does he use?",
+            "Will he cover probiotics or gaumutra?"
+          ],
+          "useful_corrections": [],
+          "sentiment": {
+            "overall": "positive",
+            "positive_count_estimate": 58,
+            "neutral_count_estimate": 37,
+            "negative_count_estimate": 5
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A two-million-subscriber creator Q&A about personal changes, legal pressure, research funding, and channel plans.",
+          "strongest_takeaway": "The creator presents Patreon as a way to fund more rigorous product testing and defend against legal pressure while keeping videos free.",
+          "strengths": [
+            "Reveals operational constraints behind product-review content.",
+            "Explains research ambitions and funding rationale."
+          ],
+          "weaknesses": [
+            "Legal and funding claims are not independently verified.",
+            "Not a direct health/product guide."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for understanding why later product-comparison videos may cite testing or face legal constraints."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is the most revealing of the Q&A set for understanding Fit Tuber as a project. It explains the pressure around product-ranking content and why the creator wants funding for lab tests. The useful takeaway is operational transparency; the caution is that all legal and funding claims are self-reported and should not be treated as adjudicated fact.",
+          "bottom_line": "Keep as context for Fit Tuber's product-review strategy and funding pitch.",
+          "what_is_new_or_distinctive": [
+            "Legal-pressure account around worst-to-best videos.",
+            "Patreon framed as research and litigation support."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "Helpful for interpreting the channel's business and research model."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The creator gives specifics, but the package contains no external corroboration."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Supporter funding appeal.",
+            "Creator defense of his own review work."
+          ],
+          "important_missing_context": [
+            "Court records or notices.",
+            "Transparent accounting for Patreon funds.",
+            "Examples of completed lab testing."
+          ],
+          "who_should_watch": [
+            "Viewers invested in Fit Tuber's product-comparison series.",
+            "People evaluating channel independence."
+          ],
+          "who_can_skip": [
+            "Viewers looking only for health recipes or workouts."
+          ],
+          "recommended_actions": [
+            "Treat this as channel-context material.",
+            "Seek external records before citing legal claims as fact."
+          ],
+          "questions_left_unanswered": [
+            "Which brands sent notices?",
+            "How were Patreon funds ultimately used?"
+          ],
+          "contradictions_or_doubts": [
+            "The creator wants higher research standards but also relies heavily on Ayurveda and field learning."
+          ],
+          "comparison_opportunities": [
+            "Compare with later videos for evidence of lab-tested claims."
+          ],
+          "overall_score": {
+            "score_0_to_100": 76,
+            "explanation": "Strong context value for the channel's direction, with self-report limitations."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "The package supports summarizing what the creator says about legal and funding issues, not verifying those events."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
+          "repair_attempts": 0
+        }
+      }
+    },
+    {
+      "video_id": "n-YuK_bV8kw",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "medium_high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": [
+            "s00001"
+          ]
+        },
+        {
+          "source": "structured_comments",
+          "segment_ids": []
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+          "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+          "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Fit Tuber Three Million Family Q&A",
+          "short_title": "Three Million Family Q&A",
+          "reason": "The video is a three-million-subscriber Q&A featuring family background, education updates, sponsorship approach, and channel plans."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Creator family Q&A and channel expansion update",
+          "secondary_topics": [
+            "family background",
+            "certification and education",
+            "regional language plans",
+            "sponsorship standards"
+          ],
+          "category": "Entertainment",
+          "subcategory": "Creator Q&A",
+          "keywords": [
+            "Fit Tuber",
+            "three million subscribers",
+            "family",
+            "ISSA",
+            "Ayurveda",
+            "sponsorship",
+            "regional languages"
+          ],
+          "canonical_tags": [
+            "creator q&a",
+            "fit tuber",
+            "family introduction",
+            "youtube milestone",
+            "creator education",
+            "sponsorship policy",
+            "regional language",
+            "ayurveda"
+          ],
+          "search_queries": [
+            "FitTuber 3 million Q&A meet my family",
+            "Fit Tuber family parents reaction sponsorship Q&A"
+          ]
+        },
+        "executive_summary.v2": {
+          "summary": "This three-million-subscriber Q&A introduces more family context and channel direction. Vivek says he had kept his family hidden due to threats and legal issues, then describes his father as a civil engineer and yoga influence, his mother as an economics teacher and support system, and his younger brother as his IT help. He discusses what he might have done without YouTube, credits viewers and supporters for making intensive research videos possible, performs mimicry for fun, and says he has completed a certified nutritionist credential and is working on an ISSA fitness-coach certification while continuing Ayurveda study. He responds to criticism of Ayurveda, performs a push-up challenge, discusses regional-language plans, parent reactions, sponsorship standards, marriage jokes, and gratitude.",
+          "key_takeaways": [
+            "The video adds family and support-system context for the creator.",
+            "Vivek says legal threats influenced why family details were previously hidden.",
+            "He claims progress in modern-science credentials while continuing Ayurveda study.",
+            "He wants Fit Tuber content to expand into regional languages.",
+            "He says sponsorship choices prioritize ingredients and perceived product genuineness."
+          ],
+          "source_basis": [
+            "canonical transcript segment s00001",
+            "structured comments sample"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "This Q&A follows Fit Tuber reaching three million subscribers and is built around family, creator growth, and channel direction. Vivek says he had avoided sharing family details due to threats and legal issues, then describes his father as a civil engineer from Thapar University Patiala who practices yoga and influenced his learning, his mother as an economics teacher and major support, and his younger brother as the person who helps with IT. He credits viewers, subscribers, and Patreon supporters for enabling more intensive research videos, and mentions channel memberships for monthly Q&A access and polls. A lighter section includes mimicry of other YouTubers and a push-up challenge. On knowledge, he says he has strengthened the modern-science side by completing a certified nutritionist credential and being in the last stage of an International Sports Sciences Association fitness-coach certification, while also spending hours weekly on Ayurvedic scriptures. He responds to accusations of pseudoscience by asking people to try Ayurveda for themselves. Later he expresses a goal of spreading health and fitness information through regional languages, describes parents as supportive, explains that sponsorship selection focuses on ingredients and genuine value, promotes Mamaearth BhringAmla hair mask, jokes about marriage, and thanks viewers.",
+          "sections": [
+            {
+              "heading": "Family and safety context",
+              "summary": "He introduces family roles while saying threats and legal issues shaped his earlier privacy.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Education and knowledge",
+              "summary": "He claims nutrition and fitness certifications plus ongoing Ayurveda study.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Channel future",
+              "summary": "He discusses regional language expansion and viewer-supported research videos.",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "heading": "Sponsorship and gratitude",
+              "summary": "He says sponsorships are chosen cautiously by ingredients and value, then promotes Mamaearth hair mask.",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "practical_details": [
+            "He says his goal is to launch Fit Tuber content in regional languages using native speakers.",
+            "He says sponsorship screening focuses on ingredient quality rather than brand name.",
+            "Channel joins are described as offering monthly Q&As and polls."
+          ],
+          "limitations": [
+            "Family, threat, legal, certification, and sponsorship claims are self-reported.",
+            "Some transcript text is garbled, especially mimicry and multilingual portions.",
+            "Formal canonical timestamps are zero-duration."
+          ]
+        },
+        "timeline_sections.v3": {
+          "sections": []
+        },
+        "entities.v2": {
+          "entities": [
+            {
+              "name": "Vivek Mittal",
+              "type": "person",
+              "context": "Creator answering the three-million-subscriber Q&A.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Fit Tuber",
+              "type": "organization",
+              "context": "Channel/community discussed in the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Thapar University Patiala",
+              "type": "organization",
+              "context": "Father's stated alma mater, according to creator.",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "International Sports Sciences Association",
+              "type": "organization",
+              "context": "Certification body the creator says he is pursuing through.",
+              "confidence": "medium_high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Ayurveda",
+              "type": "concept",
+              "context": "Knowledge tradition he defends and says he studies weekly.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "name": "Mamaearth BhringAmla Hair Mask",
+              "type": "product",
+              "context": "Sponsor product promoted in the video.",
+              "confidence": "high",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ]
+        },
+        "claims_warnings.v2": {
+          "claims": [
+            {
+              "text": "The creator kept family members hidden because of threats and legal issues.",
+              "claim_type": "safety",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "His father is a civil engineer and Thapar University Patiala alumnus who influenced his yoga learning.",
+              "claim_type": "biographical",
+              "verification_status": "source_claim_only",
+              "severity": "informational",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "He completed a certified nutritionist credential and was in the last stage of an ISSA fitness coach certification.",
+              "claim_type": "credential",
+              "verification_status": "source_claim_only",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "He spends at least several hours weekly studying Ayurvedic scriptures.",
+              "claim_type": "process",
+              "verification_status": "source_claim_only",
+              "severity": "low",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Ayurveda can be experienced as a healing science if applied personally, according to the source.",
+              "claim_type": "medical",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "low",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Mamaearth BhringAmla hair mask is free from harsh chemicals and provides genuine value according to the source.",
+              "claim_type": "product",
+              "verification_status": "needs_external_verification",
+              "severity": "medium",
+              "confidence": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "warnings": [
+            {
+              "text": "Certification, threat, and family claims are self-reported and should not be used as verified biography without corroboration.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "The sponsored Mamaearth hair-mask claims are commercial product claims requiring external verification.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            },
+            {
+              "text": "Medical-style statements about Ayurveda are not externally verified by this package.",
+              "severity": "medium",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "overall_risk": "medium"
+        },
+        "viewer_comment_intelligence.v2": {
+          "total_comments": 1125,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "themes": [
+            {
+              "theme": "Praise for mimicry and humorous side",
+              "approx_count": 25
+            },
+            {
+              "theme": "Support for Ayurveda and concern about threats/legal issues",
+              "approx_count": 15
+            },
+            {
+              "theme": "Family curiosity and reactions",
+              "approx_count": 15
+            },
+            {
+              "theme": "General fan affection and congratulations",
+              "approx_count": 25
+            }
+          ],
+          "agreements": [
+            "Viewers enjoyed seeing the creator's lighter, entertaining side.",
+            "Some comments sympathized with threats and legal issues mentioned by the creator."
+          ],
+          "disagreements": [
+            "A few comments warned that family details could still be found, reflecting privacy concerns.",
+            "No supplied comment independently verifies credential or product claims."
+          ],
+          "questions": [
+            "How will regional-language expansion work?",
+            "What exact certifications has he completed?"
+          ],
+          "useful_corrections": [
+            "One comment notes that mentioning father's alumni background may make family identity easier to search, a privacy-relevant observation."
+          ],
+          "sentiment": {
+            "overall": "positive",
+            "positive_count_estimate": 62,
+            "neutral_count_estimate": 33,
+            "negative_count_estimate": 5
+          },
+          "limitations": [
+            "Comments are audience-generated and are not factual verification.",
+            "Only the supplied deterministic comment sample was analyzed.",
+            "Several records include metadata/header lines rather than substantive comments."
+          ]
+        },
+        "same_topic_clip_plan.v1": {
+          "clips": [],
+          "selection_rationale": "No clips selected because package-level canonical segment timing is zero-duration even though timestamps appear inside transcript text.",
+          "total_selected_duration_seconds": 0
+        },
+        "evidence_assessment.v1": {
+          "grade": "A",
+          "completeness": "complete",
+          "source_consistency": "consistent",
+          "conflicts": [],
+          "limitations": [
+            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          ]
+        },
+        "video_intake.v1": {
+          "actual_subject": "A three-million-subscriber Fit Tuber Q&A about family, qualifications, Ayurveda criticism, regional-language plans, sponsorships, and gratitude.",
+          "strongest_takeaway": "The creator presents himself as broadening his credentials and reach while keeping Ayurveda central and being cautious about sponsorships.",
+          "strengths": [
+            "Adds family and education context.",
+            "Shows channel direction and sponsorship philosophy."
+          ],
+          "weaknesses": [
+            "Contains self-reported credential and safety claims.",
+            "Includes sponsored product claims.",
+            "Not directly instructional."
+          ],
+          "worth_keeping": "yes",
+          "worth_rewatching": "unknown",
+          "reason": "Useful for tracking the creator's claimed evolution from self-taught to more formally credentialed."
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "This is a useful later checkpoint in Fit Tuber's creator story: family enters the picture, formal education claims become more prominent, and the channel's regional-language ambitions are stated. The most important caveat is that the video blends transparency, brand promotion, and defense of Ayurveda, so it should be read as creator self-presentation rather than neutral biography.",
+          "bottom_line": "Keep as milestone context, especially for claimed credentials and channel plans.",
+          "what_is_new_or_distinctive": [
+            "Family-background introduction after previous privacy concerns.",
+            "Claimed movement toward nutrition and fitness certifications.",
+            "Regional-language expansion plan."
+          ],
+          "practical_value": {
+            "level": "medium",
+            "explanation": "It helps understand the channel's trust signals and future direction."
+          },
+          "credibility_assessment": {
+            "level": "uncertain",
+            "explanation": "The creator gives specifics, but the package does not verify credentials, threats, or sponsor claims."
+          },
+          "evidence_strength": "medium",
+          "possible_bias_or_agenda": [
+            "Subscriber milestone self-presentation.",
+            "Channel-membership and sponsor promotion."
+          ],
+          "important_missing_context": [
+            "Certificate names and dates.",
+            "Evidence of regional-language rollout.",
+            "Independent assessment of sponsor product ingredients."
+          ],
+          "who_should_watch": [
+            "Viewers tracking Fit Tuber's evolution.",
+            "People evaluating creator authority and sponsorship policy."
+          ],
+          "who_can_skip": [
+            "People only seeking direct health advice or recipes."
+          ],
+          "recommended_actions": [
+            "Use for channel-context metadata.",
+            "Verify credentials and product claims externally before citing them."
+          ],
+          "questions_left_unanswered": [
+            "Which certification was completed exactly?",
+            "How are sponsored products vetted beyond ingredient claims?"
+          ],
+          "contradictions_or_doubts": [
+            "The creator seeks modern-science credibility while defending Ayurveda through personal experience rather than external proof."
+          ],
+          "comparison_opportunities": [
+            "Compare to the one-million and two-million Q&As to track changing qualifications and business model."
+          ],
+          "overall_score": {
+            "score_0_to_100": 74,
+            "explanation": "Good creator-context and evolution value, limited by self-report and sponsor content."
+          },
+          "keep_priority": "medium",
+          "rewatch_sections": [],
+          "interpretation_limits": "The package supports source-grounded creator-context extraction, not independent biography or product verification."
+        },
+        "quality_validation.v1": {
+          "status": "PASS_WITH_WARNINGS",
+          "warnings": [
+            "Canonical transcript content is usable, but each video is represented as one segment with start/end timestamps of 00:00:00; timestamp-dependent clips and rewatch sections are therefore left empty.",
+            "Biographical, legal, professional, family, income, certification, and sponsorship statements are source claims from the creator and are not independently verified in the package.",
+            "Transcript source is labeled no_transcript in the package assessment despite canonical transcript text being supplied; content fields cite the supplied canonical segment while noting this metadata inconsistency."
+          ],
+          "cross_feature_consistency": "All transcript-derived conclusions cite s00001; timestamp-dependent fields are empty because formal canonical timestamps are invalid.",
+          "repair_attempts": 0
+        }
+      }
+    }
+  ]
+}
