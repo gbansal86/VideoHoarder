@@ -1,0 +1,173 @@
+{
+  "package_id": "vh_full_intelligence_20260905_162920_bbb660",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "6rVeXkayn8Q",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "high",
+      "evidence_references": [
+        {
+          "source": "canonical_transcript",
+          "segment_ids": ["s00001"]
+        }
+      ],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Package metadata reports duration_seconds as 0.0 and the transcript is collapsed into a single canonical segment, so timeline boundaries rely on timestamps embedded in the transcript and video description.",
+          "Health claims in the source are speaker claims and are not independently verified in this package."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "5 Clothing Mistakes to Avoid: Synthetic Fibres, Tight Clothes, Unnecessary Masking, Wrong Undergarments and Heavy Handbags",
+          "short_title": "5 Clothing Mistakes to Avoid",
+          "reason": "The supplied description and transcript explicitly identify the five clothing-related mistakes, so the improved title names them without adding unsupported items."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Everyday clothing habits and health risks",
+          "secondary_topics": [
+            "synthetic fabrics",
+            "tight clothing",
+            "face-mask use",
+            "undergarment choice",
+            "heavy handbags"
+          ],
+          "category": "Health",
+          "subcategory": "Clothing and everyday health risks",
+          "keywords": [
+            "clothing health",
+            "synthetic fibres",
+            "tight clothing",
+            "natural fibres",
+            "undergarments",
+            "heavy handbags",
+            "skin irritation",
+            "circulation"
+          ],
+          "canonical_tags": [
+            "clothing health",
+            "synthetic fibre",
+            "natural fibre",
+            "tight clothing",
+            "face mask",
+            "undergarment",
+            "heavy handbag",
+            "skin irritation",
+            "blood circulation"
+          ],
+          "search_queries": [
+            "health effects of synthetic clothing",
+            "tight clothing circulation skin irritation",
+            "healthy undergarment fabric choices",
+            "heavy handbag posture shoulder strain",
+            "natural fibres versus synthetic fibres clothing"
+          ]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video presents five common clothing-related habits that the speaker argues can negatively affect health: frequent use of synthetic fibres, wearing very tight clothing, wearing a face mask unnecessarily in private or low-risk situations, choosing unsuitable undergarments, and carrying very heavy handbags. The recurring practical theme is to reduce prolonged skin contact with restrictive or heavily processed materials when reasonable, favour breathable natural fibres for everyday wear, and avoid clothing or accessories that create unnecessary pressure or load. The source mixes practical advice with broad health claims, so the strongest value of the video is as a checklist of habits to examine rather than as definitive medical guidance.",
+          "sections": [
+            {
+              "heading": "Synthetic fibres and everyday exposure",
+              "summary": "The speaker begins by describing synthetic fibres such as nylon, polyester, acrylic, spandex and Lycra as petroleum-derived materials valued for durability, stretch and low cost. He argues that treatments used for wrinkle resistance, water resistance, stain resistance and flame resistance can introduce chemical exposure and that close skin contact may contribute to irritation or other health concerns. He recommends natural fibres such as cotton, linen, wool, hemp and bamboo for routine clothing when practical, while acknowledging that synthetic fabrics may still be useful for activewear.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Tight clothing and prolonged compression",
+              "summary": "The next concern is clothing that is excessively tight, including shapewear, skinny jeans, tight belts and tight ties. The speaker links prolonged compression with reduced circulation, nerve pressure, tingling, numbness, discomfort and skin problems, especially when tight garments are also synthetic. The practical takeaway is not that fitted clothing must always be avoided, but that sustained tightness or discomfort should not be treated as normal.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Face-mask use in private settings",
+              "summary": "The source lists wearing a face mask in private as the third mistake. This advice reflects the video's 2022 context and should be interpreted cautiously because appropriate mask use depends on infection risk, ventilation, individual vulnerability and current public-health guidance. The video's broader point is to use protective clothing for a clear purpose rather than by habit when it is unnecessary.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Choosing suitable undergarments",
+              "summary": "The fourth topic is wearing unsuitable undergarments. The video recommends paying attention to material, fit and breathability and avoiding garments that are excessively tight or uncomfortable. This section fits the video's larger emphasis on reducing friction, pressure, trapped moisture and prolonged contact with irritating materials.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "heading": "Heavy handbags and uneven load",
+              "summary": "The final mistake is carrying very large or heavy handbags. The practical concern is repeated loading on one side of the body, which can create shoulder, neck or postural discomfort. A lighter bag, carrying fewer unnecessary items, or using a backpack that distributes weight more evenly is a more practical approach when carrying substantial loads.",
+              "segment_ids": ["s00001"]
+            }
+          ],
+          "practical_details": [
+            "For regular wear, consider breathable natural fibres such as cotton or linen when suitable.",
+            "Avoid clothing that produces sustained pressure, numbness, tingling or significant discomfort.",
+            "Choose undergarments for fit, breathability and comfort rather than appearance alone.",
+            "Reduce unnecessary handbag weight and distribute heavier loads more evenly when possible.",
+            "Treat the video's health-effect claims as claims from the source, not as independently verified medical conclusions."
+          ],
+          "limitations": [
+            "The package does not include independent external verification of the medical and toxicology claims made by the speaker.",
+            "The canonical transcript is represented as one long segment, limiting fine-grained provenance even though timestamps are embedded in the text.",
+            "Package metadata reports a zero duration, so the chapter timing is reconstructed from the supplied description/transcript timestamps.",
+            "Advice about mask use is context-dependent and can change with infection risk and public-health guidance."
+          ],
+          "source_basis": ["canonical_transcript", "video_metadata", "video_description"]
+        },
+        "timeline_sections.v3": {
+          "sections": [
+            {
+              "start_timestamp": "00:00:00",
+              "end_timestamp": "00:00:54",
+              "title": "Introduction: five clothing mistakes",
+              "summary": "The video introduces five common clothing habits that the speaker believes can negatively affect health.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "start_timestamp": "00:00:54",
+              "end_timestamp": "00:03:44",
+              "title": "Synthetic fibres",
+              "summary": "Discussion of synthetic fabrics, chemical treatments, skin contact and the preference for natural fibres in everyday clothing.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "start_timestamp": "00:03:44",
+              "end_timestamp": "00:05:08",
+              "title": "Tight clothing",
+              "summary": "The speaker discusses restrictive garments, circulation, nerve pressure and discomfort from prolonged tightness.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "start_timestamp": "00:05:08",
+              "end_timestamp": "00:06:24",
+              "title": "Face masks in private settings",
+              "summary": "The video presents unnecessary private-setting mask use as another clothing-related habit to reconsider.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "start_timestamp": "00:06:24",
+              "end_timestamp": "00:07:53",
+              "title": "Undergarment choices",
+              "summary": "Focus shifts to fit, fabric and comfort when choosing undergarments.",
+              "segment_ids": ["s00001"]
+            },
+            {
+              "start_timestamp": "00:07:53",
+              "end_timestamp": "00:09:33",
+              "title": "Heavy handbags",
+              "summary": "The final mistake concerns carrying oversized or heavy handbags and the strain caused by uneven load.",
+              "segment_ids": ["s00001"]
+            }
+          ]
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "A useful everyday-habits checklist, but several health claims are broader than what the package independently establishes. The practical advice about comfort, fit, breathable fabrics and avoiding unnecessary heavy loads is more dependable than the stronger disease-risk claims.",
+          "bottom_line": "Keep it for its practical clothing and load-management reminders, while treating the medical claims as unverified source assertions.",
+          "practical_value": "medium",
+          "credibility": "medium",
+          "keep_priority": "medium",
+          "score_0_to_100": 68
+        }
+      }
+    }
+  ]
+}
