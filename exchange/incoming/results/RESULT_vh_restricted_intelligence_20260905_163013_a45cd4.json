@@ -1,0 +1,51 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163013_a45cd4",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "xJNX3sF3fL0",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "D",
+      "confidence": "low",
+      "evidence_references": [{"source":"canonical_transcript","segment_ids":["s00001"]}],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": ["Transcript is partial and almost entirely non-semantic music/vocal fragments, so content-level reconstruction is not reliable.","Summary therefore relies mainly on supplied metadata/description and does not invent individual DIY projects not evidenced in text.","The source itself advises adult supervision and cautions viewers to use judgment when replicating activities."],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {"title":"DIY Creative Upcycled Tools for Home Repairs","short_title":"Upcycled DIY Repair Tools","reason":"The title preserves the clearly supplied subject while avoiding invented project names because the transcript does not identify them."},
+        "taxonomy.v3": {
+          "primary_topic":"DIY upcycled tools and home-repair hacks",
+          "secondary_topics":["repurposing","home improvement","tool hacks","recycling"],
+          "category":"Home",
+          "subcategory":"DIY and making projects",
+          "keywords":["DIY tools","upcycling","home repair","repurpose","tool hacks","recycling"],
+          "canonical_tags":["diy tool","upcycling","home repair","repurpose","tool hack","recycling"],
+          "search_queries":["DIY upcycled home repair tools","repurposed tool hacks","creative DIY repair tools"]
+        },
+        "detailed_summary.v3": {
+          "overview":"The package describes a compilation of creative DIY and upcycled tools intended for common home-repair tasks. The supplied description positions the video as entertainment and practical inspiration for becoming more self-sufficient with household fixes, while also explicitly warning that the activities may be performed by actors in controlled conditions and that viewers should use care, judgment and adult supervision. Because the partial transcript contains almost no meaningful spoken explanation beyond music and short vocal fragments, the package does not support a reliable item-by-item account of the tools or procedures shown. A detailed reconstruction of specific hacks would therefore require visual evidence that is not part of this package.",
+          "sections":[
+            {"heading":"DIY and upcycling theme","summary":"The metadata frames the video around repurposing materials and creating improvised tools for home repair and crafting. Specific projects cannot be safely enumerated from the supplied transcript.","segment_ids":["s00001"]},
+            {"heading":"Safety framing","summary":"The source explicitly states that activities may be performed in controlled environments and advises adult supervision, care and personal judgment before attempting to replicate anything shown.","segment_ids":["s00001"]}
+          ],
+          "practical_details":["Treat the video as visual inspiration rather than a text-complete instruction manual.","Inspect tool integrity, load, heat, cutting and electrical risks before replicating any improvised device.","Use adult supervision where appropriate and prefer purpose-built tools for safety-critical work."],
+          "limitations":["Transcript content is largely unusable for semantic summarization.","No reliable item-by-item steps can be extracted from the supplied evidence.","Visual demonstrations are not available in the package evidence used here."],
+          "source_basis":["video_metadata","video_description","canonical_transcript"]
+        },
+        "timeline_sections.v3": {
+          "sections":[
+            {"start_timestamp":"00:00:00","end_timestamp":"00:04:00","title":"DIY repair-tool montage — opening","summary":"Visual DIY/upcycling demonstrations appear to begin; the transcript provides no semantic detail about the individual projects.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:04:00","end_timestamp":"00:08:02","title":"DIY repair-tool montage — continued","summary":"Additional demonstrations continue under music; the transcript remains non-descriptive.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:08:02","end_timestamp":"00:12:42","title":"DIY repair-tool montage — middle","summary":"The compilation continues, but specific actions cannot be grounded from text evidence.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:12:42","end_timestamp":"00:16:17","title":"DIY repair-tool montage — closing","summary":"Final demonstrations continue through the end of the partial transcript.","segment_ids":["s00001"]}
+          ]
+        },
+        "editorial_assessment.v1": {"chatgpt_take":"Potentially useful as visual DIY inspiration, but this package's transcript is too weak to support a trustworthy textual reconstruction of the actual hacks.","bottom_line":"Keep only if visual review is available later; the current text evidence is insufficient for detailed reuse.","practical_value":"unknown","credibility":"uncertain","keep_priority":"low","score_0_to_100":35}
+      }
+    }
+  ]
+}
