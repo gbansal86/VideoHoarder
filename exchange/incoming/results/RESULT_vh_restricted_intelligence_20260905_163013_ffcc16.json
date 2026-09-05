@@ -1,0 +1,71 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163013_ffcc16",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "Ua0VBPXN5j8",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "D",
+      "confidence": "low",
+      "evidence_references": [{"source":"canonical_transcript","segment_ids":["s00001"]}],
+      "source_conflicts": ["Title/description terms have no clear overlap with the transcript; review source association."],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Transcript is partial and evidence grade is D.",
+          "The package assessment flags a possible mismatch between title/description and transcript content.",
+          "The transcript appears to contain song lyrics or lyric-like translated text, so the summary paraphrases themes instead of reproducing lines.",
+          "Package duration metadata is 0.0; timeline boundaries use the timestamps embedded in the partial transcript."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Children of the 90s — Taare Zameen Par Song Montage",
+          "short_title": "Children of the 90s",
+          "reason": "The title preserves the supplied metadata while avoiding unsupported claims about specific visuals because the package itself reports a possible source-association conflict."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Nostalgic music montage associated with childhood themes",
+          "secondary_topics": ["nostalgia","childhood","music","hopeful imagery"],
+          "category": "Entertainment",
+          "subcategory": "Entertainment, trailers and stories",
+          "keywords": ["children of the 90s","Taare Zameen Par","nostalgia","childhood","music montage","hope"],
+          "canonical_tags": ["childhood nostalgia","music montage","taare zameen par","hope","dream imagery"],
+          "search_queries": ["Children of the 90s Taare Zameen Par montage","Taare Zameen Par childhood nostalgia video"]
+        },
+        "detailed_summary.v3": {
+          "overview": "The supplied metadata describes the video as a 'Children of the 90s' montage using the title track from Taare Zameen Par. The partial transcript is dominated by translated or transcribed song imagery rather than explanatory narration. Its themes move through delicate natural imagery, warmth and light, dreams, innocence, butterflies, hope and a sense of wonder. Because the package explicitly flags that the title/description and transcript have little clear textual overlap, the evidence does not support a confident description of the actual visual montage or its specific 1990s references. The safest interpretation is that this is a nostalgic, emotionally themed music edit centered on childhood imagery.",
+          "sections": [
+            {"heading":"Nature and innocence imagery","summary":"The opening portion uses poetic imagery involving nature, light and delicate objects to establish a gentle, childlike emotional tone.","segment_ids":["s00001"]},
+            {"heading":"Dreamlike childhood imagery","summary":"The middle portion shifts toward sleep, dreams, angelic or playful imagery and other symbols associated with innocence and imagination.","segment_ids":["s00001"]},
+            {"heading":"Hopeful musical close","summary":"The later portion emphasizes hope, happiness and wonder before ending with music and audience-appreciation cues.","segment_ids":["s00001"]}
+          ],
+          "practical_details": [],
+          "limitations": [
+            "Transcript is partial and may be an imperfect translation/transcription of song lyrics.",
+            "The package assessment explicitly reports a possible mismatch between title/description and transcript.",
+            "No reliable description of the video's visuals or specific 1990s references can be derived from the supplied text alone."
+          ],
+          "source_basis": ["canonical_transcript","video_metadata","video_description"]
+        },
+        "timeline_sections.v3": {
+          "sections": [
+            {"start_timestamp":"00:00:00","end_timestamp":"00:01:15","title":"Nature and childhood imagery","summary":"The song-led opening uses soft nature and light imagery to create an innocent, nostalgic mood.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:01:15","end_timestamp":"00:02:35","title":"Dreams, playfulness and wonder","summary":"The lyrical imagery shifts toward dreams, angelic figures, color and playful childhood associations.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:02:35","end_timestamp":"00:03:20","title":"Hopeful musical ending","summary":"The closing emphasizes hope and happiness before ending in music and appreciation sounds.","segment_ids":["s00001"]}
+          ]
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "The package suggests an emotionally nostalgic music montage, but the source-association warning makes detailed semantic reuse risky without visual review.",
+          "bottom_line": "Keep as a nostalgic entertainment item, but review the actual video before relying on the generated summary for cataloging details.",
+          "practical_value": "low",
+          "credibility": "uncertain",
+          "keep_priority": "low",
+          "score_0_to_100": 45
+        }
+      }
+    }
+  ]
+}
