@@ -1,0 +1,53 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163013_d8f04a",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "8zl7lF4Mb5E",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "D",
+      "confidence": "medium",
+      "evidence_references": [{"source":"canonical_transcript","segment_ids":["s00001"]}],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": ["Transcript is marked partial/low quality (grade D).","The source makes broad claims about autophagy, disease reversal, weight loss, diabetes and fatty liver that are not independently verified in this package.","Package duration metadata is 0.0; timeline boundaries use embedded transcript and description structure."],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {"title":"Early Dinner, Overnight Fasting and Autophagy: The Video's Body-Repair Routine","short_title":"Early Dinner and Autophagy","reason":"The transcript centers on early dinner and overnight fasting as the practical habit used to discuss autophagy; the sensational original claim is softened."},
+        "taxonomy.v3": {
+          "primary_topic":"Early dinner and overnight fasting for metabolic health",
+          "secondary_topics":["autophagy","circadian eating","weight management","digestion","fasting"],
+          "category":"Health",
+          "subcategory":"Detox, fasting and body reset",
+          "keywords":["early dinner","autophagy","overnight fasting","circadian rhythm","digestion","weight loss","metabolic health"],
+          "canonical_tags":["early dinner","autophagy","overnight fasting","circadian eating","digestion","metabolic health","meal timing"],
+          "search_queries":["early dinner metabolic health evidence","meal timing circadian rhythm glucose","overnight fasting autophagy evidence","early dinner weight loss study"]
+        },
+        "detailed_summary.v3": {
+          "overview":"The video argues that one of the simplest ways to give the body a longer overnight period without food is to eat dinner early, ideally around 7 p.m. The speaker frames this through autophagy—the cellular recycling process recognized by the 2016 Nobel Prize in Physiology or Medicine—and through the idea that digestion competes with repair. The transcript then links earlier eating to circadian rhythm and cites a study comparing an early and late dinner schedule. The practical recommendation is to make dinner earlier and lighter when possible and, if a very early dinner cannot fit a person's schedule, to create a longer overnight gap before the next meal. The core meal-timing idea is plausible and practically testable, but the video overstates the evidence when describing the body as 'eating its own diseases' or implying that one habit can reverse a wide range of conditions.",
+          "sections":[
+            {"heading":"Why the speaker focuses on an overnight food-free window","summary":"The video claims that constant eating keeps the body occupied with digestion and leaves less opportunity for repair. This is used to motivate a longer overnight fasting interval. The explanation is simplified and should not be taken as a literal energy-allocation model of disease.","segment_ids":["s00001"]},
+            {"heading":"Autophagy as the biological mechanism","summary":"The speaker introduces autophagy as cellular self-recycling and references the 2016 Nobel Prize. Autophagy is real biology, but the transcript stretches this into claims that fasting directly removes disease, cancer cells or other problems in a predictable way.","segment_ids":["s00001"]},
+            {"heading":"Why dinner timing is emphasized","summary":"The video recommends eating dinner around or before 7 p.m., links digestive capacity with daylight and circadian timing, and argues that late heavy meals can interfere with sleep and digestion. The circadian component is more defensible than the stronger detox-style claims.","segment_ids":["s00001"]},
+            {"heading":"Study claims and practical scheduling","summary":"The transcript describes a study in which an earlier dinner group allegedly had better weight outcomes despite similar food and sleep timing. The video uses this to argue that calorie timing matters in addition to calorie quantity. Because the package does not provide enough study detail for independent appraisal, the numerical claims should be treated cautiously.","segment_ids":["s00001"]}
+          ],
+          "practical_details":["If appropriate, experiment with moving dinner earlier rather than making the first change a severe fast.","Keep late dinners lighter when an early meal is not possible.","Aim for a consistent overnight interval without food rather than assuming extreme fasting is necessary.","People with diabetes, pregnancy, eating disorders, medication timing requirements or other medical conditions should not make aggressive fasting changes without professional guidance."],
+          "limitations":["Transcript is partial and low quality.","Disease-reversal and autophagy claims are overstated relative to the evidence provided.","The package does not provide enough study details to verify the cited numerical effects.","Individual tolerance and medical context can materially change whether fasting or early dinner is appropriate."],
+          "source_basis":["canonical_transcript","video_description","video_metadata"]
+        },
+        "timeline_sections.v3": {
+          "sections":[
+            {"start_timestamp":"00:00:00","end_timestamp":"00:02:14","title":"Health problems and the repair argument","summary":"The video opens with common health complaints and argues that constant eating prevents the body from focusing on repair.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:02:14","end_timestamp":"00:03:04","title":"What the video calls autophagy","summary":"Autophagy is introduced as a cellular recycling process and as the proposed mechanism behind fasting benefits.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:03:04","end_timestamp":"00:04:40","title":"Why eat dinner early","summary":"The speaker recommends an early dinner and connects meal timing with digestion, sunset and overnight fasting.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:04:40","end_timestamp":"00:05:43","title":"Early-versus-late dinner study claim","summary":"A study comparison is used to argue that meal timing affects weight and glucose metabolism even when food intake is similar.","segment_ids":["s00001"]}
+          ]
+        },
+        "editorial_assessment.v1": {"chatgpt_take":"The useful core is simple: earlier, lighter dinners and a consistent overnight fasting window may help some people. The video's framing around the body 'eating disease' and dramatic reversal claims is much stronger than the package supports.","bottom_line":"Keep the meal-timing idea; discard the sensational disease-reversal framing unless independently supported.","practical_value":"medium","credibility":"medium","keep_priority":"medium","score_0_to_100":66}
+      }
+    }
+  ]
+}
