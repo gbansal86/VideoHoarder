@@ -1,0 +1,154 @@
+{
+  "package_id": "vh_full_intelligence_20260905_162918_0e100d",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "AJz18CVg9Ww",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "B",
+      "confidence": "medium",
+      "evidence_references": [{"source":"canonical_transcript","segment_ids":["s00001"]}],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "Transcript is usable but substantially garbled, so the five-step structure relies partly on the supplied chapter metadata.",
+          "Claims about pornography, dopamine, sexual function, violence and addiction are source claims and should not be generalized beyond the supplied evidence.",
+          "Persistent compulsive sexual behavior or significant distress may warrant professional mental-health support rather than self-help alone."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "5 Steps the Video Recommends for Reducing Problematic Porn Use",
+          "short_title": "Reducing Problematic Porn Use",
+          "reason": "The description clearly establishes a five-step behavior-change structure, while the garbled transcript does not support confidently naming every step in the title."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Behavior-change strategies for problematic pornography use",
+          "secondary_topics": ["compulsive habits","website blocking","habit substitution","trigger management","productivity","sexual wellbeing"],
+          "category": "Health",
+          "subcategory": "Addiction and substance-use habits",
+          "keywords": ["problematic porn use","compulsive behavior","porn blocker","habit change","dopamine","sexual wellbeing"],
+          "canonical_tags": ["problematic pornography use","compulsive habit","website blocker","habit substitution","trigger management","behavior change","sexual wellbeing"],
+          "search_queries": ["problematic pornography use treatment evidence","compulsive sexual behavior self help","website blockers habit change","pornography use sexual health evidence"]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video frames frequent pornography use as a potentially compulsive habit and presents five practical steps intended to help viewers reduce or stop it. The opening discusses easy online access, the creator's concerns about repeated stimulation and possible effects on relationships, sexual expectations and daily functioning. The clearest behavior-change portion begins around 4:31. The transcript supports several broad tactics: make access harder with adult-content blockers; redirect the urge toward another activity; replace the routine with something personally interesting or socially engaging; shift attention toward meaningful goals and productive work; and structure time with a daily plan or to-do list. These are recognizable habit-management strategies, but the transcript is too garbled to recover each numbered step word-for-word with confidence. The strongest practical theme is environmental control plus replacement behavior rather than relying on willpower alone. The video's stronger claims about brain effects, erectile dysfunction, violence or the prevalence of addiction are not independently established by the package and should be treated as the creator's assertions rather than diagnostic facts.",
+          "sections": [
+            {"heading":"Why the creator sees pornography as a problem","summary":"The first half argues that easy access can make repeated use habitual and may affect attention, relationships, expectations and sexual wellbeing. The transcript is noisy, so the strongest medical and social claims should be treated cautiously.","segment_ids":["s00001"]},
+            {"heading":"Make access harder","summary":"The practical section recommends blocking adult websites and using device-level or browser tools to add friction between an urge and the behavior.","segment_ids":["s00001"]},
+            {"heading":"Replace the habit","summary":"The speaker recommends channeling the urge into another activity rather than simply trying not to think about it. Examples in the transcript point toward interesting tasks, social contact and other rewarding alternatives.","segment_ids":["s00001"]},
+            {"heading":"Build purpose and structure time","summary":"The final steps emphasize productive work, a changed perspective and a daily to-do list so that unstructured time and habitual cues are reduced.","segment_ids":["s00001"]}
+          ],
+          "practical_details": [
+            "Use website/app blockers to create friction around unwanted use.",
+            "Identify common triggers such as boredom, isolation or unstructured time and plan an alternative response in advance.",
+            "Replace the behavior with a specific activity rather than depending only on suppression.",
+            "Use a daily schedule or task list to reduce idle time and reinforce other goals.",
+            "Seek professional help if the behavior is persistent, distressing, difficult to control or harming relationships or daily functioning."
+          ],
+          "limitations": [
+            "The transcript is garbled and the exact wording of all five numbered steps is not reliably recoverable.",
+            "The package does not independently verify the video's medical, prevalence or social-harm claims.",
+            "Self-help strategies may be insufficient for severe compulsive sexual behavior or co-occurring mental-health problems."
+          ],
+          "source_basis": ["canonical_transcript","video_description","video_metadata"]
+        },
+        "timeline_sections.v3": {
+          "sections": [
+            {"start_timestamp":"00:00:00","end_timestamp":"00:01:30","title":"Introduction and accessibility","summary":"The video introduces pornography use as a taboo but increasingly accessible behavior and sets up the problem framing.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:01:30","end_timestamp":"00:03:59","title":"Why the creator considers it harmful","summary":"The speaker discusses habit formation and alleged effects on sexual expectations, relationships and functioning.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:03:59","end_timestamp":"00:04:31","title":"Recognizing problematic use","summary":"The video transitions from harms to recognizing when use has become difficult to control.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:04:31","end_timestamp":"00:06:46","title":"Five behavior-change steps","summary":"The creator recommends blocking access, replacing the behavior, redirecting attention toward other activities and goals, and structuring daily time.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:06:46","end_timestamp":"00:08:01","title":"Sponsor and closing","summary":"The main advice ends and the video moves into a sponsored hair-product segment and channel closing.","segment_ids":["s00001"]}
+          ]
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "The environmental-control and habit-replacement ideas are practical; the broad medical and social claims are much less dependable, especially given the noisy transcript.",
+          "bottom_line": "Keep the blockers, replacement activities and structured-time ideas; do not treat the video's stronger harm claims as a diagnosis.",
+          "practical_value": "medium",
+          "credibility": "medium",
+          "keep_priority": "medium",
+          "score_0_to_100": 66
+        }
+      }
+    },
+    {
+      "video_id": "WUWdVtbZrLQ",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "A",
+      "confidence": "high",
+      "evidence_references": [{"source":"canonical_transcript","segment_ids":["s00001"]}],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": [
+          "The video is from 2020; statements that one or two drinks per day are 'safe' are outdated/overbroad and should not be treated as current health guidance.",
+          "The transcript sometimes treats cannabis broadly when evidence or approvals may concern specific cannabinoid medicines or indications.",
+          "Ayurvedic claims about cannabis, alcohol, doshas and Drakshasava are traditional/source claims and are not independently verified in this package."
+        ],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "Weed vs Alcohol: Intoxication, Health Risks, Claimed Medical Uses and Ayurvedic Perspectives",
+          "short_title": "Weed vs Alcohol",
+          "reason": "The transcript clearly compares psychoactive effects, harms, claimed medical uses and Ayurvedic interpretations of both substances."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Comparison of cannabis and alcohol risks and traditional perspectives",
+          "secondary_topics": ["cannabis","alcohol","intoxication","addiction","medical use","Ayurveda","harm reduction"],
+          "category": "Health",
+          "subcategory": "Addiction and substance-use habits",
+          "keywords": ["cannabis","weed","alcohol","THC","ethanol","addiction","Ayurveda","substance use"],
+          "canonical_tags": ["cannabis","alcohol","thc","ethanol","substance use","addiction","intoxication","ayurveda","harm reduction"],
+          "search_queries": ["cannabis versus alcohol health risks evidence","alcohol safe drinking level evidence","medical cannabis epilepsy evidence","cannabis addiction risk","Ayurveda cannabis alcohol evidence"]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video compares cannabis and alcohol from two lenses: what the creator presents as modern scientific evidence and what selected Ayurvedic texts are said to describe. In the modern-science portion, the speaker notes that both substances impair cognition, reflexes and judgment; distinguishes THC from ethanol; and argues that available research suggests cannabis may be less lethal and, in some respects, less harmful than alcohol. He also emphasizes that cannabis is not harmless, mentioning smoke exposure, motivation, hallucinations and other possible long-term effects. Alcohol is portrayed as carrying greater established risks to the liver, cardiovascular/metabolic health, mental health and mortality. The video then shifts to Ayurveda, describing traditional classifications and medicinal uses of cannabis while also calling habitual use harmful, and portraying alcohol as potentially medicinal in carefully limited contexts while harmful when misused. The creator closes by saying the purpose is awareness rather than promotion and states that he personally abstains, preferring meditation, exercise and healthy living. Several claims need caution: the 2020 statement that one or two drinks daily are 'safe' is too broad for current guidance; approval of specific cannabinoid medicines should not be generalized to recreational marijuana; and the Ayurvedic recommendations, including Drakshasava for alcohol dependence, are not established treatments for addiction.",
+          "sections": [
+            {"heading":"Modern-science comparison","summary":"The speaker explains that THC and ethanol produce different intoxication profiles but both impair judgment and reflexes. Cannabis is described as potentially less harmful than alcohol in some outcomes, while still carrying respiratory, cognitive and psychiatric risks.","segment_ids":["s00001"]},
+            {"heading":"Alcohol risks and claimed lower-risk choices","summary":"Alcohol is linked with a larger documented burden of disease and death. The transcript also calls some drinks less damaging and says moderate daily drinking can be safe; those claims should not be treated as current universal guidance because risk varies and no alcohol use is risk-free.","segment_ids":["s00001"]},
+            {"heading":"Ayurvedic view of cannabis","summary":"The video discusses bhang, ganja and charas and lists traditional medicinal uses while also describing cannabis as intoxicating and potentially harmful with habitual use. These are historical/traditional claims rather than independently verified clinical recommendations.","segment_ids":["s00001"]},
+            {"heading":"Ayurvedic view of alcohol","summary":"The creator says classical texts distinguish medicinal from harmful alcohol use and provide dosha-specific guidance. He also mentions Drakshasava for alcohol addiction, a recommendation that should not replace evidence-based addiction treatment.","segment_ids":["s00001"]},
+            {"heading":"Creator's conclusion","summary":"The video does not endorse either substance recreationally. The creator says he abstains and prefers meditation, yoga, exercise and healthy food as more rewarding sources of wellbeing.","segment_ids":["s00001"]}
+          ],
+          "practical_details": [
+            "Do not drive or perform safety-critical tasks while impaired by cannabis or alcohol.",
+            "Avoid treating cannabis as harmless simply because some risks are lower than those of alcohol.",
+            "Do not assume a daily alcohol allowance is risk-free; health risk depends on dose, pattern and individual factors.",
+            "Use evidence-based medical care for substance-use disorder rather than relying on traditional preparations alone.",
+            "Specific cannabinoid medicines and recreational cannabis are not interchangeable concepts."
+          ],
+          "limitations": [
+            "The video was published in 2020 and some scientific/public-health framing has changed since then.",
+            "Several cannabis-benefit claims are presented broadly without enough distinction between specific cannabinoids, doses and conditions.",
+            "Ayurvedic claims are not independently verified by the supplied package.",
+            "The package does not provide full citations or study details for every scientific statement."
+          ],
+          "source_basis": ["canonical_transcript","video_description","video_metadata"]
+        },
+        "timeline_sections.v3": {
+          "sections": [
+            {"start_timestamp":"00:01:02","end_timestamp":"00:01:36","title":"Comparison setup","summary":"The creator introduces the cannabis-versus-alcohol question and says he will compare modern science and Ayurveda.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:01:36","end_timestamp":"00:03:48","title":"Modern science on weed and alcohol","summary":"The video compares psychoactive compounds, acute impairment, cannabis risks, alcohol harms and claimed medicinal uses.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:03:48","end_timestamp":"00:05:24","title":"Ayurveda on cannabis","summary":"Traditional classifications, claimed uses and warnings about habitual cannabis use are discussed.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:05:24","end_timestamp":"00:07:03","title":"Ayurveda on alcohol","summary":"The speaker discusses traditional warnings, limited medicinal use, dosha-specific ideas and a traditional recommendation for addiction.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:07:03","end_timestamp":"00:07:51","title":"Personal conclusion","summary":"The creator says the video is not promotional and expresses a preference for abstinence and healthy lifestyle practices.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:07:51","end_timestamp":"00:08:22","title":"Sponsor and closing","summary":"The substance-use discussion ends and the video moves into a sponsor segment and channel closing.","segment_ids":["s00001"]}
+          ]
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "The side-by-side risk comparison is useful, but the 2020 drinking-safety claim and broad medical/Ayurvedic statements need updating and qualification.",
+          "bottom_line": "Neither substance is harmless; keep the comparative risk overview but verify medical and current public-health claims separately.",
+          "practical_value": "medium",
+          "credibility": "medium",
+          "keep_priority": "medium",
+          "score_0_to_100": 69
+        }
+      }
+    }
+  ]
+}
