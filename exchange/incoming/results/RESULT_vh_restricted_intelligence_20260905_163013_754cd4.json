@@ -1,0 +1,68 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163013_754cd4",
+  "schema_version": "3.0",
+  "batch_validation_status": "PASS_WITH_WARNINGS",
+  "video_updates": [
+    {
+      "video_id": "Vw5kOT9ocjk",
+      "processing_status": "PASS_WITH_WARNINGS",
+      "evidence_grade": "D",
+      "confidence": "medium",
+      "evidence_references": [{"source":"canonical_transcript","segment_ids":["s00001"]}],
+      "source_conflicts": [],
+      "validation": {
+        "status": "PASS_WITH_WARNINGS",
+        "warnings": ["Transcript is marked partial/low quality (grade D).","Ayurvedic digestion and health claims are source claims and are not independently verified in this package.","Duration metadata is 0.0; timeline boundaries use the chapter timestamps in the supplied description."],
+        "repair_attempts": 0
+      },
+      "features": {
+        "title_en.v1": {
+          "title": "11 Ayurvedic Food Combinations: Wheat-Cucumber, Milk-Ghee, Spiced Sprouts, Radish-Leaves, Lemon-Ghee, Black Gram-Buttermilk, Potato-Rice, Dry Dates-Milk, Sugarcane-Ginger, Mango-Milk and Coriander-Spicy Curry",
+          "short_title": "11 Ayurvedic Food Combinations",
+          "reason": "All eleven combinations are explicitly named in the supplied description, so the list can be preserved without inventing items from the title alone."
+        },
+        "taxonomy.v3": {
+          "primary_topic": "Ayurvedic food-combining recommendations",
+          "secondary_topics": ["digestion","traditional nutrition","spices","dairy","fruit combinations"],
+          "category": "Food",
+          "subcategory": "Ayurveda, herbs, doshas and rituals",
+          "keywords": ["Ayurveda","food combinations","digestion","milk and ghee","sprouts","buttermilk","dry dates","mango and milk"],
+          "canonical_tags": ["ayurveda","food combination","digestion","milk","ghee","sprout","radish","buttermilk","dry date","mango","coriander"],
+          "search_queries": ["Ayurvedic food combinations digestion","milk and ghee Ayurveda","sprouts spices Ayurveda","dry dates milk Ayurveda","mango milk Ayurveda"]
+        },
+        "detailed_summary.v3": {
+          "overview": "The video presents eleven food pairings that the speaker says are recommended in Ayurvedic traditions to improve digestibility, balance the perceived heating or cooling qualities of foods, and increase nourishment. The combinations are wheat with cucumber; milk with ghee; sprouts with warming spices; radish with its leaves; lemon with ghee; black gram followed by buttermilk; potato with rice; dry dates with milk; sugarcane juice with ginger; mango followed by milk; and fresh coriander over spicy curry. The practical value lies mainly in documenting a set of traditional food-pairing ideas. Claims that these combinations improve fat loss, detoxification, blood sugar, nutrient absorption or other medical outcomes are not independently established by the package and should be treated cautiously.",
+          "sections": [
+            {"heading":"Wheat, milk and sprouts combinations","summary":"The opening recommendations pair wheat with cucumber for easier digestion, milk with ghee as a satvic nourishing combination, and sprouts with spices such as ginger and black pepper to make them more palatable and potentially easier to digest.","segment_ids":["s00001"]},
+            {"heading":"Balancing vegetables and fats","summary":"Radish is paired with its leaves, while lemon is paired with ghee. The speaker frames these as balancing combinations in Ayurvedic terms and makes additional digestive and nutrient-absorption claims.","segment_ids":["s00001"]},
+            {"heading":"Black gram, potato-rice and dry dates","summary":"Black gram is paired with buttermilk; potato with rice is presented as a surprising combination; and dry dates with milk are described as a nourishing tonic, especially in winter.","segment_ids":["s00001"]},
+            {"heading":"Sugarcane, mango and spicy foods","summary":"The final recommendations combine sugarcane juice with ginger, mango with milk, and spicy curry with fresh coriander to balance what the speaker describes as heating or cooling effects.","segment_ids":["s00001"]}
+          ],
+          "practical_details": ["Use the list as a record of traditional food-pairing ideas rather than a medical protocol.","People with lactose intolerance, food allergies, diabetes or digestive disease should adapt combinations to their own needs.","Spices such as ginger, cumin and black pepper may improve palatability but do not guarantee the claimed health outcomes."],
+          "limitations": ["Transcript evidence is partial and low quality.","The package does not independently verify the Ayurvedic or medical claims.","Some claims about weight loss, detoxification and disease-related effects are stronger than the supplied evidence supports."],
+          "source_basis": ["canonical_transcript","video_description","video_metadata"]
+        },
+        "timeline_sections.v3": {
+          "sections": [
+            {"start_timestamp":"00:00:00","end_timestamp":"00:01:19","title":"Introduction","summary":"The speaker introduces eleven Ayurvedic food combinations and the idea of pairing foods for digestion and nourishment.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:01:19","end_timestamp":"00:02:14","title":"Wheat and cucumber","summary":"Wheat roti is paired with cucumber for people who experience indigestion.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:02:14","end_timestamp":"00:03:08","title":"Milk and ghee","summary":"Milk and ghee are presented as a nourishing satvic combination.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:03:08","end_timestamp":"00:04:10","title":"Sprouts and hot spices","summary":"Warming spices are suggested with sprouts to address taste and digestive complaints.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:04:10","end_timestamp":"00:05:42","title":"Radish-leaves and lemon-ghee","summary":"Two balancing combinations are discussed using Ayurvedic heating/cooling language.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:05:42","end_timestamp":"00:07:05","title":"Black gram-buttermilk and potato-rice","summary":"The video covers black gram with buttermilk and a potato-rice pairing.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:07:05","end_timestamp":"00:08:31","title":"Dry dates-milk and sugarcane-ginger","summary":"These are presented as nourishing and balancing combinations.","segment_ids":["s00001"]},
+            {"start_timestamp":"00:08:31","end_timestamp":"00:10:13","title":"Mango-milk and coriander-spicy curry","summary":"The final two combinations are presented before the sponsored segment.","segment_ids":["s00001"]}
+          ]
+        },
+        "editorial_assessment.v1": {
+          "chatgpt_take": "Useful as a catalogue of traditional Ayurvedic food-combining practices, but many physiological and disease-related claims go beyond what the partial transcript can substantiate.",
+          "bottom_line": "Keep for traditional food-pairing ideas, not as verified medical nutrition guidance.",
+          "practical_value": "medium",
+          "credibility": "uncertain",
+          "keep_priority": "medium",
+          "score_0_to_100": 60
+        }
+      }
+    }
+  ]
+}
