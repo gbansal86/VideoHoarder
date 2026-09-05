@@ -1,0 +1,2718 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163015_1971d6",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163015_1971d6",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Protein, supplements and sports nutrition — partial transcript",
+      "batch_number": 24,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 24 of 30 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260905_163015_1971d6",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260905_163015_1971d6"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163015_1971d6",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Protein, supplements and sports nutrition — partial transcript",
+      "batch_number": 24,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "1870bf71-f0d8-4796-a737-28467dae9c19",
+    "package_id": "vh_restricted_intelligence_20260905_163015_1971d6",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "UVHOJM0bdVc"
+    ],
+    "evidence_grades": {
+      "UVHOJM0bdVc": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Protein, supplements and sports nutrition — partial transcript",
+      "batch_number": 24,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "f8a53716bb62d9d78df882fed85436abd2d4261e50f6ad723a0b7abb313b9f06",
+      "prompt.json": "dcee8d71628ad1ea73f4a519cf75cd07eeda39ab13d42fb262f794812a413f2c",
+      "schema.json": "6ca70689de7c3805f9294928c9222cf4f250b411735128027b9af60cafc6b460"
+    },
+    "created_at": "2026-09-05 16:30:15",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "UVHOJM0bdVc",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=UVHOJM0bdVc",
+        "original_title": "3 Health Drinks to Replace Collagen, Protein Powder & Multivitamin",
+        "clean_title": "3 Health Drinks to Replace Collagen, Protein Powder & Multivitamin",
+        "channel": "Fit Tuber",
+        "upload_date": "2024-09-20",
+        "description": "3 Drinks to replace a collagen builder supplement, a multivitamin and protein powder.\n\nBuy Mamaearth Rosemary Based Hair Serum - https://bit.ly/3yt2AsN\n(Apply code FITTUBER21 to get 21% off)\nBuy from Amazon - https://amzn.to/3B9p9Ue\n\n00:00 - Introduction to 3 health drinks\n00:47 - Homemade Collagen Builder for smooth and glowing skin\n04:36 - Homemade drink to replace a multivitamin tablet\n07:22 - Homemade Protein powder (best for most Indians)\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nChia Seed Powder - https://amzn.to/3C0IOpL\nAlmonds - https://amzn.to/3ztlVKO\nCashews - https://amzn.to/3B9p2bg\nPumpkin Seeds - https://amzn.to/3MSHpDP\nDates - https://amzn.to/4dcx14G\nBhuna chana - https://amzn.to/4gtLWKD (prefer buying it offline for more economical prices)\nChana Sattu - https://amzn.to/4ddSCti \nAmla powder - https://amzn.to/3MQQbSP\nMixer Grinder similar to the one I use - https://amzn.to/4eyhDkj\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n7 Quick & Healthy Breakfast Ideas for the Week (Vegetarian)\nhttps://youtu.be/zeqeWQb9FCY?si=6jyHrhbKI-9Y1Z5N\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n11:57 - Segment Partner - Mamaearth Toxin Free Rosemary Based Hair Serum\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:12] Today I want to talk about three such drinks that have [music] amazing health benefits. All these drinks are not only easy to make but are also very tasty. We will also discuss the best time to consume them so that you can get the maximum benefit from them. So without any further delay, let's get started. [00:00:31] Hello friends, welcome to Fit Tuber. Collagen is a protein because of which our skin feels soft and elastic. Our body produces collagen naturally but as we age the amount and quality of collagen begins [music] to fall. It is due to low collagen that our skin gets loose and wrinkled in old age. However, [00:00:47] sometimes even in a young age collagen reduces and there are some scientifically proven reasons behind it. The first and the most damaging is the regular intake of tobacco and alcohol. Second is when we don't protect our skin from the sun's harsh rays which are [00:01:03] generally present between 11:00 a.m. and 4 p.m. Excessive intake of refined sugar is known to break down collagen which leads to fast aging of our skin. Then all that junk food which is highly processed and refined takes a lot from your skin. If you just focus on the [00:01:18] things that are [music] reducing your collagen, you don't even need to know what collagen is. Your body is most capable of producing collagen provided it gets the [music] right environment. So let me share with you a simple drink that will help boost collagen in your body. You will need three things. First [00:01:35] is amla. To boost collagen, the number one nutrient required is vitamin C. And we all know that amla is the richest source of vitamin C. So much so that the vitamin C present in 20 oranges is present in just one amla. And it's not [00:01:50] just vitamin C, but the high number of antioxidants in amla that repair the skin. Amla is amazing. We all know this. The only problem with it is that it's too [music] tangy. However, in this juice recipe, it won't just give you benefits, but will also act as a taste [00:02:06] enhancer. The second ingredient is beetroot. When your skin looks rough and pigmented from the outside, it's actually getting inflamed from within. stress or poor food habits. Inflammation of the skin is a root problem behind skin problems. Which is why beetroot [00:02:23] juice being anti-inflammatory is no less than a medicine. Beetroots are also rich in beta lanes that increase the blood flow in the skin tissue. No wonder beetroot is considered a top food to increase blood count. Third ingredient that you would need is carrot. [music] [00:02:38] Carrots are rich in keratenoids, lycopine, and zinc which are natural collagen boosters. The anti-aging effect of carrots has been well [music] documented. Prefer red carrots to make this juice. If they are not in the season, go ahead with the orange ones. [00:02:53] Now to make the juice, take one to two carrots, half a beetroot and one amla. Add water. To sweeten it further, use jaggery or jaggery powder. Then grind it properly. You can strain to get the juice. This juice is not only tasty but amazingly healthy for the body. Not just [00:03:11] collagen. If you are low on hemoglobin or you want to increase your eyesight or control your blood pressure, drink it daily for at least 30 [music] days. In fact, in North India, this juice is easily available at every juice corner in winter. [music] You can tie up with a [00:03:27] juice corner and drink this daily. Within 15 days, you will be able to see a difference in your skin. If you are still skeptical, check out the comments of people who have already benefited [music] from this juice. It's worth trying. Next is a multivitamin drink. [00:03:42] Bro, I've started taking care of my health now. Really? What are you doing? Nothing much. I'm taking a multivitamin now. Have you asked a doctor? Is there a need? Often it is seen that people who begin to take care of their health start taking a multivitamin tablet. It's not [00:03:58] their fault, but the supplement industry is so active that it almost convinces us that something will go wrong with our bodies if we don't pop a multivitamin pill. Of course, your body needs nutrition, but it doesn't need that multivitamin tablet. [music] Yes, that multivitamin tablet whose [00:04:15] source of vitamins and minerals has been hidden from you. That multivitamin tablet whose 80% contents body just pees out. That's because there are no strict regulations in this sector. And more than often, companies add fake ingredients. Shockingly, a study shows [00:04:31] that people who take daily multivitamins die early. So, it's high time that we begin trusting the real foods. Allow me to share with you a drink for which you will need five ingredients. And each of these ingredients is a superfood in itself. In a bowl, put four almonds, six [00:04:48] cashews, and two teaspoons of pumpkin seeds. Add sufficient water to soak them. Then, in another bowl, add two deseeded dates and soak them as well. Let them soak overnight or for at least 4 hours. Remove the skin of the almonds and then add them in a blender minus the [00:05:05] water. Yes, the water in which nuts and seeds are soaked should be discarded while the dates water will be used. This is the prime reason why we had soaked them separately. To this add one ripe banana. Blend it to make a smoothie. This drink has the nutrition of almonds, [00:05:22] cashews, pumpkin [music] seeds, dates and banana. Each of these foods are so nutrientdense that one video is not enough to describe all their benefits. Even scientific studies are backing up their amazing health benefits. I always wanted to include pumpkin seeds in my [00:05:39] diet. This drink made it so easy. This drink will not only serve as a natural multivitamin, but tastewise, this milkless milkshake can beat most milkshakes [music] in the market. This drink will increase your memory power. It will keep your heart healthy, improve [00:05:55] your sperm quality, make your hair stronger. It will also help you cut that extra fat. Yes, this drink is great for us. But when is the best time to consume it? It can become your morning drink. You can have it as a breakfast. You can also have it in between the meals or any [00:06:12] other time of the day before sunset. Rich in biotin, magnesium, potassium, copper, selenium, vitamin E, and countless other micronutrients. It's an apt replacement to that multivitamin pill. Finally, the protein drink. Protein is an important macronutrient [00:06:29] for various reasons. First, protein is essential for the daily repair of the body. This is why people who work out or play sports need more protein. Second, protein is a macronutrient that is slowly digested. As a result, every time you eat a protein richch meal, [music] [00:06:45] you feel full for longer. More filling means fewer chances of unwanted food munching. [music] Your hair and nails are all made up of protein. So, eating a diet with good amount of protein keeps them strong. Often when we hear the benefits of protein, the first thing that comes to [00:07:01] our mind is should I buy a protein powder? Well, for more than 80% of people, the straight answer is no. That's because a majority of people are sitting for most of the day. Even if they work out, they don't have serious bodybuilding goals. A normal person like [00:07:17] you and me should definitely eat protein richch [music] foods like paneer, curd, rajma, chennai and peanuts. But we don't need a protein powder. We must understand that more protein is needed only when a lot of new cells are being formed in the body. This is true for a [00:07:33] growing child, a pregnant mother or an athlete. [music] For most of us, 40 to 60 grams of protein per day is good enough. And do you know what's even more shocking is that consuming too much protein is more harmful than not consuming enough. High protein diets [00:07:48] have been linked to increased kidney failure cases in the past decade. So let's get back to basics and eat that protein powder that has been tried and tested for generations. The humble chana satu. [music] When black chana is roasted, all its gas forming [00:08:03] anti-nutrients [music] are killed and you get this crunchy snack called bunach chana. When this bunach chana is powdered, it's called chana satu. This chana satu is not only high in protein but is also very rich in fiber, iron, calcium, magnesium and folate. [music] [00:08:20] When in between the meals you feel hungry, don't reach out to that 70 rupees protein bar. Just drink the 7 rupees drink [music] and you will get good 10 g of protein. What's even better is that chana satu can be enjoyed both sweet and savory. To make it sweet, take [00:08:36] 50 gram of chana satu and jaggery powder in it. Mix water and give it a good mix. For the savory version, take 50 g of chana satu, mix water, add rock salt, black salt, [music] boner and lemon juice. Give it a good stir and it's [00:08:51] ready. Chana satu has protein but it is also very high in carbohydrates. And for fat loss, shouldn't we cut down our carbohydrate intake? Yes, it has more carbs than protein. But what kind of carbs? Complex carbs that don't spike the blood sugar and keep you full for [00:09:08] longer. Plus, have you stopped eating carbs altogether? For fat loss, we should cut down those refined carbohydrates from maida and sugar. If you drink chana satu, naturally, you will eat less the whole day. A scoop of whey protein has hardly 150 calories, [00:09:23] but your chana satu drink has 400 calories. See, when it comes to macronutrients, chana satu and whey protein are incomparable. But note that chana satu is a real whole food whereas whey protein is an industrialized product. Whey protein is so sweet still [00:09:39] it has so less calories. Why? Because it has that zerocalorie artificial sweetener which is worse than sugar. That chocolate flavor of whey protein is also artificial. Just one scoop of whey protein will cost you rupees 100. But in 100 rupees you can get 1 kg of chana [00:09:56] satu. Still chana satu is plant-based doesn't give you all the nine essential amino acids. [music] See when we combine two vegetarian food sources let's say you eat dal chaval or dal roti you get all the nine essential amino acids. [00:10:11] [music] So unless you are drinking only chana satu the whole day you need not worry about complete or incomplete protein. Think of a horse's stamina. What does he eat? Chana. Think of elephant strength. What does he eat? Grass. So, vegetarian protein is way [00:10:27] more than what we are made to believe it is. I have serious muscle building goals. 10 g chana satu drink is not enough for me. Well, if your workout is at that level, then post-workout in 50 g of chana satu. Add a couple of dates to [00:10:43] sweeten it. Add one glass of milk and blend it to make a shake. This will give you good 20 g of protein. Overall, chana satu is versatile, nutritious, yet an underrated protein drink. A diet with balanced nutrition protects your hair. [00:10:58] Another thing that helps grow hair faster is a rosemary based hair serum. But most commercial hair serums in the Indian market have many harsh chemicals in them which rather damage the hair follicles. Which is why Mama Earth's rosemary hair growth scalp [music] serum [00:11:13] is a better option. It's better because if you check its ingredients, you will find that it has no silicons, no artificial fragrance, no mineral oil [music] and no cosmetic colors. Rather, it is a blend of hair friendly herbs like sprouted peas, basil, [music] [00:11:29] rosemary and fenugreek with glycerin and safe chemicals. [music] When using it, put two to four drops of this serum directly on the scalp and give your hair a light [music] massage. You can apply it daily. To buy this effective and toxin-free rosemary hair serum, click on [00:11:45] the link in the [music] description box. Do not forget to apply the special discount coupon to get 21% off. There are five foods that you must avoid in breakfast. [music] To know what these foods are, check out this video. My name is Vive. I thank you so much for [00:12:01] watching. [music]"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1089,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: UVHOJM0bdVc",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @VS99575 | Likes: 2551 | Replies: 94 | Published: 2024-09-20T13:34:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Genuinely the only YouTuber i trust blindly since 2018 Thanks brothet❤🎉",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @VS-bg8ex | Likes: 26 | Replies: 0 | Published: 2024-09-20T13:37:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Same brother same",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @VS-bg8ex | Likes: 18 | Replies: 0 | Published: 2024-09-20T13:38:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Ye bnde ke nuskhe kaam krte hai",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @VS-bg8ex | Likes: 15 | Replies: 0 | Published: 2024-09-20T13:38:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Aur information bhi researched hoti hai of compared with others",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @VS99575 | Likes: 0 | Replies: 0 | Published: 2024-09-20T13:53:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "@VS-bg8ex Honestly true. I tried one of his anti hair fall method and it has stopped immensely",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @VS99575 | Likes: 0 | Replies: 0 | Published: 2024-09-20T13:53:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "@VS-bg8ex true that!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @Sabsebadepapa | Likes: 1972 | Replies: 187 | Published: 2024-09-20T14:09:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Please stop promoting mamaearth products they are low quality products.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @richapandit5280 | Likes: 51 | Replies: 0 | Published: 2024-09-20T14:22:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "Absolutely true",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @Kavitaupadhyay-hl8bc | Likes: 30 | Replies: 0 | Published: 2024-09-20T15:00:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "True",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @meghaparnamandal849 | Likes: 22 | Replies: 0 | Published: 2024-09-20T15:33:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Absolutely",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @rahl100 | Likes: 46 | Replies: 0 | Published: 2024-09-20T16:26:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "Yes , not worth the price at all just the hype onion oil bla bla bla.........",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @advitchoubey2181 | Likes: 10 | Replies: 0 | Published: 2024-09-20T16:32:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Yes it's true",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @dankkrrish6780 | Likes: 192 | Replies: 3 | Published: 2024-10-16T18:25:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "1. Amla+beettroot+carrot+jaggery: juice(skin)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "2. Almonds4, cashews 6, pumpkin seeds 2 spoons, soak| dates soak",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "Remove dryfruits water and use rest +banana to make shake(multivitamins)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "3. 50g chana sattu+ 2-3 dates+1 glass milk",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 14] Author: @alwaysfoodthoughts | Likes: 4 | Replies: 0 | Published: 2025-05-27T10:57:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "i can take three of them daily ?or only one for thirty days please suggest and when will i take abc juice",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 15] Author: @rs0423 | Likes: 0 | Replies: 0 | Published: 2025-10-27T20:32:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "But are cashews, dates, and banana good for diabetes?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 16] Author: @dankkrrish6780 | Likes: 1 | Replies: 0 | Published: 2025-10-28T02:47:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "@rs0423",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "Yes, they're natural sweeteners",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 17] Author: @YashasviSingh-c2g | Likes: 1829 | Replies: 80 | Published: 2024-09-20T15:15:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "i take this beetroot,amla ,carrot juice last winter only for 25-30 days...my blood units change from 8.8 to 11.5....thanks to this man .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 18] Author: @keyachatteejee8645 | Likes: 26 | Replies: 0 | Published: 2024-09-20T15:52:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "Time of consumption this beetroot juice??",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 19] Author: @YashasviSingh-c2g | Likes: 0 | Replies: 0 | Published: 2024-09-20T15:59:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "@keyachatteejee8645 you can take this drink in morning empty stomach ..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "[COMMENT 20] Author: @atharvaingulkar6467 | Likes: 0 | Replies: 0 | Published: 2024-09-20T16:04:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01531",
+              "author": "",
+              "text": "[COMMENT 479] Author: @mystic_sarang | Likes: 1 | Replies: 0 | Published: 2024-09-30T10:18:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01532",
+              "author": "",
+              "text": "What is the replacement of amla because for me...its causes lower blood pressure 😢",
+              "likes": null
+            },
+            {
+              "comment_id": "c01534",
+              "author": "",
+              "text": "[COMMENT 480] Author: @sharmishah7901 | Likes: 0 | Replies: 0 | Published: 2025-03-11T14:01:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01535",
+              "author": "",
+              "text": "Hi u have good content in all videos...but one doubt can we consume sattu powder with milk? isn't it dwidal ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01537",
+              "author": "",
+              "text": "[COMMENT 481] Author: @sharitabhojraj2423 | Likes: 0 | Replies: 0 | Published: 2024-11-20T05:25:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01538",
+              "author": "",
+              "text": "We have a problem getting amla in South Africa. Please give a substitute for amla. Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c01540",
+              "author": "",
+              "text": "[COMMENT 482] Author: @MATH4ALL1729 | Likes: 0 | Replies: 0 | Published: 2025-05-21T15:47:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01541",
+              "author": "",
+              "text": "Nice",
+              "likes": null
+            },
+            {
+              "comment_id": "c01543",
+              "author": "",
+              "text": "[COMMENT 483] Author: @rebeccaxodonq7893 | Likes: 0 | Replies: 0 | Published: 2024-12-02T14:16:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01544",
+              "author": "",
+              "text": "God bless you bro ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01546",
+              "author": "",
+              "text": "[COMMENT 484] Author: @positvmantra | Likes: 0 | Replies: 0 | Published: 2025-04-21T07:54:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01547",
+              "author": "",
+              "text": "Can sattu drink be taken as post workout drink. Please recommend.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01549",
+              "author": "",
+              "text": "[COMMENT 485] Author: @chippirana | Likes: 0 | Replies: 0 | Published: 2024-10-02T13:58:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01550",
+              "author": "",
+              "text": "I just think to make abc juice and suddenly notification came what a coincidence",
+              "likes": null
+            },
+            {
+              "comment_id": "c01552",
+              "author": "",
+              "text": "[COMMENT 486] Author: @reyanshmathematics3906 | Likes: 0 | Replies: 0 | Published: 2024-10-08T22:38:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01553",
+              "author": "",
+              "text": "What a content ❤❤❤ i ordered collagen as I'm turning to 34 years old ... cancelled order now",
+              "likes": null
+            },
+            {
+              "comment_id": "c01555",
+              "author": "",
+              "text": "[COMMENT 487] Author: @vilen_v1 | Likes: 0 | Replies: 0 | Published: 2024-10-09T05:27:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01556",
+              "author": "",
+              "text": "I'm using newyou collagen giving good result, tired of maintaining consistency in diet.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01558",
+              "author": "",
+              "text": "[COMMENT 488] Author: @unbaisedopinions5293 | Likes: 0 | Replies: 0 | Published: 2024-09-30T14:26:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01559",
+              "author": "",
+              "text": "Sir one video on xanthelasama plzz",
+              "likes": null
+            },
+            {
+              "comment_id": "c01561",
+              "author": "",
+              "text": "[COMMENT 489] Author: @Naitik-g8w | Likes: 0 | Replies: 0 | Published: 2024-12-25T14:42:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01562",
+              "author": "",
+              "text": "Bhaiya please make a video on sunscreen",
+              "likes": null
+            },
+            {
+              "comment_id": "c01564",
+              "author": "",
+              "text": "[COMMENT 490] Author: @aparajithaam8469 | Likes: 0 | Replies: 0 | Published: 2025-03-07T11:15:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01565",
+              "author": "",
+              "text": "Hi bro can you please tell me foods that stabilize the platelets in the blood bcaz i have fluctuating problem",
+              "likes": null
+            },
+            {
+              "comment_id": "c01567",
+              "author": "",
+              "text": "[COMMENT 491] Author: @pushpapushpa2781 | Likes: 0 | Replies: 0 | Published: 2024-11-09T10:18:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01568",
+              "author": "",
+              "text": "This is use for oestio arthretis",
+              "likes": null
+            },
+            {
+              "comment_id": "c01570",
+              "author": "",
+              "text": "[COMMENT 492] Author: @ArulmozhiV-i2w | Likes: 0 | Replies: 0 | Published: 2025-04-11T11:39:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01571",
+              "author": "",
+              "text": "wow....I completely like it ...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01572",
+              "author": "",
+              "text": "but a small doubt",
+              "likes": null
+            },
+            {
+              "comment_id": "c01573",
+              "author": "",
+              "text": "is Lion Stronger than Elephant???",
+              "likes": null
+            },
+            {
+              "comment_id": "c01575",
+              "author": "",
+              "text": "[COMMENT 493] Author: @aniketverma3281 | Likes: 0 | Replies: 0 | Published: 2026-04-20T07:31:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01576",
+              "author": "",
+              "text": "👏 good job",
+              "likes": null
+            },
+            {
+              "comment_id": "c01578",
+              "author": "",
+              "text": "[COMMENT 494] Author: @jaynesusan1 | Likes: 0 | Replies: 0 | Published: 2024-09-30T09:02:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01579",
+              "author": "",
+              "text": "and can u suggest best hibiscus powder??",
+              "likes": null
+            },
+            {
+              "comment_id": "c01581",
+              "author": "",
+              "text": "[COMMENT 495] Author: @rajeevmayekar1775 | Likes: 0 | Replies: 0 | Published: 2025-08-31T18:56:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "Sir, Regarding that vitamin drink with Pumpkin seeds can I include them with Milk n oats n then blend ? Thanks for the content and so much useful information.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01584",
+              "author": "",
+              "text": "[COMMENT 496] Author: @aeron-ak | Likes: 0 | Replies: 0 | Published: 2025-01-19T10:36:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "Please make a video on hair serum.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "I have heard Wishcare, Minimalist, Soul flower, Wow Skin Science hair serum are good for hair growth.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "I have looked for their ingredients, usually they include rosemary, redensyl, biotin or anagain.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "Looking a for a good and pocket friendly hair serum.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "Please keep up the good work... The only yt guy we can trust blindly 😇",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "[COMMENT 497] Author: @gorletarunkumar3607 | Likes: 0 | Replies: 0 | Published: 2024-12-21T08:16:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "Which time is better to take the collagen juice? Can you please tell anyone.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "[COMMENT 498] Author: @LegoshivaLegoshiva | Likes: 0 | Replies: 0 | Published: 2024-10-30T03:24:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "Best",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "[COMMENT 499] Author: @AniKaFarha-so3cq | Likes: 0 | Replies: 0 | Published: 2025-08-26T11:21:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "Make a video about \" IBS (All types) \" ‼️‼️‼️‼️‼️‼️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "[COMMENT 500] Author: @sravanisravs5205 | Likes: 0 | Replies: 0 | Published: 2024-12-26T02:28:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "That glass gives me nostalgia, like u have been using it since years 😂😛",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "UVHOJM0bdVc",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\3 Health Drinks to Replace Collagen, Protein Powder & Multivitamin\\3 Health Drinks to Replace Collagen, Protein Powder & Multivitamin.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\3 Health Drinks to Replace Collagen, Protein Powder & Multivitamin",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\UVHOJM0bdVc",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "UVHOJM0bdVc",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 46,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 12213,
+            "transcript_words": 2280,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:12] Today I want to talk about three such drinks that have [music] amazing health benefits. All these drinks are not only easy to make but are also very tasty. We will also discuss the best time to consume them so that you can get the maximum benefit from them. So without any further delay, let's get started. [00:00:31] Hello friends, welcome to Fit Tuber. Collagen is a protein because of which our skin feels soft and elastic. Our body produces collagen naturally but as we age the amount and quality of collagen begins [music] to fall. It is due to low collagen that our skin gets loose and wrinkled in old age. However, [00:00:47] sometimes even in a young age collagen reduces and there are some scientifically proven reasons behind it. The first and the most damaging is the regular intake of tobacco and alcohol. Second is when we don't protect our skin from the sun's harsh rays which are [00:01:03] generally present between 11:00 a.m. and 4 p.m. Excessive intake of refined sugar is known to break down collagen which leads to fast aging of our skin. Then all that junk food which is highly processed and refined takes a lot from your skin. If you just focus on the [00:01:18] things that are [music] reducing your collagen, you don't even need to know what collagen is. Your body is most capable of producing collagen provided it gets the [music] right environment. So let me share with you a simple drink that will help boost collagen in your body. You will need three things. First [00:01:35] is amla. To boost collagen, the number one nutrient required is vitamin C. And we all know that amla is the richest source of vitamin C. So much so that the vitamin C present in 20 oranges is present in just one amla. And it's not [00:01:50] just vitamin C, but the high number of antioxidants in amla that repair the skin. Amla is amazing. We all know this. The only problem with it is that it's too [music] tangy. However, in this juice recipe, it won't just give you benefits, but will also act as a taste [00:02:06] enhancer. The second ingredient is beetroot. When your skin looks rough and pigmented from the outside, it's actually getting inflamed from within. stress or poor food habits. Inflammation of the skin is a root problem behind skin problems. Which is why beetroot [00:02:23] juice being anti-inflammatory is no less than a medicine. Beetroots are also rich in beta lanes that increase the blood flow in the skin tissue. No wonder beetroot is considered a top food to increase blood count. Third ingredient that you would need is carrot. [music] [00:02:38] Carrots are rich in keratenoids, lycopine, and zinc which are natural collagen boosters. The anti-aging effect of carrots has been well [music] documented. Prefer red carrots to make this juice. If they are not in the season, go ahead with the orange ones. [00:02:53] Now to make the juice, take one to two carrots, half a beetroot and one amla. Add water. To sweeten it further, use jaggery or jaggery powder. Then grind it properly. You can strain to get the juice. This juice is not only tasty but amazingly healthy for the body. Not just [00:03:11] collagen. If you are low on hemoglobin or you want to increase your eyesight or control your blood pressure, drink it daily for at least 30 [music] days. In fact, in North India, this juice is easily available at every juice corner in winter. [music] You can tie up with a [00:03:27] juice corner and drink this daily. Within 15 days, you will be able to see a difference in your skin. If you are still skeptical, check out the comments of people who have already benefited [music] from this juice. It's worth trying. Next is a multivitamin drink. [00:03:42] Bro, I've started taking care of my health now. Really? What are you doing? Nothing much. I'm taking a multivitamin now. Have you asked a doctor? Is there a need? Often it is seen that people who begin to take care of their health start taking a multivitamin tablet. It's not [00:03:58] their fault, but the supplement industry is so active that it almost convinces us that something will go wrong with our bodies if we don't pop a multivitamin pill. Of course, your body needs nutrition, but it doesn't need that multivitamin tablet. [music] Yes, that multivitamin tablet whose [00:04:15] source of vitamins and minerals has been hidden from you. That multivitamin tablet whose 80% contents body just pees out. That's because there are no strict regulations in this sector. And more than often, companies add fake ingredients. Shockingly, a study shows [00:04:31] that people who take daily multivitamins die early. So, it's high time that we begin trusting the real foods. Allow me to share with you a drink for which you will need five ingredients. And each of these ingredients is a superfood in itself. In a bowl, put four almonds, six [00:04:48] cashews, and two teaspoons of pumpkin seeds. Add sufficient water to soak them. Then, in another bowl, add two deseeded dates and soak them as well. Let them soak overnight or for at least 4 hours. Remove the skin of the almonds and then add them in a blender minus the [00:05:05] water. Yes, the water in which nuts and seeds are soaked should be discarded while the dates water will be used. This is the prime reason why we had soaked them separately. To this add one ripe banana. Blend it to make a smoothie. This drink has the nutrition of almonds, [00:05:22] cashews, pumpkin [music] seeds, dates and banana. Each of these foods are so nutrientdense that one video is not enough to describe all their benefits. Even scientific studies are backing up their amazing health benefits. I always wanted to include pumpkin seeds in my [00:05:39] diet. This drink made it so easy. This drink will not only serve as a natural multivitamin, but tastewise, this milkless milkshake can beat most milkshakes [music] in the market. This drink will increase your memory power. It will keep your heart healthy, improve [00:05:55] your sperm quality, make your hair stronger. It will also help you cut that extra fat. Yes, this drink is great for us. But when is the best time to consume it? It can become your morning drink. You can have it as a breakfast. You can also have it in between the meals or any [00:06:12] other time of the day before sunset. Rich in biotin, magnesium, potassium, copper, selenium, vitamin E, and countless other micronutrients. It's an apt replacement to that multivitamin pill. Finally, the protein drink. Protein is an important macronutrient [00:06:29] for various reasons. First, protein is essential for the daily repair of the body. This is why people who work out or play sports need more protein. Second, protein is a macronutrient that is slowly digested. As a result, every time you eat a protein richch meal, [music] [00:06:45] you feel full for longer. More filling means fewer chances of unwanted food munching. [music] Your hair and nails are all made up of protein. So, eating a diet with good amount of protein keeps them strong. Often when we hear the benefits of protein, the first thing that comes to [00:07:01] our mind is should I buy a protein powder? Well, for more than 80% of people, the straight answer is no. That's because a majority of people are sitting for most of the day. Even if they work out, they don't have serious bodybuilding goals. A normal person like [00:07:17] you and me should definitely eat protein richch [music] foods like paneer, curd, rajma, chennai and peanuts. But we don't need a protein powder. We must understand that more protein is needed only when a lot of new cells are being formed in the body. This is true for a [00:07:33] growing child, a pregnant mother or an athlete. [music] For most of us, 40 to 60 grams of protein per day is good enough. And do you know what's even more shocking is that consuming too much protein is more harmful than not consuming enough. High protein diets [00:07:48] have been linked to increased kidney failure cases in the past decade. So let's get back to basics and eat that protein powder that has been tried and tested for generations. The humble chana satu. [music] When black chana is roasted, all its gas forming [00:08:03] anti-nutrients [music] are killed and you get this crunchy snack called bunach chana. When this bunach chana is powdered, it's called chana satu. This chana satu is not only high in protein but is also very rich in fiber, iron, calcium, magnesium and folate. [music] [00:08:20] When in between the meals you feel hungry, don't reach out to that 70 rupees protein bar. Just drink the 7 rupees drink [music] and you will get good 10 g of protein. What's even better is that chana satu can be enjoyed both sweet and savory. To make it sweet, take [00:08:36] 50 gram of chana satu and jaggery powder in it. Mix water and give it a good mix. For the savory version, take 50 g of chana satu, mix water, add rock salt, black salt, [music] boner and lemon juice. Give it a good stir and it's [00:08:51] ready. Chana satu has protein but it is also very high in carbohydrates. And for fat loss, shouldn't we cut down our carbohydrate intake? Yes, it has more carbs than protein. But what kind of carbs? Complex carbs that don't spike the blood sugar and keep you full for [00:09:08] longer. Plus, have you stopped eating carbs altogether? For fat loss, we should cut down those refined carbohydrates from maida and sugar. If you drink chana satu, naturally, you will eat less the whole day. A scoop of whey protein has hardly 150 calories, [00:09:23] but your chana satu drink has 400 calories. See, when it comes to macronutrients, chana satu and whey protein are incomparable. But note that chana satu is a real whole food whereas whey protein is an industrialized product. Whey protein is so sweet still [00:09:39] it has so less calories. Why? Because it has that zerocalorie artificial sweetener which is worse than sugar. That chocolate flavor of whey protein is also artificial. Just one scoop of whey protein will cost you rupees 100. But in 100 rupees you can get 1 kg of chana [00:09:56] satu. Still chana satu is plant-based doesn't give you all the nine essential amino acids. [music] See when we combine two vegetarian food sources let's say you eat dal chaval or dal roti you get all the nine essential amino acids. [00:10:11] [music] So unless you are drinking only chana satu the whole day you need not worry about complete or incomplete protein. Think of a horse's stamina. What does he eat? Chana. Think of elephant strength. What does he eat? Grass. So, vegetarian protein is way [00:10:27] more than what we are made to believe it is. I have serious muscle building goals. 10 g chana satu drink is not enough for me. Well, if your workout is at that level, then post-workout in 50 g of chana satu. Add a couple of dates to [00:10:43] sweeten it. Add one glass of milk and blend it to make a shake. This will give you good 20 g of protein. Overall, chana satu is versatile, nutritious, yet an underrated protein drink. A diet with balanced nutrition protects your hair. [00:10:58] Another thing that helps grow hair faster is a rosemary based hair serum. But most commercial hair serums in the Indian market have many harsh chemicals in them which rather damage the hair follicles. Which is why Mama Earth's rosemary hair growth scalp [music] serum [00:11:13] is a better option. It's better because if you check its ingredients, you will find that it has no silicons, no artificial fragrance, no mineral oil [music] and no cosmetic colors. Rather, it is a blend of hair friendly herbs like sprouted peas, basil, [music] [00:11:29] rosemary and fenugreek with glycerin and safe chemicals. [music] When using it, put two to four drops of this serum directly on the scalp and give your hair a light [music] massage. You can apply it daily. To buy this effective and toxin-free rosemary hair serum, click on [00:11:45] the link in the [music] description box. Do not forget to apply the special discount coupon to get 21% off. There are five foods that you must avoid in breakfast. [music] To know what these foods are, check out this video. My name is Vive. I thank you so much for [00:12:01] watching. [music]"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1089,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: UVHOJM0bdVc",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @VS99575 | Likes: 2551 | Replies: 94 | Published: 2024-09-20T13:34:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Genuinely the only YouTuber i trust blindly since 2018 Thanks brothet❤🎉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @VS-bg8ex | Likes: 26 | Replies: 0 | Published: 2024-09-20T13:37:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Same brother same",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @VS-bg8ex | Likes: 18 | Replies: 0 | Published: 2024-09-20T13:38:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Ye bnde ke nuskhe kaam krte hai",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @VS-bg8ex | Likes: 15 | Replies: 0 | Published: 2024-09-20T13:38:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Aur information bhi researched hoti hai of compared with others",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @VS99575 | Likes: 0 | Replies: 0 | Published: 2024-09-20T13:53:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "@VS-bg8ex Honestly true. I tried one of his anti hair fall method and it has stopped immensely",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @VS99575 | Likes: 0 | Replies: 0 | Published: 2024-09-20T13:53:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "@VS-bg8ex true that!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @Sabsebadepapa | Likes: 1972 | Replies: 187 | Published: 2024-09-20T14:09:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Please stop promoting mamaearth products they are low quality products.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @richapandit5280 | Likes: 51 | Replies: 0 | Published: 2024-09-20T14:22:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "Absolutely true",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @Kavitaupadhyay-hl8bc | Likes: 30 | Replies: 0 | Published: 2024-09-20T15:00:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "True",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @meghaparnamandal849 | Likes: 22 | Replies: 0 | Published: 2024-09-20T15:33:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Absolutely",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @rahl100 | Likes: 46 | Replies: 0 | Published: 2024-09-20T16:26:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "Yes , not worth the price at all just the hype onion oil bla bla bla.........",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @advitchoubey2181 | Likes: 10 | Replies: 0 | Published: 2024-09-20T16:32:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Yes it's true",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @dankkrrish6780 | Likes: 192 | Replies: 3 | Published: 2024-10-16T18:25:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "1. Amla+beettroot+carrot+jaggery: juice(skin)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "2. Almonds4, cashews 6, pumpkin seeds 2 spoons, soak| dates soak",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "Remove dryfruits water and use rest +banana to make shake(multivitamins)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "3. 50g chana sattu+ 2-3 dates+1 glass milk",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @alwaysfoodthoughts | Likes: 4 | Replies: 0 | Published: 2025-05-27T10:57:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "i can take three of them daily ?or only one for thirty days please suggest and when will i take abc juice",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @rs0423 | Likes: 0 | Replies: 0 | Published: 2025-10-27T20:32:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "But are cashews, dates, and banana good for diabetes?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @dankkrrish6780 | Likes: 1 | Replies: 0 | Published: 2025-10-28T02:47:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "@rs0423",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "Yes, they're natural sweeteners",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @YashasviSingh-c2g | Likes: 1829 | Replies: 80 | Published: 2024-09-20T15:15:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "i take this beetroot,amla ,carrot juice last winter only for 25-30 days...my blood units change from 8.8 to 11.5....thanks to this man .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @keyachatteejee8645 | Likes: 26 | Replies: 0 | Published: 2024-09-20T15:52:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "Time of consumption this beetroot juice??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @YashasviSingh-c2g | Likes: 0 | Replies: 0 | Published: 2024-09-20T15:59:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "@keyachatteejee8645 you can take this drink in morning empty stomach ..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @atharvaingulkar6467 | Likes: 0 | Replies: 0 | Published: 2024-09-20T16:04:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01531",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @mystic_sarang | Likes: 1 | Replies: 0 | Published: 2024-09-30T10:18:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01532",
+                  "author": "",
+                  "text": "What is the replacement of amla because for me...its causes lower blood pressure 😢",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01534",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @sharmishah7901 | Likes: 0 | Replies: 0 | Published: 2025-03-11T14:01:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01535",
+                  "author": "",
+                  "text": "Hi u have good content in all videos...but one doubt can we consume sattu powder with milk? isn't it dwidal ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01537",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @sharitabhojraj2423 | Likes: 0 | Replies: 0 | Published: 2024-11-20T05:25:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01538",
+                  "author": "",
+                  "text": "We have a problem getting amla in South Africa. Please give a substitute for amla. Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01540",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @MATH4ALL1729 | Likes: 0 | Replies: 0 | Published: 2025-05-21T15:47:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01541",
+                  "author": "",
+                  "text": "Nice",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01543",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @rebeccaxodonq7893 | Likes: 0 | Replies: 0 | Published: 2024-12-02T14:16:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01544",
+                  "author": "",
+                  "text": "God bless you bro ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01546",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @positvmantra | Likes: 0 | Replies: 0 | Published: 2025-04-21T07:54:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01547",
+                  "author": "",
+                  "text": "Can sattu drink be taken as post workout drink. Please recommend.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01549",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @chippirana | Likes: 0 | Replies: 0 | Published: 2024-10-02T13:58:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01550",
+                  "author": "",
+                  "text": "I just think to make abc juice and suddenly notification came what a coincidence",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01552",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @reyanshmathematics3906 | Likes: 0 | Replies: 0 | Published: 2024-10-08T22:38:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01553",
+                  "author": "",
+                  "text": "What a content ❤❤❤ i ordered collagen as I'm turning to 34 years old ... cancelled order now",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01555",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @vilen_v1 | Likes: 0 | Replies: 0 | Published: 2024-10-09T05:27:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01556",
+                  "author": "",
+                  "text": "I'm using newyou collagen giving good result, tired of maintaining consistency in diet.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01558",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @unbaisedopinions5293 | Likes: 0 | Replies: 0 | Published: 2024-09-30T14:26:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01559",
+                  "author": "",
+                  "text": "Sir one video on xanthelasama plzz",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01561",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @Naitik-g8w | Likes: 0 | Replies: 0 | Published: 2024-12-25T14:42:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01562",
+                  "author": "",
+                  "text": "Bhaiya please make a video on sunscreen",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01564",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @aparajithaam8469 | Likes: 0 | Replies: 0 | Published: 2025-03-07T11:15:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01565",
+                  "author": "",
+                  "text": "Hi bro can you please tell me foods that stabilize the platelets in the blood bcaz i have fluctuating problem",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01567",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @pushpapushpa2781 | Likes: 0 | Replies: 0 | Published: 2024-11-09T10:18:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01568",
+                  "author": "",
+                  "text": "This is use for oestio arthretis",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01570",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @ArulmozhiV-i2w | Likes: 0 | Replies: 0 | Published: 2025-04-11T11:39:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01571",
+                  "author": "",
+                  "text": "wow....I completely like it ...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01572",
+                  "author": "",
+                  "text": "but a small doubt",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01573",
+                  "author": "",
+                  "text": "is Lion Stronger than Elephant???",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01575",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @aniketverma3281 | Likes: 0 | Replies: 0 | Published: 2026-04-20T07:31:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01576",
+                  "author": "",
+                  "text": "👏 good job",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01578",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @jaynesusan1 | Likes: 0 | Replies: 0 | Published: 2024-09-30T09:02:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01579",
+                  "author": "",
+                  "text": "and can u suggest best hibiscus powder??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01581",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @rajeevmayekar1775 | Likes: 0 | Replies: 0 | Published: 2025-08-31T18:56:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "Sir, Regarding that vitamin drink with Pumpkin seeds can I include them with Milk n oats n then blend ? Thanks for the content and so much useful information.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01584",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @aeron-ak | Likes: 0 | Replies: 0 | Published: 2025-01-19T10:36:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "Please make a video on hair serum.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "I have heard Wishcare, Minimalist, Soul flower, Wow Skin Science hair serum are good for hair growth.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "I have looked for their ingredients, usually they include rosemary, redensyl, biotin or anagain.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "Looking a for a good and pocket friendly hair serum.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "Please keep up the good work... The only yt guy we can trust blindly 😇",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @gorletarunkumar3607 | Likes: 0 | Replies: 0 | Published: 2024-12-21T08:16:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "Which time is better to take the collagen juice? Can you please tell anyone.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @LegoshivaLegoshiva | Likes: 0 | Replies: 0 | Published: 2024-10-30T03:24:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "Best",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @AniKaFarha-so3cq | Likes: 0 | Replies: 0 | Published: 2025-08-26T11:21:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "Make a video about \" IBS (All types) \" ‼️‼️‼️‼️‼️‼️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @sravanisravs5205 | Likes: 0 | Replies: 0 | Published: 2024-12-26T02:28:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "That glass gives me nostalgia, like u have been using it since years 😂😛",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "UVHOJM0bdVc",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 46,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 12213,
+          "transcript_words": 2280,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:12] Today I want to talk about three such drinks that have [music] amazing health benefits. All these drinks are not only easy to make but are also very tasty. We will also discuss the best time to consume them so that you can get the maximum benefit from them. So without any further delay, let's get started. [00:00:31] Hello friends, welcome to Fit Tuber. Collagen is a protein because of which our skin feels soft and elastic. Our body produces collagen naturally but as we age the amount and quality of collagen begins [music] to fall. It is due to low collagen that our skin gets loose and wrinkled in old age. However, [00:00:47] sometimes even in a young age collagen reduces and there are some scientifically proven reasons behind it. The first and the most damaging is the regular intake of tobacco and alcohol. Second is when we don't protect our skin from the sun's harsh rays which are [00:01:03] generally present between 11:00 a.m. and 4 p.m. Excessive intake of refined sugar is known to break down collagen which leads to fast aging of our skin. Then all that junk food which is highly processed and refined takes a lot from your skin. If you just focus on the [00:01:18] things that are [music] reducing your collagen, you don't even need to know what collagen is. Your body is most capable of producing collagen provided it gets the [music] right environment. So let me share with you a simple drink that will help boost collagen in your body. You will need three things. First [00:01:35] is amla. To boost collagen, the number one nutrient required is vitamin C. And we all know that amla is the richest source of vitamin C. So much so that the vitamin C present in 20 oranges is present in just one amla. And it's not [00:01:50] just vitamin C, but the high number of antioxidants in amla that repair the skin. Amla is amazing. We all know this. The only problem with it is that it's too [music] tangy. However, in this juice recipe, it won't just give you benefits, but will also act as a taste [00:02:06] enhancer. The second ingredient is beetroot. When your skin looks rough and pigmented from the outside, it's actually getting inflamed from within. stress or poor food habits. Inflammation of the skin is a root problem behind skin problems. Which is why beetroot [00:02:23] juice being anti-inflammatory is no less than a medicine. Beetroots are also rich in beta lanes that increase the blood flow in the skin tissue. No wonder beetroot is considered a top food to increase blood count. Third ingredient that you would need is carrot. [music] [00:02:38] Carrots are rich in keratenoids, lycopine, and zinc which are natural collagen boosters. The anti-aging effect of carrots has been well [music] documented. Prefer red carrots to make this juice. If they are not in the season, go ahead with the orange ones. [00:02:53] Now to make the juice, take one to two carrots, half a beetroot and one amla. Add water. To sweeten it further, use jaggery or jaggery powder. Then grind it properly. You can strain to get the juice. This juice is not only tasty but amazingly healthy for the body. Not just [00:03:11] collagen. If you are low on hemoglobin or you want to increase your eyesight or control your blood pressure, drink it daily for at least 30 [music] days. In fact, in North India, this juice is easily available at every juice corner in winter. [music] You can tie up with a [00:03:27] juice corner and drink this daily. Within 15 days, you will be able to see a difference in your skin. If you are still skeptical, check out the comments of people who have already benefited [music] from this juice. It's worth trying. Next is a multivitamin drink. [00:03:42] Bro, I've started taking care of my health now. Really? What are you doing? Nothing much. I'm taking a multivitamin now. Have you asked a doctor? Is there a need? Often it is seen that people who begin to take care of their health start taking a multivitamin tablet. It's not [00:03:58] their fault, but the supplement industry is so active that it almost convinces us that something will go wrong with our bodies if we don't pop a multivitamin pill. Of course, your body needs nutrition, but it doesn't need that multivitamin tablet. [music] Yes, that multivitamin tablet whose [00:04:15] source of vitamins and minerals has been hidden from you. That multivitamin tablet whose 80% contents body just pees out. That's because there are no strict regulations in this sector. And more than often, companies add fake ingredients. Shockingly, a study shows [00:04:31] that people who take daily multivitamins die early. So, it's high time that we begin trusting the real foods. Allow me to share with you a drink for which you will need five ingredients. And each of these ingredients is a superfood in itself. In a bowl, put four almonds, six [00:04:48] cashews, and two teaspoons of pumpkin seeds. Add sufficient water to soak them. Then, in another bowl, add two deseeded dates and soak them as well. Let them soak overnight or for at least 4 hours. Remove the skin of the almonds and then add them in a blender minus the [00:05:05] water. Yes, the water in which nuts and seeds are soaked should be discarded while the dates water will be used. This is the prime reason why we had soaked them separately. To this add one ripe banana. Blend it to make a smoothie. This drink has the nutrition of almonds, [00:05:22] cashews, pumpkin [music] seeds, dates and banana. Each of these foods are so nutrientdense that one video is not enough to describe all their benefits. Even scientific studies are backing up their amazing health benefits. I always wanted to include pumpkin seeds in my [00:05:39] diet. This drink made it so easy. This drink will not only serve as a natural multivitamin, but tastewise, this milkless milkshake can beat most milkshakes [music] in the market. This drink will increase your memory power. It will keep your heart healthy, improve [00:05:55] your sperm quality, make your hair stronger. It will also help you cut that extra fat. Yes, this drink is great for us. But when is the best time to consume it? It can become your morning drink. You can have it as a breakfast. You can also have it in between the meals or any [00:06:12] other time of the day before sunset. Rich in biotin, magnesium, potassium, copper, selenium, vitamin E, and countless other micronutrients. It's an apt replacement to that multivitamin pill. Finally, the protein drink. Protein is an important macronutrient [00:06:29] for various reasons. First, protein is essential for the daily repair of the body. This is why people who work out or play sports need more protein. Second, protein is a macronutrient that is slowly digested. As a result, every time you eat a protein richch meal, [music] [00:06:45] you feel full for longer. More filling means fewer chances of unwanted food munching. [music] Your hair and nails are all made up of protein. So, eating a diet with good amount of protein keeps them strong. Often when we hear the benefits of protein, the first thing that comes to [00:07:01] our mind is should I buy a protein powder? Well, for more than 80% of people, the straight answer is no. That's because a majority of people are sitting for most of the day. Even if they work out, they don't have serious bodybuilding goals. A normal person like [00:07:17] you and me should definitely eat protein richch [music] foods like paneer, curd, rajma, chennai and peanuts. But we don't need a protein powder. We must understand that more protein is needed only when a lot of new cells are being formed in the body. This is true for a [00:07:33] growing child, a pregnant mother or an athlete. [music] For most of us, 40 to 60 grams of protein per day is good enough. And do you know what's even more shocking is that consuming too much protein is more harmful than not consuming enough. High protein diets [00:07:48] have been linked to increased kidney failure cases in the past decade. So let's get back to basics and eat that protein powder that has been tried and tested for generations. The humble chana satu. [music] When black chana is roasted, all its gas forming [00:08:03] anti-nutrients [music] are killed and you get this crunchy snack called bunach chana. When this bunach chana is powdered, it's called chana satu. This chana satu is not only high in protein but is also very rich in fiber, iron, calcium, magnesium and folate. [music] [00:08:20] When in between the meals you feel hungry, don't reach out to that 70 rupees protein bar. Just drink the 7 rupees drink [music] and you will get good 10 g of protein. What's even better is that chana satu can be enjoyed both sweet and savory. To make it sweet, take [00:08:36] 50 gram of chana satu and jaggery powder in it. Mix water and give it a good mix. For the savory version, take 50 g of chana satu, mix water, add rock salt, black salt, [music] boner and lemon juice. Give it a good stir and it's [00:08:51] ready. Chana satu has protein but it is also very high in carbohydrates. And for fat loss, shouldn't we cut down our carbohydrate intake? Yes, it has more carbs than protein. But what kind of carbs? Complex carbs that don't spike the blood sugar and keep you full for [00:09:08] longer. Plus, have you stopped eating carbs altogether? For fat loss, we should cut down those refined carbohydrates from maida and sugar. If you drink chana satu, naturally, you will eat less the whole day. A scoop of whey protein has hardly 150 calories, [00:09:23] but your chana satu drink has 400 calories. See, when it comes to macronutrients, chana satu and whey protein are incomparable. But note that chana satu is a real whole food whereas whey protein is an industrialized product. Whey protein is so sweet still [00:09:39] it has so less calories. Why? Because it has that zerocalorie artificial sweetener which is worse than sugar. That chocolate flavor of whey protein is also artificial. Just one scoop of whey protein will cost you rupees 100. But in 100 rupees you can get 1 kg of chana [00:09:56] satu. Still chana satu is plant-based doesn't give you all the nine essential amino acids. [music] See when we combine two vegetarian food sources let's say you eat dal chaval or dal roti you get all the nine essential amino acids. [00:10:11] [music] So unless you are drinking only chana satu the whole day you need not worry about complete or incomplete protein. Think of a horse's stamina. What does he eat? Chana. Think of elephant strength. What does he eat? Grass. So, vegetarian protein is way [00:10:27] more than what we are made to believe it is. I have serious muscle building goals. 10 g chana satu drink is not enough for me. Well, if your workout is at that level, then post-workout in 50 g of chana satu. Add a couple of dates to [00:10:43] sweeten it. Add one glass of milk and blend it to make a shake. This will give you good 20 g of protein. Overall, chana satu is versatile, nutritious, yet an underrated protein drink. A diet with balanced nutrition protects your hair. [00:10:58] Another thing that helps grow hair faster is a rosemary based hair serum. But most commercial hair serums in the Indian market have many harsh chemicals in them which rather damage the hair follicles. Which is why Mama Earth's rosemary hair growth scalp [music] serum [00:11:13] is a better option. It's better because if you check its ingredients, you will find that it has no silicons, no artificial fragrance, no mineral oil [music] and no cosmetic colors. Rather, it is a blend of hair friendly herbs like sprouted peas, basil, [music] [00:11:29] rosemary and fenugreek with glycerin and safe chemicals. [music] When using it, put two to four drops of this serum directly on the scalp and give your hair a light [music] massage. You can apply it daily. To buy this effective and toxin-free rosemary hair serum, click on [00:11:45] the link in the [music] description box. Do not forget to apply the special discount coupon to get 21% off. There are five foods that you must avoid in breakfast. [music] To know what these foods are, check out this video. My name is Vive. I thank you so much for [00:12:01] watching. [music]"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1089,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: UVHOJM0bdVc",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @VS99575 | Likes: 2551 | Replies: 94 | Published: 2024-09-20T13:34:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Genuinely the only YouTuber i trust blindly since 2018 Thanks brothet❤🎉",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @VS-bg8ex | Likes: 26 | Replies: 0 | Published: 2024-09-20T13:37:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Same brother same",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @VS-bg8ex | Likes: 18 | Replies: 0 | Published: 2024-09-20T13:38:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Ye bnde ke nuskhe kaam krte hai",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @VS-bg8ex | Likes: 15 | Replies: 0 | Published: 2024-09-20T13:38:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Aur information bhi researched hoti hai of compared with others",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @VS99575 | Likes: 0 | Replies: 0 | Published: 2024-09-20T13:53:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "@VS-bg8ex Honestly true. I tried one of his anti hair fall method and it has stopped immensely",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @VS99575 | Likes: 0 | Replies: 0 | Published: 2024-09-20T13:53:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "@VS-bg8ex true that!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @Sabsebadepapa | Likes: 1972 | Replies: 187 | Published: 2024-09-20T14:09:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Please stop promoting mamaearth products they are low quality products.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @richapandit5280 | Likes: 51 | Replies: 0 | Published: 2024-09-20T14:22:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "Absolutely true",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @Kavitaupadhyay-hl8bc | Likes: 30 | Replies: 0 | Published: 2024-09-20T15:00:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "True",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @meghaparnamandal849 | Likes: 22 | Replies: 0 | Published: 2024-09-20T15:33:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Absolutely",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @rahl100 | Likes: 46 | Replies: 0 | Published: 2024-09-20T16:26:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "Yes , not worth the price at all just the hype onion oil bla bla bla.........",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @advitchoubey2181 | Likes: 10 | Replies: 0 | Published: 2024-09-20T16:32:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Yes it's true",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @dankkrrish6780 | Likes: 192 | Replies: 3 | Published: 2024-10-16T18:25:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "1. Amla+beettroot+carrot+jaggery: juice(skin)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "2. Almonds4, cashews 6, pumpkin seeds 2 spoons, soak| dates soak",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "Remove dryfruits water and use rest +banana to make shake(multivitamins)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "3. 50g chana sattu+ 2-3 dates+1 glass milk",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 14] Author: @alwaysfoodthoughts | Likes: 4 | Replies: 0 | Published: 2025-05-27T10:57:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "i can take three of them daily ?or only one for thirty days please suggest and when will i take abc juice",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 15] Author: @rs0423 | Likes: 0 | Replies: 0 | Published: 2025-10-27T20:32:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "But are cashews, dates, and banana good for diabetes?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 16] Author: @dankkrrish6780 | Likes: 1 | Replies: 0 | Published: 2025-10-28T02:47:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "@rs0423",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "Yes, they're natural sweeteners",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 17] Author: @YashasviSingh-c2g | Likes: 1829 | Replies: 80 | Published: 2024-09-20T15:15:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "i take this beetroot,amla ,carrot juice last winter only for 25-30 days...my blood units change from 8.8 to 11.5....thanks to this man .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 18] Author: @keyachatteejee8645 | Likes: 26 | Replies: 0 | Published: 2024-09-20T15:52:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "Time of consumption this beetroot juice??",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 19] Author: @YashasviSingh-c2g | Likes: 0 | Replies: 0 | Published: 2024-09-20T15:59:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "@keyachatteejee8645 you can take this drink in morning empty stomach ..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "[COMMENT 20] Author: @atharvaingulkar6467 | Likes: 0 | Replies: 0 | Published: 2024-09-20T16:04:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01531",
+                "author": "",
+                "text": "[COMMENT 479] Author: @mystic_sarang | Likes: 1 | Replies: 0 | Published: 2024-09-30T10:18:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01532",
+                "author": "",
+                "text": "What is the replacement of amla because for me...its causes lower blood pressure 😢",
+                "likes": null
+              },
+              {
+                "comment_id": "c01534",
+                "author": "",
+                "text": "[COMMENT 480] Author: @sharmishah7901 | Likes: 0 | Replies: 0 | Published: 2025-03-11T14:01:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01535",
+                "author": "",
+                "text": "Hi u have good content in all videos...but one doubt can we consume sattu powder with milk? isn't it dwidal ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01537",
+                "author": "",
+                "text": "[COMMENT 481] Author: @sharitabhojraj2423 | Likes: 0 | Replies: 0 | Published: 2024-11-20T05:25:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01538",
+                "author": "",
+                "text": "We have a problem getting amla in South Africa. Please give a substitute for amla. Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c01540",
+                "author": "",
+                "text": "[COMMENT 482] Author: @MATH4ALL1729 | Likes: 0 | Replies: 0 | Published: 2025-05-21T15:47:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01541",
+                "author": "",
+                "text": "Nice",
+                "likes": null
+              },
+              {
+                "comment_id": "c01543",
+                "author": "",
+                "text": "[COMMENT 483] Author: @rebeccaxodonq7893 | Likes: 0 | Replies: 0 | Published: 2024-12-02T14:16:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01544",
+                "author": "",
+                "text": "God bless you bro ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01546",
+                "author": "",
+                "text": "[COMMENT 484] Author: @positvmantra | Likes: 0 | Replies: 0 | Published: 2025-04-21T07:54:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01547",
+                "author": "",
+                "text": "Can sattu drink be taken as post workout drink. Please recommend.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01549",
+                "author": "",
+                "text": "[COMMENT 485] Author: @chippirana | Likes: 0 | Replies: 0 | Published: 2024-10-02T13:58:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01550",
+                "author": "",
+                "text": "I just think to make abc juice and suddenly notification came what a coincidence",
+                "likes": null
+              },
+              {
+                "comment_id": "c01552",
+                "author": "",
+                "text": "[COMMENT 486] Author: @reyanshmathematics3906 | Likes: 0 | Replies: 0 | Published: 2024-10-08T22:38:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01553",
+                "author": "",
+                "text": "What a content ❤❤❤ i ordered collagen as I'm turning to 34 years old ... cancelled order now",
+                "likes": null
+              },
+              {
+                "comment_id": "c01555",
+                "author": "",
+                "text": "[COMMENT 487] Author: @vilen_v1 | Likes: 0 | Replies: 0 | Published: 2024-10-09T05:27:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01556",
+                "author": "",
+                "text": "I'm using newyou collagen giving good result, tired of maintaining consistency in diet.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01558",
+                "author": "",
+                "text": "[COMMENT 488] Author: @unbaisedopinions5293 | Likes: 0 | Replies: 0 | Published: 2024-09-30T14:26:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01559",
+                "author": "",
+                "text": "Sir one video on xanthelasama plzz",
+                "likes": null
+              },
+              {
+                "comment_id": "c01561",
+                "author": "",
+                "text": "[COMMENT 489] Author: @Naitik-g8w | Likes: 0 | Replies: 0 | Published: 2024-12-25T14:42:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01562",
+                "author": "",
+                "text": "Bhaiya please make a video on sunscreen",
+                "likes": null
+              },
+              {
+                "comment_id": "c01564",
+                "author": "",
+                "text": "[COMMENT 490] Author: @aparajithaam8469 | Likes: 0 | Replies: 0 | Published: 2025-03-07T11:15:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01565",
+                "author": "",
+                "text": "Hi bro can you please tell me foods that stabilize the platelets in the blood bcaz i have fluctuating problem",
+                "likes": null
+              },
+              {
+                "comment_id": "c01567",
+                "author": "",
+                "text": "[COMMENT 491] Author: @pushpapushpa2781 | Likes: 0 | Replies: 0 | Published: 2024-11-09T10:18:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01568",
+                "author": "",
+                "text": "This is use for oestio arthretis",
+                "likes": null
+              },
+              {
+                "comment_id": "c01570",
+                "author": "",
+                "text": "[COMMENT 492] Author: @ArulmozhiV-i2w | Likes: 0 | Replies: 0 | Published: 2025-04-11T11:39:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01571",
+                "author": "",
+                "text": "wow....I completely like it ...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01572",
+                "author": "",
+                "text": "but a small doubt",
+                "likes": null
+              },
+              {
+                "comment_id": "c01573",
+                "author": "",
+                "text": "is Lion Stronger than Elephant???",
+                "likes": null
+              },
+              {
+                "comment_id": "c01575",
+                "author": "",
+                "text": "[COMMENT 493] Author: @aniketverma3281 | Likes: 0 | Replies: 0 | Published: 2026-04-20T07:31:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01576",
+                "author": "",
+                "text": "👏 good job",
+                "likes": null
+              },
+              {
+                "comment_id": "c01578",
+                "author": "",
+                "text": "[COMMENT 494] Author: @jaynesusan1 | Likes: 0 | Replies: 0 | Published: 2024-09-30T09:02:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01579",
+                "author": "",
+                "text": "and can u suggest best hibiscus powder??",
+                "likes": null
+              },
+              {
+                "comment_id": "c01581",
+                "author": "",
+                "text": "[COMMENT 495] Author: @rajeevmayekar1775 | Likes: 0 | Replies: 0 | Published: 2025-08-31T18:56:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "Sir, Regarding that vitamin drink with Pumpkin seeds can I include them with Milk n oats n then blend ? Thanks for the content and so much useful information.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01584",
+                "author": "",
+                "text": "[COMMENT 496] Author: @aeron-ak | Likes: 0 | Replies: 0 | Published: 2025-01-19T10:36:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "Please make a video on hair serum.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "I have heard Wishcare, Minimalist, Soul flower, Wow Skin Science hair serum are good for hair growth.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "I have looked for their ingredients, usually they include rosemary, redensyl, biotin or anagain.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "Looking a for a good and pocket friendly hair serum.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "Please keep up the good work... The only yt guy we can trust blindly 😇",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "[COMMENT 497] Author: @gorletarunkumar3607 | Likes: 0 | Replies: 0 | Published: 2024-12-21T08:16:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "Which time is better to take the collagen juice? Can you please tell anyone.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "[COMMENT 498] Author: @LegoshivaLegoshiva | Likes: 0 | Replies: 0 | Published: 2024-10-30T03:24:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "Best",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "[COMMENT 499] Author: @AniKaFarha-so3cq | Likes: 0 | Replies: 0 | Published: 2025-08-26T11:21:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "Make a video about \" IBS (All types) \" ‼️‼️‼️‼️‼️‼️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "[COMMENT 500] Author: @sravanisravs5205 | Likes: 0 | Replies: 0 | Published: 2024-12-26T02:28:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "That glass gives me nostalgia, like u have been using it since years 😂😛",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2717 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163014_456ea5",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163014_456ea5",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Fat-burning habits, exercise and metabolism — partial transcript",
+      "batch_number": 12,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 12 of 30 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260905_163014_456ea5",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260905_163014_456ea5"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163014_456ea5",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Fat-burning habits, exercise and metabolism — partial transcript",
+      "batch_number": 12,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "956a6aeb-f1db-4204-b929-c108b6ae6795",
+    "package_id": "vh_restricted_intelligence_20260905_163014_456ea5",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "aMheJmu5YfU"
+    ],
+    "evidence_grades": {
+      "aMheJmu5YfU": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Fat-burning habits, exercise and metabolism — partial transcript",
+      "batch_number": 12,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "97641b92b7a526a44ba7123efefe1c3df027e6436e2c0d79d0da0eed6155331d",
+      "prompt.json": "f44e411838aafb3fdf378ffecc016ca17ea691947d216f0bb5b1d9fb6e27a186",
+      "schema.json": "2851aebee02481499c467314a2b178b288cf2624e961a1cb517c67a65175bea6"
+    },
+    "created_at": "2026-09-05 16:30:14",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "aMheJmu5YfU",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=aMheJmu5YfU",
+        "original_title": "12 Strange Signs Your Body Is Burning Fat (Not Sugar)",
+        "clean_title": "12 Strange Signs Your Body Is Burning Fat (Not Sugar)",
+        "channel": "Ryan Taylor (Natural Remedies)",
+        "upload_date": "2026-05-01",
+        "description": "#Ad - (Description contains product links). 12 Strange Signs Your Body Is Burning Fat (Not Sugar).\n\nFat burning is a metabolic state where your body switches from using glucose (sugar) to using stored triglycerides (fat) for fuel. This process is governed by your hormones and the activation of specific enzymes that allow fat cells to be broken down and used by your mitochondria.\n\nA standard bathroom scale often won't tell you if you are successfully burning fat or just losing water, which is why many people get discouraged when the numbers don't move. Because fat loss is a complex internal process, your body provides subtle \"fat-adaptation\" signals that most people don't recognise.\n\nFor this reason, today we identify 12 common yet strange signs of fat burning to watch out for, including a metallic taste in the mouth, waking up at 3 AM, skin changes, feeling colder than usual, twitching muscles and sudden mental clarity, among others.\n\nI also explain why these metabolic shifts happen, how to manage the \"transition\" symptoms, and some natural ways to support your liver and gut to keep the fat-burning process active.\n\nScientific References:\n📚 Anderson, J. C. (2015). Measuring breath acetone for monitoring fat loss: Review. Obesity, 23(12), 2327–2334.\nhttps://pubmed.ncbi.nlm.nih.gov/26524104/\n📚 Fernández-Elías, V. E. et al. (2015). Relationship between muscle water and glycogen recovery after prolonged exercise in the heat in humans. European Journal of Applied Physiology, 115, 1919–1926.\nhttps://pubmed.ncbi.nlm.nih.gov/25911631/\n📚 Youm, Y. H. et al. (2015). The ketone metabolite β-hydroxybutyrate blocks NLRP3 inflammasome-mediated inflammatory disease. Nature Medicine, 21(3), 263–269.\nhttps://pubmed.ncbi.nlm.nih.gov/25686106/\n📚 Jansen, A. et al. (2017). Increased blood levels of persistent organic pollutants after weight loss: A systematic review. Journal of Toxicology and Environmental Health, Part B, 20(1), 22–37.\nhttps://pubmed.ncbi.nlm.nih.gov/28051929/\n📚 Luong, T. V. et al. (2025). A 3-Week Ketogenic Diet Increases Global Cerebral Blood Flow and Brain-Derived Neurotrophic Factor. The Journal of Clinical Endocrinology & Metabolism, 110(12), e4176–e4181.\nhttps://academic.oup.com/jcem/article/110/12/e4176/8104036\n\nRyan's guides, e-books, and audios (ad):\n🔗 https://ryantaylorremedies.gumroad.com/\n\nRyan's Favourite Brain Support Supplements (ad): \n🔗 https://www.mindlabpro.com?a_aid=667bf5a54b917&a_cid=f4c782b0\n\nTimestamps:\n⏰ 00:00 - Intro: 12 strange signs your body is burning fat\n⏰ 00:11 - Signals of fat burning\n⏰ 07:44 - Why the scale doesn't always move\n⏰ 08:36 - How do avoid weakness during weight loss\n⏰ 09:21 - The importance of fibre\n⏰ 09:53 - How to speed up weight loss naturally\n\nAbout Ryan:\nRyan Taylor is a UK-based certified nutritionist and educator focused on natural health, food science, and wellness education. He holds a CPD-accredited Level 5 Diploma in Nutrition and a degree in Computing Science. Since 2016, he has created over 1,500 educational videos, helping millions understand the power of nutrition and natural remedies.\n\nStay Connected:\n🔗 https://www.facebook.com/ryansnaturalremedies/\n\nDisclaimer:\nThis video is for informational purposes only. It is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare professional before making changes to your diet, medication, or lifestyle. Some links in this description may be affiliate links. If you click and purchase, I may earn a small commission at no extra cost to you.\n\n💚 I wish you great health, wealth and happiness in everything you do.",
+        "source_category": "Education",
+        "youtube_category_name": "Education",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "existing_vtt",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:03] 12 signs your body is burning fat even if the scale isn't moving. This video is educational only, not medical advice. Always check with your doctor. One of the earlier signs can be morning breath. If you wake up in the morning with a slightly metallic taste on your breath, [00:00:19] this can be a sign that the liver was burning body fat through the night. Ketones from your fat cells can start to break down into acetone, which then exits through your lungs causing that unusual fruity or nail polish smell on [00:00:34] the breath. As your metabolism becomes more flexible to burning fat, this smell naturally starts to go away. The second sign is changes to the skin. As the fat cells break down when you're dieting or exercising, they tend to release stored [00:00:50] toxins such as heavy metals or pollutants that you may have been storing for years. The scale may not be moving at this point because your liver is still processing them. When you're burning fat quickly, some of these toxins get released through the skin [00:01:06] temporarily causing things like itching, breakouts, or rashes usually for about three or four weeks. Bitter foods like lemon, arugula, and apple cider vinegar can help your liver process and clear out waste for skin improvements. [00:01:22] The third sign can be having a dry mouth because when you cut your carbs or your calories, the body starts to burn through its stored sugar called glycogen. Every 1 g of glycogen that you burn, you release three or four grams of [00:01:38] stored [music] fluid. This causes a temporary state where you feel more thirsty or have dry mouth when waking up. You might also find yourself urinating more often. This is a positive sign of weight loss. Adding electrolytes, [music] [00:01:54] sea salt, and mineral water can help to rehydrate the body during this process. This water loss, however, can also lead to twitching muscles. As the body starts to dump more water, it also flushes out your electrolytes, especially potassium, [00:02:11] magnesium, and sodium. With lower levels, the muscles can sometimes begin to twitch around the eyes or you may experience cramping of the feet or the calves when you move your foot or leg into a certain position. This is a sign that your body needs more minerals, but [00:02:28] also that it's losing fat. Focus on eating more potassium and magnesium rich foods like avocados, arugula, and leafy greens to get more potassium and magnesium. Also, try a pinch of Himalayan or Celtic sea salt in water to [00:02:44] get more sodium. Now, another positive signal that you're burning fat is reduced hunger. This is the ability to go from breakfast all the way to your next meal without feeling hungry. This occurs because you no longer get those blood sugar swings as [00:03:01] your fat cells are releasing ketones. Ketones help to stabilize blood sugar and prevent those mid-afternoon cravings. This can also result in number six, improved thinking. You might notice that you can think more clearly without [00:03:17] that usual afternoon crash. Personally, I tend to feel mentally sharper and able to make more connections in my brain when I'm researching. This improved thinking indicates that ketones from the fat cells are reaching and fueling the [00:03:33] mitochondria in your brain. Research shows us that fat fuel is 22% more efficient at generating energy in the brain than glucose. Now, the next thing to watch out for is simply your waist size reducing. Sometimes the scales do [00:03:50] not move when you're on a diet because your body is starting to rebuild its muscle. This is very common in older people who have already had atrophy or sagging muscles around the legs or thighs, for example. A much better way to track your progress is by measuring [00:04:07] your waist every two weeks. As the waistline begins shrinking and you notice more muscle definition, you are clearly burning fat. Eating more fiber on a diet can sometimes cause bloating. Apple cider vinegar mixed in water before meals can [00:04:24] help to reduce this. Now, the eighth sign is digestive changes. In over 50% of people, there is some change, either constipation or faster digestion when they're burning fat. This tends to happen because the digestive enzymes and [00:04:39] the gut microbes are not yet adjusted to your new diet or eating plan. This is one of the earliest stages where your body is adapting to metabolizing fat instead of sugar. It's important here to be patient as it can take anything from [00:04:55] a week to a month for digestion to stabilize. You might also notice increased sweating. In the earlier stages of fat burning, the body generates more heat through thermogenesis and in order to cool itself back down, it activates the sweat [00:05:12] glands. So, you may notice that you're sweating more than usual even if the scale hasn't moved. This is much more common during exercise or activity. However, when you are very still and you're not moving, sometimes you may start to feel colder than usual. You [00:05:29] see, your fat cells are not only designed to hold fuel, they also help to insulate your body. But as soon as you reduce your body fat percentage, you essentially have less layers to keep you warm. As you rest, your metabolism can slow down slightly to conserve energy, [00:05:47] which is why you may feel a little colder than usual. Wearing warmer clothing can slightly increase the fat burning metabolism. Now, some people also start to wake between 1:00 and 3:00 a.m. When you first start losing weight, blood sugars [00:06:04] temporarily can become unstable and they drop in the early hours of the night, which then causes a cortisol spike to wake you up. This can leave you feeling very wired at night. However, as your metabolism adapts to fat burning after a [00:06:19] couple of weeks, you start getting a more sustained slow release of fuel, which actually helps you to sleep much, much deeper than you did when you started your diet. Now, in the morning when you wake up, you might feel less stiffness. Ketones from burning fat also [00:06:36] have a natural anti-inflammatory effect on the body. You may start to wake up feeling less stiff and rigid as the inflammation drops and the joints and the muscles become more relaxed and flexible. Getting 40 minutes of full body sun [00:06:52] exposure in the morning also raises vitamin D levels to help lower inflammation. Now, one final sign that I'd like to add is a lower resting heart rate. Your mitochondria become better at using oxygen when burning fat, [00:07:07] essentially allowing your cells to produce more energy with less stress. Adrenaline levels also naturally drop when your body no longer relies on quick sugar for fuel. This allows your nervous system to enter the relaxed parasympathetic state. You may notice [00:07:25] your resting heart rate gradually lowering over time. A healthy resting heart rate is typically between 60 to 70 beats per minute. Improvements are usually seen within one to three weeks of consistent fat loss. Now that you're aware of the signs that [00:07:41] your body gives you when you're burning fat, you may be asking why the scale doesn't always move. In the early stages of a diet, people often see lots of weight loss because the body dumps fluid, but then they tend to lose hope as the scale stops moving. Let me be [00:07:58] clear, this is not the sign that fat burning has stopped. Your body composition often remodels, gaining more muscle whilst losing fat at the same time. Exercise can also cause micro-tears in the muscles leading to [00:08:13] temporary inflammation and water retention, so the scale doesn't always move. Instead of using the scales, it's much better to measure your waistline and notice changes on how you wear your clothes rather than relying on the scales. You might also want to try [00:08:29] taking before and after photographs once every month for a more accurate view of how your body is changing. How can I avoid weakness? The first one to two weeks are often the most brutal where the body has to adapt [00:08:44] to your new diet plan or exercise routine. During this transition, it's very important to stay hydrated and add a little more sea salt into the diet. Sodium from salt helps your cells absorb fluid so they can continue to generate [00:09:00] high amounts of ATP energy. Your body will also use up more B vitamins when it's converting fat into energy, which can leave you feeling a little tired. So, focus on adding unfortified nutritional yeast, sunflower seeds, and [00:09:17] red meat to restore your B vitamins during the transition. Don't forget about fiber. People who cut out carbs should definitely focus on adding more soluble fiber from things like chia seeds, avocados, berries, flax, or [00:09:33] psyllium husk whilst also avoiding those fast processed carbs that quickly turn into sugar like bread, flour, cereal, etc. Soluble fiber is essential to feed gut bacteria, which is then going to [00:09:48] make short-chain fatty acids that support your metabolism. This will make the process a lot easier without as many side effects. How to speed up weight loss. Your body is most efficient at burning fat in the first two to four [00:10:03] hours after waking up because the fat-burning hormones are naturally higher after an overnight fast. It's important to stay away from refined starch, sugar, and cereals in the morning [music] to keep your insulin low. Instead, choosing healthier [00:10:19] low-carb breakfast foods like eggs, salmon, yogurts, or meats. These will keep the fat storage hormone insulin lower for longer, allowing you to burn additional fat calories throughout the day. I'm Ryan Taylor, a certified [00:10:34] nutritionist. Thank you so much for watching and I wish you great health, wealth, and happiness."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 535,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: aMheJmu5YfU",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 227",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @RyanTaylorNaturalRemedies | Likes: 14 | Replies: 1 | Published: 2026-05-03T09:08:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "More information on the 12 Breakfast Foods To Burn Belly Fat: https://youtu.be/JntZpFM5v5M?si=Z6bwUlESd3HKbygN",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @5226-p1e | Likes: 0 | Replies: 0 | Published: 2026-07-13T03:04:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "So for the fasting thing, I've heard people describe it as 8:00 p.m. to roughly 6:00 a.m., now I'm having difficulties with it because I am diabetic, I need to know what the bare minimum is for the hours I need for that fast to actually work.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "On another Channel they mentioned that it's up to 10 to 12 hours of fasting before you're allowed to have your protein breakfast try to get at least 5 and 1/2 hours of sleep, my problem is when I go to bed I end up waking up at like 3:00 a.m. only getting 3 hours of sleep sometimes for it's rare though, especially since I started my diet, I try to sleep more but my body just rejects it and so I'm stuck, and coffee helps naturally to sustain my Hunger for a little bit longer, so another Channel on YouTube was suggesting that I exercise first after having my coffee without eating food, but after I work out that's when I eat my protein, and my workouts not going to be like crazy they just suggested walking because walking is at a normal pace and it doesn't do overkill on you and allows you to get the workout in on a consistent basis so you'll easily do it everyday.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00017",
+              "author": "",
+              "text": "[COMMENT 3] Author: @sonifiji9705 | Likes: 832 | Replies: 22 | Published: 2026-05-06T14:22:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "1. Morning breath - metallic/fruity",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "2. Skin surface changes - rashes/breakouts from toxin release",
+              "likes": null
+            },
+            {
+              "comment_id": "c00020",
+              "author": "",
+              "text": "3. Dry mouth - water loss",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "4. Twitching muscles - mineral loss",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "5. Reduced hunger - stable appetite",
+              "likes": null
+            },
+            {
+              "comment_id": "c00023",
+              "author": "",
+              "text": "6. Improved thinking- clearer energy",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "7. Waist size reducing - body shape changes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "8. Digestive changes- gut adjustment phase",
+              "likes": null
+            },
+            {
+              "comment_id": "c00026",
+              "author": "",
+              "text": "9. Increased sweating - water loss, glycogen down",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "10. Feeling colder - heat releases",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "11. Waking between 1-3am - blood sugar shifts",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "12. Reduced morning stiffness- better flexibility",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "13. Lower resting heart rate - calmer nervous system",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "[COMMENT 4] Author: @TarotFaithKeeper | Likes: 36 | Replies: 0 | Published: 2026-05-07T10:24:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "Thank you 👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "[COMMENT 5] Author: @Maxfromohio2155 | Likes: 11 | Replies: 0 | Published: 2026-05-08T13:31:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 6] Author: @Snöfall26 | Likes: 8 | Replies: 0 | Published: 2026-05-09T19:28:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 7] Author: @annieclarkson1733 | Likes: 4 | Replies: 0 | Published: 2026-05-17T03:28:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "Yeah I've alot of rashes and pimples on my shoulders and face infact the rash has darkened and left a dark patch which is slightly noticeable on myshoulders",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 8] Author: @THEUWJSJEI2611 | Likes: 3 | Replies: 0 | Published: 2026-06-02T16:43:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "all of these for me except brain fog instead of improved thinking tbh, it goes back and forth",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "[COMMENT 9] Author: @Germangenxr | Likes: 303 | Replies: 8 | Published: 2026-05-02T03:23:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "I love the fact that my stomach is shrinking and I am naturally eating less. I’ll definitely be saving money on food",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "[COMMENT 10] Author: @bourjoism3917 | Likes: 10 | Replies: 0 | Published: 2026-05-02T05:14:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "True😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "[COMMENT 11] Author: @Kari-j1q | Likes: 1 | Replies: 0 | Published: 2026-05-04T13:31:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "Yes!! Years ago, after experencing success at Weightwatchers, I tried to persuade a friend who was obese to join. She said she couldn't afford the weekly fee. I told her what she saved on food would cover the cost, which was absolutely true. She never joined. Now I practice time restricted eating with the occasional fast, watch my sugar and carbs and maintain a healthy weight. I've been vegetarian for about 15 years, too, so maybe that's a factor. ☺ Good luck!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 12] Author: @mremington8 | Likes: 6 | Replies: 0 | Published: 2026-05-05T00:17:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "anf future medical expenses too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 13] Author: @Lovemypersiancats | Likes: 0 | Replies: 0 | Published: 2026-05-15T22:16:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "🎯",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 14] Author: @JanArbor-h3c | Likes: 0 | Replies: 0 | Published: 2026-05-26T00:16:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "Lol 👑",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 15] Author: @nekomiruku | Likes: 4 | Replies: 0 | Published: 2026-07-27T22:23:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "Oh shit maybe this is why my mouth feels dry these days",
+              "likes": null
+            },
+            {
+              "comment_id": "c00712",
+              "author": "",
+              "text": "@RyanTaylorNaturalRemediesbut I thought fiber is not great. I watch a guy with colostomy because they removed his intestine because too much fiber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00714",
+              "author": "",
+              "text": "[COMMENT 211] Author: @derekhobbs1102 | Likes: 0 | Replies: 0 | Published: 2026-07-02T11:00:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00715",
+              "author": "",
+              "text": "A lot of these are just symptoms of being type one diabetic.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00717",
+              "author": "",
+              "text": "[COMMENT 212] Author: @Disillusioned_one | Likes: 0 | Replies: 1 | Published: 2026-05-31T17:36:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00718",
+              "author": "",
+              "text": "Best way to eat nothing but meat eggs fish butter.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00719",
+              "author": "",
+              "text": "Anything that’s not carnivore Don’t eat its carbs and carbs is just sugar .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00720",
+              "author": "",
+              "text": "I am 100% carnivore and all the effects described I have including calf , foot, hands cramping.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00721",
+              "author": "",
+              "text": "I just got the cramping ( still limping from last night) and itchy skin on my arms",
+              "likes": null
+            },
+            {
+              "comment_id": "c00723",
+              "author": "",
+              "text": "[COMMENT 213] Author: @brak2300 | Likes: 0 | Replies: 0 | Published: 2026-06-05T02:04:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00724",
+              "author": "",
+              "text": "little does he know consuming carbs doesnt make you fat. its all about the calories. Cutting out carbs may make the scale weight go down but its all water weight since carbs store water",
+              "likes": null
+            },
+            {
+              "comment_id": "c00726",
+              "author": "",
+              "text": "[COMMENT 214] Author: @24carrotgold8 | Likes: 4 | Replies: 0 | Published: 2026-05-02T23:16:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00727",
+              "author": "",
+              "text": "Body STINK! The sweat is releasing toxins which can have an unpleasant odor. 🤭",
+              "likes": null
+            },
+            {
+              "comment_id": "c00729",
+              "author": "",
+              "text": "[COMMENT 215] Author: @TSoneonetwo | Likes: 0 | Replies: 0 | Published: 2026-07-06T09:04:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00730",
+              "author": "",
+              "text": "if you cut out carbs..vegetables, legumes, grains and such? you have no need fiber. fibers ONLY purpose is to pass through and clean out what you do not completely digest. why do humans need to consume something that we cannot digest? why is this so rarely addreseed? think about it. what createsthe need to clean out your digestive system? why not just remove the thing creating the need to clean it out?????!!!!!!!!!!!!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00732",
+              "author": "",
+              "text": "[COMMENT 216] Author: @AlphaM-4u | Likes: 1 | Replies: 0 | Published: 2026-06-22T07:14:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00733",
+              "author": "",
+              "text": "RUBBISH",
+              "likes": null
+            },
+            {
+              "comment_id": "c00735",
+              "author": "",
+              "text": "[COMMENT 217] Author: @Titus873 | Likes: 0 | Replies: 0 | Published: 2026-07-03T10:51:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00736",
+              "author": "",
+              "text": "U should stop smoking weed",
+              "likes": null
+            },
+            {
+              "comment_id": "c00738",
+              "author": "",
+              "text": "[COMMENT 218] Author: @schnubbel76 | Likes: 0 | Replies: 0 | Published: 2026-07-02T10:34:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00739",
+              "author": "",
+              "text": "My stupid neighbours do not appreciate me walking down the road butt naked to get my 40 minutes of full body sun exposure every morning...",
+              "likes": null
+            },
+            {
+              "comment_id": "c00741",
+              "author": "",
+              "text": "[COMMENT 219] Author: @justSanah | Likes: 0 | Replies: 0 | Published: 2026-07-31T18:25:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00742",
+              "author": "",
+              "text": "I joined gym 3weeks ago, iam exorcing acne problms, skin breakouts iam so tensed thn i stopped using ny night cream serums evrthng....Even i cutted ny sugar also🥹🥹",
+              "likes": null
+            },
+            {
+              "comment_id": "c00744",
+              "author": "",
+              "text": "[COMMENT 220] Author: @teaEarlgreyHott | Likes: 0 | Replies: 0 | Published: 2026-07-06T13:52:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00745",
+              "author": "",
+              "text": "The “glycogen burn” mentioned with the dry mouth but? That’s body fat being burned off. What do y’all think is IN those cells? 😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00747",
+              "author": "",
+              "text": "[COMMENT 221] Author: @EasyFinance-l1s | Likes: 1 | Replies: 0 | Published: 2026-05-16T12:43:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00748",
+              "author": "",
+              "text": "I love the fact that my stomach is shrinking and I am naturally eating less. I’ll definitely be saving money on food",
+              "likes": null
+            },
+            {
+              "comment_id": "c00750",
+              "author": "",
+              "text": "[COMMENT 222] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:44:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00751",
+              "author": "",
+              "text": "As someone that just hit 100 days of ketosis and lost 35 pounds, this video is incredibly accurate and fact based. Great job.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00753",
+              "author": "",
+              "text": "[COMMENT 223] Author: @jruth26 | Likes: 0 | Replies: 0 | Published: 2026-05-10T21:32:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00754",
+              "author": "",
+              "text": "When I'm fasting and losing weight I start feeling foggy headed",
+              "likes": null
+            },
+            {
+              "comment_id": "c00756",
+              "author": "",
+              "text": "[COMMENT 224] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:44:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00757",
+              "author": "",
+              "text": "Has anyone else noticed the mental clarity sign before they even knew they were in fat burning mode?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00759",
+              "author": "",
+              "text": "[COMMENT 225] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:43:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00760",
+              "author": "",
+              "text": "1. Morning breath - metallic/fruity",
+              "likes": null
+            },
+            {
+              "comment_id": "c00762",
+              "author": "",
+              "text": "2. Skin surface changes - rashes/breakouts from toxin release",
+              "likes": null
+            },
+            {
+              "comment_id": "c00764",
+              "author": "",
+              "text": "3. Dry mouth - water loss",
+              "likes": null
+            },
+            {
+              "comment_id": "c00766",
+              "author": "",
+              "text": "4. Twitching muscles - mineral loss",
+              "likes": null
+            },
+            {
+              "comment_id": "c00768",
+              "author": "",
+              "text": "5. Reduced hunger - stable appetite",
+              "likes": null
+            },
+            {
+              "comment_id": "c00770",
+              "author": "",
+              "text": "6. Improved thinking- clearer energy",
+              "likes": null
+            },
+            {
+              "comment_id": "c00772",
+              "author": "",
+              "text": "7. Waist size reducing - body shape changes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00774",
+              "author": "",
+              "text": "8. Digestive changes- gut adjustment phase",
+              "likes": null
+            },
+            {
+              "comment_id": "c00776",
+              "author": "",
+              "text": "9. Increased sweating - water loss, glycogen down",
+              "likes": null
+            },
+            {
+              "comment_id": "c00778",
+              "author": "",
+              "text": "10. Feeling colder - heat releases",
+              "likes": null
+            },
+            {
+              "comment_id": "c00780",
+              "author": "",
+              "text": "11. Waking between 1-3am - blood sugar shifts",
+              "likes": null
+            },
+            {
+              "comment_id": "c00782",
+              "author": "",
+              "text": "12. Reduced morning stiffness- better flexibility",
+              "likes": null
+            },
+            {
+              "comment_id": "c00784",
+              "author": "",
+              "text": "13. Lower resting heart rate - calmer nervous system",
+              "likes": null
+            },
+            {
+              "comment_id": "c00786",
+              "author": "",
+              "text": "[COMMENT 226] Author: @SuperMunchken | Likes: 2 | Replies: 1 | Published: 2026-05-02T09:56:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00787",
+              "author": "",
+              "text": "Please add the evidence based information you mentioned here .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00789",
+              "author": "",
+              "text": "[COMMENT 227] Author: @RyanTaylorNaturalRemedies | Likes: 2 | Replies: 0 | Published: 2026-05-02T16:17:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00790",
+              "author": "",
+              "text": "Scientific references are in the video description.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "aMheJmu5YfU",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Ryan Taylor (Natural Remedies)\\2026-05-01 - 12 Strange Signs Your Body Is Burning Fat (Not\\aMheJmu5YfU.mp4",
+            "subtitle": "D:\\YT GUi\\VideoHoarder Videos\\Ryan Taylor (Natural Remedies)\\2026-05-01 - 12 Strange Signs Your Body Is Burning Fat (Not\\_data\\aMheJmu5YfU.en-orig.vtt",
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Ryan Taylor (Natural Remedies)\\2026-05-01 - 12 Strange Signs Your Body Is Burning Fat (Not",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\aMheJmu5YfU",
+            "present": {
+              "media": true,
+              "subtitle": true,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "aMheJmu5YfU",
+            "transcript_available": true,
+            "transcript_source": "existing_vtt",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 42,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 9863,
+            "transcript_words": 1788,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "existing_vtt",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:03] 12 signs your body is burning fat even if the scale isn't moving. This video is educational only, not medical advice. Always check with your doctor. One of the earlier signs can be morning breath. If you wake up in the morning with a slightly metallic taste on your breath, [00:00:19] this can be a sign that the liver was burning body fat through the night. Ketones from your fat cells can start to break down into acetone, which then exits through your lungs causing that unusual fruity or nail polish smell on [00:00:34] the breath. As your metabolism becomes more flexible to burning fat, this smell naturally starts to go away. The second sign is changes to the skin. As the fat cells break down when you're dieting or exercising, they tend to release stored [00:00:50] toxins such as heavy metals or pollutants that you may have been storing for years. The scale may not be moving at this point because your liver is still processing them. When you're burning fat quickly, some of these toxins get released through the skin [00:01:06] temporarily causing things like itching, breakouts, or rashes usually for about three or four weeks. Bitter foods like lemon, arugula, and apple cider vinegar can help your liver process and clear out waste for skin improvements. [00:01:22] The third sign can be having a dry mouth because when you cut your carbs or your calories, the body starts to burn through its stored sugar called glycogen. Every 1 g of glycogen that you burn, you release three or four grams of [00:01:38] stored [music] fluid. This causes a temporary state where you feel more thirsty or have dry mouth when waking up. You might also find yourself urinating more often. This is a positive sign of weight loss. Adding electrolytes, [music] [00:01:54] sea salt, and mineral water can help to rehydrate the body during this process. This water loss, however, can also lead to twitching muscles. As the body starts to dump more water, it also flushes out your electrolytes, especially potassium, [00:02:11] magnesium, and sodium. With lower levels, the muscles can sometimes begin to twitch around the eyes or you may experience cramping of the feet or the calves when you move your foot or leg into a certain position. This is a sign that your body needs more minerals, but [00:02:28] also that it's losing fat. Focus on eating more potassium and magnesium rich foods like avocados, arugula, and leafy greens to get more potassium and magnesium. Also, try a pinch of Himalayan or Celtic sea salt in water to [00:02:44] get more sodium. Now, another positive signal that you're burning fat is reduced hunger. This is the ability to go from breakfast all the way to your next meal without feeling hungry. This occurs because you no longer get those blood sugar swings as [00:03:01] your fat cells are releasing ketones. Ketones help to stabilize blood sugar and prevent those mid-afternoon cravings. This can also result in number six, improved thinking. You might notice that you can think more clearly without [00:03:17] that usual afternoon crash. Personally, I tend to feel mentally sharper and able to make more connections in my brain when I'm researching. This improved thinking indicates that ketones from the fat cells are reaching and fueling the [00:03:33] mitochondria in your brain. Research shows us that fat fuel is 22% more efficient at generating energy in the brain than glucose. Now, the next thing to watch out for is simply your waist size reducing. Sometimes the scales do [00:03:50] not move when you're on a diet because your body is starting to rebuild its muscle. This is very common in older people who have already had atrophy or sagging muscles around the legs or thighs, for example. A much better way to track your progress is by measuring [00:04:07] your waist every two weeks. As the waistline begins shrinking and you notice more muscle definition, you are clearly burning fat. Eating more fiber on a diet can sometimes cause bloating. Apple cider vinegar mixed in water before meals can [00:04:24] help to reduce this. Now, the eighth sign is digestive changes. In over 50% of people, there is some change, either constipation or faster digestion when they're burning fat. This tends to happen because the digestive enzymes and [00:04:39] the gut microbes are not yet adjusted to your new diet or eating plan. This is one of the earliest stages where your body is adapting to metabolizing fat instead of sugar. It's important here to be patient as it can take anything from [00:04:55] a week to a month for digestion to stabilize. You might also notice increased sweating. In the earlier stages of fat burning, the body generates more heat through thermogenesis and in order to cool itself back down, it activates the sweat [00:05:12] glands. So, you may notice that you're sweating more than usual even if the scale hasn't moved. This is much more common during exercise or activity. However, when you are very still and you're not moving, sometimes you may start to feel colder than usual. You [00:05:29] see, your fat cells are not only designed to hold fuel, they also help to insulate your body. But as soon as you reduce your body fat percentage, you essentially have less layers to keep you warm. As you rest, your metabolism can slow down slightly to conserve energy, [00:05:47] which is why you may feel a little colder than usual. Wearing warmer clothing can slightly increase the fat burning metabolism. Now, some people also start to wake between 1:00 and 3:00 a.m. When you first start losing weight, blood sugars [00:06:04] temporarily can become unstable and they drop in the early hours of the night, which then causes a cortisol spike to wake you up. This can leave you feeling very wired at night. However, as your metabolism adapts to fat burning after a [00:06:19] couple of weeks, you start getting a more sustained slow release of fuel, which actually helps you to sleep much, much deeper than you did when you started your diet. Now, in the morning when you wake up, you might feel less stiffness. Ketones from burning fat also [00:06:36] have a natural anti-inflammatory effect on the body. You may start to wake up feeling less stiff and rigid as the inflammation drops and the joints and the muscles become more relaxed and flexible. Getting 40 minutes of full body sun [00:06:52] exposure in the morning also raises vitamin D levels to help lower inflammation. Now, one final sign that I'd like to add is a lower resting heart rate. Your mitochondria become better at using oxygen when burning fat, [00:07:07] essentially allowing your cells to produce more energy with less stress. Adrenaline levels also naturally drop when your body no longer relies on quick sugar for fuel. This allows your nervous system to enter the relaxed parasympathetic state. You may notice [00:07:25] your resting heart rate gradually lowering over time. A healthy resting heart rate is typically between 60 to 70 beats per minute. Improvements are usually seen within one to three weeks of consistent fat loss. Now that you're aware of the signs that [00:07:41] your body gives you when you're burning fat, you may be asking why the scale doesn't always move. In the early stages of a diet, people often see lots of weight loss because the body dumps fluid, but then they tend to lose hope as the scale stops moving. Let me be [00:07:58] clear, this is not the sign that fat burning has stopped. Your body composition often remodels, gaining more muscle whilst losing fat at the same time. Exercise can also cause micro-tears in the muscles leading to [00:08:13] temporary inflammation and water retention, so the scale doesn't always move. Instead of using the scales, it's much better to measure your waistline and notice changes on how you wear your clothes rather than relying on the scales. You might also want to try [00:08:29] taking before and after photographs once every month for a more accurate view of how your body is changing. How can I avoid weakness? The first one to two weeks are often the most brutal where the body has to adapt [00:08:44] to your new diet plan or exercise routine. During this transition, it's very important to stay hydrated and add a little more sea salt into the diet. Sodium from salt helps your cells absorb fluid so they can continue to generate [00:09:00] high amounts of ATP energy. Your body will also use up more B vitamins when it's converting fat into energy, which can leave you feeling a little tired. So, focus on adding unfortified nutritional yeast, sunflower seeds, and [00:09:17] red meat to restore your B vitamins during the transition. Don't forget about fiber. People who cut out carbs should definitely focus on adding more soluble fiber from things like chia seeds, avocados, berries, flax, or [00:09:33] psyllium husk whilst also avoiding those fast processed carbs that quickly turn into sugar like bread, flour, cereal, etc. Soluble fiber is essential to feed gut bacteria, which is then going to [00:09:48] make short-chain fatty acids that support your metabolism. This will make the process a lot easier without as many side effects. How to speed up weight loss. Your body is most efficient at burning fat in the first two to four [00:10:03] hours after waking up because the fat-burning hormones are naturally higher after an overnight fast. It's important to stay away from refined starch, sugar, and cereals in the morning [music] to keep your insulin low. Instead, choosing healthier [00:10:19] low-carb breakfast foods like eggs, salmon, yogurts, or meats. These will keep the fat storage hormone insulin lower for longer, allowing you to burn additional fat calories throughout the day. I'm Ryan Taylor, a certified [00:10:34] nutritionist. Thank you so much for watching and I wish you great health, wealth, and happiness."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 535,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: aMheJmu5YfU",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 227",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @RyanTaylorNaturalRemedies | Likes: 14 | Replies: 1 | Published: 2026-05-03T09:08:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "More information on the 12 Breakfast Foods To Burn Belly Fat: https://youtu.be/JntZpFM5v5M?si=Z6bwUlESd3HKbygN",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @5226-p1e | Likes: 0 | Replies: 0 | Published: 2026-07-13T03:04:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "So for the fasting thing, I've heard people describe it as 8:00 p.m. to roughly 6:00 a.m., now I'm having difficulties with it because I am diabetic, I need to know what the bare minimum is for the hours I need for that fast to actually work.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "On another Channel they mentioned that it's up to 10 to 12 hours of fasting before you're allowed to have your protein breakfast try to get at least 5 and 1/2 hours of sleep, my problem is when I go to bed I end up waking up at like 3:00 a.m. only getting 3 hours of sleep sometimes for it's rare though, especially since I started my diet, I try to sleep more but my body just rejects it and so I'm stuck, and coffee helps naturally to sustain my Hunger for a little bit longer, so another Channel on YouTube was suggesting that I exercise first after having my coffee without eating food, but after I work out that's when I eat my protein, and my workouts not going to be like crazy they just suggested walking because walking is at a normal pace and it doesn't do overkill on you and allows you to get the workout in on a consistent basis so you'll easily do it everyday.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00017",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @sonifiji9705 | Likes: 832 | Replies: 22 | Published: 2026-05-06T14:22:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "1. Morning breath - metallic/fruity",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "2. Skin surface changes - rashes/breakouts from toxin release",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00020",
+                  "author": "",
+                  "text": "3. Dry mouth - water loss",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "4. Twitching muscles - mineral loss",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "5. Reduced hunger - stable appetite",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00023",
+                  "author": "",
+                  "text": "6. Improved thinking- clearer energy",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "7. Waist size reducing - body shape changes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "8. Digestive changes- gut adjustment phase",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00026",
+                  "author": "",
+                  "text": "9. Increased sweating - water loss, glycogen down",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "10. Feeling colder - heat releases",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "11. Waking between 1-3am - blood sugar shifts",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "12. Reduced morning stiffness- better flexibility",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "13. Lower resting heart rate - calmer nervous system",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @TarotFaithKeeper | Likes: 36 | Replies: 0 | Published: 2026-05-07T10:24:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "Thank you 👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @Maxfromohio2155 | Likes: 11 | Replies: 0 | Published: 2026-05-08T13:31:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @Snöfall26 | Likes: 8 | Replies: 0 | Published: 2026-05-09T19:28:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @annieclarkson1733 | Likes: 4 | Replies: 0 | Published: 2026-05-17T03:28:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "Yeah I've alot of rashes and pimples on my shoulders and face infact the rash has darkened and left a dark patch which is slightly noticeable on myshoulders",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @THEUWJSJEI2611 | Likes: 3 | Replies: 0 | Published: 2026-06-02T16:43:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "all of these for me except brain fog instead of improved thinking tbh, it goes back and forth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @Germangenxr | Likes: 303 | Replies: 8 | Published: 2026-05-02T03:23:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "I love the fact that my stomach is shrinking and I am naturally eating less. I’ll definitely be saving money on food",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @bourjoism3917 | Likes: 10 | Replies: 0 | Published: 2026-05-02T05:14:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "True😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @Kari-j1q | Likes: 1 | Replies: 0 | Published: 2026-05-04T13:31:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "Yes!! Years ago, after experencing success at Weightwatchers, I tried to persuade a friend who was obese to join. She said she couldn't afford the weekly fee. I told her what she saved on food would cover the cost, which was absolutely true. She never joined. Now I practice time restricted eating with the occasional fast, watch my sugar and carbs and maintain a healthy weight. I've been vegetarian for about 15 years, too, so maybe that's a factor. ☺ Good luck!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @mremington8 | Likes: 6 | Replies: 0 | Published: 2026-05-05T00:17:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "anf future medical expenses too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @Lovemypersiancats | Likes: 0 | Replies: 0 | Published: 2026-05-15T22:16:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "🎯",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @JanArbor-h3c | Likes: 0 | Replies: 0 | Published: 2026-05-26T00:16:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "Lol 👑",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @nekomiruku | Likes: 4 | Replies: 0 | Published: 2026-07-27T22:23:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "Oh shit maybe this is why my mouth feels dry these days",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00712",
+                  "author": "",
+                  "text": "@RyanTaylorNaturalRemediesbut I thought fiber is not great. I watch a guy with colostomy because they removed his intestine because too much fiber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00714",
+                  "author": "",
+                  "text": "[COMMENT 211] Author: @derekhobbs1102 | Likes: 0 | Replies: 0 | Published: 2026-07-02T11:00:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00715",
+                  "author": "",
+                  "text": "A lot of these are just symptoms of being type one diabetic.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00717",
+                  "author": "",
+                  "text": "[COMMENT 212] Author: @Disillusioned_one | Likes: 0 | Replies: 1 | Published: 2026-05-31T17:36:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00718",
+                  "author": "",
+                  "text": "Best way to eat nothing but meat eggs fish butter.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00719",
+                  "author": "",
+                  "text": "Anything that’s not carnivore Don’t eat its carbs and carbs is just sugar .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00720",
+                  "author": "",
+                  "text": "I am 100% carnivore and all the effects described I have including calf , foot, hands cramping.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00721",
+                  "author": "",
+                  "text": "I just got the cramping ( still limping from last night) and itchy skin on my arms",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00723",
+                  "author": "",
+                  "text": "[COMMENT 213] Author: @brak2300 | Likes: 0 | Replies: 0 | Published: 2026-06-05T02:04:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00724",
+                  "author": "",
+                  "text": "little does he know consuming carbs doesnt make you fat. its all about the calories. Cutting out carbs may make the scale weight go down but its all water weight since carbs store water",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00726",
+                  "author": "",
+                  "text": "[COMMENT 214] Author: @24carrotgold8 | Likes: 4 | Replies: 0 | Published: 2026-05-02T23:16:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00727",
+                  "author": "",
+                  "text": "Body STINK! The sweat is releasing toxins which can have an unpleasant odor. 🤭",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00729",
+                  "author": "",
+                  "text": "[COMMENT 215] Author: @TSoneonetwo | Likes: 0 | Replies: 0 | Published: 2026-07-06T09:04:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00730",
+                  "author": "",
+                  "text": "if you cut out carbs..vegetables, legumes, grains and such? you have no need fiber. fibers ONLY purpose is to pass through and clean out what you do not completely digest. why do humans need to consume something that we cannot digest? why is this so rarely addreseed? think about it. what createsthe need to clean out your digestive system? why not just remove the thing creating the need to clean it out?????!!!!!!!!!!!!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00732",
+                  "author": "",
+                  "text": "[COMMENT 216] Author: @AlphaM-4u | Likes: 1 | Replies: 0 | Published: 2026-06-22T07:14:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00733",
+                  "author": "",
+                  "text": "RUBBISH",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00735",
+                  "author": "",
+                  "text": "[COMMENT 217] Author: @Titus873 | Likes: 0 | Replies: 0 | Published: 2026-07-03T10:51:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00736",
+                  "author": "",
+                  "text": "U should stop smoking weed",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00738",
+                  "author": "",
+                  "text": "[COMMENT 218] Author: @schnubbel76 | Likes: 0 | Replies: 0 | Published: 2026-07-02T10:34:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00739",
+                  "author": "",
+                  "text": "My stupid neighbours do not appreciate me walking down the road butt naked to get my 40 minutes of full body sun exposure every morning...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00741",
+                  "author": "",
+                  "text": "[COMMENT 219] Author: @justSanah | Likes: 0 | Replies: 0 | Published: 2026-07-31T18:25:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00742",
+                  "author": "",
+                  "text": "I joined gym 3weeks ago, iam exorcing acne problms, skin breakouts iam so tensed thn i stopped using ny night cream serums evrthng....Even i cutted ny sugar also🥹🥹",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00744",
+                  "author": "",
+                  "text": "[COMMENT 220] Author: @teaEarlgreyHott | Likes: 0 | Replies: 0 | Published: 2026-07-06T13:52:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00745",
+                  "author": "",
+                  "text": "The “glycogen burn” mentioned with the dry mouth but? That’s body fat being burned off. What do y’all think is IN those cells? 😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00747",
+                  "author": "",
+                  "text": "[COMMENT 221] Author: @EasyFinance-l1s | Likes: 1 | Replies: 0 | Published: 2026-05-16T12:43:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00748",
+                  "author": "",
+                  "text": "I love the fact that my stomach is shrinking and I am naturally eating less. I’ll definitely be saving money on food",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00750",
+                  "author": "",
+                  "text": "[COMMENT 222] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:44:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00751",
+                  "author": "",
+                  "text": "As someone that just hit 100 days of ketosis and lost 35 pounds, this video is incredibly accurate and fact based. Great job.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00753",
+                  "author": "",
+                  "text": "[COMMENT 223] Author: @jruth26 | Likes: 0 | Replies: 0 | Published: 2026-05-10T21:32:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00754",
+                  "author": "",
+                  "text": "When I'm fasting and losing weight I start feeling foggy headed",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00756",
+                  "author": "",
+                  "text": "[COMMENT 224] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:44:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00757",
+                  "author": "",
+                  "text": "Has anyone else noticed the mental clarity sign before they even knew they were in fat burning mode?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00759",
+                  "author": "",
+                  "text": "[COMMENT 225] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:43:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00760",
+                  "author": "",
+                  "text": "1. Morning breath - metallic/fruity",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00762",
+                  "author": "",
+                  "text": "2. Skin surface changes - rashes/breakouts from toxin release",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00764",
+                  "author": "",
+                  "text": "3. Dry mouth - water loss",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00766",
+                  "author": "",
+                  "text": "4. Twitching muscles - mineral loss",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00768",
+                  "author": "",
+                  "text": "5. Reduced hunger - stable appetite",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00770",
+                  "author": "",
+                  "text": "6. Improved thinking- clearer energy",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00772",
+                  "author": "",
+                  "text": "7. Waist size reducing - body shape changes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00774",
+                  "author": "",
+                  "text": "8. Digestive changes- gut adjustment phase",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00776",
+                  "author": "",
+                  "text": "9. Increased sweating - water loss, glycogen down",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00778",
+                  "author": "",
+                  "text": "10. Feeling colder - heat releases",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00780",
+                  "author": "",
+                  "text": "11. Waking between 1-3am - blood sugar shifts",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00782",
+                  "author": "",
+                  "text": "12. Reduced morning stiffness- better flexibility",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00784",
+                  "author": "",
+                  "text": "13. Lower resting heart rate - calmer nervous system",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00786",
+                  "author": "",
+                  "text": "[COMMENT 226] Author: @SuperMunchken | Likes: 2 | Replies: 1 | Published: 2026-05-02T09:56:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00787",
+                  "author": "",
+                  "text": "Please add the evidence based information you mentioned here .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00789",
+                  "author": "",
+                  "text": "[COMMENT 227] Author: @RyanTaylorNaturalRemedies | Likes: 2 | Replies: 0 | Published: 2026-05-02T16:17:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00790",
+                  "author": "",
+                  "text": "Scientific references are in the video description.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "aMheJmu5YfU",
+          "transcript_available": true,
+          "transcript_source": "existing_vtt",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 42,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 9863,
+          "transcript_words": 1788,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "existing_vtt",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:03] 12 signs your body is burning fat even if the scale isn't moving. This video is educational only, not medical advice. Always check with your doctor. One of the earlier signs can be morning breath. If you wake up in the morning with a slightly metallic taste on your breath, [00:00:19] this can be a sign that the liver was burning body fat through the night. Ketones from your fat cells can start to break down into acetone, which then exits through your lungs causing that unusual fruity or nail polish smell on [00:00:34] the breath. As your metabolism becomes more flexible to burning fat, this smell naturally starts to go away. The second sign is changes to the skin. As the fat cells break down when you're dieting or exercising, they tend to release stored [00:00:50] toxins such as heavy metals or pollutants that you may have been storing for years. The scale may not be moving at this point because your liver is still processing them. When you're burning fat quickly, some of these toxins get released through the skin [00:01:06] temporarily causing things like itching, breakouts, or rashes usually for about three or four weeks. Bitter foods like lemon, arugula, and apple cider vinegar can help your liver process and clear out waste for skin improvements. [00:01:22] The third sign can be having a dry mouth because when you cut your carbs or your calories, the body starts to burn through its stored sugar called glycogen. Every 1 g of glycogen that you burn, you release three or four grams of [00:01:38] stored [music] fluid. This causes a temporary state where you feel more thirsty or have dry mouth when waking up. You might also find yourself urinating more often. This is a positive sign of weight loss. Adding electrolytes, [music] [00:01:54] sea salt, and mineral water can help to rehydrate the body during this process. This water loss, however, can also lead to twitching muscles. As the body starts to dump more water, it also flushes out your electrolytes, especially potassium, [00:02:11] magnesium, and sodium. With lower levels, the muscles can sometimes begin to twitch around the eyes or you may experience cramping of the feet or the calves when you move your foot or leg into a certain position. This is a sign that your body needs more minerals, but [00:02:28] also that it's losing fat. Focus on eating more potassium and magnesium rich foods like avocados, arugula, and leafy greens to get more potassium and magnesium. Also, try a pinch of Himalayan or Celtic sea salt in water to [00:02:44] get more sodium. Now, another positive signal that you're burning fat is reduced hunger. This is the ability to go from breakfast all the way to your next meal without feeling hungry. This occurs because you no longer get those blood sugar swings as [00:03:01] your fat cells are releasing ketones. Ketones help to stabilize blood sugar and prevent those mid-afternoon cravings. This can also result in number six, improved thinking. You might notice that you can think more clearly without [00:03:17] that usual afternoon crash. Personally, I tend to feel mentally sharper and able to make more connections in my brain when I'm researching. This improved thinking indicates that ketones from the fat cells are reaching and fueling the [00:03:33] mitochondria in your brain. Research shows us that fat fuel is 22% more efficient at generating energy in the brain than glucose. Now, the next thing to watch out for is simply your waist size reducing. Sometimes the scales do [00:03:50] not move when you're on a diet because your body is starting to rebuild its muscle. This is very common in older people who have already had atrophy or sagging muscles around the legs or thighs, for example. A much better way to track your progress is by measuring [00:04:07] your waist every two weeks. As the waistline begins shrinking and you notice more muscle definition, you are clearly burning fat. Eating more fiber on a diet can sometimes cause bloating. Apple cider vinegar mixed in water before meals can [00:04:24] help to reduce this. Now, the eighth sign is digestive changes. In over 50% of people, there is some change, either constipation or faster digestion when they're burning fat. This tends to happen because the digestive enzymes and [00:04:39] the gut microbes are not yet adjusted to your new diet or eating plan. This is one of the earliest stages where your body is adapting to metabolizing fat instead of sugar. It's important here to be patient as it can take anything from [00:04:55] a week to a month for digestion to stabilize. You might also notice increased sweating. In the earlier stages of fat burning, the body generates more heat through thermogenesis and in order to cool itself back down, it activates the sweat [00:05:12] glands. So, you may notice that you're sweating more than usual even if the scale hasn't moved. This is much more common during exercise or activity. However, when you are very still and you're not moving, sometimes you may start to feel colder than usual. You [00:05:29] see, your fat cells are not only designed to hold fuel, they also help to insulate your body. But as soon as you reduce your body fat percentage, you essentially have less layers to keep you warm. As you rest, your metabolism can slow down slightly to conserve energy, [00:05:47] which is why you may feel a little colder than usual. Wearing warmer clothing can slightly increase the fat burning metabolism. Now, some people also start to wake between 1:00 and 3:00 a.m. When you first start losing weight, blood sugars [00:06:04] temporarily can become unstable and they drop in the early hours of the night, which then causes a cortisol spike to wake you up. This can leave you feeling very wired at night. However, as your metabolism adapts to fat burning after a [00:06:19] couple of weeks, you start getting a more sustained slow release of fuel, which actually helps you to sleep much, much deeper than you did when you started your diet. Now, in the morning when you wake up, you might feel less stiffness. Ketones from burning fat also [00:06:36] have a natural anti-inflammatory effect on the body. You may start to wake up feeling less stiff and rigid as the inflammation drops and the joints and the muscles become more relaxed and flexible. Getting 40 minutes of full body sun [00:06:52] exposure in the morning also raises vitamin D levels to help lower inflammation. Now, one final sign that I'd like to add is a lower resting heart rate. Your mitochondria become better at using oxygen when burning fat, [00:07:07] essentially allowing your cells to produce more energy with less stress. Adrenaline levels also naturally drop when your body no longer relies on quick sugar for fuel. This allows your nervous system to enter the relaxed parasympathetic state. You may notice [00:07:25] your resting heart rate gradually lowering over time. A healthy resting heart rate is typically between 60 to 70 beats per minute. Improvements are usually seen within one to three weeks of consistent fat loss. Now that you're aware of the signs that [00:07:41] your body gives you when you're burning fat, you may be asking why the scale doesn't always move. In the early stages of a diet, people often see lots of weight loss because the body dumps fluid, but then they tend to lose hope as the scale stops moving. Let me be [00:07:58] clear, this is not the sign that fat burning has stopped. Your body composition often remodels, gaining more muscle whilst losing fat at the same time. Exercise can also cause micro-tears in the muscles leading to [00:08:13] temporary inflammation and water retention, so the scale doesn't always move. Instead of using the scales, it's much better to measure your waistline and notice changes on how you wear your clothes rather than relying on the scales. You might also want to try [00:08:29] taking before and after photographs once every month for a more accurate view of how your body is changing. How can I avoid weakness? The first one to two weeks are often the most brutal where the body has to adapt [00:08:44] to your new diet plan or exercise routine. During this transition, it's very important to stay hydrated and add a little more sea salt into the diet. Sodium from salt helps your cells absorb fluid so they can continue to generate [00:09:00] high amounts of ATP energy. Your body will also use up more B vitamins when it's converting fat into energy, which can leave you feeling a little tired. So, focus on adding unfortified nutritional yeast, sunflower seeds, and [00:09:17] red meat to restore your B vitamins during the transition. Don't forget about fiber. People who cut out carbs should definitely focus on adding more soluble fiber from things like chia seeds, avocados, berries, flax, or [00:09:33] psyllium husk whilst also avoiding those fast processed carbs that quickly turn into sugar like bread, flour, cereal, etc. Soluble fiber is essential to feed gut bacteria, which is then going to [00:09:48] make short-chain fatty acids that support your metabolism. This will make the process a lot easier without as many side effects. How to speed up weight loss. Your body is most efficient at burning fat in the first two to four [00:10:03] hours after waking up because the fat-burning hormones are naturally higher after an overnight fast. It's important to stay away from refined starch, sugar, and cereals in the morning [music] to keep your insulin low. Instead, choosing healthier [00:10:19] low-carb breakfast foods like eggs, salmon, yogurts, or meats. These will keep the fat storage hormone insulin lower for longer, allowing you to burn additional fat calories throughout the day. I'm Ryan Taylor, a certified [00:10:34] nutritionist. Thank you so much for watching and I wish you great health, wealth, and happiness."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 535,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: aMheJmu5YfU",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 227",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @RyanTaylorNaturalRemedies | Likes: 14 | Replies: 1 | Published: 2026-05-03T09:08:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "More information on the 12 Breakfast Foods To Burn Belly Fat: https://youtu.be/JntZpFM5v5M?si=Z6bwUlESd3HKbygN",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @5226-p1e | Likes: 0 | Replies: 0 | Published: 2026-07-13T03:04:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "So for the fasting thing, I've heard people describe it as 8:00 p.m. to roughly 6:00 a.m., now I'm having difficulties with it because I am diabetic, I need to know what the bare minimum is for the hours I need for that fast to actually work.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "On another Channel they mentioned that it's up to 10 to 12 hours of fasting before you're allowed to have your protein breakfast try to get at least 5 and 1/2 hours of sleep, my problem is when I go to bed I end up waking up at like 3:00 a.m. only getting 3 hours of sleep sometimes for it's rare though, especially since I started my diet, I try to sleep more but my body just rejects it and so I'm stuck, and coffee helps naturally to sustain my Hunger for a little bit longer, so another Channel on YouTube was suggesting that I exercise first after having my coffee without eating food, but after I work out that's when I eat my protein, and my workouts not going to be like crazy they just suggested walking because walking is at a normal pace and it doesn't do overkill on you and allows you to get the workout in on a consistent basis so you'll easily do it everyday.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00017",
+                "author": "",
+                "text": "[COMMENT 3] Author: @sonifiji9705 | Likes: 832 | Replies: 22 | Published: 2026-05-06T14:22:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "1. Morning breath - metallic/fruity",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "2. Skin surface changes - rashes/breakouts from toxin release",
+                "likes": null
+              },
+              {
+                "comment_id": "c00020",
+                "author": "",
+                "text": "3. Dry mouth - water loss",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "4. Twitching muscles - mineral loss",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "5. Reduced hunger - stable appetite",
+                "likes": null
+              },
+              {
+                "comment_id": "c00023",
+                "author": "",
+                "text": "6. Improved thinking- clearer energy",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "7. Waist size reducing - body shape changes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "8. Digestive changes- gut adjustment phase",
+                "likes": null
+              },
+              {
+                "comment_id": "c00026",
+                "author": "",
+                "text": "9. Increased sweating - water loss, glycogen down",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "10. Feeling colder - heat releases",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "11. Waking between 1-3am - blood sugar shifts",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "12. Reduced morning stiffness- better flexibility",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "13. Lower resting heart rate - calmer nervous system",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "[COMMENT 4] Author: @TarotFaithKeeper | Likes: 36 | Replies: 0 | Published: 2026-05-07T10:24:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "Thank you 👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "[COMMENT 5] Author: @Maxfromohio2155 | Likes: 11 | Replies: 0 | Published: 2026-05-08T13:31:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 6] Author: @Snöfall26 | Likes: 8 | Replies: 0 | Published: 2026-05-09T19:28:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 7] Author: @annieclarkson1733 | Likes: 4 | Replies: 0 | Published: 2026-05-17T03:28:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "Yeah I've alot of rashes and pimples on my shoulders and face infact the rash has darkened and left a dark patch which is slightly noticeable on myshoulders",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 8] Author: @THEUWJSJEI2611 | Likes: 3 | Replies: 0 | Published: 2026-06-02T16:43:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "all of these for me except brain fog instead of improved thinking tbh, it goes back and forth",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "[COMMENT 9] Author: @Germangenxr | Likes: 303 | Replies: 8 | Published: 2026-05-02T03:23:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "I love the fact that my stomach is shrinking and I am naturally eating less. I’ll definitely be saving money on food",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "[COMMENT 10] Author: @bourjoism3917 | Likes: 10 | Replies: 0 | Published: 2026-05-02T05:14:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "True😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "[COMMENT 11] Author: @Kari-j1q | Likes: 1 | Replies: 0 | Published: 2026-05-04T13:31:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "Yes!! Years ago, after experencing success at Weightwatchers, I tried to persuade a friend who was obese to join. She said she couldn't afford the weekly fee. I told her what she saved on food would cover the cost, which was absolutely true. She never joined. Now I practice time restricted eating with the occasional fast, watch my sugar and carbs and maintain a healthy weight. I've been vegetarian for about 15 years, too, so maybe that's a factor. ☺ Good luck!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 12] Author: @mremington8 | Likes: 6 | Replies: 0 | Published: 2026-05-05T00:17:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "anf future medical expenses too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 13] Author: @Lovemypersiancats | Likes: 0 | Replies: 0 | Published: 2026-05-15T22:16:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "🎯",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 14] Author: @JanArbor-h3c | Likes: 0 | Replies: 0 | Published: 2026-05-26T00:16:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "Lol 👑",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 15] Author: @nekomiruku | Likes: 4 | Replies: 0 | Published: 2026-07-27T22:23:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "Oh shit maybe this is why my mouth feels dry these days",
+                "likes": null
+              },
+              {
+                "comment_id": "c00712",
+                "author": "",
+                "text": "@RyanTaylorNaturalRemediesbut I thought fiber is not great. I watch a guy with colostomy because they removed his intestine because too much fiber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00714",
+                "author": "",
+                "text": "[COMMENT 211] Author: @derekhobbs1102 | Likes: 0 | Replies: 0 | Published: 2026-07-02T11:00:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00715",
+                "author": "",
+                "text": "A lot of these are just symptoms of being type one diabetic.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00717",
+                "author": "",
+                "text": "[COMMENT 212] Author: @Disillusioned_one | Likes: 0 | Replies: 1 | Published: 2026-05-31T17:36:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00718",
+                "author": "",
+                "text": "Best way to eat nothing but meat eggs fish butter.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00719",
+                "author": "",
+                "text": "Anything that’s not carnivore Don’t eat its carbs and carbs is just sugar .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00720",
+                "author": "",
+                "text": "I am 100% carnivore and all the effects described I have including calf , foot, hands cramping.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00721",
+                "author": "",
+                "text": "I just got the cramping ( still limping from last night) and itchy skin on my arms",
+                "likes": null
+              },
+              {
+                "comment_id": "c00723",
+                "author": "",
+                "text": "[COMMENT 213] Author: @brak2300 | Likes: 0 | Replies: 0 | Published: 2026-06-05T02:04:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00724",
+                "author": "",
+                "text": "little does he know consuming carbs doesnt make you fat. its all about the calories. Cutting out carbs may make the scale weight go down but its all water weight since carbs store water",
+                "likes": null
+              },
+              {
+                "comment_id": "c00726",
+                "author": "",
+                "text": "[COMMENT 214] Author: @24carrotgold8 | Likes: 4 | Replies: 0 | Published: 2026-05-02T23:16:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00727",
+                "author": "",
+                "text": "Body STINK! The sweat is releasing toxins which can have an unpleasant odor. 🤭",
+                "likes": null
+              },
+              {
+                "comment_id": "c00729",
+                "author": "",
+                "text": "[COMMENT 215] Author: @TSoneonetwo | Likes: 0 | Replies: 0 | Published: 2026-07-06T09:04:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00730",
+                "author": "",
+                "text": "if you cut out carbs..vegetables, legumes, grains and such? you have no need fiber. fibers ONLY purpose is to pass through and clean out what you do not completely digest. why do humans need to consume something that we cannot digest? why is this so rarely addreseed? think about it. what createsthe need to clean out your digestive system? why not just remove the thing creating the need to clean it out?????!!!!!!!!!!!!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00732",
+                "author": "",
+                "text": "[COMMENT 216] Author: @AlphaM-4u | Likes: 1 | Replies: 0 | Published: 2026-06-22T07:14:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00733",
+                "author": "",
+                "text": "RUBBISH",
+                "likes": null
+              },
+              {
+                "comment_id": "c00735",
+                "author": "",
+                "text": "[COMMENT 217] Author: @Titus873 | Likes: 0 | Replies: 0 | Published: 2026-07-03T10:51:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00736",
+                "author": "",
+                "text": "U should stop smoking weed",
+                "likes": null
+              },
+              {
+                "comment_id": "c00738",
+                "author": "",
+                "text": "[COMMENT 218] Author: @schnubbel76 | Likes: 0 | Replies: 0 | Published: 2026-07-02T10:34:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00739",
+                "author": "",
+                "text": "My stupid neighbours do not appreciate me walking down the road butt naked to get my 40 minutes of full body sun exposure every morning...",
+                "likes": null
+              },
+              {
+                "comment_id": "c00741",
+                "author": "",
+                "text": "[COMMENT 219] Author: @justSanah | Likes: 0 | Replies: 0 | Published: 2026-07-31T18:25:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00742",
+                "author": "",
+                "text": "I joined gym 3weeks ago, iam exorcing acne problms, skin breakouts iam so tensed thn i stopped using ny night cream serums evrthng....Even i cutted ny sugar also🥹🥹",
+                "likes": null
+              },
+              {
+                "comment_id": "c00744",
+                "author": "",
+                "text": "[COMMENT 220] Author: @teaEarlgreyHott | Likes: 0 | Replies: 0 | Published: 2026-07-06T13:52:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00745",
+                "author": "",
+                "text": "The “glycogen burn” mentioned with the dry mouth but? That’s body fat being burned off. What do y’all think is IN those cells? 😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00747",
+                "author": "",
+                "text": "[COMMENT 221] Author: @EasyFinance-l1s | Likes: 1 | Replies: 0 | Published: 2026-05-16T12:43:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00748",
+                "author": "",
+                "text": "I love the fact that my stomach is shrinking and I am naturally eating less. I’ll definitely be saving money on food",
+                "likes": null
+              },
+              {
+                "comment_id": "c00750",
+                "author": "",
+                "text": "[COMMENT 222] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:44:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00751",
+                "author": "",
+                "text": "As someone that just hit 100 days of ketosis and lost 35 pounds, this video is incredibly accurate and fact based. Great job.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00753",
+                "author": "",
+                "text": "[COMMENT 223] Author: @jruth26 | Likes: 0 | Replies: 0 | Published: 2026-05-10T21:32:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00754",
+                "author": "",
+                "text": "When I'm fasting and losing weight I start feeling foggy headed",
+                "likes": null
+              },
+              {
+                "comment_id": "c00756",
+                "author": "",
+                "text": "[COMMENT 224] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:44:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00757",
+                "author": "",
+                "text": "Has anyone else noticed the mental clarity sign before they even knew they were in fat burning mode?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00759",
+                "author": "",
+                "text": "[COMMENT 225] Author: @EasyFinance-l1s | Likes: 0 | Replies: 0 | Published: 2026-05-16T12:43:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00760",
+                "author": "",
+                "text": "1. Morning breath - metallic/fruity",
+                "likes": null
+              },
+              {
+                "comment_id": "c00762",
+                "author": "",
+                "text": "2. Skin surface changes - rashes/breakouts from toxin release",
+                "likes": null
+              },
+              {
+                "comment_id": "c00764",
+                "author": "",
+                "text": "3. Dry mouth - water loss",
+                "likes": null
+              },
+              {
+                "comment_id": "c00766",
+                "author": "",
+                "text": "4. Twitching muscles - mineral loss",
+                "likes": null
+              },
+              {
+                "comment_id": "c00768",
+                "author": "",
+                "text": "5. Reduced hunger - stable appetite",
+                "likes": null
+              },
+              {
+                "comment_id": "c00770",
+                "author": "",
+                "text": "6. Improved thinking- clearer energy",
+                "likes": null
+              },
+              {
+                "comment_id": "c00772",
+                "author": "",
+                "text": "7. Waist size reducing - body shape changes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00774",
+                "author": "",
+                "text": "8. Digestive changes- gut adjustment phase",
+                "likes": null
+              },
+              {
+                "comment_id": "c00776",
+                "author": "",
+                "text": "9. Increased sweating - water loss, glycogen down",
+                "likes": null
+              },
+              {
+                "comment_id": "c00778",
+                "author": "",
+                "text": "10. Feeling colder - heat releases",
+                "likes": null
+              },
+              {
+                "comment_id": "c00780",
+                "author": "",
+                "text": "11. Waking between 1-3am - blood sugar shifts",
+                "likes": null
+              },
+              {
+                "comment_id": "c00782",
+                "author": "",
+                "text": "12. Reduced morning stiffness- better flexibility",
+                "likes": null
+              },
+              {
+                "comment_id": "c00784",
+                "author": "",
+                "text": "13. Lower resting heart rate - calmer nervous system",
+                "likes": null
+              },
+              {
+                "comment_id": "c00786",
+                "author": "",
+                "text": "[COMMENT 226] Author: @SuperMunchken | Likes: 2 | Replies: 1 | Published: 2026-05-02T09:56:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00787",
+                "author": "",
+                "text": "Please add the evidence based information you mentioned here .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00789",
+                "author": "",
+                "text": "[COMMENT 227] Author: @RyanTaylorNaturalRemedies | Likes: 2 | Replies: 0 | Published: 2026-05-02T16:17:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00790",
+                "author": "",
+                "text": "Scientific references are in the video description.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

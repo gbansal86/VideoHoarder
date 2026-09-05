@@ -1,0 +1,2718 @@
+{
+  "package_id": "vh_full_intelligence_20260905_163004_81979b",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "FULL_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260905_163004_81979b",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Lifestyle comparisons",
+      "batch_number": 29,
+      "batch_total": 49,
+      "batch_size": 12,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 29 of 49 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260905_163004_81979b",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260905_163004_81979b"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260905_163004_81979b",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Lifestyle comparisons",
+      "batch_number": 29,
+      "batch_total": 49,
+      "batch_size": 12,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "36e13ac9-46f2-4318-a80c-1abd83eb928e",
+    "package_id": "vh_full_intelligence_20260905_163004_81979b",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "MCD5xGPsnHg"
+    ],
+    "evidence_grades": {
+      "MCD5xGPsnHg": "A"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Lifestyle comparisons",
+      "batch_number": 29,
+      "batch_total": 49,
+      "batch_size": 12,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "5706eb1c30cd1182ab83aaa7927f0491d04f9644dee50ad6dbedf7a0c6f5dec6",
+      "prompt.json": "6eb831a5fe0de13f3186ff0067b514ee508702b7b3314b189e803a1379e25466",
+      "schema.json": "527c3a93733a8e1190c8af137f0efa9e2801373f7c8b4e33340bbaafb30c76c6"
+    },
+    "created_at": "2026-09-05 16:30:04",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "MCD5xGPsnHg",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=MCD5xGPsnHg",
+        "original_title": "Indian Lifestyle vs American Lifestyle - Which is Better? (Harsh Reality)",
+        "clean_title": "Indian Lifestyle vs American Lifestyle - Which is Better (Harsh Reality)",
+        "channel": "Fit Tuber",
+        "upload_date": "2020-05-29",
+        "description": "Let us compare Ancient India with the Modern America in terms of clothes, food habits, eating style, areas of innovation and much more! \nDownload the Groww App - https://groww.app.link/ByiylnqDQ6\n\nOne-stop for all your investments. India’s highest-rated mutual fund investment app, trusted by more than 5 Million+ users. \n\nIndia and the USA are two countries which are progressive in their own way. USA of course is a super power and India in the recent past has imbibed a lot from the western ways of living. However, in this video I am going to compare the Modern American ways of living with our Ancient Indian style of living in 7 major categories. I will also share with you my personal take on the matter so that we can get the best of both the worlds. \n\n00:32 - CLOTHES. The way Indians and Americans dress show a lot about their mindsets. There are various reasons to why Americans preferred a certain types of clothes while Indians were more comfortable in another type of clothes.\n01:31 - FOOD. There is a major difference in the ideologies of these two countries which is evident in the food choices the people living in India and USA make.\n02:50 - EATING STYLE. There is a stark difference in the eating habits of ancient Indians and modern Americans. Why Americans prefer eating on a dining table? Why Indians pressed on eating on floor? Why Americans used cutlery while Indians believed that it's more appropriate to eat with hands?\n03:39 - SUSTAINABILITY vs CONVENIENCE. There are many distinct habits of modern Americans and ancient Indians that suggest that Americans are more inclined towards convenience while Indians believed in sustainable living. \n05:00 - WAYS OF LIVING. Indians are driven by certain set of principals while the Americans are driven by a different ideology. This is evident in their day to day life of people of both these countries.\n06:01 - AREAS OF INNOVATION. There is no doubt about the fact that America has produced some of the most innovative products in the last century. America is the hub of new products and is a heart of innovation across the globe. Although, you will be surprised to know that even Ancient Indian innovation has been par excellence.\n07:02 - PROACTIVE vs REACTIVE APPROACH. There are many ways one can conclude that Indians were more proactive whereas Americans have been reactive in approaching health and wellbeing. \n09:08 - WHAT IS THE SOLUTION? How to find a balance between productivity, health and wellbeing?\n\n✅  SUPPORT MY WORK and get exclusive perks \nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow and participate in Q&A session every Saturday at 11 AM \nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n\n5 Marketing Campaigns That Changed India Forever (SHOCKING TRUTH)\nhttps://www.youtube.com/watch?v=-9t8G...\n\nUltimate Ayurvedic Body Test in 5 Mins (Vata Pitta Kapha Explained)\nhttps://www.youtube.com/watch?v=wtVsF...\n\n5 Products at the Chemist Shop that Need Your Attention!\nhttps://www.youtube.com/watch?v=_3beJ...\n\nTea vs Coffee | Which is Better (Revealed)\nhttps://www.youtube.com/watch?v=oQjbk...\n\nFull day of Eating - Fat Loss Diet (Indian Style) \nhttps://www.youtube.com/watch?v=tLLO3...\n\nWhat Happens if You Eat Dinner After 7 PM? (WITH SOLUTION)\nhttps://www.youtube.com/watch?v=s7tEu...\n\n10 Super Easy & Tasty Recipes to Eat during Lockdown (Vegetarian)\nhttps://www.youtube.com/watch?v=RUDi7...\n\n5 Simple & Creative Recipes to Try this Lockdown (Vegetarian)\nhttps://www.youtube.com/watch?v=mbo5w...\n\nFull day of Eating - Weight Gain (Muscle) diet - Indian Style \nhttps://www.youtube.com/watch?v=e2Jii...\n\n5 Amazing Ways to Beat the Heat this Summer (Kill Body Heat) \nhttps://www.youtube.com/watch?v=Yq0cu...\n\nThe Only Diet Plan That Ayurveda Recommends (Men & Women)\nhttps://www.youtube.com/watch?v=6ZUFT...\n\nWhat your Poop Says about your Health? (Test your Body)💩\nhttps://www.youtube.com/watch?v=Tt-6d...\n\n28 Signs Your Body is Deficient in Vital Nutrients (With Solution)\nhttps://www.youtube.com/watch?v=JZlXd...\n\n10:22 - Video Partner - GROWW - Groww is a new age free online mutual fund investment platform which makes investment easy, transparent and secured.\n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "high",
+          "completeness": "complete",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] India and the United States of America are two countries which are progressive in their own way. USA of course is a superpower and India in the recent past has imbibed a lot from the Western ways of living. However, in this video, I'm going to compare the modern American ways of living with our ancient Indian style of living in seven major [00:00:18] categories. I will also share with you my personal take on the matter so that we can get the best of both the worlds. So, without any further delay, let's get started. [music] Hello friends, welcome to FitTuber. Starting with number seven on the list [00:00:34] are clothes. [music] In India, it was always counselled to dress in natural fibers that breathe. Specific clothes were even described for specific seasons. Cotton in summers, wool in winters, silk in rainy season, and so [music] on. Even the ornaments worn by women were not just for physical appeal, [00:00:50] but had a health aspect to it. [music] Gold was known to boost immunity, silver to cool inflammation, copper is antiseptic, [music] and so on. Basically, there was a whole science of dressing for optimum physical and mental well-being [music] referred to as Ayurvastra in our yogic scriptures. [00:01:06] However, the American style of clothing is mostly focused on convenience and comfort, which is why they prefer synthetic fibers which do not wrinkle easily, are more durable, and are easy to manufacture. Then there is the climatic aspect to it as well. The tight clothing like suits, ties, and shoes [00:01:22] does help them beat [music] off the extreme chilling climate in the West. Indians in hot tropical climate were better [music] off in loose clothes and chappals. Next on the list is food. For an average American, nearly 2/3 of his daily calories come from ultra-processed [music] food. According to a study done [00:01:38] at the University of San Diego. This is because Americans focused on convenience and productivity. Indians, on the other hand, have always preferred cooking their [music] meals from scratch at home. The endless variety of Indian cuisine is an evidence of it. Even the harder tasks of procuring and hand [00:01:55] pounding the spices at home, preparing ghee at home were not uncommon. Indians have always considered kitchens to [music] be no less than a working dispensary where different herbs and spices were carefully used not just to satisfy the palate, [music] but to ignite the digestive fires as suggested [00:02:11] in the Ayurvedic scriptures. Another major difference lies in the food choices. American food is largely meat-based. In the US, the meat consumption is at a staggering 90 to 125 kg per person per year, a majority of which comes from red meats like pork and [00:02:27] beef. On the other hand, Indian society used to be majorly vegetarian. Ancient Indian principles of food suggested that man being the most conscious animal on earth should eat food which involves least amount of violence. [music] Eating vegetarian may seem as a backward practice at first, but in the recent [00:02:44] past due to the spread of so many animal-origin viruses, it actually seems a far-sighted thought. Now, let us talk about the eating styles. [music] There is a stark difference in the eating habits of ancient Indians and modern Americans. Driven by comfort and time-saving practices, Americans prefer [00:03:00] eating sitting on a dining table. Whereas, driven by health and spiritual goals, Indians would prefer eating on the floor sitting cross-legged. This asana is called sukhasana, which is considered ideal to digest food. Americans find eating with hands to be gross. [music] They use sophisticated [00:03:16] cutlery. Indians, on the other hand, understood that the fingertips literally charge the food particles [music] which makes it get digested and assimilated better. Indians also practiced eating on banana leaf and plates made of sal leaves, which are not only eco-friendly, but also offer numerous health benefits. [00:03:32] [music] Americans did not mind eating in disposable plastic plates. Next is sustainability versus convenience. There are many distinct habits of modern Americans and ancient Indians that suggest that modern Americans are more inclined towards [music] convenience, while Indians believed in sustainable [00:03:49] living. One is the preference of toilet papers by Americans to clean the bum after defecation instead of using [music] water. Washing rather than wiping is not only more hygienic and healthy, but also helps the environment [music] in a huge way. But wait a minute, isn't water also a scarce [00:04:05] resource for us? Of course it is, but the disturbing fact is that just one toilet paper [music] uses a whopping 140 L of water to get manufactured. After washing hands, an American would look for a tissue paper while an Indian would use a cotton cloth. Americans clean [00:04:20] their teeth using plastic toothbrushes [music] and chemical-based toothpastes, whereas Indians always preferred the eco-friendly and non-toxic [music] quicks. Even for cleaning the tongue, Indians preferred the anti-microbial copper-based tongue cleaners rather than the convenient but non-biodegradable [00:04:35] [music] plastic ones. Then Americans prefer the convenient aluminum foils to wrap their foods ignoring the repercussions of it. While Indians always felt muslin cloths are a healthier choice as unlike aluminum, they do not leach any chemicals into the food. Indians would prefer cool water [00:04:51] from a matka rather than a refrigerator. It is not a coincidence that you are less likely to catch sore throat when you drink optimally cool [music] water from a biodegradable mud pot. Now let's differentiate the general ways of living. An American would shake hands when greeting while an Indian would fold [00:05:07] hands in a namaskar mudra. This is one thing that the world has now started to appreciate. [music] The literal meaning of namaste is namaha, that is I bow down to the divine [music] soul within you. Not only it enhances the feeling of gratitude, but is also more hygienic. [music] Unlike Americans, Indians would always [00:05:24] remove the shoes outside the house before entering. It's another intelligent way to keep the germs at bay and even saves your time and effort in cleaning the house. The way Indian and Western style toilets were designed is surprisingly a good way to understand the philosophies to the way of [music] [00:05:39] life of both these nations. While in Indian style, there is no contact of the buttocks or thighs to a seat that [music] could be unhygienic. Then it's a proven fact today that the closer we are to squatting, the more easily we empty the bowels. [music] While the Indian style toilet is more convenient for your [00:05:55] intestine, western style is more comfortable to sit at, which led to its fast adoption. Next point on the list is areas of innovation. There is no doubt about the fact that America has produced some of the most innovative products [music] in the last century. America is the hub of new products and is a heart [00:06:11] of innovation across the globe. Be it milestone achievements in communication, transport, electricity, or daily consumer products. The American innovation has been driven to boost efficiency, productivity, comfort, and materialism, which in turn uplifts the [00:06:27] economy. On the other hand, Indian innovation was mostly focused on spiritual growth without [music] compromising on environment or personal health. It might seem a hard fact to digest now, but Indian innovation has been [music] par excellence when it comes to architecture of temples. Be it [00:06:42] the Kailasa Temple of Ellora [music] or the Hampi Temple whose stones sound like musical instruments, the unbelievable [music] style of cooking food, or the smartly built forts by the kings, or the mysterious 1600 year-old iron pillar of Delhi which has not rusted yet. These [00:06:58] are few among the many riddles which scientists are still trying to figure [music] out. Finally, let's talk about the proactive versus reactive approach. There are many ways one can conclude that Indians were [music] proactive, whereas Americans have been reactive in approaching health and well-being. For [00:07:13] example, India has always propagated the use of clay pots for cooking, which retains the maximum nutrition of food, has no [music] side effects, and is also biodegradable. On the other hand, most Americans use the convenient nonstick cookware, which surely would not make their omelets stick, but the toxic fumes [00:07:30] of the coating of utensil would definitely harm them in the long run. According to American school of thought, food is merely a combination of nutrients. This has led to the extensive use of synthetic multivitamin pills in the west. Indians on the other hand had more natural ways integrated in their [00:07:46] lifestyle which provided them with the necessary micronutrients. Cooking in cast iron pots kept their iron levels in check. Tin coating inside the brass cooking utensils was a way by which Indians would get their daily dosage of zinc. Drinking water from copper vessels [00:08:02] kept their copper levels to optimum. And of course, Indians pressed on eating local fruits and vegetables because they knew that their bodies would assimilate the micronutrients from them much better. Americans today are trying to battle with their sleep issues, depression, and stress through synthetic [00:08:18] pills. For Indians, yoga was a way of life which would align their inner energies with the nature so that stress, anxiety, depression, and insomnia were not more a concern. Even in money matters, Americans [music] do not focus much on savings. Indians on the other [00:08:33] hand spend less and save more for the future. So, we [music] can see that American ways of living are short-term comfort oriented with some having major trade-offs in health and well-being. [music] And ancient Indian ways of living were driven by long-term spiritual goals without any compromise on environment or [00:08:49] [music] health. Although it will be a hard pill for us to swallow that many of the ancient Indian practices mentioned in this video may not fit [music] in our urban lifestyle. Honestly, how many of us can use cow dung cakes for daily cooking? Nor would we want to use [music] cancer-causing nonstick pans that West gifted to us. So, what is the [00:09:07] solution? Like all Indian practices are [music] not impractical, not all American ways of living are bad for health. We can try to pick the best of both the worlds so that the whole package is somewhat practical with least compromise on health. Like for all the packaged products we buy, we can at [00:09:23] least make sure that they use safe and natural [music] ingredients. Switching to twigs instead of commercial toothpaste may not be a pragmatic option for many, but at least we can do is start using the safer ones. Including seasonal and local fruits and vegetables in our diet [music] is fairly a [00:09:38] practical thing to do. Likewise, it may be hard for you to eat all your meals with hands sitting down on the floor, but the least we can do is to eat every meal consciously with a feeling of gratitude. In case of cookware, we can easily replace aluminum and plastic stuff with our good old [music] metals [00:09:55] and clay pots. Similarly, it may not be feasible for us to do yoga for 2 hours, but at least we can do is start doing it for 15 minutes. We can then tackle our modern-day with smile and calmness. Importantly, we should not look at our practices from the eyes of the West. [00:10:11] Many [music] practices may seem backward at once, but were actually far-sighted. [music] Indian culture is extremely rich in its own way and we should be proud of it. I want to thank Groww for partnering with us for this video. We Indians have always been smart with savings. What [00:10:26] would be even smarter is to invest our savings so that they can compound and grow [music] for us. Groww is a new-age free online mutual fund investment platform which makes investment easy, transparent, and secure. Their registration process is simple and easy. Since it is a direct mutual fund [00:10:42] platform, there are no middlemen, no commission, so you can earn higher. Groww has over 5,000 plus mutual funds available and the payment options like UPI, debit [music] card, and NEFT are pretty secure. One good thing is that through Groww app, you can track all your investments in one place. Moreover, [00:10:58] the money that you earn will be instantly redeemed directly to your bank account. [music] In case of any issues, they have an active customer support team to guide you. Groww currently has over 5 million plus users and [music] is highest rated on Google Play Store under finance category. So, you can download [00:11:13] the Groww app and start investing [music] smartly. So friends, that's all for this video. If you found it to be helpful, please [music] give this video a big thumbs up. You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell [music] icon so that you [00:11:30] you miss a video from me. You can also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. [music] I thank you so much for watching."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1146,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: MCD5xGPsnHg",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 2418 | Replies: 295 | Published: 2020-05-29T14:07:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Hope you guys enjoyed the video :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00011",
+              "author": "",
+              "text": "Also, what should be next in our Versus series. Can be a comparison of two products and anything related to heath. A vs B. What should be A & B? #youropinionmatters 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "[COMMENT 2] Author: @predatorOP1 | Likes: 23 | Replies: 0 | Published: 2020-05-29T14:07:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00014",
+              "author": "",
+              "text": "Bhai can we eat 100gms homemade paneer daily? If No..why?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "[COMMENT 3] Author: @RuhanisJourney | Likes: 8 | Replies: 0 | Published: 2020-05-29T14:08:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00017",
+              "author": "",
+              "text": "I loved it so so soooo much",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "[COMMENT 4] Author: @gangu24 | Likes: 8 | Replies: 0 | Published: 2020-05-29T14:10:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00020",
+              "author": "",
+              "text": "Hi Fituber sir 🤗yes all yours videos are so informative and knowledgeable sir..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "[COMMENT 5] Author: @ivaturisravanthi2001 | Likes: 20 | Replies: 0 | Published: 2020-05-29T14:12:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00023",
+              "author": "",
+              "text": "Pls do a review on baby products",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "[COMMENT 6] Author: @rajanthanappan1863 | Likes: 9 | Replies: 0 | Published: 2020-05-29T14:13:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00026",
+              "author": "",
+              "text": "Proud to be an Indian bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "[COMMENT 7] Author: @Motivational_world311 | Likes: 5069 | Replies: 125 | Published: 2020-07-21T19:42:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00029",
+              "author": "",
+              "text": "😭literally felt sad everytime when he said ancient India.....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "We lost our country's values.....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "[COMMENT 8] Author: @techlifezonegaming9183 | Likes: 17 | Replies: 0 | Published: 2020-07-21T22:59:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "Yeah",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "[COMMENT 9] Author: @ARMOURFITNESS | Likes: 102 | Replies: 0 | Published: 2020-07-30T11:29:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "And we are responsible for it 🙃",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 10] Author: @Will24-321 | Likes: 34 | Replies: 0 | Published: 2020-08-03T01:05:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "Country's value leke rehte toh AJ ye mobile use karna nahi hota",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 11] Author: @khushiparmar1843 | Likes: 117 | Replies: 0 | Published: 2020-08-03T18:01:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "@Will24-321 upgrading to technology doesn't have any relation to country's values. Technology and cultural values both are different. It's just that we adopted western culture also. Sad but true.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 12] Author: @Will24-321 | Likes: 33 | Replies: 0 | Published: 2020-08-03T18:07:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "@khushiparmar1843 what's wrong with Western culture? Stop acting as if this vedic culture is the ultimate way of life",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "[COMMENT 13] Author: @smritianand2315 | Likes: 4129 | Replies: 87 | Published: 2020-05-29T13:43:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "Title of the video should be living style of ancient indian vs modern indian.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "[COMMENT 14] Author: @abhayprasad9580 | Likes: 20 | Replies: 0 | Published: 2020-05-29T13:58:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "True",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "[COMMENT 15] Author: @Mb36 | Likes: 19 | Replies: 0 | Published: 2020-05-29T14:00:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "exactly agree",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "[COMMENT 16] Author: @jeet7000 | Likes: 12 | Replies: 0 | Published: 2020-05-29T14:03:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "Exactly",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "[COMMENT 17] Author: @Foodlifewithnamita | Likes: 6 | Replies: 0 | Published: 2020-05-29T14:04:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "Yes right",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "[COMMENT 18] Author: @cookwithshiva5 | Likes: 5 | Replies: 0 | Published: 2020-05-29T14:08:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "👍👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "[COMMENT 19] Author: @aztec6394 | Likes: 6284 | Replies: 125 | Published: 2020-05-29T15:11:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "The sad part is, we're losing it all.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "[COMMENT 20] Author: @sattuu108 | Likes: 157 | Replies: 0 | Published: 2020-05-29T15:16:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "We can grow all together by doing and encouraging people at home , start from home , and guess what , the eart is our home",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "[COMMENT 21] Author: @karthikeyasharma7809 | Likes: 33 | Replies: 0 | Published: 2020-05-29T15:19:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "[COMMENT 482] Author: @justsomeguywithamustachebu3895 | Likes: 0 | Replies: 0 | Published: 2021-07-07T15:10:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "Same here lol",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "[COMMENT 483] Author: @mohanakrishna1766 | Likes: 22 | Replies: 0 | Published: 2020-05-30T02:44:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "It's time when Indians losing their culture and vivek bhai u are try to bring the importance of these practices....u truly deserve our love and trust bro👍keep going💗",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "[COMMENT 484] Author: @mysticsoul3 | Likes: 6 | Replies: 0 | Published: 2020-05-29T13:33:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "Nice video....😇😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "Some video suggestions.....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "1.) Description of all the Ayurvedic books that you read.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "2.) How to keep room cool in summers naturally.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01603",
+              "author": "",
+              "text": "3.) Natural ways to repel mosquitoes from room.4.) How to wake up early in the morning.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "5.) How to correct and straighten a bent posture",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "6.) How to naturally straighten hair",
+              "likes": null
+            },
+            {
+              "comment_id": "c01606",
+              "author": "",
+              "text": "Thank you...🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "[COMMENT 485] Author: @jaganeha7 | Likes: 6 | Replies: 0 | Published: 2021-05-10T15:08:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01609",
+              "author": "",
+              "text": "The sad thing is nowadays we have changed the practice of cooking methods and",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "[COMMENT 486] Author: @harmishsoni3116 | Likes: 200 | Replies: 11 | Published: 2020-08-11T07:54:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01612",
+              "author": "",
+              "text": "Actually we insulted our ancient values we are not wrong in that nobody teaches it scientifically we think it's andh Vishwas we can blame education system teaching us of western civilization not our ancient civilizations",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "[COMMENT 487] Author: @StarryxNight5 | Likes: 1 | Replies: 0 | Published: 2020-10-17T15:04:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01615",
+              "author": "",
+              "text": "Ancient India had not yet developed science very well. By science I mean the scientific method. Ancient India's culture is all good but western stuff which is better than fit Tuber potrays. For example, eating with cutlery might be more hygienic than eating with your hands, Non-stick utensils aren't going to give you cancer as long as WHO exists, etc.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "[COMMENT 488] Author: @sunlight2521 | Likes: 6 | Replies: 0 | Published: 2020-10-28T05:35:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01618",
+              "author": "",
+              "text": "I want Gurukuls in place of this today's schools !!!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "Hare Krishna",
+              "likes": null
+            },
+            {
+              "comment_id": "c01621",
+              "author": "",
+              "text": "[COMMENT 489] Author: @WEBGRID | Likes: 3 | Replies: 0 | Published: 2020-12-14T04:34:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "@StarryxNight5 I DONT BELEIVE ANYMORE IN WHO ->pharma puppet nothing else",
+              "likes": null
+            },
+            {
+              "comment_id": "c01624",
+              "author": "",
+              "text": "[COMMENT 490] Author: @StarryxNight5 | Likes: 0 | Replies: 0 | Published: 2020-12-14T08:12:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "@WEBGRID Wow. Just wow. Bet you're an anti-vaxxer, too. Bet you think Covid is engineered or fake or something. I could be rich from how many bets I'd make.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "[COMMENT 491] Author: @SurajKumar-uo1eh | Likes: 9 | Replies: 0 | Published: 2021-01-02T20:10:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01628",
+              "author": "",
+              "text": "@StarryxNight5 Ma'am please properly educate yourself or probably re-educate yourself about the scientific accomplishments of the ancient Indian people. From mathematics to medicine, physics to astronomy, metallurgy to architecture, biology to geography, there is not a single branch of science untouched by the findings of the ancient Indians. These all can't simply be achieved without a scientific method. They definitely had an elaborate scientific method and reasoning process. In addition to that they had a very elaborate system of debating, the details of which can be found in 'Nyāya shāstra'.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "Maybe you reached such conclusions because many of the practices of ancient Indians today are regarded as superstitions. This is because the reason behind those practices were not passed on through the successive generations. This resulted in those practices taking the form of superstitions. Also, many a times it might not be possible to explain and educate each and every individual the technicalities of those practices. So over time the practice remained but the reasoning got lost. It is very much possible that many of those practices may not be relevant today but to disregard all the practices, customs or rituals of ancient Indians will be absolutely foolish, even after knowing about the scientific advancements of the ancient Indians.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "And as far as eating and hygiene is concerned, we wash our hands properly before eating. Also there is no guarantee that the cutlery you are using to eat is 100% germ free. And about the non-stick utensils that you talked about, it is open to all that those utensils are coated with teflon which is a plastic. Whatever be the variety of a plastic, it will always leach into food which is cooked in it when heated, some more, some less, but it will definitely leach. And that will obviously cause heath problems. Many of these researches on these issues takes years to get published and come in public domain. It is not uncommon for the scientific community to recommend something first and then rubbish it later. So, don't be surprised when someday WHO declares non-stick utensils to be harmful for health. So be proactive and take care of your health.🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "[COMMENT 492] Author: @vinayakkulkarni1303 | Likes: 12 | Replies: 0 | Published: 2020-05-29T13:32:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "Amazing way to portray a wonderful information.....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01634",
+              "author": "",
+              "text": "According to me u must be given an opportunity to talk in Tedx stage....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "Anyway keep up the good work.....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "[COMMENT 493] Author: @silba-lo4020 | Likes: 8 | Replies: 0 | Published: 2020-06-12T03:36:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "3:18 I actually find this very interesting",
+              "likes": null
+            },
+            {
+              "comment_id": "c01640",
+              "author": "",
+              "text": "[COMMENT 494] Author: @saiprasadnayak2436 | Likes: 2 | Replies: 0 | Published: 2021-07-10T18:57:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "Let's all try to bring back & adopt our great Indian culture again.... 💖💖💖",
+              "likes": null
+            },
+            {
+              "comment_id": "c01643",
+              "author": "",
+              "text": "[COMMENT 495] Author: @harshitagautam9887 | Likes: 8 | Replies: 0 | Published: 2020-06-05T18:39:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "10:04 ur handwriting is soo gud😍",
+              "likes": null
+            },
+            {
+              "comment_id": "c01646",
+              "author": "",
+              "text": "[COMMENT 496] Author: @vanshika7754 | Likes: 48 | Replies: 0 | Published: 2020-05-29T13:54:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "I love my india. No matter how advance in terms of tech, living standards we become let's always remain indian at heart and preserve our cultural practices forever . And teach our coming generations about our practices , traditions .",
+              "likes": null
+            },
+            {
+              "comment_id": "c01649",
+              "author": "",
+              "text": "[COMMENT 497] Author: @srikanthrocks001 | Likes: 10 | Replies: 0 | Published: 2020-05-29T13:32:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "Video on Thyroid issues......",
+              "likes": null
+            },
+            {
+              "comment_id": "c01652",
+              "author": "",
+              "text": "[COMMENT 498] Author: @subhasreebanerjee9816 | Likes: 53 | Replies: 46 | Published: 2021-06-10T03:06:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "Indian culture is so rich but still our new generations are attracted towards the American culture :(",
+              "likes": null
+            },
+            {
+              "comment_id": "c01655",
+              "author": "",
+              "text": "[COMMENT 499] Author: @at3ff329 | Likes: 2 | Replies: 0 | Published: 2021-07-13T17:33:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "Agreed",
+              "likes": null
+            },
+            {
+              "comment_id": "c01658",
+              "author": "",
+              "text": "[COMMENT 500] Author: @ayushmantripathy4605 | Likes: 2 | Replies: 0 | Published: 2021-07-17T02:06:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "No mam I am a 15 year old teenager and I really love ancient Indian Culture 😊😊😊.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "MCD5xGPsnHg",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Indian Lifestyle vs American Lifestyle - Which is Better (Harsh Reality)\\Indian Lifestyle vs American Lifestyle - Which is Better (Harsh Reality).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\Indian Lifestyle vs American Lifestyle - Which is Better (Harsh Reality)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\MCD5xGPsnHg",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "MCD5xGPsnHg",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "high",
+            "transcript_completeness": "complete",
+            "timestamp_count": 44,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 13479,
+            "transcript_words": 2365,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "A",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "high",
+              "completeness": "complete",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] India and the United States of America are two countries which are progressive in their own way. USA of course is a superpower and India in the recent past has imbibed a lot from the Western ways of living. However, in this video, I'm going to compare the modern American ways of living with our ancient Indian style of living in seven major [00:00:18] categories. I will also share with you my personal take on the matter so that we can get the best of both the worlds. So, without any further delay, let's get started. [music] Hello friends, welcome to FitTuber. Starting with number seven on the list [00:00:34] are clothes. [music] In India, it was always counselled to dress in natural fibers that breathe. Specific clothes were even described for specific seasons. Cotton in summers, wool in winters, silk in rainy season, and so [music] on. Even the ornaments worn by women were not just for physical appeal, [00:00:50] but had a health aspect to it. [music] Gold was known to boost immunity, silver to cool inflammation, copper is antiseptic, [music] and so on. Basically, there was a whole science of dressing for optimum physical and mental well-being [music] referred to as Ayurvastra in our yogic scriptures. [00:01:06] However, the American style of clothing is mostly focused on convenience and comfort, which is why they prefer synthetic fibers which do not wrinkle easily, are more durable, and are easy to manufacture. Then there is the climatic aspect to it as well. The tight clothing like suits, ties, and shoes [00:01:22] does help them beat [music] off the extreme chilling climate in the West. Indians in hot tropical climate were better [music] off in loose clothes and chappals. Next on the list is food. For an average American, nearly 2/3 of his daily calories come from ultra-processed [music] food. According to a study done [00:01:38] at the University of San Diego. This is because Americans focused on convenience and productivity. Indians, on the other hand, have always preferred cooking their [music] meals from scratch at home. The endless variety of Indian cuisine is an evidence of it. Even the harder tasks of procuring and hand [00:01:55] pounding the spices at home, preparing ghee at home were not uncommon. Indians have always considered kitchens to [music] be no less than a working dispensary where different herbs and spices were carefully used not just to satisfy the palate, [music] but to ignite the digestive fires as suggested [00:02:11] in the Ayurvedic scriptures. Another major difference lies in the food choices. American food is largely meat-based. In the US, the meat consumption is at a staggering 90 to 125 kg per person per year, a majority of which comes from red meats like pork and [00:02:27] beef. On the other hand, Indian society used to be majorly vegetarian. Ancient Indian principles of food suggested that man being the most conscious animal on earth should eat food which involves least amount of violence. [music] Eating vegetarian may seem as a backward practice at first, but in the recent [00:02:44] past due to the spread of so many animal-origin viruses, it actually seems a far-sighted thought. Now, let us talk about the eating styles. [music] There is a stark difference in the eating habits of ancient Indians and modern Americans. Driven by comfort and time-saving practices, Americans prefer [00:03:00] eating sitting on a dining table. Whereas, driven by health and spiritual goals, Indians would prefer eating on the floor sitting cross-legged. This asana is called sukhasana, which is considered ideal to digest food. Americans find eating with hands to be gross. [music] They use sophisticated [00:03:16] cutlery. Indians, on the other hand, understood that the fingertips literally charge the food particles [music] which makes it get digested and assimilated better. Indians also practiced eating on banana leaf and plates made of sal leaves, which are not only eco-friendly, but also offer numerous health benefits. [00:03:32] [music] Americans did not mind eating in disposable plastic plates. Next is sustainability versus convenience. There are many distinct habits of modern Americans and ancient Indians that suggest that modern Americans are more inclined towards [music] convenience, while Indians believed in sustainable [00:03:49] living. One is the preference of toilet papers by Americans to clean the bum after defecation instead of using [music] water. Washing rather than wiping is not only more hygienic and healthy, but also helps the environment [music] in a huge way. But wait a minute, isn't water also a scarce [00:04:05] resource for us? Of course it is, but the disturbing fact is that just one toilet paper [music] uses a whopping 140 L of water to get manufactured. After washing hands, an American would look for a tissue paper while an Indian would use a cotton cloth. Americans clean [00:04:20] their teeth using plastic toothbrushes [music] and chemical-based toothpastes, whereas Indians always preferred the eco-friendly and non-toxic [music] quicks. Even for cleaning the tongue, Indians preferred the anti-microbial copper-based tongue cleaners rather than the convenient but non-biodegradable [00:04:35] [music] plastic ones. Then Americans prefer the convenient aluminum foils to wrap their foods ignoring the repercussions of it. While Indians always felt muslin cloths are a healthier choice as unlike aluminum, they do not leach any chemicals into the food. Indians would prefer cool water [00:04:51] from a matka rather than a refrigerator. It is not a coincidence that you are less likely to catch sore throat when you drink optimally cool [music] water from a biodegradable mud pot. Now let's differentiate the general ways of living. An American would shake hands when greeting while an Indian would fold [00:05:07] hands in a namaskar mudra. This is one thing that the world has now started to appreciate. [music] The literal meaning of namaste is namaha, that is I bow down to the divine [music] soul within you. Not only it enhances the feeling of gratitude, but is also more hygienic. [music] Unlike Americans, Indians would always [00:05:24] remove the shoes outside the house before entering. It's another intelligent way to keep the germs at bay and even saves your time and effort in cleaning the house. The way Indian and Western style toilets were designed is surprisingly a good way to understand the philosophies to the way of [music] [00:05:39] life of both these nations. While in Indian style, there is no contact of the buttocks or thighs to a seat that [music] could be unhygienic. Then it's a proven fact today that the closer we are to squatting, the more easily we empty the bowels. [music] While the Indian style toilet is more convenient for your [00:05:55] intestine, western style is more comfortable to sit at, which led to its fast adoption. Next point on the list is areas of innovation. There is no doubt about the fact that America has produced some of the most innovative products [music] in the last century. America is the hub of new products and is a heart [00:06:11] of innovation across the globe. Be it milestone achievements in communication, transport, electricity, or daily consumer products. The American innovation has been driven to boost efficiency, productivity, comfort, and materialism, which in turn uplifts the [00:06:27] economy. On the other hand, Indian innovation was mostly focused on spiritual growth without [music] compromising on environment or personal health. It might seem a hard fact to digest now, but Indian innovation has been [music] par excellence when it comes to architecture of temples. Be it [00:06:42] the Kailasa Temple of Ellora [music] or the Hampi Temple whose stones sound like musical instruments, the unbelievable [music] style of cooking food, or the smartly built forts by the kings, or the mysterious 1600 year-old iron pillar of Delhi which has not rusted yet. These [00:06:58] are few among the many riddles which scientists are still trying to figure [music] out. Finally, let's talk about the proactive versus reactive approach. There are many ways one can conclude that Indians were [music] proactive, whereas Americans have been reactive in approaching health and well-being. For [00:07:13] example, India has always propagated the use of clay pots for cooking, which retains the maximum nutrition of food, has no [music] side effects, and is also biodegradable. On the other hand, most Americans use the convenient nonstick cookware, which surely would not make their omelets stick, but the toxic fumes [00:07:30] of the coating of utensil would definitely harm them in the long run. According to American school of thought, food is merely a combination of nutrients. This has led to the extensive use of synthetic multivitamin pills in the west. Indians on the other hand had more natural ways integrated in their [00:07:46] lifestyle which provided them with the necessary micronutrients. Cooking in cast iron pots kept their iron levels in check. Tin coating inside the brass cooking utensils was a way by which Indians would get their daily dosage of zinc. Drinking water from copper vessels [00:08:02] kept their copper levels to optimum. And of course, Indians pressed on eating local fruits and vegetables because they knew that their bodies would assimilate the micronutrients from them much better. Americans today are trying to battle with their sleep issues, depression, and stress through synthetic [00:08:18] pills. For Indians, yoga was a way of life which would align their inner energies with the nature so that stress, anxiety, depression, and insomnia were not more a concern. Even in money matters, Americans [music] do not focus much on savings. Indians on the other [00:08:33] hand spend less and save more for the future. So, we [music] can see that American ways of living are short-term comfort oriented with some having major trade-offs in health and well-being. [music] And ancient Indian ways of living were driven by long-term spiritual goals without any compromise on environment or [00:08:49] [music] health. Although it will be a hard pill for us to swallow that many of the ancient Indian practices mentioned in this video may not fit [music] in our urban lifestyle. Honestly, how many of us can use cow dung cakes for daily cooking? Nor would we want to use [music] cancer-causing nonstick pans that West gifted to us. So, what is the [00:09:07] solution? Like all Indian practices are [music] not impractical, not all American ways of living are bad for health. We can try to pick the best of both the worlds so that the whole package is somewhat practical with least compromise on health. Like for all the packaged products we buy, we can at [00:09:23] least make sure that they use safe and natural [music] ingredients. Switching to twigs instead of commercial toothpaste may not be a pragmatic option for many, but at least we can do is start using the safer ones. Including seasonal and local fruits and vegetables in our diet [music] is fairly a [00:09:38] practical thing to do. Likewise, it may be hard for you to eat all your meals with hands sitting down on the floor, but the least we can do is to eat every meal consciously with a feeling of gratitude. In case of cookware, we can easily replace aluminum and plastic stuff with our good old [music] metals [00:09:55] and clay pots. Similarly, it may not be feasible for us to do yoga for 2 hours, but at least we can do is start doing it for 15 minutes. We can then tackle our modern-day with smile and calmness. Importantly, we should not look at our practices from the eyes of the West. [00:10:11] Many [music] practices may seem backward at once, but were actually far-sighted. [music] Indian culture is extremely rich in its own way and we should be proud of it. I want to thank Groww for partnering with us for this video. We Indians have always been smart with savings. What [00:10:26] would be even smarter is to invest our savings so that they can compound and grow [music] for us. Groww is a new-age free online mutual fund investment platform which makes investment easy, transparent, and secure. Their registration process is simple and easy. Since it is a direct mutual fund [00:10:42] platform, there are no middlemen, no commission, so you can earn higher. Groww has over 5,000 plus mutual funds available and the payment options like UPI, debit [music] card, and NEFT are pretty secure. One good thing is that through Groww app, you can track all your investments in one place. Moreover, [00:10:58] the money that you earn will be instantly redeemed directly to your bank account. [music] In case of any issues, they have an active customer support team to guide you. Groww currently has over 5 million plus users and [music] is highest rated on Google Play Store under finance category. So, you can download [00:11:13] the Groww app and start investing [music] smartly. So friends, that's all for this video. If you found it to be helpful, please [music] give this video a big thumbs up. You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell [music] icon so that you [00:11:30] you miss a video from me. You can also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. [music] I thank you so much for watching."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1146,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: MCD5xGPsnHg",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 2418 | Replies: 295 | Published: 2020-05-29T14:07:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Hope you guys enjoyed the video :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00011",
+                  "author": "",
+                  "text": "Also, what should be next in our Versus series. Can be a comparison of two products and anything related to heath. A vs B. What should be A & B? #youropinionmatters 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @predatorOP1 | Likes: 23 | Replies: 0 | Published: 2020-05-29T14:07:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00014",
+                  "author": "",
+                  "text": "Bhai can we eat 100gms homemade paneer daily? If No..why?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @RuhanisJourney | Likes: 8 | Replies: 0 | Published: 2020-05-29T14:08:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00017",
+                  "author": "",
+                  "text": "I loved it so so soooo much",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @gangu24 | Likes: 8 | Replies: 0 | Published: 2020-05-29T14:10:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00020",
+                  "author": "",
+                  "text": "Hi Fituber sir 🤗yes all yours videos are so informative and knowledgeable sir..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @ivaturisravanthi2001 | Likes: 20 | Replies: 0 | Published: 2020-05-29T14:12:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00023",
+                  "author": "",
+                  "text": "Pls do a review on baby products",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @rajanthanappan1863 | Likes: 9 | Replies: 0 | Published: 2020-05-29T14:13:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00026",
+                  "author": "",
+                  "text": "Proud to be an Indian bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @Motivational_world311 | Likes: 5069 | Replies: 125 | Published: 2020-07-21T19:42:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00029",
+                  "author": "",
+                  "text": "😭literally felt sad everytime when he said ancient India.....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "We lost our country's values.....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @techlifezonegaming9183 | Likes: 17 | Replies: 0 | Published: 2020-07-21T22:59:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "Yeah",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @ARMOURFITNESS | Likes: 102 | Replies: 0 | Published: 2020-07-30T11:29:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "And we are responsible for it 🙃",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @Will24-321 | Likes: 34 | Replies: 0 | Published: 2020-08-03T01:05:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "Country's value leke rehte toh AJ ye mobile use karna nahi hota",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @khushiparmar1843 | Likes: 117 | Replies: 0 | Published: 2020-08-03T18:01:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "@Will24-321 upgrading to technology doesn't have any relation to country's values. Technology and cultural values both are different. It's just that we adopted western culture also. Sad but true.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @Will24-321 | Likes: 33 | Replies: 0 | Published: 2020-08-03T18:07:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "@khushiparmar1843 what's wrong with Western culture? Stop acting as if this vedic culture is the ultimate way of life",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @smritianand2315 | Likes: 4129 | Replies: 87 | Published: 2020-05-29T13:43:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "Title of the video should be living style of ancient indian vs modern indian.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @abhayprasad9580 | Likes: 20 | Replies: 0 | Published: 2020-05-29T13:58:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "True",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @Mb36 | Likes: 19 | Replies: 0 | Published: 2020-05-29T14:00:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "exactly agree",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @jeet7000 | Likes: 12 | Replies: 0 | Published: 2020-05-29T14:03:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "Exactly",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @Foodlifewithnamita | Likes: 6 | Replies: 0 | Published: 2020-05-29T14:04:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "Yes right",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @cookwithshiva5 | Likes: 5 | Replies: 0 | Published: 2020-05-29T14:08:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "👍👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @aztec6394 | Likes: 6284 | Replies: 125 | Published: 2020-05-29T15:11:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "The sad part is, we're losing it all.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @sattuu108 | Likes: 157 | Replies: 0 | Published: 2020-05-29T15:16:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "We can grow all together by doing and encouraging people at home , start from home , and guess what , the eart is our home",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @karthikeyasharma7809 | Likes: 33 | Replies: 0 | Published: 2020-05-29T15:19:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @justsomeguywithamustachebu3895 | Likes: 0 | Replies: 0 | Published: 2021-07-07T15:10:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "Same here lol",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @mohanakrishna1766 | Likes: 22 | Replies: 0 | Published: 2020-05-30T02:44:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "It's time when Indians losing their culture and vivek bhai u are try to bring the importance of these practices....u truly deserve our love and trust bro👍keep going💗",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @mysticsoul3 | Likes: 6 | Replies: 0 | Published: 2020-05-29T13:33:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "Nice video....😇😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "Some video suggestions.....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "1.) Description of all the Ayurvedic books that you read.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "2.) How to keep room cool in summers naturally.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01603",
+                  "author": "",
+                  "text": "3.) Natural ways to repel mosquitoes from room.4.) How to wake up early in the morning.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "5.) How to correct and straighten a bent posture",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "6.) How to naturally straighten hair",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01606",
+                  "author": "",
+                  "text": "Thank you...🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @jaganeha7 | Likes: 6 | Replies: 0 | Published: 2021-05-10T15:08:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01609",
+                  "author": "",
+                  "text": "The sad thing is nowadays we have changed the practice of cooking methods and",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @harmishsoni3116 | Likes: 200 | Replies: 11 | Published: 2020-08-11T07:54:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01612",
+                  "author": "",
+                  "text": "Actually we insulted our ancient values we are not wrong in that nobody teaches it scientifically we think it's andh Vishwas we can blame education system teaching us of western civilization not our ancient civilizations",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @StarryxNight5 | Likes: 1 | Replies: 0 | Published: 2020-10-17T15:04:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01615",
+                  "author": "",
+                  "text": "Ancient India had not yet developed science very well. By science I mean the scientific method. Ancient India's culture is all good but western stuff which is better than fit Tuber potrays. For example, eating with cutlery might be more hygienic than eating with your hands, Non-stick utensils aren't going to give you cancer as long as WHO exists, etc.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @sunlight2521 | Likes: 6 | Replies: 0 | Published: 2020-10-28T05:35:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01618",
+                  "author": "",
+                  "text": "I want Gurukuls in place of this today's schools !!!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "Hare Krishna",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01621",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @WEBGRID | Likes: 3 | Replies: 0 | Published: 2020-12-14T04:34:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "@StarryxNight5 I DONT BELEIVE ANYMORE IN WHO ->pharma puppet nothing else",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01624",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @StarryxNight5 | Likes: 0 | Replies: 0 | Published: 2020-12-14T08:12:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "@WEBGRID Wow. Just wow. Bet you're an anti-vaxxer, too. Bet you think Covid is engineered or fake or something. I could be rich from how many bets I'd make.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @SurajKumar-uo1eh | Likes: 9 | Replies: 0 | Published: 2021-01-02T20:10:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01628",
+                  "author": "",
+                  "text": "@StarryxNight5 Ma'am please properly educate yourself or probably re-educate yourself about the scientific accomplishments of the ancient Indian people. From mathematics to medicine, physics to astronomy, metallurgy to architecture, biology to geography, there is not a single branch of science untouched by the findings of the ancient Indians. These all can't simply be achieved without a scientific method. They definitely had an elaborate scientific method and reasoning process. In addition to that they had a very elaborate system of debating, the details of which can be found in 'Nyāya shāstra'.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "Maybe you reached such conclusions because many of the practices of ancient Indians today are regarded as superstitions. This is because the reason behind those practices were not passed on through the successive generations. This resulted in those practices taking the form of superstitions. Also, many a times it might not be possible to explain and educate each and every individual the technicalities of those practices. So over time the practice remained but the reasoning got lost. It is very much possible that many of those practices may not be relevant today but to disregard all the practices, customs or rituals of ancient Indians will be absolutely foolish, even after knowing about the scientific advancements of the ancient Indians.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "And as far as eating and hygiene is concerned, we wash our hands properly before eating. Also there is no guarantee that the cutlery you are using to eat is 100% germ free. And about the non-stick utensils that you talked about, it is open to all that those utensils are coated with teflon which is a plastic. Whatever be the variety of a plastic, it will always leach into food which is cooked in it when heated, some more, some less, but it will definitely leach. And that will obviously cause heath problems. Many of these researches on these issues takes years to get published and come in public domain. It is not uncommon for the scientific community to recommend something first and then rubbish it later. So, don't be surprised when someday WHO declares non-stick utensils to be harmful for health. So be proactive and take care of your health.🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @vinayakkulkarni1303 | Likes: 12 | Replies: 0 | Published: 2020-05-29T13:32:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "Amazing way to portray a wonderful information.....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01634",
+                  "author": "",
+                  "text": "According to me u must be given an opportunity to talk in Tedx stage....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "Anyway keep up the good work.....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @silba-lo4020 | Likes: 8 | Replies: 0 | Published: 2020-06-12T03:36:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "3:18 I actually find this very interesting",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01640",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @saiprasadnayak2436 | Likes: 2 | Replies: 0 | Published: 2021-07-10T18:57:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "Let's all try to bring back & adopt our great Indian culture again.... 💖💖💖",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01643",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @harshitagautam9887 | Likes: 8 | Replies: 0 | Published: 2020-06-05T18:39:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "10:04 ur handwriting is soo gud😍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01646",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @vanshika7754 | Likes: 48 | Replies: 0 | Published: 2020-05-29T13:54:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "I love my india. No matter how advance in terms of tech, living standards we become let's always remain indian at heart and preserve our cultural practices forever . And teach our coming generations about our practices , traditions .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01649",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @srikanthrocks001 | Likes: 10 | Replies: 0 | Published: 2020-05-29T13:32:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "Video on Thyroid issues......",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01652",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @subhasreebanerjee9816 | Likes: 53 | Replies: 46 | Published: 2021-06-10T03:06:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "Indian culture is so rich but still our new generations are attracted towards the American culture :(",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01655",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @at3ff329 | Likes: 2 | Replies: 0 | Published: 2021-07-13T17:33:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "Agreed",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01658",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @ayushmantripathy4605 | Likes: 2 | Replies: 0 | Published: 2021-07-17T02:06:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "No mam I am a 15 year old teenager and I really love ancient Indian Culture 😊😊😊.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "MCD5xGPsnHg",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "high",
+          "transcript_completeness": "complete",
+          "timestamp_count": 44,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 13479,
+          "transcript_words": 2365,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "A",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "high",
+            "completeness": "complete",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] India and the United States of America are two countries which are progressive in their own way. USA of course is a superpower and India in the recent past has imbibed a lot from the Western ways of living. However, in this video, I'm going to compare the modern American ways of living with our ancient Indian style of living in seven major [00:00:18] categories. I will also share with you my personal take on the matter so that we can get the best of both the worlds. So, without any further delay, let's get started. [music] Hello friends, welcome to FitTuber. Starting with number seven on the list [00:00:34] are clothes. [music] In India, it was always counselled to dress in natural fibers that breathe. Specific clothes were even described for specific seasons. Cotton in summers, wool in winters, silk in rainy season, and so [music] on. Even the ornaments worn by women were not just for physical appeal, [00:00:50] but had a health aspect to it. [music] Gold was known to boost immunity, silver to cool inflammation, copper is antiseptic, [music] and so on. Basically, there was a whole science of dressing for optimum physical and mental well-being [music] referred to as Ayurvastra in our yogic scriptures. [00:01:06] However, the American style of clothing is mostly focused on convenience and comfort, which is why they prefer synthetic fibers which do not wrinkle easily, are more durable, and are easy to manufacture. Then there is the climatic aspect to it as well. The tight clothing like suits, ties, and shoes [00:01:22] does help them beat [music] off the extreme chilling climate in the West. Indians in hot tropical climate were better [music] off in loose clothes and chappals. Next on the list is food. For an average American, nearly 2/3 of his daily calories come from ultra-processed [music] food. According to a study done [00:01:38] at the University of San Diego. This is because Americans focused on convenience and productivity. Indians, on the other hand, have always preferred cooking their [music] meals from scratch at home. The endless variety of Indian cuisine is an evidence of it. Even the harder tasks of procuring and hand [00:01:55] pounding the spices at home, preparing ghee at home were not uncommon. Indians have always considered kitchens to [music] be no less than a working dispensary where different herbs and spices were carefully used not just to satisfy the palate, [music] but to ignite the digestive fires as suggested [00:02:11] in the Ayurvedic scriptures. Another major difference lies in the food choices. American food is largely meat-based. In the US, the meat consumption is at a staggering 90 to 125 kg per person per year, a majority of which comes from red meats like pork and [00:02:27] beef. On the other hand, Indian society used to be majorly vegetarian. Ancient Indian principles of food suggested that man being the most conscious animal on earth should eat food which involves least amount of violence. [music] Eating vegetarian may seem as a backward practice at first, but in the recent [00:02:44] past due to the spread of so many animal-origin viruses, it actually seems a far-sighted thought. Now, let us talk about the eating styles. [music] There is a stark difference in the eating habits of ancient Indians and modern Americans. Driven by comfort and time-saving practices, Americans prefer [00:03:00] eating sitting on a dining table. Whereas, driven by health and spiritual goals, Indians would prefer eating on the floor sitting cross-legged. This asana is called sukhasana, which is considered ideal to digest food. Americans find eating with hands to be gross. [music] They use sophisticated [00:03:16] cutlery. Indians, on the other hand, understood that the fingertips literally charge the food particles [music] which makes it get digested and assimilated better. Indians also practiced eating on banana leaf and plates made of sal leaves, which are not only eco-friendly, but also offer numerous health benefits. [00:03:32] [music] Americans did not mind eating in disposable plastic plates. Next is sustainability versus convenience. There are many distinct habits of modern Americans and ancient Indians that suggest that modern Americans are more inclined towards [music] convenience, while Indians believed in sustainable [00:03:49] living. One is the preference of toilet papers by Americans to clean the bum after defecation instead of using [music] water. Washing rather than wiping is not only more hygienic and healthy, but also helps the environment [music] in a huge way. But wait a minute, isn't water also a scarce [00:04:05] resource for us? Of course it is, but the disturbing fact is that just one toilet paper [music] uses a whopping 140 L of water to get manufactured. After washing hands, an American would look for a tissue paper while an Indian would use a cotton cloth. Americans clean [00:04:20] their teeth using plastic toothbrushes [music] and chemical-based toothpastes, whereas Indians always preferred the eco-friendly and non-toxic [music] quicks. Even for cleaning the tongue, Indians preferred the anti-microbial copper-based tongue cleaners rather than the convenient but non-biodegradable [00:04:35] [music] plastic ones. Then Americans prefer the convenient aluminum foils to wrap their foods ignoring the repercussions of it. While Indians always felt muslin cloths are a healthier choice as unlike aluminum, they do not leach any chemicals into the food. Indians would prefer cool water [00:04:51] from a matka rather than a refrigerator. It is not a coincidence that you are less likely to catch sore throat when you drink optimally cool [music] water from a biodegradable mud pot. Now let's differentiate the general ways of living. An American would shake hands when greeting while an Indian would fold [00:05:07] hands in a namaskar mudra. This is one thing that the world has now started to appreciate. [music] The literal meaning of namaste is namaha, that is I bow down to the divine [music] soul within you. Not only it enhances the feeling of gratitude, but is also more hygienic. [music] Unlike Americans, Indians would always [00:05:24] remove the shoes outside the house before entering. It's another intelligent way to keep the germs at bay and even saves your time and effort in cleaning the house. The way Indian and Western style toilets were designed is surprisingly a good way to understand the philosophies to the way of [music] [00:05:39] life of both these nations. While in Indian style, there is no contact of the buttocks or thighs to a seat that [music] could be unhygienic. Then it's a proven fact today that the closer we are to squatting, the more easily we empty the bowels. [music] While the Indian style toilet is more convenient for your [00:05:55] intestine, western style is more comfortable to sit at, which led to its fast adoption. Next point on the list is areas of innovation. There is no doubt about the fact that America has produced some of the most innovative products [music] in the last century. America is the hub of new products and is a heart [00:06:11] of innovation across the globe. Be it milestone achievements in communication, transport, electricity, or daily consumer products. The American innovation has been driven to boost efficiency, productivity, comfort, and materialism, which in turn uplifts the [00:06:27] economy. On the other hand, Indian innovation was mostly focused on spiritual growth without [music] compromising on environment or personal health. It might seem a hard fact to digest now, but Indian innovation has been [music] par excellence when it comes to architecture of temples. Be it [00:06:42] the Kailasa Temple of Ellora [music] or the Hampi Temple whose stones sound like musical instruments, the unbelievable [music] style of cooking food, or the smartly built forts by the kings, or the mysterious 1600 year-old iron pillar of Delhi which has not rusted yet. These [00:06:58] are few among the many riddles which scientists are still trying to figure [music] out. Finally, let's talk about the proactive versus reactive approach. There are many ways one can conclude that Indians were [music] proactive, whereas Americans have been reactive in approaching health and well-being. For [00:07:13] example, India has always propagated the use of clay pots for cooking, which retains the maximum nutrition of food, has no [music] side effects, and is also biodegradable. On the other hand, most Americans use the convenient nonstick cookware, which surely would not make their omelets stick, but the toxic fumes [00:07:30] of the coating of utensil would definitely harm them in the long run. According to American school of thought, food is merely a combination of nutrients. This has led to the extensive use of synthetic multivitamin pills in the west. Indians on the other hand had more natural ways integrated in their [00:07:46] lifestyle which provided them with the necessary micronutrients. Cooking in cast iron pots kept their iron levels in check. Tin coating inside the brass cooking utensils was a way by which Indians would get their daily dosage of zinc. Drinking water from copper vessels [00:08:02] kept their copper levels to optimum. And of course, Indians pressed on eating local fruits and vegetables because they knew that their bodies would assimilate the micronutrients from them much better. Americans today are trying to battle with their sleep issues, depression, and stress through synthetic [00:08:18] pills. For Indians, yoga was a way of life which would align their inner energies with the nature so that stress, anxiety, depression, and insomnia were not more a concern. Even in money matters, Americans [music] do not focus much on savings. Indians on the other [00:08:33] hand spend less and save more for the future. So, we [music] can see that American ways of living are short-term comfort oriented with some having major trade-offs in health and well-being. [music] And ancient Indian ways of living were driven by long-term spiritual goals without any compromise on environment or [00:08:49] [music] health. Although it will be a hard pill for us to swallow that many of the ancient Indian practices mentioned in this video may not fit [music] in our urban lifestyle. Honestly, how many of us can use cow dung cakes for daily cooking? Nor would we want to use [music] cancer-causing nonstick pans that West gifted to us. So, what is the [00:09:07] solution? Like all Indian practices are [music] not impractical, not all American ways of living are bad for health. We can try to pick the best of both the worlds so that the whole package is somewhat practical with least compromise on health. Like for all the packaged products we buy, we can at [00:09:23] least make sure that they use safe and natural [music] ingredients. Switching to twigs instead of commercial toothpaste may not be a pragmatic option for many, but at least we can do is start using the safer ones. Including seasonal and local fruits and vegetables in our diet [music] is fairly a [00:09:38] practical thing to do. Likewise, it may be hard for you to eat all your meals with hands sitting down on the floor, but the least we can do is to eat every meal consciously with a feeling of gratitude. In case of cookware, we can easily replace aluminum and plastic stuff with our good old [music] metals [00:09:55] and clay pots. Similarly, it may not be feasible for us to do yoga for 2 hours, but at least we can do is start doing it for 15 minutes. We can then tackle our modern-day with smile and calmness. Importantly, we should not look at our practices from the eyes of the West. [00:10:11] Many [music] practices may seem backward at once, but were actually far-sighted. [music] Indian culture is extremely rich in its own way and we should be proud of it. I want to thank Groww for partnering with us for this video. We Indians have always been smart with savings. What [00:10:26] would be even smarter is to invest our savings so that they can compound and grow [music] for us. Groww is a new-age free online mutual fund investment platform which makes investment easy, transparent, and secure. Their registration process is simple and easy. Since it is a direct mutual fund [00:10:42] platform, there are no middlemen, no commission, so you can earn higher. Groww has over 5,000 plus mutual funds available and the payment options like UPI, debit [music] card, and NEFT are pretty secure. One good thing is that through Groww app, you can track all your investments in one place. Moreover, [00:10:58] the money that you earn will be instantly redeemed directly to your bank account. [music] In case of any issues, they have an active customer support team to guide you. Groww currently has over 5 million plus users and [music] is highest rated on Google Play Store under finance category. So, you can download [00:11:13] the Groww app and start investing [music] smartly. So friends, that's all for this video. If you found it to be helpful, please [music] give this video a big thumbs up. You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell [music] icon so that you [00:11:30] you miss a video from me. You can also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. [music] I thank you so much for watching."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1146,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: MCD5xGPsnHg",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 2418 | Replies: 295 | Published: 2020-05-29T14:07:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Hope you guys enjoyed the video :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00011",
+                "author": "",
+                "text": "Also, what should be next in our Versus series. Can be a comparison of two products and anything related to heath. A vs B. What should be A & B? #youropinionmatters 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "[COMMENT 2] Author: @predatorOP1 | Likes: 23 | Replies: 0 | Published: 2020-05-29T14:07:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00014",
+                "author": "",
+                "text": "Bhai can we eat 100gms homemade paneer daily? If No..why?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "[COMMENT 3] Author: @RuhanisJourney | Likes: 8 | Replies: 0 | Published: 2020-05-29T14:08:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00017",
+                "author": "",
+                "text": "I loved it so so soooo much",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "[COMMENT 4] Author: @gangu24 | Likes: 8 | Replies: 0 | Published: 2020-05-29T14:10:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00020",
+                "author": "",
+                "text": "Hi Fituber sir 🤗yes all yours videos are so informative and knowledgeable sir..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "[COMMENT 5] Author: @ivaturisravanthi2001 | Likes: 20 | Replies: 0 | Published: 2020-05-29T14:12:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00023",
+                "author": "",
+                "text": "Pls do a review on baby products",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "[COMMENT 6] Author: @rajanthanappan1863 | Likes: 9 | Replies: 0 | Published: 2020-05-29T14:13:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00026",
+                "author": "",
+                "text": "Proud to be an Indian bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "[COMMENT 7] Author: @Motivational_world311 | Likes: 5069 | Replies: 125 | Published: 2020-07-21T19:42:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00029",
+                "author": "",
+                "text": "😭literally felt sad everytime when he said ancient India.....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "We lost our country's values.....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "[COMMENT 8] Author: @techlifezonegaming9183 | Likes: 17 | Replies: 0 | Published: 2020-07-21T22:59:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "Yeah",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "[COMMENT 9] Author: @ARMOURFITNESS | Likes: 102 | Replies: 0 | Published: 2020-07-30T11:29:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "And we are responsible for it 🙃",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 10] Author: @Will24-321 | Likes: 34 | Replies: 0 | Published: 2020-08-03T01:05:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "Country's value leke rehte toh AJ ye mobile use karna nahi hota",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 11] Author: @khushiparmar1843 | Likes: 117 | Replies: 0 | Published: 2020-08-03T18:01:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "@Will24-321 upgrading to technology doesn't have any relation to country's values. Technology and cultural values both are different. It's just that we adopted western culture also. Sad but true.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 12] Author: @Will24-321 | Likes: 33 | Replies: 0 | Published: 2020-08-03T18:07:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "@khushiparmar1843 what's wrong with Western culture? Stop acting as if this vedic culture is the ultimate way of life",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "[COMMENT 13] Author: @smritianand2315 | Likes: 4129 | Replies: 87 | Published: 2020-05-29T13:43:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "Title of the video should be living style of ancient indian vs modern indian.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "[COMMENT 14] Author: @abhayprasad9580 | Likes: 20 | Replies: 0 | Published: 2020-05-29T13:58:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "True",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "[COMMENT 15] Author: @Mb36 | Likes: 19 | Replies: 0 | Published: 2020-05-29T14:00:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "exactly agree",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "[COMMENT 16] Author: @jeet7000 | Likes: 12 | Replies: 0 | Published: 2020-05-29T14:03:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "Exactly",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "[COMMENT 17] Author: @Foodlifewithnamita | Likes: 6 | Replies: 0 | Published: 2020-05-29T14:04:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "Yes right",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "[COMMENT 18] Author: @cookwithshiva5 | Likes: 5 | Replies: 0 | Published: 2020-05-29T14:08:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "👍👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "[COMMENT 19] Author: @aztec6394 | Likes: 6284 | Replies: 125 | Published: 2020-05-29T15:11:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "The sad part is, we're losing it all.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "[COMMENT 20] Author: @sattuu108 | Likes: 157 | Replies: 0 | Published: 2020-05-29T15:16:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "We can grow all together by doing and encouraging people at home , start from home , and guess what , the eart is our home",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "[COMMENT 21] Author: @karthikeyasharma7809 | Likes: 33 | Replies: 0 | Published: 2020-05-29T15:19:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "[COMMENT 482] Author: @justsomeguywithamustachebu3895 | Likes: 0 | Replies: 0 | Published: 2021-07-07T15:10:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "Same here lol",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "[COMMENT 483] Author: @mohanakrishna1766 | Likes: 22 | Replies: 0 | Published: 2020-05-30T02:44:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "It's time when Indians losing their culture and vivek bhai u are try to bring the importance of these practices....u truly deserve our love and trust bro👍keep going💗",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "[COMMENT 484] Author: @mysticsoul3 | Likes: 6 | Replies: 0 | Published: 2020-05-29T13:33:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "Nice video....😇😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "Some video suggestions.....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "1.) Description of all the Ayurvedic books that you read.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "2.) How to keep room cool in summers naturally.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01603",
+                "author": "",
+                "text": "3.) Natural ways to repel mosquitoes from room.4.) How to wake up early in the morning.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "5.) How to correct and straighten a bent posture",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "6.) How to naturally straighten hair",
+                "likes": null
+              },
+              {
+                "comment_id": "c01606",
+                "author": "",
+                "text": "Thank you...🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "[COMMENT 485] Author: @jaganeha7 | Likes: 6 | Replies: 0 | Published: 2021-05-10T15:08:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01609",
+                "author": "",
+                "text": "The sad thing is nowadays we have changed the practice of cooking methods and",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "[COMMENT 486] Author: @harmishsoni3116 | Likes: 200 | Replies: 11 | Published: 2020-08-11T07:54:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01612",
+                "author": "",
+                "text": "Actually we insulted our ancient values we are not wrong in that nobody teaches it scientifically we think it's andh Vishwas we can blame education system teaching us of western civilization not our ancient civilizations",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "[COMMENT 487] Author: @StarryxNight5 | Likes: 1 | Replies: 0 | Published: 2020-10-17T15:04:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01615",
+                "author": "",
+                "text": "Ancient India had not yet developed science very well. By science I mean the scientific method. Ancient India's culture is all good but western stuff which is better than fit Tuber potrays. For example, eating with cutlery might be more hygienic than eating with your hands, Non-stick utensils aren't going to give you cancer as long as WHO exists, etc.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "[COMMENT 488] Author: @sunlight2521 | Likes: 6 | Replies: 0 | Published: 2020-10-28T05:35:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01618",
+                "author": "",
+                "text": "I want Gurukuls in place of this today's schools !!!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "Hare Krishna",
+                "likes": null
+              },
+              {
+                "comment_id": "c01621",
+                "author": "",
+                "text": "[COMMENT 489] Author: @WEBGRID | Likes: 3 | Replies: 0 | Published: 2020-12-14T04:34:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "@StarryxNight5 I DONT BELEIVE ANYMORE IN WHO ->pharma puppet nothing else",
+                "likes": null
+              },
+              {
+                "comment_id": "c01624",
+                "author": "",
+                "text": "[COMMENT 490] Author: @StarryxNight5 | Likes: 0 | Replies: 0 | Published: 2020-12-14T08:12:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "@WEBGRID Wow. Just wow. Bet you're an anti-vaxxer, too. Bet you think Covid is engineered or fake or something. I could be rich from how many bets I'd make.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "[COMMENT 491] Author: @SurajKumar-uo1eh | Likes: 9 | Replies: 0 | Published: 2021-01-02T20:10:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01628",
+                "author": "",
+                "text": "@StarryxNight5 Ma'am please properly educate yourself or probably re-educate yourself about the scientific accomplishments of the ancient Indian people. From mathematics to medicine, physics to astronomy, metallurgy to architecture, biology to geography, there is not a single branch of science untouched by the findings of the ancient Indians. These all can't simply be achieved without a scientific method. They definitely had an elaborate scientific method and reasoning process. In addition to that they had a very elaborate system of debating, the details of which can be found in 'Nyāya shāstra'.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "Maybe you reached such conclusions because many of the practices of ancient Indians today are regarded as superstitions. This is because the reason behind those practices were not passed on through the successive generations. This resulted in those practices taking the form of superstitions. Also, many a times it might not be possible to explain and educate each and every individual the technicalities of those practices. So over time the practice remained but the reasoning got lost. It is very much possible that many of those practices may not be relevant today but to disregard all the practices, customs or rituals of ancient Indians will be absolutely foolish, even after knowing about the scientific advancements of the ancient Indians.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "And as far as eating and hygiene is concerned, we wash our hands properly before eating. Also there is no guarantee that the cutlery you are using to eat is 100% germ free. And about the non-stick utensils that you talked about, it is open to all that those utensils are coated with teflon which is a plastic. Whatever be the variety of a plastic, it will always leach into food which is cooked in it when heated, some more, some less, but it will definitely leach. And that will obviously cause heath problems. Many of these researches on these issues takes years to get published and come in public domain. It is not uncommon for the scientific community to recommend something first and then rubbish it later. So, don't be surprised when someday WHO declares non-stick utensils to be harmful for health. So be proactive and take care of your health.🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "[COMMENT 492] Author: @vinayakkulkarni1303 | Likes: 12 | Replies: 0 | Published: 2020-05-29T13:32:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "Amazing way to portray a wonderful information.....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01634",
+                "author": "",
+                "text": "According to me u must be given an opportunity to talk in Tedx stage....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "Anyway keep up the good work.....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "[COMMENT 493] Author: @silba-lo4020 | Likes: 8 | Replies: 0 | Published: 2020-06-12T03:36:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "3:18 I actually find this very interesting",
+                "likes": null
+              },
+              {
+                "comment_id": "c01640",
+                "author": "",
+                "text": "[COMMENT 494] Author: @saiprasadnayak2436 | Likes: 2 | Replies: 0 | Published: 2021-07-10T18:57:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "Let's all try to bring back & adopt our great Indian culture again.... 💖💖💖",
+                "likes": null
+              },
+              {
+                "comment_id": "c01643",
+                "author": "",
+                "text": "[COMMENT 495] Author: @harshitagautam9887 | Likes: 8 | Replies: 0 | Published: 2020-06-05T18:39:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "10:04 ur handwriting is soo gud😍",
+                "likes": null
+              },
+              {
+                "comment_id": "c01646",
+                "author": "",
+                "text": "[COMMENT 496] Author: @vanshika7754 | Likes: 48 | Replies: 0 | Published: 2020-05-29T13:54:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "I love my india. No matter how advance in terms of tech, living standards we become let's always remain indian at heart and preserve our cultural practices forever . And teach our coming generations about our practices , traditions .",
+                "likes": null
+              },
+              {
+                "comment_id": "c01649",
+                "author": "",
+                "text": "[COMMENT 497] Author: @srikanthrocks001 | Likes: 10 | Replies: 0 | Published: 2020-05-29T13:32:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "Video on Thyroid issues......",
+                "likes": null
+              },
+              {
+                "comment_id": "c01652",
+                "author": "",
+                "text": "[COMMENT 498] Author: @subhasreebanerjee9816 | Likes: 53 | Replies: 46 | Published: 2021-06-10T03:06:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "Indian culture is so rich but still our new generations are attracted towards the American culture :(",
+                "likes": null
+              },
+              {
+                "comment_id": "c01655",
+                "author": "",
+                "text": "[COMMENT 499] Author: @at3ff329 | Likes: 2 | Replies: 0 | Published: 2021-07-13T17:33:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "Agreed",
+                "likes": null
+              },
+              {
+                "comment_id": "c01658",
+                "author": "",
+                "text": "[COMMENT 500] Author: @ayushmantripathy4605 | Likes: 2 | Replies: 0 | Published: 2021-07-17T02:06:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "No mam I am a 15 year old teenager and I really love ancient Indian Culture 😊😊😊.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

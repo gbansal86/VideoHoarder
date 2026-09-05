@@ -1,0 +1,2718 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163014_4378b6",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163014_4378b6",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Healthcare consumer awareness — partial transcript",
+      "batch_number": 16,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 16 of 30 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260905_163014_4378b6",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260905_163014_4378b6"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163014_4378b6",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Healthcare consumer awareness — partial transcript",
+      "batch_number": 16,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "62ac0d84-04d8-4174-b3d2-57a06f5c7d89",
+    "package_id": "vh_restricted_intelligence_20260905_163014_4378b6",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "ooMKNswME18"
+    ],
+    "evidence_grades": {
+      "ooMKNswME18": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Healthcare consumer awareness — partial transcript",
+      "batch_number": 16,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "93a836617f00d8f705f2890a17af97944d95272a01f3be63de086673c4e41e77",
+      "prompt.json": "3706920442dc7c6dc771af32b6b5ad5e3d7b278c428b04effa86d7f6b967b099",
+      "schema.json": "9c9ce57033971b9d949d7772ebb641b502858dda289633967d941fd3c70c3cb1"
+    },
+    "created_at": "2026-09-05 16:30:14",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "ooMKNswME18",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=ooMKNswME18",
+        "original_title": "9 Dark Secrets Private Hospitals Hide From You (Must Watch) 🤫🚨",
+        "clean_title": "9 Dark Secrets Private Hospitals Hide From You ( )",
+        "channel": "Fit Tuber",
+        "upload_date": "2026-05-01",
+        "description": "99% Indians Fall For These Hospital Scams - Harsh Reality of Hospitals in India\n\nBuy True Basics Clean Plant Protein - https://tinyurl.com/n7dvsks6\n(Apply code FT10 for 10% off)\n Buy from Amazon - https://amzn.to/4tWaeUg\n\n00:01 - Introduction to Hospital Scams in India\n00:42 - Health Insurance Scam\n03:50 - Admission Scam \n04:20 - Weekend Occupancy Scam \n05:10 - C section Delivery Scam\n09:50 - Blood Test Scam\n10:30 - Referral Scam\n12:30 - Medicine Scam\n17:52 - Ventilator Scam\n\nRELATED PRODUCTS (Not Sponsored & Amazon Affiliate Links)\nAmla Aloe vera juice - https://amzn.to/4qTCtQF\nSteel cut oats - https://amzn.to/4iqPugD\nWhole cashews - https://amzn.to/3GaMNSX\nRolled oats for smoothie - https://amzn.to/4isQnFj\nMillets Combo  Pack - https://amzn.to/42ZOA55\nMeasuring cups - https://amzn.to/42idk9q\nRagi Flour - https://amzn.to/42ZOQB5\nBarley Flour - https://amzn.to/3Y26sdN\nJowar Flour - https://amzn.to/4lIf7fM\nWater Bottle - https://amzn.to/42jLR7j\nMakhana - https://amzn.to/4iG7Udr\nDry Figs (Anjeer - option 1) - https://amzn.to/4aISBNq\nWalnut Kernels (option 1) - https://amzn.to/49sf7Jj\nRaisins (option 1) - https://amzn.to/3TGrxHE\nGurbani Almonds (option 1) - https://amzn.to/3TOWA4c\nChia Seed Powder - https://amzn.to/3C0IOpL\nAlmonds - https://amzn.to/3ztlVKO\nCashews - https://amzn.to/3B9p2bg\nPumpkin Seeds - https://amzn.to/3MSHpDP\nDates - https://amzn.to/4dcx14G\nBhuna chana - https://amzn.to/4gtLWKD (prefer buying it offline for more economical prices)\nChana Sattu - https://amzn.to/4ddSCti \nAmla powder - https://amzn.to/3MQQbSP\nMixer Grinder similar to the one I use - https://amzn.to/4eyhDkj\n\n\n✅  If you want to support this work\nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n30 Biscuits in India Ranked from Worst to Best (in 2026)\nhttps://youtu.be/pOBWgUhRLCo?si=O99Mmq9T9HkmUMrp\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored & Amazon Affiliate Links)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\nBiscuits (option 2) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:00] And the easy targets of these frauds are those who have health insurance. In this video, I want to share with you some scams that are happening openly in hospitals, without our knowledge. We'll discuss them based on evidence [00:00:15] and how to avoid these scams. This video is going to be very useful . So let's get started without further delay. Hello friends, welcome to Fit Tuber. Friends, [00:00:31] according to reports from NITI Aayog, CCI, and the Parliamentary Committee, unethical practices are used in private hospitals, from large to small, to maximize profits. And the easy targets of these frauds are those who have health insurance. Because as soon as you tell the hospital reception that you have health insurance, [00:00:50] you turn from a patient into a walking ATM. Most people think that the insurance company is going to pay the bill, so what's the problem? But after listening to this real incident from Himanshu Singhal in 2020, you won't say that. On February 5, 2020, Himanshu [00:01:08] took his two-and-a-half-year-old son, Siddharth, to a major corporate hospital in Shalimar Bagh . The child complained of mild loose motions. He was admitted for routine reasons. It was not an emergency. As soon as the hospital staff [00:01:23] learned that cashless access was available through Himanshu's insurance policy , they pressured him to admit his child for such a minor condition . Himanshu agreed to admit his child, and then, in the name of protocol , plans were made to keep the child in the hospital for as long as [00:01:42] possible. They planned to prolong his stay . The child was diagnosed with an acute anal fissure after a negligent examination, and he was given a contra-indicated medication, such as Movil-Chol, which should not have been given to a child at that time [00:02:00] . They prescribed a contra-indicated medication called Movil-Cole, which is used to increase loose motions . Movil-Cole is a strong medication for relieving constipation, and [00:02:18] my child already had loose motions. Instead of giving it orally, my child was given intravenously, directly into the bloodstream. Upon receiving this medication, the child began passing urine and stool uncontrollably. By 6:00 pm, the child's [00:02:34] condition worsened due to dehydration, leading to liver failure. The hospital then pressured Himanshu to undergo a liver transplant. Meanwhile, on February 9th, around 9:30 am, the child died, and the hospital's focus was still [00:02:50] on billing clearance. After this incident, Himanshu cried and said, \"If I didn't have insurance, they probably wouldn't have admitted my child, and perhaps I would still have my child.\" Friends, this isn't the only case of money-grubbing in the name of health insurance . In the Descending Diagnosis book, 78 doctors [00:03:10] admitted in interviews that they are pressured from above to prescribe tests based on insurance limits to meet hospital targets. The CCI clearly states in its report that large hospitals increase room rent and diagnostic test prices for patients with insurance. [00:03:28] Hospitals have been blacklisted several times for this scam, but this practice still occurs commonly. Therefore, never reveal your insurance upon entering the hospital . Meet the doctor first. Let the diagnosis be done and ask for a cash estimate of the treatment. Disclose your insurance policy only after receiving the estimate [00:03:46] . Another similar scam exists called the admission scam. Watch this clip of a doctor who decided to resign from his job on the very first day because of this scam by corporate hospitals. The hospital's owner, a gynecologist and not a physician, [00:04:06] managed all the patients herself. This meant she would decide which patient to admit, and she would decide to keep each patient in the ICU as long as possible, and for as many days as possible. This is what the weekend occupancy scam is all about. Imagine a patient admitted to the hospital on Thursday. They [00:04:25] were told they would be discharged in a day or two, at most, by Saturday. But then, on Saturday, the hospital staff would make some excuse or another to try to lock the patient in until Monday . There are three common excuses: First, the senior doctor will be coming on Monday. But the truth is, [00:04:41] the RMO can also sign if the doctor has declared them fit. Second, on Saturday, Insurance clearance will not be granted. This is the biggest lie. Insurance TPSs operate 24/7. And thirdly, the billing department works half-day. The CCI clearly states in its 2018 [00:04:57] policy note that hospitals resort to unfair trade practices and deliberately delay patient exit to maximize profits . Another scam is very common with pregnant women . There's no doubt that every woman wants a normal delivery, [00:05:17] and that a normal delivery is better for the baby's health. However, sometimes, complications require a C-section. But if a C-section delivery is forced solely for the purpose of extortion, then consider that a normal delivery, which [00:05:32] is a natural process of the body, takes 6 to 18 hours. And the profit margin is also lower. Whereas a C-section delivery takes 45 minutes and has a higher profit margin, many private hospitals force patients to opt for a C-section. This is exactly what happened [00:05:51] to Abhilash and his pregnant wife, Sakshi, when they went to a major private hospital in Noida for a checkup. Everything was normal when they took her there. Then, they performed whatever checkups they recommended. Friends, a healthy pregnancy can last up to 40 weeks. However, the hospital, citing the possibility of her waters falling, [00:06:12] admitted Sakshi at 38 weeks. Without waiting for natural labor, they performed a C-section delivery. Because the baby was delivered prematurely, she had to be kept in a special unit. According to their explanation, the baby was very weak. They immediately took her to the NICU. But the real drama began after that. During the surgery, the hospital staff [00:06:31] made a mistake. Sakshi began internal bleeding so severe that her face turned red and then black. Keeping the family in the dark and making Abhilash sign blank papers, the hospital removed Sakshi's uterus without her consent. When her condition [00:06:47] became uncontrollable, the hospital gave up and referred her to Apollo . Apollo doctors discovered that Sakshi's organ systems had failed. Instead of blood, there was only water in her body. Within a few hours, Sakshi passed away . Friends, this story doesn't end here. [00:07:06] Listen to what happened next, directly from Abhilash. So, they performed a premature delivery. Babu 's liver and heart were stuck together, and because of the premature delivery, my son, who was born on November 29th, also passed away. [00:07:23] C-section scams are so common that they have even happened to TV celebrities like Chhavi Mittal . In an interview with CNN Insider, she recounted how, without her permission, she was forcibly injected with oxytocin to induce labor, forcing a C-section. [00:07:42] When this injection was administered, I suddenly got a panic attack. My throat became absolutely dry. My heart started racing and I started shaking. It happened instantly like she was still administering the drug when I [00:07:58] started feeding like that. I said what did you just give me? Why did you do that? Generally, hospitals use different tricks to get a C-section delivery done . Like your baby has passed stool. The operation will have to be done right now. The umbilical cord is wrapped around the baby's neck. The baby will die. The amniotic fluid [00:08:15] level has decreased. The baby will dry up inside. It has been 12 hours. The cervix is ​​not opening. We cannot take the risk. The baby's head is big. He will not be able to come out through normal delivery. Seeing their child in risk, parents immediately get ready for a C-section. Yes, it's not always false [00:08:34] . Sometimes it genuinely happens. But you might be surprised to hear that the WHO says that C-section deliveries are required only in 10 to 15% of cases . In government hospitals in India, this rate is under 15%. [00:08:50] Shockingly, in private hospitals, this rate has reached 49%. This means that every second delivery in private hospitals is a C-section. In private hospitals in Telangana, J&K, and West Bengal, this rate has reached around 80%. [00:09:05] This means that normal deliveries are rare. Friends, this scam isn't limited to C-section surgeries. According to one report, 55% of heart surgeries, 48% of uterus surgeries, 48% of knee replacement surgeries, and 45% of C-section surgeries [00:09:21] in India are completely unnecessary and are performed solely to earn more money . To avoid this camp, you should give a written birth plan to the doctor in advance that you Don't want induction injections without consent. If surgery is suggested as an emergency, immediately consult a doctor at another independent or government hospital [00:09:40] . Otherwise, always follow the hierarchy of doctors. That is, it's smart to consult a general physician first instead of going directly to a surgeon. The next scam was highlighted by renowned cardiologist and Padma Bhushan awardee Dr. B.M. Hegde in this [00:09:55] article. It's called the sink test. Imagine you have a mild fever and go to a corporate hospital. However, just one test would have been sufficient for your condition. But after the checkup, you're asked to undergo five different tests. You go straight to the laboratory and [00:10:15] give your blood samples. They generate the real report for the required test , but they dump the remaining four blood samples down the sink, generating fake reports. This is called the sink test scam. And why does this happen ? Behind this lies another scam called the referral scam. In December 2017, the Income [00:10:36] Tax Department raided several labs in Bor and recovered ₹1.5 crore in cash and 3.5 kg of gold. The investigation revealed that these diagnostic labs had made referral commissions their official business model. In fact, [00:10:52] ₹200 crore was channeled into the books of just one lab chain solely in the name of referral commissions. Apparently, there's no problem with commissions or referrals. They happen in every industry. But the problem arises when they are done unnecessarily. For example, if you have a minor illness and are still [00:11:08] referred to a large corporate hospital, that's wrong. Dr. M.K. Mani, Chief Nephrologist at Apollo Hospitals, Chennai, himself called this referral scam an open secret. He explained that he had filed a complaint with the Medical Council in 1995, with complete evidence, but no action was taken. In fact, in 2014 [00:11:28] , an Elite Forum form from Mumbai's renowned Kokilaben Hospital was leaked. It promised to credit ₹1 lakh for referring 40 patients, ₹1.5 lakh for 50 patients, and ₹0.5 lakh for 75 patients as professional charges. [00:11:44] After receiving a notice from the Medical Council, they were forced to discontinue this scheme. Doctors often do this under pressure from corporate management. Hear it from the doctor himself. Management says the ICU beds must be filled this month. The OT must not remain empty. Admit any patient in the OPD, whether they are needed or not. Are we [00:12:02] doctors or salespeople trying to fulfill quotas like insurance agents? To avoid this scam, you need to be smart and aware. Respectfully ask the doctor how these tests relate to my health condition. If the hospital doesn't insist, get your routine blood tests [00:12:20] done at a reputable, NABL-accredited lab. If a local doctor immediately refers you to a larger hospital, don't rush. Get a second opinion. Friends, there 's another major scam going on at the grassroots level of our medical system. This is the medicine scam. A nexus between major pharmaceutical companies like Sun Pharma, Ab, and Glenmark Pharma and [00:12:39] hospitals was exposed in 2017. Hospitals purchase medicines in bulk from these pharmaceutical companies and sell them to patients at profits ranging from 300% to 900%. Imagine a patient already battling a disease [00:12:55] being sold Temicure 250 mg for ₹18,647, which the hospital received for just ₹1,950. Similarly, 500 mg of Pemor costs the hospital ₹3,190. Whereas it costs ₹16,500 for patients. Abbott's hard drug Retalex 18 mg [00:13:15] is available to the hospital for ₹18,000, but the patient's bill is ₹32,700. This is the case with almost every medicine. A product that costs ₹30 is available for ₹500. So, if I'm taking diabetes medication, how much will it cost me if I buy a branded medicine? For example, there's one that's available for ₹117. [00:13:33] It's available for ₹17. And if we buy the same product as its generic medicine, how much does it cost? 10 tablets cost just ₹1.95 . [00:13:49] Now you probably understand why medicines are so expensive in the hospital's in-house pharmacy . Hospital management makes every effort to ensure that patients buy these branded medicines from their pharmacy. But the guidelines clearly state that you can freely purchase generic medicines from outside. These contain the same salts [00:14:08] , but they're not branded, making them five to six times cheaper. For example, if you buy Crocin from the market for fever, a strip costs ₹30. You can get the same generic paracetamol 650 mg for [00:14:24] ₹10 at any Jan Aushadhi Kendra. Rumors often spread that generic pills are cheaper and don't work. However, the salt is 100% identical and works just as effectively. In fact, even the medical board advises doctors to prescribe generic medicines to patients. [00:14:41] They have told doctors to stop prescribing branded drugs. Instead , they should prescribe generic drugs. So, basically, it's the same drug. However, big pharma companies give freebies to corporate hospital managements, claiming they only prescribe branded medicines. But friends, buying generic medicines [00:14:59] is not only beneficial for you, but it's also your right. Search \"Jan Aushadhi Kendra near me\" on Google. Next time you order medicine from there, you'll be surprised by the difference in the bill . The extreme of overpricing was reached in 2017 when the case of Aadya Singh came to light. 7-year [00:15:15] -old Aadya contracted dengue and was admitted to Gurgaon's Horticulture Hospital for 15 days. Unfortunately, Aadya died. But the extreme was crossed when the hospital handed over a bill of ₹16 lakh to her parents. 15 days in four led to a bill of more than ₹1 lakh. [00:15:34] What came out in the investigation shocked everyone. Because the hospital had added ₹2700 for gloves and 650 syringes for Aadya's treatment. Over 1500 gloves and 660 syringes were added to the bill, along with thermometers and even the hospital gown Aadhya was [00:15:52] dressed in. Aadhya died of dengue shock syndrome on September 15. According to the NPPA report, the hospital made a profit of up to ₹1700% on some consumables. A three-way stopcock, which costs ₹6 outside, was [00:16:09] charged ₹16 by the hospital. A blood test, which costs ₹100 outside, cost ₹5400 per pair. The biggest weapon to avoid this overpricing is itemized billing. Ask the hospital for a detailed breakdown of each item. When the management sees that you are auditing each entry, [00:16:26] they are afraid to impose unnecessary charges. Remember, it is your right to ask for a detailed bill. The last scam is so disgusting that even humanity would be ashamed. Books like Dr. B.M. Hegde's Dissenting Diagnosis and even the Gujarat High Court have spoken about it . We'll talk about that, but first, I [00:16:45] want to share with you True Basics' Clean Plant Protein. Other plant proteins on the market are filled with maltoxins and artificial sweeteners, which completely damage your gut lining. But friends, this is no ordinary protein powder. Take a look at its ingredients: pea-derived protein, cocoa [00:17:03] powder, coconut milk, natural flavors, and papain digestive enzyme extracted from papaya . No artificial flavors, no artificial sweeteners, not a single bad ingredient. The ingredients are mentioned so transparently that I have no doubt that this [00:17:20] is one of the top proteins in the Indian market. If you're looking for a post-workout protein powder, try this one. One scoop contains 24 grams of high-quality protein and no sweeteners. Still, you'll love its natural chocolate flavor. It also comes with a cool stainless steel scooper. You [00:17:39] can take a scoop of this protein powder daily. It's plant-based, with clean ingredients, and lab-tested. The price for 1 kg is ₹2499, but there's a special 10% discount for the Fit Tuber community . The link is in the description. Let's return to the ventilator scam . According to the Times of India and investigative reports, hospitals often [00:17:58] declare a dead patient alive and keep them on ventilators to inflate the bill. In 2014, a similar incident occurred in a private hospital in Bhopal, where a dead woman was kept on a ventilator for three days , and later her husband was handed a bill of ₹8.5 lakh. Similarly, [00:18:15] a private hospital in Delhi kept a 14-year-old boy, who was technically brain dead, on a ventilator for a month without informing him, just to increase expenses . Later, the hospital was found guilty, but what was the punishment? A mere fine of ₹5 lakh, [00:18:31] less than his week's earnings. Friends, in the same article, Dr. B.M. Hegde even said about this camp that if a private hospital rapidly shifts a patient from the ICU to the operating theater, and even family members are not allowed to see the patient, and instead, their signatures are asked on a consent form, [00:18:50] then chances are the patient is already dead. This is because ventilator beds are a gold mine for hospitals . Books like Dissenting Diagnosis and even the 2020 In 2014, the Gujarat High Court also remarked that private hospitals [00:19:05] were viewing ventilators solely as a monetary opportunity. Why are these scams happening? There are three major reasons behind this. First, the corporatization of hospitals. In this model, doctors are overseen by MBSs who set targets. If targets aren't met for even two or three months, they're dismissed. Second, [00:19:25] the Medical Council of India, the main body, is completely failing in its work . This statement was made by the Standing Committee of Parliament. They said that this body is solely focused on granting licenses to medical colleges, ignoring the ethical conduct of medical professionals . And the third major reason is the lack of public [00:19:43] awareness. Major hospitals openly violate the MCI's ethical regulations . For example, Clause 1.5 states that patients should only be prescribed generic medicines . According to Clause 1.8, it is mandatory for doctors to disclose their fees before treatment . It's not right to hand over a large bill after an operation. There are many things [00:20:03] in this document that the general public is unaware of. Friends, I want to make one thing absolutely clear here. We are not blaming the doctors. We Indians already consider doctors to be gods, and we should. The truth is that many doctors themselves are deeply troubled by this corporate-targeted system [00:20:22] . The actual problem lies with this system and corporate management, which have turned health into a business. Have you been scammed like this? Please share your experience in the comments so that others can be helped. Also, check out True Basics' Clean Plant Protein. My name is Vivek. I [00:20:39] thank you so much for watching."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1108,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: ooMKNswME18",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @harish8809 | Likes: 917 | Replies: 49 | Published: 2026-05-01T15:43:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "My kid admitted due to fever normally it should be within ₹ 1000 due to insurance they billed 18,000 to company..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @jojowowo628 | Likes: 10 | Replies: 0 | Published: 2026-05-01T16:46:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "OMG 😳😱😰",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @hiralprajapati886 | Likes: 2 | Replies: 0 | Published: 2026-05-02T01:39:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Insurance ka yahi gerlabh he",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @MinaZutshi | Likes: 0 | Replies: 0 | Published: 2026-05-02T02:48:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "😊😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @shailendrasangal3269 | Likes: 3 | Replies: 0 | Published: 2026-05-02T05:53:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Then what should be done?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @DareTrading | Likes: 1 | Replies: 0 | Published: 2026-05-02T07:29:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Totally agree 💯",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @when.iwaskid | Likes: 1035 | Replies: 27 | Published: 2026-05-02T13:14:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "That's a reason I left my Hospital Job, everything that shown in this video is 1000% true and the ground condition is way more worse",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @Earthian-e4v | Likes: 17 | Replies: 0 | Published: 2026-05-02T18:43:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "What's the ground condition??",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "If you feel ok to share please do",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "[COMMENT 9] Author: @Ankitaa-S1Y | Likes: 2 | Replies: 0 | Published: 2026-05-03T13:22:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "Me too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "[COMMENT 10] Author: @rvsworld4457 | Likes: 3 | Replies: 0 | Published: 2026-05-04T06:35:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "Yes please share",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "[COMMENT 11] Author: @Siva-siva36 | Likes: 17 | Replies: 0 | Published: 2026-05-04T06:54:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "Even me, as a nurse left the job.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "[COMMENT 12] Author: @tikibhartiytribal4032 | Likes: 2 | Replies: 0 | Published: 2026-05-04T17:17:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "Me too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "[COMMENT 13] Author: @Doctor-Inward | Likes: 822 | Replies: 36 | Published: 2026-05-03T08:51:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "I’m a doctor and I’ve seen how ugly this gets. After 3 years in rural service, I joined a private hospital in JP Nagar, Bengaluru – big mistake. It was basically run by non-medical people who only cared about squeezing money. Doctors were pushed to admit everyone, order pointless tests, and even give IV paracetamol just to inflate bills. Refuse, and they’d hold doctor's salary for months.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "I walked out within a week. This isn’t healthcare, it’s exploitation. Better to build your own practice with ethics than be part of this mess.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 14] Author: @BuddhaBhikshu | Likes: 54 | Replies: 0 | Published: 2026-05-04T01:33:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "Thank for being yourself, dear doc. People like you are gems of the society",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 15] Author: @manoranjanbiswal7920 | Likes: 14 | Replies: 0 | Published: 2026-05-04T02:09:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "What kind of action can be taken। Please mention",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 16] Author: @Siva-siva36 | Likes: 8 | Replies: 0 | Published: 2026-05-04T06:53:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "True information. Most of bangalore corporates trying to loot money for their benefits.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 17] Author: @iamindra4995 | Likes: 0 | Replies: 0 | Published: 2026-05-04T09:47:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "@manoranjanbiswal7920She herself has a YouTube channel where she posts videos spreading health awareness..I have subscribed..you can too",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 18] Author: @VinayKalaburgi-h6n | Likes: 3 | Replies: 0 | Published: 2026-05-04T11:42:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "My friend in indira nagar spend 12 lakhs for his spine surgery now a days banglore hospital bills are through the roofs",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 19] Author: @sonujangra12 | Likes: 241 | Replies: 7 | Published: 2026-05-06T06:24:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "Mujhe bhi private hospital ki doctor ne operation ke liye bola wo bhi 7th month me hi..khti bacha tedha h operation krna hoga...m us din bad us hospital me hi nhi gayi..dusri jgh se ultrasound krwaya to pta chla sb kuch thik h or muje 9th month me govt hospital me normal delivery se baby hua..akdm healthy baby...thank you god🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "[COMMENT 20] Author: @medharai1151 | Likes: 8 | Replies: 0 | Published: 2026-05-07T18:00:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "Wow.. these doctors are shameless",
+              "likes": null
+            },
+            {
+              "comment_id": "c00073",
+              "author": "",
+              "text": "[COMMENT 21] Author: @RenuSharma-bw5vh | Likes: 14 | Replies: 0 | Published: 2026-05-08T05:44:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01559",
+              "author": "",
+              "text": "Bhaiya thank God aapne is pr video banaya ...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01560",
+              "author": "",
+              "text": "Me bhi chahti thi k koi sab logo ko aware kare k private hospital froud hai ....",
+              "likes": null
+            },
+            {
+              "comment_id": "c01561",
+              "author": "",
+              "text": "Mere sath bhi dhokhe se c section hua h wo bhi jis labour me bacha nikalta h usme c section kiya or wo bhi pehli delivery normally hone k baad 2 nd me dhoke se c section kiya looteri gynecologist ne ...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01562",
+              "author": "",
+              "text": "Me bhi sabko aware Krna chahti thi...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01563",
+              "author": "",
+              "text": "Thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01565",
+              "author": "",
+              "text": "[COMMENT 480] Author: @ritiksain8840 | Likes: 0 | Replies: 0 | Published: 2026-05-08T09:00:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01566",
+              "author": "",
+              "text": "Thank You Fit Tuber❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01568",
+              "author": "",
+              "text": "[COMMENT 481] Author: @Radhekrishna23july | Likes: 0 | Replies: 0 | Published: 2026-05-09T10:45:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01569",
+              "author": "",
+              "text": "Bilkul sahi h Alwar Rajasthan m Sethi hospital Aisa hi h waha bacho ko galat dawai dekar jabardasti admit rakha jata h",
+              "likes": null
+            },
+            {
+              "comment_id": "c01571",
+              "author": "",
+              "text": "[COMMENT 482] Author: @AdwitiyaRaghuvanshi | Likes: 0 | Replies: 0 | Published: 2026-05-10T17:51:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01572",
+              "author": "",
+              "text": "Ohh god we need ethical beings .May god give us strength to remain ethical and compassionate ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01574",
+              "author": "",
+              "text": "[COMMENT 483] Author: @shobhakaushik27 | Likes: 0 | Replies: 0 | Published: 2026-05-08T05:00:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01575",
+              "author": "",
+              "text": "Aap agar is tarah ke kuchh hospital ka naam bhi bta dete to thoda sahi hota, kyuki aap jo bhi bataye h wo bilkul sahi h Or proof bhi diya h, mujhe to bilkul aisa hi lagta h Or mai bahut avoid karti hu bade hospital jane se, bahut achhi jaankari di aapne",
+              "likes": null
+            },
+            {
+              "comment_id": "c01577",
+              "author": "",
+              "text": "[COMMENT 484] Author: @sanchitmidha452 | Likes: 0 | Replies: 0 | Published: 2026-05-06T05:07:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01578",
+              "author": "",
+              "text": "Nice video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01580",
+              "author": "",
+              "text": "[COMMENT 485] Author: @mahiSharma-d3u | Likes: 0 | Replies: 0 | Published: 2026-05-13T19:57:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01581",
+              "author": "",
+              "text": "I just want to say thank you so much for those doctors who leaves this type of hospital nd kabhi ese loot ka hissa nhi Bane. Thank you so much for tuber ❤ mujhe to ye baat pata he nhi thee",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "Even my sister is pregnant nd her delivery date also passing so I'm little worried for her",
+              "likes": null
+            },
+            {
+              "comment_id": "c01583",
+              "author": "",
+              "text": "May god bless her nd her baby",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "[COMMENT 486] Author: @kasturisanyal2994 | Likes: 0 | Replies: 0 | Published: 2026-05-09T12:17:16Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01586",
+              "author": "",
+              "text": "God bless you Sir 🙏🏻",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "[COMMENT 487] Author: @chanchal-tv4ir | Likes: 0 | Replies: 0 | Published: 2026-05-18T08:52:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01589",
+              "author": "",
+              "text": "Please make more videos like this",
+              "likes": null
+            },
+            {
+              "comment_id": "c01591",
+              "author": "",
+              "text": "[COMMENT 488] Author: @gopiepari | Likes: 0 | Replies: 0 | Published: 2026-05-06T09:59:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01592",
+              "author": "",
+              "text": "Thank you",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "[COMMENT 489] Author: @AD13D | Likes: 0 | Replies: 0 | Published: 2026-05-12T07:53:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01595",
+              "author": "",
+              "text": "इन मुद्दों पर अधिक से अधिक अवेयरनेस लानी होगी लोगों के बीच ऐसे वीडियोज के माध्यम से.. 🙏🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "[COMMENT 490] Author: @Amreensaeed07 | Likes: 0 | Replies: 0 | Published: 2026-05-13T11:19:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01598",
+              "author": "",
+              "text": "Agr gov. Hospital ache ho jaye to private walo ko koi nhi puchega",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "[COMMENT 491] Author: @anabiamehndiartist-m2o | Likes: 0 | Replies: 0 | Published: 2026-05-06T12:16:23Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01601",
+              "author": "",
+              "text": "you are the one of my best youtuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c01603",
+              "author": "",
+              "text": "[COMMENT 492] Author: @minakshi_bisht | Likes: 1 | Replies: 0 | Published: 2026-05-06T19:56:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01604",
+              "author": "",
+              "text": "But 38 week is not premature delovery.. may be they have genuinely some problem that's why they go for c section",
+              "likes": null
+            },
+            {
+              "comment_id": "c01606",
+              "author": "",
+              "text": "[COMMENT 493] Author: @muneersadiq172 | Likes: 0 | Replies: 0 | Published: 2026-05-13T07:51:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01607",
+              "author": "",
+              "text": "Talk about glutathione topic bro it's need help for us ❤❤❤❤❤❤❤❤❤❤😢😢😢😢😢😢😢😢😢😢😢😢",
+              "likes": null
+            },
+            {
+              "comment_id": "c01609",
+              "author": "",
+              "text": "[COMMENT 494] Author: @SheelaJames-t3c | Likes: 0 | Replies: 0 | Published: 2026-05-06T09:44:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01610",
+              "author": "",
+              "text": "💯 true' hatts of to you",
+              "likes": null
+            },
+            {
+              "comment_id": "c01612",
+              "author": "",
+              "text": "[COMMENT 495] Author: @dineshmaurya1802 | Likes: 1 | Replies: 0 | Published: 2026-05-07T14:29:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01613",
+              "author": "",
+              "text": "ये एपिसोड जनता को जागरूक करने वाला है।",
+              "likes": null
+            },
+            {
+              "comment_id": "c01615",
+              "author": "",
+              "text": "[COMMENT 496] Author: @CharanSingh-pt6vy | Likes: 0 | Replies: 0 | Published: 2026-05-27T18:59:28Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01616",
+              "author": "",
+              "text": "Yes everything you said is right",
+              "likes": null
+            },
+            {
+              "comment_id": "c01618",
+              "author": "",
+              "text": "[COMMENT 497] Author: @AKhappyvibes | Likes: 0 | Replies: 0 | Published: 2026-05-07T11:53:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01619",
+              "author": "",
+              "text": "Aise scammers doctors ko kadi se kadi saja milni chaiye. Aur es tarah ki ghatna k bad aise hospital ko band karna cahiye taki koi dusra aisa na kar paye.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01621",
+              "author": "",
+              "text": "[COMMENT 498] Author: @prashantsrivastava09 | Likes: 0 | Replies: 0 | Published: 2026-05-12T14:10:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01622",
+              "author": "",
+              "text": "Bhaiya please make a video on kerotosis pilaris.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01624",
+              "author": "",
+              "text": "[COMMENT 499] Author: @siva1549 | Likes: 0 | Replies: 0 | Published: 2026-05-09T03:16:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01625",
+              "author": "",
+              "text": "What you are saying is very much true. People don't trust hospitals much.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "It seems you have 2 channels in Hindi. Is it fair to call this English channel? There are many who cannot understand",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "[COMMENT 500] Author: @bisu_jazz | Likes: 0 | Replies: 0 | Published: 2026-05-12T15:08:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "So true.....",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "ooMKNswME18",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\9 Dark Secrets Private Hospitals Hide From You (Must Watch) 🤫🚨\\9 Dark Secrets Private Hospitals Hide From You (Must Watch) 🤫🚨.mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\9 Dark Secrets Private Hospitals Hide From You (Must Watch) 🤫🚨",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\ooMKNswME18",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "ooMKNswME18",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 73,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 19782,
+            "transcript_words": 3478,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:00] And the easy targets of these frauds are those who have health insurance. In this video, I want to share with you some scams that are happening openly in hospitals, without our knowledge. We'll discuss them based on evidence [00:00:15] and how to avoid these scams. This video is going to be very useful . So let's get started without further delay. Hello friends, welcome to Fit Tuber. Friends, [00:00:31] according to reports from NITI Aayog, CCI, and the Parliamentary Committee, unethical practices are used in private hospitals, from large to small, to maximize profits. And the easy targets of these frauds are those who have health insurance. Because as soon as you tell the hospital reception that you have health insurance, [00:00:50] you turn from a patient into a walking ATM. Most people think that the insurance company is going to pay the bill, so what's the problem? But after listening to this real incident from Himanshu Singhal in 2020, you won't say that. On February 5, 2020, Himanshu [00:01:08] took his two-and-a-half-year-old son, Siddharth, to a major corporate hospital in Shalimar Bagh . The child complained of mild loose motions. He was admitted for routine reasons. It was not an emergency. As soon as the hospital staff [00:01:23] learned that cashless access was available through Himanshu's insurance policy , they pressured him to admit his child for such a minor condition . Himanshu agreed to admit his child, and then, in the name of protocol , plans were made to keep the child in the hospital for as long as [00:01:42] possible. They planned to prolong his stay . The child was diagnosed with an acute anal fissure after a negligent examination, and he was given a contra-indicated medication, such as Movil-Chol, which should not have been given to a child at that time [00:02:00] . They prescribed a contra-indicated medication called Movil-Cole, which is used to increase loose motions . Movil-Cole is a strong medication for relieving constipation, and [00:02:18] my child already had loose motions. Instead of giving it orally, my child was given intravenously, directly into the bloodstream. Upon receiving this medication, the child began passing urine and stool uncontrollably. By 6:00 pm, the child's [00:02:34] condition worsened due to dehydration, leading to liver failure. The hospital then pressured Himanshu to undergo a liver transplant. Meanwhile, on February 9th, around 9:30 am, the child died, and the hospital's focus was still [00:02:50] on billing clearance. After this incident, Himanshu cried and said, \"If I didn't have insurance, they probably wouldn't have admitted my child, and perhaps I would still have my child.\" Friends, this isn't the only case of money-grubbing in the name of health insurance . In the Descending Diagnosis book, 78 doctors [00:03:10] admitted in interviews that they are pressured from above to prescribe tests based on insurance limits to meet hospital targets. The CCI clearly states in its report that large hospitals increase room rent and diagnostic test prices for patients with insurance. [00:03:28] Hospitals have been blacklisted several times for this scam, but this practice still occurs commonly. Therefore, never reveal your insurance upon entering the hospital . Meet the doctor first. Let the diagnosis be done and ask for a cash estimate of the treatment. Disclose your insurance policy only after receiving the estimate [00:03:46] . Another similar scam exists called the admission scam. Watch this clip of a doctor who decided to resign from his job on the very first day because of this scam by corporate hospitals. The hospital's owner, a gynecologist and not a physician, [00:04:06] managed all the patients herself. This meant she would decide which patient to admit, and she would decide to keep each patient in the ICU as long as possible, and for as many days as possible. This is what the weekend occupancy scam is all about. Imagine a patient admitted to the hospital on Thursday. They [00:04:25] were told they would be discharged in a day or two, at most, by Saturday. But then, on Saturday, the hospital staff would make some excuse or another to try to lock the patient in until Monday . There are three common excuses: First, the senior doctor will be coming on Monday. But the truth is, [00:04:41] the RMO can also sign if the doctor has declared them fit. Second, on Saturday, Insurance clearance will not be granted. This is the biggest lie. Insurance TPSs operate 24/7. And thirdly, the billing department works half-day. The CCI clearly states in its 2018 [00:04:57] policy note that hospitals resort to unfair trade practices and deliberately delay patient exit to maximize profits . Another scam is very common with pregnant women . There's no doubt that every woman wants a normal delivery, [00:05:17] and that a normal delivery is better for the baby's health. However, sometimes, complications require a C-section. But if a C-section delivery is forced solely for the purpose of extortion, then consider that a normal delivery, which [00:05:32] is a natural process of the body, takes 6 to 18 hours. And the profit margin is also lower. Whereas a C-section delivery takes 45 minutes and has a higher profit margin, many private hospitals force patients to opt for a C-section. This is exactly what happened [00:05:51] to Abhilash and his pregnant wife, Sakshi, when they went to a major private hospital in Noida for a checkup. Everything was normal when they took her there. Then, they performed whatever checkups they recommended. Friends, a healthy pregnancy can last up to 40 weeks. However, the hospital, citing the possibility of her waters falling, [00:06:12] admitted Sakshi at 38 weeks. Without waiting for natural labor, they performed a C-section delivery. Because the baby was delivered prematurely, she had to be kept in a special unit. According to their explanation, the baby was very weak. They immediately took her to the NICU. But the real drama began after that. During the surgery, the hospital staff [00:06:31] made a mistake. Sakshi began internal bleeding so severe that her face turned red and then black. Keeping the family in the dark and making Abhilash sign blank papers, the hospital removed Sakshi's uterus without her consent. When her condition [00:06:47] became uncontrollable, the hospital gave up and referred her to Apollo . Apollo doctors discovered that Sakshi's organ systems had failed. Instead of blood, there was only water in her body. Within a few hours, Sakshi passed away . Friends, this story doesn't end here. [00:07:06] Listen to what happened next, directly from Abhilash. So, they performed a premature delivery. Babu 's liver and heart were stuck together, and because of the premature delivery, my son, who was born on November 29th, also passed away. [00:07:23] C-section scams are so common that they have even happened to TV celebrities like Chhavi Mittal . In an interview with CNN Insider, she recounted how, without her permission, she was forcibly injected with oxytocin to induce labor, forcing a C-section. [00:07:42] When this injection was administered, I suddenly got a panic attack. My throat became absolutely dry. My heart started racing and I started shaking. It happened instantly like she was still administering the drug when I [00:07:58] started feeding like that. I said what did you just give me? Why did you do that? Generally, hospitals use different tricks to get a C-section delivery done . Like your baby has passed stool. The operation will have to be done right now. The umbilical cord is wrapped around the baby's neck. The baby will die. The amniotic fluid [00:08:15] level has decreased. The baby will dry up inside. It has been 12 hours. The cervix is ​​not opening. We cannot take the risk. The baby's head is big. He will not be able to come out through normal delivery. Seeing their child in risk, parents immediately get ready for a C-section. Yes, it's not always false [00:08:34] . Sometimes it genuinely happens. But you might be surprised to hear that the WHO says that C-section deliveries are required only in 10 to 15% of cases . In government hospitals in India, this rate is under 15%. [00:08:50] Shockingly, in private hospitals, this rate has reached 49%. This means that every second delivery in private hospitals is a C-section. In private hospitals in Telangana, J&K, and West Bengal, this rate has reached around 80%. [00:09:05] This means that normal deliveries are rare. Friends, this scam isn't limited to C-section surgeries. According to one report, 55% of heart surgeries, 48% of uterus surgeries, 48% of knee replacement surgeries, and 45% of C-section surgeries [00:09:21] in India are completely unnecessary and are performed solely to earn more money . To avoid this camp, you should give a written birth plan to the doctor in advance that you Don't want induction injections without consent. If surgery is suggested as an emergency, immediately consult a doctor at another independent or government hospital [00:09:40] . Otherwise, always follow the hierarchy of doctors. That is, it's smart to consult a general physician first instead of going directly to a surgeon. The next scam was highlighted by renowned cardiologist and Padma Bhushan awardee Dr. B.M. Hegde in this [00:09:55] article. It's called the sink test. Imagine you have a mild fever and go to a corporate hospital. However, just one test would have been sufficient for your condition. But after the checkup, you're asked to undergo five different tests. You go straight to the laboratory and [00:10:15] give your blood samples. They generate the real report for the required test , but they dump the remaining four blood samples down the sink, generating fake reports. This is called the sink test scam. And why does this happen ? Behind this lies another scam called the referral scam. In December 2017, the Income [00:10:36] Tax Department raided several labs in Bor and recovered ₹1.5 crore in cash and 3.5 kg of gold. The investigation revealed that these diagnostic labs had made referral commissions their official business model. In fact, [00:10:52] ₹200 crore was channeled into the books of just one lab chain solely in the name of referral commissions. Apparently, there's no problem with commissions or referrals. They happen in every industry. But the problem arises when they are done unnecessarily. For example, if you have a minor illness and are still [00:11:08] referred to a large corporate hospital, that's wrong. Dr. M.K. Mani, Chief Nephrologist at Apollo Hospitals, Chennai, himself called this referral scam an open secret. He explained that he had filed a complaint with the Medical Council in 1995, with complete evidence, but no action was taken. In fact, in 2014 [00:11:28] , an Elite Forum form from Mumbai's renowned Kokilaben Hospital was leaked. It promised to credit ₹1 lakh for referring 40 patients, ₹1.5 lakh for 50 patients, and ₹0.5 lakh for 75 patients as professional charges. [00:11:44] After receiving a notice from the Medical Council, they were forced to discontinue this scheme. Doctors often do this under pressure from corporate management. Hear it from the doctor himself. Management says the ICU beds must be filled this month. The OT must not remain empty. Admit any patient in the OPD, whether they are needed or not. Are we [00:12:02] doctors or salespeople trying to fulfill quotas like insurance agents? To avoid this scam, you need to be smart and aware. Respectfully ask the doctor how these tests relate to my health condition. If the hospital doesn't insist, get your routine blood tests [00:12:20] done at a reputable, NABL-accredited lab. If a local doctor immediately refers you to a larger hospital, don't rush. Get a second opinion. Friends, there 's another major scam going on at the grassroots level of our medical system. This is the medicine scam. A nexus between major pharmaceutical companies like Sun Pharma, Ab, and Glenmark Pharma and [00:12:39] hospitals was exposed in 2017. Hospitals purchase medicines in bulk from these pharmaceutical companies and sell them to patients at profits ranging from 300% to 900%. Imagine a patient already battling a disease [00:12:55] being sold Temicure 250 mg for ₹18,647, which the hospital received for just ₹1,950. Similarly, 500 mg of Pemor costs the hospital ₹3,190. Whereas it costs ₹16,500 for patients. Abbott's hard drug Retalex 18 mg [00:13:15] is available to the hospital for ₹18,000, but the patient's bill is ₹32,700. This is the case with almost every medicine. A product that costs ₹30 is available for ₹500. So, if I'm taking diabetes medication, how much will it cost me if I buy a branded medicine? For example, there's one that's available for ₹117. [00:13:33] It's available for ₹17. And if we buy the same product as its generic medicine, how much does it cost? 10 tablets cost just ₹1.95 . [00:13:49] Now you probably understand why medicines are so expensive in the hospital's in-house pharmacy . Hospital management makes every effort to ensure that patients buy these branded medicines from their pharmacy. But the guidelines clearly state that you can freely purchase generic medicines from outside. These contain the same salts [00:14:08] , but they're not branded, making them five to six times cheaper. For example, if you buy Crocin from the market for fever, a strip costs ₹30. You can get the same generic paracetamol 650 mg for [00:14:24] ₹10 at any Jan Aushadhi Kendra. Rumors often spread that generic pills are cheaper and don't work. However, the salt is 100% identical and works just as effectively. In fact, even the medical board advises doctors to prescribe generic medicines to patients. [00:14:41] They have told doctors to stop prescribing branded drugs. Instead , they should prescribe generic drugs. So, basically, it's the same drug. However, big pharma companies give freebies to corporate hospital managements, claiming they only prescribe branded medicines. But friends, buying generic medicines [00:14:59] is not only beneficial for you, but it's also your right. Search \"Jan Aushadhi Kendra near me\" on Google. Next time you order medicine from there, you'll be surprised by the difference in the bill . The extreme of overpricing was reached in 2017 when the case of Aadya Singh came to light. 7-year [00:15:15] -old Aadya contracted dengue and was admitted to Gurgaon's Horticulture Hospital for 15 days. Unfortunately, Aadya died. But the extreme was crossed when the hospital handed over a bill of ₹16 lakh to her parents. 15 days in four led to a bill of more than ₹1 lakh. [00:15:34] What came out in the investigation shocked everyone. Because the hospital had added ₹2700 for gloves and 650 syringes for Aadya's treatment. Over 1500 gloves and 660 syringes were added to the bill, along with thermometers and even the hospital gown Aadhya was [00:15:52] dressed in. Aadhya died of dengue shock syndrome on September 15. According to the NPPA report, the hospital made a profit of up to ₹1700% on some consumables. A three-way stopcock, which costs ₹6 outside, was [00:16:09] charged ₹16 by the hospital. A blood test, which costs ₹100 outside, cost ₹5400 per pair. The biggest weapon to avoid this overpricing is itemized billing. Ask the hospital for a detailed breakdown of each item. When the management sees that you are auditing each entry, [00:16:26] they are afraid to impose unnecessary charges. Remember, it is your right to ask for a detailed bill. The last scam is so disgusting that even humanity would be ashamed. Books like Dr. B.M. Hegde's Dissenting Diagnosis and even the Gujarat High Court have spoken about it . We'll talk about that, but first, I [00:16:45] want to share with you True Basics' Clean Plant Protein. Other plant proteins on the market are filled with maltoxins and artificial sweeteners, which completely damage your gut lining. But friends, this is no ordinary protein powder. Take a look at its ingredients: pea-derived protein, cocoa [00:17:03] powder, coconut milk, natural flavors, and papain digestive enzyme extracted from papaya . No artificial flavors, no artificial sweeteners, not a single bad ingredient. The ingredients are mentioned so transparently that I have no doubt that this [00:17:20] is one of the top proteins in the Indian market. If you're looking for a post-workout protein powder, try this one. One scoop contains 24 grams of high-quality protein and no sweeteners. Still, you'll love its natural chocolate flavor. It also comes with a cool stainless steel scooper. You [00:17:39] can take a scoop of this protein powder daily. It's plant-based, with clean ingredients, and lab-tested. The price for 1 kg is ₹2499, but there's a special 10% discount for the Fit Tuber community . The link is in the description. Let's return to the ventilator scam . According to the Times of India and investigative reports, hospitals often [00:17:58] declare a dead patient alive and keep them on ventilators to inflate the bill. In 2014, a similar incident occurred in a private hospital in Bhopal, where a dead woman was kept on a ventilator for three days , and later her husband was handed a bill of ₹8.5 lakh. Similarly, [00:18:15] a private hospital in Delhi kept a 14-year-old boy, who was technically brain dead, on a ventilator for a month without informing him, just to increase expenses . Later, the hospital was found guilty, but what was the punishment? A mere fine of ₹5 lakh, [00:18:31] less than his week's earnings. Friends, in the same article, Dr. B.M. Hegde even said about this camp that if a private hospital rapidly shifts a patient from the ICU to the operating theater, and even family members are not allowed to see the patient, and instead, their signatures are asked on a consent form, [00:18:50] then chances are the patient is already dead. This is because ventilator beds are a gold mine for hospitals . Books like Dissenting Diagnosis and even the 2020 In 2014, the Gujarat High Court also remarked that private hospitals [00:19:05] were viewing ventilators solely as a monetary opportunity. Why are these scams happening? There are three major reasons behind this. First, the corporatization of hospitals. In this model, doctors are overseen by MBSs who set targets. If targets aren't met for even two or three months, they're dismissed. Second, [00:19:25] the Medical Council of India, the main body, is completely failing in its work . This statement was made by the Standing Committee of Parliament. They said that this body is solely focused on granting licenses to medical colleges, ignoring the ethical conduct of medical professionals . And the third major reason is the lack of public [00:19:43] awareness. Major hospitals openly violate the MCI's ethical regulations . For example, Clause 1.5 states that patients should only be prescribed generic medicines . According to Clause 1.8, it is mandatory for doctors to disclose their fees before treatment . It's not right to hand over a large bill after an operation. There are many things [00:20:03] in this document that the general public is unaware of. Friends, I want to make one thing absolutely clear here. We are not blaming the doctors. We Indians already consider doctors to be gods, and we should. The truth is that many doctors themselves are deeply troubled by this corporate-targeted system [00:20:22] . The actual problem lies with this system and corporate management, which have turned health into a business. Have you been scammed like this? Please share your experience in the comments so that others can be helped. Also, check out True Basics' Clean Plant Protein. My name is Vivek. I [00:20:39] thank you so much for watching."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1108,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: ooMKNswME18",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @harish8809 | Likes: 917 | Replies: 49 | Published: 2026-05-01T15:43:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "My kid admitted due to fever normally it should be within ₹ 1000 due to insurance they billed 18,000 to company..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @jojowowo628 | Likes: 10 | Replies: 0 | Published: 2026-05-01T16:46:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "OMG 😳😱😰",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @hiralprajapati886 | Likes: 2 | Replies: 0 | Published: 2026-05-02T01:39:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Insurance ka yahi gerlabh he",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @MinaZutshi | Likes: 0 | Replies: 0 | Published: 2026-05-02T02:48:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "😊😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @shailendrasangal3269 | Likes: 3 | Replies: 0 | Published: 2026-05-02T05:53:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Then what should be done?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @DareTrading | Likes: 1 | Replies: 0 | Published: 2026-05-02T07:29:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Totally agree 💯",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @when.iwaskid | Likes: 1035 | Replies: 27 | Published: 2026-05-02T13:14:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "That's a reason I left my Hospital Job, everything that shown in this video is 1000% true and the ground condition is way more worse",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @Earthian-e4v | Likes: 17 | Replies: 0 | Published: 2026-05-02T18:43:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "What's the ground condition??",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "If you feel ok to share please do",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @Ankitaa-S1Y | Likes: 2 | Replies: 0 | Published: 2026-05-03T13:22:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "Me too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @rvsworld4457 | Likes: 3 | Replies: 0 | Published: 2026-05-04T06:35:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "Yes please share",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @Siva-siva36 | Likes: 17 | Replies: 0 | Published: 2026-05-04T06:54:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "Even me, as a nurse left the job.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @tikibhartiytribal4032 | Likes: 2 | Replies: 0 | Published: 2026-05-04T17:17:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "Me too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @Doctor-Inward | Likes: 822 | Replies: 36 | Published: 2026-05-03T08:51:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "I’m a doctor and I’ve seen how ugly this gets. After 3 years in rural service, I joined a private hospital in JP Nagar, Bengaluru – big mistake. It was basically run by non-medical people who only cared about squeezing money. Doctors were pushed to admit everyone, order pointless tests, and even give IV paracetamol just to inflate bills. Refuse, and they’d hold doctor's salary for months.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "I walked out within a week. This isn’t healthcare, it’s exploitation. Better to build your own practice with ethics than be part of this mess.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @BuddhaBhikshu | Likes: 54 | Replies: 0 | Published: 2026-05-04T01:33:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "Thank for being yourself, dear doc. People like you are gems of the society",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @manoranjanbiswal7920 | Likes: 14 | Replies: 0 | Published: 2026-05-04T02:09:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "What kind of action can be taken। Please mention",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @Siva-siva36 | Likes: 8 | Replies: 0 | Published: 2026-05-04T06:53:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "True information. Most of bangalore corporates trying to loot money for their benefits.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @iamindra4995 | Likes: 0 | Replies: 0 | Published: 2026-05-04T09:47:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "@manoranjanbiswal7920She herself has a YouTube channel where she posts videos spreading health awareness..I have subscribed..you can too",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @VinayKalaburgi-h6n | Likes: 3 | Replies: 0 | Published: 2026-05-04T11:42:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "My friend in indira nagar spend 12 lakhs for his spine surgery now a days banglore hospital bills are through the roofs",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @sonujangra12 | Likes: 241 | Replies: 7 | Published: 2026-05-06T06:24:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "Mujhe bhi private hospital ki doctor ne operation ke liye bola wo bhi 7th month me hi..khti bacha tedha h operation krna hoga...m us din bad us hospital me hi nhi gayi..dusri jgh se ultrasound krwaya to pta chla sb kuch thik h or muje 9th month me govt hospital me normal delivery se baby hua..akdm healthy baby...thank you god🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @medharai1151 | Likes: 8 | Replies: 0 | Published: 2026-05-07T18:00:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "Wow.. these doctors are shameless",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00073",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @RenuSharma-bw5vh | Likes: 14 | Replies: 0 | Published: 2026-05-08T05:44:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01559",
+                  "author": "",
+                  "text": "Bhaiya thank God aapne is pr video banaya ...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01560",
+                  "author": "",
+                  "text": "Me bhi chahti thi k koi sab logo ko aware kare k private hospital froud hai ....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01561",
+                  "author": "",
+                  "text": "Mere sath bhi dhokhe se c section hua h wo bhi jis labour me bacha nikalta h usme c section kiya or wo bhi pehli delivery normally hone k baad 2 nd me dhoke se c section kiya looteri gynecologist ne ...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01562",
+                  "author": "",
+                  "text": "Me bhi sabko aware Krna chahti thi...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01563",
+                  "author": "",
+                  "text": "Thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01565",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @ritiksain8840 | Likes: 0 | Replies: 0 | Published: 2026-05-08T09:00:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01566",
+                  "author": "",
+                  "text": "Thank You Fit Tuber❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01568",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @Radhekrishna23july | Likes: 0 | Replies: 0 | Published: 2026-05-09T10:45:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01569",
+                  "author": "",
+                  "text": "Bilkul sahi h Alwar Rajasthan m Sethi hospital Aisa hi h waha bacho ko galat dawai dekar jabardasti admit rakha jata h",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01571",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @AdwitiyaRaghuvanshi | Likes: 0 | Replies: 0 | Published: 2026-05-10T17:51:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01572",
+                  "author": "",
+                  "text": "Ohh god we need ethical beings .May god give us strength to remain ethical and compassionate ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01574",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @shobhakaushik27 | Likes: 0 | Replies: 0 | Published: 2026-05-08T05:00:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01575",
+                  "author": "",
+                  "text": "Aap agar is tarah ke kuchh hospital ka naam bhi bta dete to thoda sahi hota, kyuki aap jo bhi bataye h wo bilkul sahi h Or proof bhi diya h, mujhe to bilkul aisa hi lagta h Or mai bahut avoid karti hu bade hospital jane se, bahut achhi jaankari di aapne",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01577",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @sanchitmidha452 | Likes: 0 | Replies: 0 | Published: 2026-05-06T05:07:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01578",
+                  "author": "",
+                  "text": "Nice video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01580",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @mahiSharma-d3u | Likes: 0 | Replies: 0 | Published: 2026-05-13T19:57:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01581",
+                  "author": "",
+                  "text": "I just want to say thank you so much for those doctors who leaves this type of hospital nd kabhi ese loot ka hissa nhi Bane. Thank you so much for tuber ❤ mujhe to ye baat pata he nhi thee",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "Even my sister is pregnant nd her delivery date also passing so I'm little worried for her",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01583",
+                  "author": "",
+                  "text": "May god bless her nd her baby",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @kasturisanyal2994 | Likes: 0 | Replies: 0 | Published: 2026-05-09T12:17:16Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01586",
+                  "author": "",
+                  "text": "God bless you Sir 🙏🏻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @chanchal-tv4ir | Likes: 0 | Replies: 0 | Published: 2026-05-18T08:52:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01589",
+                  "author": "",
+                  "text": "Please make more videos like this",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01591",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @gopiepari | Likes: 0 | Replies: 0 | Published: 2026-05-06T09:59:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01592",
+                  "author": "",
+                  "text": "Thank you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @AD13D | Likes: 0 | Replies: 0 | Published: 2026-05-12T07:53:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01595",
+                  "author": "",
+                  "text": "इन मुद्दों पर अधिक से अधिक अवेयरनेस लानी होगी लोगों के बीच ऐसे वीडियोज के माध्यम से.. 🙏🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @Amreensaeed07 | Likes: 0 | Replies: 0 | Published: 2026-05-13T11:19:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01598",
+                  "author": "",
+                  "text": "Agr gov. Hospital ache ho jaye to private walo ko koi nhi puchega",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @anabiamehndiartist-m2o | Likes: 0 | Replies: 0 | Published: 2026-05-06T12:16:23Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01601",
+                  "author": "",
+                  "text": "you are the one of my best youtuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01603",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @minakshi_bisht | Likes: 1 | Replies: 0 | Published: 2026-05-06T19:56:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01604",
+                  "author": "",
+                  "text": "But 38 week is not premature delovery.. may be they have genuinely some problem that's why they go for c section",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01606",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @muneersadiq172 | Likes: 0 | Replies: 0 | Published: 2026-05-13T07:51:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01607",
+                  "author": "",
+                  "text": "Talk about glutathione topic bro it's need help for us ❤❤❤❤❤❤❤❤❤❤😢😢😢😢😢😢😢😢😢😢😢😢",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01609",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @SheelaJames-t3c | Likes: 0 | Replies: 0 | Published: 2026-05-06T09:44:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01610",
+                  "author": "",
+                  "text": "💯 true' hatts of to you",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01612",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @dineshmaurya1802 | Likes: 1 | Replies: 0 | Published: 2026-05-07T14:29:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01613",
+                  "author": "",
+                  "text": "ये एपिसोड जनता को जागरूक करने वाला है।",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01615",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @CharanSingh-pt6vy | Likes: 0 | Replies: 0 | Published: 2026-05-27T18:59:28Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01616",
+                  "author": "",
+                  "text": "Yes everything you said is right",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01618",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @AKhappyvibes | Likes: 0 | Replies: 0 | Published: 2026-05-07T11:53:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01619",
+                  "author": "",
+                  "text": "Aise scammers doctors ko kadi se kadi saja milni chaiye. Aur es tarah ki ghatna k bad aise hospital ko band karna cahiye taki koi dusra aisa na kar paye.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01621",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @prashantsrivastava09 | Likes: 0 | Replies: 0 | Published: 2026-05-12T14:10:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01622",
+                  "author": "",
+                  "text": "Bhaiya please make a video on kerotosis pilaris.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01624",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @siva1549 | Likes: 0 | Replies: 0 | Published: 2026-05-09T03:16:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01625",
+                  "author": "",
+                  "text": "What you are saying is very much true. People don't trust hospitals much.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "It seems you have 2 channels in Hindi. Is it fair to call this English channel? There are many who cannot understand",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @bisu_jazz | Likes: 0 | Replies: 0 | Published: 2026-05-12T15:08:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "So true.....",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "ooMKNswME18",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 73,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 19782,
+          "transcript_words": 3478,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:00] And the easy targets of these frauds are those who have health insurance. In this video, I want to share with you some scams that are happening openly in hospitals, without our knowledge. We'll discuss them based on evidence [00:00:15] and how to avoid these scams. This video is going to be very useful . So let's get started without further delay. Hello friends, welcome to Fit Tuber. Friends, [00:00:31] according to reports from NITI Aayog, CCI, and the Parliamentary Committee, unethical practices are used in private hospitals, from large to small, to maximize profits. And the easy targets of these frauds are those who have health insurance. Because as soon as you tell the hospital reception that you have health insurance, [00:00:50] you turn from a patient into a walking ATM. Most people think that the insurance company is going to pay the bill, so what's the problem? But after listening to this real incident from Himanshu Singhal in 2020, you won't say that. On February 5, 2020, Himanshu [00:01:08] took his two-and-a-half-year-old son, Siddharth, to a major corporate hospital in Shalimar Bagh . The child complained of mild loose motions. He was admitted for routine reasons. It was not an emergency. As soon as the hospital staff [00:01:23] learned that cashless access was available through Himanshu's insurance policy , they pressured him to admit his child for such a minor condition . Himanshu agreed to admit his child, and then, in the name of protocol , plans were made to keep the child in the hospital for as long as [00:01:42] possible. They planned to prolong his stay . The child was diagnosed with an acute anal fissure after a negligent examination, and he was given a contra-indicated medication, such as Movil-Chol, which should not have been given to a child at that time [00:02:00] . They prescribed a contra-indicated medication called Movil-Cole, which is used to increase loose motions . Movil-Cole is a strong medication for relieving constipation, and [00:02:18] my child already had loose motions. Instead of giving it orally, my child was given intravenously, directly into the bloodstream. Upon receiving this medication, the child began passing urine and stool uncontrollably. By 6:00 pm, the child's [00:02:34] condition worsened due to dehydration, leading to liver failure. The hospital then pressured Himanshu to undergo a liver transplant. Meanwhile, on February 9th, around 9:30 am, the child died, and the hospital's focus was still [00:02:50] on billing clearance. After this incident, Himanshu cried and said, \"If I didn't have insurance, they probably wouldn't have admitted my child, and perhaps I would still have my child.\" Friends, this isn't the only case of money-grubbing in the name of health insurance . In the Descending Diagnosis book, 78 doctors [00:03:10] admitted in interviews that they are pressured from above to prescribe tests based on insurance limits to meet hospital targets. The CCI clearly states in its report that large hospitals increase room rent and diagnostic test prices for patients with insurance. [00:03:28] Hospitals have been blacklisted several times for this scam, but this practice still occurs commonly. Therefore, never reveal your insurance upon entering the hospital . Meet the doctor first. Let the diagnosis be done and ask for a cash estimate of the treatment. Disclose your insurance policy only after receiving the estimate [00:03:46] . Another similar scam exists called the admission scam. Watch this clip of a doctor who decided to resign from his job on the very first day because of this scam by corporate hospitals. The hospital's owner, a gynecologist and not a physician, [00:04:06] managed all the patients herself. This meant she would decide which patient to admit, and she would decide to keep each patient in the ICU as long as possible, and for as many days as possible. This is what the weekend occupancy scam is all about. Imagine a patient admitted to the hospital on Thursday. They [00:04:25] were told they would be discharged in a day or two, at most, by Saturday. But then, on Saturday, the hospital staff would make some excuse or another to try to lock the patient in until Monday . There are three common excuses: First, the senior doctor will be coming on Monday. But the truth is, [00:04:41] the RMO can also sign if the doctor has declared them fit. Second, on Saturday, Insurance clearance will not be granted. This is the biggest lie. Insurance TPSs operate 24/7. And thirdly, the billing department works half-day. The CCI clearly states in its 2018 [00:04:57] policy note that hospitals resort to unfair trade practices and deliberately delay patient exit to maximize profits . Another scam is very common with pregnant women . There's no doubt that every woman wants a normal delivery, [00:05:17] and that a normal delivery is better for the baby's health. However, sometimes, complications require a C-section. But if a C-section delivery is forced solely for the purpose of extortion, then consider that a normal delivery, which [00:05:32] is a natural process of the body, takes 6 to 18 hours. And the profit margin is also lower. Whereas a C-section delivery takes 45 minutes and has a higher profit margin, many private hospitals force patients to opt for a C-section. This is exactly what happened [00:05:51] to Abhilash and his pregnant wife, Sakshi, when they went to a major private hospital in Noida for a checkup. Everything was normal when they took her there. Then, they performed whatever checkups they recommended. Friends, a healthy pregnancy can last up to 40 weeks. However, the hospital, citing the possibility of her waters falling, [00:06:12] admitted Sakshi at 38 weeks. Without waiting for natural labor, they performed a C-section delivery. Because the baby was delivered prematurely, she had to be kept in a special unit. According to their explanation, the baby was very weak. They immediately took her to the NICU. But the real drama began after that. During the surgery, the hospital staff [00:06:31] made a mistake. Sakshi began internal bleeding so severe that her face turned red and then black. Keeping the family in the dark and making Abhilash sign blank papers, the hospital removed Sakshi's uterus without her consent. When her condition [00:06:47] became uncontrollable, the hospital gave up and referred her to Apollo . Apollo doctors discovered that Sakshi's organ systems had failed. Instead of blood, there was only water in her body. Within a few hours, Sakshi passed away . Friends, this story doesn't end here. [00:07:06] Listen to what happened next, directly from Abhilash. So, they performed a premature delivery. Babu 's liver and heart were stuck together, and because of the premature delivery, my son, who was born on November 29th, also passed away. [00:07:23] C-section scams are so common that they have even happened to TV celebrities like Chhavi Mittal . In an interview with CNN Insider, she recounted how, without her permission, she was forcibly injected with oxytocin to induce labor, forcing a C-section. [00:07:42] When this injection was administered, I suddenly got a panic attack. My throat became absolutely dry. My heart started racing and I started shaking. It happened instantly like she was still administering the drug when I [00:07:58] started feeding like that. I said what did you just give me? Why did you do that? Generally, hospitals use different tricks to get a C-section delivery done . Like your baby has passed stool. The operation will have to be done right now. The umbilical cord is wrapped around the baby's neck. The baby will die. The amniotic fluid [00:08:15] level has decreased. The baby will dry up inside. It has been 12 hours. The cervix is ​​not opening. We cannot take the risk. The baby's head is big. He will not be able to come out through normal delivery. Seeing their child in risk, parents immediately get ready for a C-section. Yes, it's not always false [00:08:34] . Sometimes it genuinely happens. But you might be surprised to hear that the WHO says that C-section deliveries are required only in 10 to 15% of cases . In government hospitals in India, this rate is under 15%. [00:08:50] Shockingly, in private hospitals, this rate has reached 49%. This means that every second delivery in private hospitals is a C-section. In private hospitals in Telangana, J&K, and West Bengal, this rate has reached around 80%. [00:09:05] This means that normal deliveries are rare. Friends, this scam isn't limited to C-section surgeries. According to one report, 55% of heart surgeries, 48% of uterus surgeries, 48% of knee replacement surgeries, and 45% of C-section surgeries [00:09:21] in India are completely unnecessary and are performed solely to earn more money . To avoid this camp, you should give a written birth plan to the doctor in advance that you Don't want induction injections without consent. If surgery is suggested as an emergency, immediately consult a doctor at another independent or government hospital [00:09:40] . Otherwise, always follow the hierarchy of doctors. That is, it's smart to consult a general physician first instead of going directly to a surgeon. The next scam was highlighted by renowned cardiologist and Padma Bhushan awardee Dr. B.M. Hegde in this [00:09:55] article. It's called the sink test. Imagine you have a mild fever and go to a corporate hospital. However, just one test would have been sufficient for your condition. But after the checkup, you're asked to undergo five different tests. You go straight to the laboratory and [00:10:15] give your blood samples. They generate the real report for the required test , but they dump the remaining four blood samples down the sink, generating fake reports. This is called the sink test scam. And why does this happen ? Behind this lies another scam called the referral scam. In December 2017, the Income [00:10:36] Tax Department raided several labs in Bor and recovered ₹1.5 crore in cash and 3.5 kg of gold. The investigation revealed that these diagnostic labs had made referral commissions their official business model. In fact, [00:10:52] ₹200 crore was channeled into the books of just one lab chain solely in the name of referral commissions. Apparently, there's no problem with commissions or referrals. They happen in every industry. But the problem arises when they are done unnecessarily. For example, if you have a minor illness and are still [00:11:08] referred to a large corporate hospital, that's wrong. Dr. M.K. Mani, Chief Nephrologist at Apollo Hospitals, Chennai, himself called this referral scam an open secret. He explained that he had filed a complaint with the Medical Council in 1995, with complete evidence, but no action was taken. In fact, in 2014 [00:11:28] , an Elite Forum form from Mumbai's renowned Kokilaben Hospital was leaked. It promised to credit ₹1 lakh for referring 40 patients, ₹1.5 lakh for 50 patients, and ₹0.5 lakh for 75 patients as professional charges. [00:11:44] After receiving a notice from the Medical Council, they were forced to discontinue this scheme. Doctors often do this under pressure from corporate management. Hear it from the doctor himself. Management says the ICU beds must be filled this month. The OT must not remain empty. Admit any patient in the OPD, whether they are needed or not. Are we [00:12:02] doctors or salespeople trying to fulfill quotas like insurance agents? To avoid this scam, you need to be smart and aware. Respectfully ask the doctor how these tests relate to my health condition. If the hospital doesn't insist, get your routine blood tests [00:12:20] done at a reputable, NABL-accredited lab. If a local doctor immediately refers you to a larger hospital, don't rush. Get a second opinion. Friends, there 's another major scam going on at the grassroots level of our medical system. This is the medicine scam. A nexus between major pharmaceutical companies like Sun Pharma, Ab, and Glenmark Pharma and [00:12:39] hospitals was exposed in 2017. Hospitals purchase medicines in bulk from these pharmaceutical companies and sell them to patients at profits ranging from 300% to 900%. Imagine a patient already battling a disease [00:12:55] being sold Temicure 250 mg for ₹18,647, which the hospital received for just ₹1,950. Similarly, 500 mg of Pemor costs the hospital ₹3,190. Whereas it costs ₹16,500 for patients. Abbott's hard drug Retalex 18 mg [00:13:15] is available to the hospital for ₹18,000, but the patient's bill is ₹32,700. This is the case with almost every medicine. A product that costs ₹30 is available for ₹500. So, if I'm taking diabetes medication, how much will it cost me if I buy a branded medicine? For example, there's one that's available for ₹117. [00:13:33] It's available for ₹17. And if we buy the same product as its generic medicine, how much does it cost? 10 tablets cost just ₹1.95 . [00:13:49] Now you probably understand why medicines are so expensive in the hospital's in-house pharmacy . Hospital management makes every effort to ensure that patients buy these branded medicines from their pharmacy. But the guidelines clearly state that you can freely purchase generic medicines from outside. These contain the same salts [00:14:08] , but they're not branded, making them five to six times cheaper. For example, if you buy Crocin from the market for fever, a strip costs ₹30. You can get the same generic paracetamol 650 mg for [00:14:24] ₹10 at any Jan Aushadhi Kendra. Rumors often spread that generic pills are cheaper and don't work. However, the salt is 100% identical and works just as effectively. In fact, even the medical board advises doctors to prescribe generic medicines to patients. [00:14:41] They have told doctors to stop prescribing branded drugs. Instead , they should prescribe generic drugs. So, basically, it's the same drug. However, big pharma companies give freebies to corporate hospital managements, claiming they only prescribe branded medicines. But friends, buying generic medicines [00:14:59] is not only beneficial for you, but it's also your right. Search \"Jan Aushadhi Kendra near me\" on Google. Next time you order medicine from there, you'll be surprised by the difference in the bill . The extreme of overpricing was reached in 2017 when the case of Aadya Singh came to light. 7-year [00:15:15] -old Aadya contracted dengue and was admitted to Gurgaon's Horticulture Hospital for 15 days. Unfortunately, Aadya died. But the extreme was crossed when the hospital handed over a bill of ₹16 lakh to her parents. 15 days in four led to a bill of more than ₹1 lakh. [00:15:34] What came out in the investigation shocked everyone. Because the hospital had added ₹2700 for gloves and 650 syringes for Aadya's treatment. Over 1500 gloves and 660 syringes were added to the bill, along with thermometers and even the hospital gown Aadhya was [00:15:52] dressed in. Aadhya died of dengue shock syndrome on September 15. According to the NPPA report, the hospital made a profit of up to ₹1700% on some consumables. A three-way stopcock, which costs ₹6 outside, was [00:16:09] charged ₹16 by the hospital. A blood test, which costs ₹100 outside, cost ₹5400 per pair. The biggest weapon to avoid this overpricing is itemized billing. Ask the hospital for a detailed breakdown of each item. When the management sees that you are auditing each entry, [00:16:26] they are afraid to impose unnecessary charges. Remember, it is your right to ask for a detailed bill. The last scam is so disgusting that even humanity would be ashamed. Books like Dr. B.M. Hegde's Dissenting Diagnosis and even the Gujarat High Court have spoken about it . We'll talk about that, but first, I [00:16:45] want to share with you True Basics' Clean Plant Protein. Other plant proteins on the market are filled with maltoxins and artificial sweeteners, which completely damage your gut lining. But friends, this is no ordinary protein powder. Take a look at its ingredients: pea-derived protein, cocoa [00:17:03] powder, coconut milk, natural flavors, and papain digestive enzyme extracted from papaya . No artificial flavors, no artificial sweeteners, not a single bad ingredient. The ingredients are mentioned so transparently that I have no doubt that this [00:17:20] is one of the top proteins in the Indian market. If you're looking for a post-workout protein powder, try this one. One scoop contains 24 grams of high-quality protein and no sweeteners. Still, you'll love its natural chocolate flavor. It also comes with a cool stainless steel scooper. You [00:17:39] can take a scoop of this protein powder daily. It's plant-based, with clean ingredients, and lab-tested. The price for 1 kg is ₹2499, but there's a special 10% discount for the Fit Tuber community . The link is in the description. Let's return to the ventilator scam . According to the Times of India and investigative reports, hospitals often [00:17:58] declare a dead patient alive and keep them on ventilators to inflate the bill. In 2014, a similar incident occurred in a private hospital in Bhopal, where a dead woman was kept on a ventilator for three days , and later her husband was handed a bill of ₹8.5 lakh. Similarly, [00:18:15] a private hospital in Delhi kept a 14-year-old boy, who was technically brain dead, on a ventilator for a month without informing him, just to increase expenses . Later, the hospital was found guilty, but what was the punishment? A mere fine of ₹5 lakh, [00:18:31] less than his week's earnings. Friends, in the same article, Dr. B.M. Hegde even said about this camp that if a private hospital rapidly shifts a patient from the ICU to the operating theater, and even family members are not allowed to see the patient, and instead, their signatures are asked on a consent form, [00:18:50] then chances are the patient is already dead. This is because ventilator beds are a gold mine for hospitals . Books like Dissenting Diagnosis and even the 2020 In 2014, the Gujarat High Court also remarked that private hospitals [00:19:05] were viewing ventilators solely as a monetary opportunity. Why are these scams happening? There are three major reasons behind this. First, the corporatization of hospitals. In this model, doctors are overseen by MBSs who set targets. If targets aren't met for even two or three months, they're dismissed. Second, [00:19:25] the Medical Council of India, the main body, is completely failing in its work . This statement was made by the Standing Committee of Parliament. They said that this body is solely focused on granting licenses to medical colleges, ignoring the ethical conduct of medical professionals . And the third major reason is the lack of public [00:19:43] awareness. Major hospitals openly violate the MCI's ethical regulations . For example, Clause 1.5 states that patients should only be prescribed generic medicines . According to Clause 1.8, it is mandatory for doctors to disclose their fees before treatment . It's not right to hand over a large bill after an operation. There are many things [00:20:03] in this document that the general public is unaware of. Friends, I want to make one thing absolutely clear here. We are not blaming the doctors. We Indians already consider doctors to be gods, and we should. The truth is that many doctors themselves are deeply troubled by this corporate-targeted system [00:20:22] . The actual problem lies with this system and corporate management, which have turned health into a business. Have you been scammed like this? Please share your experience in the comments so that others can be helped. Also, check out True Basics' Clean Plant Protein. My name is Vivek. I [00:20:39] thank you so much for watching."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1108,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: ooMKNswME18",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @harish8809 | Likes: 917 | Replies: 49 | Published: 2026-05-01T15:43:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "My kid admitted due to fever normally it should be within ₹ 1000 due to insurance they billed 18,000 to company..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @jojowowo628 | Likes: 10 | Replies: 0 | Published: 2026-05-01T16:46:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "OMG 😳😱😰",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @hiralprajapati886 | Likes: 2 | Replies: 0 | Published: 2026-05-02T01:39:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Insurance ka yahi gerlabh he",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @MinaZutshi | Likes: 0 | Replies: 0 | Published: 2026-05-02T02:48:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "😊😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @shailendrasangal3269 | Likes: 3 | Replies: 0 | Published: 2026-05-02T05:53:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Then what should be done?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @DareTrading | Likes: 1 | Replies: 0 | Published: 2026-05-02T07:29:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Totally agree 💯",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @when.iwaskid | Likes: 1035 | Replies: 27 | Published: 2026-05-02T13:14:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "That's a reason I left my Hospital Job, everything that shown in this video is 1000% true and the ground condition is way more worse",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @Earthian-e4v | Likes: 17 | Replies: 0 | Published: 2026-05-02T18:43:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "What's the ground condition??",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "If you feel ok to share please do",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "[COMMENT 9] Author: @Ankitaa-S1Y | Likes: 2 | Replies: 0 | Published: 2026-05-03T13:22:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "Me too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "[COMMENT 10] Author: @rvsworld4457 | Likes: 3 | Replies: 0 | Published: 2026-05-04T06:35:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "Yes please share",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "[COMMENT 11] Author: @Siva-siva36 | Likes: 17 | Replies: 0 | Published: 2026-05-04T06:54:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "Even me, as a nurse left the job.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "[COMMENT 12] Author: @tikibhartiytribal4032 | Likes: 2 | Replies: 0 | Published: 2026-05-04T17:17:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "Me too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "[COMMENT 13] Author: @Doctor-Inward | Likes: 822 | Replies: 36 | Published: 2026-05-03T08:51:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "I’m a doctor and I’ve seen how ugly this gets. After 3 years in rural service, I joined a private hospital in JP Nagar, Bengaluru – big mistake. It was basically run by non-medical people who only cared about squeezing money. Doctors were pushed to admit everyone, order pointless tests, and even give IV paracetamol just to inflate bills. Refuse, and they’d hold doctor's salary for months.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "I walked out within a week. This isn’t healthcare, it’s exploitation. Better to build your own practice with ethics than be part of this mess.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 14] Author: @BuddhaBhikshu | Likes: 54 | Replies: 0 | Published: 2026-05-04T01:33:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "Thank for being yourself, dear doc. People like you are gems of the society",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 15] Author: @manoranjanbiswal7920 | Likes: 14 | Replies: 0 | Published: 2026-05-04T02:09:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "What kind of action can be taken। Please mention",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 16] Author: @Siva-siva36 | Likes: 8 | Replies: 0 | Published: 2026-05-04T06:53:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "True information. Most of bangalore corporates trying to loot money for their benefits.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 17] Author: @iamindra4995 | Likes: 0 | Replies: 0 | Published: 2026-05-04T09:47:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "@manoranjanbiswal7920She herself has a YouTube channel where she posts videos spreading health awareness..I have subscribed..you can too",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 18] Author: @VinayKalaburgi-h6n | Likes: 3 | Replies: 0 | Published: 2026-05-04T11:42:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "My friend in indira nagar spend 12 lakhs for his spine surgery now a days banglore hospital bills are through the roofs",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 19] Author: @sonujangra12 | Likes: 241 | Replies: 7 | Published: 2026-05-06T06:24:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "Mujhe bhi private hospital ki doctor ne operation ke liye bola wo bhi 7th month me hi..khti bacha tedha h operation krna hoga...m us din bad us hospital me hi nhi gayi..dusri jgh se ultrasound krwaya to pta chla sb kuch thik h or muje 9th month me govt hospital me normal delivery se baby hua..akdm healthy baby...thank you god🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "[COMMENT 20] Author: @medharai1151 | Likes: 8 | Replies: 0 | Published: 2026-05-07T18:00:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "Wow.. these doctors are shameless",
+                "likes": null
+              },
+              {
+                "comment_id": "c00073",
+                "author": "",
+                "text": "[COMMENT 21] Author: @RenuSharma-bw5vh | Likes: 14 | Replies: 0 | Published: 2026-05-08T05:44:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01559",
+                "author": "",
+                "text": "Bhaiya thank God aapne is pr video banaya ...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01560",
+                "author": "",
+                "text": "Me bhi chahti thi k koi sab logo ko aware kare k private hospital froud hai ....",
+                "likes": null
+              },
+              {
+                "comment_id": "c01561",
+                "author": "",
+                "text": "Mere sath bhi dhokhe se c section hua h wo bhi jis labour me bacha nikalta h usme c section kiya or wo bhi pehli delivery normally hone k baad 2 nd me dhoke se c section kiya looteri gynecologist ne ...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01562",
+                "author": "",
+                "text": "Me bhi sabko aware Krna chahti thi...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01563",
+                "author": "",
+                "text": "Thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01565",
+                "author": "",
+                "text": "[COMMENT 480] Author: @ritiksain8840 | Likes: 0 | Replies: 0 | Published: 2026-05-08T09:00:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01566",
+                "author": "",
+                "text": "Thank You Fit Tuber❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01568",
+                "author": "",
+                "text": "[COMMENT 481] Author: @Radhekrishna23july | Likes: 0 | Replies: 0 | Published: 2026-05-09T10:45:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01569",
+                "author": "",
+                "text": "Bilkul sahi h Alwar Rajasthan m Sethi hospital Aisa hi h waha bacho ko galat dawai dekar jabardasti admit rakha jata h",
+                "likes": null
+              },
+              {
+                "comment_id": "c01571",
+                "author": "",
+                "text": "[COMMENT 482] Author: @AdwitiyaRaghuvanshi | Likes: 0 | Replies: 0 | Published: 2026-05-10T17:51:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01572",
+                "author": "",
+                "text": "Ohh god we need ethical beings .May god give us strength to remain ethical and compassionate ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01574",
+                "author": "",
+                "text": "[COMMENT 483] Author: @shobhakaushik27 | Likes: 0 | Replies: 0 | Published: 2026-05-08T05:00:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01575",
+                "author": "",
+                "text": "Aap agar is tarah ke kuchh hospital ka naam bhi bta dete to thoda sahi hota, kyuki aap jo bhi bataye h wo bilkul sahi h Or proof bhi diya h, mujhe to bilkul aisa hi lagta h Or mai bahut avoid karti hu bade hospital jane se, bahut achhi jaankari di aapne",
+                "likes": null
+              },
+              {
+                "comment_id": "c01577",
+                "author": "",
+                "text": "[COMMENT 484] Author: @sanchitmidha452 | Likes: 0 | Replies: 0 | Published: 2026-05-06T05:07:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01578",
+                "author": "",
+                "text": "Nice video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01580",
+                "author": "",
+                "text": "[COMMENT 485] Author: @mahiSharma-d3u | Likes: 0 | Replies: 0 | Published: 2026-05-13T19:57:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01581",
+                "author": "",
+                "text": "I just want to say thank you so much for those doctors who leaves this type of hospital nd kabhi ese loot ka hissa nhi Bane. Thank you so much for tuber ❤ mujhe to ye baat pata he nhi thee",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "Even my sister is pregnant nd her delivery date also passing so I'm little worried for her",
+                "likes": null
+              },
+              {
+                "comment_id": "c01583",
+                "author": "",
+                "text": "May god bless her nd her baby",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "[COMMENT 486] Author: @kasturisanyal2994 | Likes: 0 | Replies: 0 | Published: 2026-05-09T12:17:16Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01586",
+                "author": "",
+                "text": "God bless you Sir 🙏🏻",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "[COMMENT 487] Author: @chanchal-tv4ir | Likes: 0 | Replies: 0 | Published: 2026-05-18T08:52:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01589",
+                "author": "",
+                "text": "Please make more videos like this",
+                "likes": null
+              },
+              {
+                "comment_id": "c01591",
+                "author": "",
+                "text": "[COMMENT 488] Author: @gopiepari | Likes: 0 | Replies: 0 | Published: 2026-05-06T09:59:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01592",
+                "author": "",
+                "text": "Thank you",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "[COMMENT 489] Author: @AD13D | Likes: 0 | Replies: 0 | Published: 2026-05-12T07:53:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01595",
+                "author": "",
+                "text": "इन मुद्दों पर अधिक से अधिक अवेयरनेस लानी होगी लोगों के बीच ऐसे वीडियोज के माध्यम से.. 🙏🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "[COMMENT 490] Author: @Amreensaeed07 | Likes: 0 | Replies: 0 | Published: 2026-05-13T11:19:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01598",
+                "author": "",
+                "text": "Agr gov. Hospital ache ho jaye to private walo ko koi nhi puchega",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "[COMMENT 491] Author: @anabiamehndiartist-m2o | Likes: 0 | Replies: 0 | Published: 2026-05-06T12:16:23Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01601",
+                "author": "",
+                "text": "you are the one of my best youtuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c01603",
+                "author": "",
+                "text": "[COMMENT 492] Author: @minakshi_bisht | Likes: 1 | Replies: 0 | Published: 2026-05-06T19:56:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01604",
+                "author": "",
+                "text": "But 38 week is not premature delovery.. may be they have genuinely some problem that's why they go for c section",
+                "likes": null
+              },
+              {
+                "comment_id": "c01606",
+                "author": "",
+                "text": "[COMMENT 493] Author: @muneersadiq172 | Likes: 0 | Replies: 0 | Published: 2026-05-13T07:51:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01607",
+                "author": "",
+                "text": "Talk about glutathione topic bro it's need help for us ❤❤❤❤❤❤❤❤❤❤😢😢😢😢😢😢😢😢😢😢😢😢",
+                "likes": null
+              },
+              {
+                "comment_id": "c01609",
+                "author": "",
+                "text": "[COMMENT 494] Author: @SheelaJames-t3c | Likes: 0 | Replies: 0 | Published: 2026-05-06T09:44:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01610",
+                "author": "",
+                "text": "💯 true' hatts of to you",
+                "likes": null
+              },
+              {
+                "comment_id": "c01612",
+                "author": "",
+                "text": "[COMMENT 495] Author: @dineshmaurya1802 | Likes: 1 | Replies: 0 | Published: 2026-05-07T14:29:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01613",
+                "author": "",
+                "text": "ये एपिसोड जनता को जागरूक करने वाला है।",
+                "likes": null
+              },
+              {
+                "comment_id": "c01615",
+                "author": "",
+                "text": "[COMMENT 496] Author: @CharanSingh-pt6vy | Likes: 0 | Replies: 0 | Published: 2026-05-27T18:59:28Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01616",
+                "author": "",
+                "text": "Yes everything you said is right",
+                "likes": null
+              },
+              {
+                "comment_id": "c01618",
+                "author": "",
+                "text": "[COMMENT 497] Author: @AKhappyvibes | Likes: 0 | Replies: 0 | Published: 2026-05-07T11:53:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01619",
+                "author": "",
+                "text": "Aise scammers doctors ko kadi se kadi saja milni chaiye. Aur es tarah ki ghatna k bad aise hospital ko band karna cahiye taki koi dusra aisa na kar paye.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01621",
+                "author": "",
+                "text": "[COMMENT 498] Author: @prashantsrivastava09 | Likes: 0 | Replies: 0 | Published: 2026-05-12T14:10:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01622",
+                "author": "",
+                "text": "Bhaiya please make a video on kerotosis pilaris.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01624",
+                "author": "",
+                "text": "[COMMENT 499] Author: @siva1549 | Likes: 0 | Replies: 0 | Published: 2026-05-09T03:16:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01625",
+                "author": "",
+                "text": "What you are saying is very much true. People don't trust hospitals much.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "It seems you have 2 channels in Hindi. Is it fair to call this English channel? There are many who cannot understand",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "[COMMENT 500] Author: @bisu_jazz | Likes: 0 | Replies: 0 | Published: 2026-05-12T15:08:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "So true.....",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

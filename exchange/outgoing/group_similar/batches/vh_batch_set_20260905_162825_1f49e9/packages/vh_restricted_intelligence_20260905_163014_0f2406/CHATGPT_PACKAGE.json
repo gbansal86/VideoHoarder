@@ -1,0 +1,2134 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163014_0f2406",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163014_0f2406",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Game of Thrones and Westeros lore — partial transcript",
+      "batch_number": 13,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 13 of 30 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260905_163014_0f2406",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260905_163014_0f2406"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163014_0f2406",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Game of Thrones and Westeros lore — partial transcript",
+      "batch_number": 13,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "8762bbeb-7179-49c7-b4e3-6c4fd18b8479",
+    "package_id": "vh_restricted_intelligence_20260905_163014_0f2406",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "8mgtXYMPWV4",
+      "Jazy2Fr4K2o",
+      "PTtJJ5k0VHI",
+      "QjFLMxSbdJQ",
+      "SAZotzpq8No",
+      "VriBoTeMByk",
+      "WxQ-FVRVuaI",
+      "h4hbLS1BTqA"
+    ],
+    "evidence_grades": {
+      "8mgtXYMPWV4": "D",
+      "Jazy2Fr4K2o": "D",
+      "PTtJJ5k0VHI": "D",
+      "QjFLMxSbdJQ": "D",
+      "SAZotzpq8No": "D",
+      "VriBoTeMByk": "D",
+      "WxQ-FVRVuaI": "D",
+      "h4hbLS1BTqA": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Game of Thrones and Westeros lore — partial transcript",
+      "batch_number": 13,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "025f026eeaf3c7f739c45093d0f3f1a0b47e20deeb6389f05feeddd92110f3d7",
+      "prompt.json": "e253864a325e4448b4e4d83b03a6eb4a5d36e7c61e3ce7ec0cb389f1917083ba",
+      "schema.json": "13403a93b19971fa1ebc78ba4aa25c669a877e2598d9f34f2e26e33dac0c33b7"
+    },
+    "created_at": "2026-09-05 16:30:14",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "8mgtXYMPWV4",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=8mgtXYMPWV4",
+        "original_title": "The Moment Robert Baratheon First Saw Lyanna Stark#shorts  #gameofthrones#robertbaratheon",
+        "clean_title": "The Moment Robert Baratheon First Saw Lyanna Stark#shorts",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-05-08",
+        "description": "The Animated Story of Robert’s Rebellion\n\n#GameOfThrones #ASOIAF #RobertBaratheon #RhaegarTargaryen #LyannaStark #HouseOfTheDragon #Westeros",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:20] >> Dark hair, grey eyes. She was unlike any woman he had ever known. >> [music] >> Not delicate, not courtly, real. Robert lost his mind [music] from the first moment. She lodged inside him and would not let go. [00:00:36] >> [music] >> He returned to the Eyrie, but all he saw was her. Every night, every day. He built a perfect image in his head, >> [music] >> beautiful, faithful, loving, waiting only for him."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "8mgtXYMPWV4",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\8mgtXYMPWV4",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "8mgtXYMPWV4",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 2,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 424,
+            "transcript_words": 75,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:20] >> Dark hair, grey eyes. She was unlike any woman he had ever known. >> [music] >> Not delicate, not courtly, real. Robert lost his mind [music] from the first moment. She lodged inside him and would not let go. [00:00:36] >> [music] >> He returned to the Eyrie, but all he saw was her. Every night, every day. He built a perfect image in his head, >> [music] >> beautiful, faithful, loving, waiting only for him."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "8mgtXYMPWV4",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 2,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 424,
+          "transcript_words": 75,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:20] >> Dark hair, grey eyes. She was unlike any woman he had ever known. >> [music] >> Not delicate, not courtly, real. Robert lost his mind [music] from the first moment. She lodged inside him and would not let go. [00:00:36] >> [music] >> He returned to the Eyrie, but all he saw was her. Every night, every day. He built a perfect image in his head, >> [music] >> beautiful, faithful, loving, waiting only for him."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "Jazy2Fr4K2o",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=Jazy2Fr4K2o",
+        "original_title": "The story of Rhaegar and Lyanna #shorts #rhaegartargaryen",
+        "clean_title": "The story of Rhaegar and Lyanna",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-04-02",
+        "description": "Main description:\nRhaegar was sent by the Mad King to find the Knight of the Laughing Tree… but instead, he found Lyanna.\n\nDisclaimer:\nThis story is based on George R.R. Martin’s books and expanded with fan theories. All visuals and effects were created using AI.",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:01] Lyanna Stark by a stream [music] in a simple dress, bare feet in the water, a [music] sword belt on the rock beside her. She heard his steps, turned, saw him. Found me. So what? [music] Dragging me to your mad father? [00:00:18] Rhaegar was silent. He looked at her, at the bruised knuckles, at the scratch on her [music] neck, at those gray, cold, fearless eyes. [00:00:37] He sat on a [music] rock. Why did you do it? Do what? The armor, the arena, three nights, [music] why? Because they were beating him. And the knights who swore to protect"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "Jazy2Fr4K2o",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\Jazy2Fr4K2o",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "Jazy2Fr4K2o",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 3,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 556,
+            "transcript_words": 108,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:01] Lyanna Stark by a stream [music] in a simple dress, bare feet in the water, a [music] sword belt on the rock beside her. She heard his steps, turned, saw him. Found me. So what? [music] Dragging me to your mad father? [00:00:18] Rhaegar was silent. He looked at her, at the bruised knuckles, at the scratch on her [music] neck, at those gray, cold, fearless eyes. [00:00:37] He sat on a [music] rock. Why did you do it? Do what? The armor, the arena, three nights, [music] why? Because they were beating him. And the knights who swore to protect"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "Jazy2Fr4K2o",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 3,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 556,
+          "transcript_words": 108,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:01] Lyanna Stark by a stream [music] in a simple dress, bare feet in the water, a [music] sword belt on the rock beside her. She heard his steps, turned, saw him. Found me. So what? [music] Dragging me to your mad father? [00:00:18] Rhaegar was silent. He looked at her, at the bruised knuckles, at the scratch on her [music] neck, at those gray, cold, fearless eyes. [00:00:37] He sat on a [music] rock. Why did you do it? Do what? The armor, the arena, three nights, [music] why? Because they were beating him. And the knights who swore to protect"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "PTtJJ5k0VHI",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=PTtJJ5k0VHI",
+        "original_title": "Rhaegar Targaryen, the man who risked everything #shots #rhaegartargaryen #targaryen",
+        "clean_title": "Rhaegar Targaryen, the man who risked everything",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-04-03",
+        "description": "An animated film about Rhaegar Targaryen — watch the full version on the channel.\nAn animated film about Rhaegar Targaryen. Full version available on the channel.\n#rhaegartargaryen #targaryen #houseofthedragon #gameofthrones #asoiaf #fantasyedit #aianimation #cinematic",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:03] Two armies, facing each other. On one side, the royal army. Banners with the three-headed dragon. Tired men, [music] many here against their will. But they came for Rhaegar. On the other, the rebel army. Wolf, stag, falcon. Thousands united by [00:00:21] rage. [music] They believed they were fighting for justice. Between the [music] armies, a field. Mud, cold wind. Rhaegar put on his black [music] armor. On his chest, a three-headed dragon made of rubies. [00:00:37] He mounted his horse, rode onto the field. From the other side, [music] Robert. Enormous. Warhammer on his shoulder. Eyes black with fury."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "PTtJJ5k0VHI",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\PTtJJ5k0VHI",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "PTtJJ5k0VHI",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 3,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 620,
+            "transcript_words": 109,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:03] Two armies, facing each other. On one side, the royal army. Banners with the three-headed dragon. Tired men, [music] many here against their will. But they came for Rhaegar. On the other, the rebel army. Wolf, stag, falcon. Thousands united by [00:00:21] rage. [music] They believed they were fighting for justice. Between the [music] armies, a field. Mud, cold wind. Rhaegar put on his black [music] armor. On his chest, a three-headed dragon made of rubies. [00:00:37] He mounted his horse, rode onto the field. From the other side, [music] Robert. Enormous. Warhammer on his shoulder. Eyes black with fury."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "PTtJJ5k0VHI",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 3,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 620,
+          "transcript_words": 109,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:03] Two armies, facing each other. On one side, the royal army. Banners with the three-headed dragon. Tired men, [music] many here against their will. But they came for Rhaegar. On the other, the rebel army. Wolf, stag, falcon. Thousands united by [00:00:21] rage. [music] They believed they were fighting for justice. Between the [music] armies, a field. Mud, cold wind. Rhaegar put on his black [music] armor. On his chest, a three-headed dragon made of rubies. [00:00:37] He mounted his horse, rode onto the field. From the other side, [music] Robert. Enormous. Warhammer on his shoulder. Eyes black with fury."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "QjFLMxSbdJQ",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=QjFLMxSbdJQ",
+        "original_title": "Bloodraven Does Not Forgive#shorts #Bloodraven #BryndenRivers #DunkAndEgg#AKnightOfTheSevenKingdoms",
+        "clean_title": "Bloodraven Does Not Forgive#shorts",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-06-19",
+        "description": "Watch the full film on the channel.\n\nOn this channel, you will find animated stories from the world of Westeros presented through cinematic storytelling.\n\nSome scenes, dialogues, and events have been expanded or slightly altered to create a more complete and immersive narrative experience. These additions are based on the logic of the world, established lore, and the personalities of the characters.\n\nMost videos are rooted in George R. R. Martin’s canon. Moments not directly shown in the books are presented as creative interpretations intended to logically expand the story without contradicting or breaking the established canon.\n\nCreated with the utmost respect for George R. R. Martin and his works.\n#Bloodraven #BryndenRivers #DunkAndEgg #TheMysteryKnight #ASOIAF #GameOfThrones #HouseOfTheDragon #AKnightOfTheSevenKingdoms #Westeros #Targaryen #BlackfyreRebellion #GeorgeRRMartin #Fantasy #EpicFantasy #Whitewalls #GreatBastards #RavenTeeth #AnimatedStory #FanFilm #Lore #GoTLore #ASOIAFLore #SevenKingdoms #WesterosHistory #Shorts #YouTubeShorts #MedievalFantasy #DarkFantasy #BloodravenDoesNotForgive #Blackfyre",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:01] Brynden Rivers Bloodraven Hand of the King They said he had a thousand [music] eyes and one. An albino with a red eye and wine-colored stains on his face. [music] A man everyone feared and rightly so. [00:00:21] His spies sat at every table in every castle. [music] He knew what you were planning before you knew it [music] yourself. Bloodraven's army surrounded White Walls quietly [00:00:36] without [music] warning. The conspiracy was crushed before it could become a rebellion. Daemon was captured alive. Not out of mercy out of calculation. [00:00:51] A dead Daemon would become a martyr. His brother Haegon would raise a new banner. But a living Daemon in a cage was just a failure. No one dies for a man who was pulled [00:01:07] from his horse. >> Come to see a fallen dragon? >> No. [00:01:26] >> Then why? >> I wanted to see the man [00:02:04] >> You won't die. [00:02:19] Because dead you are more dangerous than alive."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "QjFLMxSbdJQ",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\QjFLMxSbdJQ",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "QjFLMxSbdJQ",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 8,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 941,
+            "transcript_words": 180,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:01] Brynden Rivers Bloodraven Hand of the King They said he had a thousand [music] eyes and one. An albino with a red eye and wine-colored stains on his face. [music] A man everyone feared and rightly so. [00:00:21] His spies sat at every table in every castle. [music] He knew what you were planning before you knew it [music] yourself. Bloodraven's army surrounded White Walls quietly [00:00:36] without [music] warning. The conspiracy was crushed before it could become a rebellion. Daemon was captured alive. Not out of mercy out of calculation. [00:00:51] A dead Daemon would become a martyr. His brother Haegon would raise a new banner. But a living Daemon in a cage was just a failure. No one dies for a man who was pulled [00:01:07] from his horse. >> Come to see a fallen dragon? >> No. [00:01:26] >> Then why? >> I wanted to see the man [00:02:04] >> You won't die. [00:02:19] Because dead you are more dangerous than alive."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "QjFLMxSbdJQ",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 8,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 941,
+          "transcript_words": 180,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:01] Brynden Rivers Bloodraven Hand of the King They said he had a thousand [music] eyes and one. An albino with a red eye and wine-colored stains on his face. [music] A man everyone feared and rightly so. [00:00:21] His spies sat at every table in every castle. [music] He knew what you were planning before you knew it [music] yourself. Bloodraven's army surrounded White Walls quietly [00:00:36] without [music] warning. The conspiracy was crushed before it could become a rebellion. Daemon was captured alive. Not out of mercy out of calculation. [00:00:51] A dead Daemon would become a martyr. His brother Haegon would raise a new banner. But a living Daemon in a cage was just a failure. No one dies for a man who was pulled [00:01:07] from his horse. >> Come to see a fallen dragon? >> No. [00:01:26] >> Then why? >> I wanted to see the man [00:02:04] >> You won't die. [00:02:19] Because dead you are more dangerous than alive."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "SAZotzpq8No",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=SAZotzpq8No",
+        "original_title": "Arthur Dayne, the Sword of the Morning #shorts #ArthurDayne #SwordOfTheMorning #GameOfThrones",
+        "clean_title": "Arthur Dayne, the Sword of the Morning",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-07-18",
+        "description": "Arthur Dayne, the legendary Sword of the Morning, was considered the greatest knight of his age and wielded the famous blade Dawn. His unmatched skill and unwavering honor made him one of the most iconic warriors in Westerosi history.\n\nWatch the full animated film on my channel. ⚔️\n\n\n#ArthurDayne #SwordOfTheMorning #GameOfThrones #HouseOfTheDragon #ASOIAF #A SongOfIceAndFire #Westeros #Targaryen #Kingsguard #Dawn #Fantasy #Medieval #Epic #Animation #AnimatedFilm #FanFilm #GeorgeRRMartin #Shorts #YouTubeShorts #GoT",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] Arthur, the second son of Lord [music] Dayne, trained with the sword from childhood in Starfall under the burning [music] Dornish sun every day every year. He did not just [music] train. He lived it. While other boys ran and played Arthur [00:00:19] stood in the yard with a practice [music] sword and repeated his strikes again and again. And one day >> [music] >> he was deemed worthy. Dawn came to rest in his hands. A blade [music] from a star for a man who earned [00:00:36] the right to bear its name. Arthur Dayne [music] the Sword of the Morning. He wore it across [music] his back always. Walking the corridors of the Red Keep riding through forest [music] trails the [00:00:51] white hilt rising above his shoulder. People [music] saw that sword and they knew before them stood the one man you did [music] not want to fight."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "SAZotzpq8No",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\SAZotzpq8No",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "SAZotzpq8No",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 4,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 845,
+            "transcript_words": 158,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] Arthur, the second son of Lord [music] Dayne, trained with the sword from childhood in Starfall under the burning [music] Dornish sun every day every year. He did not just [music] train. He lived it. While other boys ran and played Arthur [00:00:19] stood in the yard with a practice [music] sword and repeated his strikes again and again. And one day >> [music] >> he was deemed worthy. Dawn came to rest in his hands. A blade [music] from a star for a man who earned [00:00:36] the right to bear its name. Arthur Dayne [music] the Sword of the Morning. He wore it across [music] his back always. Walking the corridors of the Red Keep riding through forest [music] trails the [00:00:51] white hilt rising above his shoulder. People [music] saw that sword and they knew before them stood the one man you did [music] not want to fight."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "SAZotzpq8No",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 4,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 845,
+          "transcript_words": 158,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] Arthur, the second son of Lord [music] Dayne, trained with the sword from childhood in Starfall under the burning [music] Dornish sun every day every year. He did not just [music] train. He lived it. While other boys ran and played Arthur [00:00:19] stood in the yard with a practice [music] sword and repeated his strikes again and again. And one day >> [music] >> he was deemed worthy. Dawn came to rest in his hands. A blade [music] from a star for a man who earned [00:00:36] the right to bear its name. Arthur Dayne [music] the Sword of the Morning. He wore it across [music] his back always. Walking the corridors of the Red Keep riding through forest [music] trails the [00:00:51] white hilt rising above his shoulder. People [music] saw that sword and they knew before them stood the one man you did [music] not want to fight."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "VriBoTeMByk",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=VriBoTeMByk",
+        "original_title": "The Tragic Story of Tyrion & Tysha #TyrionLannister #Tysha #Westeros #GeorgeRRMartin #Shorts",
+        "clean_title": "The Tragic Story of Tyrion & Tysha",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-07-14",
+        "description": "This is the story of Tyrion Lannister and Tysha, taken from my cinematic film about Tywin Lannister.\n\nIf you'd like to watch the complete story, the full movie is available on my channel.\n\n#TyrionLannister #Tysha #TywinLannister #GameOfThrones #HouseLannister #ASOIAF #Westeros #GeorgeRRMartin #Shorts",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] Her name was [music] Tysha. A simple farmer's daughter. Ordinary. Nobodies. Beautiful. Tyrion, for the first time in his life, felt that someone saw him. Not the dwarf, [music] not the freak. [00:00:18] Him. A person. And she looked at him the same way. They found a drunk septin, married, settled in a little house by the sea. Two weeks. Whole days together. [music] [00:00:34] Tysha sang to him, laughed, loved. Two weeks of happiness. The only ones in Tyrion's life. Tysha. Simple, with a genuine soul. She was real. [00:00:50] Beautiful. Full of life. Tyrion was happier than he had ever been. But that quiet happiness"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "VriBoTeMByk",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\VriBoTeMByk",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "VriBoTeMByk",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 4,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 633,
+            "transcript_words": 118,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] Her name was [music] Tysha. A simple farmer's daughter. Ordinary. Nobodies. Beautiful. Tyrion, for the first time in his life, felt that someone saw him. Not the dwarf, [music] not the freak. [00:00:18] Him. A person. And she looked at him the same way. They found a drunk septin, married, settled in a little house by the sea. Two weeks. Whole days together. [music] [00:00:34] Tysha sang to him, laughed, loved. Two weeks of happiness. The only ones in Tyrion's life. Tysha. Simple, with a genuine soul. She was real. [00:00:50] Beautiful. Full of life. Tyrion was happier than he had ever been. But that quiet happiness"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "VriBoTeMByk",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 4,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 633,
+          "transcript_words": 118,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] Her name was [music] Tysha. A simple farmer's daughter. Ordinary. Nobodies. Beautiful. Tyrion, for the first time in his life, felt that someone saw him. Not the dwarf, [music] not the freak. [00:00:18] Him. A person. And she looked at him the same way. They found a drunk septin, married, settled in a little house by the sea. Two weeks. Whole days together. [music] [00:00:34] Tysha sang to him, laughed, loved. Two weeks of happiness. The only ones in Tyrion's life. Tysha. Simple, with a genuine soul. She was real. [00:00:50] Beautiful. Full of life. Tyrion was happier than he had ever been. But that quiet happiness"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "WxQ-FVRVuaI",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=WxQ-FVRVuaI",
+        "original_title": "Rhaegar and Lyanna’s wedding. #gameofthrones #rhaegartargaryen #westeros #lyanna",
+        "clean_title": "Rhaegar and Lyanna’s wedding",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-05-24",
+        "description": "Watch the full version on the channel.",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:01] All eyes. Rhaegar and Lyanna were married. >> [music] >> A secret ceremony. Just the two of them. And Arthur beside them. He saw their faces. >> [music] >> Saw how Rhaegar, the forever melancholy prince, the man who had [music] carried the [00:00:17] weight of prophecy his entire life, smiled. >> [music] >> Truly. For the first time. And Lyanna, the wolf girl of the north, fierce, strong, fearless, looked at him as though she had [music] [00:00:32] found what she had been searching for all her life. >> [music] [00:00:49] >> I thought I would never find you. >> [music] >> I'm very happy >> [music] >> that you found me. [00:01:06] Arthur stood to the side in his white [music] cloak, Dawn across his back. And he saw this was not a scheme, not a kidnapping, not madness. [music] This was love. [00:01:28] Beside her, >> [music] >> she heard his steps, turned, saw"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "WxQ-FVRVuaI",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\WxQ-FVRVuaI",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "WxQ-FVRVuaI",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 6,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 880,
+            "transcript_words": 157,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:01] All eyes. Rhaegar and Lyanna were married. >> [music] >> A secret ceremony. Just the two of them. And Arthur beside them. He saw their faces. >> [music] >> Saw how Rhaegar, the forever melancholy prince, the man who had [music] carried the [00:00:17] weight of prophecy his entire life, smiled. >> [music] >> Truly. For the first time. And Lyanna, the wolf girl of the north, fierce, strong, fearless, looked at him as though she had [music] [00:00:32] found what she had been searching for all her life. >> [music] [00:00:49] >> I thought I would never find you. >> [music] >> I'm very happy >> [music] >> that you found me. [00:01:06] Arthur stood to the side in his white [music] cloak, Dawn across his back. And he saw this was not a scheme, not a kidnapping, not madness. [music] This was love. [00:01:28] Beside her, >> [music] >> she heard his steps, turned, saw"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "WxQ-FVRVuaI",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 6,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 880,
+          "transcript_words": 157,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:01] All eyes. Rhaegar and Lyanna were married. >> [music] >> A secret ceremony. Just the two of them. And Arthur beside them. He saw their faces. >> [music] >> Saw how Rhaegar, the forever melancholy prince, the man who had [music] carried the [00:00:17] weight of prophecy his entire life, smiled. >> [music] >> Truly. For the first time. And Lyanna, the wolf girl of the north, fierce, strong, fearless, looked at him as though she had [music] [00:00:32] found what she had been searching for all her life. >> [music] [00:00:49] >> I thought I would never find you. >> [music] >> I'm very happy >> [music] >> that you found me. [00:01:06] Arthur stood to the side in his white [music] cloak, Dawn across his back. And he saw this was not a scheme, not a kidnapping, not madness. [music] This was love. [00:01:28] Beside her, >> [music] >> she heard his steps, turned, saw"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    },
+    {
+      "video_id": "h4hbLS1BTqA",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=h4hbLS1BTqA",
+        "original_title": "Visenya arrives at the Eyrie castle#aegontheconqueror#visenyatargaryen #targaryen#gameofthrones",
+        "clean_title": "Visenya arrives at the Eyrie castle#aegontheconqueror#visenyatargaryen",
+        "channel": "Black Raven | Westeros",
+        "upload_date": "2026-04-29",
+        "description": "“Visenya takes the Eyrie without bloodshed. Animated Westeros story — check out the channel and watch the full version.”",
+        "source_category": "Film & Animation",
+        "youtube_category_name": "Film & Animation",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "partial",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] For a thousand years the Arryn sat there, behind the Bloody Gate, untouchable. Visenya simply flew over all of it, landed in the courtyard. Sharra Arryn, the Queen Regent, came out to meet her. With her young son by the hand. The boy was six years old, Ronald [00:00:18] [music] Arryn. Know what the boy did? He was not afraid. [music] He looked at Vhagar and asked for a [00:00:36] ride. Visenya looked at Sharra. Sharra looked at the dragon, at her son, [00:00:51] at the sky, and surrendered. Visenya put the boy on Vhagar and flew him over the Vale. Ronald laughed, and his mother stood below and watched her kingdom slip [music] away. No blood, no fire. One flight and the Vale was mine."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "h4hbLS1BTqA",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\h4hbLS1BTqA",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "h4hbLS1BTqA",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "partial",
+            "transcript_completeness": "partial",
+            "timestamp_count": 4,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 703,
+            "transcript_words": 135,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "partial",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] For a thousand years the Arryn sat there, behind the Bloody Gate, untouchable. Visenya simply flew over all of it, landed in the courtyard. Sharra Arryn, the Queen Regent, came out to meet her. With her young son by the hand. The boy was six years old, Ronald [00:00:18] [music] Arryn. Know what the boy did? He was not afraid. [music] He looked at Vhagar and asked for a [00:00:36] ride. Visenya looked at Sharra. Sharra looked at the dragon, at her son, [00:00:51] at the sky, and surrendered. Visenya put the boy on Vhagar and flew him over the Vale. Ronald laughed, and his mother stood below and watched her kingdom slip [music] away. No blood, no fire. One flight and the Vale was mine."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "h4hbLS1BTqA",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "partial",
+          "transcript_completeness": "partial",
+          "timestamp_count": 4,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 703,
+          "transcript_words": 135,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "partial",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] For a thousand years the Arryn sat there, behind the Bloody Gate, untouchable. Visenya simply flew over all of it, landed in the courtyard. Sharra Arryn, the Queen Regent, came out to meet her. With her young son by the hand. The boy was six years old, Ronald [00:00:18] [music] Arryn. Know what the boy did? He was not afraid. [music] He looked at Vhagar and asked for a [00:00:36] ride. Visenya looked at Sharra. Sharra looked at the dragon, at her son, [00:00:51] at the sky, and surrendered. Visenya put the boy on Vhagar and flew him over the Vale. Ronald laughed, and his mother stood below and watched her kingdom slip [music] away. No blood, no fire. One flight and the Vale was mine."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    }
+  ]
+}

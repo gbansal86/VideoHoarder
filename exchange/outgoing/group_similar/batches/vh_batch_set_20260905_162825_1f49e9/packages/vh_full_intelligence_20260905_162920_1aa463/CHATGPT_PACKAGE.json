@@ -1,0 +1,2895 @@
+{
+  "package_id": "vh_full_intelligence_20260905_162920_1aa463",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "FULL_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260905_162920_1aa463",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "DIY and making projects",
+      "batch_number": 7,
+      "batch_total": 49,
+      "batch_size": 12,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 7 of 49 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260905_162920_1aa463",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260905_162920_1aa463"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260905_162920_1aa463",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "DIY and making projects",
+      "batch_number": 7,
+      "batch_total": 49,
+      "batch_size": 12,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "59ea955a-e623-4973-9359-c87aea223840",
+    "package_id": "vh_full_intelligence_20260905_162920_1aa463",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "CgEs12XWwaQ",
+      "IzrVhjZiy2M"
+    ],
+    "evidence_grades": {
+      "CgEs12XWwaQ": "A",
+      "IzrVhjZiy2M": "E"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "DIY and making projects",
+      "batch_number": 7,
+      "batch_total": 49,
+      "batch_size": 12,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "a43e4af23f3432848b2d8a9df73f3999834d5cf2e5a417da685d91d74a28e874",
+      "prompt.json": "113f3965780d50f71f7aeacefdd7f2e845ae887ef8b4e58bd23edc63ce136ca4",
+      "schema.json": "a6651695cf385acd69c77390c6abc370850e6c398665a6c8618ebc4ece9aa678"
+    },
+    "created_at": "2026-09-05 16:29:20",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "CgEs12XWwaQ",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=CgEs12XWwaQ",
+        "original_title": "Tool Storage - DIY",
+        "clean_title": "Tool Storage - DIY",
+        "channel": "KevBotWorkshop",
+        "upload_date": "2020-10-07",
+        "description": "Plans are available in my Esty store. They include a cut list and step by step instructions.\nhttps://www.etsy.com/listing/990984967/tool-storage-digital-plans?ref=shop_home_active_1\n\n\n\nAfter many years of using an abusing my tools by throwing them in dresser drawers, I decided enough was enough. I built this 6ftx2ft storage unit to house all my tools and then some. The name of the game was space utilization. My goal here was to create drawers that would not be come catch alls. This is why I made so many shallow drawers. There is less chance of me stacking tools on top of each other now. In the future I will post a part 2 to this project in which I make dividers for all my tools within the drawers to keep them in their place. \n\n\nThe unit is made with 3/4 Birch ply and 1/2 oak ply for the drawer bottoms. Plans have been altered with 1/2\" ply for drawers sides to save money and keep the weight down. Drawer slides used are 20\"\n\n\nPaint color on this is Pittsburgh Paints Nautica Line - Majolica Blue\n\n\nThe top was trimmed with solid birch and finished with 4 coats of polyurethane.\n\n\nLinks\nRockler Casters - https://rb.gy/27p9hk\n\nDrawer Pull Jig - Gunflint Designs https://youtu.be/0RJCHb_n8Gk\n\nDrawer Slides - https://www.amazon.com/gp/product/B07BGVWDW7/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1\n\nDrawer Pulls - https://www.amazon.com/gp/product/B07JMN2Z1R/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1\n\n\n#spax #toolstorage #storage",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "existing_vtt",
+          "language": "en",
+          "quality": "high",
+          "completeness": "complete",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:01] hey i'm kevin and today i'm going to show you how i made this tool storage in the kevbat workshop [Music] [00:00:21] welcome back to the cat bot workshop today [Music] i have a confession to make [Music] i am a tool abuser [00:00:49] this is a lovely room of death that's right my tools have been living in my sister's childhood dresser for quite some time now these drawers have become a catch-all for everything i have it's really frustrating to have zero organization when you're trying to find something i just realized that i needed more space and i needed to utilize that space [Music] [00:01:10] appropriately so with this project i need to use all the plywood that i bought on this i've designed this organizer so that it can be made with three sheets of three quarter inch [00:01:26] plywood as well as two sheets of half inch plywood i got baltic birch and three quarter and i have oak in the half inch they didn't have baltic birch at the store and i just wanted something nicer than construction grade so that's what we're [00:01:43] working on this project i need to make sure that i'm taking extra care with breaking down my material because there's not a lot of room for error with all these cuts because i'm going to be using everything from all these boards so all the offcuts are going to be used for drawers and all [00:01:58] that kind of stuff so i need to just make sure that i am measuring correctly and cutting correctly because everything needs to be precise on this so i don't have to go out and buy more plywood the storage unit measures in at six foot by two foot and i'm building up the top [00:02:13] by gluing some pieces of pine to the bottom rather than gluing a full sheet of ply this way i can give the appearance of thickness but i can cut back on some of the weight we need to cut the fat i say we start right here [00:02:40] i let the boards overhang by just a little bit so i can trim it flush afterwards working with this much ply can be a bit of a hassle as these are rather large and difficult to maneuver so a lot of this has to do with me breaking down material so i will use my sketchup design to keep you with me on [00:02:56] this right now i'm cutting down the vertical sides at 31.5 inches tall by 23.5 inches wide to leave space for the top to overhang a bit with the four verticals cut i can cut out a four inch by four inch notch for the toe kick and a notch at the top so i can have a horizontal support there [00:03:22] with the verticals done i can now start working on the supports for the carcass these i am cutting right here are 23 inch by four inch and i will be attaching them with pocket holes [Music] [00:03:46] so [Music] [00:04:02] for the horizontal front support i'm cutting full length strips for the top and two for the bottom all of this is strategic for strength as well as hiding end grain plywood as much as possible and if i had thought about this before i put the carcass together i would have drilled pocket holes so i had to go back and fix this i can [00:04:19] fix that using a spacer as the same length as the back supports i can install the horizontal supports [00:04:53] all right it's a new day in the shop i finished putting the carcass together last night super excited about that because it looks really good uh now i need to start breaking down all these pieces here i'm gonna be making the drawers so all my drawers are gonna be made out of three-quarter inch ply i don't have the exact measurements for [00:05:09] these yet i actually have the drawer slides coming in tomorrow so i'm going to just start rough ripping these down so that i can have all the drawer parts and then i can start actually putting in the dado and for the bottom which is going to be coming from this half inch plywood i don't want to cut everything exactly [00:05:26] to size because i don't know these drawer slides i haven't used them before and they're going to be coming in so i want to make sure that i have the exact dimensions down and so i can make all my cuts perfectly and that all the drawers fit in nicely so right now i'm just going to start [00:05:41] cutting down these boards and we're going to put in some dadoes and then tomorrow i'll be able to actually start putting together the drawers and this project is coming together pretty quickly as for the drawers i'm ripping for three different sizes [00:05:56] the first is two and a half inches tall the second four and a half inches and the third six and one quarter inches with all of these cut i can cut down the sides for the drawers because they will all be the same at 20 and a half inches [00:06:12] you can see me here attaching a scrap piece of wood to my fence with some clamps this is so that i can use a stop to make repeat cuts but i'm also not trapping my piece between the blade and the fence [Music] so the drawer slides finally came in the [00:06:27] mail and they're a little different from what i'm usually working with i'll typically get my slides from the big box store or rockler or something like that but with these i decided to go with a little bit cheaper on amazon rather than spending like ten dollars per pair of slides i'm spending [00:06:44] about six ish with these they're a little bit different they um size wise they're a little bit bigger on the sides they're they're not flat like i get with the other slides but with these there's kind of uh this lip here and so i have to take that into account when [00:07:00] i'm actually putting these in which makes them a little harder to do so what i've done here was actually put in two of the sides for the drawer i've actually seen steve ramsey do this and so it's a way that i can actually get the actual distance of these [00:07:16] drawers here rather than trying to just measure and subtract for your slides and your sides and all that kind of stuff and i'm actually going to use a little trick i've used this in my coffee table build but i'm actually going to do it again here is that you use two pieces of wood and a clamp [00:07:32] and you can slide these and you'll be able to get the exact distance as you want so i'll be able to put these in between the two drawers slide them apart and then i'll clamp them down and i'll know exactly how long i can make my front and back one thing i wanted to [00:07:47] make sure with these though is that all my openings were the exact same in distance the first time i put this together i actually only used my spacer on this one and the front one there uh and so my middle ones was slightly off by like a quarter of an [00:08:02] inch so i went back and i used the spacer on the first one the second one then the third one so now they are all exactly the same and either trim a little bit off of here so when i actually make my fronts and my backs for my drawers they're all going to be the same size now if there was a little bit [00:08:18] difference you might have it where the drawers are racking because they're slightly too big or slightly too small but now that i have everything set i can actually go and make those cuts for the front and back [Music] [00:08:36] so rather than me showing you another montage of me cutting front and backs i decided to do that off camera typically for drawers i use quarter inch plywood for the bottoms and i cut a dado into the sides to top the bottom [00:08:51] for this since i have half inch plywood i'm going to put a rabbet into the bottom of the drawers to save space most of these drawers are pretty shallow so i didn't want to lose more space by using the dado these drawers are a little overkill using a thicker material but i'm not upset because it'll just make them stronger and with the bottom drawers a stronger bottom will be great because [00:09:06] then i could put some of my power tools in the drawers with the sacrificial fence attached to my table saw fence i rose the blade up to where i wanted the rabbet to be the sacrificial fence is used so i can cut all the way up to the fence safely and i don't have extra material to remove afterwards [00:09:29] for the fasteners for this project i am using spax screws specs t-star plus are phenomenal because of a better bit fit so they have less falling out these screws require less torque and because of the point design they cause less splitting which means pilot holes aren't necessary while they aren't specifically [00:09:44] designed for pocket holes they worked perfectly here for me to make it easier on me for assembly i drove in some brad nails [Music] [00:10:00] checking often with the combination square i made sure the drawers were square if they were out of square all the drawers would not fit properly [Music] [00:10:16] off camera i cut the bottoms for the drawers out of half inch ply and they fit perfectly here's where the spack screws were able to shine as i didn't have to drill pilot holes i was able to assemble 18 drawers [Music] quickly [00:10:32] for the drawer fronts i'm using false fronts and these are coming from one sheet of ply as i cut them apart on the table saw the blade will make a perfect 1 8 inch gap in between each drawer front cutting these to length was very simple i actually cut the left and the right drawer fronts at the same length because [00:10:48] they are the same size being slightly bigger than the middle front because they have to cover the left and the right vertical completely the extra leftover will be perfect for the middle fronts i do not care about a continuous grain on this because i'm doing something i don't normally do and having them painted painted for the [00:11:04] color i'm going with a nice kevbat blue [00:11:29] before i installed all the runners and drawers i finished up the top to hide the plywood end grain i edge banded with some birch and i used mitered corners i removed most of the waste with a hand plane and came back with a flush trim bit to clean it up [Music] [00:11:47] after some sanding i put four coats of poly on the top and yes i came back with a brush after the roller to get rid of the bubbles of course for installing the drawers i came up with a system i used half inch spacers in between each drawer to elevate them just right to attach them to the runners [00:12:07] to attach the runners to the drawer you drive in the first screw and then the second screw before removing the drawer and driving in the third one thing i had to figure out is the spacing between the slide for each slide i used a spacer to determine where i should install it using a couple of straight edges and [00:12:22] clamps i could support the sides nice and level to install them [00:12:38] [Music] i wanted to move this easily around the shop if i ever needed another surface somewhere so i used these casters that i picked up from rockler [00:12:54] [Music] these are used for more work benches mainly with thicker legs so the screws poke through on the other side the bottom is fine because i can build it out with a scrap piece of ply [00:13:10] but the top i had to cut down the screw so it would not interfere with the bottom drawer [Music] before i attached for the drawer fronts i drilled for the drawer pulls i used this homemade jig that i learned from gunflint designs to do that i'll [00:13:26] leave a link in the description to his video on how to make this because it made it wildly easy to locate the holes for the pools after locating the center line you can drill the holes however far down you would like [Music] to attach these i lined up the bottom [00:13:42] drawer front flush to the bottom and then drove in some screws through the pull holes to fix them in place from there you can drive in some screws on the inside remove the screws from the pull holes countersink for the pull screws and attach the pull [00:13:59] like i said before the drawer faces will be an eighth of an inch apart you can use pieces from a paint stick to space these appropriately [00:14:17] with all the faces installed i can attach the top and i did that with some pocket screws from below i'm so glad i put this on casters because it is easy for me to move to its [00:14:33] final home but if i ever need to move it again i know i have that option now i can start loading this baby up thing is better than i could have imagined i have more space than i actually need and the best part is these [00:14:49] drawers aren't going to be filled with air before all the drawers were so deep that the tools got stacked on top of each other and there was a lot of wasted space now i have a lot more shallow drawers made perfect for tools these tools are just put in there but that'll be fine for right now i will be adding some organization in the future [00:15:04] to keep these tools still and in the proper place and if you want to see how i do that make sure you hit that like and subscribe button and turn on that bell to get a notification when a new video comes out if you're watching this farther in the future the second part of this might have already come out so i'll have it right over here until then i have two more loaded up for [00:15:20] you right now that's it for now thanks for watching and i'll see you next time in the cat bot workshop"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 688,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: CgEs12XWwaQ",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 321",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @KevBotWorkshop | Likes: 8 | Replies: 11 | Published: 2021-03-30T03:53:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Plans are now available on my Etsy.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "https://www.etsy.com/listing/990984967/tool-storage-digital-plans?ref=shop_home_active_1",
+              "likes": null
+            },
+            {
+              "comment_id": "c00014",
+              "author": "",
+              "text": "[COMMENT 2] Author: @MrFolder40 | Likes: 0 | Replies: 0 | Published: 2021-04-03T01:28:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "Yes dude! I've been waiting for this.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00017",
+              "author": "",
+              "text": "[COMMENT 3] Author: @M-J-P | Likes: 0 | Replies: 0 | Published: 2021-04-04T17:23:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "Thank you... My project starts tomorrow :) I will make one change of splitting it into two cabinets of 48 and 24 due to space constraints.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "Your guide and video will help as this is my first project starting from scratch.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 4] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2021-04-04T17:52:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "@M-J-P Happy building! Id love to see the final product! @ me on insta!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 5] Author: @larryshapiro11 | Likes: 0 | Replies: 0 | Published: 2021-04-06T13:38:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "What size drawer slides did you use for these plans?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 6] Author: @fredycordero2217 | Likes: 0 | Replies: 0 | Published: 2021-08-03T17:31:52Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Your a Legend.!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 7] Author: @fryedtopinz | Likes: 0 | Replies: 0 | Published: 2026-02-06T14:37:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "Tool abuse? Na just cluttered storage. And here I thought you were talking about workman's law! NGL after 20 in Naval Aviation, the before's made my eye twitch. Nice tool box though!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 8] Author: @ABH313 | Likes: 7 | Replies: 0 | Published: 2021-02-05T15:46:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "the comedy in the editing was hilarious and the information and instruction was great. just subbed.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 9] Author: @jdogmcnasty1980 | Likes: 1 | Replies: 0 | Published: 2022-01-06T23:56:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "the ace ventura edit gets a like from me!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 10] Author: @Diywithjenn | Likes: 9 | Replies: 1 | Published: 2021-12-05T04:05:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "As someone who has really bad ADHD, I appreciate this video. You made it very interesting the entire time. Plus, your work turned out really nice!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 11] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-01-02T07:54:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "O I understand completely, im the same way. Glad you liked the video",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 12] Author: @jaysonbackes9279 | Likes: 1 | Replies: 0 | Published: 2021-10-23T02:50:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "Great job! BTW, at 9:55, one day that brad is going to turn and get your thumb.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 13] Author: @Petrol360 | Likes: 16 | Replies: 0 | Published: 2020-12-16T00:06:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Love the color. Stylish but industrial! Great build!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 14] Author: @rjrj570 | Likes: 1 | Replies: 0 | Published: 2023-05-02T01:36:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "learned more in this video than any (all) the others.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 15] Author: @lexdemonica | Likes: 2 | Replies: 0 | Published: 2021-03-27T13:01:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "Solid points for including minions.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 16] Author: @jaydoe3707 | Likes: 1 | Replies: 0 | Published: 2022-12-29T16:49:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "I really like that color.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 17] Author: @karenswank1865 | Likes: 48 | Replies: 1 | Published: 2023-08-13T13:14:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "Upon unboxing, I was immediately upset at how the rails were very noticeably bent. But I kept going, all tools needed to assemble were included https://www.youtube.com/post/UgkxqtX4Dxs6aecAZEuz6GY5-d81YecKCshn and I had it set up in about 30 minutes. Honestly I love this thing, make sure to read the measurements and measure your space so you know if it'll work for you. I bought this to put inside my closet, underneath where I hang my clothes and it is absolutely perfect! It is VERY sturdy and all drawers glide easily and mine are stuffed, and they are still flush when closed.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "[COMMENT 18] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-08-16T18:56:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "Thanks Karen!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00066",
+              "author": "",
+              "text": "[COMMENT 19] Author: @smarkalet9078 | Likes: 0 | Replies: 0 | Published: 2021-10-26T14:06:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "Some nice drawer tricks here!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "[COMMENT 20] Author: @codetech5598 | Likes: 3 | Replies: 1 | Published: 2022-01-13T20:05:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "With all of those ball bearing slides, this must be a high budget project.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00072",
+              "author": "",
+              "text": "[COMMENT 21] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-03-01T18:03:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00947",
+              "author": "",
+              "text": "Thats a great question. I am not exactly sure. These Drawers are pretty beefy 3/4 ply for drawers is a little over kill and a 1/2 inch bottom means that it most likely wont bow with weight so I think it could hold a fair amount. Really depends on the weight of the drawer runners probably.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00949",
+              "author": "",
+              "text": "[COMMENT 303] Author: @KMT15 | Likes: 0 | Replies: 2 | Published: 2023-04-15T18:22:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00950",
+              "author": "",
+              "text": "Top right handle looks off",
+              "likes": null
+            },
+            {
+              "comment_id": "c00952",
+              "author": "",
+              "text": "[COMMENT 304] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-04-21T19:31:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00953",
+              "author": "",
+              "text": "\"No, no, it just seems that way 'cause you only got one shoe\" - Happy Gilmore",
+              "likes": null
+            },
+            {
+              "comment_id": "c00955",
+              "author": "",
+              "text": "[COMMENT 305] Author: @KMT15 | Likes: 0 | Replies: 0 | Published: 2023-04-23T18:00:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00956",
+              "author": "",
+              "text": "@KevBotWorkshop “ohhhhh yeahhh” lol",
+              "likes": null
+            },
+            {
+              "comment_id": "c00958",
+              "author": "",
+              "text": "[COMMENT 306] Author: @BrianRousseau | Likes: 0 | Replies: 1 | Published: 2022-03-15T02:52:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00959",
+              "author": "",
+              "text": "Smart design, and skillful build... but you don't need the meme-esque video clips. They only distract/detract from your narrative. Believe in your own content, man.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00961",
+              "author": "",
+              "text": "[COMMENT 307] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-03-26T17:55:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00962",
+              "author": "",
+              "text": "appreciate the feedback. I like em cause thats my personality showing through",
+              "likes": null
+            },
+            {
+              "comment_id": "c00964",
+              "author": "",
+              "text": "[COMMENT 308] Author: @bobbg9041 | Likes: 0 | Replies: 1 | Published: 2023-09-17T07:16:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00965",
+              "author": "",
+              "text": "I dont get it, its a wood tool chest.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00966",
+              "author": "",
+              "text": "Whats so wrong using MDF ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00967",
+              "author": "",
+              "text": "MDF has advantages over plywood",
+              "likes": null
+            },
+            {
+              "comment_id": "c00968",
+              "author": "",
+              "text": "Cost being the largest, then stability",
+              "likes": null
+            },
+            {
+              "comment_id": "c00969",
+              "author": "",
+              "text": "If your just going to put paint on it",
+              "likes": null
+            },
+            {
+              "comment_id": "c00970",
+              "author": "",
+              "text": "Set it up off the floor on a sub frame you do not need to cut a toe kick the 2x4 sub frame is your toekick it also gets the MDF off the floor, paint will protect it from water and the sub frame gets it off the floor.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00971",
+              "author": "",
+              "text": "The Baltic burch should be saved for kitchen cabinets, no dam wonder its over 100 dollars a sheet.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00973",
+              "author": "",
+              "text": "Your wasting valuable resources on",
+              "likes": null
+            },
+            {
+              "comment_id": "c00974",
+              "author": "",
+              "text": "Garage cabnits the next home owner will just tear out and trash.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00975",
+              "author": "",
+              "text": "Shop finiture and equipment should be cheap lumber products.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00976",
+              "author": "",
+              "text": "Not the higest qulity.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00978",
+              "author": "",
+              "text": "Every project I see guy make for the shop are done with high quality materials its a waste.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00980",
+              "author": "",
+              "text": "[COMMENT 309] Author: @KevBotWorkshop | Likes: 1 | Replies: 0 | Published: 2023-09-17T20:06:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00981",
+              "author": "",
+              "text": "You ok pal? need a hug?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00983",
+              "author": "",
+              "text": "[COMMENT 310] Author: @chrisvaseywhiteroselofts3511 | Likes: 0 | Replies: 2 | Published: 2024-01-19T22:29:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00984",
+              "author": "",
+              "text": "Leave all the video clips out, no need",
+              "likes": null
+            },
+            {
+              "comment_id": "c00986",
+              "author": "",
+              "text": "[COMMENT 311] Author: @KevBotWorkshop | Likes: 1 | Replies: 0 | Published: 2024-01-20T18:27:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00987",
+              "author": "",
+              "text": "Noted!",
+              "likes": null
+            },
+            {
+              "comment_id": "c00989",
+              "author": "",
+              "text": "[COMMENT 312] Author: @chrisvaseywhiteroselofts3511 | Likes: 0 | Replies: 0 | Published: 2024-01-20T18:41:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00990",
+              "author": "",
+              "text": "You don't need the video clips your work stands out mate",
+              "likes": null
+            },
+            {
+              "comment_id": "c00992",
+              "author": "",
+              "text": "[COMMENT 313] Author: @mattkeller2861 | Likes: 2 | Replies: 0 | Published: 2021-01-07T17:03:32Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00993",
+              "author": "",
+              "text": "This dude needs to introduce his two front teeth.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00995",
+              "author": "",
+              "text": "[COMMENT 314] Author: @iwantosavemoney | Likes: 0 | Replies: 1 | Published: 2024-05-01T19:55:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00996",
+              "author": "",
+              "text": "Copy of another design",
+              "likes": null
+            },
+            {
+              "comment_id": "c00998",
+              "author": "",
+              "text": "[COMMENT 315] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2024-05-02T20:46:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00999",
+              "author": "",
+              "text": "o yeah? whats that?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01001",
+              "author": "",
+              "text": "[COMMENT 316] Author: @MyEinhellWorkshop | Likes: 0 | Replies: 1 | Published: 2023-09-13T20:27:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01002",
+              "author": "",
+              "text": "Dude no offense because i can appreciate the workmanship but a lot of your drawers and handles are clearly crooked.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01004",
+              "author": "",
+              "text": "[COMMENT 317] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-09-13T21:25:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01005",
+              "author": "",
+              "text": "Only seems that way cause you're wearing one shoe",
+              "likes": null
+            },
+            {
+              "comment_id": "c01007",
+              "author": "",
+              "text": "[COMMENT 318] Author: @richardmorency1068 | Likes: 0 | Replies: 0 | Published: 2021-12-13T00:21:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01008",
+              "author": "",
+              "text": "Bcp trop d'annonces ! c'est merdique",
+              "likes": null
+            },
+            {
+              "comment_id": "c01010",
+              "author": "",
+              "text": "[COMMENT 319] Author: @TheWilo65 | Likes: 0 | Replies: 0 | Published: 2021-01-30T23:40:36Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01011",
+              "author": "",
+              "text": "tu parles trop et je comprends rien.... bye",
+              "likes": null
+            },
+            {
+              "comment_id": "c01013",
+              "author": "",
+              "text": "[COMMENT 320] Author: @MVE7573 | Likes: 0 | Replies: 1 | Published: 2022-10-20T06:28:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01014",
+              "author": "",
+              "text": "slightly off... a 1/4 of an inch!? thats huge lol. why does the US use imperial... so frustrating. stuck in the stone ages, man!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01016",
+              "author": "",
+              "text": "[COMMENT 321] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-10-28T12:55:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01017",
+              "author": "",
+              "text": "I completely agree. 1 of 3 countries that use it. One thing about woodworking though is knowing how to fix mistakes and making adjustments to the plans, its all a learning process my friend",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "CgEs12XWwaQ",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\KevBotWorkshop\\20201007 - Tool Storage - DIY\\20201007 - Tool Storage - DIY [CgEs12XWwaQ].mp4",
+            "subtitle": "D:\\YT GUi\\VideoHoarder Videos\\KevBotWorkshop\\20201007 - Tool Storage - DIY\\_data\\20201007 - Tool Storage - DIY [CgEs12XWwaQ].en-orig.vtt",
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\KevBotWorkshop\\20201007 - Tool Storage - DIY",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\CgEs12XWwaQ",
+            "present": {
+              "media": true,
+              "subtitle": true,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "CgEs12XWwaQ",
+            "transcript_available": true,
+            "transcript_source": "existing_vtt",
+            "transcript_language": "en",
+            "transcript_quality": "high",
+            "transcript_completeness": "complete",
+            "timestamp_count": 53,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 13215,
+            "transcript_words": 2729,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "A",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "existing_vtt",
+              "language": "en",
+              "quality": "high",
+              "completeness": "complete",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:01] hey i'm kevin and today i'm going to show you how i made this tool storage in the kevbat workshop [Music] [00:00:21] welcome back to the cat bot workshop today [Music] i have a confession to make [Music] i am a tool abuser [00:00:49] this is a lovely room of death that's right my tools have been living in my sister's childhood dresser for quite some time now these drawers have become a catch-all for everything i have it's really frustrating to have zero organization when you're trying to find something i just realized that i needed more space and i needed to utilize that space [Music] [00:01:10] appropriately so with this project i need to use all the plywood that i bought on this i've designed this organizer so that it can be made with three sheets of three quarter inch [00:01:26] plywood as well as two sheets of half inch plywood i got baltic birch and three quarter and i have oak in the half inch they didn't have baltic birch at the store and i just wanted something nicer than construction grade so that's what we're [00:01:43] working on this project i need to make sure that i'm taking extra care with breaking down my material because there's not a lot of room for error with all these cuts because i'm going to be using everything from all these boards so all the offcuts are going to be used for drawers and all [00:01:58] that kind of stuff so i need to just make sure that i am measuring correctly and cutting correctly because everything needs to be precise on this so i don't have to go out and buy more plywood the storage unit measures in at six foot by two foot and i'm building up the top [00:02:13] by gluing some pieces of pine to the bottom rather than gluing a full sheet of ply this way i can give the appearance of thickness but i can cut back on some of the weight we need to cut the fat i say we start right here [00:02:40] i let the boards overhang by just a little bit so i can trim it flush afterwards working with this much ply can be a bit of a hassle as these are rather large and difficult to maneuver so a lot of this has to do with me breaking down material so i will use my sketchup design to keep you with me on [00:02:56] this right now i'm cutting down the vertical sides at 31.5 inches tall by 23.5 inches wide to leave space for the top to overhang a bit with the four verticals cut i can cut out a four inch by four inch notch for the toe kick and a notch at the top so i can have a horizontal support there [00:03:22] with the verticals done i can now start working on the supports for the carcass these i am cutting right here are 23 inch by four inch and i will be attaching them with pocket holes [Music] [00:03:46] so [Music] [00:04:02] for the horizontal front support i'm cutting full length strips for the top and two for the bottom all of this is strategic for strength as well as hiding end grain plywood as much as possible and if i had thought about this before i put the carcass together i would have drilled pocket holes so i had to go back and fix this i can [00:04:19] fix that using a spacer as the same length as the back supports i can install the horizontal supports [00:04:53] all right it's a new day in the shop i finished putting the carcass together last night super excited about that because it looks really good uh now i need to start breaking down all these pieces here i'm gonna be making the drawers so all my drawers are gonna be made out of three-quarter inch ply i don't have the exact measurements for [00:05:09] these yet i actually have the drawer slides coming in tomorrow so i'm going to just start rough ripping these down so that i can have all the drawer parts and then i can start actually putting in the dado and for the bottom which is going to be coming from this half inch plywood i don't want to cut everything exactly [00:05:26] to size because i don't know these drawer slides i haven't used them before and they're going to be coming in so i want to make sure that i have the exact dimensions down and so i can make all my cuts perfectly and that all the drawers fit in nicely so right now i'm just going to start [00:05:41] cutting down these boards and we're going to put in some dadoes and then tomorrow i'll be able to actually start putting together the drawers and this project is coming together pretty quickly as for the drawers i'm ripping for three different sizes [00:05:56] the first is two and a half inches tall the second four and a half inches and the third six and one quarter inches with all of these cut i can cut down the sides for the drawers because they will all be the same at 20 and a half inches [00:06:12] you can see me here attaching a scrap piece of wood to my fence with some clamps this is so that i can use a stop to make repeat cuts but i'm also not trapping my piece between the blade and the fence [Music] so the drawer slides finally came in the [00:06:27] mail and they're a little different from what i'm usually working with i'll typically get my slides from the big box store or rockler or something like that but with these i decided to go with a little bit cheaper on amazon rather than spending like ten dollars per pair of slides i'm spending [00:06:44] about six ish with these they're a little bit different they um size wise they're a little bit bigger on the sides they're they're not flat like i get with the other slides but with these there's kind of uh this lip here and so i have to take that into account when [00:07:00] i'm actually putting these in which makes them a little harder to do so what i've done here was actually put in two of the sides for the drawer i've actually seen steve ramsey do this and so it's a way that i can actually get the actual distance of these [00:07:16] drawers here rather than trying to just measure and subtract for your slides and your sides and all that kind of stuff and i'm actually going to use a little trick i've used this in my coffee table build but i'm actually going to do it again here is that you use two pieces of wood and a clamp [00:07:32] and you can slide these and you'll be able to get the exact distance as you want so i'll be able to put these in between the two drawers slide them apart and then i'll clamp them down and i'll know exactly how long i can make my front and back one thing i wanted to [00:07:47] make sure with these though is that all my openings were the exact same in distance the first time i put this together i actually only used my spacer on this one and the front one there uh and so my middle ones was slightly off by like a quarter of an [00:08:02] inch so i went back and i used the spacer on the first one the second one then the third one so now they are all exactly the same and either trim a little bit off of here so when i actually make my fronts and my backs for my drawers they're all going to be the same size now if there was a little bit [00:08:18] difference you might have it where the drawers are racking because they're slightly too big or slightly too small but now that i have everything set i can actually go and make those cuts for the front and back [Music] [00:08:36] so rather than me showing you another montage of me cutting front and backs i decided to do that off camera typically for drawers i use quarter inch plywood for the bottoms and i cut a dado into the sides to top the bottom [00:08:51] for this since i have half inch plywood i'm going to put a rabbet into the bottom of the drawers to save space most of these drawers are pretty shallow so i didn't want to lose more space by using the dado these drawers are a little overkill using a thicker material but i'm not upset because it'll just make them stronger and with the bottom drawers a stronger bottom will be great because [00:09:06] then i could put some of my power tools in the drawers with the sacrificial fence attached to my table saw fence i rose the blade up to where i wanted the rabbet to be the sacrificial fence is used so i can cut all the way up to the fence safely and i don't have extra material to remove afterwards [00:09:29] for the fasteners for this project i am using spax screws specs t-star plus are phenomenal because of a better bit fit so they have less falling out these screws require less torque and because of the point design they cause less splitting which means pilot holes aren't necessary while they aren't specifically [00:09:44] designed for pocket holes they worked perfectly here for me to make it easier on me for assembly i drove in some brad nails [Music] [00:10:00] checking often with the combination square i made sure the drawers were square if they were out of square all the drawers would not fit properly [Music] [00:10:16] off camera i cut the bottoms for the drawers out of half inch ply and they fit perfectly here's where the spack screws were able to shine as i didn't have to drill pilot holes i was able to assemble 18 drawers [Music] quickly [00:10:32] for the drawer fronts i'm using false fronts and these are coming from one sheet of ply as i cut them apart on the table saw the blade will make a perfect 1 8 inch gap in between each drawer front cutting these to length was very simple i actually cut the left and the right drawer fronts at the same length because [00:10:48] they are the same size being slightly bigger than the middle front because they have to cover the left and the right vertical completely the extra leftover will be perfect for the middle fronts i do not care about a continuous grain on this because i'm doing something i don't normally do and having them painted painted for the [00:11:04] color i'm going with a nice kevbat blue [00:11:29] before i installed all the runners and drawers i finished up the top to hide the plywood end grain i edge banded with some birch and i used mitered corners i removed most of the waste with a hand plane and came back with a flush trim bit to clean it up [Music] [00:11:47] after some sanding i put four coats of poly on the top and yes i came back with a brush after the roller to get rid of the bubbles of course for installing the drawers i came up with a system i used half inch spacers in between each drawer to elevate them just right to attach them to the runners [00:12:07] to attach the runners to the drawer you drive in the first screw and then the second screw before removing the drawer and driving in the third one thing i had to figure out is the spacing between the slide for each slide i used a spacer to determine where i should install it using a couple of straight edges and [00:12:22] clamps i could support the sides nice and level to install them [00:12:38] [Music] i wanted to move this easily around the shop if i ever needed another surface somewhere so i used these casters that i picked up from rockler [00:12:54] [Music] these are used for more work benches mainly with thicker legs so the screws poke through on the other side the bottom is fine because i can build it out with a scrap piece of ply [00:13:10] but the top i had to cut down the screw so it would not interfere with the bottom drawer [Music] before i attached for the drawer fronts i drilled for the drawer pulls i used this homemade jig that i learned from gunflint designs to do that i'll [00:13:26] leave a link in the description to his video on how to make this because it made it wildly easy to locate the holes for the pools after locating the center line you can drill the holes however far down you would like [Music] to attach these i lined up the bottom [00:13:42] drawer front flush to the bottom and then drove in some screws through the pull holes to fix them in place from there you can drive in some screws on the inside remove the screws from the pull holes countersink for the pull screws and attach the pull [00:13:59] like i said before the drawer faces will be an eighth of an inch apart you can use pieces from a paint stick to space these appropriately [00:14:17] with all the faces installed i can attach the top and i did that with some pocket screws from below i'm so glad i put this on casters because it is easy for me to move to its [00:14:33] final home but if i ever need to move it again i know i have that option now i can start loading this baby up thing is better than i could have imagined i have more space than i actually need and the best part is these [00:14:49] drawers aren't going to be filled with air before all the drawers were so deep that the tools got stacked on top of each other and there was a lot of wasted space now i have a lot more shallow drawers made perfect for tools these tools are just put in there but that'll be fine for right now i will be adding some organization in the future [00:15:04] to keep these tools still and in the proper place and if you want to see how i do that make sure you hit that like and subscribe button and turn on that bell to get a notification when a new video comes out if you're watching this farther in the future the second part of this might have already come out so i'll have it right over here until then i have two more loaded up for [00:15:20] you right now that's it for now thanks for watching and i'll see you next time in the cat bot workshop"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 688,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: CgEs12XWwaQ",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 321",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @KevBotWorkshop | Likes: 8 | Replies: 11 | Published: 2021-03-30T03:53:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Plans are now available on my Etsy.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "https://www.etsy.com/listing/990984967/tool-storage-digital-plans?ref=shop_home_active_1",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00014",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @MrFolder40 | Likes: 0 | Replies: 0 | Published: 2021-04-03T01:28:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "Yes dude! I've been waiting for this.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00017",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @M-J-P | Likes: 0 | Replies: 0 | Published: 2021-04-04T17:23:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "Thank you... My project starts tomorrow :) I will make one change of splitting it into two cabinets of 48 and 24 due to space constraints.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "Your guide and video will help as this is my first project starting from scratch.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2021-04-04T17:52:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "@M-J-P Happy building! Id love to see the final product! @ me on insta!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @larryshapiro11 | Likes: 0 | Replies: 0 | Published: 2021-04-06T13:38:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "What size drawer slides did you use for these plans?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @fredycordero2217 | Likes: 0 | Replies: 0 | Published: 2021-08-03T17:31:52Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Your a Legend.!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @fryedtopinz | Likes: 0 | Replies: 0 | Published: 2026-02-06T14:37:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "Tool abuse? Na just cluttered storage. And here I thought you were talking about workman's law! NGL after 20 in Naval Aviation, the before's made my eye twitch. Nice tool box though!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @ABH313 | Likes: 7 | Replies: 0 | Published: 2021-02-05T15:46:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "the comedy in the editing was hilarious and the information and instruction was great. just subbed.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @jdogmcnasty1980 | Likes: 1 | Replies: 0 | Published: 2022-01-06T23:56:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "the ace ventura edit gets a like from me!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @Diywithjenn | Likes: 9 | Replies: 1 | Published: 2021-12-05T04:05:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "As someone who has really bad ADHD, I appreciate this video. You made it very interesting the entire time. Plus, your work turned out really nice!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-01-02T07:54:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "O I understand completely, im the same way. Glad you liked the video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @jaysonbackes9279 | Likes: 1 | Replies: 0 | Published: 2021-10-23T02:50:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "Great job! BTW, at 9:55, one day that brad is going to turn and get your thumb.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @Petrol360 | Likes: 16 | Replies: 0 | Published: 2020-12-16T00:06:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Love the color. Stylish but industrial! Great build!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @rjrj570 | Likes: 1 | Replies: 0 | Published: 2023-05-02T01:36:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "learned more in this video than any (all) the others.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @lexdemonica | Likes: 2 | Replies: 0 | Published: 2021-03-27T13:01:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "Solid points for including minions.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @jaydoe3707 | Likes: 1 | Replies: 0 | Published: 2022-12-29T16:49:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "I really like that color.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @karenswank1865 | Likes: 48 | Replies: 1 | Published: 2023-08-13T13:14:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "Upon unboxing, I was immediately upset at how the rails were very noticeably bent. But I kept going, all tools needed to assemble were included https://www.youtube.com/post/UgkxqtX4Dxs6aecAZEuz6GY5-d81YecKCshn and I had it set up in about 30 minutes. Honestly I love this thing, make sure to read the measurements and measure your space so you know if it'll work for you. I bought this to put inside my closet, underneath where I hang my clothes and it is absolutely perfect! It is VERY sturdy and all drawers glide easily and mine are stuffed, and they are still flush when closed.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-08-16T18:56:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "Thanks Karen!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00066",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @smarkalet9078 | Likes: 0 | Replies: 0 | Published: 2021-10-26T14:06:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "Some nice drawer tricks here!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @codetech5598 | Likes: 3 | Replies: 1 | Published: 2022-01-13T20:05:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "With all of those ball bearing slides, this must be a high budget project.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00072",
+                  "author": "",
+                  "text": "[COMMENT 21] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-03-01T18:03:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00947",
+                  "author": "",
+                  "text": "Thats a great question. I am not exactly sure. These Drawers are pretty beefy 3/4 ply for drawers is a little over kill and a 1/2 inch bottom means that it most likely wont bow with weight so I think it could hold a fair amount. Really depends on the weight of the drawer runners probably.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00949",
+                  "author": "",
+                  "text": "[COMMENT 303] Author: @KMT15 | Likes: 0 | Replies: 2 | Published: 2023-04-15T18:22:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00950",
+                  "author": "",
+                  "text": "Top right handle looks off",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00952",
+                  "author": "",
+                  "text": "[COMMENT 304] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-04-21T19:31:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00953",
+                  "author": "",
+                  "text": "\"No, no, it just seems that way 'cause you only got one shoe\" - Happy Gilmore",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00955",
+                  "author": "",
+                  "text": "[COMMENT 305] Author: @KMT15 | Likes: 0 | Replies: 0 | Published: 2023-04-23T18:00:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00956",
+                  "author": "",
+                  "text": "@KevBotWorkshop “ohhhhh yeahhh” lol",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00958",
+                  "author": "",
+                  "text": "[COMMENT 306] Author: @BrianRousseau | Likes: 0 | Replies: 1 | Published: 2022-03-15T02:52:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00959",
+                  "author": "",
+                  "text": "Smart design, and skillful build... but you don't need the meme-esque video clips. They only distract/detract from your narrative. Believe in your own content, man.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00961",
+                  "author": "",
+                  "text": "[COMMENT 307] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-03-26T17:55:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00962",
+                  "author": "",
+                  "text": "appreciate the feedback. I like em cause thats my personality showing through",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00964",
+                  "author": "",
+                  "text": "[COMMENT 308] Author: @bobbg9041 | Likes: 0 | Replies: 1 | Published: 2023-09-17T07:16:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00965",
+                  "author": "",
+                  "text": "I dont get it, its a wood tool chest.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00966",
+                  "author": "",
+                  "text": "Whats so wrong using MDF ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00967",
+                  "author": "",
+                  "text": "MDF has advantages over plywood",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00968",
+                  "author": "",
+                  "text": "Cost being the largest, then stability",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00969",
+                  "author": "",
+                  "text": "If your just going to put paint on it",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00970",
+                  "author": "",
+                  "text": "Set it up off the floor on a sub frame you do not need to cut a toe kick the 2x4 sub frame is your toekick it also gets the MDF off the floor, paint will protect it from water and the sub frame gets it off the floor.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00971",
+                  "author": "",
+                  "text": "The Baltic burch should be saved for kitchen cabinets, no dam wonder its over 100 dollars a sheet.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00973",
+                  "author": "",
+                  "text": "Your wasting valuable resources on",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00974",
+                  "author": "",
+                  "text": "Garage cabnits the next home owner will just tear out and trash.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00975",
+                  "author": "",
+                  "text": "Shop finiture and equipment should be cheap lumber products.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00976",
+                  "author": "",
+                  "text": "Not the higest qulity.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00978",
+                  "author": "",
+                  "text": "Every project I see guy make for the shop are done with high quality materials its a waste.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00980",
+                  "author": "",
+                  "text": "[COMMENT 309] Author: @KevBotWorkshop | Likes: 1 | Replies: 0 | Published: 2023-09-17T20:06:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00981",
+                  "author": "",
+                  "text": "You ok pal? need a hug?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00983",
+                  "author": "",
+                  "text": "[COMMENT 310] Author: @chrisvaseywhiteroselofts3511 | Likes: 0 | Replies: 2 | Published: 2024-01-19T22:29:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00984",
+                  "author": "",
+                  "text": "Leave all the video clips out, no need",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00986",
+                  "author": "",
+                  "text": "[COMMENT 311] Author: @KevBotWorkshop | Likes: 1 | Replies: 0 | Published: 2024-01-20T18:27:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00987",
+                  "author": "",
+                  "text": "Noted!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00989",
+                  "author": "",
+                  "text": "[COMMENT 312] Author: @chrisvaseywhiteroselofts3511 | Likes: 0 | Replies: 0 | Published: 2024-01-20T18:41:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00990",
+                  "author": "",
+                  "text": "You don't need the video clips your work stands out mate",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00992",
+                  "author": "",
+                  "text": "[COMMENT 313] Author: @mattkeller2861 | Likes: 2 | Replies: 0 | Published: 2021-01-07T17:03:32Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00993",
+                  "author": "",
+                  "text": "This dude needs to introduce his two front teeth.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00995",
+                  "author": "",
+                  "text": "[COMMENT 314] Author: @iwantosavemoney | Likes: 0 | Replies: 1 | Published: 2024-05-01T19:55:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00996",
+                  "author": "",
+                  "text": "Copy of another design",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00998",
+                  "author": "",
+                  "text": "[COMMENT 315] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2024-05-02T20:46:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00999",
+                  "author": "",
+                  "text": "o yeah? whats that?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01001",
+                  "author": "",
+                  "text": "[COMMENT 316] Author: @MyEinhellWorkshop | Likes: 0 | Replies: 1 | Published: 2023-09-13T20:27:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01002",
+                  "author": "",
+                  "text": "Dude no offense because i can appreciate the workmanship but a lot of your drawers and handles are clearly crooked.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01004",
+                  "author": "",
+                  "text": "[COMMENT 317] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-09-13T21:25:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01005",
+                  "author": "",
+                  "text": "Only seems that way cause you're wearing one shoe",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01007",
+                  "author": "",
+                  "text": "[COMMENT 318] Author: @richardmorency1068 | Likes: 0 | Replies: 0 | Published: 2021-12-13T00:21:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01008",
+                  "author": "",
+                  "text": "Bcp trop d'annonces ! c'est merdique",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01010",
+                  "author": "",
+                  "text": "[COMMENT 319] Author: @TheWilo65 | Likes: 0 | Replies: 0 | Published: 2021-01-30T23:40:36Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01011",
+                  "author": "",
+                  "text": "tu parles trop et je comprends rien.... bye",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01013",
+                  "author": "",
+                  "text": "[COMMENT 320] Author: @MVE7573 | Likes: 0 | Replies: 1 | Published: 2022-10-20T06:28:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01014",
+                  "author": "",
+                  "text": "slightly off... a 1/4 of an inch!? thats huge lol. why does the US use imperial... so frustrating. stuck in the stone ages, man!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01016",
+                  "author": "",
+                  "text": "[COMMENT 321] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-10-28T12:55:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01017",
+                  "author": "",
+                  "text": "I completely agree. 1 of 3 countries that use it. One thing about woodworking though is knowing how to fix mistakes and making adjustments to the plans, its all a learning process my friend",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "CgEs12XWwaQ",
+          "transcript_available": true,
+          "transcript_source": "existing_vtt",
+          "transcript_language": "en",
+          "transcript_quality": "high",
+          "transcript_completeness": "complete",
+          "timestamp_count": 53,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 13215,
+          "transcript_words": 2729,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "A",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "existing_vtt",
+            "language": "en",
+            "quality": "high",
+            "completeness": "complete",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:01] hey i'm kevin and today i'm going to show you how i made this tool storage in the kevbat workshop [Music] [00:00:21] welcome back to the cat bot workshop today [Music] i have a confession to make [Music] i am a tool abuser [00:00:49] this is a lovely room of death that's right my tools have been living in my sister's childhood dresser for quite some time now these drawers have become a catch-all for everything i have it's really frustrating to have zero organization when you're trying to find something i just realized that i needed more space and i needed to utilize that space [Music] [00:01:10] appropriately so with this project i need to use all the plywood that i bought on this i've designed this organizer so that it can be made with three sheets of three quarter inch [00:01:26] plywood as well as two sheets of half inch plywood i got baltic birch and three quarter and i have oak in the half inch they didn't have baltic birch at the store and i just wanted something nicer than construction grade so that's what we're [00:01:43] working on this project i need to make sure that i'm taking extra care with breaking down my material because there's not a lot of room for error with all these cuts because i'm going to be using everything from all these boards so all the offcuts are going to be used for drawers and all [00:01:58] that kind of stuff so i need to just make sure that i am measuring correctly and cutting correctly because everything needs to be precise on this so i don't have to go out and buy more plywood the storage unit measures in at six foot by two foot and i'm building up the top [00:02:13] by gluing some pieces of pine to the bottom rather than gluing a full sheet of ply this way i can give the appearance of thickness but i can cut back on some of the weight we need to cut the fat i say we start right here [00:02:40] i let the boards overhang by just a little bit so i can trim it flush afterwards working with this much ply can be a bit of a hassle as these are rather large and difficult to maneuver so a lot of this has to do with me breaking down material so i will use my sketchup design to keep you with me on [00:02:56] this right now i'm cutting down the vertical sides at 31.5 inches tall by 23.5 inches wide to leave space for the top to overhang a bit with the four verticals cut i can cut out a four inch by four inch notch for the toe kick and a notch at the top so i can have a horizontal support there [00:03:22] with the verticals done i can now start working on the supports for the carcass these i am cutting right here are 23 inch by four inch and i will be attaching them with pocket holes [Music] [00:03:46] so [Music] [00:04:02] for the horizontal front support i'm cutting full length strips for the top and two for the bottom all of this is strategic for strength as well as hiding end grain plywood as much as possible and if i had thought about this before i put the carcass together i would have drilled pocket holes so i had to go back and fix this i can [00:04:19] fix that using a spacer as the same length as the back supports i can install the horizontal supports [00:04:53] all right it's a new day in the shop i finished putting the carcass together last night super excited about that because it looks really good uh now i need to start breaking down all these pieces here i'm gonna be making the drawers so all my drawers are gonna be made out of three-quarter inch ply i don't have the exact measurements for [00:05:09] these yet i actually have the drawer slides coming in tomorrow so i'm going to just start rough ripping these down so that i can have all the drawer parts and then i can start actually putting in the dado and for the bottom which is going to be coming from this half inch plywood i don't want to cut everything exactly [00:05:26] to size because i don't know these drawer slides i haven't used them before and they're going to be coming in so i want to make sure that i have the exact dimensions down and so i can make all my cuts perfectly and that all the drawers fit in nicely so right now i'm just going to start [00:05:41] cutting down these boards and we're going to put in some dadoes and then tomorrow i'll be able to actually start putting together the drawers and this project is coming together pretty quickly as for the drawers i'm ripping for three different sizes [00:05:56] the first is two and a half inches tall the second four and a half inches and the third six and one quarter inches with all of these cut i can cut down the sides for the drawers because they will all be the same at 20 and a half inches [00:06:12] you can see me here attaching a scrap piece of wood to my fence with some clamps this is so that i can use a stop to make repeat cuts but i'm also not trapping my piece between the blade and the fence [Music] so the drawer slides finally came in the [00:06:27] mail and they're a little different from what i'm usually working with i'll typically get my slides from the big box store or rockler or something like that but with these i decided to go with a little bit cheaper on amazon rather than spending like ten dollars per pair of slides i'm spending [00:06:44] about six ish with these they're a little bit different they um size wise they're a little bit bigger on the sides they're they're not flat like i get with the other slides but with these there's kind of uh this lip here and so i have to take that into account when [00:07:00] i'm actually putting these in which makes them a little harder to do so what i've done here was actually put in two of the sides for the drawer i've actually seen steve ramsey do this and so it's a way that i can actually get the actual distance of these [00:07:16] drawers here rather than trying to just measure and subtract for your slides and your sides and all that kind of stuff and i'm actually going to use a little trick i've used this in my coffee table build but i'm actually going to do it again here is that you use two pieces of wood and a clamp [00:07:32] and you can slide these and you'll be able to get the exact distance as you want so i'll be able to put these in between the two drawers slide them apart and then i'll clamp them down and i'll know exactly how long i can make my front and back one thing i wanted to [00:07:47] make sure with these though is that all my openings were the exact same in distance the first time i put this together i actually only used my spacer on this one and the front one there uh and so my middle ones was slightly off by like a quarter of an [00:08:02] inch so i went back and i used the spacer on the first one the second one then the third one so now they are all exactly the same and either trim a little bit off of here so when i actually make my fronts and my backs for my drawers they're all going to be the same size now if there was a little bit [00:08:18] difference you might have it where the drawers are racking because they're slightly too big or slightly too small but now that i have everything set i can actually go and make those cuts for the front and back [Music] [00:08:36] so rather than me showing you another montage of me cutting front and backs i decided to do that off camera typically for drawers i use quarter inch plywood for the bottoms and i cut a dado into the sides to top the bottom [00:08:51] for this since i have half inch plywood i'm going to put a rabbet into the bottom of the drawers to save space most of these drawers are pretty shallow so i didn't want to lose more space by using the dado these drawers are a little overkill using a thicker material but i'm not upset because it'll just make them stronger and with the bottom drawers a stronger bottom will be great because [00:09:06] then i could put some of my power tools in the drawers with the sacrificial fence attached to my table saw fence i rose the blade up to where i wanted the rabbet to be the sacrificial fence is used so i can cut all the way up to the fence safely and i don't have extra material to remove afterwards [00:09:29] for the fasteners for this project i am using spax screws specs t-star plus are phenomenal because of a better bit fit so they have less falling out these screws require less torque and because of the point design they cause less splitting which means pilot holes aren't necessary while they aren't specifically [00:09:44] designed for pocket holes they worked perfectly here for me to make it easier on me for assembly i drove in some brad nails [Music] [00:10:00] checking often with the combination square i made sure the drawers were square if they were out of square all the drawers would not fit properly [Music] [00:10:16] off camera i cut the bottoms for the drawers out of half inch ply and they fit perfectly here's where the spack screws were able to shine as i didn't have to drill pilot holes i was able to assemble 18 drawers [Music] quickly [00:10:32] for the drawer fronts i'm using false fronts and these are coming from one sheet of ply as i cut them apart on the table saw the blade will make a perfect 1 8 inch gap in between each drawer front cutting these to length was very simple i actually cut the left and the right drawer fronts at the same length because [00:10:48] they are the same size being slightly bigger than the middle front because they have to cover the left and the right vertical completely the extra leftover will be perfect for the middle fronts i do not care about a continuous grain on this because i'm doing something i don't normally do and having them painted painted for the [00:11:04] color i'm going with a nice kevbat blue [00:11:29] before i installed all the runners and drawers i finished up the top to hide the plywood end grain i edge banded with some birch and i used mitered corners i removed most of the waste with a hand plane and came back with a flush trim bit to clean it up [Music] [00:11:47] after some sanding i put four coats of poly on the top and yes i came back with a brush after the roller to get rid of the bubbles of course for installing the drawers i came up with a system i used half inch spacers in between each drawer to elevate them just right to attach them to the runners [00:12:07] to attach the runners to the drawer you drive in the first screw and then the second screw before removing the drawer and driving in the third one thing i had to figure out is the spacing between the slide for each slide i used a spacer to determine where i should install it using a couple of straight edges and [00:12:22] clamps i could support the sides nice and level to install them [00:12:38] [Music] i wanted to move this easily around the shop if i ever needed another surface somewhere so i used these casters that i picked up from rockler [00:12:54] [Music] these are used for more work benches mainly with thicker legs so the screws poke through on the other side the bottom is fine because i can build it out with a scrap piece of ply [00:13:10] but the top i had to cut down the screw so it would not interfere with the bottom drawer [Music] before i attached for the drawer fronts i drilled for the drawer pulls i used this homemade jig that i learned from gunflint designs to do that i'll [00:13:26] leave a link in the description to his video on how to make this because it made it wildly easy to locate the holes for the pools after locating the center line you can drill the holes however far down you would like [Music] to attach these i lined up the bottom [00:13:42] drawer front flush to the bottom and then drove in some screws through the pull holes to fix them in place from there you can drive in some screws on the inside remove the screws from the pull holes countersink for the pull screws and attach the pull [00:13:59] like i said before the drawer faces will be an eighth of an inch apart you can use pieces from a paint stick to space these appropriately [00:14:17] with all the faces installed i can attach the top and i did that with some pocket screws from below i'm so glad i put this on casters because it is easy for me to move to its [00:14:33] final home but if i ever need to move it again i know i have that option now i can start loading this baby up thing is better than i could have imagined i have more space than i actually need and the best part is these [00:14:49] drawers aren't going to be filled with air before all the drawers were so deep that the tools got stacked on top of each other and there was a lot of wasted space now i have a lot more shallow drawers made perfect for tools these tools are just put in there but that'll be fine for right now i will be adding some organization in the future [00:15:04] to keep these tools still and in the proper place and if you want to see how i do that make sure you hit that like and subscribe button and turn on that bell to get a notification when a new video comes out if you're watching this farther in the future the second part of this might have already come out so i'll have it right over here until then i have two more loaded up for [00:15:20] you right now that's it for now thanks for watching and i'll see you next time in the cat bot workshop"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 688,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: CgEs12XWwaQ",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 321",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @KevBotWorkshop | Likes: 8 | Replies: 11 | Published: 2021-03-30T03:53:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Plans are now available on my Etsy.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "https://www.etsy.com/listing/990984967/tool-storage-digital-plans?ref=shop_home_active_1",
+                "likes": null
+              },
+              {
+                "comment_id": "c00014",
+                "author": "",
+                "text": "[COMMENT 2] Author: @MrFolder40 | Likes: 0 | Replies: 0 | Published: 2021-04-03T01:28:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "Yes dude! I've been waiting for this.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00017",
+                "author": "",
+                "text": "[COMMENT 3] Author: @M-J-P | Likes: 0 | Replies: 0 | Published: 2021-04-04T17:23:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "Thank you... My project starts tomorrow :) I will make one change of splitting it into two cabinets of 48 and 24 due to space constraints.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "Your guide and video will help as this is my first project starting from scratch.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 4] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2021-04-04T17:52:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "@M-J-P Happy building! Id love to see the final product! @ me on insta!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 5] Author: @larryshapiro11 | Likes: 0 | Replies: 0 | Published: 2021-04-06T13:38:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "What size drawer slides did you use for these plans?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 6] Author: @fredycordero2217 | Likes: 0 | Replies: 0 | Published: 2021-08-03T17:31:52Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Your a Legend.!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 7] Author: @fryedtopinz | Likes: 0 | Replies: 0 | Published: 2026-02-06T14:37:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "Tool abuse? Na just cluttered storage. And here I thought you were talking about workman's law! NGL after 20 in Naval Aviation, the before's made my eye twitch. Nice tool box though!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 8] Author: @ABH313 | Likes: 7 | Replies: 0 | Published: 2021-02-05T15:46:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "the comedy in the editing was hilarious and the information and instruction was great. just subbed.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 9] Author: @jdogmcnasty1980 | Likes: 1 | Replies: 0 | Published: 2022-01-06T23:56:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "the ace ventura edit gets a like from me!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 10] Author: @Diywithjenn | Likes: 9 | Replies: 1 | Published: 2021-12-05T04:05:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "As someone who has really bad ADHD, I appreciate this video. You made it very interesting the entire time. Plus, your work turned out really nice!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 11] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-01-02T07:54:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "O I understand completely, im the same way. Glad you liked the video",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 12] Author: @jaysonbackes9279 | Likes: 1 | Replies: 0 | Published: 2021-10-23T02:50:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "Great job! BTW, at 9:55, one day that brad is going to turn and get your thumb.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 13] Author: @Petrol360 | Likes: 16 | Replies: 0 | Published: 2020-12-16T00:06:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Love the color. Stylish but industrial! Great build!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 14] Author: @rjrj570 | Likes: 1 | Replies: 0 | Published: 2023-05-02T01:36:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "learned more in this video than any (all) the others.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 15] Author: @lexdemonica | Likes: 2 | Replies: 0 | Published: 2021-03-27T13:01:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "Solid points for including minions.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 16] Author: @jaydoe3707 | Likes: 1 | Replies: 0 | Published: 2022-12-29T16:49:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "I really like that color.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 17] Author: @karenswank1865 | Likes: 48 | Replies: 1 | Published: 2023-08-13T13:14:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "Upon unboxing, I was immediately upset at how the rails were very noticeably bent. But I kept going, all tools needed to assemble were included https://www.youtube.com/post/UgkxqtX4Dxs6aecAZEuz6GY5-d81YecKCshn and I had it set up in about 30 minutes. Honestly I love this thing, make sure to read the measurements and measure your space so you know if it'll work for you. I bought this to put inside my closet, underneath where I hang my clothes and it is absolutely perfect! It is VERY sturdy and all drawers glide easily and mine are stuffed, and they are still flush when closed.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "[COMMENT 18] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-08-16T18:56:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "Thanks Karen!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00066",
+                "author": "",
+                "text": "[COMMENT 19] Author: @smarkalet9078 | Likes: 0 | Replies: 0 | Published: 2021-10-26T14:06:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "Some nice drawer tricks here!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "[COMMENT 20] Author: @codetech5598 | Likes: 3 | Replies: 1 | Published: 2022-01-13T20:05:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "With all of those ball bearing slides, this must be a high budget project.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00072",
+                "author": "",
+                "text": "[COMMENT 21] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-03-01T18:03:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00947",
+                "author": "",
+                "text": "Thats a great question. I am not exactly sure. These Drawers are pretty beefy 3/4 ply for drawers is a little over kill and a 1/2 inch bottom means that it most likely wont bow with weight so I think it could hold a fair amount. Really depends on the weight of the drawer runners probably.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00949",
+                "author": "",
+                "text": "[COMMENT 303] Author: @KMT15 | Likes: 0 | Replies: 2 | Published: 2023-04-15T18:22:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00950",
+                "author": "",
+                "text": "Top right handle looks off",
+                "likes": null
+              },
+              {
+                "comment_id": "c00952",
+                "author": "",
+                "text": "[COMMENT 304] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-04-21T19:31:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00953",
+                "author": "",
+                "text": "\"No, no, it just seems that way 'cause you only got one shoe\" - Happy Gilmore",
+                "likes": null
+              },
+              {
+                "comment_id": "c00955",
+                "author": "",
+                "text": "[COMMENT 305] Author: @KMT15 | Likes: 0 | Replies: 0 | Published: 2023-04-23T18:00:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00956",
+                "author": "",
+                "text": "@KevBotWorkshop “ohhhhh yeahhh” lol",
+                "likes": null
+              },
+              {
+                "comment_id": "c00958",
+                "author": "",
+                "text": "[COMMENT 306] Author: @BrianRousseau | Likes: 0 | Replies: 1 | Published: 2022-03-15T02:52:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00959",
+                "author": "",
+                "text": "Smart design, and skillful build... but you don't need the meme-esque video clips. They only distract/detract from your narrative. Believe in your own content, man.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00961",
+                "author": "",
+                "text": "[COMMENT 307] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-03-26T17:55:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00962",
+                "author": "",
+                "text": "appreciate the feedback. I like em cause thats my personality showing through",
+                "likes": null
+              },
+              {
+                "comment_id": "c00964",
+                "author": "",
+                "text": "[COMMENT 308] Author: @bobbg9041 | Likes: 0 | Replies: 1 | Published: 2023-09-17T07:16:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00965",
+                "author": "",
+                "text": "I dont get it, its a wood tool chest.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00966",
+                "author": "",
+                "text": "Whats so wrong using MDF ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00967",
+                "author": "",
+                "text": "MDF has advantages over plywood",
+                "likes": null
+              },
+              {
+                "comment_id": "c00968",
+                "author": "",
+                "text": "Cost being the largest, then stability",
+                "likes": null
+              },
+              {
+                "comment_id": "c00969",
+                "author": "",
+                "text": "If your just going to put paint on it",
+                "likes": null
+              },
+              {
+                "comment_id": "c00970",
+                "author": "",
+                "text": "Set it up off the floor on a sub frame you do not need to cut a toe kick the 2x4 sub frame is your toekick it also gets the MDF off the floor, paint will protect it from water and the sub frame gets it off the floor.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00971",
+                "author": "",
+                "text": "The Baltic burch should be saved for kitchen cabinets, no dam wonder its over 100 dollars a sheet.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00973",
+                "author": "",
+                "text": "Your wasting valuable resources on",
+                "likes": null
+              },
+              {
+                "comment_id": "c00974",
+                "author": "",
+                "text": "Garage cabnits the next home owner will just tear out and trash.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00975",
+                "author": "",
+                "text": "Shop finiture and equipment should be cheap lumber products.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00976",
+                "author": "",
+                "text": "Not the higest qulity.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00978",
+                "author": "",
+                "text": "Every project I see guy make for the shop are done with high quality materials its a waste.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00980",
+                "author": "",
+                "text": "[COMMENT 309] Author: @KevBotWorkshop | Likes: 1 | Replies: 0 | Published: 2023-09-17T20:06:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00981",
+                "author": "",
+                "text": "You ok pal? need a hug?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00983",
+                "author": "",
+                "text": "[COMMENT 310] Author: @chrisvaseywhiteroselofts3511 | Likes: 0 | Replies: 2 | Published: 2024-01-19T22:29:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00984",
+                "author": "",
+                "text": "Leave all the video clips out, no need",
+                "likes": null
+              },
+              {
+                "comment_id": "c00986",
+                "author": "",
+                "text": "[COMMENT 311] Author: @KevBotWorkshop | Likes: 1 | Replies: 0 | Published: 2024-01-20T18:27:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00987",
+                "author": "",
+                "text": "Noted!",
+                "likes": null
+              },
+              {
+                "comment_id": "c00989",
+                "author": "",
+                "text": "[COMMENT 312] Author: @chrisvaseywhiteroselofts3511 | Likes: 0 | Replies: 0 | Published: 2024-01-20T18:41:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00990",
+                "author": "",
+                "text": "You don't need the video clips your work stands out mate",
+                "likes": null
+              },
+              {
+                "comment_id": "c00992",
+                "author": "",
+                "text": "[COMMENT 313] Author: @mattkeller2861 | Likes: 2 | Replies: 0 | Published: 2021-01-07T17:03:32Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00993",
+                "author": "",
+                "text": "This dude needs to introduce his two front teeth.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00995",
+                "author": "",
+                "text": "[COMMENT 314] Author: @iwantosavemoney | Likes: 0 | Replies: 1 | Published: 2024-05-01T19:55:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00996",
+                "author": "",
+                "text": "Copy of another design",
+                "likes": null
+              },
+              {
+                "comment_id": "c00998",
+                "author": "",
+                "text": "[COMMENT 315] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2024-05-02T20:46:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00999",
+                "author": "",
+                "text": "o yeah? whats that?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01001",
+                "author": "",
+                "text": "[COMMENT 316] Author: @MyEinhellWorkshop | Likes: 0 | Replies: 1 | Published: 2023-09-13T20:27:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01002",
+                "author": "",
+                "text": "Dude no offense because i can appreciate the workmanship but a lot of your drawers and handles are clearly crooked.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01004",
+                "author": "",
+                "text": "[COMMENT 317] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2023-09-13T21:25:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01005",
+                "author": "",
+                "text": "Only seems that way cause you're wearing one shoe",
+                "likes": null
+              },
+              {
+                "comment_id": "c01007",
+                "author": "",
+                "text": "[COMMENT 318] Author: @richardmorency1068 | Likes: 0 | Replies: 0 | Published: 2021-12-13T00:21:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01008",
+                "author": "",
+                "text": "Bcp trop d'annonces ! c'est merdique",
+                "likes": null
+              },
+              {
+                "comment_id": "c01010",
+                "author": "",
+                "text": "[COMMENT 319] Author: @TheWilo65 | Likes: 0 | Replies: 0 | Published: 2021-01-30T23:40:36Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01011",
+                "author": "",
+                "text": "tu parles trop et je comprends rien.... bye",
+                "likes": null
+              },
+              {
+                "comment_id": "c01013",
+                "author": "",
+                "text": "[COMMENT 320] Author: @MVE7573 | Likes: 0 | Replies: 1 | Published: 2022-10-20T06:28:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01014",
+                "author": "",
+                "text": "slightly off... a 1/4 of an inch!? thats huge lol. why does the US use imperial... so frustrating. stuck in the stone ages, man!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01016",
+                "author": "",
+                "text": "[COMMENT 321] Author: @KevBotWorkshop | Likes: 0 | Replies: 0 | Published: 2022-10-28T12:55:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01017",
+                "author": "",
+                "text": "I completely agree. 1 of 3 countries that use it. One thing about woodworking though is knowing how to fix mistakes and making adjustments to the plans, its all a learning process my friend",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "video_id": "IzrVhjZiy2M",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=IzrVhjZiy2M",
+        "original_title": "How to Grow Indigo Plants & Process It into Blue Dye",
+        "clean_title": "How to Grow Indigo Plants & Process It into Blue Dye",
+        "channel": "Lovely Greens",
+        "upload_date": "2023-09-17",
+        "description": "Tips on how to grow and extract indigo pigment from homegrown plants. This method uses a variety of Japanese indigo, suited best for cooler climates. From this small batch, I extracted 19g of pure indigo pigment. Also, there's a small error in the video - I used calcium hydroxide (pickling lime), not sodium carbonate (soda ash) in the extraction process. The full written instructions for this video are here: https://lovelygreens.com/homegrown-indigo-pigment-extraction/\n\nVisit Bailiwick Blue for Indigo seeds and pigment: https://bailiwickblue.com/\n\n💚Please like, comment, and subscribe \n00:00 Introduction\n02:45 How to Grow Indigo\n04:14 Harvesting Indigo\n05:24 Extracting Indigo from Leaves\n10:54 Final Words on Growing and Extracting Japanese Indigo\n\n📧 Free Newsletter Sign-up: https://www.subscribepage.com/lovelygreens \n🧼 Natural Soapmaking Course: https://bit.ly/soapmakingcourse\n\n📚 Get the Lovely Greens Book\nUSA: https://amzn.to/3fKMij1\nUK: https://amzn.to/3wkkW9g\nCanada: https://amzn.to/3wkkW9g\nMore places: https://lovelygreens.com/a-womans-garden-grow-beautiful-plants-and-make-useful-things/ \n\nIndigo Hair Dyeing Video: https://youtu.be/Nxh-Zn8PPPU?si=vJ-Tg-2PCCrRkHb7\n\nRebecca Desnos Natural Dyeing: https://rebeccadesnos.com/\n\n🤩 Gardening Discount Codes: https://linktr.ee/lovely.greens\n\n👋 Connect with me\n• https://lovelygreens.com/discover-lovely-greens/ \n• https://www.instagram.com/lovely.greens/\n• https://www.facebook.com/lovely.greens.iom/\n• Become a Patreon: https://www.patreon.com/lovelygreens\n\n*Lovely Greens is a participant in Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites at no extra cost to you. Thank you for your support.\n\n#garden #naturaldye #craft",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "medium",
+          "completeness": "usable",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:00] अगर 50 ग्राम फिटकरी को हम पाउडर बनाकर उसे तवे के ऊपर डालकर अगर चलाते रह तो थोड़ी देर में उसका सारा पानी सूख कर वो बिल्कुल राख जैसा बन जाएगा। अब इसी राख में 10 ग्राम देसी कपूर, 20 ग्राम हल्दी, 40 ग्राम हल्का भुना हुआ लौंग और 80 ग्राम [00:00:17] सेंधा नमक डालकर अगर इसे अच्छे से मिला लें तो यह आपका 100% नेचुरल और काम करने वाला डेंटल पाउडर बनकर तैयार है। जरा सा पाउडर थोड़ा सा सरसों का तेल मिलाकर आप ब्रश करने के बाद उंगली की सहायता से अपने मसूड़ों पर अगर इसकी मसाज कर लें। यकीन [00:00:35] मानिए मैंने अपनी पिछले 15 सालों की प्रैक्टिस में इसका ना जाने कितने पेशेंट्स के ऊपर प्रयोग किया है और ना जाने कितने पेशेंट्स में मैंने इसके पहले या दूसरी बार के प्रयोग में ही लाभ अनुभव किया और खासतौर पर जिनके मसूड़ों से खून आता है या फिर पस आती है या पायरिया की [00:00:52] समस्या है बहुत ही शानदार प्रयोग है पर एक बहुत ही सीरियस बात है वो मैं आपको जरूर बताना चाहूंगा इस वीडियो को खासतौर पर आप सेव और शेयर करने के साथ-साथ डाउनलोड जरूर करके रख क्योंकि दांतों से संबंधित मैं जितने भी वीडियो डालता हूं उनको कोई पेड [00:01:10] थर्ड पार्टी चेककर फाल्स इंफॉर्मेशन करके डिलीट करवा देती है। बार-बार यह मेरे साथ होता आया है। तो इस वीडियो को आप सेव और शेयर करने के साथ-साथ डाउनलोड भी करके रखिए। मेरा काम था आप तक सही जानकारी [00:01:26] पहुंचाना। अब आपकी जिम्मेदारी"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 0,
+          "included_comments": 0,
+          "sampling_method": "all_supplied_comments",
+          "records": []
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": false,
+          "artifact_manifest": {
+            "video_id": "IzrVhjZiy2M",
+            "media": null,
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": null,
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\IzrVhjZiy2M",
+            "present": {
+              "media": false,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "media",
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "IzrVhjZiy2M",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "medium",
+            "transcript_completeness": "usable",
+            "timestamp_count": 6,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 1252,
+            "transcript_words": 439,
+            "comments_available": false,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "E",
+            "source_consistency": "minor_conflict",
+            "source_conflicts": [
+              "Title/description terms have no clear overlap with the transcript; review source association."
+            ],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "medium",
+              "completeness": "usable",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:00] अगर 50 ग्राम फिटकरी को हम पाउडर बनाकर उसे तवे के ऊपर डालकर अगर चलाते रह तो थोड़ी देर में उसका सारा पानी सूख कर वो बिल्कुल राख जैसा बन जाएगा। अब इसी राख में 10 ग्राम देसी कपूर, 20 ग्राम हल्दी, 40 ग्राम हल्का भुना हुआ लौंग और 80 ग्राम [00:00:17] सेंधा नमक डालकर अगर इसे अच्छे से मिला लें तो यह आपका 100% नेचुरल और काम करने वाला डेंटल पाउडर बनकर तैयार है। जरा सा पाउडर थोड़ा सा सरसों का तेल मिलाकर आप ब्रश करने के बाद उंगली की सहायता से अपने मसूड़ों पर अगर इसकी मसाज कर लें। यकीन [00:00:35] मानिए मैंने अपनी पिछले 15 सालों की प्रैक्टिस में इसका ना जाने कितने पेशेंट्स के ऊपर प्रयोग किया है और ना जाने कितने पेशेंट्स में मैंने इसके पहले या दूसरी बार के प्रयोग में ही लाभ अनुभव किया और खासतौर पर जिनके मसूड़ों से खून आता है या फिर पस आती है या पायरिया की [00:00:52] समस्या है बहुत ही शानदार प्रयोग है पर एक बहुत ही सीरियस बात है वो मैं आपको जरूर बताना चाहूंगा इस वीडियो को खासतौर पर आप सेव और शेयर करने के साथ-साथ डाउनलोड जरूर करके रख क्योंकि दांतों से संबंधित मैं जितने भी वीडियो डालता हूं उनको कोई पेड [00:01:10] थर्ड पार्टी चेककर फाल्स इंफॉर्मेशन करके डिलीट करवा देती है। बार-बार यह मेरे साथ होता आया है। तो इस वीडियो को आप सेव और शेयर करने के साथ-साथ डाउनलोड भी करके रखिए। मेरा काम था आप तक सही जानकारी [00:01:26] पहुंचाना। अब आपकी जिम्मेदारी"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 0,
+              "included_comments": 0,
+              "sampling_method": "all_supplied_comments",
+              "records": []
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "IzrVhjZiy2M",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "medium",
+          "transcript_completeness": "usable",
+          "timestamp_count": 6,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 1252,
+          "transcript_words": 439,
+          "comments_available": false,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "E",
+          "source_consistency": "minor_conflict",
+          "source_conflicts": [
+            "Title/description terms have no clear overlap with the transcript; review source association."
+          ],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "medium",
+            "completeness": "usable",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:00] अगर 50 ग्राम फिटकरी को हम पाउडर बनाकर उसे तवे के ऊपर डालकर अगर चलाते रह तो थोड़ी देर में उसका सारा पानी सूख कर वो बिल्कुल राख जैसा बन जाएगा। अब इसी राख में 10 ग्राम देसी कपूर, 20 ग्राम हल्दी, 40 ग्राम हल्का भुना हुआ लौंग और 80 ग्राम [00:00:17] सेंधा नमक डालकर अगर इसे अच्छे से मिला लें तो यह आपका 100% नेचुरल और काम करने वाला डेंटल पाउडर बनकर तैयार है। जरा सा पाउडर थोड़ा सा सरसों का तेल मिलाकर आप ब्रश करने के बाद उंगली की सहायता से अपने मसूड़ों पर अगर इसकी मसाज कर लें। यकीन [00:00:35] मानिए मैंने अपनी पिछले 15 सालों की प्रैक्टिस में इसका ना जाने कितने पेशेंट्स के ऊपर प्रयोग किया है और ना जाने कितने पेशेंट्स में मैंने इसके पहले या दूसरी बार के प्रयोग में ही लाभ अनुभव किया और खासतौर पर जिनके मसूड़ों से खून आता है या फिर पस आती है या पायरिया की [00:00:52] समस्या है बहुत ही शानदार प्रयोग है पर एक बहुत ही सीरियस बात है वो मैं आपको जरूर बताना चाहूंगा इस वीडियो को खासतौर पर आप सेव और शेयर करने के साथ-साथ डाउनलोड जरूर करके रख क्योंकि दांतों से संबंधित मैं जितने भी वीडियो डालता हूं उनको कोई पेड [00:01:10] थर्ड पार्टी चेककर फाल्स इंफॉर्मेशन करके डिलीट करवा देती है। बार-बार यह मेरे साथ होता आया है। तो इस वीडियो को आप सेव और शेयर करने के साथ-साथ डाउनलोड भी करके रखिए। मेरा काम था आप तक सही जानकारी [00:01:26] पहुंचाना। अब आपकी जिम्मेदारी"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 0,
+            "included_comments": 0,
+            "sampling_method": "all_supplied_comments",
+            "records": []
+          }
+        }
+      }
+    }
+  ]
+}

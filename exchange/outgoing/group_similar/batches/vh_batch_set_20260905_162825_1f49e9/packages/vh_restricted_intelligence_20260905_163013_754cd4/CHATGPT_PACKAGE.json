@@ -1,0 +1,2718 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163013_754cd4",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163013_754cd4",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Ayurveda, herbs, doshas and rituals — partial transcript",
+      "batch_number": 2,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 2 of 30 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260905_163013_754cd4",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260905_163013_754cd4"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163013_754cd4",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Ayurveda, herbs, doshas and rituals — partial transcript",
+      "batch_number": 2,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "2180ba19-cb54-4a98-a7b2-acf9b0461c7b",
+    "package_id": "vh_restricted_intelligence_20260905_163013_754cd4",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "Vw5kOT9ocjk"
+    ],
+    "evidence_grades": {
+      "Vw5kOT9ocjk": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Ayurveda, herbs, doshas and rituals — partial transcript",
+      "batch_number": 2,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "4cc617cbe9bd7d7af2b456df93c47bc3529a94ef87aaec823675c435dce86dd3",
+      "prompt.json": "c1097bd3d75f8077cb153d6e25ba0de5facf95c6b77db32d7c29590257d9e5d9",
+      "schema.json": "a7162dde80d013a3c4f1ae0ba11c8d0608a56410ae6b62a73f01420276156e24"
+    },
+    "created_at": "2026-09-05 16:30:13",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "Vw5kOT9ocjk",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=Vw5kOT9ocjk",
+        "original_title": "11 Ayurvedic Food Combinations That You Must Try (#3 will Surprise you)",
+        "clean_title": "11 Ayurvedic Food Combinations That You Must Try ( will Surprise you)",
+        "channel": "Fit Tuber",
+        "upload_date": "2021-10-22",
+        "description": "11 Healthy Food Combinations that you must try. Best Ayurvedic food combinations. The art of food combining as per Ayurvedic scriptures.\n\nBuy Mamaearth Ubtan Face wash -\n(Apply discount coupon FITTUBER21 to get 21% off on your order)\nBuy from Amazon - https://amzn.to/3AVv6OA\n\nIn this video, I will share with you 11 practical food combinations highly talked about in Ayurvedic scriptures that can dramatically improve the quality of digestion, support the body in receiving a deeper level of nourishment, and positively impact our overall health.  \n\n01:19 - Wheat and Cucumber - Do you often face indigestion after eating wheat roti? If yes, then try this combination.\n02:14 - Milk and Ghee - When we talk about Satvic food combinations, Ayurveda puts this one on top of the list. \n03:08 - Sprouts and hot spices - Sprouts are a superfood but more than often people either don’t find them palatable or for some, they become the reason for gas, bloating and constipation. Try this combination.\n04:10 - Radish and its leaves - Radish being extremely cold in potency it is often hard to digest. Nature has provided its easy solution. Just combine radish with its leaves.\n04:59 - Lemon and Ghee - Not many know that when ghee is mixed with lemon juice, its effect is further enhanced. \n05:42 - Black gram and buttermilk - Ayurveda recommends ending a black gram meal with a glass of spiced or sweet buttermilk. Black gram’s combination with natural sugar is also equally beneficial.\n06:26 - Potato and Rice - Are you getting too weight-conscious? Well, you will be surprised to know that the energetics of both these foods is such that if they are combined, they help cut the extra fat from the body. \n07:05 - Dry dates and milk - Do you often feel tired and low on energy? Then this combination is for you. Ayurveda considers dry dates milk as one of the best nutritive tonics for the body, especially in winters.\n07:54 - Sugarcane juice and ginger - Sugarcane juice is one drink that can beat most cold drinks in the market. A great combination of sugarcane juice is with ginger.\n08:31 - Mango and milk - Since mangoes are heating for the body, some people suffer from pimples and other allergic reactions after eating them. Ayurveda advises that milk be consumed after a mango meal.\n09:25 - Coriander and spicy curry -  A simple and effective way to top up a spicy curry with fresh coriander leaves. Coriander with its cooling properties helps to balance the heating effect of the spices\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nDry dates - https://amzn.to/2Z50hd2\nA2 Desi Ghee(Rs 1750/L) - https://amzn.to/2Oefy2R\nA2 Desi Ghee (Rs 900/L) - https://amzn.to/3B0UrqM\nBlack Gram - https://amzn.to/2Z9QN0L\nHandpounded Rice - https://amzn.to/3ASHAqw\nSprout maker - https://amzn.to/3DX3Y42\nWheat dalia - https://amzn.to/3vny3GG\nA2 Cow Dry Milk Powder - https://amzn.to/3AOIGU4\n\n✅  SUPPORT MY WORK and get exclusive perks \nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n11 Reasons Why Indian Food is Logical & Intelligent 🇮🇳\nhttps://youtu.be/w0kOxvV26cw\n5 Daily Foods You Are Eating the Wrong Way\nhttps://youtu.be/VK-G0vkfqOQ\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\n\n10:13 - Segment Partner - Mamaearth Ubtan Face wash\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:03] And what is Vivek doing right and wrong food combinations click, we are some suggestion friend, I still have to accept all your other things but this food combination is a bogus concept, I mean how can it be that two perfectly good things are combined and it becomes an entry, in fact, [00:00:19] tell me an example where two perfectly good things are combined and it becomes bad, wait I am right now [praise] why is that right, isn't it, what panel did you have, why, what is the problem, this blazer is the one [00:00:36] you like and I had this with you, yes friend, I got it for you, oh how should I explain, both are big in their own way, don't mind the difficulties, I mean, nomination form, in this [00:00:57] video I will share with you 11:00 Practical Food Combinations [ __ ] Ali Talk about these Ayurvedic scripts, but can dramatically improve the quality of education support the body in receiving deeper levels of investment and positively impact and overall health without any further delay [00:01:12] let's get started [music] hello hello friends welcome to hate you but starting mein number-11 dal as a sweet and cute number to your fun facts in days session after eating meat roti when they talk about dreams beat system on string for the god [00:01:30] delete issues but i don't side it's hard to resist and body demand extra energy special element in the form of fruit iraada badal liya a useful tips to combine BBQ ambar dismissed as you have enough but chapati par lunch in shooting starts [00:01:48] with you come back side tube number is special f-18 debate and health state state bank of india wanted to come but due to its cooling nature is not recommended by ayurveda you can replace with ginger and state have already shared with you this easy recipe using ginger [00:02:05] rock solid and lemon juice which was prepared in this food without refrigerator for about 20 Combination you should avoid next smell mist a mission of milk and it is not only delicious but is also incredibly since I will be [00:02:22] talking about satvik food combinations ayurveda ayush want option let zinc have warming effect on the mind it is it is favorite aman gives you meditated for long hot milk with eggs and like 151 journey [00:02:39] from heavy body pain and just that sort of a day at work is that glass of warm up to desi cow milk with how many teaspoons of to kundli depending upon your digestive capacity is windmill kidney thirty minutes [00:02:54] before sleeping and not only provides friend to the body tissues but also none as you can not agri powder and third mishri powder to soo internet mill plus khichdi b pure lecture dry next with leading fans [00:03:10] problem angamos new train destroy on the planet with increased amount of routine in science Vitamins, minerals and fibre groom the power to replace and multi vitamin pills but more than option people doing fine day first table and for sambhade [00:03:28] become the results for gas looting and quantity patient speakers price of living foods extremely cold impotency and prince ayurvedic medicine recruitment meeting where they can it be justified as needed to a similar tenbe swami [00:03:43] ayurvedic text recruitment proud to be combined with creating spices line changer and black pepper pure next time you prepaid debit grated ginger black pepper rock sold roasted cumin seeds and lemon juice not to [00:03:59] your body will be able to apps of the most top 20 high pranic shoes but also you will realize that as similarly raw vegetables flat can also be combined with meeting spices phone number 8 credit with its leaders winters is fast approaching and so is [00:04:16] the season does humble Vegetable rich in potassium, maintains fiber is good for blood circulation, detoxifier however, bean is extremely cold impotency, its open hot desert nature has provided easy solution [00:04:32] just combined with it at every time you react salinity and maker curry and toilet 108 loop note balancing properties of liberty to get the benefits of radish [00:04:48] leaves for improving liver function, parasites digestive tract control blood sugar level medicinal combination of [00:05:15] simple combination easily like this to improve next time you e dal rice not just half teaspoon unique overrate but also add lemon juice benefits of discrimination can be read through any curry leaf and prize winning green leafy vegetable the giver will help a similar and [00:05:32] nutrients better wilder lemon juice added intellect will help explain Iron formate lemon plus that a combination not just agri but I challenge next blackgram with water milk plain gram one of the most primitive ingredients is [00:05:48] in ayurvedic tips black gram beans are offered a small and highly recommended for gaining weight and improving immunity also nutritious but these are also anise decorated from dec 18 specified badshah awaits heavy not so easy to [00:06:03] digest in what you can digest bhajan naresh you to resolve this problem ayurvedic treatment using black gram meal here glass hospice and sweet buttermilk black gram nut with natural sugar is also equally beneficial properly but is via [00:06:20] dal agri laddu just comment preparation in indian homes special inventors number five is potato with rice are you getting to weight questions when you will be surprised and energy tips and potato and research statement where combined [00:06:37] helps burn extra fat hum dab denge this ayurveda is for about Next time editor for to rise and these changes in both kids pen drive with rice simple potato of the world in which [00:06:55] subscribe you can happily move forward to subscribe subscribe my channel [00:07:18] skin tightening body special inventors simply add dry day two glass of milk powder glass of water and they will not let them boil entry was posted in your life with one glass of milk and [00:07:38] water not only dried properly straight nutrients in tamil dubbed tamil subscription fee in winters me [00:07:54] next k juice lemon juice one can do do [00:08:17] subscribe said people who suffer from serious problem and want to spot on only in the winter season to change my mother nature of this energy track next time don't forget and work in window 10 in sugar cane juice number two mango mango mango people [00:08:40] suffer from pimples allergic reaction after meeting with advised not but school and room temperature quantity of creating mango muddling muddling complete without [00:09:02] having kacchi lassi by mixing with lots of water and milk powder milk mango forget not to forget reminder send job pinga available [00:09:19] in the season its practical value first time you eat it man got you know what to control and wealth final year lasts for android and spicy karas do you like and doing in spicy food they formulate spicy food recruitment for balance [00:09:34] enquiry so shayari ab body which can be created hai form father dominated body type simple and effective way to stop and spicy karas fresh coriander leaves coriander with school in properties helps to balance creating effect of spices smart and [00:09:51] used oil paint morning evening best commission switch off but indian cooperative day-to-day life with mine in this whole world tamil he powerful ayurvedic tools for improving digestive health and overall balance me ji puja-path pandey video [00:10:07] helpful tubelight to see the parts of speech on your Exact place to give back we all looking for genuine toxins free speech mr top ten sports one good thing in the growth through its candidates and you will find that no sir fee no problem no it is from the [00:10:32] ground from chemicals along with herbal extracts of turmeric and essential oil for poor mama subscribe for all skin types and can be used for both men and women president [00:10:48] and click on the link in the description box special discount coupon 12% subscribe now support me join button please do subscribe my channel [00:11:04] like this video me channel for my name is vivek samaar ko [music] hua hai"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1143,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: Vw5kOT9ocjk",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @deepakashidixit4188 | Likes: 220 | Replies: 1 | Published: 2021-10-22T14:27:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "A small reality check :- Our Grandmother already knew about all these combinations, but unfortunately they didn't know about the 'Marketing Techniques' so we didn't valued them enough.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @shyamalagowri9992 | Likes: 13 | Replies: 0 | Published: 2024-04-26T20:45:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "They didn’t need marketing.. just respect",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @akankshajoshi1962 | Likes: 4398 | Replies: 66 | Published: 2021-10-23T02:11:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Yes we need Part 2. Especially on the wrong combinations of foods",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @anupdevlikar103 | Likes: 34 | Replies: 0 | Published: 2021-10-23T06:12:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "There's already one video on it..",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @shwetak6328 | Likes: 5 | Replies: 0 | Published: 2021-10-23T08:30:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "🙏🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @Ashish..300 | Likes: 2 | Replies: 0 | Published: 2021-10-23T10:53:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Yes yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @ashar1182 | Likes: 2 | Replies: 0 | Published: 2021-10-23T16:08:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "Yes truly",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @siddharthshekhar909 | Likes: 9 | Replies: 0 | Published: 2021-10-23T17:22:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "It's mostly nonsense. People say the worst combination is fish and milk. My father who is a surgeon lived in the UK for many years , he used to have a popular dish there ,steamed fish with chilled milk . And nothing happened to him. No skin problems or anything. He returned as healthy as a horse.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @ManojYadav-lm2cq | Likes: 823 | Replies: 3 | Published: 2021-10-22T23:59:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "These intros are getting amazing and amazing over days 😂😂soon it will be Fit Tuber vines😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "[COMMENT 10] Author: @FitTuber | Likes: 194 | Replies: 0 | Published: 2021-10-23T03:48:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "Glad you are liking them :)",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 11] Author: @suyashdixit8669 | Likes: 4 | Replies: 0 | Published: 2021-11-09T18:12:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "@FitTuber they r more hilarious than ur intention behind them to create for us. Kudos bro",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 12] Author: @Anonymous-h3l | Likes: 0 | Replies: 0 | Published: 2024-08-17T11:08:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Yeah😂🎉",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 13] Author: @sagarkochar | Likes: 10 | Replies: 0 | Published: 2023-05-03T19:39:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "Some give this guy a Bharat Ratna....he is single handedly reducing the medical burden of the country !!! 😀",
+              "likes": null
+            },
+            {
+              "comment_id": "c00048",
+              "author": "",
+              "text": "[COMMENT 14] Author: @aboutyourfavmalhan | Likes: 557 | Replies: 20 | Published: 2021-10-22T13:31:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "Make a video on “get rid of mosquitoes in easy way”",
+              "likes": null
+            },
+            {
+              "comment_id": "c00051",
+              "author": "",
+              "text": "[COMMENT 15] Author: @FitTuber | Likes: 180 | Replies: 0 | Published: 2021-10-22T13:35:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "Have. made a video on this topic. Check it out.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00054",
+              "author": "",
+              "text": "[COMMENT 16] Author: @txspencerx1146 | Likes: 9 | Replies: 0 | Published: 2021-10-22T13:49:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "@FitTuber can u provide us the source book",
+              "likes": null
+            },
+            {
+              "comment_id": "c00057",
+              "author": "",
+              "text": "[COMMENT 17] Author: @mochiixogaming | Likes: 8 | Replies: 0 | Published: 2021-10-22T14:07:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "Yah Nowadays dangue is spreading very much",
+              "likes": null
+            },
+            {
+              "comment_id": "c00060",
+              "author": "",
+              "text": "[COMMENT 18] Author: @mnyyy_ | Likes: 23 | Replies: 0 | Published: 2021-10-22T14:09:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "@FitTuber also please make a video suggesting about how to get rid of lizards and flies..!! 😑",
+              "likes": null
+            },
+            {
+              "comment_id": "c00063",
+              "author": "",
+              "text": "[COMMENT 19] Author: @nikhilgautam3315 | Likes: 10 | Replies: 0 | Published: 2021-10-22T14:19:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "The best way to get rid of the mosquitoes is to light the Neem oil Diyas in your room before sleeping, Neem oil because of its insects repellent properties works well to get rid of most bugs at your home. You can get plenty of options in the market as well, I use Dabur neem oil no doubt about the purity of the oil and i even use it on my hair.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "Another most popular and effective way is to light a diffuser with few drops of eucalyptus essential oil added in 2 tablespoon of water, eucalyptus essential oil too have insect repellent properties, I have personaly tried it and i would say that it takes some time to show the effect and it is obviously not instant but its worth it and with the soothing effect it gives at heating the oil makes it much more interesting and effective amongst several others.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 20] Author: @user-ks2gt2yu1j | Likes: 478 | Replies: 0 | Published: 2021-10-22T13:48:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "The intro example was perfect.😂🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00069",
+              "author": "",
+              "text": "Imagine we got a heart for appreciating his constancy, hardwork and efforts..🙌🏻👌🏻",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "Always come with relevant content and nailed it...thanks for this helpful video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01581",
+              "author": "",
+              "text": "[COMMENT 476] Author: @akshiluhar1401 | Likes: 0 | Replies: 0 | Published: 2022-05-27T10:10:27Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01582",
+              "author": "",
+              "text": "Yes we need part 2",
+              "likes": null
+            },
+            {
+              "comment_id": "c01584",
+              "author": "",
+              "text": "[COMMENT 477] Author: @Sanjeevkumar-rl3ni | Likes: 0 | Replies: 0 | Published: 2022-05-03T02:10:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01585",
+              "author": "",
+              "text": "Yes we need part 2",
+              "likes": null
+            },
+            {
+              "comment_id": "c01587",
+              "author": "",
+              "text": "[COMMENT 478] Author: @tejvassan194 | Likes: 0 | Replies: 0 | Published: 2022-08-18T07:32:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01588",
+              "author": "",
+              "text": "Definitely",
+              "likes": null
+            },
+            {
+              "comment_id": "c01590",
+              "author": "",
+              "text": "[COMMENT 479] Author: @seemajain9651 | Likes: 0 | Replies: 0 | Published: 2022-02-17T13:51:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01591",
+              "author": "",
+              "text": "Yes we need part 2",
+              "likes": null
+            },
+            {
+              "comment_id": "c01593",
+              "author": "",
+              "text": "[COMMENT 480] Author: @smithanoble7566 | Likes: 0 | Replies: 0 | Published: 2022-05-26T05:12:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01594",
+              "author": "",
+              "text": "Useful video thanks",
+              "likes": null
+            },
+            {
+              "comment_id": "c01596",
+              "author": "",
+              "text": "[COMMENT 481] Author: @ghostbuster3276 | Likes: 1 | Replies: 0 | Published: 2023-01-30T13:11:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01597",
+              "author": "",
+              "text": "Yes please bring part 2",
+              "likes": null
+            },
+            {
+              "comment_id": "c01599",
+              "author": "",
+              "text": "[COMMENT 482] Author: @amlansahoo4204 | Likes: 0 | Replies: 0 | Published: 2022-02-14T14:25:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01600",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01602",
+              "author": "",
+              "text": "[COMMENT 483] Author: @farhahassan5245 | Likes: 0 | Replies: 0 | Published: 2022-06-22T14:59:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01603",
+              "author": "",
+              "text": "Yes..part two please",
+              "likes": null
+            },
+            {
+              "comment_id": "c01605",
+              "author": "",
+              "text": "[COMMENT 484] Author: @aparnagattupalli7071 | Likes: 0 | Replies: 0 | Published: 2022-03-01T10:57:59Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01606",
+              "author": "",
+              "text": "Yes. We need part 2",
+              "likes": null
+            },
+            {
+              "comment_id": "c01608",
+              "author": "",
+              "text": "[COMMENT 485] Author: @AhmedSaeed-ft1sk | Likes: 0 | Replies: 0 | Published: 2024-05-16T10:24:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01609",
+              "author": "",
+              "text": "Viveke Maza AA gaya",
+              "likes": null
+            },
+            {
+              "comment_id": "c01611",
+              "author": "",
+              "text": "[COMMENT 486] Author: @sureshlund9616 | Likes: 0 | Replies: 0 | Published: 2022-05-18T17:27:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01612",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01614",
+              "author": "",
+              "text": "[COMMENT 487] Author: @ashahebbar9893 | Likes: 0 | Replies: 0 | Published: 2022-06-20T14:57:22Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01615",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01617",
+              "author": "",
+              "text": "[COMMENT 488] Author: @seemabhardwaj | Likes: 0 | Replies: 0 | Published: 2022-06-23T16:24:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01618",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01620",
+              "author": "",
+              "text": "[COMMENT 489] Author: @kalpanasenguptabaruah5180 | Likes: 0 | Replies: 0 | Published: 2022-10-08T17:55:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01621",
+              "author": "",
+              "text": "Very nice information 🙏🏿",
+              "likes": null
+            },
+            {
+              "comment_id": "c01623",
+              "author": "",
+              "text": "[COMMENT 490] Author: @nitinjaveri456 | Likes: 0 | Replies: 0 | Published: 2022-07-27T20:14:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01624",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "[COMMENT 491] Author: @azzuha | Likes: 0 | Replies: 0 | Published: 2023-07-19T09:04:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "[COMMENT 492] Author: @nishasingh2441 | Likes: 0 | Replies: 0 | Published: 2022-06-22T03:51:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "Very informative video👍🏻",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "[COMMENT 493] Author: @Padarthwala | Likes: 0 | Replies: 0 | Published: 2023-01-05T07:32:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "[COMMENT 494] Author: @tulsinegi9777 | Likes: 0 | Replies: 0 | Published: 2023-02-13T09:37:39Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01636",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c01638",
+              "author": "",
+              "text": "[COMMENT 495] Author: @kalpanacintury4744 | Likes: 0 | Replies: 0 | Published: 2022-04-21T03:02:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "Yes please",
+              "likes": null
+            },
+            {
+              "comment_id": "c01641",
+              "author": "",
+              "text": "[COMMENT 496] Author: @benumukerjee | Likes: 0 | Replies: 0 | Published: 2022-10-08T02:19:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "Yes please",
+              "likes": null
+            },
+            {
+              "comment_id": "c01644",
+              "author": "",
+              "text": "[COMMENT 497] Author: @geetakumari4641 | Likes: 0 | Replies: 0 | Published: 2023-05-22T05:35:31Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "Thank you so much 🙏❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "[COMMENT 498] Author: @wowarosiestv8078 | Likes: 0 | Replies: 0 | Published: 2022-06-14T01:25:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "Wow, thanks again 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "[COMMENT 499] Author: @husainabanu4017 | Likes: 0 | Replies: 0 | Published: 2022-07-02T06:06:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "👌I like u r every video...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 500] Author: @ugginarevathi9250 | Likes: 0 | Replies: 0 | Published: 2023-06-09T15:58:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "Vw5kOT9ocjk",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\11 Ayurvedic Food Combinations That You Must Try (#3 will Surprise you)\\11 Ayurvedic Food Combinations That You Must Try (#3 will Surprise you).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\11 Ayurvedic Food Combinations That You Must Try (#3 will Surprise you)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\Vw5kOT9ocjk",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "Vw5kOT9ocjk",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 39,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 8074,
+            "transcript_words": 1467,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:03] And what is Vivek doing right and wrong food combinations click, we are some suggestion friend, I still have to accept all your other things but this food combination is a bogus concept, I mean how can it be that two perfectly good things are combined and it becomes an entry, in fact, [00:00:19] tell me an example where two perfectly good things are combined and it becomes bad, wait I am right now [praise] why is that right, isn't it, what panel did you have, why, what is the problem, this blazer is the one [00:00:36] you like and I had this with you, yes friend, I got it for you, oh how should I explain, both are big in their own way, don't mind the difficulties, I mean, nomination form, in this [00:00:57] video I will share with you 11:00 Practical Food Combinations [ __ ] Ali Talk about these Ayurvedic scripts, but can dramatically improve the quality of education support the body in receiving deeper levels of investment and positively impact and overall health without any further delay [00:01:12] let's get started [music] hello hello friends welcome to hate you but starting mein number-11 dal as a sweet and cute number to your fun facts in days session after eating meat roti when they talk about dreams beat system on string for the god [00:01:30] delete issues but i don't side it's hard to resist and body demand extra energy special element in the form of fruit iraada badal liya a useful tips to combine BBQ ambar dismissed as you have enough but chapati par lunch in shooting starts [00:01:48] with you come back side tube number is special f-18 debate and health state state bank of india wanted to come but due to its cooling nature is not recommended by ayurveda you can replace with ginger and state have already shared with you this easy recipe using ginger [00:02:05] rock solid and lemon juice which was prepared in this food without refrigerator for about 20 Combination you should avoid next smell mist a mission of milk and it is not only delicious but is also incredibly since I will be [00:02:22] talking about satvik food combinations ayurveda ayush want option let zinc have warming effect on the mind it is it is favorite aman gives you meditated for long hot milk with eggs and like 151 journey [00:02:39] from heavy body pain and just that sort of a day at work is that glass of warm up to desi cow milk with how many teaspoons of to kundli depending upon your digestive capacity is windmill kidney thirty minutes [00:02:54] before sleeping and not only provides friend to the body tissues but also none as you can not agri powder and third mishri powder to soo internet mill plus khichdi b pure lecture dry next with leading fans [00:03:10] problem angamos new train destroy on the planet with increased amount of routine in science Vitamins, minerals and fibre groom the power to replace and multi vitamin pills but more than option people doing fine day first table and for sambhade [00:03:28] become the results for gas looting and quantity patient speakers price of living foods extremely cold impotency and prince ayurvedic medicine recruitment meeting where they can it be justified as needed to a similar tenbe swami [00:03:43] ayurvedic text recruitment proud to be combined with creating spices line changer and black pepper pure next time you prepaid debit grated ginger black pepper rock sold roasted cumin seeds and lemon juice not to [00:03:59] your body will be able to apps of the most top 20 high pranic shoes but also you will realize that as similarly raw vegetables flat can also be combined with meeting spices phone number 8 credit with its leaders winters is fast approaching and so is [00:04:16] the season does humble Vegetable rich in potassium, maintains fiber is good for blood circulation, detoxifier however, bean is extremely cold impotency, its open hot desert nature has provided easy solution [00:04:32] just combined with it at every time you react salinity and maker curry and toilet 108 loop note balancing properties of liberty to get the benefits of radish [00:04:48] leaves for improving liver function, parasites digestive tract control blood sugar level medicinal combination of [00:05:15] simple combination easily like this to improve next time you e dal rice not just half teaspoon unique overrate but also add lemon juice benefits of discrimination can be read through any curry leaf and prize winning green leafy vegetable the giver will help a similar and [00:05:32] nutrients better wilder lemon juice added intellect will help explain Iron formate lemon plus that a combination not just agri but I challenge next blackgram with water milk plain gram one of the most primitive ingredients is [00:05:48] in ayurvedic tips black gram beans are offered a small and highly recommended for gaining weight and improving immunity also nutritious but these are also anise decorated from dec 18 specified badshah awaits heavy not so easy to [00:06:03] digest in what you can digest bhajan naresh you to resolve this problem ayurvedic treatment using black gram meal here glass hospice and sweet buttermilk black gram nut with natural sugar is also equally beneficial properly but is via [00:06:20] dal agri laddu just comment preparation in indian homes special inventors number five is potato with rice are you getting to weight questions when you will be surprised and energy tips and potato and research statement where combined [00:06:37] helps burn extra fat hum dab denge this ayurveda is for about Next time editor for to rise and these changes in both kids pen drive with rice simple potato of the world in which [00:06:55] subscribe you can happily move forward to subscribe subscribe my channel [00:07:18] skin tightening body special inventors simply add dry day two glass of milk powder glass of water and they will not let them boil entry was posted in your life with one glass of milk and [00:07:38] water not only dried properly straight nutrients in tamil dubbed tamil subscription fee in winters me [00:07:54] next k juice lemon juice one can do do [00:08:17] subscribe said people who suffer from serious problem and want to spot on only in the winter season to change my mother nature of this energy track next time don't forget and work in window 10 in sugar cane juice number two mango mango mango people [00:08:40] suffer from pimples allergic reaction after meeting with advised not but school and room temperature quantity of creating mango muddling muddling complete without [00:09:02] having kacchi lassi by mixing with lots of water and milk powder milk mango forget not to forget reminder send job pinga available [00:09:19] in the season its practical value first time you eat it man got you know what to control and wealth final year lasts for android and spicy karas do you like and doing in spicy food they formulate spicy food recruitment for balance [00:09:34] enquiry so shayari ab body which can be created hai form father dominated body type simple and effective way to stop and spicy karas fresh coriander leaves coriander with school in properties helps to balance creating effect of spices smart and [00:09:51] used oil paint morning evening best commission switch off but indian cooperative day-to-day life with mine in this whole world tamil he powerful ayurvedic tools for improving digestive health and overall balance me ji puja-path pandey video [00:10:07] helpful tubelight to see the parts of speech on your Exact place to give back we all looking for genuine toxins free speech mr top ten sports one good thing in the growth through its candidates and you will find that no sir fee no problem no it is from the [00:10:32] ground from chemicals along with herbal extracts of turmeric and essential oil for poor mama subscribe for all skin types and can be used for both men and women president [00:10:48] and click on the link in the description box special discount coupon 12% subscribe now support me join button please do subscribe my channel [00:11:04] like this video me channel for my name is vivek samaar ko [music] hua hai"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1143,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: Vw5kOT9ocjk",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @deepakashidixit4188 | Likes: 220 | Replies: 1 | Published: 2021-10-22T14:27:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "A small reality check :- Our Grandmother already knew about all these combinations, but unfortunately they didn't know about the 'Marketing Techniques' so we didn't valued them enough.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @shyamalagowri9992 | Likes: 13 | Replies: 0 | Published: 2024-04-26T20:45:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "They didn’t need marketing.. just respect",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @akankshajoshi1962 | Likes: 4398 | Replies: 66 | Published: 2021-10-23T02:11:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Yes we need Part 2. Especially on the wrong combinations of foods",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @anupdevlikar103 | Likes: 34 | Replies: 0 | Published: 2021-10-23T06:12:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "There's already one video on it..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @shwetak6328 | Likes: 5 | Replies: 0 | Published: 2021-10-23T08:30:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "🙏🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @Ashish..300 | Likes: 2 | Replies: 0 | Published: 2021-10-23T10:53:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Yes yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @ashar1182 | Likes: 2 | Replies: 0 | Published: 2021-10-23T16:08:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "Yes truly",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @siddharthshekhar909 | Likes: 9 | Replies: 0 | Published: 2021-10-23T17:22:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "It's mostly nonsense. People say the worst combination is fish and milk. My father who is a surgeon lived in the UK for many years , he used to have a popular dish there ,steamed fish with chilled milk . And nothing happened to him. No skin problems or anything. He returned as healthy as a horse.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @ManojYadav-lm2cq | Likes: 823 | Replies: 3 | Published: 2021-10-22T23:59:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "These intros are getting amazing and amazing over days 😂😂soon it will be Fit Tuber vines😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @FitTuber | Likes: 194 | Replies: 0 | Published: 2021-10-23T03:48:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "Glad you are liking them :)",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @suyashdixit8669 | Likes: 4 | Replies: 0 | Published: 2021-11-09T18:12:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "@FitTuber they r more hilarious than ur intention behind them to create for us. Kudos bro",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @Anonymous-h3l | Likes: 0 | Replies: 0 | Published: 2024-08-17T11:08:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Yeah😂🎉",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @sagarkochar | Likes: 10 | Replies: 0 | Published: 2023-05-03T19:39:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "Some give this guy a Bharat Ratna....he is single handedly reducing the medical burden of the country !!! 😀",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00048",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @aboutyourfavmalhan | Likes: 557 | Replies: 20 | Published: 2021-10-22T13:31:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "Make a video on “get rid of mosquitoes in easy way”",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00051",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @FitTuber | Likes: 180 | Replies: 0 | Published: 2021-10-22T13:35:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "Have. made a video on this topic. Check it out.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00054",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @txspencerx1146 | Likes: 9 | Replies: 0 | Published: 2021-10-22T13:49:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "@FitTuber can u provide us the source book",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00057",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @mochiixogaming | Likes: 8 | Replies: 0 | Published: 2021-10-22T14:07:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "Yah Nowadays dangue is spreading very much",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00060",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @mnyyy_ | Likes: 23 | Replies: 0 | Published: 2021-10-22T14:09:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "@FitTuber also please make a video suggesting about how to get rid of lizards and flies..!! 😑",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00063",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @nikhilgautam3315 | Likes: 10 | Replies: 0 | Published: 2021-10-22T14:19:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "The best way to get rid of the mosquitoes is to light the Neem oil Diyas in your room before sleeping, Neem oil because of its insects repellent properties works well to get rid of most bugs at your home. You can get plenty of options in the market as well, I use Dabur neem oil no doubt about the purity of the oil and i even use it on my hair.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "Another most popular and effective way is to light a diffuser with few drops of eucalyptus essential oil added in 2 tablespoon of water, eucalyptus essential oil too have insect repellent properties, I have personaly tried it and i would say that it takes some time to show the effect and it is obviously not instant but its worth it and with the soothing effect it gives at heating the oil makes it much more interesting and effective amongst several others.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @user-ks2gt2yu1j | Likes: 478 | Replies: 0 | Published: 2021-10-22T13:48:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "The intro example was perfect.😂🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00069",
+                  "author": "",
+                  "text": "Imagine we got a heart for appreciating his constancy, hardwork and efforts..🙌🏻👌🏻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "Always come with relevant content and nailed it...thanks for this helpful video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01581",
+                  "author": "",
+                  "text": "[COMMENT 476] Author: @akshiluhar1401 | Likes: 0 | Replies: 0 | Published: 2022-05-27T10:10:27Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01582",
+                  "author": "",
+                  "text": "Yes we need part 2",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01584",
+                  "author": "",
+                  "text": "[COMMENT 477] Author: @Sanjeevkumar-rl3ni | Likes: 0 | Replies: 0 | Published: 2022-05-03T02:10:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01585",
+                  "author": "",
+                  "text": "Yes we need part 2",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01587",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @tejvassan194 | Likes: 0 | Replies: 0 | Published: 2022-08-18T07:32:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01588",
+                  "author": "",
+                  "text": "Definitely",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01590",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @seemajain9651 | Likes: 0 | Replies: 0 | Published: 2022-02-17T13:51:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01591",
+                  "author": "",
+                  "text": "Yes we need part 2",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01593",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @smithanoble7566 | Likes: 0 | Replies: 0 | Published: 2022-05-26T05:12:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01594",
+                  "author": "",
+                  "text": "Useful video thanks",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01596",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @ghostbuster3276 | Likes: 1 | Replies: 0 | Published: 2023-01-30T13:11:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01597",
+                  "author": "",
+                  "text": "Yes please bring part 2",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01599",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @amlansahoo4204 | Likes: 0 | Replies: 0 | Published: 2022-02-14T14:25:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01600",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01602",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @farhahassan5245 | Likes: 0 | Replies: 0 | Published: 2022-06-22T14:59:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01603",
+                  "author": "",
+                  "text": "Yes..part two please",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01605",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @aparnagattupalli7071 | Likes: 0 | Replies: 0 | Published: 2022-03-01T10:57:59Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01606",
+                  "author": "",
+                  "text": "Yes. We need part 2",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01608",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @AhmedSaeed-ft1sk | Likes: 0 | Replies: 0 | Published: 2024-05-16T10:24:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01609",
+                  "author": "",
+                  "text": "Viveke Maza AA gaya",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01611",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @sureshlund9616 | Likes: 0 | Replies: 0 | Published: 2022-05-18T17:27:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01612",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01614",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @ashahebbar9893 | Likes: 0 | Replies: 0 | Published: 2022-06-20T14:57:22Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01615",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01617",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @seemabhardwaj | Likes: 0 | Replies: 0 | Published: 2022-06-23T16:24:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01618",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01620",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @kalpanasenguptabaruah5180 | Likes: 0 | Replies: 0 | Published: 2022-10-08T17:55:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01621",
+                  "author": "",
+                  "text": "Very nice information 🙏🏿",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01623",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @nitinjaveri456 | Likes: 0 | Replies: 0 | Published: 2022-07-27T20:14:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01624",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @azzuha | Likes: 0 | Replies: 0 | Published: 2023-07-19T09:04:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @nishasingh2441 | Likes: 0 | Replies: 0 | Published: 2022-06-22T03:51:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "Very informative video👍🏻",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @Padarthwala | Likes: 0 | Replies: 0 | Published: 2023-01-05T07:32:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @tulsinegi9777 | Likes: 0 | Replies: 0 | Published: 2023-02-13T09:37:39Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01636",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01638",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @kalpanacintury4744 | Likes: 0 | Replies: 0 | Published: 2022-04-21T03:02:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "Yes please",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01641",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @benumukerjee | Likes: 0 | Replies: 0 | Published: 2022-10-08T02:19:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "Yes please",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01644",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @geetakumari4641 | Likes: 0 | Replies: 0 | Published: 2023-05-22T05:35:31Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "Thank you so much 🙏❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @wowarosiestv8078 | Likes: 0 | Replies: 0 | Published: 2022-06-14T01:25:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "Wow, thanks again 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @husainabanu4017 | Likes: 0 | Replies: 0 | Published: 2022-07-02T06:06:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "👌I like u r every video...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @ugginarevathi9250 | Likes: 0 | Replies: 0 | Published: 2023-06-09T15:58:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "Vw5kOT9ocjk",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 39,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 8074,
+          "transcript_words": 1467,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:03] And what is Vivek doing right and wrong food combinations click, we are some suggestion friend, I still have to accept all your other things but this food combination is a bogus concept, I mean how can it be that two perfectly good things are combined and it becomes an entry, in fact, [00:00:19] tell me an example where two perfectly good things are combined and it becomes bad, wait I am right now [praise] why is that right, isn't it, what panel did you have, why, what is the problem, this blazer is the one [00:00:36] you like and I had this with you, yes friend, I got it for you, oh how should I explain, both are big in their own way, don't mind the difficulties, I mean, nomination form, in this [00:00:57] video I will share with you 11:00 Practical Food Combinations [ __ ] Ali Talk about these Ayurvedic scripts, but can dramatically improve the quality of education support the body in receiving deeper levels of investment and positively impact and overall health without any further delay [00:01:12] let's get started [music] hello hello friends welcome to hate you but starting mein number-11 dal as a sweet and cute number to your fun facts in days session after eating meat roti when they talk about dreams beat system on string for the god [00:01:30] delete issues but i don't side it's hard to resist and body demand extra energy special element in the form of fruit iraada badal liya a useful tips to combine BBQ ambar dismissed as you have enough but chapati par lunch in shooting starts [00:01:48] with you come back side tube number is special f-18 debate and health state state bank of india wanted to come but due to its cooling nature is not recommended by ayurveda you can replace with ginger and state have already shared with you this easy recipe using ginger [00:02:05] rock solid and lemon juice which was prepared in this food without refrigerator for about 20 Combination you should avoid next smell mist a mission of milk and it is not only delicious but is also incredibly since I will be [00:02:22] talking about satvik food combinations ayurveda ayush want option let zinc have warming effect on the mind it is it is favorite aman gives you meditated for long hot milk with eggs and like 151 journey [00:02:39] from heavy body pain and just that sort of a day at work is that glass of warm up to desi cow milk with how many teaspoons of to kundli depending upon your digestive capacity is windmill kidney thirty minutes [00:02:54] before sleeping and not only provides friend to the body tissues but also none as you can not agri powder and third mishri powder to soo internet mill plus khichdi b pure lecture dry next with leading fans [00:03:10] problem angamos new train destroy on the planet with increased amount of routine in science Vitamins, minerals and fibre groom the power to replace and multi vitamin pills but more than option people doing fine day first table and for sambhade [00:03:28] become the results for gas looting and quantity patient speakers price of living foods extremely cold impotency and prince ayurvedic medicine recruitment meeting where they can it be justified as needed to a similar tenbe swami [00:03:43] ayurvedic text recruitment proud to be combined with creating spices line changer and black pepper pure next time you prepaid debit grated ginger black pepper rock sold roasted cumin seeds and lemon juice not to [00:03:59] your body will be able to apps of the most top 20 high pranic shoes but also you will realize that as similarly raw vegetables flat can also be combined with meeting spices phone number 8 credit with its leaders winters is fast approaching and so is [00:04:16] the season does humble Vegetable rich in potassium, maintains fiber is good for blood circulation, detoxifier however, bean is extremely cold impotency, its open hot desert nature has provided easy solution [00:04:32] just combined with it at every time you react salinity and maker curry and toilet 108 loop note balancing properties of liberty to get the benefits of radish [00:04:48] leaves for improving liver function, parasites digestive tract control blood sugar level medicinal combination of [00:05:15] simple combination easily like this to improve next time you e dal rice not just half teaspoon unique overrate but also add lemon juice benefits of discrimination can be read through any curry leaf and prize winning green leafy vegetable the giver will help a similar and [00:05:32] nutrients better wilder lemon juice added intellect will help explain Iron formate lemon plus that a combination not just agri but I challenge next blackgram with water milk plain gram one of the most primitive ingredients is [00:05:48] in ayurvedic tips black gram beans are offered a small and highly recommended for gaining weight and improving immunity also nutritious but these are also anise decorated from dec 18 specified badshah awaits heavy not so easy to [00:06:03] digest in what you can digest bhajan naresh you to resolve this problem ayurvedic treatment using black gram meal here glass hospice and sweet buttermilk black gram nut with natural sugar is also equally beneficial properly but is via [00:06:20] dal agri laddu just comment preparation in indian homes special inventors number five is potato with rice are you getting to weight questions when you will be surprised and energy tips and potato and research statement where combined [00:06:37] helps burn extra fat hum dab denge this ayurveda is for about Next time editor for to rise and these changes in both kids pen drive with rice simple potato of the world in which [00:06:55] subscribe you can happily move forward to subscribe subscribe my channel [00:07:18] skin tightening body special inventors simply add dry day two glass of milk powder glass of water and they will not let them boil entry was posted in your life with one glass of milk and [00:07:38] water not only dried properly straight nutrients in tamil dubbed tamil subscription fee in winters me [00:07:54] next k juice lemon juice one can do do [00:08:17] subscribe said people who suffer from serious problem and want to spot on only in the winter season to change my mother nature of this energy track next time don't forget and work in window 10 in sugar cane juice number two mango mango mango people [00:08:40] suffer from pimples allergic reaction after meeting with advised not but school and room temperature quantity of creating mango muddling muddling complete without [00:09:02] having kacchi lassi by mixing with lots of water and milk powder milk mango forget not to forget reminder send job pinga available [00:09:19] in the season its practical value first time you eat it man got you know what to control and wealth final year lasts for android and spicy karas do you like and doing in spicy food they formulate spicy food recruitment for balance [00:09:34] enquiry so shayari ab body which can be created hai form father dominated body type simple and effective way to stop and spicy karas fresh coriander leaves coriander with school in properties helps to balance creating effect of spices smart and [00:09:51] used oil paint morning evening best commission switch off but indian cooperative day-to-day life with mine in this whole world tamil he powerful ayurvedic tools for improving digestive health and overall balance me ji puja-path pandey video [00:10:07] helpful tubelight to see the parts of speech on your Exact place to give back we all looking for genuine toxins free speech mr top ten sports one good thing in the growth through its candidates and you will find that no sir fee no problem no it is from the [00:10:32] ground from chemicals along with herbal extracts of turmeric and essential oil for poor mama subscribe for all skin types and can be used for both men and women president [00:10:48] and click on the link in the description box special discount coupon 12% subscribe now support me join button please do subscribe my channel [00:11:04] like this video me channel for my name is vivek samaar ko [music] hua hai"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1143,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: Vw5kOT9ocjk",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @deepakashidixit4188 | Likes: 220 | Replies: 1 | Published: 2021-10-22T14:27:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "A small reality check :- Our Grandmother already knew about all these combinations, but unfortunately they didn't know about the 'Marketing Techniques' so we didn't valued them enough.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @shyamalagowri9992 | Likes: 13 | Replies: 0 | Published: 2024-04-26T20:45:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "They didn’t need marketing.. just respect",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @akankshajoshi1962 | Likes: 4398 | Replies: 66 | Published: 2021-10-23T02:11:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Yes we need Part 2. Especially on the wrong combinations of foods",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @anupdevlikar103 | Likes: 34 | Replies: 0 | Published: 2021-10-23T06:12:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "There's already one video on it..",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @shwetak6328 | Likes: 5 | Replies: 0 | Published: 2021-10-23T08:30:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "🙏🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @Ashish..300 | Likes: 2 | Replies: 0 | Published: 2021-10-23T10:53:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Yes yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @ashar1182 | Likes: 2 | Replies: 0 | Published: 2021-10-23T16:08:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "Yes truly",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @siddharthshekhar909 | Likes: 9 | Replies: 0 | Published: 2021-10-23T17:22:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "It's mostly nonsense. People say the worst combination is fish and milk. My father who is a surgeon lived in the UK for many years , he used to have a popular dish there ,steamed fish with chilled milk . And nothing happened to him. No skin problems or anything. He returned as healthy as a horse.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @ManojYadav-lm2cq | Likes: 823 | Replies: 3 | Published: 2021-10-22T23:59:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "These intros are getting amazing and amazing over days 😂😂soon it will be Fit Tuber vines😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "[COMMENT 10] Author: @FitTuber | Likes: 194 | Replies: 0 | Published: 2021-10-23T03:48:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "Glad you are liking them :)",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 11] Author: @suyashdixit8669 | Likes: 4 | Replies: 0 | Published: 2021-11-09T18:12:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "@FitTuber they r more hilarious than ur intention behind them to create for us. Kudos bro",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 12] Author: @Anonymous-h3l | Likes: 0 | Replies: 0 | Published: 2024-08-17T11:08:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Yeah😂🎉",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 13] Author: @sagarkochar | Likes: 10 | Replies: 0 | Published: 2023-05-03T19:39:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "Some give this guy a Bharat Ratna....he is single handedly reducing the medical burden of the country !!! 😀",
+                "likes": null
+              },
+              {
+                "comment_id": "c00048",
+                "author": "",
+                "text": "[COMMENT 14] Author: @aboutyourfavmalhan | Likes: 557 | Replies: 20 | Published: 2021-10-22T13:31:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "Make a video on “get rid of mosquitoes in easy way”",
+                "likes": null
+              },
+              {
+                "comment_id": "c00051",
+                "author": "",
+                "text": "[COMMENT 15] Author: @FitTuber | Likes: 180 | Replies: 0 | Published: 2021-10-22T13:35:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "Have. made a video on this topic. Check it out.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00054",
+                "author": "",
+                "text": "[COMMENT 16] Author: @txspencerx1146 | Likes: 9 | Replies: 0 | Published: 2021-10-22T13:49:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "@FitTuber can u provide us the source book",
+                "likes": null
+              },
+              {
+                "comment_id": "c00057",
+                "author": "",
+                "text": "[COMMENT 17] Author: @mochiixogaming | Likes: 8 | Replies: 0 | Published: 2021-10-22T14:07:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "Yah Nowadays dangue is spreading very much",
+                "likes": null
+              },
+              {
+                "comment_id": "c00060",
+                "author": "",
+                "text": "[COMMENT 18] Author: @mnyyy_ | Likes: 23 | Replies: 0 | Published: 2021-10-22T14:09:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "@FitTuber also please make a video suggesting about how to get rid of lizards and flies..!! 😑",
+                "likes": null
+              },
+              {
+                "comment_id": "c00063",
+                "author": "",
+                "text": "[COMMENT 19] Author: @nikhilgautam3315 | Likes: 10 | Replies: 0 | Published: 2021-10-22T14:19:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "The best way to get rid of the mosquitoes is to light the Neem oil Diyas in your room before sleeping, Neem oil because of its insects repellent properties works well to get rid of most bugs at your home. You can get plenty of options in the market as well, I use Dabur neem oil no doubt about the purity of the oil and i even use it on my hair.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "Another most popular and effective way is to light a diffuser with few drops of eucalyptus essential oil added in 2 tablespoon of water, eucalyptus essential oil too have insect repellent properties, I have personaly tried it and i would say that it takes some time to show the effect and it is obviously not instant but its worth it and with the soothing effect it gives at heating the oil makes it much more interesting and effective amongst several others.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 20] Author: @user-ks2gt2yu1j | Likes: 478 | Replies: 0 | Published: 2021-10-22T13:48:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "The intro example was perfect.😂🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00069",
+                "author": "",
+                "text": "Imagine we got a heart for appreciating his constancy, hardwork and efforts..🙌🏻👌🏻",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "Always come with relevant content and nailed it...thanks for this helpful video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01581",
+                "author": "",
+                "text": "[COMMENT 476] Author: @akshiluhar1401 | Likes: 0 | Replies: 0 | Published: 2022-05-27T10:10:27Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01582",
+                "author": "",
+                "text": "Yes we need part 2",
+                "likes": null
+              },
+              {
+                "comment_id": "c01584",
+                "author": "",
+                "text": "[COMMENT 477] Author: @Sanjeevkumar-rl3ni | Likes: 0 | Replies: 0 | Published: 2022-05-03T02:10:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01585",
+                "author": "",
+                "text": "Yes we need part 2",
+                "likes": null
+              },
+              {
+                "comment_id": "c01587",
+                "author": "",
+                "text": "[COMMENT 478] Author: @tejvassan194 | Likes: 0 | Replies: 0 | Published: 2022-08-18T07:32:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01588",
+                "author": "",
+                "text": "Definitely",
+                "likes": null
+              },
+              {
+                "comment_id": "c01590",
+                "author": "",
+                "text": "[COMMENT 479] Author: @seemajain9651 | Likes: 0 | Replies: 0 | Published: 2022-02-17T13:51:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01591",
+                "author": "",
+                "text": "Yes we need part 2",
+                "likes": null
+              },
+              {
+                "comment_id": "c01593",
+                "author": "",
+                "text": "[COMMENT 480] Author: @smithanoble7566 | Likes: 0 | Replies: 0 | Published: 2022-05-26T05:12:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01594",
+                "author": "",
+                "text": "Useful video thanks",
+                "likes": null
+              },
+              {
+                "comment_id": "c01596",
+                "author": "",
+                "text": "[COMMENT 481] Author: @ghostbuster3276 | Likes: 1 | Replies: 0 | Published: 2023-01-30T13:11:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01597",
+                "author": "",
+                "text": "Yes please bring part 2",
+                "likes": null
+              },
+              {
+                "comment_id": "c01599",
+                "author": "",
+                "text": "[COMMENT 482] Author: @amlansahoo4204 | Likes: 0 | Replies: 0 | Published: 2022-02-14T14:25:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01600",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01602",
+                "author": "",
+                "text": "[COMMENT 483] Author: @farhahassan5245 | Likes: 0 | Replies: 0 | Published: 2022-06-22T14:59:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01603",
+                "author": "",
+                "text": "Yes..part two please",
+                "likes": null
+              },
+              {
+                "comment_id": "c01605",
+                "author": "",
+                "text": "[COMMENT 484] Author: @aparnagattupalli7071 | Likes: 0 | Replies: 0 | Published: 2022-03-01T10:57:59Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01606",
+                "author": "",
+                "text": "Yes. We need part 2",
+                "likes": null
+              },
+              {
+                "comment_id": "c01608",
+                "author": "",
+                "text": "[COMMENT 485] Author: @AhmedSaeed-ft1sk | Likes: 0 | Replies: 0 | Published: 2024-05-16T10:24:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01609",
+                "author": "",
+                "text": "Viveke Maza AA gaya",
+                "likes": null
+              },
+              {
+                "comment_id": "c01611",
+                "author": "",
+                "text": "[COMMENT 486] Author: @sureshlund9616 | Likes: 0 | Replies: 0 | Published: 2022-05-18T17:27:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01612",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01614",
+                "author": "",
+                "text": "[COMMENT 487] Author: @ashahebbar9893 | Likes: 0 | Replies: 0 | Published: 2022-06-20T14:57:22Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01615",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01617",
+                "author": "",
+                "text": "[COMMENT 488] Author: @seemabhardwaj | Likes: 0 | Replies: 0 | Published: 2022-06-23T16:24:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01618",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01620",
+                "author": "",
+                "text": "[COMMENT 489] Author: @kalpanasenguptabaruah5180 | Likes: 0 | Replies: 0 | Published: 2022-10-08T17:55:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01621",
+                "author": "",
+                "text": "Very nice information 🙏🏿",
+                "likes": null
+              },
+              {
+                "comment_id": "c01623",
+                "author": "",
+                "text": "[COMMENT 490] Author: @nitinjaveri456 | Likes: 0 | Replies: 0 | Published: 2022-07-27T20:14:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01624",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "[COMMENT 491] Author: @azzuha | Likes: 0 | Replies: 0 | Published: 2023-07-19T09:04:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "[COMMENT 492] Author: @nishasingh2441 | Likes: 0 | Replies: 0 | Published: 2022-06-22T03:51:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "Very informative video👍🏻",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "[COMMENT 493] Author: @Padarthwala | Likes: 0 | Replies: 0 | Published: 2023-01-05T07:32:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "[COMMENT 494] Author: @tulsinegi9777 | Likes: 0 | Replies: 0 | Published: 2023-02-13T09:37:39Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01636",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c01638",
+                "author": "",
+                "text": "[COMMENT 495] Author: @kalpanacintury4744 | Likes: 0 | Replies: 0 | Published: 2022-04-21T03:02:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "Yes please",
+                "likes": null
+              },
+              {
+                "comment_id": "c01641",
+                "author": "",
+                "text": "[COMMENT 496] Author: @benumukerjee | Likes: 0 | Replies: 0 | Published: 2022-10-08T02:19:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "Yes please",
+                "likes": null
+              },
+              {
+                "comment_id": "c01644",
+                "author": "",
+                "text": "[COMMENT 497] Author: @geetakumari4641 | Likes: 0 | Replies: 0 | Published: 2023-05-22T05:35:31Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "Thank you so much 🙏❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "[COMMENT 498] Author: @wowarosiestv8078 | Likes: 0 | Replies: 0 | Published: 2022-06-14T01:25:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "Wow, thanks again 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "[COMMENT 499] Author: @husainabanu4017 | Likes: 0 | Replies: 0 | Published: 2022-07-02T06:06:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "👌I like u r every video...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 500] Author: @ugginarevathi9250 | Likes: 0 | Replies: 0 | Published: 2023-06-09T15:58:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

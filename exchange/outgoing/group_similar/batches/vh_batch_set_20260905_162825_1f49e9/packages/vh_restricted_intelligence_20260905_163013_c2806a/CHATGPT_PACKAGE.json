@@ -1,0 +1,2718 @@
+{
+  "package_id": "vh_restricted_intelligence_20260905_163013_c2806a",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use reasoning carefully, but only for the requested compact feature set.",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "removed_features": [
+      "executive_summary.v2",
+      "entities.v2",
+      "claims_warnings.v2",
+      "viewer_comment_intelligence.v2",
+      "same_topic_clip_plan.v1",
+      "evidence_assessment.v1",
+      "video_intake.v1",
+      "quality_validation.v1"
+    ],
+    "quality_rubric": {
+      "grounding": "Every material transcript-derived conclusion cites canonical segment_ids.",
+      "coverage": "Process every exact VIDEO_ID and only the requested features.",
+      "title_en": "For list/ranking/recommendation videos, include clearly evidenced item names in the improved title; do not invent item names from the title alone.",
+      "taxonomy": "Use controlled categories and specific canonical tags/search queries.",
+      "detailed_summary": "Keep detailed_summary.v3 full and evidence-grounded; do not shorten this feature just because compact mode is enabled.",
+      "timeline": "Create chapter-like topic sections with meaningful boundaries and valid timestamps.",
+      "editorial": "Keep editorial_assessment.v1 compact: short ChatGPT take, bottom line, practical value rating, credibility rating, keep priority and score only.",
+      "uncertainty": "Distinguish source claims, supplied support, interpretation and what remains uncertain."
+    },
+    "instructions": "Compact grouped package mode. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, and formal_json_schema. Process every exact VIDEO_ID and return one final JSON object with no prose or markdown. Return ONLY these feature IDs: title_en.v1, taxonomy.v3, detailed_summary.v3, timeline_sections.v3, editorial_assessment.v1. Do not return executive_summary.v2, entities.v2, claims_warnings.v2, viewer_comment_intelligence.v2, same_topic_clip_plan.v1, evidence_assessment.v1, video_intake.v1, or quality_validation.v1. Keep detailed_summary.v3 full length and semantic, not extractive. Build timeline_sections.v3 like meaningful chapters/topic boundaries. Keep editorial_assessment.v1 short and video-specific using only chatgpt_take, bottom_line, practical_value, credibility, keep_priority, and score_0_to_100. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163013_c2806a",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Eye health — partial transcript",
+      "batch_number": 10,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 10 of 30 in master set vh_batch_set_20260905_162825_1f49e9. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch. This package contains partial or low-quality transcripts. Mark uncertainty, restrict unsupported conclusions, and do not imply complete coverage."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_restricted_intelligence_20260905_163013_c2806a",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "300-700 words when evidence supports it; shorter for sparse evidence",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_restricted_intelligence_20260905_163013_c2806a"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "FAIL"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "FAIL"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_restricted_intelligence_20260905_163013_c2806a",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Eye health — partial transcript",
+      "batch_number": 10,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "ca9e41d2-eaac-40e9-b6a3-124d1c9baf2a",
+    "package_id": "vh_restricted_intelligence_20260905_163013_c2806a",
+    "mode": "RESTRICTED_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.0",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "utoB7wXrmHY"
+    ],
+    "evidence_grades": {
+      "utoB7wXrmHY": "D"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260905_162825_1f49e9",
+      "profile": "RESTRICTED_INTELLIGENCE",
+      "group_name": "Eye health — partial transcript",
+      "batch_number": 10,
+      "batch_total": 30,
+      "batch_size": 8,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "fb438f9f356b84f57ff9a4b62eca0565f3f22349d5a14393dd478094e55b2d94",
+      "prompt.json": "d75bb9721bd4a427459d28fb0fc677211d5889fb6984e9298fde838849c633f4",
+      "schema.json": "3877f1df1823328ead508712f308ced1961ff5893dfc183418b469141867ce5a"
+    },
+    "created_at": "2026-09-05 16:30:13",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "utoB7wXrmHY",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=utoB7wXrmHY",
+        "original_title": "How to Nourish and Relax the Eyes? (Best Eye Drops, Top 3 Foods & Practices)",
+        "clean_title": "How to Nourish and Relax the Eyes (Best Eye Drops, Top 3 Foods & Practices)",
+        "channel": "Fit Tuber",
+        "upload_date": "2021-05-28",
+        "description": "Eye Strain Protector (Laptop) 5 Most Effective Ways to Cool down and Relax your Eyes. Best Eye drops and top 3 foods to nourish and relax the eyes.\n\nBuy Auric Thandai - https://bit.ly/2PQr3BX\n(Apply discount coupon FTAURIC to get 15% off)\nBuy from Amazon - https://amzn.to/2R2qOo0\n\nWith a significant increase in the screen time in the past couple of months, taking care of eyes has never been so important. With problems like dry eyes, strain, redness, itching and decreased vision it's clear that our eyes have been the biggest loser of this situation. In this video I am going to share with you easy ways, safe eye drops along with top 3 foods to give your eyes the much needed relief. \n\n01:08 - Which are the best Eye drops in the Indian market?\n02:55 - How to protect the eyes from getting strained while working on laptop and using phone\n04:13 - 5 Easy ways to relax the eyes instantly\n05:34 - Eye connection with the feet. Take care of your feet to take care of your eyes.\n06:34 - Top 3 Foods for Eyes. Include them in your diet.\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)📦\nNetra Sudarshan Ark - https://amzn.to/3usYV6b\nPure Rose water (Normal) - https://amzn.to/3oTBwJQ\nPure Rose water (premium) - https://amzn.to/2SvIXLk\nTriphala Ghrit - https://amzn.to/3yHPZNx\nTriphala Ghrit (option 2) - https://amzn.to/3fT7kKT\nSunayan Eye Drops - https://amzn.to/3uvDJfI\nA2 Desi Cow ghee - https://amzn.to/3fNmPnu\nA2 Desi Cow ghee (option 2) - https://amzn.to/2RHsrb5\nEye Strain Protector (Laptop)  - https://amzn.to/2RIeh9G\nEye Strain Protector (Phone) https://amzn.to/3vtT69Z\nPrivacy filter (Laptop) - https://amzn.to/3uwNiuO\nPrivacy filter (Phone): https://amzn.to/3uu92HJ \nGond Katira - https://amzn.to/34lbjdR\nGond Katira (organic) - https://amzn.to/3hW3X8q\nCold Pressed Mustard oil - https://amzn.to/2SvYQRN\nCold Pressed Sesame oil - https://amzn.to/3urSRLh\nCold Pressed Coconut oil - https://amzn.to/34jSqrI\nPumice stone - https://amzn.to/3vvP54A\nPumice stone (option 2) - https://amzn.to/3wyZVHl\nWhole Green Moong Dal - https://amzn.to/2Tn5zhr\nWhole Green Moong Dal (Organic) - https://amzn.to/3oTUQXi\nAmla Juice - https://amzn.to/3p2wb2X\nAmla Juice (option 2) - https://amzn.to/2R2vz0Q\n\n✅  SUPPORT MY WORK and get exclusive perks \nhttps://www.youtube.com/channel/UCYC6Vcczj8v-Y5OgpEJTFBw/join\n\nINSTAGRAM :  Follow me on Instagram\nhttps://www.instagram.com/fittuber\n\nRECOMMENDED VIDEOS 📹\n30 Min Daily Yoga Routine for Beginners (For daily Eye exercises)\nhttps://youtu.be/dAqQqmaI9vY\nHow to Improve Eyesight in 5 Steps (100% Guaranteed)\nhttps://youtu.be/3QDxwMk0FRQ\nGet Over Phone Addiction in 4 Simple Steps (Practical Solution)\nhttps://youtu.be/vuk3HX4HgwE\n\nBEST PRODUCTS FROM UPDATED WORST TO BEST 2020 SERIES (Not Sponsored)\nShampoo (option 1) - https://amzn.to/2IdTmor\nShampoo (option 2)- https://amzn.to/2U7ZhwV\nShampoo (option 3) - https://amzn.to/3h1mDB6\nBathing Soap (option 1) - https://amzn.to/3rgaTzN\nBathing Soap (option 2) - https://amzn.to/3jMd2y0\nBathing Soap (option 3) - https://amzn.to/2JvBx6e\nToothpaste (option 1) - https://amzn.to/3jrcNbu\nToothpaste (option 2) - https://amzn.to/35C4GDZ\nFace wash (option 1) - https://amzn.to/2J6vLW6\nFace wash (option 2) - https://amzn.to/2J5JRH6\nFace wash (option 3) - https://amzn.to/2J5QKs7\nHair oil (option 1) - https://amzn.to/2YU6zqh\nHair oil (option 2) - https://amzn.to/33uYhZI\nHair oil (option 3) - https://amzn.to/33tj938\nMoisturiser (option 1) - https://amzn.to/3n4cdCL\nMoisturiser (option 2) - https://amzn.to/38r46fE\nMoisturiser (option 3) - https://amzn.to/2U7Y0Z4\nCooking oil (option 1) - https://amzn.to/2K85ha5\nCooking oil (option 2) - https://amzn.to/3mqWUnY\nCooking oil (option 3)  - https://amzn.to/35AVSQw\nGhee (option 1) - https://amzn.to/3eplzUS\nGhee (option 2) - https://amzn.to/38cDTzG\nGhee (option 3) - https://amzn.to/34pRT7R\nBiscuits (option 1) - https://amzn.to/3p5XxEm\n\nBiscuits (option 3) - https://amzn.to/2LJugRf\nNamkeen (option 1) - https://amzn.to/3riSnXs\nNamkeen (option 2) - https://amzn.to/2KgNxsX\nNamkeen (option 3) - https://amzn.to/3rbfIKi\nDeodorant (option 1) - https://amzn.to/38gp279\nDeodorant (option 2)- https://amzn.to/3ml5mox\nDeodorant (option 3)- https://amzn.to/2Vo22Ns\nHair Conditioner (option 1) - https://amzn.to/3oQ0o3S\nHair Conditioner (option 2) - https://amzn.to/2QJeTKm\nHair colour (option 1) - https://amzn.to/2KSyDbu\nHair colour (option 2) - https://amzn.to/2ugscos\nHair colour (option 3) - https://amzn.to/2KQhGOV\n\n08:38 - Segment Partner - Auric Thandai\n\nDISCLAIMER: Whatever I have spoken in this video is my honest opinion. I am not with or against any brand. I judge a product on the basis of its merit. None of the brands/products mentioned are sponsored unless explicitly mentioned. Neither the sponsored brand nor any other brand/organization for that matter has any control over views shared on this channel. \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "low",
+          "completeness": "partial",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] So children, this is all the homework in today's Physics class, let's keep it a little light, we just need chapter number 2, 3GP of HC Verma and the papers of the last five years, brother, come on, enjoy, you have given me so much tension and are saying enjoy, so it has happened, [00:00:25] why has the autofocus gone, in this physics affair, my biology should not get spoiled, that is, kidney, do subscribe with significant life screen time in taking care of eyes has never been so [00:00:42] important with problems like itching and subscribe to [00:01:05] [Music] Hello, hello friends, welcome to this book starting with number five list eye drops, secure screen times by keeping it and a wise decision with some options available in the Indian market place Midnight Channel and subscribe to the [00:01:35] problem chloride preservative channel, [00:02:09] in the top eight, no tension, side effects and speed for regular use, it is the classical formula and also available in the market, by the way, you can even Make fried rice at home by mixing 500ml of rose water in 30ml of clean water just need to reduce natural water without any preservatives and [00:02:27] subscribe for dry hair oil subscribe Indian cow ghee balancing oil [00:03:00] subscribe no option but to sleep at night time you cant to drops next text this eye protection prevention is better than that but many times it is not possible to prevent option studio away from screen awards and installation of [00:03:17] production film screen for laptops and three lines of products are available in Indian market subscribe you all the best all the most effective and wide [00:03:38] investment I liked the video then [00:04:01] subscribe to The Amazing subscribe now laptop and not to be used in the first to for your convenience of ghee time when I description box did great left side reaction after long section online oil spill dry and [00:04:18] spread to come down and get instant cooling effect there some easy and effective is problem the list of the first to right Slices of cucumber and apply and close down for about 10 minutes. We [00:04:34] start Bluetooth, turn off rose water and it will give you [ __ ]. Only available in Indian kitchens. Subscribe in water overnight [00:05:06] and be applied over the top posts. A flying saliva Buddha is especially just after a meeting of its not just in expensive volume. Additional for various sizes in just 120 days. Only little finger and applied like kajal. Another underrated option. * Simply fill amount full with water [00:05:23] and a splash of water. Word is good for water in her mouth. This is smart technique to give more exposed to the house which date clinic. Next connection with left just like to get through its water. The root of the plant is in the [00:05:40] fact that you were identified for not the center of date. Connect with proper care of the result will be found on the most effective massage mustard oil and waste oil over 1000 [00:05:58] Ayurveda subscribe for help from nervous system problems quite amazing to people with insomnia and press another thing they dipped into this voucher feed using a pumice stone or just her [00:06:14] liver hand will be no doubt walking dead photographs shooting mother is but one should not be underone heated uneven and tiles clean instead muscles definition of eyes with this strong and the ring to subscribe [00:06:31] improve your health finally Bigg Boss food balance does it is always right to food [00:06:52] toxins poisons and amla syrup from but not using traditional method is the tourist places in which robbers have karbi sc can be used as eye drops swine flu se [00:07:09] nazar mere color food for da is you can include here in the form of dal user 10:30 moong dal dosa and terror in the form of mode turn amla and indian gooseberry is well known for its Rich meeting action in this you can [00:07:24] violet alum and makeup a kala to effect you can also have few teaspoons of amla juice with equal amounts of warm water and morning friends page in your regular diet you will see by is decided that to subscribe din karate and meanings also [00:07:42] helpful prizes to surprise pay eye drops hand and foot to drops of but before going to sleep at night to install screen protector and laptop and phone relax and is any time you thank you compare rose water debit cotton pad and gum [00:07:58] katira eye mask and saliva his highly medicinal oils and can be applied in and around is watching this is without food and water day he is instant ko lenge fight to massage mustard oil no and sugar agarkul waste oil over 1000 fit included into the see [00:08:15] karungi cream moong dal and amla in your regular diet solving 205 practices you can greatly Reduced the screen and potential problems associated with this app you can view all 5 nothing like it is possible it is not feasible tried to implement as much as possible minorities have the [00:08:32] power to leave a positive impact pandey video helpful exam please give back thumbs up if you are looking for a traditional cooling drink for this summer get your hands on oxidized gokhru this ingredient and you will find its natural sweetness contained with authentic nut [00:08:49] seeds and much different from the commercial thandai no syrup artificial flavors and unwanted glass thandai is not just a cooling energy drink for the summer to also helps boost immunity and reduce acidity to enjoy the ayurveda [00:09:06] bhandari put two teaspoons of eight wet cloths made of clay add oil milk and mix kar loo cool at the best time to visit the inventor of the rich in anti-oxidants rupiya se [00:09:25] Special Discount Coupon 2% in the description box of the district Video Please Remember to Subscribe My Channel Like This Video [00:09:48] Thank You So Much For U [Music]"
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1197,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: utoB7wXrmHY",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @mrityunjoypramanick777 | Likes: 3717 | Replies: 20 | Published: 2021-05-28T14:46:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Now he also starts entertaining us besides giving information...😂😁such a talented guy 😆",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "[COMMENT 2] Author: @swastikayanghosh160 | Likes: 25 | Replies: 0 | Published: 2021-05-28T15:58:01Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Yes yahi toh fittuber 😎",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 3] Author: @daniyaldolare3782 | Likes: 14 | Replies: 0 | Published: 2021-05-28T18:06:19Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "It's his personality",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 4] Author: @archanagoswami1291 | Likes: 28 | Replies: 0 | Published: 2021-05-29T00:19:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "He is making knowledge easy to gain by adding some humour to it. Very creative .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 5] Author: @faizanraza4357 | Likes: 5 | Replies: 0 | Published: 2021-05-29T07:26:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Yes",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 6] Author: @manishmanuel439 | Likes: 3 | Replies: 0 | Published: 2021-05-31T03:44:09Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "True he is an innovative person",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 7] Author: @rajabalaji7967 | Likes: 6169 | Replies: 60 | Published: 2021-05-28T13:30:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "The intro is 100 percent trueeee",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 8] Author: @LilyartistFabricworks | Likes: 16 | Replies: 0 | Published: 2021-05-28T13:36:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "😂👍",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "[COMMENT 9] Author: @funnymode9801 | Likes: 44 | Replies: 0 | Published: 2021-05-28T13:42:54Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "*AAPKl MAA Kl UMAR KlTNl HOGl😊*",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "*lgnore : O years ❌*",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "*1🅢🅤🅑🅢🅒🅡🅘🅑🅔 = 150 years☑️*",
+              "likes": null
+            },
+            {
+              "comment_id": "c00038",
+              "author": "",
+              "text": "👇👇👇",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "[COMMENT 10] Author: @AnchalKumari-ll9pz | Likes: 10 | Replies: 0 | Published: 2021-05-28T13:51:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00041",
+              "author": "",
+              "text": "😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "[COMMENT 11] Author: @siddharthagautam7299 | Likes: 41 | Replies: 0 | Published: 2021-05-28T14:00:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00044",
+              "author": "",
+              "text": "@funnymode9801 kitna girega bhai .",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "[COMMENT 12] Author: @RNGTN | Likes: 26 | Replies: 0 | Published: 2021-05-28T14:29:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "@funnymode9801 Be Ye kyaa tarika hai Bheekh mangne ka?😡",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "[COMMENT 13] Author: @shortgk4560 | Likes: 1306 | Replies: 7 | Published: 2021-06-02T14:05:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "What a dialogue \"physics ke chakkar me biology na kharab ho jaaye\" 😂😂😂😂😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 14] Author: @Itihas_kathani | Likes: 9 | Replies: 0 | Published: 2021-06-04T13:30:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "😂🤣😂🤣😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 15] Author: @urvivaru6797 | Likes: 7 | Replies: 0 | Published: 2021-06-05T10:43:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 16] Author: @misspuja2509 | Likes: 7 | Replies: 0 | Published: 2021-06-07T16:33:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "😂😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 17] Author: @livethelife6000 | Likes: 3 | Replies: 0 | Published: 2021-06-09T15:51:56Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 18] Author: @vismaya291 | Likes: 3 | Replies: 0 | Published: 2021-06-13T06:09:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "🤣🤣🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 19] Author: @r.rl123 | Likes: 18 | Replies: 0 | Published: 2022-04-23T08:49:33Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "God bless you dear. You will live long. Happy peaceful contented life. The service that you do to the society is tremendous. God bless you.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00070",
+              "author": "",
+              "text": "[COMMENT 20] Author: @atharvagodse | Likes: 2407 | Replies: 98 | Published: 2021-05-28T16:22:43Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00071",
+              "author": "",
+              "text": "When I open mom's phone, brightness level is maximum than sun🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "Thank you fit tuber....you are too good great knowledge. Keep it up",
+              "likes": null
+            },
+            {
+              "comment_id": "c01683",
+              "author": "",
+              "text": "[COMMENT 479] Author: @anandkotabagi3666 | Likes: 0 | Replies: 0 | Published: 2022-11-25T16:57:15Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "Very informative",
+              "likes": null
+            },
+            {
+              "comment_id": "c01686",
+              "author": "",
+              "text": "[COMMENT 480] Author: @suvmatrix | Likes: 0 | Replies: 0 | Published: 2022-05-03T05:23:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01687",
+              "author": "",
+              "text": "Can you make a video on how to improve digestion (for both diarrhea/constipation)? How to improve gut flora, safe for all...there many videos but your solutions generally simple and practical which can be followed easily",
+              "likes": null
+            },
+            {
+              "comment_id": "c01689",
+              "author": "",
+              "text": "[COMMENT 481] Author: @tinkisight3996 | Likes: 0 | Replies: 0 | Published: 2022-05-02T15:29:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01690",
+              "author": "",
+              "text": "Very practical and benefical video",
+              "likes": null
+            },
+            {
+              "comment_id": "c01692",
+              "author": "",
+              "text": "[COMMENT 482] Author: @thebookishgirl927 | Likes: 0 | Replies: 0 | Published: 2023-02-11T16:51:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01693",
+              "author": "",
+              "text": "I literally need this video tha k you sir. I had 12 hrs online exams . And this video can game changer ❤️🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01695",
+              "author": "",
+              "text": "[COMMENT 483] Author: @neelamverma6704 | Likes: 0 | Replies: 0 | Published: 2022-05-01T11:30:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01696",
+              "author": "",
+              "text": "Ultimate video on eye protection👍🏻thanx for sharing such a useful information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01698",
+              "author": "",
+              "text": "[COMMENT 484] Author: @amolchor4142 | Likes: 0 | Replies: 0 | Published: 2022-05-03T04:46:10Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01699",
+              "author": "",
+              "text": "I like the recap portion after explanation!!! 🤘",
+              "likes": null
+            },
+            {
+              "comment_id": "c01701",
+              "author": "",
+              "text": "[COMMENT 485] Author: @mansiparjapati2690 | Likes: 1 | Replies: 0 | Published: 2023-02-10T09:27:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01702",
+              "author": "",
+              "text": "You are true gem 🤗🤗🤗🤗sir...may god bless u with good health and wealth",
+              "likes": null
+            },
+            {
+              "comment_id": "c01704",
+              "author": "",
+              "text": "[COMMENT 486] Author: @kalpanasenguptabaruah5180 | Likes: 0 | Replies: 0 | Published: 2022-10-14T16:07:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01705",
+              "author": "",
+              "text": "Excellent information 🙏🏿",
+              "likes": null
+            },
+            {
+              "comment_id": "c01707",
+              "author": "",
+              "text": "[COMMENT 487] Author: @vinnettepope8255 | Likes: 2 | Replies: 0 | Published: 2022-04-27T12:03:37Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01708",
+              "author": "",
+              "text": "Thank you so much for sharing this wonderful video on eye health and eye care 💜",
+              "likes": null
+            },
+            {
+              "comment_id": "c01710",
+              "author": "",
+              "text": "[COMMENT 488] Author: @prasadgolatkar7961 | Likes: 0 | Replies: 0 | Published: 2022-05-06T00:38:08Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01711",
+              "author": "",
+              "text": "Greatly appreciated.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01713",
+              "author": "",
+              "text": "[COMMENT 489] Author: @yogitachoudhary9349 | Likes: 0 | Replies: 0 | Published: 2023-07-05T05:58:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01714",
+              "author": "",
+              "text": "The progress of your intro is at peak.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01715",
+              "author": "",
+              "text": "Day by day its became more interesting, hilarious as well😅",
+              "likes": null
+            },
+            {
+              "comment_id": "c01717",
+              "author": "",
+              "text": "[COMMENT 490] Author: @good114 | Likes: 1 | Replies: 0 | Published: 2023-02-03T09:08:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01718",
+              "author": "",
+              "text": "Thank you bhaiya 💕♥️",
+              "likes": null
+            },
+            {
+              "comment_id": "c01720",
+              "author": "",
+              "text": "[COMMENT 491] Author: @growupmotivation5897 | Likes: 0 | Replies: 0 | Published: 2022-08-20T13:52:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01721",
+              "author": "",
+              "text": "Thanks for the video.. Very very helpful",
+              "likes": null
+            },
+            {
+              "comment_id": "c01723",
+              "author": "",
+              "text": "[COMMENT 492] Author: @truthonly_ | Likes: 0 | Replies: 0 | Published: 2022-06-10T06:55:11Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01724",
+              "author": "",
+              "text": "Ayurveda, we have the golden book of all the simple techniques to keep us healthy yet we spend thousands on medicine.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01725",
+              "author": "",
+              "text": "My humble pranam to all our gurus and siddha mahapurushas who gave us Ayurved.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01727",
+              "author": "",
+              "text": "[COMMENT 493] Author: @bts_1999_jiminpark | Likes: 1 | Replies: 0 | Published: 2023-01-14T07:24:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01728",
+              "author": "",
+              "text": "Thanks for this valuable information, my eyes are so itchy it able to see mobile of laptop 😔 I'm going yo try this today itself , and the intro is 👏😅 thanks for sharing ❤",
+              "likes": null
+            },
+            {
+              "comment_id": "c01730",
+              "author": "",
+              "text": "[COMMENT 494] Author: @namrataupadhyay9331 | Likes: 0 | Replies: 0 | Published: 2022-08-25T20:14:24Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01731",
+              "author": "",
+              "text": "Please review about isotine eye drops as many people claim that it helps to remove specs",
+              "likes": null
+            },
+            {
+              "comment_id": "c01733",
+              "author": "",
+              "text": "[COMMENT 495] Author: @SpiritualTalkswithSanjay | Likes: 0 | Replies: 0 | Published: 2022-06-30T08:49:21Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01734",
+              "author": "",
+              "text": "100% true review and recommendation 👍👌",
+              "likes": null
+            },
+            {
+              "comment_id": "c01736",
+              "author": "",
+              "text": "[COMMENT 496] Author: @rahuldhagevlogs4613 | Likes: 0 | Replies: 0 | Published: 2022-08-20T05:09:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01737",
+              "author": "",
+              "text": "Fit tuber taking great efforts to make world healthy !!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01739",
+              "author": "",
+              "text": "[COMMENT 497] Author: @PeeCee91 | Likes: 0 | Replies: 0 | Published: 2023-09-12T07:11:07Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01740",
+              "author": "",
+              "text": "My eyes are paining and this is the right time to watch this video.. 😃",
+              "likes": null
+            },
+            {
+              "comment_id": "c01742",
+              "author": "",
+              "text": "[COMMENT 498] Author: @Divyansh12-v4k | Likes: 1 | Replies: 0 | Published: 2024-09-05T03:14:34Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01743",
+              "author": "",
+              "text": "Please make a video on curing Eye Floaters at home ?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01745",
+              "author": "",
+              "text": "[COMMENT 499] Author: @Akshat280 | Likes: 0 | Replies: 0 | Published: 2022-04-27T22:29:51Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01746",
+              "author": "",
+              "text": "Your tips are always great ful",
+              "likes": null
+            },
+            {
+              "comment_id": "c01748",
+              "author": "",
+              "text": "I have a question, I work in the night shift",
+              "likes": null
+            },
+            {
+              "comment_id": "c01749",
+              "author": "",
+              "text": "What can i do to get rid of Dark Circles?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01751",
+              "author": "",
+              "text": "[COMMENT 500] Author: @kaisershah3464 | Likes: 0 | Replies: 0 | Published: 2024-04-17T06:36:02Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01752",
+              "author": "",
+              "text": "God bless you for the information",
+              "likes": null
+            },
+            {
+              "comment_id": "c01753",
+              "author": "",
+              "text": "Very grateful",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "utoB7wXrmHY",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Nourish and Relax the Eyes (Best Eye Drops, Top 3 Foods & Practices)\\How to Nourish and Relax the Eyes (Best Eye Drops, Top 3 Foods & Practices).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\How to Nourish and Relax the Eyes (Best Eye Drops, Top 3 Foods & Practices)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\utoB7wXrmHY",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "utoB7wXrmHY",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "low",
+            "transcript_completeness": "partial",
+            "timestamp_count": 31,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": false,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 5838,
+            "transcript_words": 1087,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "D",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "low",
+              "completeness": "partial",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] So children, this is all the homework in today's Physics class, let's keep it a little light, we just need chapter number 2, 3GP of HC Verma and the papers of the last five years, brother, come on, enjoy, you have given me so much tension and are saying enjoy, so it has happened, [00:00:25] why has the autofocus gone, in this physics affair, my biology should not get spoiled, that is, kidney, do subscribe with significant life screen time in taking care of eyes has never been so [00:00:42] important with problems like itching and subscribe to [00:01:05] [Music] Hello, hello friends, welcome to this book starting with number five list eye drops, secure screen times by keeping it and a wise decision with some options available in the Indian market place Midnight Channel and subscribe to the [00:01:35] problem chloride preservative channel, [00:02:09] in the top eight, no tension, side effects and speed for regular use, it is the classical formula and also available in the market, by the way, you can even Make fried rice at home by mixing 500ml of rose water in 30ml of clean water just need to reduce natural water without any preservatives and [00:02:27] subscribe for dry hair oil subscribe Indian cow ghee balancing oil [00:03:00] subscribe no option but to sleep at night time you cant to drops next text this eye protection prevention is better than that but many times it is not possible to prevent option studio away from screen awards and installation of [00:03:17] production film screen for laptops and three lines of products are available in Indian market subscribe you all the best all the most effective and wide [00:03:38] investment I liked the video then [00:04:01] subscribe to The Amazing subscribe now laptop and not to be used in the first to for your convenience of ghee time when I description box did great left side reaction after long section online oil spill dry and [00:04:18] spread to come down and get instant cooling effect there some easy and effective is problem the list of the first to right Slices of cucumber and apply and close down for about 10 minutes. We [00:04:34] start Bluetooth, turn off rose water and it will give you [ __ ]. Only available in Indian kitchens. Subscribe in water overnight [00:05:06] and be applied over the top posts. A flying saliva Buddha is especially just after a meeting of its not just in expensive volume. Additional for various sizes in just 120 days. Only little finger and applied like kajal. Another underrated option. * Simply fill amount full with water [00:05:23] and a splash of water. Word is good for water in her mouth. This is smart technique to give more exposed to the house which date clinic. Next connection with left just like to get through its water. The root of the plant is in the [00:05:40] fact that you were identified for not the center of date. Connect with proper care of the result will be found on the most effective massage mustard oil and waste oil over 1000 [00:05:58] Ayurveda subscribe for help from nervous system problems quite amazing to people with insomnia and press another thing they dipped into this voucher feed using a pumice stone or just her [00:06:14] liver hand will be no doubt walking dead photographs shooting mother is but one should not be underone heated uneven and tiles clean instead muscles definition of eyes with this strong and the ring to subscribe [00:06:31] improve your health finally Bigg Boss food balance does it is always right to food [00:06:52] toxins poisons and amla syrup from but not using traditional method is the tourist places in which robbers have karbi sc can be used as eye drops swine flu se [00:07:09] nazar mere color food for da is you can include here in the form of dal user 10:30 moong dal dosa and terror in the form of mode turn amla and indian gooseberry is well known for its Rich meeting action in this you can [00:07:24] violet alum and makeup a kala to effect you can also have few teaspoons of amla juice with equal amounts of warm water and morning friends page in your regular diet you will see by is decided that to subscribe din karate and meanings also [00:07:42] helpful prizes to surprise pay eye drops hand and foot to drops of but before going to sleep at night to install screen protector and laptop and phone relax and is any time you thank you compare rose water debit cotton pad and gum [00:07:58] katira eye mask and saliva his highly medicinal oils and can be applied in and around is watching this is without food and water day he is instant ko lenge fight to massage mustard oil no and sugar agarkul waste oil over 1000 fit included into the see [00:08:15] karungi cream moong dal and amla in your regular diet solving 205 practices you can greatly Reduced the screen and potential problems associated with this app you can view all 5 nothing like it is possible it is not feasible tried to implement as much as possible minorities have the [00:08:32] power to leave a positive impact pandey video helpful exam please give back thumbs up if you are looking for a traditional cooling drink for this summer get your hands on oxidized gokhru this ingredient and you will find its natural sweetness contained with authentic nut [00:08:49] seeds and much different from the commercial thandai no syrup artificial flavors and unwanted glass thandai is not just a cooling energy drink for the summer to also helps boost immunity and reduce acidity to enjoy the ayurveda [00:09:06] bhandari put two teaspoons of eight wet cloths made of clay add oil milk and mix kar loo cool at the best time to visit the inventor of the rich in anti-oxidants rupiya se [00:09:25] Special Discount Coupon 2% in the description box of the district Video Please Remember to Subscribe My Channel Like This Video [00:09:48] Thank You So Much For U [Music]"
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1197,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: utoB7wXrmHY",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @mrityunjoypramanick777 | Likes: 3717 | Replies: 20 | Published: 2021-05-28T14:46:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Now he also starts entertaining us besides giving information...😂😁such a talented guy 😆",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @swastikayanghosh160 | Likes: 25 | Replies: 0 | Published: 2021-05-28T15:58:01Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Yes yahi toh fittuber 😎",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @daniyaldolare3782 | Likes: 14 | Replies: 0 | Published: 2021-05-28T18:06:19Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "It's his personality",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @archanagoswami1291 | Likes: 28 | Replies: 0 | Published: 2021-05-29T00:19:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "He is making knowledge easy to gain by adding some humour to it. Very creative .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @faizanraza4357 | Likes: 5 | Replies: 0 | Published: 2021-05-29T07:26:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Yes",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @manishmanuel439 | Likes: 3 | Replies: 0 | Published: 2021-05-31T03:44:09Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "True he is an innovative person",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @rajabalaji7967 | Likes: 6169 | Replies: 60 | Published: 2021-05-28T13:30:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "The intro is 100 percent trueeee",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @LilyartistFabricworks | Likes: 16 | Replies: 0 | Published: 2021-05-28T13:36:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "😂👍",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @funnymode9801 | Likes: 44 | Replies: 0 | Published: 2021-05-28T13:42:54Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "*AAPKl MAA Kl UMAR KlTNl HOGl😊*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "*lgnore : O years ❌*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "*1🅢🅤🅑🅢🅒🅡🅘🅑🅔 = 150 years☑️*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00038",
+                  "author": "",
+                  "text": "👇👇👇",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @AnchalKumari-ll9pz | Likes: 10 | Replies: 0 | Published: 2021-05-28T13:51:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00041",
+                  "author": "",
+                  "text": "😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @siddharthagautam7299 | Likes: 41 | Replies: 0 | Published: 2021-05-28T14:00:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00044",
+                  "author": "",
+                  "text": "@funnymode9801 kitna girega bhai .",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @RNGTN | Likes: 26 | Replies: 0 | Published: 2021-05-28T14:29:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "@funnymode9801 Be Ye kyaa tarika hai Bheekh mangne ka?😡",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @shortgk4560 | Likes: 1306 | Replies: 7 | Published: 2021-06-02T14:05:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "What a dialogue \"physics ke chakkar me biology na kharab ho jaaye\" 😂😂😂😂😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @Itihas_kathani | Likes: 9 | Replies: 0 | Published: 2021-06-04T13:30:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "😂🤣😂🤣😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @urvivaru6797 | Likes: 7 | Replies: 0 | Published: 2021-06-05T10:43:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @misspuja2509 | Likes: 7 | Replies: 0 | Published: 2021-06-07T16:33:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "😂😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @livethelife6000 | Likes: 3 | Replies: 0 | Published: 2021-06-09T15:51:56Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 18] Author: @vismaya291 | Likes: 3 | Replies: 0 | Published: 2021-06-13T06:09:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "🤣🤣🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 19] Author: @r.rl123 | Likes: 18 | Replies: 0 | Published: 2022-04-23T08:49:33Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "God bless you dear. You will live long. Happy peaceful contented life. The service that you do to the society is tremendous. God bless you.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00070",
+                  "author": "",
+                  "text": "[COMMENT 20] Author: @atharvagodse | Likes: 2407 | Replies: 98 | Published: 2021-05-28T16:22:43Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00071",
+                  "author": "",
+                  "text": "When I open mom's phone, brightness level is maximum than sun🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "Thank you fit tuber....you are too good great knowledge. Keep it up",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01683",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @anandkotabagi3666 | Likes: 0 | Replies: 0 | Published: 2022-11-25T16:57:15Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "Very informative",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01686",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @suvmatrix | Likes: 0 | Replies: 0 | Published: 2022-05-03T05:23:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01687",
+                  "author": "",
+                  "text": "Can you make a video on how to improve digestion (for both diarrhea/constipation)? How to improve gut flora, safe for all...there many videos but your solutions generally simple and practical which can be followed easily",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01689",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @tinkisight3996 | Likes: 0 | Replies: 0 | Published: 2022-05-02T15:29:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01690",
+                  "author": "",
+                  "text": "Very practical and benefical video",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01692",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @thebookishgirl927 | Likes: 0 | Replies: 0 | Published: 2023-02-11T16:51:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01693",
+                  "author": "",
+                  "text": "I literally need this video tha k you sir. I had 12 hrs online exams . And this video can game changer ❤️🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01695",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @neelamverma6704 | Likes: 0 | Replies: 0 | Published: 2022-05-01T11:30:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01696",
+                  "author": "",
+                  "text": "Ultimate video on eye protection👍🏻thanx for sharing such a useful information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01698",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @amolchor4142 | Likes: 0 | Replies: 0 | Published: 2022-05-03T04:46:10Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01699",
+                  "author": "",
+                  "text": "I like the recap portion after explanation!!! 🤘",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01701",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @mansiparjapati2690 | Likes: 1 | Replies: 0 | Published: 2023-02-10T09:27:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01702",
+                  "author": "",
+                  "text": "You are true gem 🤗🤗🤗🤗sir...may god bless u with good health and wealth",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01704",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @kalpanasenguptabaruah5180 | Likes: 0 | Replies: 0 | Published: 2022-10-14T16:07:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01705",
+                  "author": "",
+                  "text": "Excellent information 🙏🏿",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01707",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @vinnettepope8255 | Likes: 2 | Replies: 0 | Published: 2022-04-27T12:03:37Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01708",
+                  "author": "",
+                  "text": "Thank you so much for sharing this wonderful video on eye health and eye care 💜",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01710",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @prasadgolatkar7961 | Likes: 0 | Replies: 0 | Published: 2022-05-06T00:38:08Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01711",
+                  "author": "",
+                  "text": "Greatly appreciated.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01713",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @yogitachoudhary9349 | Likes: 0 | Replies: 0 | Published: 2023-07-05T05:58:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01714",
+                  "author": "",
+                  "text": "The progress of your intro is at peak.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01715",
+                  "author": "",
+                  "text": "Day by day its became more interesting, hilarious as well😅",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01717",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @good114 | Likes: 1 | Replies: 0 | Published: 2023-02-03T09:08:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01718",
+                  "author": "",
+                  "text": "Thank you bhaiya 💕♥️",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01720",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @growupmotivation5897 | Likes: 0 | Replies: 0 | Published: 2022-08-20T13:52:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01721",
+                  "author": "",
+                  "text": "Thanks for the video.. Very very helpful",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01723",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @truthonly_ | Likes: 0 | Replies: 0 | Published: 2022-06-10T06:55:11Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01724",
+                  "author": "",
+                  "text": "Ayurveda, we have the golden book of all the simple techniques to keep us healthy yet we spend thousands on medicine.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01725",
+                  "author": "",
+                  "text": "My humble pranam to all our gurus and siddha mahapurushas who gave us Ayurved.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01727",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @bts_1999_jiminpark | Likes: 1 | Replies: 0 | Published: 2023-01-14T07:24:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01728",
+                  "author": "",
+                  "text": "Thanks for this valuable information, my eyes are so itchy it able to see mobile of laptop 😔 I'm going yo try this today itself , and the intro is 👏😅 thanks for sharing ❤",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01730",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @namrataupadhyay9331 | Likes: 0 | Replies: 0 | Published: 2022-08-25T20:14:24Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01731",
+                  "author": "",
+                  "text": "Please review about isotine eye drops as many people claim that it helps to remove specs",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01733",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @SpiritualTalkswithSanjay | Likes: 0 | Replies: 0 | Published: 2022-06-30T08:49:21Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01734",
+                  "author": "",
+                  "text": "100% true review and recommendation 👍👌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01736",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @rahuldhagevlogs4613 | Likes: 0 | Replies: 0 | Published: 2022-08-20T05:09:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01737",
+                  "author": "",
+                  "text": "Fit tuber taking great efforts to make world healthy !!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01739",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @PeeCee91 | Likes: 0 | Replies: 0 | Published: 2023-09-12T07:11:07Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01740",
+                  "author": "",
+                  "text": "My eyes are paining and this is the right time to watch this video.. 😃",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01742",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @Divyansh12-v4k | Likes: 1 | Replies: 0 | Published: 2024-09-05T03:14:34Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01743",
+                  "author": "",
+                  "text": "Please make a video on curing Eye Floaters at home ?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01745",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @Akshat280 | Likes: 0 | Replies: 0 | Published: 2022-04-27T22:29:51Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01746",
+                  "author": "",
+                  "text": "Your tips are always great ful",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01748",
+                  "author": "",
+                  "text": "I have a question, I work in the night shift",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01749",
+                  "author": "",
+                  "text": "What can i do to get rid of Dark Circles?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01751",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @kaisershah3464 | Likes: 0 | Replies: 0 | Published: 2024-04-17T06:36:02Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01752",
+                  "author": "",
+                  "text": "God bless you for the information",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01753",
+                  "author": "",
+                  "text": "Very grateful",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "utoB7wXrmHY",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "low",
+          "transcript_completeness": "partial",
+          "timestamp_count": 31,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": false,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 5838,
+          "transcript_words": 1087,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "D",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "low",
+            "completeness": "partial",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] So children, this is all the homework in today's Physics class, let's keep it a little light, we just need chapter number 2, 3GP of HC Verma and the papers of the last five years, brother, come on, enjoy, you have given me so much tension and are saying enjoy, so it has happened, [00:00:25] why has the autofocus gone, in this physics affair, my biology should not get spoiled, that is, kidney, do subscribe with significant life screen time in taking care of eyes has never been so [00:00:42] important with problems like itching and subscribe to [00:01:05] [Music] Hello, hello friends, welcome to this book starting with number five list eye drops, secure screen times by keeping it and a wise decision with some options available in the Indian market place Midnight Channel and subscribe to the [00:01:35] problem chloride preservative channel, [00:02:09] in the top eight, no tension, side effects and speed for regular use, it is the classical formula and also available in the market, by the way, you can even Make fried rice at home by mixing 500ml of rose water in 30ml of clean water just need to reduce natural water without any preservatives and [00:02:27] subscribe for dry hair oil subscribe Indian cow ghee balancing oil [00:03:00] subscribe no option but to sleep at night time you cant to drops next text this eye protection prevention is better than that but many times it is not possible to prevent option studio away from screen awards and installation of [00:03:17] production film screen for laptops and three lines of products are available in Indian market subscribe you all the best all the most effective and wide [00:03:38] investment I liked the video then [00:04:01] subscribe to The Amazing subscribe now laptop and not to be used in the first to for your convenience of ghee time when I description box did great left side reaction after long section online oil spill dry and [00:04:18] spread to come down and get instant cooling effect there some easy and effective is problem the list of the first to right Slices of cucumber and apply and close down for about 10 minutes. We [00:04:34] start Bluetooth, turn off rose water and it will give you [ __ ]. Only available in Indian kitchens. Subscribe in water overnight [00:05:06] and be applied over the top posts. A flying saliva Buddha is especially just after a meeting of its not just in expensive volume. Additional for various sizes in just 120 days. Only little finger and applied like kajal. Another underrated option. * Simply fill amount full with water [00:05:23] and a splash of water. Word is good for water in her mouth. This is smart technique to give more exposed to the house which date clinic. Next connection with left just like to get through its water. The root of the plant is in the [00:05:40] fact that you were identified for not the center of date. Connect with proper care of the result will be found on the most effective massage mustard oil and waste oil over 1000 [00:05:58] Ayurveda subscribe for help from nervous system problems quite amazing to people with insomnia and press another thing they dipped into this voucher feed using a pumice stone or just her [00:06:14] liver hand will be no doubt walking dead photographs shooting mother is but one should not be underone heated uneven and tiles clean instead muscles definition of eyes with this strong and the ring to subscribe [00:06:31] improve your health finally Bigg Boss food balance does it is always right to food [00:06:52] toxins poisons and amla syrup from but not using traditional method is the tourist places in which robbers have karbi sc can be used as eye drops swine flu se [00:07:09] nazar mere color food for da is you can include here in the form of dal user 10:30 moong dal dosa and terror in the form of mode turn amla and indian gooseberry is well known for its Rich meeting action in this you can [00:07:24] violet alum and makeup a kala to effect you can also have few teaspoons of amla juice with equal amounts of warm water and morning friends page in your regular diet you will see by is decided that to subscribe din karate and meanings also [00:07:42] helpful prizes to surprise pay eye drops hand and foot to drops of but before going to sleep at night to install screen protector and laptop and phone relax and is any time you thank you compare rose water debit cotton pad and gum [00:07:58] katira eye mask and saliva his highly medicinal oils and can be applied in and around is watching this is without food and water day he is instant ko lenge fight to massage mustard oil no and sugar agarkul waste oil over 1000 fit included into the see [00:08:15] karungi cream moong dal and amla in your regular diet solving 205 practices you can greatly Reduced the screen and potential problems associated with this app you can view all 5 nothing like it is possible it is not feasible tried to implement as much as possible minorities have the [00:08:32] power to leave a positive impact pandey video helpful exam please give back thumbs up if you are looking for a traditional cooling drink for this summer get your hands on oxidized gokhru this ingredient and you will find its natural sweetness contained with authentic nut [00:08:49] seeds and much different from the commercial thandai no syrup artificial flavors and unwanted glass thandai is not just a cooling energy drink for the summer to also helps boost immunity and reduce acidity to enjoy the ayurveda [00:09:06] bhandari put two teaspoons of eight wet cloths made of clay add oil milk and mix kar loo cool at the best time to visit the inventor of the rich in anti-oxidants rupiya se [00:09:25] Special Discount Coupon 2% in the description box of the district Video Please Remember to Subscribe My Channel Like This Video [00:09:48] Thank You So Much For U [Music]"
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1197,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: utoB7wXrmHY",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @mrityunjoypramanick777 | Likes: 3717 | Replies: 20 | Published: 2021-05-28T14:46:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Now he also starts entertaining us besides giving information...😂😁such a talented guy 😆",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "[COMMENT 2] Author: @swastikayanghosh160 | Likes: 25 | Replies: 0 | Published: 2021-05-28T15:58:01Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Yes yahi toh fittuber 😎",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 3] Author: @daniyaldolare3782 | Likes: 14 | Replies: 0 | Published: 2021-05-28T18:06:19Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "It's his personality",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 4] Author: @archanagoswami1291 | Likes: 28 | Replies: 0 | Published: 2021-05-29T00:19:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "He is making knowledge easy to gain by adding some humour to it. Very creative .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 5] Author: @faizanraza4357 | Likes: 5 | Replies: 0 | Published: 2021-05-29T07:26:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Yes",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 6] Author: @manishmanuel439 | Likes: 3 | Replies: 0 | Published: 2021-05-31T03:44:09Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "True he is an innovative person",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 7] Author: @rajabalaji7967 | Likes: 6169 | Replies: 60 | Published: 2021-05-28T13:30:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "The intro is 100 percent trueeee",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 8] Author: @LilyartistFabricworks | Likes: 16 | Replies: 0 | Published: 2021-05-28T13:36:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "😂👍",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "[COMMENT 9] Author: @funnymode9801 | Likes: 44 | Replies: 0 | Published: 2021-05-28T13:42:54Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "*AAPKl MAA Kl UMAR KlTNl HOGl😊*",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "*lgnore : O years ❌*",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "*1🅢🅤🅑🅢🅒🅡🅘🅑🅔 = 150 years☑️*",
+                "likes": null
+              },
+              {
+                "comment_id": "c00038",
+                "author": "",
+                "text": "👇👇👇",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "[COMMENT 10] Author: @AnchalKumari-ll9pz | Likes: 10 | Replies: 0 | Published: 2021-05-28T13:51:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00041",
+                "author": "",
+                "text": "😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "[COMMENT 11] Author: @siddharthagautam7299 | Likes: 41 | Replies: 0 | Published: 2021-05-28T14:00:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00044",
+                "author": "",
+                "text": "@funnymode9801 kitna girega bhai .",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "[COMMENT 12] Author: @RNGTN | Likes: 26 | Replies: 0 | Published: 2021-05-28T14:29:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "@funnymode9801 Be Ye kyaa tarika hai Bheekh mangne ka?😡",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "[COMMENT 13] Author: @shortgk4560 | Likes: 1306 | Replies: 7 | Published: 2021-06-02T14:05:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "What a dialogue \"physics ke chakkar me biology na kharab ho jaaye\" 😂😂😂😂😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 14] Author: @Itihas_kathani | Likes: 9 | Replies: 0 | Published: 2021-06-04T13:30:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "😂🤣😂🤣😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 15] Author: @urvivaru6797 | Likes: 7 | Replies: 0 | Published: 2021-06-05T10:43:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 16] Author: @misspuja2509 | Likes: 7 | Replies: 0 | Published: 2021-06-07T16:33:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "😂😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 17] Author: @livethelife6000 | Likes: 3 | Replies: 0 | Published: 2021-06-09T15:51:56Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 18] Author: @vismaya291 | Likes: 3 | Replies: 0 | Published: 2021-06-13T06:09:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "🤣🤣🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 19] Author: @r.rl123 | Likes: 18 | Replies: 0 | Published: 2022-04-23T08:49:33Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "God bless you dear. You will live long. Happy peaceful contented life. The service that you do to the society is tremendous. God bless you.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00070",
+                "author": "",
+                "text": "[COMMENT 20] Author: @atharvagodse | Likes: 2407 | Replies: 98 | Published: 2021-05-28T16:22:43Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00071",
+                "author": "",
+                "text": "When I open mom's phone, brightness level is maximum than sun🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "Thank you fit tuber....you are too good great knowledge. Keep it up",
+                "likes": null
+              },
+              {
+                "comment_id": "c01683",
+                "author": "",
+                "text": "[COMMENT 479] Author: @anandkotabagi3666 | Likes: 0 | Replies: 0 | Published: 2022-11-25T16:57:15Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "Very informative",
+                "likes": null
+              },
+              {
+                "comment_id": "c01686",
+                "author": "",
+                "text": "[COMMENT 480] Author: @suvmatrix | Likes: 0 | Replies: 0 | Published: 2022-05-03T05:23:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01687",
+                "author": "",
+                "text": "Can you make a video on how to improve digestion (for both diarrhea/constipation)? How to improve gut flora, safe for all...there many videos but your solutions generally simple and practical which can be followed easily",
+                "likes": null
+              },
+              {
+                "comment_id": "c01689",
+                "author": "",
+                "text": "[COMMENT 481] Author: @tinkisight3996 | Likes: 0 | Replies: 0 | Published: 2022-05-02T15:29:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01690",
+                "author": "",
+                "text": "Very practical and benefical video",
+                "likes": null
+              },
+              {
+                "comment_id": "c01692",
+                "author": "",
+                "text": "[COMMENT 482] Author: @thebookishgirl927 | Likes: 0 | Replies: 0 | Published: 2023-02-11T16:51:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01693",
+                "author": "",
+                "text": "I literally need this video tha k you sir. I had 12 hrs online exams . And this video can game changer ❤️🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01695",
+                "author": "",
+                "text": "[COMMENT 483] Author: @neelamverma6704 | Likes: 0 | Replies: 0 | Published: 2022-05-01T11:30:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01696",
+                "author": "",
+                "text": "Ultimate video on eye protection👍🏻thanx for sharing such a useful information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01698",
+                "author": "",
+                "text": "[COMMENT 484] Author: @amolchor4142 | Likes: 0 | Replies: 0 | Published: 2022-05-03T04:46:10Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01699",
+                "author": "",
+                "text": "I like the recap portion after explanation!!! 🤘",
+                "likes": null
+              },
+              {
+                "comment_id": "c01701",
+                "author": "",
+                "text": "[COMMENT 485] Author: @mansiparjapati2690 | Likes: 1 | Replies: 0 | Published: 2023-02-10T09:27:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01702",
+                "author": "",
+                "text": "You are true gem 🤗🤗🤗🤗sir...may god bless u with good health and wealth",
+                "likes": null
+              },
+              {
+                "comment_id": "c01704",
+                "author": "",
+                "text": "[COMMENT 486] Author: @kalpanasenguptabaruah5180 | Likes: 0 | Replies: 0 | Published: 2022-10-14T16:07:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01705",
+                "author": "",
+                "text": "Excellent information 🙏🏿",
+                "likes": null
+              },
+              {
+                "comment_id": "c01707",
+                "author": "",
+                "text": "[COMMENT 487] Author: @vinnettepope8255 | Likes: 2 | Replies: 0 | Published: 2022-04-27T12:03:37Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01708",
+                "author": "",
+                "text": "Thank you so much for sharing this wonderful video on eye health and eye care 💜",
+                "likes": null
+              },
+              {
+                "comment_id": "c01710",
+                "author": "",
+                "text": "[COMMENT 488] Author: @prasadgolatkar7961 | Likes: 0 | Replies: 0 | Published: 2022-05-06T00:38:08Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01711",
+                "author": "",
+                "text": "Greatly appreciated.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01713",
+                "author": "",
+                "text": "[COMMENT 489] Author: @yogitachoudhary9349 | Likes: 0 | Replies: 0 | Published: 2023-07-05T05:58:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01714",
+                "author": "",
+                "text": "The progress of your intro is at peak.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01715",
+                "author": "",
+                "text": "Day by day its became more interesting, hilarious as well😅",
+                "likes": null
+              },
+              {
+                "comment_id": "c01717",
+                "author": "",
+                "text": "[COMMENT 490] Author: @good114 | Likes: 1 | Replies: 0 | Published: 2023-02-03T09:08:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01718",
+                "author": "",
+                "text": "Thank you bhaiya 💕♥️",
+                "likes": null
+              },
+              {
+                "comment_id": "c01720",
+                "author": "",
+                "text": "[COMMENT 491] Author: @growupmotivation5897 | Likes: 0 | Replies: 0 | Published: 2022-08-20T13:52:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01721",
+                "author": "",
+                "text": "Thanks for the video.. Very very helpful",
+                "likes": null
+              },
+              {
+                "comment_id": "c01723",
+                "author": "",
+                "text": "[COMMENT 492] Author: @truthonly_ | Likes: 0 | Replies: 0 | Published: 2022-06-10T06:55:11Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01724",
+                "author": "",
+                "text": "Ayurveda, we have the golden book of all the simple techniques to keep us healthy yet we spend thousands on medicine.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01725",
+                "author": "",
+                "text": "My humble pranam to all our gurus and siddha mahapurushas who gave us Ayurved.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01727",
+                "author": "",
+                "text": "[COMMENT 493] Author: @bts_1999_jiminpark | Likes: 1 | Replies: 0 | Published: 2023-01-14T07:24:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01728",
+                "author": "",
+                "text": "Thanks for this valuable information, my eyes are so itchy it able to see mobile of laptop 😔 I'm going yo try this today itself , and the intro is 👏😅 thanks for sharing ❤",
+                "likes": null
+              },
+              {
+                "comment_id": "c01730",
+                "author": "",
+                "text": "[COMMENT 494] Author: @namrataupadhyay9331 | Likes: 0 | Replies: 0 | Published: 2022-08-25T20:14:24Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01731",
+                "author": "",
+                "text": "Please review about isotine eye drops as many people claim that it helps to remove specs",
+                "likes": null
+              },
+              {
+                "comment_id": "c01733",
+                "author": "",
+                "text": "[COMMENT 495] Author: @SpiritualTalkswithSanjay | Likes: 0 | Replies: 0 | Published: 2022-06-30T08:49:21Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01734",
+                "author": "",
+                "text": "100% true review and recommendation 👍👌",
+                "likes": null
+              },
+              {
+                "comment_id": "c01736",
+                "author": "",
+                "text": "[COMMENT 496] Author: @rahuldhagevlogs4613 | Likes: 0 | Replies: 0 | Published: 2022-08-20T05:09:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01737",
+                "author": "",
+                "text": "Fit tuber taking great efforts to make world healthy !!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01739",
+                "author": "",
+                "text": "[COMMENT 497] Author: @PeeCee91 | Likes: 0 | Replies: 0 | Published: 2023-09-12T07:11:07Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01740",
+                "author": "",
+                "text": "My eyes are paining and this is the right time to watch this video.. 😃",
+                "likes": null
+              },
+              {
+                "comment_id": "c01742",
+                "author": "",
+                "text": "[COMMENT 498] Author: @Divyansh12-v4k | Likes: 1 | Replies: 0 | Published: 2024-09-05T03:14:34Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01743",
+                "author": "",
+                "text": "Please make a video on curing Eye Floaters at home ?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01745",
+                "author": "",
+                "text": "[COMMENT 499] Author: @Akshat280 | Likes: 0 | Replies: 0 | Published: 2022-04-27T22:29:51Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01746",
+                "author": "",
+                "text": "Your tips are always great ful",
+                "likes": null
+              },
+              {
+                "comment_id": "c01748",
+                "author": "",
+                "text": "I have a question, I work in the night shift",
+                "likes": null
+              },
+              {
+                "comment_id": "c01749",
+                "author": "",
+                "text": "What can i do to get rid of Dark Circles?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01751",
+                "author": "",
+                "text": "[COMMENT 500] Author: @kaisershah3464 | Likes: 0 | Replies: 0 | Published: 2024-04-17T06:36:02Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01752",
+                "author": "",
+                "text": "God bless you for the information",
+                "likes": null
+              },
+              {
+                "comment_id": "c01753",
+                "author": "",
+                "text": "Very grateful",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
