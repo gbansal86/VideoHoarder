@@ -1,1 +1,0 @@
-Compact grouped mode: upload each package's single CHATGPT_PACKAGE.json file in a fresh ChatGPT chat. Only transcript/SRT-backed videos are packaged. Requested outputs are title_en.v1, taxonomy.v3, full detailed_summary.v3, timeline_sections.v3, and compact editorial_assessment.v1. Executive summary and the heavier analysis/comment/clip/entity outputs are intentionally omitted.
