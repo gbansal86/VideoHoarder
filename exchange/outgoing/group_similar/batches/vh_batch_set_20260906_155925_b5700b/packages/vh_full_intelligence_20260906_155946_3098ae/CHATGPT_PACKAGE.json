@@ -1,0 +1,2740 @@
+{
+  "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+  "schema_version": "3.0",
+  "package_type": "VIDEO_INTELLIGENCE",
+  "instructions": {
+    "manual_exchange_notice": "Upload this CHATGPT_PACKAGE.json independently in a fresh chat. VideoHoarder never uploads data automatically.",
+    "recommended_chatgpt_mode": "Use careful/deep reasoning. Follow master_prompt_exact as the authoritative instruction set.",
+    "prompt_style": "master_modular_sequential_exact_v1",
+    "mode": "FULL_INTELLIGENCE",
+    "compact_chatgpt_package": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "excluded_by_master_prompt": [
+      "viewer_comment_intelligence.v2"
+    ],
+    "master_prompt_authority": "If any shorter VideoHoarder helper text conflicts with master_prompt_exact, follow master_prompt_exact while still returning valid JSON matching response_schema.",
+    "master_prompt_source": "C:\\Users\\gaurav.bansal\\Downloads\\VIDEO_LIBRARY_MASTER_PROMPT_MODULAR_SEQUENTIAL.md",
+    "master_prompt_exact": "======================================================================\nVIDEO LIBRARY — CHATGPT TRANSCRIPT INTELLIGENCE PROCESSOR\n======================================================================\n\nPURPOSE\n======================================================================\n\nAnalyze each supplied video transcript and create a detailed,\nwell-structured intelligence report for the video library.\n\nThe report should make it possible to understand what is actually\ndiscussed in the video without reading the complete transcript.\n\nThe output must also provide structured information that the\napplication can use for:\n\n- video renaming\n- chapters\n- search\n- tags\n- categorization\n- transcript navigation\n- recipes/preparations\n- references\n- related-video retrieval\n- technical information extraction\n- future clip extraction\n\nProcess EACH video independently.\n\nNever mix information from different VIDEO_IDs.\n\n\n======================================================================\nINPUT\n======================================================================\n\nInput may contain:\n\n- VIDEO_ID\n- authoritative video metadata\n- timestamped transcript\n- untimestamped transcript, if supplied\n- existing chapters/sections, if supplied\n\nDO NOT use the video description for transcript analysis.\n\nDO NOT use viewer comments for transcript analysis.\n\nThe original video description and viewer comments are handled\nseparately by the application and may be attached unchanged to the\nfinal report.\n\n\n======================================================================\nSOURCE PRIORITY\n======================================================================\n\nUse information in this priority:\n\n1. Timestamped transcript\n2. Untimestamped transcript, if supplied\n3. Authoritative video metadata\n4. Existing chapter/section information, if supplied\n\nMetadata determines video identity.\n\nThe transcript determines what is actually discussed in the video.\n\nNever allow metadata/title wording to override clear transcript\nevidence about the actual content.\n\n\n======================================================================\nPROMOTIONAL / SPONSOR CONTENT — EXCLUDE COMPLETELY\n======================================================================\n\nDo NOT retain promotional information in the intelligence report.\n\nCompletely exclude:\n- sponsor segments\n- advertisements\n- affiliate promotions\n- coupon/discount codes\n- promotional URLs\n- calls to purchase unrelated products\n- sponsor product demonstrations\n- promotional brand claims\n- promotional outro material\n\nPromotional material must NOT influence:\n- New Title\n- Category\n- Tags\n- Chapters\n- Detailed Timestamped Summary\n- Recipes / Preparations\n- References\n- Q&A\n- Named Items Discussed\n- search intelligence\n\nIf a promotional segment interrupts useful content, skip that time range\nand continue with the actual video content.\n\nA product should only remain when it is genuinely part of the video's\nprimary non-promotional subject.\n\n\n======================================================================\nPROCESSING ARCHITECTURE — ONE MAIN PASS, FIVE INTERNAL PHASES\n======================================================================\n\nIMPORTANT: The five phases below are INTERNAL reasoning phases inside\nONE main model call for each video. They are NOT five separate model\ncalls and the transcript must NOT be resent five times.\n\nPerform the phases sequentially so that later phases use the decisions\nmade by earlier phases.\n\n----------------------------------------------------------------------\nPHASE 1 — UNDERSTAND, CLEAN AND SEGMENT\n----------------------------------------------------------------------\n\nBefore drafting output:\n\n- understand the complete transcript as one video\n- identify the true primary topic and supporting topics\n- identify real topic changes and canonical chapter boundaries\n- identify and exclude promotional/sponsor/affiliate material\n- recognize obvious transcript fragmentation\n- identify uncertain ASR words, names, quantities or technical terms\n- do not guess uncertain important values\n- distinguish useful content from repetition, recap and filler\n- establish the canonical content timeline that later phases must use\n\nDo not generate final search/index fields before this understanding is\nestablished.\n\n----------------------------------------------------------------------\nPHASE 2 — BUILD THE DETAILED CONTENT INTELLIGENCE\n----------------------------------------------------------------------\n\nUsing Phase 1 understanding:\n\n- write the Detailed Timestamped Summary\n- preserve the canonical chapter/topic structure\n- capture important explanations, reasoning, claims, quantities,\n  examples, methods, recommendations, cautions and conclusions\n- keep related information together\n- preserve meaningful detail without turning the report into a\n  transcript dump\n- avoid unnecessary duplication\n\n----------------------------------------------------------------------\nPHASE 3 — SPECIALIZED EXTRACTION\n----------------------------------------------------------------------\n\nUsing the established understanding and summary, extract only when\nmeaningful and supported:\n\n- Recipes / Preparations\n- Meaningful References\n- useful Questions & Answers\n- IT / Technical Intelligence when applicable\n- playlist/series relationships when clearly supported\n- exact quantities, ratios, durations, frequencies, commands or other\n  structured details that belong in those sections\n\nDo not create optional sections merely because a field exists.\n\n----------------------------------------------------------------------\nPHASE 4 — LIBRARY AND SEARCH INTELLIGENCE\n----------------------------------------------------------------------\n\nOnly after the video's content is understood, generate:\n\n- New Title\n- Category\n- Subcategory\n- Primary Topic\n- Content Type\n- Tags\n- internal title/search intelligence\n- Named Items Discussed\n- internal concepts, aliases, search phrases and questions answered\n\nThese fields must reflect the actual non-promotional content rather\nthan isolated transcript words.\n\n----------------------------------------------------------------------\nPHASE 5 — INTERNAL SEMANTIC SELF-REVIEW\n----------------------------------------------------------------------\n\nBefore returning the result, review the complete record against the\nallowed source material.\n\nCheck for:\n\n- missing important content\n- invented or unsupported information\n- incorrect or inconsistent timestamps\n- incorrect chapter boundaries\n- chapter/summary mismatch\n- promotional leakage\n- duplicate information\n- weak/generic tags\n- poor or copied New Title\n- unsupported numerical counts\n- recipe/preparation errors\n- recap mistakenly extracted as a second recipe\n- uncertain ASR terms presented as certain\n- meaningful references incorrectly omitted or fabricated\n- low-value/mechanical Q&A\n- Named Items that are missing, trivial or promotional\n- Named Items not being the final visible content section\n- violation of any visibility or formatting rule\n\nCorrect issues that can be corrected confidently from the supplied\nsource before returning the final record.\n\nDo NOT output these five internal phases as visible report sections.\nReturn only the final structured intelligence result and the internal\nprocessing-quality fields defined below.\n\n\n\n======================================================================\nSEQUENTIAL PACKAGE PROCESSING\n======================================================================\n\nWhen a package contains multiple videos, process the videos STRICTLY\nSEQUENTIALLY in the order supplied by the package.\n\nRequired behavior:\n\n1. Fully finish VIDEO 1 before starting VIDEO 2.\n2. For the current video, complete Pass 1, deterministic validation,\n   any optional targeted Pass 2, final status assignment and persistence.\n3. Only then begin the next VIDEO_ID.\n4. Do NOT process multiple videos from the same package concurrently.\n5. Do NOT batch multiple transcripts into one semantic model call.\n6. Keep every VIDEO_ID semantically isolated from every other VIDEO_ID.\n7. A weak or failed video must not stop the sequence; record its status,\n   add it to the reprocessing manifest when required, and continue to\n   the next video.\n\nPackage order is therefore:\n\nVIDEO 1 -> complete -> VIDEO 2 -> complete -> VIDEO 3 -> complete -> ...\n\nThis sequential rule is intentional. It prioritizes isolation,\ntraceability, predictable token usage and easy recovery over maximum\nthroughput.\n\n\n\n\n======================================================================\nPACKAGE SIZE, CURRENT-VIDEO CONTEXT AND CHECKPOINT / RESUME\n======================================================================\n\nThe recommended standard package size is 25 videos.\n\nPackage size must NEVER determine semantic model context size.\n\nFor a package containing 25 videos:\n\n- Process VIDEO_IDs strictly sequentially in package order.\n- Load/send to Pass 1 only the CURRENT video's authoritative metadata,\n  allowed transcript evidence and required processing instructions.\n- Do NOT place the other 24 transcripts into the current video's model\n  context.\n- Do NOT keep previously processed video transcripts in the semantic\n  context for later videos.\n- Fully persist the current video's modular section files, assembled\n  JSON/HTML, validation result and processing status before advancing.\n- Checkpoint package progress after EVERY video.\n- If processing stops or crashes after VIDEO N, a resumed run must keep\n  all already completed valid results and continue from the first\n  unfinished video rather than restarting the package.\n- Completed videos must not consume model tokens again merely because\n  the package is resumed.\n- Use stored source fingerprints and prompt/version metadata to decide\n  whether an already completed result is still reusable.\n- A video already marked for later source/package recreation must not\n  block checkpointing or continuation of the current package.\n- Smaller packages may be used for exceptionally large transcripts or\n  operational constraints, but 25 videos is the normal target size.\n\nConceptually:\n\n25-video package\n  -> VIDEO 1 only in semantic context -> finish/save/checkpoint\n  -> VIDEO 2 only in semantic context -> finish/save/checkpoint\n  -> ...\n  -> VIDEO 25 only in semantic context -> finish/save/checkpoint\n  -> package summary + reprocessing manifest\n\nThe total token requirement should therefore depend primarily on the\nindividual videos being processed, not on how many videos are grouped\ninside the package.\n\n\n======================================================================\nMODULAR PHASE-1 SECTION FILES\n======================================================================\n\nPass 1 remains ONE semantic model call with five internal phases.\nHowever, after that call the application MUST persist the resulting\nintelligence as separate modular section files in addition to keeping\nan assembled final record.\n\nThe purpose is repairability: if one section is later found to be weak,\nthat section can be manually edited, regenerated, or deterministically\nchanged without regenerating the other good sections.\n\nRecommended per-video structure:\n\nVIDEO_ID/\n  source/\n    source_manifest.json\n  intelligence/\n    01_title_search.json\n    02_category.json\n    03_tags.json\n    04_chapters.json\n    05_detailed_summary.json\n    06_recipes.json\n    07_references.json\n    08_qa.json\n    09_playlist_series.json\n    10_technical_intelligence.json\n    11_named_items.json\n  quality/\n    processing_quality.json\n    validation.json\n    section_status.json\n  assembled/\n    VIDEO_ID.json\n    VIDEO_ID.html\n\nRules:\n\n- The LLM should NOT be called once per section during normal Pass 1.\n- Pass 1 returns one structured result; CODE splits that result into\n  the modular section files.\n- Each section file is the authoritative editable source for that\n  section after persistence.\n- The assembled JSON and HTML are generated FROM the section files.\n- Never treat HTML as the authoritative intelligence source.\n- A manual edit to one section file must require only deterministic\n  reassembly and HTML rerendering; it must consume zero LLM tokens.\n- A code-rule change affecting only one section should, when safe, update\n  or migrate only that section and then reassemble.\n- If semantic regeneration is required for one bad section, send only\n  the minimum transcript evidence and dependencies needed for that\n  section and replace only that section file.\n- Do not regenerate unaffected sections merely because one section is\n  replaced.\n- Preserve backups/version history when replacing a section.\n- Record which sections were manually edited, code-modified or\n  AI-regenerated.\n\nDependencies must be respected. In particular:\n\n- Detailed Summary should remain coherent with Chapters.\n- Recipes/References/Q&A timestamps must remain valid against the source\n  timeline.\n- Title/Category/Tags/Search Intelligence should remain grounded in the\n  video's actual content.\n- Named Items should remain consistent with the final intelligence.\n- If changing one section creates a dependency conflict, flag the\n  dependent section(s) for validation rather than silently rewriting\n  them.\n\nFor each section maintain internal metadata such as:\n\n- section_name\n- section_status\n- source_fingerprint\n- prompt_version\n- generated_by: pass_1 | pass_2 | manual | code_migration\n- generated_at\n- last_modified_at\n- validation_warnings\n- dependency_warnings\n\nSuggested section statuses:\n\n- PASS\n- PASS_WITH_WARNINGS\n- REPLACE_RECOMMENDED\n- EMPTY_BY_DESIGN\n\nOptional sections that are legitimately absent should use\nEMPTY_BY_DESIGN internally; they must still be omitted from the visible\nHTML report.\n\nThe package-level reprocessing manifest remains video-oriented for\nsource/package recreation, while `section_status.json` identifies\nindividual sections that can be repaired without recreating the whole\nvideo package.\n\n\n======================================================================\nPROCESSING QUALITY, NON-BLOCKING FAILURE AND REPROCESSING\n======================================================================\n\nA difficult or low-quality video must NEVER cause the rest of a package\nto fail.\n\nEach VIDEO_ID must finish independently with one of these internal\nprocessing statuses:\n\n- PASS\n  The result is suitable for the permanent intelligence library.\n\n- PASS_WITH_WARNINGS\n  The result is usable, but one or more minor uncertainties should be\n  recorded.\n\n- REPROCESS_RECOMMENDED\n  The result is not trustworthy enough for permanent-library acceptance\n  without another package/source attempt. Preserve any usable result,\n  record why reprocessing is recommended, and continue with the next\n  VIDEO_ID.\n\n- SOURCE_INSUFFICIENT\n  The supplied transcript/evidence is too incomplete, corrupt,\n  contradictory or poorly timestamped to create reliable permanent\n  intelligence. Record the reason and continue with the next VIDEO_ID.\n\nNever abort the package merely because one VIDEO_ID receives\nPASS_WITH_WARNINGS, REPROCESS_RECOMMENDED or SOURCE_INSUFFICIENT.\n\nDo not repeatedly retry the same video inside the main processing pass.\n\nFor every video, return these INTERNAL machine-readable quality fields:\n\n- processing_status\n- processing_warnings\n- reprocess_recommended\n- reprocess_reasons\n- uncertain_items\n- targeted_review_hints\n\nRules:\n\n- `processing_warnings` should contain only concrete useful warnings.\n- `reprocess_recommended` is true only for REPROCESS_RECOMMENDED or\n  SOURCE_INSUFFICIENT.\n- `reprocess_reasons` must be concise and actionable.\n- `uncertain_items` should identify important ASR/source uncertainties\n  without guessing their correct value.\n- `targeted_review_hints` should identify the smallest useful timestamp\n  ranges or sections for an optional targeted second-pass review.\n- These processing-quality fields are INTERNAL and must NOT be printed\n  as ordinary sections in the human-readable video report.\n- A video with REPROCESS_RECOMMENDED or SOURCE_INSUFFICIENT must still\n  allow package processing to continue.\n\nAt package level, the application should collect all VIDEO_IDs with\n`reprocess_recommended = true` into a reprocessing manifest so a new\npackage can later be created only for those videos.\n\n\n======================================================================\n1. TITLE & SEARCH INTELLIGENCE\n======================================================================\n\nCreate accurate title and search intelligence for the video.\n\n----------------------------------------------------------------------\nVISIBLE TITLE INFORMATION\n----------------------------------------------------------------------\n\nThe human-readable report should show:\n\nOriginal Title:\n<exact original metadata title>\n\nNew Title:\n<generated title>\n\nThe New Title is EXTREMELY IMPORTANT.\n\n`new_title` is the final generated title that the application may use\nto rename:\n\n- the video file\n- associated media files\n- transcript files\n- report files\n- related video folder, where applicable\n\nThere should be ONE definitive generated rename-title field:\n\nnew_title\n\nDo not create several competing generated titles.\n\n----------------------------------------------------------------------\nORIGINAL TITLE\n----------------------------------------------------------------------\n\n`original_title` must remain EXACTLY as supplied in authoritative\nmetadata.\n\nDo NOT:\n\n- translate it\n- rewrite it\n- clean it\n- shorten it\n- change capitalization\n- remove emojis\n- replace regional/common names\n- correct grammar\n\nIt represents the original source identity.\n\n----------------------------------------------------------------------\nNEW TITLE\n----------------------------------------------------------------------\n\nGenerate `new_title` primarily from what is actually discussed in the\ntranscript.\n\nThe New Title should be:\n\n- accurate\n- descriptive\n- searchable\n- natural English\n- suitable for a filename\n- reasonably concise\n- specific\n- based on actual recoverable content\n\nPrefer identifiable names and subjects over vague wording.\n\n----------------------------------------------------------------------\nACTUAL NAMES ARE IMPORTANT\n----------------------------------------------------------------------\n\nIf the original title says:\n\n\"7 Foods for Grey Hair\"\n\nand the transcript identifies:\n\n- Amla\n- Walnuts\n- Sesame Seeds\n- Spinach\n- Eggs\n- Lentils\n- Moringa\n\ndo not simply generate:\n\n\"7 Foods for Grey Hair\"\n\nUse actual identifiable subjects when this improves the title.\n\nFor example:\n\n\"Amla, Walnuts, Sesame & Other Foods for Grey Hair\"\n\n----------------------------------------------------------------------\nDO NOT TRUST UNSUPPORTED COUNTS\n----------------------------------------------------------------------\n\nDo not automatically trust numerical counts appearing in the original\ntitle.\n\nIf the title says:\n\n\"7 Foods...\"\n\nbut the transcript reliably identifies only five:\n\n- do not invent two additional foods\n- do not preserve an unsupported count\n- describe what can actually be recovered\n\n----------------------------------------------------------------------\nNUMBER OF NAMES IN NEW TITLE\n----------------------------------------------------------------------\n\nDo not force every named item into the New Title.\n\nNormally include no more than approximately 5–7 named items.\n\nIf there are 2–5 important named items and the title remains readable,\nnormally include them.\n\nIf many items are discussed, select the most important/distinctive\nnames and use a precise collective description for the rest.\n\nPrefer:\n\nACTUAL NAMES + PRECISE SUBJECT + READABLE TITLE\n\n----------------------------------------------------------------------\nREGIONAL / COMMON / ENGLISH NAMES\n----------------------------------------------------------------------\n\nPreserve useful regional/common terminology.\n\nExamples:\n\nKulthi Dal (Horse Gram)\nRagi (Finger Millet)\nRajgira (Amaranth)\n\nDo not automatically replace an Indian/regional name with an English\nname.\n\nBoth may be important for future search.\n\nDo not put parentheses around every item if this makes the title\ndifficult to read.\n\n----------------------------------------------------------------------\nPRESERVE SPECIFICITY\n----------------------------------------------------------------------\n\nPreserve important specific terminology.\n\nExamples:\n\nSAP S/4HANA\nGPT-5.6\nVitamin D3\niPhone 17 Pro\nPython 3.14\nSQL Server 2025\n\nDo not unnecessarily simplify:\n\nSAP S/4HANA\nto:\nSAP\n\nor:\n\nGPT-5.6\nto:\nGPT\n\nThe same applies to:\n\n- medicine names\n- products\n- models\n- versions\n- software\n- APIs\n- technologies\n- technical standards\n- named procedures\n\n----------------------------------------------------------------------\nFILENAME SAFETY\n----------------------------------------------------------------------\n\nBecause `new_title` may be used to rename files on Windows, it must be\nfilename-safe.\n\nDo not include invalid Windows filename characters:\n\n< > : \" / \\ | ? *\n\nAvoid:\n\n- unnecessary punctuation\n- trailing periods\n- trailing spaces\n- excessive symbols\n- unnecessary emojis\n- excessively long titles\n\nDo NOT put VIDEO_ID inside `new_title` unless explicitly required by\nanother application rule.\n\nThe application may append VIDEO_ID separately.\n\n----------------------------------------------------------------------\nINTERNAL SEARCH INTELLIGENCE\n----------------------------------------------------------------------\n\nInternally, the structured data may retain:\n\n- title_basis\n- title_entities\n- canonical_tags\n- concepts\n- search_phrases\n- synonyms_aliases\n- questions_answered\n\nThese may be used for:\n\n- search\n- indexing\n- retrieval\n- related-video matching\n- automated QA\n- topic matching\n\nHOWEVER:\n\nDO NOT DISPLAY these as separate sections in the human-readable report:\n\n- Title Basis\n- Title Entities\n- Concepts\n- Useful Search Phrases\n- Synonyms / Aliases\n- Important Aliases\n- Questions Answered\n\nDo not print tables such as:\n\nCanonical Name | Aliases\n\nThese are internal search/indexing fields.\n\n\n======================================================================\n2. CATEGORY\n======================================================================\n\nCreate one compact classification block.\n\nShow:\n\n- Category\n- Subcategory\n- Primary Topic\n- Content Type\n\nExample:\n\nCategory: Health & Nutrition\nSubcategory: Nutrition\nPrimary Topic: Calcium-Rich Foods\nContent Type: Explanation / Health Discussion\n\nUse a broad reusable Category.\n\nUse a more specific Subcategory.\n\nPrimary Topic should identify the central subject of the video.\n\nContent Type describes the type of content.\n\nExamples include:\n\n- Explanation\n- Tutorial\n- How-To\n- Interview\n- Podcast\n- Lecture\n- Review\n- Recipe\n- Remedy\n- Medical Discussion\n- Financial Discussion\n- Product Demonstration\n- Troubleshooting\n- Case Study\n- News\n- Documentary\n- Entertainment\n- Q&A\n- Other\n\nDo NOT create a separate Content Type section.\n\nDo NOT display:\n\n- Secondary Topics\n- Not About\n- Concepts\n\n\n======================================================================\n3. TAGS\n======================================================================\n\nCreate useful canonical tags.\n\nNormally return approximately 4–12 meaningful tags.\n\nPrefer specific, reusable tags.\n\nExamples:\n\n- Horse Gram\n- Ragi\n- Calcium\n- Vitamin D3\n- SQL Server\n- SAP S/4HANA\n- GPT-5.6\n\nAvoid weak generic tags such as:\n\n- Video\n- YouTube\n- Information\n- General\n- Miscellaneous\n- Useful\n- Knowledge\n\nPreserve useful specificity.\n\nSearch-related concepts, synonyms and search phrases may remain\ninternally available to the application but should NOT be separately\nprinted in the human-readable report.\n\n\n======================================================================\n4. CHAPTERS\n======================================================================\n\nCreate meaningful chapters from the timestamped transcript.\n\nChapters must follow REAL topic changes.\n\nDo NOT divide the video into arbitrary fixed-duration intervals.\n\nFor each chapter internally return:\n\n- chapter_no\n- chapter_title\n- start_timestamp\n- end_timestamp\n- start_seconds\n- end_seconds\n\n----------------------------------------------------------------------\nCHAPTER RULES\n----------------------------------------------------------------------\n\n- Cover the meaningful spoken content.\n- Keep chapters in chronological order.\n- Use concise but descriptive chapter titles.\n- Prefer actual subjects/items in chapter titles when useful.\n- Create a new chapter when there is a meaningful topic change.\n- Do not create chapters for brief passing mentions.\n- Do not create too many tiny chapters.\n- Do not combine clearly different major subjects into one chapter.\n- Chapter boundaries must not overlap.\n- Never invent timestamps.\n- Use the most accurate timestamps available from the transcript.\n\nFor example:\n\n| # | Chapter | Time |\n|---:|---|---|\n| 1 | Why Calcium Matters | 00:00–02:35 |\n| 2 | Chuna and Sesame Seeds | 02:35–05:48 |\n| 3 | Kulthi Dal (Horse Gram) | 05:48–08:21 |\n| 4 | Ragi (Finger Millet) | 08:21–10:36 |\n| 5 | Rajgira (Amaranth) | 10:36–12:44 |\n\nThe example above illustrates FORMAT ONLY.\n\nActual chapter names and timestamps must come from the supplied\ntranscript.\n\n----------------------------------------------------------------------\nCHAPTERS AND SUMMARY MUST MATCH\n----------------------------------------------------------------------\n\nThe Detailed Timestamped Summary MUST use these SAME chapters.\n\nDo NOT generate one chapter structure and then create unrelated\nboundaries for the detailed summary.\n\nEach chapter corresponds to one main section of the Detailed\nTimestamped Summary.\n\nThis gives the application one canonical chapter structure for:\n\n- report navigation\n- video navigation\n- transcript navigation\n- search results\n- chapter display\n- future clip extraction\n\n\n======================================================================\n5. DETAILED TIMESTAMPED SUMMARY\n======================================================================\n\nTHIS IS THE MAIN HUMAN-READABLE PART OF THE REPORT.\n\nUse the SAME meaningful topic/chapter structure created above, but write\nthe summary as a coherent, human-readable explanation rather than as\nchopped transcript extracts or mechanical bullet fragments.\n\nBegin with a short overview paragraph explaining what the video covers\nand, when appropriate, the overall method, framework, sequence or main\nconclusion.\n\nThen organize the detailed summary into numbered major topics:\n\n### 1. <Meaningful Topic Name> (<start timestamp>–<end timestamp>)\n\nWrite one or more clear, information-dense paragraphs explaining what is\nactually discussed in that topic.\n\n### 2. <Meaningful Topic Name> (<start timestamp>–<end timestamp>)\n\nContinue in the same style.\n\nThe summary should read like a well-written guide to the video's useful\ncontent, not like a transcript dump.\n\n----------------------------------------------------------------------\nSUMMARY DEPTH\n----------------------------------------------------------------------\n\nThe summary must be DETAILED and comprehensive enough that a user can\nunderstand the useful content of the video without reading the complete\ntranscript.\n\nCapture, where actually discussed:\n\n- explanations\n- important arguments\n- reasoning\n- causes\n- examples\n- actual named items\n- practical information\n- methods\n- instructions\n- quantities and ratios\n- measurements\n- dosages\n- frequency and duration\n- dates\n- versions\n- conclusions\n- cautions and warnings stated in the video\n- technical details\n- important claims\n- results and limitations\n- useful alternatives\n- supporting mechanisms or compounds\n- lifestyle or usage recommendations\n\nKeep information with the subject it belongs to.\n\nThere is NO separate Important Numbers section.\n\n----------------------------------------------------------------------\nIMPORTANT SUBJECT DEEP-DIVES\n----------------------------------------------------------------------\n\nWhen one subject inside a major topic receives substantial useful\ndiscussion, preserve that depth instead of compressing it away.\n\nFor example, if a herb, medicine, technology, product, ingredient or\nconcept is discussed with multiple mechanisms, compounds, benefits,\nstudies, comparisons or instructions, a focused subsection may be used:\n\n### Mulethi (Licorice): Why It Is Highlighted — 05:23–06:05\n\nThen explain the important details clearly.\n\nUse precise sub-ranges when they materially help navigation.\n\nDo not create deep-dives for trivial mentions.\n\n----------------------------------------------------------------------\nADDITIONAL USEFUL RECOMMENDATIONS\n----------------------------------------------------------------------\n\nDo not lose useful secondary information merely because it does not\ndeserve its own major chapter.\n\nKeep relevant secondary recommendations under the appropriate topic or,\nwhen clearer, use a compact subsection such as:\n\n### Additional Recommendations — <range>\n\nExamples may include:\n- sun protection\n- moisturizing\n- frequency changes\n- substitutions\n- storage\n- lifestyle adjustments\n- practical alternatives\n- supporting tips\n\nOnly include information actually supported by the transcript.\n\n----------------------------------------------------------------------\nWRITING STYLE\n----------------------------------------------------------------------\n\nWrite polished explanatory prose.\n\nDo not constantly write:\n\"The speaker says...\"\n\"The transcript says...\"\n\"The source states...\"\n\"According to the speaker...\"\n\nSimply describe what is discussed.\n\nDo NOT add editorial verification/disclaimer text such as:\n- \"Source framing:\"\n- \"not independently verified\"\n- \"should not be read as medical verification\"\n- \"creator's recommendations rather than established facts\"\n\nDo not independently fact-check the video unless explicitly requested.\n\nDo not add external warnings, corrections or medical commentary that are\nnot present in the allowed source material.\n\n----------------------------------------------------------------------\nTABLES\n----------------------------------------------------------------------\n\nUse tables only when they genuinely improve comprehension of structured\ninformation. Do not force normal explanatory material into tables.\n\nThere is NO separate Structured Tables section.\n\n----------------------------------------------------------------------\nRECIPES IN SUMMARY\n----------------------------------------------------------------------\n\nA recipe/preparation may be described naturally and briefly in the\nrelevant summary topic, including its purpose and the most important\nratio/usage information when that is central to understanding the topic.\n\nDo not unnecessarily duplicate every actionable detail.\n\nThe dedicated RECIPES / PREPARATIONS section below is the authoritative\ncompact extraction of the complete actionable preparation.\n\n======================================================================\n6. RECIPES / PREPARATIONS\n======================================================================\n\nCreate this section only when the video contains a meaningful actionable\nrecipe, food/drink preparation, mixture, remedy preparation or similar\npreparation.\n\nDo NOT create it for simple food/ingredient mentions or vague statements\nsuch as \"cook it normally.\"\n\nFor EACH genuine preparation use this compact human-readable format:\n\n### <number>. <Recipe / Preparation Name>\n\n<One short sentence explaining what it is for or how it is used>\n(<start timestamp>–<end timestamp>).\n\n- **Ingredients:** <actual ingredients discussed>\n- **Ratio / Quantity:** <only when stated>\n- **Preparation:** <single action when preparation is simple>\n- **Usage:** <how it is applied/consumed/used, when stated>\n- **Frequency:** <when stated>\n- **Duration:** <when stated>\n- **Storage:** <when stated>\n- **Important Tip:** <when stated>\n- **Caution:** <only when actually stated in the video>\n\nIf Preparation contains MULTIPLE sequential actions, use nested bullets\nunder Preparation:\n\n- **Preparation:**\n  - <Step 1>\n  - <Step 2>\n  - <Step 3>\n\nDo NOT use ingredient tables.\nDo NOT use preparation-step tables.\nDo NOT number individual preparation steps unless numbering is genuinely\nneeded for clarity.\nDo NOT place timestamps on individual preparation steps.\n\nUse ONE accurate overall timestamp range with the recipe/preparation\nheading or introductory sentence.\n\nThe overall range should cover the actual preparation discussion as\nprecisely as possible.\n\n----------------------------------------------------------------------\nRECIPE RULES\n----------------------------------------------------------------------\n\n- Capture the complete useful actionable preparation from the transcript.\n- Preserve exact ingredient names.\n- Preserve exact quantities, ratios and units when stated.\n- Preserve usage, frequency, duration, storage and cautions when stated.\n- If preparation is one simple action, keep it on the Preparation bullet.\n- If preparation has multiple steps, use nested sequential bullets under\n  Preparation.\n- Never invent ingredients.\n- Never invent quantities.\n- Never invent ratios.\n- Never invent preparation steps.\n- Never invent usage instructions.\n- Never invent timestamps.\n- Do not add fields that were not discussed.\n- Do not repeatedly write \"Not mentioned\", \"N/A\" or similar filler.\n- Keep regional/common and English names together when useful.\n- If multiple genuine preparations exist, create a separate block for each.\n- Do not combine unrelated preparations.\n- Do not duplicate the same preparation merely because it is repeated in\n  a recap.\n- Do not reconstruct a known real-world recipe from outside knowledge.\n- Do not turn advertisements, product demonstrations or promotional\n  segments into recipes/preparations.\n- Do not repeat the complete preparation unnecessarily in the Detailed\n  Timestamped Summary.\n\nIf no meaningful preparation exists:\nOMIT THIS SECTION COMPLETELY.\n\n======================================================================\n7. IMPORTANT CLAIMS / WARNINGS\n======================================================================\n\nImportant claims and warnings should normally remain with the relevant\ntopic in the Detailed Timestamped Summary.\n\nDo not create a huge claim-verification section.\n\nDo NOT print repetitive labels such as:\n\nVerification: SOURCE_CLAIM_ONLY\n\nDo not turn every ordinary statement into a separate claim.\n\nIf a warning is important, keep it close to the relevant information.\n\nExample:\n\n### Supplement Discussion — 14:20–17:10\n\n• ...\n\n**Caution:** <actual caution discussed>\n\nDo not invent warnings.\n\nDo not independently fact-check the transcript as part of this\ntranscript-processing task.\n\n\n======================================================================\n8. MEANINGFUL REFERENCES MENTIONED\n======================================================================\n\nCreate this section ONLY when meaningful identifiable references are\nactually mentioned.\n\nUseful references include identifiable:\n\n- people\n- experts\n- authors\n- books\n- research papers\n- studies\n- government agencies\n- professional organizations\n- guidelines\n- websites\n- documentation\n- datasets\n- articles\n- named external resources\n\nPrefer references that would actually help the user identify or locate\nthe referenced person, publication, organization or resource.\n\nDo NOT create vague references such as:\n\n- some research\n- a study\n- experts\n- doctors\n- scientists\n- a website\n- the internet\n- I read somewhere\n\nunless the reference can be meaningfully identified.\n\nWhere available show:\n\n| Reference | Type | Why Mentioned | Timestamp |\n|---|---|---|---|\n| ... | ... | ... | ... |\n\nInclude a URL only when it is explicitly available from the allowed\nsource material.\n\nDo NOT invent:\n\n- URLs\n- author names\n- study names\n- book titles\n- citations\n\nIf there are no meaningful identifiable references:\n\nOMIT THIS SECTION COMPLETELY.\n\nDo NOT print:\n\nReferences Mentioned\nNone\n\nor:\n\nReferences: []\n\n\n======================================================================\n9. QUESTIONS AND ANSWERS\n======================================================================\n\nCreate this section only when useful questions are clearly answered in\nthe transcript and presenting them separately adds value.\n\nUse:\n\n| Question | Answer | Timestamp |\n|---|---|---|\n\nDo not manufacture trivial questions simply to populate the section.\n\nDo not repeat large portions of the Detailed Timestamped Summary.\n\nIf there are no worthwhile Q&A items:\n\nOMIT THIS SECTION COMPLETELY.\n\n\n======================================================================\n10. PLAYLIST / SERIES RELATIONSHIP\n======================================================================\n\nDetect a playlist/series relationship only when clearly supported.\n\nExamples:\n\n- Part 1 / Part 2\n- Lesson 4\n- Module 3\n- Episode 8\n- course sequence\n- multipart tutorial\n- named video series\n\nWhere known, internally preserve:\n\n- series_name\n- part_or_episode_number\n- total_parts_if_known\n- previous_part\n- next_part\n- intended_order\n\nIn the human-readable report, show this information ONLY when a\nmeaningful relationship actually exists.\n\nIf unknown, empty or not applicable:\n\nOMIT THIS SECTION COMPLETELY.\n\nNever print an empty:\n\nPlaylist / Series Relationship\n\nheading.\n\n\n======================================================================\n11. IT / TECHNICAL VIDEO INTELLIGENCE\n======================================================================\n\nTHIS SECTION IS SPECIFICALLY FOR IT / SOFTWARE / TECHNICAL VIDEOS.\n\nDo not create this section for ordinary health, food, recipe,\nentertainment or general videos merely because a product or device is\nmentioned.\n\nFor technical videos capture applicable exact technical information:\n\n- products\n- services\n- software\n- tools\n- technologies\n- versions\n- commands\n- command-line examples\n- code\n- SQL\n- scripts\n- configuration settings\n- configuration values\n- file/folder paths\n- environment variables\n- APIs\n- API endpoints\n- parameters\n- URLs/resources\n- errors\n- prerequisites\n- installation information\n- troubleshooting steps\n- expected output\n\nPreserve technical specificity.\n\nExamples:\n\nSAP S/4HANA\nGPT-5.6\nSQL Server 2025\nPython 3.14\nWindows 11\n\nDo not reduce a specific technology/version/model to an unnecessarily\ngeneric term.\n\nWhere useful, use:\n\n| Type | Exact Value / Command | Purpose | Timestamp |\n|---|---|---|---|\n| Command | ... | ... | 04:32 |\n| API | ... | ... | 07:18 |\n| Error | ... | ... | 09:44 |\n| Config | ... | ... | 12:07 |\n\nIf a complete technical procedure is already explained in the Detailed\nTimestamped Summary, do not repeat the entire explanation here.\n\nUse this section for useful structured technical details.\n\nNever guess uncertain:\n\n- code\n- commands\n- SQL\n- configuration values\n- URLs\n- API endpoints\n- versions\n\nIf the video is not technical:\n\nOMIT THIS SECTION COMPLETELY.\n\n\n======================================================================\n12. NAMED ITEMS DISCUSSED\n======================================================================\n\nKEEP THIS AS THE LAST CONTENT SECTION OF THE HUMAN-READABLE REPORT.\n\nExtract important actual identifiable items discussed in the video.\n\nPossible types include:\n\n- foods\n- ingredients\n- herbs\n- medicines\n- supplements\n- products\n- tools\n- technologies\n- software\n- exercises\n- techniques\n- treatments\n- books\n- websites\n- people\n- companies\n- organizations\n- locations\n- diseases/conditions\n- services\n- other important named subjects\n\n----------------------------------------------------------------------\nACTUAL NAMES ARE REQUIRED\n----------------------------------------------------------------------\n\nIf the transcript says:\n\n\"Here are 7 foods...\"\n\ndo NOT return:\n\n\"7 foods\"\n\nExtract the actual identifiable names.\n\nExample:\n\n- Amla\n- Walnuts\n- Sesame Seeds\n- Spinach\n- Eggs\n- Lentils\n- Moringa\n\nThe same rule applies to:\n\n- products\n- tools\n- medicines\n- exercises\n- technologies\n- software\n- treatments\n- ingredients\n- books\n- people\n- organizations\n- other named items\n\nIf seven items are promised but only five are reliably identifiable:\n\nreturn the five.\n\nDo NOT invent the missing two.\n\n----------------------------------------------------------------------\nDISPLAY\n----------------------------------------------------------------------\n\nKeep this section concise because the Detailed Timestamped Summary\nalready explains the items.\n\nPrefer a table:\n\n| Named Item | Type | Timestamp |\n|---|---|---|\n| Ragi (Finger Millet) | Food | 05:42 |\n| Kulthi Dal (Horse Gram) | Food | 07:15 |\n| Rajgira (Amaranth) | Food | 09:03 |\n\nWhere regional/common and English names are useful, show them naturally\ntogether.\n\nDo NOT create another aliases table after this section.\n\nThis must remain the LAST content section.\n\n\n======================================================================\nSTRICT ANTI-DUPLICATION RULE\n======================================================================\n\nDo not repeat information simply to populate multiple sections.\n\nThe Detailed Timestamped Summary is the primary explanation.\n\nOther sections should add structured or retrieval value.\n\nFor example:\n\nIf Ragi is discussed with:\n\n- purpose\n- benefits\n- quantity\n- preparation\n- recipe\n- caution\n\nthe Detailed Summary should explain the overall discussion.\n\nThe Recipes section should contain the actionable recipe details.\n\nNamed Items should simply identify:\n\nRagi (Finger Millet) | Food | Timestamp\n\nDo not repeat the complete explanation three times.\n\nSimilarly, for technical videos:\n\nDetailed Summary:\nexplains what is being done and why.\n\nTechnical Intelligence:\ncaptures exact commands/configuration/errors/API details.\n\nNamed Items:\nidentifies the important technologies/products.\n\nEach section should have a distinct purpose.\n\n\n======================================================================\nEMPTY SECTION RULE\n======================================================================\n\nTHIS RULE IS VERY IMPORTANT.\n\nDo NOT display an optional section when there is no useful information.\n\nDo NOT output:\n\nReferences Mentioned\nNone\n\nDo NOT output:\n\nRecipes\nNone\n\nDo NOT output:\n\nQuestions and Answers\n[]\n\nDo NOT output:\n\nPlaylist / Series Relationship\nNot available\n\nDo NOT output:\n\nIT / Technical Intelligence\nNot applicable\n\nSimply omit the entire heading and section.\n\n\n======================================================================\nHUMAN-READABLE REPORT ORDER\n======================================================================\n\nThe visible report should normally appear in this order:\n\n1. TITLE & SEARCH INTELLIGENCE\n\n   Original Title\n   New Title\n\n2. CATEGORY\n\n   Category\n   Subcategory\n   Primary Topic\n   Content Type\n\n3. TAGS\n\n4. CHAPTERS\n\n5. DETAILED TIMESTAMPED SUMMARY\n\n6. RECIPES / PREPARATIONS\n   ONLY when present\n\n7. MEANINGFUL REFERENCES MENTIONED\n   ONLY when present\n\n8. QUESTIONS AND ANSWERS\n   ONLY when useful\n\n9. PLAYLIST / SERIES\n   ONLY when applicable\n\n10. IT / TECHNICAL VIDEO INTELLIGENCE\n    ONLY for technical videos\n\n11. NAMED ITEMS DISCUSSED\n    ALWAYS KEEP THIS AS THE LAST CONTENT SECTION\n\n\n======================================================================\nDO NOT DISPLAY IN HUMAN-READABLE REPORT\n======================================================================\n\nDo NOT display:\n\n- Source\n- Duration represented\n- Transcript type\n- Description used for analysis\n- Viewer comments used\n- source_language\n- title_translated\n- title_confidence\n- Title Basis\n- Title Entities\n- Important Aliases\n- separate Synonyms / Aliases section\n- Concepts\n- Useful Search Phrases\n- Questions Answered as search metadata\n- Secondary Topics\n- Not About\n- separate Content Type section\n- Entity Extraction\n- separate Instructions / How-To / Remedies section\n- separate Comparisons section\n- separate Recommendations section\n- Verification: SOURCE_CLAIM_ONLY\n- separate Structured Tables section\n- Time-Sensitive Information\n- Glossary\n- Things Discussed in This Video\n- Evidence / Provenance\n- Analysis Quality\n- ChatGPT Perspective\n- PS\n\n\n======================================================================\nINTERNAL DATA VS HUMAN-READABLE REPORT\n======================================================================\n\nSome information is valuable to the application but should not clutter\nthe visible report.\n\nInternal machine-readable data MAY retain fields such as:\n\n- VIDEO_ID\n- original_title\n- new_title\n- title_basis\n- title_entities\n- canonical_tags\n- concepts\n- search_phrases\n- synonyms_aliases\n- questions_answered\n- category\n- subcategory\n- primary_topic\n- content_type\n- chapters\n- detailed_timestamped_summary\n- recipes\n- references\n- questions_and_answers\n- playlist_series_relationship\n- technical_intelligence\n- named_items_discussed\n- processing_status\n- processing_warnings\n- reprocess_recommended\n- reprocess_reasons\n- uncertain_items\n- targeted_review_hints\n\nDo NOT assume that every machine-readable field must be printed in the\nhuman-readable report.\n\nThe visible report must follow the display rules above.\n\n\n======================================================================\nFINAL CRITICAL RULES\n======================================================================\n\n1. Preserve exact VIDEO_ID.\n\n2. Process each VIDEO_ID independently.\n\n3. Never mix information from different videos.\n\n4. Preserve original_title EXACTLY as authoritative metadata supplies\n   it.\n\n5. Generate ONE definitive `new_title`.\n\n6. `new_title` is intended for eventual file/folder renaming.\n\n7. Make `new_title` Windows-filename-safe.\n\n8. Generate `new_title` based primarily on actual transcript content.\n\n9. Do not automatically trust numerical counts in the original title.\n\n10. Never invent missing named items to satisfy a count.\n\n11. Normally use no more than approximately 5–7 named items in\n    `new_title`.\n\n12. Preserve useful regional/common and English names.\n\n13. Preserve important technical/product/medical specificity.\n\n14. Do not use the video description for analysis.\n\n15. Do not use viewer comments for analysis.\n\n16. Create chapters based on REAL topic changes.\n\n17. Never create arbitrary fixed-duration chapters.\n\n18. Chapters and Detailed Timestamped Summary MUST use the same\n    boundaries.\n\n19. Never invent chapter timestamps.\n\n20. Make the Detailed Timestamped Summary detailed, coherent and\n    topic-centered.\n\n21. Write polished explanatory paragraphs organized by meaningful\n    numbered topics with timestamp ranges. Use focused deep-dives and\n    additional-recommendation subsections when they preserve important\n    useful information.\n\n22. Avoid repeatedly saying \"the speaker says\", \"the transcript says\"\n    or similar wording.\n\n23. Use tables wherever they genuinely improve readability.\n\n24. Keep relevant numbers with the subject they belong to.\n\n25. Create a separate Recipes / Preparations section when meaningful\n    preparation information exists.\n\n26. For recipes/preparations, capture ONE accurate overall timestamp\n    range where the preparation is discussed.\n\n27. Do NOT include timestamps on individual preparation steps. Use a\n    compact labeled-bullet format. When multiple preparation steps exist,\n    put them as nested bullets under Preparation.\n\n28. Never invent recipe ingredients, quantities, ratios, instructions,\n    usage details or timestamps.\n\n29. Do not repeat the complete recipe in the Detailed Summary.\n\n30. Include only meaningful identifiable references.\n\n31. Never fabricate references, books, studies, authors or URLs.\n\n32. Omit optional sections completely when empty.\n\n33. IT / Technical Video Intelligence applies specifically to\n    IT/software/technical content.\n\n34. Never guess uncertain code, commands, API endpoints, configuration\n    values or technical versions.\n\n35. Keep Named Items Discussed as the LAST content section.\n\n36. Extract actual identifiable names rather than vague numbered\n    descriptions.\n\n37. Do not duplicate the same information throughout the report.\n\n38. Do not display internal Title Basis, Title Entities, Concepts,\n    Search Phrases or Alias tables in the human-readable report.\n\n39. Do not include ChatGPT Perspective / PS.\n\n40. Do not manufacture information merely to populate a field or\n    section.\n\n41. If something cannot be reliably determined from the allowed source\n    material, leave it empty or omit it rather than guessing.\n\n42. Use the most precise timestamps supported by the supplied\n    timestamped transcript.\n\n43. Completely exclude promotional/sponsor/advertising information from\n    the report and from all search/indexing fields.\n\n44. Do not add Source Framing, independent-verification disclaimers or\n    external fact-check commentary unless explicitly requested.\n\n45. Recipes / Preparations must use concise labeled bullets rather than\n    ingredient or step tables.\n\n46. If Preparation has multiple actions, use nested sequential bullets\n    under Preparation; if simple, keep it as one Preparation bullet.\n\n47. Perform the five processing phases sequentially inside ONE main\n    model call; do not require five separate transcript-processing calls.\n\n48. Phase 5 is an internal semantic self-review, not a visible report\n    section.\n\n49. Never fail or abort an entire package because one video is weak,\n    uncertain or source-insufficient.\n\n50. Assign an internal processing status to every VIDEO_ID and continue\n    processing subsequent videos regardless of that status.\n\n51. Flag videos that need a better source/package with\n    `reprocess_recommended = true` and concise actionable reasons.\n\n52. Do not endlessly retry a weak video inside the main pass. Preserve\n    the status and let the application recreate a package for it later.\n\n53. Keep processing-quality fields internal; do not add them as visible\n    report sections.\n\n\n======================================================================\nFINAL OUTPUT\n======================================================================\n\nProduce one structured intelligence record for EACH VIDEO_ID.\n\nThe machine-readable output should support the application fields\ndescribed above.\n\nThe human-readable report generated from that data must follow the\nspecified report order and visibility rules.\n\nThe Detailed Timestamped Summary is the primary explanatory content.\n\nChapters provide the canonical navigation structure.\n\nRecipes / Preparations preserve actionable preparation details.\n\nNamed Items Discussed provides the final concise index of important\nidentifiable subjects.\n\nReturn valid machine-readable JSON according to the supplied output\nschema.\n\nDo not wrap JSON in Markdown code fences when producing the actual\nprocessing result.\n\nDo not add introductory or concluding prose outside the requested\noutput.\n\n54. Process all VIDEO_IDs in a package strictly sequentially in package\n    order; fully finish and persist one video before starting the next.\n\n55. Never combine multiple video transcripts into one semantic call.\n\n56. After Pass 1, code must split the structured result into modular\n    per-section files so one section can be replaced independently.\n\n57. Assemble final JSON and HTML from the modular section files; HTML is\n    never the authoritative intelligence source.\n\n58. Manual or deterministic changes to a section must not trigger an\n    LLM call; simply validate dependencies, reassemble and rerender.\n\n59. If only one section requires semantic regeneration, regenerate only\n    that section with the minimum necessary transcript evidence and\n    dependencies, then replace that section and revalidate affected\n    dependencies.\n\n\n60. Use 25 videos as the recommended standard package size.\n\n61. Package size must never determine model context size; Pass 1 receives\n    only the current video's source evidence and instructions.\n\n62. Persist and checkpoint after every VIDEO_ID before starting the next.\n\n63. Resume interrupted packages from the first unfinished video and do\n    not reprocess already completed reusable videos.\n\n64. Use prompt/version and source fingerprints to prevent unnecessary\n    token-consuming reprocessing after resume.\n",
+    "source_priority": [
+      "canonical timestamped transcript segments",
+      "untimestamped transcript if supplied",
+      "authoritative metadata for identity only",
+      "existing chapters/sections if supplied"
+    ],
+    "do_not_use_for_transcript_analysis": [
+      "video description",
+      "viewer comments",
+      "outside knowledge"
+    ],
+    "sequential_processing_rules": [
+      "Process videos strictly in package order.",
+      "Fully finish one VIDEO_ID before starting the next.",
+      "Never mix facts, named items, topics, timestamps or conclusions between VIDEO_IDs.",
+      "A weak/source-insufficient video must not stop the package; return PASS_WITH_WARNINGS or FAIL for that video and continue.",
+      "Do not output internal reasoning phases."
+    ],
+    "instructions": "Follow master_prompt_exact. Process every exact VIDEO_ID strictly one at a time in package order and return one final JSON object with no prose or markdown. Use only the evidence embedded in this independently processed package and obey response_schema.feature_contracts, controlled_taxonomy, formal_json_schema and the supplied response_template. Preserve original_title exactly. Generate one improved title from actual non-promotional transcript content. Do not use video description or viewer comments for transcript analysis. Completely exclude sponsor/ad/affiliate/coupon/promotional content. Detailed summaries and timelines must share meaningful topic boundaries. Cite canonical transcript segment_ids for transcript-derived conclusions. Do not claim that you watched or listened to a video. If evidence is weak, use uncertainty language and do not fabricate.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260906_155925_b5700b",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "batch_number": 7,
+      "batch_total": 20,
+      "batch_size": 25,
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "transcript_chars": 10676,
+      "split_reason": "parent_group",
+      "adaptive_batching": true,
+      "compact_chatgpt_package": true
+    },
+    "batch_instruction": "This is independently importable batch 7 of 20 in master set vh_batch_set_20260906_155925_b5700b. Process only the VIDEO_IDs in this evidence.json. Return one final JSON only for this batch; do not add videos from another batch."
+  },
+  "response_schema": {
+    "schema_version": "3.0",
+    "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+    "manual_exchange_only": true,
+    "compact_chatgpt_package": true,
+    "allowed_feature_ids": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "feature_contracts": {
+      "title_en.v1": {
+        "fields": {
+          "title": "string",
+          "short_title": "string",
+          "reason": "string"
+        },
+        "rules": [
+          "Natural English; retain the actual subject",
+          "For list/ranking/recommendation videos, include the key named items in the title when transcript or metadata evidence clearly identifies them, e.g. Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+          "Prefer readable specific titles over vague titles; title may exceed 14 words when needed to include clearly evidenced list items",
+          "short_title stays compact at 3-8 words",
+          "Do not invent listed items from title alone; if item names are not evidenced, use a general title"
+        ]
+      },
+      "taxonomy.v3": {
+        "fields": {
+          "primary_topic": "string",
+          "secondary_topics": "string[]",
+          "category": "string",
+          "subcategory": "string",
+          "keywords": "string[]",
+          "canonical_tags": "string[]",
+          "search_queries": "string[]"
+        },
+        "rules": [
+          "Use the supplied VideoHoarder categories when one clearly fits; otherwise Other",
+          "Prefer specific subjects over generic labels",
+          "Return 5-15 deduplicated canonical tags"
+        ]
+      },
+      "detailed_summary.v3": {
+        "fields": {
+          "overview": "string",
+          "sections": "object[]",
+          "practical_details": "string[]",
+          "limitations": "string[]",
+          "source_basis": "string[]"
+        },
+        "rules": [
+          "Keep the detailed summary full, semantic and evidence-grounded; do not shorten it just because compact mode is enabled",
+          "Each section has heading, summary and segment_ids",
+          "Preserve important quantities, steps, dates and qualifications exactly when stated"
+        ]
+      },
+      "timeline_sections.v3": {
+        "fields": {
+          "sections": "object[]"
+        },
+        "rules": [
+          "Each section has start_timestamp, end_timestamp, title, summary and segment_ids",
+          "Chronological, non-overlapping and within supplied transcript duration",
+          "Prefer 4-12 meaningful sections; do not create filler sections"
+        ]
+      },
+      "editorial_assessment.v1": {
+        "fields": {
+          "chatgpt_take": "string",
+          "bottom_line": "string",
+          "practical_value": "high|medium|low|unknown",
+          "credibility": "high|medium|low|uncertain",
+          "keep_priority": "high|medium|low|unknown|not_available",
+          "score_0_to_100": "number"
+        },
+        "rules": [
+          "Compact ChatGPT take only; do not duplicate the detailed summary",
+          "Use the supplied evidence only and state uncertainty plainly",
+          "Keep practical_value and credibility as short controlled ratings",
+          "score_0_to_100 is a simple usefulness/credibility score from 0 to 100"
+        ]
+      }
+    },
+    "controlled_taxonomy": {
+      "allowed_categories": [
+        "Health",
+        "Technology",
+        "Finance",
+        "Food",
+        "Travel",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "News",
+        "Spirituality",
+        "Automotive",
+        "Home",
+        "Business",
+        "Other"
+      ],
+      "entity_types": [
+        "person",
+        "organization",
+        "place",
+        "product",
+        "work",
+        "event",
+        "concept",
+        "law",
+        "study",
+        "other"
+      ],
+      "unknown_category": "Other",
+      "tag_rules": "lowercase canonical concepts; singular where natural; no promotional filler"
+    },
+    "formal_json_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "VideoHoarder ChatGPT Result",
+      "type": "object",
+      "required": [
+        "package_id",
+        "schema_version",
+        "batch_validation_status",
+        "video_updates"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "vh_full_intelligence_20260906_155946_3098ae"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "batch_validation_status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_WARNINGS",
+            "FAIL"
+          ]
+        },
+        "video_updates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "video_id",
+              "processing_status",
+              "evidence_grade",
+              "confidence",
+              "evidence_references",
+              "source_conflicts",
+              "validation",
+              "features"
+            ],
+            "properties": {
+              "video_id": {
+                "type": "string"
+              },
+              "processing_status": {
+                "enum": [
+                  "PASS",
+                  "PASS_WITH_WARNINGS",
+                  "REPROCESS_RECOMMENDED",
+                  "SOURCE_INSUFFICIENT"
+                ]
+              },
+              "evidence_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "evidence_references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "segment_ids"
+                  ],
+                  "properties": {
+                    "source": {
+                      "type": "string"
+                    },
+                    "segment_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "source_conflicts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "validation": {
+                "type": "object",
+                "required": [
+                  "status",
+                  "warnings",
+                  "repair_attempts"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "PASS_WITH_WARNINGS",
+                      "FAIL"
+                    ]
+                  },
+                  "warnings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "repair_attempts": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": true
+              },
+              "features": {
+                "type": "object",
+                "required": [
+                  "title_en.v1",
+                  "taxonomy.v3",
+                  "detailed_summary.v3",
+                  "timeline_sections.v3",
+                  "editorial_assessment.v1"
+                ],
+                "properties": {
+                  "title_en.v1": {
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "short_title",
+                      "reason"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "short_title": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "taxonomy.v3": {
+                    "type": "object",
+                    "required": [
+                      "primary_topic",
+                      "secondary_topics",
+                      "category",
+                      "subcategory",
+                      "keywords",
+                      "canonical_tags",
+                      "search_queries"
+                    ],
+                    "properties": {
+                      "primary_topic": {
+                        "type": "string"
+                      },
+                      "secondary_topics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "category": {
+                        "type": "string"
+                      },
+                      "subcategory": {
+                        "type": "string"
+                      },
+                      "keywords": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "canonical_tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "search_queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "detailed_summary.v3": {
+                    "type": "object",
+                    "required": [
+                      "overview",
+                      "sections",
+                      "practical_details",
+                      "limitations",
+                      "source_basis"
+                    ],
+                    "properties": {
+                      "overview": {
+                        "type": "string"
+                      },
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "practical_details": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "source_basis": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "timeline_sections.v3": {
+                    "type": "object",
+                    "required": [
+                      "sections"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "start_timestamp",
+                            "end_timestamp",
+                            "title",
+                            "summary",
+                            "segment_ids"
+                          ],
+                          "properties": {
+                            "start_timestamp": {
+                              "type": "string"
+                            },
+                            "end_timestamp": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "segment_ids": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "editorial_assessment.v1": {
+                    "type": "object",
+                    "required": [
+                      "chatgpt_take",
+                      "bottom_line",
+                      "practical_value",
+                      "credibility",
+                      "keep_priority",
+                      "score_0_to_100"
+                    ],
+                    "properties": {
+                      "chatgpt_take": {
+                        "type": "string"
+                      },
+                      "bottom_line": {
+                        "type": "string"
+                      },
+                      "practical_value": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown"
+                        ]
+                      },
+                      "credibility": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "uncertain"
+                        ]
+                      },
+                      "keep_priority": {
+                        "enum": [
+                          "high",
+                          "medium",
+                          "low",
+                          "unknown",
+                          "not_available"
+                        ]
+                      },
+                      "score_0_to_100": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "uniqueItems": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "allowed_processing_status": [
+      "PASS",
+      "PASS_WITH_WARNINGS",
+      "REPROCESS_RECOMMENDED",
+      "SOURCE_INSUFFICIENT"
+    ],
+    "allowed_evidence_grades": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "result_contract": "Return ONE JSON object only after processing every exact VIDEO_ID. video_updates must be an array. Each item must include processing_status, evidence_grade, confidence, evidence_references, source_conflicts, validation, and every requested feature using its exact field-level contract and formal_json_schema. Provenance must cite supplied segment_ids when transcript evidence is used. Treat speaker claims as unverified unless external verification is explicitly provided. Use unknown, not_available, or insufficient_evidence instead of inventing content. No automatic deletion, file movement, clipping, or upload.",
+    "response_template": {
+      "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+      "schema_version": "3.0",
+      "batch_validation_status": "PASS_WITH_WARNINGS",
+      "video_updates": [
+        {
+          "video_id": "EXACT_VIDEO_ID_FROM_PACKAGE",
+          "processing_status": "PASS_WITH_WARNINGS",
+          "evidence_grade": "A",
+          "confidence": "high",
+          "evidence_references": [
+            {
+              "source": "canonical_transcript",
+              "segment_ids": [
+                "s00001"
+              ]
+            }
+          ],
+          "source_conflicts": [],
+          "validation": {
+            "status": "PASS_WITH_WARNINGS",
+            "warnings": [],
+            "repair_attempts": 0
+          },
+          "features": {
+            "title_en.v1": {
+              "title": "Dinner Foods to Avoid: Leafy Vegetables, Salads, Sprouts, Curd, Fruits, Juices and Heavy Foods",
+              "short_title": "Dinner Foods to Avoid",
+              "reason": "For a list-style video, the title includes key named items only when they are clearly supported by supplied transcript or metadata evidence."
+            },
+            "taxonomy.v3": {
+              "primary_topic": "Example topic",
+              "secondary_topics": [],
+              "category": "Other",
+              "subcategory": "Example subtopic",
+              "keywords": [
+                "example"
+              ],
+              "canonical_tags": [
+                "example"
+              ],
+              "search_queries": [
+                "example topic"
+              ]
+            },
+            "detailed_summary.v3": {
+              "overview": "Full evidence-grounded summary when transcript evidence supports it.",
+              "sections": [
+                {
+                  "heading": "Main point",
+                  "summary": "Explain the section using canonical transcript evidence.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ],
+              "practical_details": [],
+              "limitations": [],
+              "source_basis": [
+                "canonical_transcript"
+              ]
+            },
+            "timeline_sections.v3": {
+              "sections": [
+                {
+                  "start_timestamp": "00:00:00",
+                  "end_timestamp": "00:00:30",
+                  "title": "Opening topic",
+                  "summary": "Meaningful topic boundary summary.",
+                  "segment_ids": [
+                    "s00001"
+                  ]
+                }
+              ]
+            },
+            "editorial_assessment.v1": {
+              "chatgpt_take": "Short, video-specific ChatGPT take grounded in the supplied evidence.",
+              "bottom_line": "The single most useful conclusion.",
+              "practical_value": "medium",
+              "credibility": "uncertain",
+              "keep_priority": "medium",
+              "score_0_to_100": 50
+            }
+          }
+        }
+      ]
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260906_155925_b5700b",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "batch_number": 7,
+      "batch_total": 20,
+      "batch_size": 25,
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "transcript_chars": 10676,
+      "split_reason": "parent_group",
+      "adaptive_batching": true,
+      "compact_chatgpt_package": true
+    }
+  },
+  "manifest": {
+    "request_id": "309d106e-9d46-4332-ad06-bf6eae574692",
+    "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+    "mode": "FULL_INTELLIGENCE",
+    "schema_version": "3.0",
+    "prompt_version": "3.1-master-sequential",
+    "feature_contract_version": "1",
+    "validation_pipeline": "canonical-semantic-1",
+    "compact_chatgpt_package": true,
+    "skip_no_transcript_videos": true,
+    "requested_features": [
+      "title_en.v1",
+      "taxonomy.v3",
+      "detailed_summary.v3",
+      "timeline_sections.v3",
+      "editorial_assessment.v1"
+    ],
+    "video_ids": [
+      "BEzASBGeEIM"
+    ],
+    "evidence_grades": {
+      "BEzASBGeEIM": "A"
+    },
+    "batch_context": {
+      "master_set_id": "vh_batch_set_20260906_155925_b5700b",
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "batch_number": 7,
+      "batch_total": 20,
+      "batch_size": 25,
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "transcript_chars": 10676,
+      "split_reason": "parent_group",
+      "adaptive_batching": true,
+      "compact_chatgpt_package": true
+    },
+    "hashes": {
+      "evidence.json": "b5e58a17b18a984f69dd27d7e97a89e2d4693c755fbfb52128519429123d856d",
+      "prompt.json": "6ac021021e6bf9db37e0329b177ce88d2fc2378cfac5a07926689a6be2d52223",
+      "schema.json": "9cae83892e3a0583031b244df782b3f7851cbc30112324fba33d5f938e63e53f"
+    },
+    "created_at": "2026-09-06 15:59:46",
+    "manual_exchange_only": true
+  },
+  "videos": [
+    {
+      "video_id": "BEzASBGeEIM",
+      "metadata": {
+        "url": "https://www.youtube.com/watch?v=BEzASBGeEIM",
+        "original_title": "7 Healthy & Tasty Dinner Ideas for the Week (Vegetarian)",
+        "clean_title": "7 Quick Vegetarian Dinners: Palak Paneer Pulao, Kathi Roll, Corn Soup, Soya Biryani, Dal Dhokli, Millet Khichdi and Oats",
+        "channel": "Fit Tuber",
+        "upload_date": "2019-12-20",
+        "description": "Quick, Healthy and Tasty  Dinner Ideas after a tiring day at Office, School or College.  Healthy and tasty  Indian dinner recipes for the entire week. \n\nTo get a custom diet plan on HealthifyMe using this link - http://bit.ly/HealthifySmartFT\n(HealthifyMe is a reputed health and fitness app which can help you achieve your fitness goals faster)\n\nToday, I will share with you some very tasty and easy to make meals which you might have never considered before. While selecting the lunch options for this video, my top priority has been least time required for cooking, to serve a variety of tastes and of course practicality. So, if you too are bored of eating the same dal ,roti, rice daily then keep watching this video as in this video I am going to share with you 7 dinner ideas which almost anyone cook using minimum ingredients, without compromising on taste.\n\n01:05 - #7 Quick & Healthy Indian Dinner Idea\n02:13 - #6 Quick & Healthy Indian Dinner Idea\n03:07 - #5 Quick & Healthy Indian Dinner Idea\n04:00 - #4 Quick & Healthy Indian Dinner Idea\n05:17 - #3 Quick & Healthy Indian Dinner Idea\n06:25 - #2 Quick & Healthy Indian Dinner Idea\n07:25 - #1 Quick & Healthy Indian Dinner Idea\n\nFOODS & PRODUCTS RELATED TO THE VIDEO (Not Sponsored)\nSemi Brown Rice - https://amzn.to/2sL4539\nA2 Cow Ghee - https://amzn.to/2rWbEnN\nAmul Ghee - https://amzn.to/2Z7eYZc\nRock Salt - https://amzn.to/36PKMUY\nCumin Seeds - https://amzn.to/38TVUCp\nWhole Garam Masala - https://amzn.to/2Q2NtvW\nSoya Chunks - https://amzn.to/2Md5Ih5\nMultigrain flour for Roti - https://amzn.to/2SaZC4z\nWhole Wheat Flour for Dhokli - https://amzn.to/2MfpLv6\nGram Flour for Dhokli - https://amzn.to/34IoFOQ\nMix Dal for Dhokli - https://amzn.to/2ZiTmcF\nKodo Millet - https://amzn.to/36RMaXi\nWhole Moong Dal - https://amzn.to/2Q5F3nu\nOat Flour - https://amzn.to/2Mgjz62\nSemolina - https://amzn.to/36SCN9H\nCheese - https://amzn.to/2Z5VK6k\nPizza Seasoning - https://amzn.to/2rXdwg2\nBrass Kadhai - https://amzn.to/2R48zfV\nClay Pot - https://amzn.to/2Sc0LIV\n\n08:43 - Video Partner - HealthifyMe\nTo get a custom diet plan on HealthifyMe using this link - - http://bit.ly/HealthifySmartFT\n(HealthifyMe is a reputed health and fitness app which can help you achieve your fitness goals faster)\n\nBuy Healthy Sugar Alternatives for you and your family (NOT SPONSORED)\n\nStevia Dry Leaves - https://amzn.to/2yAF7CP\nStevia Sachets - https://amzn.to/2EejePO\nJaggery Powder - https://amzn.to/2yAF7CP\nJaggery - https://amzn.to/2NEuQef\nMishri -  https://amzn.to/2yeFXWF\nHoney - https://amzn.to/2yenedR\nDates Sugar - https://amzn.to/2yfz8E5\nCoconut Sugar - https://amzn.to/2C8q5rv\n\nBEST PRODUCTS FROM WORST TO BEST SERIES (My Recommendations) (NOT SPONSORED)\nBest Shampoo - https://amzn.to/2JOFON2\nBest Face wash - http://amzn.to/2FKXqsd\nBest Deodorant - https://amzn.to/2qJ2R4M\nBest Sunscreen - http://amzn.to/2DdMgJw\nBest Face Cream - https://amzn.to/2J4eVF4\nBest Breakfast - https://amzn.to/2KADtWk\nBest Instant Noodles - https://amzn.to/2GO0Jhd\nBest Biscuits - https://amzn.to/2HRv1B7\n\nMY GEAR\nCamera - http://amzn.to/2t7uXdv\nMic - http://amzn.to/2oKxLYq\n\nMORE USEFUL LINKS\n\nCopper Jug that I recommend -https://amzn.to/2Gxth3I\nBrass Kadhai that I recommend - https://amzn.to/2R48zfV\nWater bottle that I use - https://amzn.to/2KtbcBg\nGram Flour to prepare Chilla - https://amzn.to/2A7CZUA\nSemi Brown Rice that I use - https://amzn.to/2GxWGuF\nMulti grain Atta that I have used - https://amzn.to/2UTIwqR\nBhuna Chana - https://amzn.to/2tOFdVa\nRock Salt - https://amzn.to/2yTl5Xt\nBlack salt - https://amzn.to/2ID0Pcd\nJaggery - https://amzn.to/2MvV7vk\nStevia - https://amzn.to/2tQzvBY\nHoney - https://www.amazon.in/dp/B01CHL3Z42?tag=fittub-21\nMillets - https://amzn.to/2KADtWk\nOats - https://amzn.to/2ls1yUN\nBrown Rice - https://amzn.to/2MyritZ\nPeanuts - https://amzn.to/2MypnWp\n\nMORE ON FIT TUBER\n\n5 Amazing Patanjali products you should try\nhttps://www.youtube.com/watch?v=RWRDG...\n\n10 Toothpastes in India Ranked from Worst to Best?\nhttps://www.youtube.com/watch?v=RWRDG...\n\nCustomized Oatmeal full recipe video:\nhttps://www.youtube.com/watch?v=i6aFZ...\n\nPaneer Stuffed Pesarattu full recipe video:\nhttps://www.youtube.com/watch?v=vmnns...\n\nFull day diet plan for Muscle Building:\nhttps://www.youtube.com/watch?v=2knVu...\n\nFull day diet plan for fat loss:\nhttps://www.youtube.com/\n\nDiet Plan for weight loss \nhttps://www.youtube.com/watch?v=-X639... \n\nMusic Credits : YouTube Audio Library \n\nI wish you good health.\nFit Tuber",
+        "source_category": "Howto & Style",
+        "youtube_category_name": "Howto & Style",
+        "duration_seconds": 0.0
+      },
+      "requested_features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "evidence": {
+        "canonical_transcript": {
+          "source": "no_transcript",
+          "language": "en",
+          "quality": "high",
+          "completeness": "complete",
+          "video_duration_seconds": 0.0,
+          "segments": [
+            {
+              "segment_id": "s00001",
+              "start_timestamp": "00:00:00.000",
+              "end_timestamp": "00:00:00.000",
+              "start_seconds": 0.0,
+              "end_seconds": 0.0,
+              "text": "[00:00:02] After a tiring day at work, a filling and delicious dinner is what our bodies crave for. However, as we are already tired, we do not feel like spending too much time in the kitchen. As a result, most of the times we end up eating the same boring food or often order online, which then sabotages our fitness goals. [00:00:17] But not anymore. Today I'll share with you some lip-smacking dinner options which you can easily make at your home without much effort. While selecting the dinner options for this video, my top priority has been least cooking time to serve a variety of tastes and of course practicality. So, if you too want a [00:00:34] break from eating the same boring food, then keep watching this video. As in this video, I'm going to share with you seven dinner ideas that even the laziest of us can cook using minimum ingredients and without compromising on taste. Stay tuned. [00:00:53] Hello friends, welcome to Fituber. For this video, I have consciously not included the regular dinner options like dal, roti, and sabzi. Firstly, because it is not always easy to cook so many things at a time and secondly, to bring something fresh and creative to your dinner table. Starting with number seven on the list is palak paneer pulao. Bored [00:01:10] of eating the regular vegetable pulao? Then try palak paneer pulao. Super high in protein with complex carbohydrates, it's a delicious dinner option. To start with, first make the palak puree by grinding fresh palak with water. Now, in a pan, put 1 Tbsp of ghee, add cumin [00:01:27] seeds, and let them splutter. Now, add the chopped onions. Saute the onions with rock salt, turmeric, grated ginger, black cardamom, cinnamon stick, black peppercorns, a slit green chili, and bay leaf. Now, add freshly grinded palak [00:01:42] puree along with 100 g of fresh paneer cubes. Saute them for a while. Now, add about half a cup of soaked semi-brown rice and about one glass of water. That's it. Let it cook on a low flame while you can just relax. After about 15 minutes, check. It should be done. Mix [00:01:58] again, turn off the gas, and your palak paneer pulao is ready to be served. Transfer it to the plate and enjoy. Power-packed with complex carbohydrates, proteins, and healthy fats, it's a well-balanced, delicious, and filling dinner option. Do try it. Number six is [00:02:14] vegetable kathi roll. This vegetable kathi roll is easy, yet so delicious. One of my all-time favorites. To make it, in a pan, put about 1 Tbsp of ghee. Add cumin seeds and let them splutter. To this, add chopped onions. Sauté them [00:02:30] for a while with rock salt, turmeric, black pepper, and grated ginger. Now, add some finely chopped tomatoes. Mix well and cook on low heat for a minute. Now, add finely chopped carrots, capsicum, green peas, and paneer. Mix well and cook for about 5 minutes. Once [00:02:46] ready, put some fresh coriander leaves and turn off the gas. Now, take one large whole wheat chapati, place the mixture evenly over it, and roll it. Your super easy and healthy vegetable kathi roll is now ready. With well-sautéed seasonal vegetables in a [00:03:01] whole wheat chapati, it is a mouth-watering dinner meal. Try it out. You will love it. At number five is vegetable corn soup. Is soup boring? Well, not always. Try this vegetable corn soup with a twist. Simply put a pan on low flame. Add one glass of water to [00:03:18] it. Put rock salt to taste, some freshly crushed black pepper, and grated ginger in it. Mix the spices well. Now, add finely chopped carrots, beans, capsicum, and a few green peas. Now, to twist things up, we will grate the corn and then add it. Cover the pan and let it [00:03:35] simmer for about 10 minutes as the flavors combine well. That's all. Put off the gas, pour it in a bowl, garnish it with fresh coriander leaves, sprinkle some lemon juice, and serve hot. Since we had added freshly grated corn to it, the texture turned out a smoother and [00:03:51] much more tastier than the usual corn soup. Tasty, filling, yet light, it is a great dinner option for someone looking to put off extra weight. At number four is soya biryani. Soya biryani is another refreshing dinner option. Super high in protein, well balanced with complex [00:04:08] carbohydrates and healthy fats, it is yummy as well. For this recipe, soak about 50 g of soya chunks in hot water 15 minutes before you start cooking. Put some salt in soya bowl. Now, in a pan, take 1 tbsp of ghee. Add cumin seeds to [00:04:23] splatter. Use whole garam masala to get that extra flavor. Put rock salt and a few slit green chilies. Now, add some chopped onions and saute them until they turn translucent. Add grated ginger and then chopped tomatoes. Now is the time to put soya chunks. Mix them properly so [00:04:41] that the soya chunks absorb all the flavors. Add some fresh mint leaves and coriander leaves. Add about two glasses of water. When the water starts boiling, add half a cup of soaked semi-brown rice. Mix well. Now, just close the lid and let it cook on a low flame for about [00:04:57] 15 minutes. That's all, your soya biryani is now ready. Have it just like that with lemon juice sprinkled over it. Try it out. It's super yummy. And do not worry about the soya chunks in it. 50 g of soya once or twice a week won't imbalance your hormones. Instead, you [00:05:13] will get the much needed protein. Do give it a try. At number three is dal dhokli. Dal dhokli, an authentic traditional recipe from the western regions of India, is super healthy, tasty, and just one-pot prep. Start by making the dough for dhokli. Take whole [00:05:28] wheat flour and gram flour in 1:1 ratio. Knead the dough with water just like you would make for the chapati. Leave aside. Now, put 1 tbsp of ghee in a pan. Add a teaspoon of cumin seeds, a pinch of asafoetida, turmeric powder, black [00:05:44] pepper, grated ginger, a green chili, and mix well. Put some chopped tomatoes to it. Saute them for a while. Now, add half a cup of washed mixed dal. To this, add three times the water. Let it simmer for a while. Now, get back to the dough. Roll a large chapati and evenly cut it [00:06:02] just like that. Put this dhokli in a dal and let it cook for about 20 to 20 to 25 minutes. That's all. Your authentic dal dhokli recipe is ready. Garnish it with fresh coriander leaves, sprinkle some lemon juice into it, and dig in. This lip-smacking soupy dish is healthy, [00:06:19] filling, and so yummy. The authentic taste of Indian cuisine. Try it out and relish it. At number two is millet masala khichdi. Dinner options are incomplete without the humble khichdi, isn't it? Let's spice things up with this sumptuous millet masala khichdi. In [00:06:35] a pan, put 1 Tbsp of cow ghee. Add cumin seeds to it and let it splutter. Now, add chopped onions, rock salt, turmeric powder, black pepper, and a pinch of asafoetida. Add some chopped green beans. At this point, if you want, you can add more vegetables as well. Now, [00:06:51] add chopped tomatoes. Next, add soaked millets and soaked whole moong dal. Add a few glasses of water to it. Now, just cover the pan and let it cook for about 15 to 20 minutes on a low flame. Your super easy and yummy masala millet khichdi is ready. Garnish it with fresh [00:07:08] coriander leaves and mix well. I would suggest to add an extra Tbsp of desi cow ghee to take its taste to the next level. Khichdi never ceases to impress you, isn't it? With the healthier combination of millets, moong dal, and seasonal vegetables, it tastes even [00:07:24] better. Coming to number one dinner option. It is for those days when you feel like eating something special, something like pizza. So, what's the problem? Let's make healthy oats pizza at home. To start with, take about 3 Tbsp of oat flour and 2 Tbsp of [00:07:40] semolina. Add just a little water to make a thick batter. Keep the batter aside for about 15 minutes. Meanwhile, you can cut the vegetables for the toppings. After 15 minutes, spread the batter evenly onto the pan on a low flame. Now, flip it to cook the other side. In place of the unhealthy sauce, [00:07:56] we will apply a smooth grinded mixture of sauteed onions and tomatoes. Now, sprinkle some cheese over it. You can add a variety of vegetables like mushrooms, capsicums, etc. Add some more cheese to it. Season it with chili flakes, oregano, rock salt, and black [00:08:13] pepper. Cover it for a while to let the cheese melt. So, that's it. A healthy version of pizza is ready. Really, it's tastier and crispier than you might think it to be. So, the next time when you feel like eating a pizza, make it at home. So, these were some of the quick, [00:08:28] healthy, and practical dinner options that I feel you should try. Which of these dinner options did you like the most? Comment below. Even though all the ingredients used are very easily available in our kitchens, still I have linked them in the description box for you to buy. I want to thank HealthifyMe [00:08:44] for partnering with us for this video. HealthifyMe is a well-known health and fitness app that can help you achieve your fitness goals, be it fat loss, muscle building, or any other. On this app, you can feed your daily meals so that you can have a track of your food consumption. What I really liked is that [00:09:00] they have over 100,000 plus Indian foods added, so you will always find what you eat. Not just this, you can also track your workouts, water intake, and can also set various reminders on the app to ensure that you're always motivated towards your goal. The best thing is [00:09:16] that all these features are free to use and can be a great start towards your fitness goal. If you need more assistance, use HealthifyMe Premium, a paid feature through which you can get customized diet plans. You can choose from two options, one with the human coach assisting and other with an AI [00:09:32] nutritionist guiding you with a personalized diet plan. I have added a link in the description box which has more details about all their plans. Click and avail the special offers. So friends, that's all for this video. I hope you found it to be helpful. If yes, then please show me your support by [00:09:48] giving this video a big thumbs up. What next would you like to see in this series? Comment below. You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell icon so that you never miss a video from me. You can [00:10:04] also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. I thank you so much for watching."
+            }
+          ]
+        },
+        "comments": {
+          "total_comments": 1162,
+          "included_comments": 100,
+          "sampling_method": "deterministic_head_tail",
+          "records": [
+            {
+              "comment_id": "c00001",
+              "author": "",
+              "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+              "likes": null
+            },
+            {
+              "comment_id": "c00002",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00003",
+              "author": "",
+              "text": "VIDEO_ID: BEzASBGeEIM",
+              "likes": null
+            },
+            {
+              "comment_id": "c00004",
+              "author": "",
+              "text": "SOURCE: YouTube Data API",
+              "likes": null
+            },
+            {
+              "comment_id": "c00005",
+              "author": "",
+              "text": "TOTAL COMMENTS: 500",
+              "likes": null
+            },
+            {
+              "comment_id": "c00006",
+              "author": "",
+              "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00007",
+              "author": "",
+              "text": "========================================================================================",
+              "likes": null
+            },
+            {
+              "comment_id": "c00009",
+              "author": "",
+              "text": "[COMMENT 1] Author: @FitTuber | Likes: 2257 | Replies: 145 | Published: 2019-12-21T05:06:06Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00010",
+              "author": "",
+              "text": "Hello Friends! Indeed, it is one of the higher budgeted videos that I have put up on this channel. 😅 No wonder, the Onions cost Rs 120/Kg. So, for the time being, if you want to you can just skip the onions off these dishes and still try them. Click a picture and share it with me via Instagram stories - https://www.instagram.com/fittuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00012",
+              "author": "",
+              "text": "I wish you good health",
+              "likes": null
+            },
+            {
+              "comment_id": "c00013",
+              "author": "",
+              "text": "Fit Tuber",
+              "likes": null
+            },
+            {
+              "comment_id": "c00015",
+              "author": "",
+              "text": "[COMMENT 2] Author: @mayurshinde4015 | Likes: 46 | Replies: 0 | Published: 2019-12-21T05:08:57Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00016",
+              "author": "",
+              "text": "Thanks for the suggestion that onion part😂😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00018",
+              "author": "",
+              "text": "[COMMENT 3] Author: @princypinto | Likes: 12 | Replies: 0 | Published: 2019-12-21T06:34:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00019",
+              "author": "",
+              "text": "@chetnalamba5319 ohh... I never knew this... Thanks for sharing this information Chetna",
+              "likes": null
+            },
+            {
+              "comment_id": "c00021",
+              "author": "",
+              "text": "[COMMENT 4] Author: @chetandhowlaghar9210 | Likes: 7 | Replies: 0 | Published: 2019-12-21T07:06:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00022",
+              "author": "",
+              "text": "Have you turned into a vegetarian bro?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00024",
+              "author": "",
+              "text": "[COMMENT 5] Author: @robin01m | Likes: 15 | Replies: 0 | Published: 2019-12-21T07:11:17Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00025",
+              "author": "",
+              "text": "Hi 🛑🛑🛑🛑 can u make video on ur utensils ( bande) ur karahi, I see in this Video I have different kinds of utensils thx 🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c00027",
+              "author": "",
+              "text": "[COMMENT 6] Author: @FitTuber | Likes: 43 | Replies: 0 | Published: 2019-12-21T08:05:49Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00028",
+              "author": "",
+              "text": "@robin01m I have already made a detailed video on cooking utensils worst to best",
+              "likes": null
+            },
+            {
+              "comment_id": "c00030",
+              "author": "",
+              "text": "[COMMENT 7] Author: @ujjwalclasses_lawapur_mahnar | Likes: 560 | Replies: 9 | Published: 2020-08-14T00:21:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00031",
+              "author": "",
+              "text": "1. Did anyone notice that he was using black pepper instead of red chilly powder in all his recipes? A much healthier and tastier option.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00032",
+              "author": "",
+              "text": "2. He invariably uses clay pot to cook food.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00033",
+              "author": "",
+              "text": "3. He uses rock salt instead of sea salt.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00034",
+              "author": "",
+              "text": "4. He quickly consumes the food while it is still hot.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00035",
+              "author": "",
+              "text": "5. Instead of red chilly, he uses green chilly.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00036",
+              "author": "",
+              "text": "6. He tries his best to use whole pulses and whole grains like whole moong , brown rice.",
+              "likes": null
+            },
+            {
+              "comment_id": "c00037",
+              "author": "",
+              "text": "No wonder, he is so fit and energetic. Vivek, u rock....",
+              "likes": null
+            },
+            {
+              "comment_id": "c00039",
+              "author": "",
+              "text": "[COMMENT 8] Author: @vaidehiitaliya1373 | Likes: 2 | Replies: 0 | Published: 2023-03-05T17:26:46Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00040",
+              "author": "",
+              "text": "It's so useful and I also notice that 🥰",
+              "likes": null
+            },
+            {
+              "comment_id": "c00042",
+              "author": "",
+              "text": "[COMMENT 9] Author: @shanvijaiswal5643 | Likes: 1 | Replies: 0 | Published: 2023-06-09T15:15:26Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00043",
+              "author": "",
+              "text": "Yeahj",
+              "likes": null
+            },
+            {
+              "comment_id": "c00045",
+              "author": "",
+              "text": "[COMMENT 10] Author: @lindigamedze | Likes: 1 | Replies: 0 | Published: 2023-10-12T11:51:40Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00046",
+              "author": "",
+              "text": "@anupamyadav5038 you are so right 😇he is on the money! I'm unsure if all will suit my Vata body and gluten/dairy sensitive system... is Tomato fine for Vata types?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00047",
+              "author": "",
+              "text": "My real question is do you happen top know what happens to unused tomato, onion, soaked lentils etc and ginger??? I sense these will be thrown away but that can't be sustainable namely ginger and legumes. Any input?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00049",
+              "author": "",
+              "text": "[COMMENT 11] Author: @918mounika7 | Likes: 1 | Replies: 0 | Published: 2024-01-20T10:36:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00050",
+              "author": "",
+              "text": "Are red chillies not that good for health?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00052",
+              "author": "",
+              "text": "[COMMENT 12] Author: @isharanethmini4720 | Likes: 3 | Replies: 0 | Published: 2024-02-02T07:44:41Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00053",
+              "author": "",
+              "text": "@918mounika7no but green chilies , pepper are much healthier?",
+              "likes": null
+            },
+            {
+              "comment_id": "c00055",
+              "author": "",
+              "text": "[COMMENT 13] Author: @riyagautam2552 | Likes: 980 | Replies: 8 | Published: 2020-07-27T05:56:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00056",
+              "author": "",
+              "text": "I love that he do not uses those fancy utensils✌🙂",
+              "likes": null
+            },
+            {
+              "comment_id": "c00058",
+              "author": "",
+              "text": "[COMMENT 14] Author: @nandanvb357 | Likes: 4 | Replies: 0 | Published: 2021-04-09T13:33:12Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00059",
+              "author": "",
+              "text": "Lol ikr",
+              "likes": null
+            },
+            {
+              "comment_id": "c00061",
+              "author": "",
+              "text": "[COMMENT 15] Author: @akhandbharat5866 | Likes: 16 | Replies: 0 | Published: 2021-04-22T16:57:14Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00062",
+              "author": "",
+              "text": "Indian utensils are good for cooking also tastes good",
+              "likes": null
+            },
+            {
+              "comment_id": "c00064",
+              "author": "",
+              "text": "[COMMENT 16] Author: @memechannel3345 | Likes: 4 | Replies: 0 | Published: 2021-04-27T21:25:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00065",
+              "author": "",
+              "text": "Hand is our utensil 😁",
+              "likes": null
+            },
+            {
+              "comment_id": "c00067",
+              "author": "",
+              "text": "[COMMENT 17] Author: @ManishaSingh-js9kr | Likes: 11 | Replies: 0 | Published: 2021-06-21T09:22:55Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c00068",
+              "author": "",
+              "text": "@memechannel3345 haanth me chawal pakate ho kya 😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c01626",
+              "author": "",
+              "text": "[COMMENT 478] Author: @LogicQuest | Likes: 6 | Replies: 0 | Published: 2019-12-21T03:50:35Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01627",
+              "author": "",
+              "text": "Have not seen this much onion in food for a while..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01629",
+              "author": "",
+              "text": "[COMMENT 479] Author: @SoNiche | Likes: 71 | Replies: 1 | Published: 2019-12-20T14:20:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01630",
+              "author": "",
+              "text": "People do not eat Maggi, it's devastating for your health.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01632",
+              "author": "",
+              "text": "[COMMENT 480] Author: @razinnovations | Likes: 2 | Replies: 0 | Published: 2019-12-21T05:31:18Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01633",
+              "author": "",
+              "text": "Thank u",
+              "likes": null
+            },
+            {
+              "comment_id": "c01635",
+              "author": "",
+              "text": "[COMMENT 481] Author: @kapoorsahab3648 | Likes: 7 | Replies: 2 | Published: 2019-12-20T16:09:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01636",
+              "author": "",
+              "text": "THIS SHOWS HOW RICH U ARE",
+              "likes": null
+            },
+            {
+              "comment_id": "c01637",
+              "author": "",
+              "text": "*120RS KG ONION*",
+              "likes": null
+            },
+            {
+              "comment_id": "c01639",
+              "author": "",
+              "text": "[COMMENT 482] Author: @FitTuber | Likes: 5 | Replies: 0 | Published: 2019-12-21T03:36:20Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01640",
+              "author": "",
+              "text": "Skip the onions. Not an issue.",
+              "likes": null
+            },
+            {
+              "comment_id": "c01642",
+              "author": "",
+              "text": "[COMMENT 483] Author: @kapoorsahab3648 | Likes: 1 | Replies: 0 | Published: 2019-12-21T03:39:53Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01643",
+              "author": "",
+              "text": "@FitTuber just kidding 😂😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c01645",
+              "author": "",
+              "text": "[COMMENT 484] Author: @padminisarkar2489 | Likes: 0 | Replies: 0 | Published: 2024-06-18T20:39:03Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01646",
+              "author": "",
+              "text": "Tried cooking the 7th and the 4th recipe in this video. Both of them were so easy to make and super tasty!",
+              "likes": null
+            },
+            {
+              "comment_id": "c01647",
+              "author": "",
+              "text": "Thank you so much sir 🙏😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01648",
+              "author": "",
+              "text": "Haribol🙌",
+              "likes": null
+            },
+            {
+              "comment_id": "c01650",
+              "author": "",
+              "text": "[COMMENT 485] Author: @crazzzypen | Likes: 444 | Replies: 23 | Published: 2019-12-21T05:02:13Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01651",
+              "author": "",
+              "text": "Bhaiya you are so rich so you can afford onion 😑😒😒",
+              "likes": null
+            },
+            {
+              "comment_id": "c01653",
+              "author": "",
+              "text": "[COMMENT 486] Author: @silkyy7619 | Likes: 4 | Replies: 0 | Published: 2019-12-21T06:23:05Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01654",
+              "author": "",
+              "text": "😂",
+              "likes": null
+            },
+            {
+              "comment_id": "c01656",
+              "author": "",
+              "text": "[COMMENT 487] Author: @Target-1995 | Likes: 2 | Replies: 0 | Published: 2019-12-21T07:57:04Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01657",
+              "author": "",
+              "text": "🤣🤣🤣🤣",
+              "likes": null
+            },
+            {
+              "comment_id": "c01659",
+              "author": "",
+              "text": "[COMMENT 488] Author: @Ok1-u3o | Likes: 2 | Replies: 0 | Published: 2019-12-21T08:38:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01660",
+              "author": "",
+              "text": "😂🤣🤣🤣😂🤣🙏🙏🙏🙏",
+              "likes": null
+            },
+            {
+              "comment_id": "c01662",
+              "author": "",
+              "text": "[COMMENT 489] Author: @shubhangiawasthi3110 | Likes: 58 | Replies: 0 | Published: 2019-12-21T10:55:58Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01663",
+              "author": "",
+              "text": "200 rupay ka pizza kha jaoge ek bar me...",
+              "likes": null
+            },
+            {
+              "comment_id": "c01664",
+              "author": "",
+              "text": "100rs ke Onion ke liye itna ro rhe ho...😒",
+              "likes": null
+            },
+            {
+              "comment_id": "c01666",
+              "author": "",
+              "text": "[COMMENT 490] Author: @crazzzypen | Likes: 7 | Replies: 0 | Published: 2019-12-21T11:19:00Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01667",
+              "author": "",
+              "text": "@shubhangiawasthi3110 didi aap nahi samjo gi:-\\",
+              "likes": null
+            },
+            {
+              "comment_id": "c01669",
+              "author": "",
+              "text": "[COMMENT 491] Author: @udaybhaskar6667 | Likes: 4 | Replies: 1 | Published: 2019-12-20T14:59:44Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01670",
+              "author": "",
+              "text": "Bro.. can we increase our height even after 18?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01672",
+              "author": "",
+              "text": "[COMMENT 492] Author: @deveshkhandelwal4084 | Likes: 0 | Replies: 0 | Published: 2019-12-21T05:22:47Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01673",
+              "author": "",
+              "text": "No it's impossible",
+              "likes": null
+            },
+            {
+              "comment_id": "c01675",
+              "author": "",
+              "text": "[COMMENT 493] Author: @darrendeuro7096 | Likes: 8 | Replies: 1 | Published: 2019-12-20T13:45:29Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01676",
+              "author": "",
+              "text": "I was serious until he did this 6:32",
+              "likes": null
+            },
+            {
+              "comment_id": "c01678",
+              "author": "",
+              "text": "[COMMENT 494] Author: @stutisingh3547 | Likes: 0 | Replies: 0 | Published: 2019-12-20T14:48:48Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01679",
+              "author": "",
+              "text": "why?",
+              "likes": null
+            },
+            {
+              "comment_id": "c01681",
+              "author": "",
+              "text": "[COMMENT 495] Author: @veenanahal | Likes: 0 | Replies: 0 | Published: 2023-04-20T13:10:50Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01682",
+              "author": "",
+              "text": "Yammi Yammi so supar dish 👌🏼👌🏼👌🏼👌🏼👌🏼💕💕🧿😊😊",
+              "likes": null
+            },
+            {
+              "comment_id": "c01684",
+              "author": "",
+              "text": "[COMMENT 496] Author: @tyagiseema79 | Likes: 42 | Replies: 5 | Published: 2022-02-11T12:27:42Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01685",
+              "author": "",
+              "text": "Contradictory!!!!!! In one video you say not to eat palak paneer, green leafy veg in night and here you are suggesting palakpaneer pulao",
+              "likes": null
+            },
+            {
+              "comment_id": "c01687",
+              "author": "",
+              "text": "[COMMENT 497] Author: @sunitabhatia243 | Likes: 4 | Replies: 0 | Published: 2024-03-17T08:16:45Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01688",
+              "author": "",
+              "text": "Agree...I remember",
+              "likes": null
+            },
+            {
+              "comment_id": "c01690",
+              "author": "",
+              "text": "[COMMENT 498] Author: @Rana19-fm8 | Likes: 3 | Replies: 0 | Published: 2024-03-17T10:17:38Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01691",
+              "author": "",
+              "text": "Mai v yhi comment krne wali thi",
+              "likes": null
+            },
+            {
+              "comment_id": "c01693",
+              "author": "",
+              "text": "[COMMENT 499] Author: @Therisingstar-ID | Likes: 2 | Replies: 0 | Published: 2024-03-19T16:52:30Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01694",
+              "author": "",
+              "text": "Agreed..",
+              "likes": null
+            },
+            {
+              "comment_id": "c01696",
+              "author": "",
+              "text": "[COMMENT 500] Author: @RAJASHREEBiswas-gc5vg | Likes: 2 | Replies: 0 | Published: 2024-04-02T16:08:25Z",
+              "likes": null
+            },
+            {
+              "comment_id": "c01697",
+              "author": "",
+              "text": "You should check out the video releasing date,,, this video is 2 years early compare to the video you are talkingabout,,,,, so maybe with further studies he had come with that information.",
+              "likes": null
+            }
+          ]
+        },
+        "manifest": {
+          "metadata": true,
+          "description": true,
+          "transcript": true,
+          "canonical_segment_count": 1,
+          "comments": true,
+          "artifact_manifest": {
+            "video_id": "BEzASBGeEIM",
+            "media": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\7 Healthy & Tasty Dinner Ideas for the Week (Vegetarian)\\7 Healthy & Tasty Dinner Ideas for the Week (Vegetarian).mp4",
+            "subtitle": null,
+            "timestamped_transcript": null,
+            "clean_transcript": null,
+            "description": null,
+            "thumbnail": null,
+            "info_json": null,
+            "html_report": null,
+            "final_folder": "D:\\YT GUi\\VideoHoarder Videos\\Fit Tuber\\7 Healthy & Tasty Dinner Ideas for the Week (Vegetarian)",
+            "staging_folder": "D:\\YT GUi\\VideoHoarder Videos\\_staging\\BEzASBGeEIM",
+            "present": {
+              "media": true,
+              "subtitle": false,
+              "timestamped_transcript": false,
+              "clean_transcript": false,
+              "description": false,
+              "thumbnail": false,
+              "info_json": false,
+              "html_report": false
+            },
+            "missing": [
+              "subtitle",
+              "timestamped_transcript",
+              "clean_transcript",
+              "description",
+              "thumbnail",
+              "info_json",
+              "html_report"
+            ]
+          },
+          "assessment": {
+            "video_id": "BEzASBGeEIM",
+            "transcript_available": true,
+            "transcript_source": "no_transcript",
+            "transcript_language": "en",
+            "transcript_quality": "high",
+            "transcript_completeness": "complete",
+            "timestamp_count": 38,
+            "canonical_segment_count": 1,
+            "timestamps_monotonic": true,
+            "video_duration_seconds": 0.0,
+            "transcript_characters": 10676,
+            "transcript_words": 2032,
+            "comments_available": true,
+            "metadata_available": true,
+            "description_available": true,
+            "evidence_grade": "A",
+            "source_consistency": "consistent",
+            "source_conflicts": [],
+            "canonical_transcript": {
+              "source": "no_transcript",
+              "language": "en",
+              "quality": "high",
+              "completeness": "complete",
+              "video_duration_seconds": 0.0,
+              "segments": [
+                {
+                  "segment_id": "s00001",
+                  "start_timestamp": "00:00:00.000",
+                  "end_timestamp": "00:00:00.000",
+                  "start_seconds": 0.0,
+                  "end_seconds": 0.0,
+                  "text": "[00:00:02] After a tiring day at work, a filling and delicious dinner is what our bodies crave for. However, as we are already tired, we do not feel like spending too much time in the kitchen. As a result, most of the times we end up eating the same boring food or often order online, which then sabotages our fitness goals. [00:00:17] But not anymore. Today I'll share with you some lip-smacking dinner options which you can easily make at your home without much effort. While selecting the dinner options for this video, my top priority has been least cooking time to serve a variety of tastes and of course practicality. So, if you too want a [00:00:34] break from eating the same boring food, then keep watching this video. As in this video, I'm going to share with you seven dinner ideas that even the laziest of us can cook using minimum ingredients and without compromising on taste. Stay tuned. [00:00:53] Hello friends, welcome to Fituber. For this video, I have consciously not included the regular dinner options like dal, roti, and sabzi. Firstly, because it is not always easy to cook so many things at a time and secondly, to bring something fresh and creative to your dinner table. Starting with number seven on the list is palak paneer pulao. Bored [00:01:10] of eating the regular vegetable pulao? Then try palak paneer pulao. Super high in protein with complex carbohydrates, it's a delicious dinner option. To start with, first make the palak puree by grinding fresh palak with water. Now, in a pan, put 1 Tbsp of ghee, add cumin [00:01:27] seeds, and let them splutter. Now, add the chopped onions. Saute the onions with rock salt, turmeric, grated ginger, black cardamom, cinnamon stick, black peppercorns, a slit green chili, and bay leaf. Now, add freshly grinded palak [00:01:42] puree along with 100 g of fresh paneer cubes. Saute them for a while. Now, add about half a cup of soaked semi-brown rice and about one glass of water. That's it. Let it cook on a low flame while you can just relax. After about 15 minutes, check. It should be done. Mix [00:01:58] again, turn off the gas, and your palak paneer pulao is ready to be served. Transfer it to the plate and enjoy. Power-packed with complex carbohydrates, proteins, and healthy fats, it's a well-balanced, delicious, and filling dinner option. Do try it. Number six is [00:02:14] vegetable kathi roll. This vegetable kathi roll is easy, yet so delicious. One of my all-time favorites. To make it, in a pan, put about 1 Tbsp of ghee. Add cumin seeds and let them splutter. To this, add chopped onions. Sauté them [00:02:30] for a while with rock salt, turmeric, black pepper, and grated ginger. Now, add some finely chopped tomatoes. Mix well and cook on low heat for a minute. Now, add finely chopped carrots, capsicum, green peas, and paneer. Mix well and cook for about 5 minutes. Once [00:02:46] ready, put some fresh coriander leaves and turn off the gas. Now, take one large whole wheat chapati, place the mixture evenly over it, and roll it. Your super easy and healthy vegetable kathi roll is now ready. With well-sautéed seasonal vegetables in a [00:03:01] whole wheat chapati, it is a mouth-watering dinner meal. Try it out. You will love it. At number five is vegetable corn soup. Is soup boring? Well, not always. Try this vegetable corn soup with a twist. Simply put a pan on low flame. Add one glass of water to [00:03:18] it. Put rock salt to taste, some freshly crushed black pepper, and grated ginger in it. Mix the spices well. Now, add finely chopped carrots, beans, capsicum, and a few green peas. Now, to twist things up, we will grate the corn and then add it. Cover the pan and let it [00:03:35] simmer for about 10 minutes as the flavors combine well. That's all. Put off the gas, pour it in a bowl, garnish it with fresh coriander leaves, sprinkle some lemon juice, and serve hot. Since we had added freshly grated corn to it, the texture turned out a smoother and [00:03:51] much more tastier than the usual corn soup. Tasty, filling, yet light, it is a great dinner option for someone looking to put off extra weight. At number four is soya biryani. Soya biryani is another refreshing dinner option. Super high in protein, well balanced with complex [00:04:08] carbohydrates and healthy fats, it is yummy as well. For this recipe, soak about 50 g of soya chunks in hot water 15 minutes before you start cooking. Put some salt in soya bowl. Now, in a pan, take 1 tbsp of ghee. Add cumin seeds to [00:04:23] splatter. Use whole garam masala to get that extra flavor. Put rock salt and a few slit green chilies. Now, add some chopped onions and saute them until they turn translucent. Add grated ginger and then chopped tomatoes. Now is the time to put soya chunks. Mix them properly so [00:04:41] that the soya chunks absorb all the flavors. Add some fresh mint leaves and coriander leaves. Add about two glasses of water. When the water starts boiling, add half a cup of soaked semi-brown rice. Mix well. Now, just close the lid and let it cook on a low flame for about [00:04:57] 15 minutes. That's all, your soya biryani is now ready. Have it just like that with lemon juice sprinkled over it. Try it out. It's super yummy. And do not worry about the soya chunks in it. 50 g of soya once or twice a week won't imbalance your hormones. Instead, you [00:05:13] will get the much needed protein. Do give it a try. At number three is dal dhokli. Dal dhokli, an authentic traditional recipe from the western regions of India, is super healthy, tasty, and just one-pot prep. Start by making the dough for dhokli. Take whole [00:05:28] wheat flour and gram flour in 1:1 ratio. Knead the dough with water just like you would make for the chapati. Leave aside. Now, put 1 tbsp of ghee in a pan. Add a teaspoon of cumin seeds, a pinch of asafoetida, turmeric powder, black [00:05:44] pepper, grated ginger, a green chili, and mix well. Put some chopped tomatoes to it. Saute them for a while. Now, add half a cup of washed mixed dal. To this, add three times the water. Let it simmer for a while. Now, get back to the dough. Roll a large chapati and evenly cut it [00:06:02] just like that. Put this dhokli in a dal and let it cook for about 20 to 20 to 25 minutes. That's all. Your authentic dal dhokli recipe is ready. Garnish it with fresh coriander leaves, sprinkle some lemon juice into it, and dig in. This lip-smacking soupy dish is healthy, [00:06:19] filling, and so yummy. The authentic taste of Indian cuisine. Try it out and relish it. At number two is millet masala khichdi. Dinner options are incomplete without the humble khichdi, isn't it? Let's spice things up with this sumptuous millet masala khichdi. In [00:06:35] a pan, put 1 Tbsp of cow ghee. Add cumin seeds to it and let it splutter. Now, add chopped onions, rock salt, turmeric powder, black pepper, and a pinch of asafoetida. Add some chopped green beans. At this point, if you want, you can add more vegetables as well. Now, [00:06:51] add chopped tomatoes. Next, add soaked millets and soaked whole moong dal. Add a few glasses of water to it. Now, just cover the pan and let it cook for about 15 to 20 minutes on a low flame. Your super easy and yummy masala millet khichdi is ready. Garnish it with fresh [00:07:08] coriander leaves and mix well. I would suggest to add an extra Tbsp of desi cow ghee to take its taste to the next level. Khichdi never ceases to impress you, isn't it? With the healthier combination of millets, moong dal, and seasonal vegetables, it tastes even [00:07:24] better. Coming to number one dinner option. It is for those days when you feel like eating something special, something like pizza. So, what's the problem? Let's make healthy oats pizza at home. To start with, take about 3 Tbsp of oat flour and 2 Tbsp of [00:07:40] semolina. Add just a little water to make a thick batter. Keep the batter aside for about 15 minutes. Meanwhile, you can cut the vegetables for the toppings. After 15 minutes, spread the batter evenly onto the pan on a low flame. Now, flip it to cook the other side. In place of the unhealthy sauce, [00:07:56] we will apply a smooth grinded mixture of sauteed onions and tomatoes. Now, sprinkle some cheese over it. You can add a variety of vegetables like mushrooms, capsicums, etc. Add some more cheese to it. Season it with chili flakes, oregano, rock salt, and black [00:08:13] pepper. Cover it for a while to let the cheese melt. So, that's it. A healthy version of pizza is ready. Really, it's tastier and crispier than you might think it to be. So, the next time when you feel like eating a pizza, make it at home. So, these were some of the quick, [00:08:28] healthy, and practical dinner options that I feel you should try. Which of these dinner options did you like the most? Comment below. Even though all the ingredients used are very easily available in our kitchens, still I have linked them in the description box for you to buy. I want to thank HealthifyMe [00:08:44] for partnering with us for this video. HealthifyMe is a well-known health and fitness app that can help you achieve your fitness goals, be it fat loss, muscle building, or any other. On this app, you can feed your daily meals so that you can have a track of your food consumption. What I really liked is that [00:09:00] they have over 100,000 plus Indian foods added, so you will always find what you eat. Not just this, you can also track your workouts, water intake, and can also set various reminders on the app to ensure that you're always motivated towards your goal. The best thing is [00:09:16] that all these features are free to use and can be a great start towards your fitness goal. If you need more assistance, use HealthifyMe Premium, a paid feature through which you can get customized diet plans. You can choose from two options, one with the human coach assisting and other with an AI [00:09:32] nutritionist guiding you with a personalized diet plan. I have added a link in the description box which has more details about all their plans. Click and avail the special offers. So friends, that's all for this video. I hope you found it to be helpful. If yes, then please show me your support by [00:09:48] giving this video a big thumbs up. What next would you like to see in this series? Comment below. You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell icon so that you never miss a video from me. You can [00:10:04] also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. I thank you so much for watching."
+                }
+              ]
+            },
+            "comments": {
+              "total_comments": 1162,
+              "included_comments": 100,
+              "sampling_method": "deterministic_head_tail",
+              "records": [
+                {
+                  "comment_id": "c00001",
+                  "author": "",
+                  "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00002",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00003",
+                  "author": "",
+                  "text": "VIDEO_ID: BEzASBGeEIM",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00004",
+                  "author": "",
+                  "text": "SOURCE: YouTube Data API",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00005",
+                  "author": "",
+                  "text": "TOTAL COMMENTS: 500",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00006",
+                  "author": "",
+                  "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00007",
+                  "author": "",
+                  "text": "========================================================================================",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00009",
+                  "author": "",
+                  "text": "[COMMENT 1] Author: @FitTuber | Likes: 2257 | Replies: 145 | Published: 2019-12-21T05:06:06Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00010",
+                  "author": "",
+                  "text": "Hello Friends! Indeed, it is one of the higher budgeted videos that I have put up on this channel. 😅 No wonder, the Onions cost Rs 120/Kg. So, for the time being, if you want to you can just skip the onions off these dishes and still try them. Click a picture and share it with me via Instagram stories - https://www.instagram.com/fittuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00012",
+                  "author": "",
+                  "text": "I wish you good health",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00013",
+                  "author": "",
+                  "text": "Fit Tuber",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00015",
+                  "author": "",
+                  "text": "[COMMENT 2] Author: @mayurshinde4015 | Likes: 46 | Replies: 0 | Published: 2019-12-21T05:08:57Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00016",
+                  "author": "",
+                  "text": "Thanks for the suggestion that onion part😂😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00018",
+                  "author": "",
+                  "text": "[COMMENT 3] Author: @princypinto | Likes: 12 | Replies: 0 | Published: 2019-12-21T06:34:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00019",
+                  "author": "",
+                  "text": "@chetnalamba5319 ohh... I never knew this... Thanks for sharing this information Chetna",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00021",
+                  "author": "",
+                  "text": "[COMMENT 4] Author: @chetandhowlaghar9210 | Likes: 7 | Replies: 0 | Published: 2019-12-21T07:06:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00022",
+                  "author": "",
+                  "text": "Have you turned into a vegetarian bro?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00024",
+                  "author": "",
+                  "text": "[COMMENT 5] Author: @robin01m | Likes: 15 | Replies: 0 | Published: 2019-12-21T07:11:17Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00025",
+                  "author": "",
+                  "text": "Hi 🛑🛑🛑🛑 can u make video on ur utensils ( bande) ur karahi, I see in this Video I have different kinds of utensils thx 🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00027",
+                  "author": "",
+                  "text": "[COMMENT 6] Author: @FitTuber | Likes: 43 | Replies: 0 | Published: 2019-12-21T08:05:49Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00028",
+                  "author": "",
+                  "text": "@robin01m I have already made a detailed video on cooking utensils worst to best",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00030",
+                  "author": "",
+                  "text": "[COMMENT 7] Author: @ujjwalclasses_lawapur_mahnar | Likes: 560 | Replies: 9 | Published: 2020-08-14T00:21:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00031",
+                  "author": "",
+                  "text": "1. Did anyone notice that he was using black pepper instead of red chilly powder in all his recipes? A much healthier and tastier option.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00032",
+                  "author": "",
+                  "text": "2. He invariably uses clay pot to cook food.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00033",
+                  "author": "",
+                  "text": "3. He uses rock salt instead of sea salt.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00034",
+                  "author": "",
+                  "text": "4. He quickly consumes the food while it is still hot.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00035",
+                  "author": "",
+                  "text": "5. Instead of red chilly, he uses green chilly.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00036",
+                  "author": "",
+                  "text": "6. He tries his best to use whole pulses and whole grains like whole moong , brown rice.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00037",
+                  "author": "",
+                  "text": "No wonder, he is so fit and energetic. Vivek, u rock....",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00039",
+                  "author": "",
+                  "text": "[COMMENT 8] Author: @vaidehiitaliya1373 | Likes: 2 | Replies: 0 | Published: 2023-03-05T17:26:46Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00040",
+                  "author": "",
+                  "text": "It's so useful and I also notice that 🥰",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00042",
+                  "author": "",
+                  "text": "[COMMENT 9] Author: @shanvijaiswal5643 | Likes: 1 | Replies: 0 | Published: 2023-06-09T15:15:26Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00043",
+                  "author": "",
+                  "text": "Yeahj",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00045",
+                  "author": "",
+                  "text": "[COMMENT 10] Author: @lindigamedze | Likes: 1 | Replies: 0 | Published: 2023-10-12T11:51:40Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00046",
+                  "author": "",
+                  "text": "@anupamyadav5038 you are so right 😇he is on the money! I'm unsure if all will suit my Vata body and gluten/dairy sensitive system... is Tomato fine for Vata types?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00047",
+                  "author": "",
+                  "text": "My real question is do you happen top know what happens to unused tomato, onion, soaked lentils etc and ginger??? I sense these will be thrown away but that can't be sustainable namely ginger and legumes. Any input?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00049",
+                  "author": "",
+                  "text": "[COMMENT 11] Author: @918mounika7 | Likes: 1 | Replies: 0 | Published: 2024-01-20T10:36:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00050",
+                  "author": "",
+                  "text": "Are red chillies not that good for health?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00052",
+                  "author": "",
+                  "text": "[COMMENT 12] Author: @isharanethmini4720 | Likes: 3 | Replies: 0 | Published: 2024-02-02T07:44:41Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00053",
+                  "author": "",
+                  "text": "@918mounika7no but green chilies , pepper are much healthier?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00055",
+                  "author": "",
+                  "text": "[COMMENT 13] Author: @riyagautam2552 | Likes: 980 | Replies: 8 | Published: 2020-07-27T05:56:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00056",
+                  "author": "",
+                  "text": "I love that he do not uses those fancy utensils✌🙂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00058",
+                  "author": "",
+                  "text": "[COMMENT 14] Author: @nandanvb357 | Likes: 4 | Replies: 0 | Published: 2021-04-09T13:33:12Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00059",
+                  "author": "",
+                  "text": "Lol ikr",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00061",
+                  "author": "",
+                  "text": "[COMMENT 15] Author: @akhandbharat5866 | Likes: 16 | Replies: 0 | Published: 2021-04-22T16:57:14Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00062",
+                  "author": "",
+                  "text": "Indian utensils are good for cooking also tastes good",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00064",
+                  "author": "",
+                  "text": "[COMMENT 16] Author: @memechannel3345 | Likes: 4 | Replies: 0 | Published: 2021-04-27T21:25:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00065",
+                  "author": "",
+                  "text": "Hand is our utensil 😁",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00067",
+                  "author": "",
+                  "text": "[COMMENT 17] Author: @ManishaSingh-js9kr | Likes: 11 | Replies: 0 | Published: 2021-06-21T09:22:55Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c00068",
+                  "author": "",
+                  "text": "@memechannel3345 haanth me chawal pakate ho kya 😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01626",
+                  "author": "",
+                  "text": "[COMMENT 478] Author: @LogicQuest | Likes: 6 | Replies: 0 | Published: 2019-12-21T03:50:35Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01627",
+                  "author": "",
+                  "text": "Have not seen this much onion in food for a while..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01629",
+                  "author": "",
+                  "text": "[COMMENT 479] Author: @SoNiche | Likes: 71 | Replies: 1 | Published: 2019-12-20T14:20:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01630",
+                  "author": "",
+                  "text": "People do not eat Maggi, it's devastating for your health.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01632",
+                  "author": "",
+                  "text": "[COMMENT 480] Author: @razinnovations | Likes: 2 | Replies: 0 | Published: 2019-12-21T05:31:18Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01633",
+                  "author": "",
+                  "text": "Thank u",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01635",
+                  "author": "",
+                  "text": "[COMMENT 481] Author: @kapoorsahab3648 | Likes: 7 | Replies: 2 | Published: 2019-12-20T16:09:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01636",
+                  "author": "",
+                  "text": "THIS SHOWS HOW RICH U ARE",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01637",
+                  "author": "",
+                  "text": "*120RS KG ONION*",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01639",
+                  "author": "",
+                  "text": "[COMMENT 482] Author: @FitTuber | Likes: 5 | Replies: 0 | Published: 2019-12-21T03:36:20Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01640",
+                  "author": "",
+                  "text": "Skip the onions. Not an issue.",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01642",
+                  "author": "",
+                  "text": "[COMMENT 483] Author: @kapoorsahab3648 | Likes: 1 | Replies: 0 | Published: 2019-12-21T03:39:53Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01643",
+                  "author": "",
+                  "text": "@FitTuber just kidding 😂😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01645",
+                  "author": "",
+                  "text": "[COMMENT 484] Author: @padminisarkar2489 | Likes: 0 | Replies: 0 | Published: 2024-06-18T20:39:03Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01646",
+                  "author": "",
+                  "text": "Tried cooking the 7th and the 4th recipe in this video. Both of them were so easy to make and super tasty!",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01647",
+                  "author": "",
+                  "text": "Thank you so much sir 🙏😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01648",
+                  "author": "",
+                  "text": "Haribol🙌",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01650",
+                  "author": "",
+                  "text": "[COMMENT 485] Author: @crazzzypen | Likes: 444 | Replies: 23 | Published: 2019-12-21T05:02:13Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01651",
+                  "author": "",
+                  "text": "Bhaiya you are so rich so you can afford onion 😑😒😒",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01653",
+                  "author": "",
+                  "text": "[COMMENT 486] Author: @silkyy7619 | Likes: 4 | Replies: 0 | Published: 2019-12-21T06:23:05Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01654",
+                  "author": "",
+                  "text": "😂",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01656",
+                  "author": "",
+                  "text": "[COMMENT 487] Author: @Target-1995 | Likes: 2 | Replies: 0 | Published: 2019-12-21T07:57:04Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01657",
+                  "author": "",
+                  "text": "🤣🤣🤣🤣",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01659",
+                  "author": "",
+                  "text": "[COMMENT 488] Author: @Ok1-u3o | Likes: 2 | Replies: 0 | Published: 2019-12-21T08:38:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01660",
+                  "author": "",
+                  "text": "😂🤣🤣🤣😂🤣🙏🙏🙏🙏",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01662",
+                  "author": "",
+                  "text": "[COMMENT 489] Author: @shubhangiawasthi3110 | Likes: 58 | Replies: 0 | Published: 2019-12-21T10:55:58Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01663",
+                  "author": "",
+                  "text": "200 rupay ka pizza kha jaoge ek bar me...",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01664",
+                  "author": "",
+                  "text": "100rs ke Onion ke liye itna ro rhe ho...😒",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01666",
+                  "author": "",
+                  "text": "[COMMENT 490] Author: @crazzzypen | Likes: 7 | Replies: 0 | Published: 2019-12-21T11:19:00Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01667",
+                  "author": "",
+                  "text": "@shubhangiawasthi3110 didi aap nahi samjo gi:-\\",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01669",
+                  "author": "",
+                  "text": "[COMMENT 491] Author: @udaybhaskar6667 | Likes: 4 | Replies: 1 | Published: 2019-12-20T14:59:44Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01670",
+                  "author": "",
+                  "text": "Bro.. can we increase our height even after 18?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01672",
+                  "author": "",
+                  "text": "[COMMENT 492] Author: @deveshkhandelwal4084 | Likes: 0 | Replies: 0 | Published: 2019-12-21T05:22:47Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01673",
+                  "author": "",
+                  "text": "No it's impossible",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01675",
+                  "author": "",
+                  "text": "[COMMENT 493] Author: @darrendeuro7096 | Likes: 8 | Replies: 1 | Published: 2019-12-20T13:45:29Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01676",
+                  "author": "",
+                  "text": "I was serious until he did this 6:32",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01678",
+                  "author": "",
+                  "text": "[COMMENT 494] Author: @stutisingh3547 | Likes: 0 | Replies: 0 | Published: 2019-12-20T14:48:48Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01679",
+                  "author": "",
+                  "text": "why?",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01681",
+                  "author": "",
+                  "text": "[COMMENT 495] Author: @veenanahal | Likes: 0 | Replies: 0 | Published: 2023-04-20T13:10:50Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01682",
+                  "author": "",
+                  "text": "Yammi Yammi so supar dish 👌🏼👌🏼👌🏼👌🏼👌🏼💕💕🧿😊😊",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01684",
+                  "author": "",
+                  "text": "[COMMENT 496] Author: @tyagiseema79 | Likes: 42 | Replies: 5 | Published: 2022-02-11T12:27:42Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01685",
+                  "author": "",
+                  "text": "Contradictory!!!!!! In one video you say not to eat palak paneer, green leafy veg in night and here you are suggesting palakpaneer pulao",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01687",
+                  "author": "",
+                  "text": "[COMMENT 497] Author: @sunitabhatia243 | Likes: 4 | Replies: 0 | Published: 2024-03-17T08:16:45Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01688",
+                  "author": "",
+                  "text": "Agree...I remember",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01690",
+                  "author": "",
+                  "text": "[COMMENT 498] Author: @Rana19-fm8 | Likes: 3 | Replies: 0 | Published: 2024-03-17T10:17:38Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01691",
+                  "author": "",
+                  "text": "Mai v yhi comment krne wali thi",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01693",
+                  "author": "",
+                  "text": "[COMMENT 499] Author: @Therisingstar-ID | Likes: 2 | Replies: 0 | Published: 2024-03-19T16:52:30Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01694",
+                  "author": "",
+                  "text": "Agreed..",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01696",
+                  "author": "",
+                  "text": "[COMMENT 500] Author: @RAJASHREEBiswas-gc5vg | Likes: 2 | Replies: 0 | Published: 2024-04-02T16:08:25Z",
+                  "likes": null
+                },
+                {
+                  "comment_id": "c01697",
+                  "author": "",
+                  "text": "You should check out the video releasing date,,, this video is 2 years early compare to the video you are talkingabout,,,,, so maybe with further studies he had come with that information.",
+                  "likes": null
+                }
+              ]
+            }
+          }
+        },
+        "assessment": {
+          "video_id": "BEzASBGeEIM",
+          "transcript_available": true,
+          "transcript_source": "no_transcript",
+          "transcript_language": "en",
+          "transcript_quality": "high",
+          "transcript_completeness": "complete",
+          "timestamp_count": 38,
+          "canonical_segment_count": 1,
+          "timestamps_monotonic": true,
+          "video_duration_seconds": 0.0,
+          "transcript_characters": 10676,
+          "transcript_words": 2032,
+          "comments_available": true,
+          "metadata_available": true,
+          "description_available": true,
+          "evidence_grade": "A",
+          "source_consistency": "consistent",
+          "source_conflicts": [],
+          "canonical_transcript": {
+            "source": "no_transcript",
+            "language": "en",
+            "quality": "high",
+            "completeness": "complete",
+            "video_duration_seconds": 0.0,
+            "segments": [
+              {
+                "segment_id": "s00001",
+                "start_timestamp": "00:00:00.000",
+                "end_timestamp": "00:00:00.000",
+                "start_seconds": 0.0,
+                "end_seconds": 0.0,
+                "text": "[00:00:02] After a tiring day at work, a filling and delicious dinner is what our bodies crave for. However, as we are already tired, we do not feel like spending too much time in the kitchen. As a result, most of the times we end up eating the same boring food or often order online, which then sabotages our fitness goals. [00:00:17] But not anymore. Today I'll share with you some lip-smacking dinner options which you can easily make at your home without much effort. While selecting the dinner options for this video, my top priority has been least cooking time to serve a variety of tastes and of course practicality. So, if you too want a [00:00:34] break from eating the same boring food, then keep watching this video. As in this video, I'm going to share with you seven dinner ideas that even the laziest of us can cook using minimum ingredients and without compromising on taste. Stay tuned. [00:00:53] Hello friends, welcome to Fituber. For this video, I have consciously not included the regular dinner options like dal, roti, and sabzi. Firstly, because it is not always easy to cook so many things at a time and secondly, to bring something fresh and creative to your dinner table. Starting with number seven on the list is palak paneer pulao. Bored [00:01:10] of eating the regular vegetable pulao? Then try palak paneer pulao. Super high in protein with complex carbohydrates, it's a delicious dinner option. To start with, first make the palak puree by grinding fresh palak with water. Now, in a pan, put 1 Tbsp of ghee, add cumin [00:01:27] seeds, and let them splutter. Now, add the chopped onions. Saute the onions with rock salt, turmeric, grated ginger, black cardamom, cinnamon stick, black peppercorns, a slit green chili, and bay leaf. Now, add freshly grinded palak [00:01:42] puree along with 100 g of fresh paneer cubes. Saute them for a while. Now, add about half a cup of soaked semi-brown rice and about one glass of water. That's it. Let it cook on a low flame while you can just relax. After about 15 minutes, check. It should be done. Mix [00:01:58] again, turn off the gas, and your palak paneer pulao is ready to be served. Transfer it to the plate and enjoy. Power-packed with complex carbohydrates, proteins, and healthy fats, it's a well-balanced, delicious, and filling dinner option. Do try it. Number six is [00:02:14] vegetable kathi roll. This vegetable kathi roll is easy, yet so delicious. One of my all-time favorites. To make it, in a pan, put about 1 Tbsp of ghee. Add cumin seeds and let them splutter. To this, add chopped onions. Sauté them [00:02:30] for a while with rock salt, turmeric, black pepper, and grated ginger. Now, add some finely chopped tomatoes. Mix well and cook on low heat for a minute. Now, add finely chopped carrots, capsicum, green peas, and paneer. Mix well and cook for about 5 minutes. Once [00:02:46] ready, put some fresh coriander leaves and turn off the gas. Now, take one large whole wheat chapati, place the mixture evenly over it, and roll it. Your super easy and healthy vegetable kathi roll is now ready. With well-sautéed seasonal vegetables in a [00:03:01] whole wheat chapati, it is a mouth-watering dinner meal. Try it out. You will love it. At number five is vegetable corn soup. Is soup boring? Well, not always. Try this vegetable corn soup with a twist. Simply put a pan on low flame. Add one glass of water to [00:03:18] it. Put rock salt to taste, some freshly crushed black pepper, and grated ginger in it. Mix the spices well. Now, add finely chopped carrots, beans, capsicum, and a few green peas. Now, to twist things up, we will grate the corn and then add it. Cover the pan and let it [00:03:35] simmer for about 10 minutes as the flavors combine well. That's all. Put off the gas, pour it in a bowl, garnish it with fresh coriander leaves, sprinkle some lemon juice, and serve hot. Since we had added freshly grated corn to it, the texture turned out a smoother and [00:03:51] much more tastier than the usual corn soup. Tasty, filling, yet light, it is a great dinner option for someone looking to put off extra weight. At number four is soya biryani. Soya biryani is another refreshing dinner option. Super high in protein, well balanced with complex [00:04:08] carbohydrates and healthy fats, it is yummy as well. For this recipe, soak about 50 g of soya chunks in hot water 15 minutes before you start cooking. Put some salt in soya bowl. Now, in a pan, take 1 tbsp of ghee. Add cumin seeds to [00:04:23] splatter. Use whole garam masala to get that extra flavor. Put rock salt and a few slit green chilies. Now, add some chopped onions and saute them until they turn translucent. Add grated ginger and then chopped tomatoes. Now is the time to put soya chunks. Mix them properly so [00:04:41] that the soya chunks absorb all the flavors. Add some fresh mint leaves and coriander leaves. Add about two glasses of water. When the water starts boiling, add half a cup of soaked semi-brown rice. Mix well. Now, just close the lid and let it cook on a low flame for about [00:04:57] 15 minutes. That's all, your soya biryani is now ready. Have it just like that with lemon juice sprinkled over it. Try it out. It's super yummy. And do not worry about the soya chunks in it. 50 g of soya once or twice a week won't imbalance your hormones. Instead, you [00:05:13] will get the much needed protein. Do give it a try. At number three is dal dhokli. Dal dhokli, an authentic traditional recipe from the western regions of India, is super healthy, tasty, and just one-pot prep. Start by making the dough for dhokli. Take whole [00:05:28] wheat flour and gram flour in 1:1 ratio. Knead the dough with water just like you would make for the chapati. Leave aside. Now, put 1 tbsp of ghee in a pan. Add a teaspoon of cumin seeds, a pinch of asafoetida, turmeric powder, black [00:05:44] pepper, grated ginger, a green chili, and mix well. Put some chopped tomatoes to it. Saute them for a while. Now, add half a cup of washed mixed dal. To this, add three times the water. Let it simmer for a while. Now, get back to the dough. Roll a large chapati and evenly cut it [00:06:02] just like that. Put this dhokli in a dal and let it cook for about 20 to 20 to 25 minutes. That's all. Your authentic dal dhokli recipe is ready. Garnish it with fresh coriander leaves, sprinkle some lemon juice into it, and dig in. This lip-smacking soupy dish is healthy, [00:06:19] filling, and so yummy. The authentic taste of Indian cuisine. Try it out and relish it. At number two is millet masala khichdi. Dinner options are incomplete without the humble khichdi, isn't it? Let's spice things up with this sumptuous millet masala khichdi. In [00:06:35] a pan, put 1 Tbsp of cow ghee. Add cumin seeds to it and let it splutter. Now, add chopped onions, rock salt, turmeric powder, black pepper, and a pinch of asafoetida. Add some chopped green beans. At this point, if you want, you can add more vegetables as well. Now, [00:06:51] add chopped tomatoes. Next, add soaked millets and soaked whole moong dal. Add a few glasses of water to it. Now, just cover the pan and let it cook for about 15 to 20 minutes on a low flame. Your super easy and yummy masala millet khichdi is ready. Garnish it with fresh [00:07:08] coriander leaves and mix well. I would suggest to add an extra Tbsp of desi cow ghee to take its taste to the next level. Khichdi never ceases to impress you, isn't it? With the healthier combination of millets, moong dal, and seasonal vegetables, it tastes even [00:07:24] better. Coming to number one dinner option. It is for those days when you feel like eating something special, something like pizza. So, what's the problem? Let's make healthy oats pizza at home. To start with, take about 3 Tbsp of oat flour and 2 Tbsp of [00:07:40] semolina. Add just a little water to make a thick batter. Keep the batter aside for about 15 minutes. Meanwhile, you can cut the vegetables for the toppings. After 15 minutes, spread the batter evenly onto the pan on a low flame. Now, flip it to cook the other side. In place of the unhealthy sauce, [00:07:56] we will apply a smooth grinded mixture of sauteed onions and tomatoes. Now, sprinkle some cheese over it. You can add a variety of vegetables like mushrooms, capsicums, etc. Add some more cheese to it. Season it with chili flakes, oregano, rock salt, and black [00:08:13] pepper. Cover it for a while to let the cheese melt. So, that's it. A healthy version of pizza is ready. Really, it's tastier and crispier than you might think it to be. So, the next time when you feel like eating a pizza, make it at home. So, these were some of the quick, [00:08:28] healthy, and practical dinner options that I feel you should try. Which of these dinner options did you like the most? Comment below. Even though all the ingredients used are very easily available in our kitchens, still I have linked them in the description box for you to buy. I want to thank HealthifyMe [00:08:44] for partnering with us for this video. HealthifyMe is a well-known health and fitness app that can help you achieve your fitness goals, be it fat loss, muscle building, or any other. On this app, you can feed your daily meals so that you can have a track of your food consumption. What I really liked is that [00:09:00] they have over 100,000 plus Indian foods added, so you will always find what you eat. Not just this, you can also track your workouts, water intake, and can also set various reminders on the app to ensure that you're always motivated towards your goal. The best thing is [00:09:16] that all these features are free to use and can be a great start towards your fitness goal. If you need more assistance, use HealthifyMe Premium, a paid feature through which you can get customized diet plans. You can choose from two options, one with the human coach assisting and other with an AI [00:09:32] nutritionist guiding you with a personalized diet plan. I have added a link in the description box which has more details about all their plans. Click and avail the special offers. So friends, that's all for this video. I hope you found it to be helpful. If yes, then please show me your support by [00:09:48] giving this video a big thumbs up. What next would you like to see in this series? Comment below. You can now support my work on Patreon so that I can bring more well-researched videos for you. Please do remember to subscribe to my channel, hit that bell icon so that you never miss a video from me. You can [00:10:04] also follow me on Instagram where I regularly do Q&A sessions. My name is Vivek. I thank you so much for watching."
+              }
+            ]
+          },
+          "comments": {
+            "total_comments": 1162,
+            "included_comments": 100,
+            "sampling_method": "deterministic_head_tail",
+            "records": [
+              {
+                "comment_id": "c00001",
+                "author": "",
+                "text": "VIDEO LIBRARY COMMENT TRANSCRIPT — ALL DOWNLOADED COMMENTS",
+                "likes": null
+              },
+              {
+                "comment_id": "c00002",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00003",
+                "author": "",
+                "text": "VIDEO_ID: BEzASBGeEIM",
+                "likes": null
+              },
+              {
+                "comment_id": "c00004",
+                "author": "",
+                "text": "SOURCE: YouTube Data API",
+                "likes": null
+              },
+              {
+                "comment_id": "c00005",
+                "author": "",
+                "text": "TOTAL COMMENTS: 500",
+                "likes": null
+              },
+              {
+                "comment_id": "c00006",
+                "author": "",
+                "text": "NOTE: Viewer comments are audience-generated content, not verified facts.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00007",
+                "author": "",
+                "text": "========================================================================================",
+                "likes": null
+              },
+              {
+                "comment_id": "c00009",
+                "author": "",
+                "text": "[COMMENT 1] Author: @FitTuber | Likes: 2257 | Replies: 145 | Published: 2019-12-21T05:06:06Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00010",
+                "author": "",
+                "text": "Hello Friends! Indeed, it is one of the higher budgeted videos that I have put up on this channel. 😅 No wonder, the Onions cost Rs 120/Kg. So, for the time being, if you want to you can just skip the onions off these dishes and still try them. Click a picture and share it with me via Instagram stories - https://www.instagram.com/fittuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00012",
+                "author": "",
+                "text": "I wish you good health",
+                "likes": null
+              },
+              {
+                "comment_id": "c00013",
+                "author": "",
+                "text": "Fit Tuber",
+                "likes": null
+              },
+              {
+                "comment_id": "c00015",
+                "author": "",
+                "text": "[COMMENT 2] Author: @mayurshinde4015 | Likes: 46 | Replies: 0 | Published: 2019-12-21T05:08:57Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00016",
+                "author": "",
+                "text": "Thanks for the suggestion that onion part😂😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00018",
+                "author": "",
+                "text": "[COMMENT 3] Author: @princypinto | Likes: 12 | Replies: 0 | Published: 2019-12-21T06:34:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00019",
+                "author": "",
+                "text": "@chetnalamba5319 ohh... I never knew this... Thanks for sharing this information Chetna",
+                "likes": null
+              },
+              {
+                "comment_id": "c00021",
+                "author": "",
+                "text": "[COMMENT 4] Author: @chetandhowlaghar9210 | Likes: 7 | Replies: 0 | Published: 2019-12-21T07:06:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00022",
+                "author": "",
+                "text": "Have you turned into a vegetarian bro?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00024",
+                "author": "",
+                "text": "[COMMENT 5] Author: @robin01m | Likes: 15 | Replies: 0 | Published: 2019-12-21T07:11:17Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00025",
+                "author": "",
+                "text": "Hi 🛑🛑🛑🛑 can u make video on ur utensils ( bande) ur karahi, I see in this Video I have different kinds of utensils thx 🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c00027",
+                "author": "",
+                "text": "[COMMENT 6] Author: @FitTuber | Likes: 43 | Replies: 0 | Published: 2019-12-21T08:05:49Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00028",
+                "author": "",
+                "text": "@robin01m I have already made a detailed video on cooking utensils worst to best",
+                "likes": null
+              },
+              {
+                "comment_id": "c00030",
+                "author": "",
+                "text": "[COMMENT 7] Author: @ujjwalclasses_lawapur_mahnar | Likes: 560 | Replies: 9 | Published: 2020-08-14T00:21:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00031",
+                "author": "",
+                "text": "1. Did anyone notice that he was using black pepper instead of red chilly powder in all his recipes? A much healthier and tastier option.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00032",
+                "author": "",
+                "text": "2. He invariably uses clay pot to cook food.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00033",
+                "author": "",
+                "text": "3. He uses rock salt instead of sea salt.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00034",
+                "author": "",
+                "text": "4. He quickly consumes the food while it is still hot.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00035",
+                "author": "",
+                "text": "5. Instead of red chilly, he uses green chilly.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00036",
+                "author": "",
+                "text": "6. He tries his best to use whole pulses and whole grains like whole moong , brown rice.",
+                "likes": null
+              },
+              {
+                "comment_id": "c00037",
+                "author": "",
+                "text": "No wonder, he is so fit and energetic. Vivek, u rock....",
+                "likes": null
+              },
+              {
+                "comment_id": "c00039",
+                "author": "",
+                "text": "[COMMENT 8] Author: @vaidehiitaliya1373 | Likes: 2 | Replies: 0 | Published: 2023-03-05T17:26:46Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00040",
+                "author": "",
+                "text": "It's so useful and I also notice that 🥰",
+                "likes": null
+              },
+              {
+                "comment_id": "c00042",
+                "author": "",
+                "text": "[COMMENT 9] Author: @shanvijaiswal5643 | Likes: 1 | Replies: 0 | Published: 2023-06-09T15:15:26Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00043",
+                "author": "",
+                "text": "Yeahj",
+                "likes": null
+              },
+              {
+                "comment_id": "c00045",
+                "author": "",
+                "text": "[COMMENT 10] Author: @lindigamedze | Likes: 1 | Replies: 0 | Published: 2023-10-12T11:51:40Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00046",
+                "author": "",
+                "text": "@anupamyadav5038 you are so right 😇he is on the money! I'm unsure if all will suit my Vata body and gluten/dairy sensitive system... is Tomato fine for Vata types?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00047",
+                "author": "",
+                "text": "My real question is do you happen top know what happens to unused tomato, onion, soaked lentils etc and ginger??? I sense these will be thrown away but that can't be sustainable namely ginger and legumes. Any input?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00049",
+                "author": "",
+                "text": "[COMMENT 11] Author: @918mounika7 | Likes: 1 | Replies: 0 | Published: 2024-01-20T10:36:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00050",
+                "author": "",
+                "text": "Are red chillies not that good for health?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00052",
+                "author": "",
+                "text": "[COMMENT 12] Author: @isharanethmini4720 | Likes: 3 | Replies: 0 | Published: 2024-02-02T07:44:41Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00053",
+                "author": "",
+                "text": "@918mounika7no but green chilies , pepper are much healthier?",
+                "likes": null
+              },
+              {
+                "comment_id": "c00055",
+                "author": "",
+                "text": "[COMMENT 13] Author: @riyagautam2552 | Likes: 980 | Replies: 8 | Published: 2020-07-27T05:56:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00056",
+                "author": "",
+                "text": "I love that he do not uses those fancy utensils✌🙂",
+                "likes": null
+              },
+              {
+                "comment_id": "c00058",
+                "author": "",
+                "text": "[COMMENT 14] Author: @nandanvb357 | Likes: 4 | Replies: 0 | Published: 2021-04-09T13:33:12Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00059",
+                "author": "",
+                "text": "Lol ikr",
+                "likes": null
+              },
+              {
+                "comment_id": "c00061",
+                "author": "",
+                "text": "[COMMENT 15] Author: @akhandbharat5866 | Likes: 16 | Replies: 0 | Published: 2021-04-22T16:57:14Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00062",
+                "author": "",
+                "text": "Indian utensils are good for cooking also tastes good",
+                "likes": null
+              },
+              {
+                "comment_id": "c00064",
+                "author": "",
+                "text": "[COMMENT 16] Author: @memechannel3345 | Likes: 4 | Replies: 0 | Published: 2021-04-27T21:25:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00065",
+                "author": "",
+                "text": "Hand is our utensil 😁",
+                "likes": null
+              },
+              {
+                "comment_id": "c00067",
+                "author": "",
+                "text": "[COMMENT 17] Author: @ManishaSingh-js9kr | Likes: 11 | Replies: 0 | Published: 2021-06-21T09:22:55Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c00068",
+                "author": "",
+                "text": "@memechannel3345 haanth me chawal pakate ho kya 😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c01626",
+                "author": "",
+                "text": "[COMMENT 478] Author: @LogicQuest | Likes: 6 | Replies: 0 | Published: 2019-12-21T03:50:35Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01627",
+                "author": "",
+                "text": "Have not seen this much onion in food for a while..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01629",
+                "author": "",
+                "text": "[COMMENT 479] Author: @SoNiche | Likes: 71 | Replies: 1 | Published: 2019-12-20T14:20:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01630",
+                "author": "",
+                "text": "People do not eat Maggi, it's devastating for your health.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01632",
+                "author": "",
+                "text": "[COMMENT 480] Author: @razinnovations | Likes: 2 | Replies: 0 | Published: 2019-12-21T05:31:18Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01633",
+                "author": "",
+                "text": "Thank u",
+                "likes": null
+              },
+              {
+                "comment_id": "c01635",
+                "author": "",
+                "text": "[COMMENT 481] Author: @kapoorsahab3648 | Likes: 7 | Replies: 2 | Published: 2019-12-20T16:09:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01636",
+                "author": "",
+                "text": "THIS SHOWS HOW RICH U ARE",
+                "likes": null
+              },
+              {
+                "comment_id": "c01637",
+                "author": "",
+                "text": "*120RS KG ONION*",
+                "likes": null
+              },
+              {
+                "comment_id": "c01639",
+                "author": "",
+                "text": "[COMMENT 482] Author: @FitTuber | Likes: 5 | Replies: 0 | Published: 2019-12-21T03:36:20Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01640",
+                "author": "",
+                "text": "Skip the onions. Not an issue.",
+                "likes": null
+              },
+              {
+                "comment_id": "c01642",
+                "author": "",
+                "text": "[COMMENT 483] Author: @kapoorsahab3648 | Likes: 1 | Replies: 0 | Published: 2019-12-21T03:39:53Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01643",
+                "author": "",
+                "text": "@FitTuber just kidding 😂😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c01645",
+                "author": "",
+                "text": "[COMMENT 484] Author: @padminisarkar2489 | Likes: 0 | Replies: 0 | Published: 2024-06-18T20:39:03Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01646",
+                "author": "",
+                "text": "Tried cooking the 7th and the 4th recipe in this video. Both of them were so easy to make and super tasty!",
+                "likes": null
+              },
+              {
+                "comment_id": "c01647",
+                "author": "",
+                "text": "Thank you so much sir 🙏😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01648",
+                "author": "",
+                "text": "Haribol🙌",
+                "likes": null
+              },
+              {
+                "comment_id": "c01650",
+                "author": "",
+                "text": "[COMMENT 485] Author: @crazzzypen | Likes: 444 | Replies: 23 | Published: 2019-12-21T05:02:13Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01651",
+                "author": "",
+                "text": "Bhaiya you are so rich so you can afford onion 😑😒😒",
+                "likes": null
+              },
+              {
+                "comment_id": "c01653",
+                "author": "",
+                "text": "[COMMENT 486] Author: @silkyy7619 | Likes: 4 | Replies: 0 | Published: 2019-12-21T06:23:05Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01654",
+                "author": "",
+                "text": "😂",
+                "likes": null
+              },
+              {
+                "comment_id": "c01656",
+                "author": "",
+                "text": "[COMMENT 487] Author: @Target-1995 | Likes: 2 | Replies: 0 | Published: 2019-12-21T07:57:04Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01657",
+                "author": "",
+                "text": "🤣🤣🤣🤣",
+                "likes": null
+              },
+              {
+                "comment_id": "c01659",
+                "author": "",
+                "text": "[COMMENT 488] Author: @Ok1-u3o | Likes: 2 | Replies: 0 | Published: 2019-12-21T08:38:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01660",
+                "author": "",
+                "text": "😂🤣🤣🤣😂🤣🙏🙏🙏🙏",
+                "likes": null
+              },
+              {
+                "comment_id": "c01662",
+                "author": "",
+                "text": "[COMMENT 489] Author: @shubhangiawasthi3110 | Likes: 58 | Replies: 0 | Published: 2019-12-21T10:55:58Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01663",
+                "author": "",
+                "text": "200 rupay ka pizza kha jaoge ek bar me...",
+                "likes": null
+              },
+              {
+                "comment_id": "c01664",
+                "author": "",
+                "text": "100rs ke Onion ke liye itna ro rhe ho...😒",
+                "likes": null
+              },
+              {
+                "comment_id": "c01666",
+                "author": "",
+                "text": "[COMMENT 490] Author: @crazzzypen | Likes: 7 | Replies: 0 | Published: 2019-12-21T11:19:00Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01667",
+                "author": "",
+                "text": "@shubhangiawasthi3110 didi aap nahi samjo gi:-\\",
+                "likes": null
+              },
+              {
+                "comment_id": "c01669",
+                "author": "",
+                "text": "[COMMENT 491] Author: @udaybhaskar6667 | Likes: 4 | Replies: 1 | Published: 2019-12-20T14:59:44Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01670",
+                "author": "",
+                "text": "Bro.. can we increase our height even after 18?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01672",
+                "author": "",
+                "text": "[COMMENT 492] Author: @deveshkhandelwal4084 | Likes: 0 | Replies: 0 | Published: 2019-12-21T05:22:47Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01673",
+                "author": "",
+                "text": "No it's impossible",
+                "likes": null
+              },
+              {
+                "comment_id": "c01675",
+                "author": "",
+                "text": "[COMMENT 493] Author: @darrendeuro7096 | Likes: 8 | Replies: 1 | Published: 2019-12-20T13:45:29Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01676",
+                "author": "",
+                "text": "I was serious until he did this 6:32",
+                "likes": null
+              },
+              {
+                "comment_id": "c01678",
+                "author": "",
+                "text": "[COMMENT 494] Author: @stutisingh3547 | Likes: 0 | Replies: 0 | Published: 2019-12-20T14:48:48Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01679",
+                "author": "",
+                "text": "why?",
+                "likes": null
+              },
+              {
+                "comment_id": "c01681",
+                "author": "",
+                "text": "[COMMENT 495] Author: @veenanahal | Likes: 0 | Replies: 0 | Published: 2023-04-20T13:10:50Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01682",
+                "author": "",
+                "text": "Yammi Yammi so supar dish 👌🏼👌🏼👌🏼👌🏼👌🏼💕💕🧿😊😊",
+                "likes": null
+              },
+              {
+                "comment_id": "c01684",
+                "author": "",
+                "text": "[COMMENT 496] Author: @tyagiseema79 | Likes: 42 | Replies: 5 | Published: 2022-02-11T12:27:42Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01685",
+                "author": "",
+                "text": "Contradictory!!!!!! In one video you say not to eat palak paneer, green leafy veg in night and here you are suggesting palakpaneer pulao",
+                "likes": null
+              },
+              {
+                "comment_id": "c01687",
+                "author": "",
+                "text": "[COMMENT 497] Author: @sunitabhatia243 | Likes: 4 | Replies: 0 | Published: 2024-03-17T08:16:45Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01688",
+                "author": "",
+                "text": "Agree...I remember",
+                "likes": null
+              },
+              {
+                "comment_id": "c01690",
+                "author": "",
+                "text": "[COMMENT 498] Author: @Rana19-fm8 | Likes: 3 | Replies: 0 | Published: 2024-03-17T10:17:38Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01691",
+                "author": "",
+                "text": "Mai v yhi comment krne wali thi",
+                "likes": null
+              },
+              {
+                "comment_id": "c01693",
+                "author": "",
+                "text": "[COMMENT 499] Author: @Therisingstar-ID | Likes: 2 | Replies: 0 | Published: 2024-03-19T16:52:30Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01694",
+                "author": "",
+                "text": "Agreed..",
+                "likes": null
+              },
+              {
+                "comment_id": "c01696",
+                "author": "",
+                "text": "[COMMENT 500] Author: @RAJASHREEBiswas-gc5vg | Likes: 2 | Replies: 0 | Published: 2024-04-02T16:08:25Z",
+                "likes": null
+              },
+              {
+                "comment_id": "c01697",
+                "author": "",
+                "text": "You should check out the video releasing date,,, this video is 2 years early compare to the video you are talkingabout,,,,, so maybe with further studies he had come with that information.",
+                "likes": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

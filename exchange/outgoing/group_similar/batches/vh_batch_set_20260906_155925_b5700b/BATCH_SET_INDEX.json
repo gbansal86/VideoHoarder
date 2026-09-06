@@ -1,0 +1,4814 @@
+{
+  "master_set_id": "vh_batch_set_20260906_155925_b5700b",
+  "created_at": "2026-09-06 16:00:06",
+  "manual_exchange_only": true,
+  "compact_chatgpt_package": true,
+  "requested_features": [
+    "title_en.v1",
+    "taxonomy.v3",
+    "detailed_summary.v3",
+    "timeline_sections.v3",
+    "editorial_assessment.v1"
+  ],
+  "removed_features": [
+    "viewer_comment_intelligence.v2"
+  ],
+  "reset_processed_locks_before_grouping": true,
+  "reset_processed_locks_result": {
+    "ok": true,
+    "removed_db_locks": 0,
+    "removed_marker_files": 0,
+    "failed": []
+  },
+  "video_count": 421,
+  "packaged_video_count": 358,
+  "skipped_already_processed_videos": 0,
+  "skipped_already_processed_ids": [],
+  "skipped_no_transcript_videos": 63,
+  "transcript_preflight": {
+    "total": 421,
+    "available": 358,
+    "unavailable": 63,
+    "available_ids": [
+      "-9t8G3r8HrA",
+      "-QPF6OezA0Y",
+      "-Re6Mk--uxw",
+      "-X5j5EBLNv8",
+      "-fYoE_jIbNU",
+      "-wJpoCmMcCY",
+      "055dZcV9nLs",
+      "09W4jwgSHzI",
+      "0FdtR6dRyBw",
+      "0HgLywUBhzI",
+      "0ZnNOVzYY3Q",
+      "0aBAqHcHpu8",
+      "0mrrZYTvQ44",
+      "11vCt2JtHeE",
+      "1FU6KwaSw0E",
+      "1Zgnl189KcM",
+      "1kIVVEeivy0",
+      "1tjf8ULIWzM",
+      "2-QNs0K8jqs",
+      "2e-Z0-hjq8Y",
+      "2ruV2AQrCSw",
+      "31bZOIk53_I",
+      "34F9MqgQhxg",
+      "3IYM8K9ZtWw",
+      "3QtWquq6yEA",
+      "3TDm3fmgk3I",
+      "3_h29kEU7dE",
+      "3i_Xl-JYx_Q",
+      "3sZ_a6BL8aE",
+      "4Ddo_rQIC8g",
+      "4V2-onCssQQ",
+      "4Wd7xjCvUq0",
+      "4aGAPBS5AmM",
+      "4nvkTCfYxBo",
+      "4qqFLcoe3yQ",
+      "4sOMfEAqzEg",
+      "4tj5I3NsLjE",
+      "4yCvXX-fC3c",
+      "5qgREntrTXs",
+      "5vCeJpPnBnM",
+      "5xjGq6lL4BA",
+      "65A_lShqZA8",
+      "6C3kt88ECSo",
+      "6YXPuEL-ti4",
+      "6ZUFT0CwU1w",
+      "6rVeXkayn8Q",
+      "6saouOhPhMU",
+      "6vgcPkuQOpU",
+      "6xvL8oGcF_o",
+      "70zlJUqOwnQ",
+      "7F6PRVqNna8",
+      "7RW1u-TddDU",
+      "7YwsUAcMX60",
+      "7j_XpLlh3GE",
+      "7xsxMUFgNt8",
+      "8Pen8O8RrzQ",
+      "8SJhgzx5DVM",
+      "8ToYJycXw0I",
+      "8enq8pzdQI0",
+      "8hFr16_3cuI",
+      "8mgtXYMPWV4",
+      "8zl7lF4Mb5E",
+      "92MmoC7mtSc",
+      "9BQ40Q8l7ek",
+      "9g3cF-DIY_c",
+      "9lrdgOiWmdA",
+      "9sYLPCmOyQI",
+      "9vPN-xBfNC8",
+      "A-VJ4_6Y9Cc",
+      "AJz18CVg9Ww",
+      "AKGDDwnVAHg",
+      "ANvmzG8YFtA",
+      "ATVyyg74Owc",
+      "AeNU-BqwWvE",
+      "AxMQw7Q9ou0",
+      "AzV3EA-1-yM",
+      "BCuD36zzimU",
+      "BEzASBGeEIM",
+      "BNDrajnXIko",
+      "BPHMxr51VQE",
+      "BbWmzx8JpAY",
+      "BgMP3Bx1q10",
+      "BtPEpEeAPI8",
+      "BvYwa6u0WLI",
+      "CJ95UDhwO0g",
+      "CgEs12XWwaQ",
+      "CkPbJ8Wwtgc",
+      "DXPUWbJgmLE",
+      "DujE3X1X4Yg",
+      "EExc6X58BTU",
+      "EyKPK1_asSY",
+      "F31ErEAoXnc",
+      "F4_Ne6re0RA",
+      "F4wUMbrUR78",
+      "FT01_aAaAvQ",
+      "Fw1HKAOyO54",
+      "G-lzFmHgoyE",
+      "GWQu3k9ls3g",
+      "GYAM59KENZo",
+      "GYHM2df0DGQ",
+      "GYYpP8ihJ20",
+      "HLfBMPErl3Q",
+      "Hk4Zhx0M0PE",
+      "IA3pZKYB0ew",
+      "IFRaJrS0Qyo",
+      "IOMnLG-9jzs",
+      "Ih5FtGD_Ofo",
+      "IiOKhg4RUrw",
+      "IzrVhjZiy2M",
+      "J-JaGlLiU8k",
+      "JUMO3rk8GrY",
+      "JaMQfQK1_i8",
+      "Jazy2Fr4K2o",
+      "JhaFxsMp1sQ",
+      "JlD_ALoujtM",
+      "JlMtsyXkxQE",
+      "K813P2p0IU0",
+      "KAZqPIvQT2c",
+      "Kkn_u1gK1kw",
+      "Krf7Vmsf2M0",
+      "L9H16WSFF-U",
+      "LGLrGhsYE5M",
+      "LcjxB_yO3to",
+      "Lg1wRs5Wb90",
+      "LpIgf_2Yi2c",
+      "MCD5xGPsnHg",
+      "MJcM3baHkqg",
+      "MLcQ0yIGq1c",
+      "MdTfLzT5FZw",
+      "Mf0nw5Dlb8Y",
+      "Mqe0NYVQZRY",
+      "Mu3vP4GfRE0",
+      "N7yf7zQyBHk",
+      "NWkJ72Vo3nk",
+      "N_dVcI5p5ck",
+      "NkdZ_N1mmjI",
+      "NyEOHULKxz4",
+      "O-v38a14cA0",
+      "OVAQXdFza54",
+      "OYpXKocfWlU",
+      "OnhHNETGc44",
+      "P1Gd0JJoRO4",
+      "P9LW2lwgYiQ",
+      "PIws4Rn-mZI",
+      "POKzKwFqaNE",
+      "PPBZcXyhH_M",
+      "PTtJJ5k0VHI",
+      "Pcd28t9x8w8",
+      "PtSjjISiSs0",
+      "QC10nmqfekc",
+      "Qd_SOd9RAeg",
+      "Qev0A0iUzbo",
+      "QhEE0EmhOaU",
+      "QjFLMxSbdJQ",
+      "QjTxB_hUA9U",
+      "Qn2AjYZZo-8",
+      "QucgvbO5gsM",
+      "RLg1hrKZ5FA",
+      "RUIi4c09HE0",
+      "RWRDGnsQX_k",
+      "RfinWpg9MYY",
+      "Rpj-O4Lk6QI",
+      "SAZotzpq8No",
+      "SBVkI7tAUm4",
+      "SDJD85dLWwk",
+      "SHICcnohvTE",
+      "SKhSKH_LHN4",
+      "SRX5qJTVZMY",
+      "STwFTUM0EHs",
+      "SZmNa9931eA",
+      "SlGIjCPlWF0",
+      "SobRqlT0pOM",
+      "SrfvgMH1NmY",
+      "T6qnwU16Y48",
+      "TDv7SVMt-Fw",
+      "TIEZQWSMfUM",
+      "TOAaMcVmVOg",
+      "TSyg05S-5-I",
+      "TazjcZrTl7Y",
+      "Tl13Z42277s",
+      "Tt-6djN5YvM",
+      "U97qYFkja8c",
+      "UBZdJR5zEBk",
+      "UVHOJM0bdVc",
+      "UWCf9pDTmJI",
+      "Ua0VBPXN5j8",
+      "UgIfDo9e_Jk",
+      "UnjiirIHTYU",
+      "UposRQt67Dg",
+      "V8zN8saFXMQ",
+      "VK-G0vkfqOQ",
+      "V_t51u1tBJc",
+      "VriBoTeMByk",
+      "VtUxnAj5HsI",
+      "Vw5kOT9ocjk",
+      "WJ2xwLRI3pE",
+      "WLsl3M26K-I",
+      "WUWdVtbZrLQ",
+      "WYt9VnY6PmY",
+      "WxQ-FVRVuaI",
+      "XB_o_yKvQkI",
+      "XCRPbZ_vVb4",
+      "XctGOSf08js",
+      "Y2L2kBthqNE",
+      "YHdxBff_M6k",
+      "YN7kv9j4J_4",
+      "YQsQjFO0uBk",
+      "YiPiB7hwxGc",
+      "Ypq6bEh_CnM",
+      "Z8dAhgsHwQg",
+      "_3beJopLD2Y",
+      "_9YXliQTAkg",
+      "_d1VU6A5Cd4",
+      "_eljsPT1Qws",
+      "_kHuBGn5yoQ",
+      "_mUsMQL8DuA",
+      "_tSN_1OlcEg",
+      "_u6yrYAP_7w",
+      "_uLdo-Buoz8",
+      "_urKrTNH5G0",
+      "aMheJmu5YfU",
+      "aW816rEx_WQ",
+      "bHzxdWpWhW4",
+      "bRsQuDUnU4g",
+      "bcZ9_kClq6I",
+      "c5iae3FZK_4",
+      "c6yvIGvLWC8",
+      "c7jWQZf8jvo",
+      "cLh2VdPBWSM",
+      "cO8cccJkQ1c",
+      "ci-uXyWw5R4",
+      "cuMlOIBY7zY",
+      "d02j1cBsdDQ",
+      "d4vAv6CG7M0",
+      "dAqQqmaI9vY",
+      "dE4i4LUq2R4",
+      "dQadi21TIwc",
+      "dkeHhKP7vR0",
+      "dtP8pTwQgc8",
+      "dutNG5SCIis",
+      "e2JiidC3qO4",
+      "e9iTLyPLb8U",
+      "ee0SfGSJOTc",
+      "ehCw14qk12c",
+      "fKxmRoD3_y4",
+      "fb5gHqmreas",
+      "g4GSHgFfaMA",
+      "gVHuh75Xhdw",
+      "gaMrnhFILJc",
+      "gcNGaTYwA3I",
+      "ggNxHVqNwGw",
+      "gjYVS8m91UU",
+      "gkjA_4GJ93c",
+      "h4hbLS1BTqA",
+      "hLCvr7HHJNs",
+      "hLrny7Xjy2g",
+      "hMA8FaDd_Oc",
+      "hRdUnvkmaF4",
+      "hfAzwS79PXE",
+      "i6aFZgDcm-M",
+      "i7aidpUwGC4",
+      "iOgbAm4hbDo",
+      "iUY-JJUueqI",
+      "j8HApM9L0ss",
+      "jN6m8o6XWJ4",
+      "j_sTk4JdQpY",
+      "jbmpHgVSp6k",
+      "jh8RZtwo6Fc",
+      "joav_O3pupo",
+      "jwmNjJgZanM",
+      "k1WyIcsM42c",
+      "k77F184hi5g",
+      "kYPAlvnRiiI",
+      "khhA-FiwuGE",
+      "kqD1X1q6suM",
+      "l5RZZe4h7T0",
+      "lCSgRPINplc",
+      "lGUoBm0FCZQ",
+      "lNvBXLbInXE",
+      "lYJDlH0CoE4",
+      "lsY_Llt59x0",
+      "mGZBVAp883Q",
+      "mVWSWc--zGE",
+      "majCZ5SMp7Q",
+      "mbo5wXh1lWE",
+      "me7i3OmFTIc",
+      "moZjGDwG5UU",
+      "n-YuK_bV8kw",
+      "nVqguQH45gw",
+      "nwWJsUqtzcY",
+      "o4JWr10bw48",
+      "oQjbkYD28jQ",
+      "oeBNmD1iwDo",
+      "ogHiefVlTaM",
+      "ooMKNswME18",
+      "pCaz06psb0s",
+      "pFjyrjw5HPc",
+      "pIf_TK2JC9M",
+      "pOBWgUhRLCo",
+      "pQ5OQRqOer8",
+      "pYHakKTMa0s",
+      "pqoz66rf7gE",
+      "pskMbM-2QQQ",
+      "px7qgNyf7kM",
+      "qBGy1ibJrRc",
+      "qJkC05DjVlA",
+      "qOmM94CvOLs",
+      "qfB7tnJ-kRI",
+      "qiwb7zGy-34",
+      "qnTc5WeBamo",
+      "r-DIv65zHwY",
+      "r-zlwA_Pk84",
+      "rEPsDiWn9O0",
+      "raH3rx2oO9k",
+      "raMWkXbDU2A",
+      "s1lSPL9nVxU",
+      "s2NQhpFGIOg",
+      "s5by_uGGkX0",
+      "s6r_9Pznkco",
+      "s7tEurbw1zU",
+      "sCOyx-Wglss",
+      "sgAhnEhOq30",
+      "tLLO3tEMkyk",
+      "tamUJ23i33k",
+      "tbO66nDf7r8",
+      "tbT8N23qczw",
+      "uIC5GngsSUE",
+      "ucOmGiNg1kg",
+      "up1fvFIecWw",
+      "urzOFEAZ-2M",
+      "utoB7wXrmHY",
+      "vNNLOx-TjH0",
+      "vSVeEsjkito",
+      "vTYuNp7wq10",
+      "vb9tlrQl5GM",
+      "vqRBCa1Jv4w",
+      "w0kOxvV26cw",
+      "w1c9JhNYyRA",
+      "wY44LKLysHg",
+      "wbRj49wjtF0",
+      "weDmVu1SPuI",
+      "wtVsFfFeYNs",
+      "x3MVEwkIQro",
+      "x3UzDgOrnd8",
+      "xJNX3sF3fL0",
+      "xRppi-Ezowg",
+      "xYah1XWcm4s",
+      "xfNY-0EItDs",
+      "xnu-7K-IikM",
+      "y0GFbd_uOwI",
+      "y4HBGiiZpI4",
+      "yAkBZvGijJQ",
+      "ypkpJRyxgxE",
+      "yu4rbnEk6BU",
+      "z3LlqXNZe2s",
+      "zMXQXe03dSI",
+      "zalL4B4FxH0",
+      "zeqeWQb9FCY"
+    ],
+    "unavailable_ids": [
+      "110G3GvaZns",
+      "1kDDmIWz15g",
+      "1rb-RuJjyGo",
+      "3QDxwMk0FRQ",
+      "4-H-2Szx03Y",
+      "7ArZ9GK4AIQ",
+      "7aV8kApDiGE",
+      "7q9n2vzTLzU",
+      "9JSHsY0-2-M",
+      "AQv0tS8Qw80",
+      "BHgT6Fk-pRY",
+      "BcRz4VIxQeo",
+      "F6quZ0hNV9w",
+      "GMKDcbv6wJs",
+      "HWFFFrW4aZY",
+      "I940IIine5g",
+      "IWd6RCyeVCM",
+      "JZlXdba7ALI",
+      "KJ-SpnhUURc",
+      "Ke5JKC87qac",
+      "NB6hRDVlrK0",
+      "O6G0dQummog",
+      "OJfH0j6iF8I",
+      "OZG38G2DQtY",
+      "PMtVwDiOcYI",
+      "PRlD8BWLQkQ",
+      "RUDi7gf-zF4",
+      "Rm0jYmIRN84",
+      "T6oCNc6_-uQ",
+      "TPP-TeV0BDU",
+      "TmYbdBFxx20",
+      "VVPFk1TIaUc",
+      "X_CvsRskWeE",
+      "Yl_UEHuDMnQ",
+      "Yq0cuX__wck",
+      "Zr1SWGrQTIc",
+      "a01zsrKBOCU",
+      "azsMvdSI3cU",
+      "bgx6nHUNILg",
+      "ci6viCNdAjI",
+      "d40K62Iqnfk",
+      "eb7y1jFXslU",
+      "h9buAlUNQNo",
+      "kmKf4hZJtq0",
+      "lh5dsxZ0scc",
+      "m7PzICujjbc",
+      "m7eC77inRms",
+      "mEqzo69Ka5s",
+      "mUoCyrYfvLY",
+      "mVUtchpU6nY",
+      "nzycj3Y6-sk",
+      "ouneTsdk46w",
+      "peM93I89TQU",
+      "qnNOpRYmCNo",
+      "s1pTXbpnefk",
+      "t99TxDBwUCM",
+      "vbKz95gdWiA",
+      "vmnns9LDyHU",
+      "vuk3HX4HgwE",
+      "y4QdVllbcyg",
+      "yGItImUNGWs",
+      "zT5c4wpZ2lw",
+      "zpz4Bek2q3w"
+    ],
+    "checked": false
+  },
+  "with_transcript_videos": 358,
+  "partial_transcript_videos": 64,
+  "without_transcript_videos": 63,
+  "automatic_batch_size": true,
+  "adaptive_package_sizing": true,
+  "target_package_size": 25,
+  "preferred_package_size": "standard 25 videos; parent groups prefer 20-25 and minimum 15 unless unavoidable",
+  "max_package_size": 25,
+  "target_transcript_chars": 150000,
+  "hard_transcript_chars": 250000,
+  "recommended_transcript_batch_size": 25,
+  "full_intelligence_batch_size": 25,
+  "restricted_intelligence_batch_size": 8,
+  "no_transcript_batch_size": 0,
+  "uses_parent_groups_for_packages": true,
+  "topic_subgroups": {
+    "transcript_groups": [
+      {
+        "group_name": "AI video creation and creator workflows",
+        "group_reason": "Videos share the precise research topic 'AI video creation and creator workflows', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "-wJpoCmMcCY",
+          "31bZOIk53_I",
+          "IiOKhg4RUrw",
+          "QucgvbO5gsM",
+          "SDJD85dLWwk",
+          "TazjcZrTl7Y",
+          "V_t51u1tBJc",
+          "_9YXliQTAkg",
+          "_uLdo-Buoz8",
+          "kYPAlvnRiiI",
+          "qJkC05DjVlA"
+        ]
+      },
+      {
+        "group_name": "Ayurveda, herbs, doshas and traditional remedies",
+        "group_reason": "Videos share the precise research topic 'Ayurveda, herbs, doshas and traditional remedies', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "2-QNs0K8jqs",
+          "34F9MqgQhxg",
+          "3IYM8K9ZtWw",
+          "4V2-onCssQQ",
+          "92MmoC7mtSc",
+          "9vPN-xBfNC8",
+          "Krf7Vmsf2M0",
+          "NkdZ_N1mmjI",
+          "QhEE0EmhOaU",
+          "Tt-6djN5YvM",
+          "UWCf9pDTmJI",
+          "Vw5kOT9ocjk",
+          "WUWdVtbZrLQ",
+          "WYt9VnY6PmY",
+          "cLh2VdPBWSM",
+          "l5RZZe4h7T0",
+          "oQjbkYD28jQ",
+          "ogHiefVlTaM",
+          "qnTc5WeBamo",
+          "ucOmGiNg1kg",
+          "wtVsFfFeYNs",
+          "y0GFbd_uOwI"
+        ]
+      },
+      {
+        "group_name": "Body care and personal routines",
+        "group_reason": "Videos share the precise research topic 'Body care and personal routines', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "HLfBMPErl3Q",
+          "NyEOHULKxz4",
+          "SRX5qJTVZMY"
+        ]
+      },
+      {
+        "group_name": "Body composition and fitness concepts",
+        "group_reason": "Videos share the precise research topic 'Body composition and fitness concepts', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "iUY-JJUueqI"
+        ]
+      },
+      {
+        "group_name": "Breakfasts, snacks and quick healthy recipes",
+        "group_reason": "Videos share the precise research topic 'Breakfasts, snacks and quick healthy recipes', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "-X5j5EBLNv8",
+          "BCuD36zzimU",
+          "PtSjjISiSs0",
+          "d4vAv6CG7M0",
+          "ee0SfGSJOTc",
+          "g4GSHgFfaMA",
+          "hLrny7Xjy2g",
+          "jwmNjJgZanM",
+          "pIf_TK2JC9M",
+          "zeqeWQb9FCY"
+        ]
+      },
+      {
+        "group_name": "Consumer health and lifestyle product reviews",
+        "group_reason": "Videos share the precise research topic 'Consumer health and lifestyle product reviews', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "8SJhgzx5DVM",
+          "P9LW2lwgYiQ",
+          "SrfvgMH1NmY",
+          "w1c9JhNYyRA"
+        ]
+      },
+      {
+        "group_name": "DIY, upcycling and making projects",
+        "group_reason": "Videos share the precise research topic 'DIY, upcycling and making projects', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "CgEs12XWwaQ",
+          "IzrVhjZiy2M",
+          "me7i3OmFTIc",
+          "xJNX3sF3fL0"
+        ]
+      },
+      {
+        "group_name": "Digestion, constipation and gut health",
+        "group_reason": "Videos share the precise research topic 'Digestion, constipation and gut health', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "0ZnNOVzYY3Q",
+          "0aBAqHcHpu8",
+          "6ZUFT0CwU1w",
+          "7F6PRVqNna8",
+          "F31ErEAoXnc",
+          "GYAM59KENZo",
+          "JlD_ALoujtM",
+          "LcjxB_yO3to",
+          "bcZ9_kClq6I",
+          "dE4i4LUq2R4"
+        ]
+      },
+      {
+        "group_name": "Disease warning signs and cardiometabolic health",
+        "group_reason": "Videos share the precise research topic 'Disease warning signs and cardiometabolic health', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "2e-Z0-hjq8Y",
+          "7YwsUAcMX60",
+          "Qd_SOd9RAeg",
+          "RLg1hrKZ5FA",
+          "YQsQjFO0uBk",
+          "mVWSWc--zGE",
+          "vSVeEsjkito"
+        ]
+      },
+      {
+        "group_name": "Environment and sustainable living",
+        "group_reason": "Videos share the precise research topic 'Environment and sustainable living', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "j8HApM9L0ss"
+        ]
+      },
+      {
+        "group_name": "Eye health and screen-strain care",
+        "group_reason": "Videos share the precise research topic 'Eye health and screen-strain care', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "utoB7wXrmHY"
+        ]
+      },
+      {
+        "group_name": "Films, trailers and entertainment stories",
+        "group_reason": "Videos share the precise research topic 'Films, trailers and entertainment stories', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "Mf0nw5Dlb8Y",
+          "O-v38a14cA0",
+          "Ua0VBPXN5j8",
+          "VtUxnAj5HsI",
+          "jN6m8o6XWJ4",
+          "s1lSPL9nVxU"
+        ]
+      },
+      {
+        "group_name": "Fit Tuber channel Q&A and creator updates",
+        "group_reason": "Videos share the precise research topic 'Fit Tuber channel Q&A and creator updates', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "EExc6X58BTU",
+          "QC10nmqfekc",
+          "jh8RZtwo6Fc",
+          "n-YuK_bV8kw"
+        ]
+      },
+      {
+        "group_name": "Food habits, meal timing and fasting",
+        "group_reason": "Videos share the precise research topic 'Food habits, meal timing and fasting', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "8zl7lF4Mb5E",
+          "F4wUMbrUR78",
+          "L9H16WSFF-U",
+          "SBVkI7tAUm4",
+          "SHICcnohvTE",
+          "up1fvFIecWw"
+        ]
+      },
+      {
+        "group_name": "Food safety, additives and household exposure",
+        "group_reason": "Videos share the precise research topic 'Food safety, additives and household exposure', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "6YXPuEL-ti4",
+          "6rVeXkayn8Q",
+          "6vgcPkuQOpU",
+          "8ToYJycXw0I",
+          "Hk4Zhx0M0PE",
+          "UgIfDo9e_Jk",
+          "vTYuNp7wq10"
+        ]
+      },
+      {
+        "group_name": "Full-body, cardio and general home workouts",
+        "group_reason": "Videos share the precise research topic 'Full-body, cardio and general home workouts', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "AzV3EA-1-yM",
+          "BPHMxr51VQE",
+          "BbWmzx8JpAY",
+          "PPBZcXyhH_M",
+          "TIEZQWSMfUM",
+          "Y2L2kBthqNE",
+          "_d1VU6A5Cd4",
+          "cO8cccJkQ1c",
+          "dAqQqmaI9vY",
+          "iOgbAm4hbDo",
+          "qiwb7zGy-34",
+          "s6r_9Pznkco",
+          "tamUJ23i33k"
+        ]
+      },
+      {
+        "group_name": "Full-day diets, meals and practical eating plans",
+        "group_reason": "Videos share the precise research topic 'Full-day diets, meals and practical eating plans', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "K813P2p0IU0",
+          "Kkn_u1gK1kw",
+          "s7tEurbw1zU",
+          "sCOyx-Wglss"
+        ]
+      },
+      {
+        "group_name": "Game of Thrones and Westeros lore",
+        "group_reason": "Videos share the precise research topic 'Game of Thrones and Westeros lore', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "1tjf8ULIWzM",
+          "4aGAPBS5AmM",
+          "8mgtXYMPWV4",
+          "CJ95UDhwO0g",
+          "CkPbJ8Wwtgc",
+          "FT01_aAaAvQ",
+          "Jazy2Fr4K2o",
+          "LGLrGhsYE5M",
+          "PTtJJ5k0VHI",
+          "QjFLMxSbdJQ",
+          "SAZotzpq8No",
+          "VriBoTeMByk",
+          "WxQ-FVRVuaI",
+          "aW816rEx_WQ",
+          "h4hbLS1BTqA",
+          "vNNLOx-TjH0"
+        ]
+      },
+      {
+        "group_name": "Hair loss, greying and scalp health",
+        "group_reason": "Videos share the precise research topic 'Hair loss, greying and scalp health', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "0FdtR6dRyBw",
+          "6C3kt88ECSo",
+          "8Pen8O8RrzQ",
+          "BNDrajnXIko",
+          "hMA8FaDd_Oc",
+          "pCaz06psb0s",
+          "z3LlqXNZe2s"
+        ]
+      },
+      {
+        "group_name": "Hair oils, shampoos, conditioners and styling",
+        "group_reason": "Videos share the precise research topic 'Hair oils, shampoos, conditioners and styling', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "2ruV2AQrCSw",
+          "3_h29kEU7dE",
+          "7xsxMUFgNt8",
+          "BvYwa6u0WLI",
+          "_u6yrYAP_7w",
+          "hLCvr7HHJNs",
+          "joav_O3pupo",
+          "lsY_Llt59x0",
+          "nwWJsUqtzcY",
+          "qfB7tnJ-kRI",
+          "r-DIv65zHwY",
+          "tbO66nDf7r8"
+        ]
+      },
+      {
+        "group_name": "Healthy drinks, shakes and summer beverages",
+        "group_reason": "Videos share the precise research topic 'Healthy drinks, shakes and summer beverages', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "px7qgNyf7kM"
+        ]
+      },
+      {
+        "group_name": "Healthy meals and vegetarian recipes",
+        "group_reason": "Videos share the precise research topic 'Healthy meals and vegetarian recipes', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "BEzASBGeEIM"
+        ]
+      },
+      {
+        "group_name": "Homemade dairy, tofu and pantry recipes",
+        "group_reason": "Videos share the precise research topic 'Homemade dairy, tofu and pantry recipes', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "0mrrZYTvQ44",
+          "5qgREntrTXs",
+          "65A_lShqZA8",
+          "DujE3X1X4Yg",
+          "IFRaJrS0Qyo",
+          "MLcQ0yIGq1c",
+          "STwFTUM0EHs",
+          "V8zN8saFXMQ",
+          "bHzxdWpWhW4",
+          "e2JiidC3qO4",
+          "mbo5wXh1lWE",
+          "r-zlwA_Pk84",
+          "xfNY-0EItDs"
+        ]
+      },
+      {
+        "group_name": "Indian and Ayurvedic product reviews",
+        "group_reason": "Videos share the precise research topic 'Indian and Ayurvedic product reviews', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "09W4jwgSHzI",
+          "AKGDDwnVAHg",
+          "MJcM3baHkqg",
+          "MdTfLzT5FZw",
+          "RWRDGnsQX_k",
+          "_3beJopLD2Y",
+          "ypkpJRyxgxE"
+        ]
+      },
+      {
+        "group_name": "Indian superfoods and everyday nutrition",
+        "group_reason": "Videos share the precise research topic 'Indian superfoods and everyday nutrition', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "VK-G0vkfqOQ",
+          "XctGOSf08js",
+          "Z8dAhgsHwQg",
+          "bRsQuDUnU4g"
+        ]
+      },
+      {
+        "group_name": "Lifestyle habits and practical health guidance",
+        "group_reason": "Videos share the precise research topic 'Lifestyle habits and practical health guidance', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "5vCeJpPnBnM",
+          "A-VJ4_6Y9Cc",
+          "ANvmzG8YFtA",
+          "BtPEpEeAPI8",
+          "MCD5xGPsnHg",
+          "P1Gd0JJoRO4"
+        ]
+      },
+      {
+        "group_name": "Lifestyle health advice and daily routines",
+        "group_reason": "Videos share the precise research topic 'Lifestyle health advice and daily routines', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "AeNU-BqwWvE",
+          "TSyg05S-5-I",
+          "oeBNmD1iwDo",
+          "rEPsDiWn9O0"
+        ]
+      },
+      {
+        "group_name": "Misleading food marketing and health-claim reviews",
+        "group_reason": "Videos share the precise research topic 'Misleading food marketing and health-claim reviews', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "-9t8G3r8HrA",
+          "qOmM94CvOLs",
+          "xYah1XWcm4s"
+        ]
+      },
+      {
+        "group_name": "Mobility, posture and joint strengthening",
+        "group_reason": "Videos share the precise research topic 'Mobility, posture and joint strengthening', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "70zlJUqOwnQ",
+          "9BQ40Q8l7ek",
+          "9sYLPCmOyQI",
+          "GYHM2df0DGQ",
+          "e9iTLyPLb8U"
+        ]
+      },
+      {
+        "group_name": "Motivation, habits and mind wellness",
+        "group_reason": "Videos share the precise research topic 'Motivation, habits and mind wellness', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "1Zgnl189KcM",
+          "KAZqPIvQT2c",
+          "Lg1wRs5Wb90",
+          "dkeHhKP7vR0",
+          "ggNxHVqNwGw",
+          "j_sTk4JdQpY",
+          "nVqguQH45gw",
+          "qBGy1ibJrRc"
+        ]
+      },
+      {
+        "group_name": "Nutrition, grains and traditional foods",
+        "group_reason": "Videos share the precise research topic 'Nutrition, grains and traditional foods', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "7RW1u-TddDU",
+          "DXPUWbJgmLE",
+          "SKhSKH_LHN4",
+          "SZmNa9931eA",
+          "UposRQt67Dg",
+          "fb5gHqmreas",
+          "w0kOxvV26cw"
+        ]
+      },
+      {
+        "group_name": "Oral care, hygiene and grooming products",
+        "group_reason": "Videos share the precise research topic 'Oral care, hygiene and grooming products', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "-QPF6OezA0Y",
+          "G-lzFmHgoyE",
+          "IA3pZKYB0ew",
+          "OYpXKocfWlU",
+          "QjTxB_hUA9U",
+          "RfinWpg9MYY",
+          "UBZdJR5zEBk",
+          "XCRPbZ_vVb4",
+          "_tSN_1OlcEg",
+          "c6yvIGvLWC8",
+          "ci-uXyWw5R4",
+          "cuMlOIBY7zY",
+          "vqRBCa1Jv4w",
+          "weDmVu1SPuI",
+          "y4HBGiiZpI4",
+          "yAkBZvGijJQ"
+        ]
+      },
+      {
+        "group_name": "Packaged-food rankings and ingredient comparisons",
+        "group_reason": "Videos share the precise research topic 'Packaged-food rankings and ingredient comparisons', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "0HgLywUBhzI",
+          "7j_XpLlh3GE",
+          "9lrdgOiWmdA",
+          "AxMQw7Q9ou0",
+          "BgMP3Bx1q10",
+          "Ih5FtGD_Ofo",
+          "JhaFxsMp1sQ",
+          "OVAQXdFza54",
+          "POKzKwFqaNE",
+          "SlGIjCPlWF0",
+          "SobRqlT0pOM",
+          "YHdxBff_M6k",
+          "fKxmRoD3_y4",
+          "hRdUnvkmaF4",
+          "lCSgRPINplc",
+          "moZjGDwG5UU",
+          "pOBWgUhRLCo",
+          "pqoz66rf7gE",
+          "raMWkXbDU2A",
+          "sgAhnEhOq30"
+        ]
+      },
+      {
+        "group_name": "Politics, public affairs and defence analysis",
+        "group_reason": "Videos share the precise research topic 'Politics, public affairs and defence analysis', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "4nvkTCfYxBo",
+          "IOMnLG-9jzs",
+          "JUMO3rk8GrY",
+          "N7yf7zQyBHk",
+          "NWkJ72Vo3nk",
+          "U97qYFkja8c",
+          "dutNG5SCIis",
+          "ooMKNswME18",
+          "raH3rx2oO9k"
+        ]
+      },
+      {
+        "group_name": "Produce selection, food safety and kitchen risks",
+        "group_reason": "Videos share the precise research topic 'Produce selection, food safety and kitchen risks', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "Fw1HKAOyO54",
+          "N_dVcI5p5ck",
+          "Qn2AjYZZo-8",
+          "WJ2xwLRI3pE",
+          "_eljsPT1Qws",
+          "_urKrTNH5G0",
+          "dtP8pTwQgc8",
+          "gcNGaTYwA3I",
+          "xnu-7K-IikM"
+        ]
+      },
+      {
+        "group_name": "Protein, supplements and bodybuilding nutrition",
+        "group_reason": "Videos share the precise research topic 'Protein, supplements and bodybuilding nutrition', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "-fYoE_jIbNU",
+          "3TDm3fmgk3I",
+          "3sZ_a6BL8aE",
+          "4Ddo_rQIC8g",
+          "8hFr16_3cuI",
+          "J-JaGlLiU8k",
+          "Pcd28t9x8w8",
+          "TDv7SVMt-Fw",
+          "TOAaMcVmVOg",
+          "UVHOJM0bdVc",
+          "gVHuh75Xhdw",
+          "gkjA_4GJ93c",
+          "i6aFZgDcm-M",
+          "k1WyIcsM42c",
+          "mGZBVAp883Q",
+          "uIC5GngsSUE",
+          "x3UzDgOrnd8",
+          "zMXQXe03dSI"
+        ]
+      },
+      {
+        "group_name": "Sexual health, fertility and reproductive myths",
+        "group_reason": "Videos share the precise research topic 'Sexual health, fertility and reproductive myths', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "AJz18CVg9Ww",
+          "ATVyyg74Owc",
+          "Rpj-O4Lk6QI",
+          "WLsl3M26K-I",
+          "dQadi21TIwc"
+        ]
+      },
+      {
+        "group_name": "Skin care, acne, pigmentation and moisturizers",
+        "group_reason": "Videos share the precise research topic 'Skin care, acne, pigmentation and moisturizers', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "055dZcV9nLs",
+          "1kIVVEeivy0",
+          "4Wd7xjCvUq0",
+          "4tj5I3NsLjE",
+          "9g3cF-DIY_c",
+          "EyKPK1_asSY",
+          "Mqe0NYVQZRY",
+          "Mu3vP4GfRE0",
+          "OnhHNETGc44",
+          "YiPiB7hwxGc",
+          "_kHuBGn5yoQ",
+          "ehCw14qk12c",
+          "gaMrnhFILJc",
+          "jbmpHgVSp6k",
+          "khhA-FiwuGE",
+          "kqD1X1q6suM",
+          "majCZ5SMp7Q",
+          "pskMbM-2QQQ",
+          "urzOFEAZ-2M"
+        ]
+      },
+      {
+        "group_name": "Sleep, meditation and mental wellness",
+        "group_reason": "Videos share the precise research topic 'Sleep, meditation and mental wellness', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "8enq8pzdQI0",
+          "LpIgf_2Yi2c",
+          "RUIi4c09HE0"
+        ]
+      },
+      {
+        "group_name": "Targeted bodyweight strength workouts",
+        "group_reason": "Videos share the precise research topic 'Targeted bodyweight strength workouts', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "-Re6Mk--uxw",
+          "1FU6KwaSw0E",
+          "UnjiirIHTYU",
+          "_mUsMQL8DuA",
+          "pYHakKTMa0s",
+          "tbT8N23qczw"
+        ]
+      },
+      {
+        "group_name": "Vitamins, minerals, immunity and deficiency",
+        "group_reason": "Videos share the precise research topic 'Vitamins, minerals, immunity and deficiency', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "3QtWquq6yEA",
+          "T6qnwU16Y48",
+          "Tl13Z42277s",
+          "hfAzwS79PXE",
+          "i7aidpUwGC4",
+          "s5by_uGGkX0"
+        ]
+      },
+      {
+        "group_name": "Water, hydration and purifier guidance",
+        "group_reason": "Videos share the precise research topic 'Water, hydration and purifier guidance', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "3i_Xl-JYx_Q",
+          "4sOMfEAqzEg",
+          "pFjyrjw5HPc",
+          "pQ5OQRqOer8",
+          "yu4rbnEk6BU"
+        ]
+      },
+      {
+        "group_name": "Weight gain diets and meals",
+        "group_reason": "Videos share the precise research topic 'Weight gain diets and meals', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "6saouOhPhMU"
+        ]
+      },
+      {
+        "group_name": "Weight loss, fat loss and metabolism",
+        "group_reason": "Videos share the precise research topic 'Weight loss, fat loss and metabolism', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "11vCt2JtHeE",
+          "4qqFLcoe3yQ",
+          "4yCvXX-fC3c",
+          "5xjGq6lL4BA",
+          "F4_Ne6re0RA",
+          "GWQu3k9ls3g",
+          "GYYpP8ihJ20",
+          "JaMQfQK1_i8",
+          "JlMtsyXkxQE",
+          "PIws4Rn-mZI",
+          "XB_o_yKvQkI",
+          "YN7kv9j4J_4",
+          "aMheJmu5YfU",
+          "d02j1cBsdDQ",
+          "gjYVS8m91UU",
+          "lYJDlH0CoE4",
+          "o4JWr10bw48",
+          "tLLO3tEMkyk",
+          "zalL4B4FxH0"
+        ]
+      },
+      {
+        "group_name": "Women's everyday hygiene and personal-safety products",
+        "group_reason": "Videos share the precise research topic 'Women's everyday hygiene and personal-safety products', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "6xvL8oGcF_o"
+        ]
+      },
+      {
+        "group_name": "Women's health, periods and PCOS",
+        "group_reason": "Videos share the precise research topic 'Women's health, periods and PCOS', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "Ypq6bEh_CnM",
+          "c5iae3FZK_4",
+          "c7jWQZf8jvo",
+          "lGUoBm0FCZQ",
+          "vb9tlrQl5GM",
+          "wY44LKLysHg",
+          "wbRj49wjtF0",
+          "x3MVEwkIQro"
+        ]
+      },
+      {
+        "group_name": "Yoga, pranayama and mobility routines",
+        "group_reason": "Videos share the precise research topic 'Yoga, pranayama and mobility routines', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "video_ids": [
+          "Qev0A0iUzbo",
+          "k77F184hi5g",
+          "lNvBXLbInXE",
+          "s2NQhpFGIOg",
+          "xRppi-Ezowg"
+        ]
+      }
+    ],
+    "no_transcript_groups": [
+      {
+        "group_name": "Ayurveda, herbs, doshas and traditional remedies",
+        "group_reason": "Videos share the precise research topic 'Ayurveda, herbs, doshas and traditional remedies', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "Rm0jYmIRN84",
+          "T6oCNc6_-uQ",
+          "zT5c4wpZ2lw"
+        ]
+      },
+      {
+        "group_name": "Breakfasts, snacks and quick healthy recipes",
+        "group_reason": "Videos share the precise research topic 'Breakfasts, snacks and quick healthy recipes', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "110G3GvaZns",
+          "RUDi7gf-zF4"
+        ]
+      },
+      {
+        "group_name": "Digestion, constipation and gut health",
+        "group_reason": "Videos share the precise research topic 'Digestion, constipation and gut health', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "I940IIine5g"
+        ]
+      },
+      {
+        "group_name": "Disease warning signs and cardiometabolic health",
+        "group_reason": "Videos share the precise research topic 'Disease warning signs and cardiometabolic health', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "O6G0dQummog"
+        ]
+      },
+      {
+        "group_name": "Eye health and screen-strain care",
+        "group_reason": "Videos share the precise research topic 'Eye health and screen-strain care', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "3QDxwMk0FRQ"
+        ]
+      },
+      {
+        "group_name": "Films, trailers and entertainment stories",
+        "group_reason": "Videos share the precise research topic 'Films, trailers and entertainment stories', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "KJ-SpnhUURc",
+          "Zr1SWGrQTIc"
+        ]
+      },
+      {
+        "group_name": "Food habits, meal timing and fasting",
+        "group_reason": "Videos share the precise research topic 'Food habits, meal timing and fasting', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "VVPFk1TIaUc",
+          "y4QdVllbcyg"
+        ]
+      },
+      {
+        "group_name": "Food safety, additives and household exposure",
+        "group_reason": "Videos share the precise research topic 'Food safety, additives and household exposure', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "m7eC77inRms"
+        ]
+      },
+      {
+        "group_name": "Full-body, cardio and general home workouts",
+        "group_reason": "Videos share the precise research topic 'Full-body, cardio and general home workouts', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "1kDDmIWz15g",
+          "9JSHsY0-2-M",
+          "OZG38G2DQtY",
+          "m7PzICujjbc",
+          "ouneTsdk46w",
+          "qnNOpRYmCNo"
+        ]
+      },
+      {
+        "group_name": "Game of Thrones and Westeros lore",
+        "group_reason": "Videos share the precise research topic 'Game of Thrones and Westeros lore', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "4-H-2Szx03Y",
+          "F6quZ0hNV9w",
+          "HWFFFrW4aZY",
+          "h9buAlUNQNo",
+          "vbKz95gdWiA"
+        ]
+      },
+      {
+        "group_name": "Hair loss, greying and scalp health",
+        "group_reason": "Videos share the precise research topic 'Hair loss, greying and scalp health', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "1rb-RuJjyGo",
+          "Yq0cuX__wck"
+        ]
+      },
+      {
+        "group_name": "Hair oils, shampoos, conditioners and styling",
+        "group_reason": "Videos share the precise research topic 'Hair oils, shampoos, conditioners and styling', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "NB6hRDVlrK0",
+          "X_CvsRskWeE",
+          "mEqzo69Ka5s"
+        ]
+      },
+      {
+        "group_name": "Healthy drinks, shakes and summer beverages",
+        "group_reason": "Videos share the precise research topic 'Healthy drinks, shakes and summer beverages', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "a01zsrKBOCU"
+        ]
+      },
+      {
+        "group_name": "Indian superfoods and everyday nutrition",
+        "group_reason": "Videos share the precise research topic 'Indian superfoods and everyday nutrition', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "Yl_UEHuDMnQ"
+        ]
+      },
+      {
+        "group_name": "Misleading food marketing and health-claim reviews",
+        "group_reason": "Videos share the precise research topic 'Misleading food marketing and health-claim reviews', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "IWd6RCyeVCM",
+          "peM93I89TQU"
+        ]
+      },
+      {
+        "group_name": "Motivation, habits and mind wellness",
+        "group_reason": "Videos share the precise research topic 'Motivation, habits and mind wellness', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "GMKDcbv6wJs",
+          "azsMvdSI3cU",
+          "lh5dsxZ0scc",
+          "mVUtchpU6nY",
+          "vuk3HX4HgwE"
+        ]
+      },
+      {
+        "group_name": "Nutrition, grains and traditional foods",
+        "group_reason": "Videos share the precise research topic 'Nutrition, grains and traditional foods', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "PRlD8BWLQkQ"
+        ]
+      },
+      {
+        "group_name": "Oral care, hygiene and grooming products",
+        "group_reason": "Videos share the precise research topic 'Oral care, hygiene and grooming products', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "7aV8kApDiGE",
+          "Ke5JKC87qac",
+          "bgx6nHUNILg"
+        ]
+      },
+      {
+        "group_name": "Packaged-food rankings and ingredient comparisons",
+        "group_reason": "Videos share the precise research topic 'Packaged-food rankings and ingredient comparisons', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "PMtVwDiOcYI",
+          "TmYbdBFxx20",
+          "eb7y1jFXslU",
+          "mUoCyrYfvLY"
+        ]
+      },
+      {
+        "group_name": "Produce selection, food safety and kitchen risks",
+        "group_reason": "Videos share the precise research topic 'Produce selection, food safety and kitchen risks', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "ci6viCNdAjI"
+        ]
+      },
+      {
+        "group_name": "Protein, supplements and bodybuilding nutrition",
+        "group_reason": "Videos share the precise research topic 'Protein, supplements and bodybuilding nutrition', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "d40K62Iqnfk",
+          "vmnns9LDyHU",
+          "zpz4Bek2q3w"
+        ]
+      },
+      {
+        "group_name": "Sexual health, fertility and reproductive myths",
+        "group_reason": "Videos share the precise research topic 'Sexual health, fertility and reproductive myths', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "7q9n2vzTLzU",
+          "AQv0tS8Qw80",
+          "s1pTXbpnefk"
+        ]
+      },
+      {
+        "group_name": "Skin care, acne, pigmentation and moisturizers",
+        "group_reason": "Videos share the precise research topic 'Skin care, acne, pigmentation and moisturizers', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "BHgT6Fk-pRY",
+          "TPP-TeV0BDU",
+          "nzycj3Y6-sk"
+        ]
+      },
+      {
+        "group_name": "Sleep, meditation and mental wellness",
+        "group_reason": "Videos share the precise research topic 'Sleep, meditation and mental wellness', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "7ArZ9GK4AIQ",
+          "OJfH0j6iF8I"
+        ]
+      },
+      {
+        "group_name": "Targeted bodyweight strength workouts",
+        "group_reason": "Videos share the precise research topic 'Targeted bodyweight strength workouts', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "BcRz4VIxQeo",
+          "t99TxDBwUCM"
+        ]
+      },
+      {
+        "group_name": "Vitamins, minerals, immunity and deficiency",
+        "group_reason": "Videos share the precise research topic 'Vitamins, minerals, immunity and deficiency', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "JZlXdba7ALI",
+          "yGItImUNGWs"
+        ]
+      },
+      {
+        "group_name": "Water, hydration and purifier guidance",
+        "group_reason": "Videos share the precise research topic 'Water, hydration and purifier guidance', based on supplied title and description context.",
+        "grouping_basis": "topic_first",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "video_ids": [
+          "kmKf4hZJtq0"
+        ]
+      }
+    ]
+  },
+  "parent_groups": {
+    "transcript_parent_groups": [
+      {
+        "parent_group_name": "Creator Workflows, DIY and Entertainment",
+        "parent_group_reason": "Combines creator-oriented AI/video workflows, channel updates, hands-on making projects, and entertainment content into one media-and-creation processing package.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "AI video creation and creator workflows",
+            "video_ids": [
+              "-wJpoCmMcCY",
+              "31bZOIk53_I",
+              "IiOKhg4RUrw",
+              "QucgvbO5gsM",
+              "SDJD85dLWwk",
+              "TazjcZrTl7Y",
+              "V_t51u1tBJc",
+              "_9YXliQTAkg",
+              "_uLdo-Buoz8",
+              "kYPAlvnRiiI",
+              "qJkC05DjVlA"
+            ]
+          },
+          {
+            "group_name": "DIY, upcycling and making projects",
+            "video_ids": [
+              "CgEs12XWwaQ",
+              "IzrVhjZiy2M",
+              "me7i3OmFTIc",
+              "xJNX3sF3fL0"
+            ]
+          },
+          {
+            "group_name": "Films, trailers and entertainment stories",
+            "video_ids": [
+              "Mf0nw5Dlb8Y",
+              "O-v38a14cA0",
+              "Ua0VBPXN5j8",
+              "VtUxnAj5HsI",
+              "jN6m8o6XWJ4",
+              "s1lSPL9nVxU"
+            ]
+          },
+          {
+            "group_name": "Fit Tuber channel Q&A and creator updates",
+            "video_ids": [
+              "EExc6X58BTU",
+              "QC10nmqfekc",
+              "jh8RZtwo6Fc",
+              "n-YuK_bV8kw"
+            ]
+          }
+        ],
+        "video_ids": [
+          "-wJpoCmMcCY",
+          "31bZOIk53_I",
+          "IiOKhg4RUrw",
+          "QucgvbO5gsM",
+          "SDJD85dLWwk",
+          "TazjcZrTl7Y",
+          "V_t51u1tBJc",
+          "_9YXliQTAkg",
+          "_uLdo-Buoz8",
+          "kYPAlvnRiiI",
+          "qJkC05DjVlA",
+          "CgEs12XWwaQ",
+          "IzrVhjZiy2M",
+          "me7i3OmFTIc",
+          "xJNX3sF3fL0",
+          "Mf0nw5Dlb8Y",
+          "O-v38a14cA0",
+          "Ua0VBPXN5j8",
+          "VtUxnAj5HsI",
+          "jN6m8o6XWJ4",
+          "s1lSPL9nVxU",
+          "EExc6X58BTU",
+          "QC10nmqfekc",
+          "jh8RZtwo6Fc",
+          "n-YuK_bV8kw"
+        ]
+      },
+      {
+        "parent_group_name": "Ayurveda, Herbs and Traditional Remedies",
+        "parent_group_reason": "A coherent package devoted to Ayurveda, herbs, doshas, rituals, and traditional remedy content.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Ayurveda, herbs, doshas and traditional remedies",
+            "video_ids": [
+              "2-QNs0K8jqs",
+              "34F9MqgQhxg",
+              "3IYM8K9ZtWw",
+              "4V2-onCssQQ",
+              "92MmoC7mtSc",
+              "9vPN-xBfNC8",
+              "Krf7Vmsf2M0",
+              "NkdZ_N1mmjI",
+              "QhEE0EmhOaU",
+              "Tt-6djN5YvM",
+              "UWCf9pDTmJI",
+              "Vw5kOT9ocjk",
+              "WUWdVtbZrLQ",
+              "WYt9VnY6PmY",
+              "cLh2VdPBWSM",
+              "l5RZZe4h7T0",
+              "oQjbkYD28jQ",
+              "ogHiefVlTaM",
+              "qnTc5WeBamo",
+              "ucOmGiNg1kg",
+              "wtVsFfFeYNs",
+              "y0GFbd_uOwI"
+            ]
+          }
+        ],
+        "video_ids": [
+          "2-QNs0K8jqs",
+          "34F9MqgQhxg",
+          "3IYM8K9ZtWw",
+          "4V2-onCssQQ",
+          "92MmoC7mtSc",
+          "9vPN-xBfNC8",
+          "Krf7Vmsf2M0",
+          "NkdZ_N1mmjI",
+          "QhEE0EmhOaU",
+          "Tt-6djN5YvM",
+          "UWCf9pDTmJI",
+          "Vw5kOT9ocjk",
+          "WUWdVtbZrLQ",
+          "WYt9VnY6PmY",
+          "cLh2VdPBWSM",
+          "l5RZZe4h7T0",
+          "oQjbkYD28jQ",
+          "ogHiefVlTaM",
+          "qnTc5WeBamo",
+          "ucOmGiNg1kg",
+          "wtVsFfFeYNs",
+          "y0GFbd_uOwI"
+        ]
+      },
+      {
+        "parent_group_name": "Home Fitness, Strength, Mobility and Body Composition",
+        "parent_group_reason": "Combines general home workouts, targeted bodyweight strength, posture/mobility work, and body-composition concepts.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Body composition and fitness concepts",
+            "video_ids": [
+              "iUY-JJUueqI"
+            ]
+          },
+          {
+            "group_name": "Full-body, cardio and general home workouts",
+            "video_ids": [
+              "AzV3EA-1-yM",
+              "BPHMxr51VQE",
+              "BbWmzx8JpAY",
+              "PPBZcXyhH_M",
+              "TIEZQWSMfUM",
+              "Y2L2kBthqNE",
+              "_d1VU6A5Cd4",
+              "cO8cccJkQ1c",
+              "dAqQqmaI9vY",
+              "iOgbAm4hbDo",
+              "qiwb7zGy-34",
+              "s6r_9Pznkco",
+              "tamUJ23i33k"
+            ]
+          },
+          {
+            "group_name": "Mobility, posture and joint strengthening",
+            "video_ids": [
+              "70zlJUqOwnQ",
+              "9BQ40Q8l7ek",
+              "9sYLPCmOyQI",
+              "GYHM2df0DGQ",
+              "e9iTLyPLb8U"
+            ]
+          },
+          {
+            "group_name": "Targeted bodyweight strength workouts",
+            "video_ids": [
+              "-Re6Mk--uxw",
+              "1FU6KwaSw0E",
+              "UnjiirIHTYU",
+              "_mUsMQL8DuA",
+              "pYHakKTMa0s",
+              "tbT8N23qczw"
+            ]
+          }
+        ],
+        "video_ids": [
+          "iUY-JJUueqI",
+          "AzV3EA-1-yM",
+          "BPHMxr51VQE",
+          "BbWmzx8JpAY",
+          "PPBZcXyhH_M",
+          "TIEZQWSMfUM",
+          "Y2L2kBthqNE",
+          "_d1VU6A5Cd4",
+          "cO8cccJkQ1c",
+          "dAqQqmaI9vY",
+          "iOgbAm4hbDo",
+          "qiwb7zGy-34",
+          "s6r_9Pznkco",
+          "tamUJ23i33k",
+          "70zlJUqOwnQ",
+          "9BQ40Q8l7ek",
+          "9sYLPCmOyQI",
+          "GYHM2df0DGQ",
+          "e9iTLyPLb8U",
+          "-Re6Mk--uxw",
+          "1FU6KwaSw0E",
+          "UnjiirIHTYU",
+          "_mUsMQL8DuA",
+          "pYHakKTMa0s",
+          "tbT8N23qczw"
+        ]
+      },
+      {
+        "parent_group_name": "Mind Wellness, Lifestyle Habits, Sleep and Yoga",
+        "parent_group_reason": "Combines lifestyle guidance, motivation, sleep/mental-wellness content, yoga, pranayama, and mobility routines.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Lifestyle habits and practical health guidance",
+            "video_ids": [
+              "5vCeJpPnBnM",
+              "A-VJ4_6Y9Cc",
+              "ANvmzG8YFtA",
+              "BtPEpEeAPI8",
+              "MCD5xGPsnHg",
+              "P1Gd0JJoRO4"
+            ]
+          },
+          {
+            "group_name": "Motivation, habits and mind wellness",
+            "video_ids": [
+              "1Zgnl189KcM",
+              "KAZqPIvQT2c",
+              "Lg1wRs5Wb90",
+              "dkeHhKP7vR0",
+              "ggNxHVqNwGw",
+              "j_sTk4JdQpY",
+              "nVqguQH45gw",
+              "qBGy1ibJrRc"
+            ]
+          },
+          {
+            "group_name": "Sleep, meditation and mental wellness",
+            "video_ids": [
+              "8enq8pzdQI0",
+              "LpIgf_2Yi2c",
+              "RUIi4c09HE0"
+            ]
+          },
+          {
+            "group_name": "Yoga, pranayama and mobility routines",
+            "video_ids": [
+              "Qev0A0iUzbo",
+              "k77F184hi5g",
+              "lNvBXLbInXE",
+              "s2NQhpFGIOg",
+              "xRppi-Ezowg"
+            ]
+          }
+        ],
+        "video_ids": [
+          "5vCeJpPnBnM",
+          "A-VJ4_6Y9Cc",
+          "ANvmzG8YFtA",
+          "BtPEpEeAPI8",
+          "MCD5xGPsnHg",
+          "P1Gd0JJoRO4",
+          "1Zgnl189KcM",
+          "KAZqPIvQT2c",
+          "Lg1wRs5Wb90",
+          "dkeHhKP7vR0",
+          "ggNxHVqNwGw",
+          "j_sTk4JdQpY",
+          "nVqguQH45gw",
+          "qBGy1ibJrRc",
+          "8enq8pzdQI0",
+          "LpIgf_2Yi2c",
+          "RUIi4c09HE0",
+          "Qev0A0iUzbo",
+          "k77F184hi5g",
+          "lNvBXLbInXE",
+          "s2NQhpFGIOg",
+          "xRppi-Ezowg"
+        ]
+      },
+      {
+        "parent_group_name": "Digestion, Eating Patterns and Practical Diets",
+        "parent_group_reason": "Combines gut health, meal timing/fasting, full-day eating plans, healthy meals, and healthy drinks as practical diet-and-digestion content.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Digestion, constipation and gut health",
+            "video_ids": [
+              "0ZnNOVzYY3Q",
+              "0aBAqHcHpu8",
+              "6ZUFT0CwU1w",
+              "7F6PRVqNna8",
+              "F31ErEAoXnc",
+              "GYAM59KENZo",
+              "JlD_ALoujtM",
+              "LcjxB_yO3to",
+              "bcZ9_kClq6I",
+              "dE4i4LUq2R4"
+            ]
+          },
+          {
+            "group_name": "Food habits, meal timing and fasting",
+            "video_ids": [
+              "8zl7lF4Mb5E",
+              "F4wUMbrUR78",
+              "L9H16WSFF-U",
+              "SBVkI7tAUm4",
+              "SHICcnohvTE",
+              "up1fvFIecWw"
+            ]
+          },
+          {
+            "group_name": "Full-day diets, meals and practical eating plans",
+            "video_ids": [
+              "K813P2p0IU0",
+              "Kkn_u1gK1kw",
+              "s7tEurbw1zU",
+              "sCOyx-Wglss"
+            ]
+          },
+          {
+            "group_name": "Healthy drinks, shakes and summer beverages",
+            "video_ids": [
+              "px7qgNyf7kM"
+            ]
+          },
+          {
+            "group_name": "Healthy meals and vegetarian recipes",
+            "video_ids": [
+              "BEzASBGeEIM"
+            ]
+          }
+        ],
+        "video_ids": [
+          "0ZnNOVzYY3Q",
+          "0aBAqHcHpu8",
+          "6ZUFT0CwU1w",
+          "7F6PRVqNna8",
+          "F31ErEAoXnc",
+          "GYAM59KENZo",
+          "JlD_ALoujtM",
+          "LcjxB_yO3to",
+          "bcZ9_kClq6I",
+          "dE4i4LUq2R4",
+          "8zl7lF4Mb5E",
+          "F4wUMbrUR78",
+          "L9H16WSFF-U",
+          "SBVkI7tAUm4",
+          "SHICcnohvTE",
+          "up1fvFIecWw",
+          "K813P2p0IU0",
+          "Kkn_u1gK1kw",
+          "s7tEurbw1zU",
+          "sCOyx-Wglss",
+          "px7qgNyf7kM",
+          "BEzASBGeEIM"
+        ]
+      },
+      {
+        "parent_group_name": "Healthy Recipes and Homemade Pantry Foods",
+        "parent_group_reason": "Combines breakfasts/snacks with homemade dairy, tofu, sprouts, and pantry recipes into a practical food-preparation package.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Breakfasts, snacks and quick healthy recipes",
+            "video_ids": [
+              "-X5j5EBLNv8",
+              "BCuD36zzimU",
+              "PtSjjISiSs0",
+              "d4vAv6CG7M0",
+              "ee0SfGSJOTc",
+              "g4GSHgFfaMA",
+              "hLrny7Xjy2g",
+              "jwmNjJgZanM",
+              "pIf_TK2JC9M",
+              "zeqeWQb9FCY"
+            ]
+          },
+          {
+            "group_name": "Homemade dairy, tofu and pantry recipes",
+            "video_ids": [
+              "0mrrZYTvQ44",
+              "5qgREntrTXs",
+              "65A_lShqZA8",
+              "DujE3X1X4Yg",
+              "IFRaJrS0Qyo",
+              "MLcQ0yIGq1c",
+              "STwFTUM0EHs",
+              "V8zN8saFXMQ",
+              "bHzxdWpWhW4",
+              "e2JiidC3qO4",
+              "mbo5wXh1lWE",
+              "r-zlwA_Pk84",
+              "xfNY-0EItDs"
+            ]
+          }
+        ],
+        "video_ids": [
+          "-X5j5EBLNv8",
+          "BCuD36zzimU",
+          "PtSjjISiSs0",
+          "d4vAv6CG7M0",
+          "ee0SfGSJOTc",
+          "g4GSHgFfaMA",
+          "hLrny7Xjy2g",
+          "jwmNjJgZanM",
+          "pIf_TK2JC9M",
+          "zeqeWQb9FCY",
+          "0mrrZYTvQ44",
+          "5qgREntrTXs",
+          "65A_lShqZA8",
+          "DujE3X1X4Yg",
+          "IFRaJrS0Qyo",
+          "MLcQ0yIGq1c",
+          "STwFTUM0EHs",
+          "V8zN8saFXMQ",
+          "bHzxdWpWhW4",
+          "e2JiidC3qO4",
+          "mbo5wXh1lWE",
+          "r-zlwA_Pk84",
+          "xfNY-0EItDs"
+        ]
+      },
+      {
+        "parent_group_name": "Food Safety, Produce and Kitchen Risks",
+        "parent_group_reason": "Combines food-safety concerns, additives/exposures, produce selection, and kitchen-risk content.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Food safety, additives and household exposure",
+            "video_ids": [
+              "6YXPuEL-ti4",
+              "6rVeXkayn8Q",
+              "6vgcPkuQOpU",
+              "8ToYJycXw0I",
+              "Hk4Zhx0M0PE",
+              "UgIfDo9e_Jk",
+              "vTYuNp7wq10"
+            ]
+          },
+          {
+            "group_name": "Produce selection, food safety and kitchen risks",
+            "video_ids": [
+              "Fw1HKAOyO54",
+              "N_dVcI5p5ck",
+              "Qn2AjYZZo-8",
+              "WJ2xwLRI3pE",
+              "_eljsPT1Qws",
+              "_urKrTNH5G0",
+              "dtP8pTwQgc8",
+              "gcNGaTYwA3I",
+              "xnu-7K-IikM"
+            ]
+          }
+        ],
+        "video_ids": [
+          "6YXPuEL-ti4",
+          "6rVeXkayn8Q",
+          "6vgcPkuQOpU",
+          "8ToYJycXw0I",
+          "Hk4Zhx0M0PE",
+          "UgIfDo9e_Jk",
+          "vTYuNp7wq10",
+          "Fw1HKAOyO54",
+          "N_dVcI5p5ck",
+          "Qn2AjYZZo-8",
+          "WJ2xwLRI3pE",
+          "_eljsPT1Qws",
+          "_urKrTNH5G0",
+          "dtP8pTwQgc8",
+          "gcNGaTYwA3I",
+          "xnu-7K-IikM"
+        ]
+      },
+      {
+        "parent_group_name": "Traditional Foods, Indian Nutrition and Product Reviews",
+        "parent_group_reason": "Combines Indian/Ayurvedic product reviews, Indian superfoods, grains/traditional foods, and everyday nutrition topics.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Indian and Ayurvedic product reviews",
+            "video_ids": [
+              "09W4jwgSHzI",
+              "AKGDDwnVAHg",
+              "MJcM3baHkqg",
+              "MdTfLzT5FZw",
+              "RWRDGnsQX_k",
+              "_3beJopLD2Y",
+              "ypkpJRyxgxE"
+            ]
+          },
+          {
+            "group_name": "Indian superfoods and everyday nutrition",
+            "video_ids": [
+              "VK-G0vkfqOQ",
+              "XctGOSf08js",
+              "Z8dAhgsHwQg",
+              "bRsQuDUnU4g"
+            ]
+          },
+          {
+            "group_name": "Nutrition, grains and traditional foods",
+            "video_ids": [
+              "7RW1u-TddDU",
+              "DXPUWbJgmLE",
+              "SKhSKH_LHN4",
+              "SZmNa9931eA",
+              "UposRQt67Dg",
+              "fb5gHqmreas",
+              "w0kOxvV26cw"
+            ]
+          }
+        ],
+        "video_ids": [
+          "09W4jwgSHzI",
+          "AKGDDwnVAHg",
+          "MJcM3baHkqg",
+          "MdTfLzT5FZw",
+          "RWRDGnsQX_k",
+          "_3beJopLD2Y",
+          "ypkpJRyxgxE",
+          "VK-G0vkfqOQ",
+          "XctGOSf08js",
+          "Z8dAhgsHwQg",
+          "bRsQuDUnU4g",
+          "7RW1u-TddDU",
+          "DXPUWbJgmLE",
+          "SKhSKH_LHN4",
+          "SZmNa9931eA",
+          "UposRQt67Dg",
+          "fb5gHqmreas",
+          "w0kOxvV26cw"
+        ]
+      },
+      {
+        "parent_group_name": "Health Warning Signs, Deficiencies and Everyday Guidance",
+        "parent_group_reason": "Combines disease warning signs, vitamins/minerals/deficiency content, hydration/water guidance, eye care, and general practical health advice.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Disease warning signs and cardiometabolic health",
+            "video_ids": [
+              "2e-Z0-hjq8Y",
+              "7YwsUAcMX60",
+              "Qd_SOd9RAeg",
+              "RLg1hrKZ5FA",
+              "YQsQjFO0uBk",
+              "mVWSWc--zGE",
+              "vSVeEsjkito"
+            ]
+          },
+          {
+            "group_name": "Eye health and screen-strain care",
+            "video_ids": [
+              "utoB7wXrmHY"
+            ]
+          },
+          {
+            "group_name": "Lifestyle health advice and daily routines",
+            "video_ids": [
+              "AeNU-BqwWvE",
+              "TSyg05S-5-I",
+              "oeBNmD1iwDo",
+              "rEPsDiWn9O0"
+            ]
+          },
+          {
+            "group_name": "Vitamins, minerals, immunity and deficiency",
+            "video_ids": [
+              "3QtWquq6yEA",
+              "T6qnwU16Y48",
+              "Tl13Z42277s",
+              "hfAzwS79PXE",
+              "i7aidpUwGC4",
+              "s5by_uGGkX0"
+            ]
+          },
+          {
+            "group_name": "Water, hydration and purifier guidance",
+            "video_ids": [
+              "3i_Xl-JYx_Q",
+              "4sOMfEAqzEg",
+              "pFjyrjw5HPc",
+              "pQ5OQRqOer8",
+              "yu4rbnEk6BU"
+            ]
+          }
+        ],
+        "video_ids": [
+          "2e-Z0-hjq8Y",
+          "7YwsUAcMX60",
+          "Qd_SOd9RAeg",
+          "RLg1hrKZ5FA",
+          "YQsQjFO0uBk",
+          "mVWSWc--zGE",
+          "vSVeEsjkito",
+          "utoB7wXrmHY",
+          "AeNU-BqwWvE",
+          "TSyg05S-5-I",
+          "oeBNmD1iwDo",
+          "rEPsDiWn9O0",
+          "3QtWquq6yEA",
+          "T6qnwU16Y48",
+          "Tl13Z42277s",
+          "hfAzwS79PXE",
+          "i7aidpUwGC4",
+          "s5by_uGGkX0",
+          "3i_Xl-JYx_Q",
+          "4sOMfEAqzEg",
+          "pFjyrjw5HPc",
+          "pQ5OQRqOer8",
+          "yu4rbnEk6BU"
+        ]
+      },
+      {
+        "parent_group_name": "Hair Loss, Scalp Health and Hair-Care Products",
+        "parent_group_reason": "Combines hair fall/greying/scalp-health topics with oils, shampoos, conditioners, and styling.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Hair loss, greying and scalp health",
+            "video_ids": [
+              "0FdtR6dRyBw",
+              "6C3kt88ECSo",
+              "8Pen8O8RrzQ",
+              "BNDrajnXIko",
+              "hMA8FaDd_Oc",
+              "pCaz06psb0s",
+              "z3LlqXNZe2s"
+            ]
+          },
+          {
+            "group_name": "Hair oils, shampoos, conditioners and styling",
+            "video_ids": [
+              "2ruV2AQrCSw",
+              "3_h29kEU7dE",
+              "7xsxMUFgNt8",
+              "BvYwa6u0WLI",
+              "_u6yrYAP_7w",
+              "hLCvr7HHJNs",
+              "joav_O3pupo",
+              "lsY_Llt59x0",
+              "nwWJsUqtzcY",
+              "qfB7tnJ-kRI",
+              "r-DIv65zHwY",
+              "tbO66nDf7r8"
+            ]
+          }
+        ],
+        "video_ids": [
+          "0FdtR6dRyBw",
+          "6C3kt88ECSo",
+          "8Pen8O8RrzQ",
+          "BNDrajnXIko",
+          "hMA8FaDd_Oc",
+          "pCaz06psb0s",
+          "z3LlqXNZe2s",
+          "2ruV2AQrCSw",
+          "3_h29kEU7dE",
+          "7xsxMUFgNt8",
+          "BvYwa6u0WLI",
+          "_u6yrYAP_7w",
+          "hLCvr7HHJNs",
+          "joav_O3pupo",
+          "lsY_Llt59x0",
+          "nwWJsUqtzcY",
+          "qfB7tnJ-kRI",
+          "r-DIv65zHwY",
+          "tbO66nDf7r8"
+        ]
+      },
+      {
+        "parent_group_name": "Packaged-Food Rankings and Ingredient Comparisons",
+        "parent_group_reason": "A focused package of packaged-food reviews, rankings, ingredient comparisons, and consumer nutrition analysis.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Packaged-food rankings and ingredient comparisons",
+            "video_ids": [
+              "0HgLywUBhzI",
+              "7j_XpLlh3GE",
+              "9lrdgOiWmdA",
+              "AxMQw7Q9ou0",
+              "BgMP3Bx1q10",
+              "Ih5FtGD_Ofo",
+              "JhaFxsMp1sQ",
+              "OVAQXdFza54",
+              "POKzKwFqaNE",
+              "SlGIjCPlWF0",
+              "SobRqlT0pOM",
+              "YHdxBff_M6k",
+              "fKxmRoD3_y4",
+              "hRdUnvkmaF4",
+              "lCSgRPINplc",
+              "moZjGDwG5UU",
+              "pOBWgUhRLCo",
+              "pqoz66rf7gE",
+              "raMWkXbDU2A",
+              "sgAhnEhOq30"
+            ]
+          }
+        ],
+        "video_ids": [
+          "0HgLywUBhzI",
+          "7j_XpLlh3GE",
+          "9lrdgOiWmdA",
+          "AxMQw7Q9ou0",
+          "BgMP3Bx1q10",
+          "Ih5FtGD_Ofo",
+          "JhaFxsMp1sQ",
+          "OVAQXdFza54",
+          "POKzKwFqaNE",
+          "SlGIjCPlWF0",
+          "SobRqlT0pOM",
+          "YHdxBff_M6k",
+          "fKxmRoD3_y4",
+          "hRdUnvkmaF4",
+          "lCSgRPINplc",
+          "moZjGDwG5UU",
+          "pOBWgUhRLCo",
+          "pqoz66rf7gE",
+          "raMWkXbDU2A",
+          "sgAhnEhOq30"
+        ]
+      },
+      {
+        "parent_group_name": "Game of Thrones and Westeros Lore",
+        "parent_group_reason": "A coherent fiction-and-lore package covering Game of Thrones and Westeros.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Game of Thrones and Westeros lore",
+            "video_ids": [
+              "1tjf8ULIWzM",
+              "4aGAPBS5AmM",
+              "8mgtXYMPWV4",
+              "CJ95UDhwO0g",
+              "CkPbJ8Wwtgc",
+              "FT01_aAaAvQ",
+              "Jazy2Fr4K2o",
+              "LGLrGhsYE5M",
+              "PTtJJ5k0VHI",
+              "QjFLMxSbdJQ",
+              "SAZotzpq8No",
+              "VriBoTeMByk",
+              "WxQ-FVRVuaI",
+              "aW816rEx_WQ",
+              "h4hbLS1BTqA",
+              "vNNLOx-TjH0"
+            ]
+          }
+        ],
+        "video_ids": [
+          "1tjf8ULIWzM",
+          "4aGAPBS5AmM",
+          "8mgtXYMPWV4",
+          "CJ95UDhwO0g",
+          "CkPbJ8Wwtgc",
+          "FT01_aAaAvQ",
+          "Jazy2Fr4K2o",
+          "LGLrGhsYE5M",
+          "PTtJJ5k0VHI",
+          "QjFLMxSbdJQ",
+          "SAZotzpq8No",
+          "VriBoTeMByk",
+          "WxQ-FVRVuaI",
+          "aW816rEx_WQ",
+          "h4hbLS1BTqA",
+          "vNNLOx-TjH0"
+        ]
+      },
+      {
+        "parent_group_name": "Public Affairs, Consumer Claims and Accountability",
+        "parent_group_reason": "Combines politics/public affairs with environmental issues, misleading marketing, and consumer-health product critique under public/consumer accountability.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Consumer health and lifestyle product reviews",
+            "video_ids": [
+              "8SJhgzx5DVM",
+              "P9LW2lwgYiQ",
+              "SrfvgMH1NmY",
+              "w1c9JhNYyRA"
+            ]
+          },
+          {
+            "group_name": "Environment and sustainable living",
+            "video_ids": [
+              "j8HApM9L0ss"
+            ]
+          },
+          {
+            "group_name": "Misleading food marketing and health-claim reviews",
+            "video_ids": [
+              "-9t8G3r8HrA",
+              "qOmM94CvOLs",
+              "xYah1XWcm4s"
+            ]
+          },
+          {
+            "group_name": "Politics, public affairs and defence analysis",
+            "video_ids": [
+              "4nvkTCfYxBo",
+              "IOMnLG-9jzs",
+              "JUMO3rk8GrY",
+              "N7yf7zQyBHk",
+              "NWkJ72Vo3nk",
+              "U97qYFkja8c",
+              "dutNG5SCIis",
+              "ooMKNswME18",
+              "raH3rx2oO9k"
+            ]
+          }
+        ],
+        "video_ids": [
+          "8SJhgzx5DVM",
+          "P9LW2lwgYiQ",
+          "SrfvgMH1NmY",
+          "w1c9JhNYyRA",
+          "j8HApM9L0ss",
+          "-9t8G3r8HrA",
+          "qOmM94CvOLs",
+          "xYah1XWcm4s",
+          "4nvkTCfYxBo",
+          "IOMnLG-9jzs",
+          "JUMO3rk8GrY",
+          "N7yf7zQyBHk",
+          "NWkJ72Vo3nk",
+          "U97qYFkja8c",
+          "dutNG5SCIis",
+          "ooMKNswME18",
+          "raH3rx2oO9k"
+        ]
+      },
+      {
+        "parent_group_name": "Protein, Supplements and Bodybuilding Nutrition",
+        "parent_group_reason": "A focused sports-nutrition package covering protein, supplements, bodybuilding, and related nutrition.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Protein, supplements and bodybuilding nutrition",
+            "video_ids": [
+              "-fYoE_jIbNU",
+              "3TDm3fmgk3I",
+              "3sZ_a6BL8aE",
+              "4Ddo_rQIC8g",
+              "8hFr16_3cuI",
+              "J-JaGlLiU8k",
+              "Pcd28t9x8w8",
+              "TDv7SVMt-Fw",
+              "TOAaMcVmVOg",
+              "UVHOJM0bdVc",
+              "gVHuh75Xhdw",
+              "gkjA_4GJ93c",
+              "i6aFZgDcm-M",
+              "k1WyIcsM42c",
+              "mGZBVAp883Q",
+              "uIC5GngsSUE",
+              "x3UzDgOrnd8",
+              "zMXQXe03dSI"
+            ]
+          }
+        ],
+        "video_ids": [
+          "-fYoE_jIbNU",
+          "3TDm3fmgk3I",
+          "3sZ_a6BL8aE",
+          "4Ddo_rQIC8g",
+          "8hFr16_3cuI",
+          "J-JaGlLiU8k",
+          "Pcd28t9x8w8",
+          "TDv7SVMt-Fw",
+          "TOAaMcVmVOg",
+          "UVHOJM0bdVc",
+          "gVHuh75Xhdw",
+          "gkjA_4GJ93c",
+          "i6aFZgDcm-M",
+          "k1WyIcsM42c",
+          "mGZBVAp883Q",
+          "uIC5GngsSUE",
+          "x3UzDgOrnd8",
+          "zMXQXe03dSI"
+        ]
+      },
+      {
+        "parent_group_name": "Skin Care, Acne, Pigmentation and Moisturizers",
+        "parent_group_reason": "A focused skin-care package covering acne, pigmentation, moisturizers, and related face-care topics.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Skin care, acne, pigmentation and moisturizers",
+            "video_ids": [
+              "055dZcV9nLs",
+              "1kIVVEeivy0",
+              "4Wd7xjCvUq0",
+              "4tj5I3NsLjE",
+              "9g3cF-DIY_c",
+              "EyKPK1_asSY",
+              "Mqe0NYVQZRY",
+              "Mu3vP4GfRE0",
+              "OnhHNETGc44",
+              "YiPiB7hwxGc",
+              "_kHuBGn5yoQ",
+              "ehCw14qk12c",
+              "gaMrnhFILJc",
+              "jbmpHgVSp6k",
+              "khhA-FiwuGE",
+              "kqD1X1q6suM",
+              "majCZ5SMp7Q",
+              "pskMbM-2QQQ",
+              "urzOFEAZ-2M"
+            ]
+          }
+        ],
+        "video_ids": [
+          "055dZcV9nLs",
+          "1kIVVEeivy0",
+          "4Wd7xjCvUq0",
+          "4tj5I3NsLjE",
+          "9g3cF-DIY_c",
+          "EyKPK1_asSY",
+          "Mqe0NYVQZRY",
+          "Mu3vP4GfRE0",
+          "OnhHNETGc44",
+          "YiPiB7hwxGc",
+          "_kHuBGn5yoQ",
+          "ehCw14qk12c",
+          "gaMrnhFILJc",
+          "jbmpHgVSp6k",
+          "khhA-FiwuGE",
+          "kqD1X1q6suM",
+          "majCZ5SMp7Q",
+          "pskMbM-2QQQ",
+          "urzOFEAZ-2M"
+        ]
+      },
+      {
+        "parent_group_name": "Weight Loss, Metabolism and Weight Gain",
+        "parent_group_reason": "Combines weight-loss/fat-loss/metabolism content with the small weight-gain diet subgroup under body-weight management.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Weight gain diets and meals",
+            "video_ids": [
+              "6saouOhPhMU"
+            ]
+          },
+          {
+            "group_name": "Weight loss, fat loss and metabolism",
+            "video_ids": [
+              "11vCt2JtHeE",
+              "4qqFLcoe3yQ",
+              "4yCvXX-fC3c",
+              "5xjGq6lL4BA",
+              "F4_Ne6re0RA",
+              "GWQu3k9ls3g",
+              "GYYpP8ihJ20",
+              "JaMQfQK1_i8",
+              "JlMtsyXkxQE",
+              "PIws4Rn-mZI",
+              "XB_o_yKvQkI",
+              "YN7kv9j4J_4",
+              "aMheJmu5YfU",
+              "d02j1cBsdDQ",
+              "gjYVS8m91UU",
+              "lYJDlH0CoE4",
+              "o4JWr10bw48",
+              "tLLO3tEMkyk",
+              "zalL4B4FxH0"
+            ]
+          }
+        ],
+        "video_ids": [
+          "6saouOhPhMU",
+          "11vCt2JtHeE",
+          "4qqFLcoe3yQ",
+          "4yCvXX-fC3c",
+          "5xjGq6lL4BA",
+          "F4_Ne6re0RA",
+          "GWQu3k9ls3g",
+          "GYYpP8ihJ20",
+          "JaMQfQK1_i8",
+          "JlMtsyXkxQE",
+          "PIws4Rn-mZI",
+          "XB_o_yKvQkI",
+          "YN7kv9j4J_4",
+          "aMheJmu5YfU",
+          "d02j1cBsdDQ",
+          "gjYVS8m91UU",
+          "lYJDlH0CoE4",
+          "o4JWr10bw48",
+          "tLLO3tEMkyk",
+          "zalL4B4FxH0"
+        ]
+      },
+      {
+        "parent_group_name": "Sexual Health, Women's Health and Body Care",
+        "parent_group_reason": "Combines sexual/reproductive health, periods/PCOS, women's hygiene/personal-safety products, and body-care routines.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Body care and personal routines",
+            "video_ids": [
+              "HLfBMPErl3Q",
+              "NyEOHULKxz4",
+              "SRX5qJTVZMY"
+            ]
+          },
+          {
+            "group_name": "Sexual health, fertility and reproductive myths",
+            "video_ids": [
+              "AJz18CVg9Ww",
+              "ATVyyg74Owc",
+              "Rpj-O4Lk6QI",
+              "WLsl3M26K-I",
+              "dQadi21TIwc"
+            ]
+          },
+          {
+            "group_name": "Women's everyday hygiene and personal-safety products",
+            "video_ids": [
+              "6xvL8oGcF_o"
+            ]
+          },
+          {
+            "group_name": "Women's health, periods and PCOS",
+            "video_ids": [
+              "Ypq6bEh_CnM",
+              "c5iae3FZK_4",
+              "c7jWQZf8jvo",
+              "lGUoBm0FCZQ",
+              "vb9tlrQl5GM",
+              "wY44LKLysHg",
+              "wbRj49wjtF0",
+              "x3MVEwkIQro"
+            ]
+          }
+        ],
+        "video_ids": [
+          "HLfBMPErl3Q",
+          "NyEOHULKxz4",
+          "SRX5qJTVZMY",
+          "AJz18CVg9Ww",
+          "ATVyyg74Owc",
+          "Rpj-O4Lk6QI",
+          "WLsl3M26K-I",
+          "dQadi21TIwc",
+          "6xvL8oGcF_o",
+          "Ypq6bEh_CnM",
+          "c5iae3FZK_4",
+          "c7jWQZf8jvo",
+          "lGUoBm0FCZQ",
+          "vb9tlrQl5GM",
+          "wY44LKLysHg",
+          "wbRj49wjtF0",
+          "x3MVEwkIQro"
+        ]
+      },
+      {
+        "parent_group_name": "Oral Care, Hygiene and Grooming",
+        "parent_group_reason": "A focused package covering oral care, hygiene practices, and grooming products.",
+        "recommended_profile": "FULL_INTELLIGENCE",
+        "topic_subgroups": [
+          {
+            "group_name": "Oral care, hygiene and grooming products",
+            "video_ids": [
+              "-QPF6OezA0Y",
+              "G-lzFmHgoyE",
+              "IA3pZKYB0ew",
+              "OYpXKocfWlU",
+              "QjTxB_hUA9U",
+              "RfinWpg9MYY",
+              "UBZdJR5zEBk",
+              "XCRPbZ_vVb4",
+              "_tSN_1OlcEg",
+              "c6yvIGvLWC8",
+              "ci-uXyWw5R4",
+              "cuMlOIBY7zY",
+              "vqRBCa1Jv4w",
+              "weDmVu1SPuI",
+              "y4HBGiiZpI4",
+              "yAkBZvGijJQ"
+            ]
+          }
+        ],
+        "video_ids": [
+          "-QPF6OezA0Y",
+          "G-lzFmHgoyE",
+          "IA3pZKYB0ew",
+          "OYpXKocfWlU",
+          "QjTxB_hUA9U",
+          "RfinWpg9MYY",
+          "UBZdJR5zEBk",
+          "XCRPbZ_vVb4",
+          "_tSN_1OlcEg",
+          "c6yvIGvLWC8",
+          "ci-uXyWw5R4",
+          "cuMlOIBY7zY",
+          "vqRBCa1Jv4w",
+          "weDmVu1SPuI",
+          "y4HBGiiZpI4",
+          "yAkBZvGijJQ"
+        ]
+      }
+    ],
+    "no_transcript_parent_groups": [
+      {
+        "parent_group_name": "Food, Nutrition and Traditional Health — Metadata Only",
+        "parent_group_reason": "Combines metadata-only Ayurveda, digestion, food habits, food safety, drinks, superfoods, nutrition, produce, vitamins, water, and related diet topics.",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "topic_subgroups": [
+          {
+            "group_name": "Ayurveda, herbs, doshas and traditional remedies",
+            "video_ids": [
+              "Rm0jYmIRN84",
+              "T6oCNc6_-uQ",
+              "zT5c4wpZ2lw"
+            ]
+          },
+          {
+            "group_name": "Digestion, constipation and gut health",
+            "video_ids": [
+              "I940IIine5g"
+            ]
+          },
+          {
+            "group_name": "Disease warning signs and cardiometabolic health",
+            "video_ids": [
+              "O6G0dQummog"
+            ]
+          },
+          {
+            "group_name": "Food habits, meal timing and fasting",
+            "video_ids": [
+              "VVPFk1TIaUc",
+              "y4QdVllbcyg"
+            ]
+          },
+          {
+            "group_name": "Food safety, additives and household exposure",
+            "video_ids": [
+              "m7eC77inRms"
+            ]
+          },
+          {
+            "group_name": "Healthy drinks, shakes and summer beverages",
+            "video_ids": [
+              "a01zsrKBOCU"
+            ]
+          },
+          {
+            "group_name": "Indian superfoods and everyday nutrition",
+            "video_ids": [
+              "Yl_UEHuDMnQ"
+            ]
+          },
+          {
+            "group_name": "Nutrition, grains and traditional foods",
+            "video_ids": [
+              "PRlD8BWLQkQ"
+            ]
+          },
+          {
+            "group_name": "Produce selection, food safety and kitchen risks",
+            "video_ids": [
+              "ci6viCNdAjI"
+            ]
+          },
+          {
+            "group_name": "Vitamins, minerals, immunity and deficiency",
+            "video_ids": [
+              "JZlXdba7ALI",
+              "yGItImUNGWs"
+            ]
+          },
+          {
+            "group_name": "Water, hydration and purifier guidance",
+            "video_ids": [
+              "kmKf4hZJtq0"
+            ]
+          }
+        ],
+        "video_ids": [
+          "Rm0jYmIRN84",
+          "T6oCNc6_-uQ",
+          "zT5c4wpZ2lw",
+          "I940IIine5g",
+          "O6G0dQummog",
+          "VVPFk1TIaUc",
+          "y4QdVllbcyg",
+          "m7eC77inRms",
+          "a01zsrKBOCU",
+          "Yl_UEHuDMnQ",
+          "PRlD8BWLQkQ",
+          "ci6viCNdAjI",
+          "JZlXdba7ALI",
+          "yGItImUNGWs",
+          "kmKf4hZJtq0"
+        ]
+      },
+      {
+        "parent_group_name": "Personal Care and Consumer Product Reviews — Metadata Only",
+        "parent_group_reason": "Combines metadata-only breakfast/product content, hair/scalp care, hair products, misleading marketing, oral care, and packaged-food reviews.",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "topic_subgroups": [
+          {
+            "group_name": "Breakfasts, snacks and quick healthy recipes",
+            "video_ids": [
+              "110G3GvaZns",
+              "RUDi7gf-zF4"
+            ]
+          },
+          {
+            "group_name": "Hair loss, greying and scalp health",
+            "video_ids": [
+              "1rb-RuJjyGo",
+              "Yq0cuX__wck"
+            ]
+          },
+          {
+            "group_name": "Hair oils, shampoos, conditioners and styling",
+            "video_ids": [
+              "NB6hRDVlrK0",
+              "X_CvsRskWeE",
+              "mEqzo69Ka5s"
+            ]
+          },
+          {
+            "group_name": "Misleading food marketing and health-claim reviews",
+            "video_ids": [
+              "IWd6RCyeVCM",
+              "peM93I89TQU"
+            ]
+          },
+          {
+            "group_name": "Oral care, hygiene and grooming products",
+            "video_ids": [
+              "7aV8kApDiGE",
+              "Ke5JKC87qac",
+              "bgx6nHUNILg"
+            ]
+          },
+          {
+            "group_name": "Packaged-food rankings and ingredient comparisons",
+            "video_ids": [
+              "PMtVwDiOcYI",
+              "TmYbdBFxx20",
+              "eb7y1jFXslU",
+              "mUoCyrYfvLY"
+            ]
+          }
+        ],
+        "video_ids": [
+          "110G3GvaZns",
+          "RUDi7gf-zF4",
+          "1rb-RuJjyGo",
+          "Yq0cuX__wck",
+          "NB6hRDVlrK0",
+          "X_CvsRskWeE",
+          "mEqzo69Ka5s",
+          "IWd6RCyeVCM",
+          "peM93I89TQU",
+          "7aV8kApDiGE",
+          "Ke5JKC87qac",
+          "bgx6nHUNILg",
+          "PMtVwDiOcYI",
+          "TmYbdBFxx20",
+          "eb7y1jFXslU",
+          "mUoCyrYfvLY"
+        ]
+      },
+      {
+        "parent_group_name": "Fitness, Sports Nutrition and Reproductive Health — Metadata Only",
+        "parent_group_reason": "Combines metadata-only home workouts, targeted strength, protein/sports nutrition, sexual health, and skin/body-health topics.",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "topic_subgroups": [
+          {
+            "group_name": "Full-body, cardio and general home workouts",
+            "video_ids": [
+              "1kDDmIWz15g",
+              "9JSHsY0-2-M",
+              "OZG38G2DQtY",
+              "m7PzICujjbc",
+              "ouneTsdk46w",
+              "qnNOpRYmCNo"
+            ]
+          },
+          {
+            "group_name": "Protein, supplements and bodybuilding nutrition",
+            "video_ids": [
+              "d40K62Iqnfk",
+              "vmnns9LDyHU",
+              "zpz4Bek2q3w"
+            ]
+          },
+          {
+            "group_name": "Sexual health, fertility and reproductive myths",
+            "video_ids": [
+              "7q9n2vzTLzU",
+              "AQv0tS8Qw80",
+              "s1pTXbpnefk"
+            ]
+          },
+          {
+            "group_name": "Skin care, acne, pigmentation and moisturizers",
+            "video_ids": [
+              "BHgT6Fk-pRY",
+              "TPP-TeV0BDU",
+              "nzycj3Y6-sk"
+            ]
+          },
+          {
+            "group_name": "Targeted bodyweight strength workouts",
+            "video_ids": [
+              "BcRz4VIxQeo",
+              "t99TxDBwUCM"
+            ]
+          }
+        ],
+        "video_ids": [
+          "1kDDmIWz15g",
+          "9JSHsY0-2-M",
+          "OZG38G2DQtY",
+          "m7PzICujjbc",
+          "ouneTsdk46w",
+          "qnNOpRYmCNo",
+          "d40K62Iqnfk",
+          "vmnns9LDyHU",
+          "zpz4Bek2q3w",
+          "7q9n2vzTLzU",
+          "AQv0tS8Qw80",
+          "s1pTXbpnefk",
+          "BHgT6Fk-pRY",
+          "TPP-TeV0BDU",
+          "nzycj3Y6-sk",
+          "BcRz4VIxQeo",
+          "t99TxDBwUCM"
+        ]
+      },
+      {
+        "parent_group_name": "Entertainment, Motivation, Sleep and Eye Wellness — Metadata Only",
+        "parent_group_reason": "Combines metadata-only entertainment/lore with motivation, sleep/mind wellness, and eye-care content as a broader leisure-and-wellness planning cohort.",
+        "recommended_profile": "NO_TRANSCRIPT_METADATA",
+        "topic_subgroups": [
+          {
+            "group_name": "Eye health and screen-strain care",
+            "video_ids": [
+              "3QDxwMk0FRQ"
+            ]
+          },
+          {
+            "group_name": "Films, trailers and entertainment stories",
+            "video_ids": [
+              "KJ-SpnhUURc",
+              "Zr1SWGrQTIc"
+            ]
+          },
+          {
+            "group_name": "Game of Thrones and Westeros lore",
+            "video_ids": [
+              "4-H-2Szx03Y",
+              "F6quZ0hNV9w",
+              "HWFFFrW4aZY",
+              "h9buAlUNQNo",
+              "vbKz95gdWiA"
+            ]
+          },
+          {
+            "group_name": "Motivation, habits and mind wellness",
+            "video_ids": [
+              "GMKDcbv6wJs",
+              "azsMvdSI3cU",
+              "lh5dsxZ0scc",
+              "mVUtchpU6nY",
+              "vuk3HX4HgwE"
+            ]
+          },
+          {
+            "group_name": "Sleep, meditation and mental wellness",
+            "video_ids": [
+              "7ArZ9GK4AIQ",
+              "OJfH0j6iF8I"
+            ]
+          }
+        ],
+        "video_ids": [
+          "3QDxwMk0FRQ",
+          "KJ-SpnhUURc",
+          "Zr1SWGrQTIc",
+          "4-H-2Szx03Y",
+          "F6quZ0hNV9w",
+          "HWFFFrW4aZY",
+          "h9buAlUNQNo",
+          "vbKz95gdWiA",
+          "GMKDcbv6wJs",
+          "azsMvdSI3cU",
+          "lh5dsxZ0scc",
+          "mVUtchpU6nY",
+          "vuk3HX4HgwE",
+          "7ArZ9GK4AIQ",
+          "OJfH0j6iF8I"
+        ]
+      }
+    ]
+  },
+  "batch_count": 20,
+  "package_id_index": [
+    {
+      "package_id": "vh_full_intelligence_20260906_155936_06618e",
+      "package_number": 1,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Creator Workflows, DIY and Entertainment",
+      "video_ids": [
+        "-wJpoCmMcCY",
+        "31bZOIk53_I",
+        "IiOKhg4RUrw",
+        "QucgvbO5gsM",
+        "SDJD85dLWwk",
+        "TazjcZrTl7Y",
+        "V_t51u1tBJc",
+        "_9YXliQTAkg",
+        "_uLdo-Buoz8",
+        "kYPAlvnRiiI",
+        "qJkC05DjVlA",
+        "CgEs12XWwaQ",
+        "IzrVhjZiy2M",
+        "me7i3OmFTIc",
+        "xJNX3sF3fL0",
+        "Mf0nw5Dlb8Y",
+        "O-v38a14cA0",
+        "Ua0VBPXN5j8"
+      ],
+      "video_count": 18,
+      "transcript_chars": 205559,
+      "split_reason": "parent_group_package_boundary"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155938_7d2bee",
+      "package_number": 2,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Creator Workflows, DIY and Entertainment",
+      "video_ids": [
+        "VtUxnAj5HsI",
+        "jN6m8o6XWJ4",
+        "s1lSPL9nVxU",
+        "EExc6X58BTU",
+        "QC10nmqfekc",
+        "jh8RZtwo6Fc",
+        "n-YuK_bV8kw"
+      ],
+      "video_count": 7,
+      "transcript_chars": 103202,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155939_00ce0e",
+      "package_number": 3,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Ayurveda, Herbs and Traditional Remedies",
+      "video_ids": [
+        "2-QNs0K8jqs",
+        "34F9MqgQhxg",
+        "3IYM8K9ZtWw",
+        "4V2-onCssQQ",
+        "92MmoC7mtSc",
+        "9vPN-xBfNC8",
+        "Krf7Vmsf2M0",
+        "NkdZ_N1mmjI",
+        "QhEE0EmhOaU",
+        "Tt-6djN5YvM",
+        "UWCf9pDTmJI",
+        "Vw5kOT9ocjk",
+        "WUWdVtbZrLQ",
+        "WYt9VnY6PmY",
+        "cLh2VdPBWSM",
+        "l5RZZe4h7T0",
+        "oQjbkYD28jQ",
+        "ogHiefVlTaM",
+        "qnTc5WeBamo",
+        "ucOmGiNg1kg",
+        "wtVsFfFeYNs",
+        "y0GFbd_uOwI"
+      ],
+      "video_count": 22,
+      "transcript_chars": 189931,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155940_e808fe",
+      "package_number": 4,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Home Fitness, Strength, Mobility and Body Composition",
+      "video_ids": [
+        "iUY-JJUueqI",
+        "AzV3EA-1-yM",
+        "BPHMxr51VQE",
+        "BbWmzx8JpAY",
+        "PPBZcXyhH_M",
+        "TIEZQWSMfUM",
+        "Y2L2kBthqNE",
+        "_d1VU6A5Cd4",
+        "cO8cccJkQ1c",
+        "dAqQqmaI9vY",
+        "iOgbAm4hbDo",
+        "qiwb7zGy-34",
+        "s6r_9Pznkco",
+        "tamUJ23i33k",
+        "70zlJUqOwnQ",
+        "9BQ40Q8l7ek",
+        "9sYLPCmOyQI",
+        "GYHM2df0DGQ",
+        "e9iTLyPLb8U",
+        "-Re6Mk--uxw",
+        "1FU6KwaSw0E",
+        "UnjiirIHTYU",
+        "_mUsMQL8DuA",
+        "pYHakKTMa0s",
+        "tbT8N23qczw"
+      ],
+      "video_count": 25,
+      "transcript_chars": 170864,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155942_5d560b",
+      "package_number": 5,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Mind Wellness, Lifestyle Habits, Sleep and Yoga",
+      "video_ids": [
+        "5vCeJpPnBnM",
+        "A-VJ4_6Y9Cc",
+        "ANvmzG8YFtA",
+        "BtPEpEeAPI8",
+        "MCD5xGPsnHg",
+        "P1Gd0JJoRO4",
+        "1Zgnl189KcM",
+        "KAZqPIvQT2c",
+        "Lg1wRs5Wb90",
+        "dkeHhKP7vR0",
+        "ggNxHVqNwGw",
+        "j_sTk4JdQpY",
+        "nVqguQH45gw",
+        "qBGy1ibJrRc",
+        "8enq8pzdQI0",
+        "LpIgf_2Yi2c",
+        "RUIi4c09HE0",
+        "Qev0A0iUzbo",
+        "k77F184hi5g",
+        "lNvBXLbInXE",
+        "s2NQhpFGIOg",
+        "xRppi-Ezowg"
+      ],
+      "video_count": 22,
+      "transcript_chars": 181530,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155944_4dea8f",
+      "package_number": 6,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "video_ids": [
+        "0ZnNOVzYY3Q",
+        "0aBAqHcHpu8",
+        "6ZUFT0CwU1w",
+        "7F6PRVqNna8",
+        "F31ErEAoXnc",
+        "GYAM59KENZo",
+        "JlD_ALoujtM",
+        "LcjxB_yO3to",
+        "bcZ9_kClq6I",
+        "dE4i4LUq2R4",
+        "8zl7lF4Mb5E",
+        "F4wUMbrUR78",
+        "L9H16WSFF-U",
+        "SBVkI7tAUm4",
+        "SHICcnohvTE",
+        "up1fvFIecWw",
+        "K813P2p0IU0",
+        "Kkn_u1gK1kw",
+        "s7tEurbw1zU",
+        "sCOyx-Wglss",
+        "px7qgNyf7kM"
+      ],
+      "video_count": 21,
+      "transcript_chars": 239886,
+      "split_reason": "parent_group_package_boundary"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+      "package_number": 7,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "video_ids": [
+        "BEzASBGeEIM"
+      ],
+      "video_count": 1,
+      "transcript_chars": 10676,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155946_79f370",
+      "package_number": 8,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Healthy Recipes and Homemade Pantry Foods",
+      "video_ids": [
+        "-X5j5EBLNv8",
+        "BCuD36zzimU",
+        "PtSjjISiSs0",
+        "d4vAv6CG7M0",
+        "ee0SfGSJOTc",
+        "g4GSHgFfaMA",
+        "hLrny7Xjy2g",
+        "jwmNjJgZanM",
+        "pIf_TK2JC9M",
+        "zeqeWQb9FCY",
+        "0mrrZYTvQ44",
+        "5qgREntrTXs",
+        "65A_lShqZA8",
+        "DujE3X1X4Yg",
+        "IFRaJrS0Qyo",
+        "MLcQ0yIGq1c",
+        "STwFTUM0EHs",
+        "V8zN8saFXMQ",
+        "bHzxdWpWhW4",
+        "e2JiidC3qO4",
+        "mbo5wXh1lWE",
+        "r-zlwA_Pk84",
+        "xfNY-0EItDs"
+      ],
+      "video_count": 23,
+      "transcript_chars": 184511,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155948_ba9b09",
+      "package_number": 9,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Food Safety, Produce and Kitchen Risks",
+      "video_ids": [
+        "6YXPuEL-ti4",
+        "6rVeXkayn8Q",
+        "6vgcPkuQOpU",
+        "8ToYJycXw0I",
+        "Hk4Zhx0M0PE",
+        "UgIfDo9e_Jk",
+        "vTYuNp7wq10",
+        "Fw1HKAOyO54",
+        "N_dVcI5p5ck",
+        "Qn2AjYZZo-8",
+        "WJ2xwLRI3pE",
+        "_eljsPT1Qws",
+        "_urKrTNH5G0",
+        "dtP8pTwQgc8",
+        "gcNGaTYwA3I",
+        "xnu-7K-IikM"
+      ],
+      "video_count": 16,
+      "transcript_chars": 150078,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155950_7f3512",
+      "package_number": 10,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Traditional Foods, Indian Nutrition and Product Reviews",
+      "video_ids": [
+        "09W4jwgSHzI",
+        "AKGDDwnVAHg",
+        "MJcM3baHkqg",
+        "MdTfLzT5FZw",
+        "RWRDGnsQX_k",
+        "_3beJopLD2Y",
+        "ypkpJRyxgxE",
+        "VK-G0vkfqOQ",
+        "XctGOSf08js",
+        "Z8dAhgsHwQg",
+        "bRsQuDUnU4g",
+        "7RW1u-TddDU",
+        "DXPUWbJgmLE",
+        "SKhSKH_LHN4",
+        "SZmNa9931eA",
+        "UposRQt67Dg",
+        "fb5gHqmreas",
+        "w0kOxvV26cw"
+      ],
+      "video_count": 18,
+      "transcript_chars": 195211,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155951_a4aa36",
+      "package_number": 11,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Health Warning Signs, Deficiencies and Everyday Guidance",
+      "video_ids": [
+        "2e-Z0-hjq8Y",
+        "7YwsUAcMX60",
+        "Qd_SOd9RAeg",
+        "RLg1hrKZ5FA",
+        "YQsQjFO0uBk",
+        "mVWSWc--zGE",
+        "vSVeEsjkito",
+        "utoB7wXrmHY",
+        "AeNU-BqwWvE",
+        "TSyg05S-5-I",
+        "oeBNmD1iwDo",
+        "rEPsDiWn9O0",
+        "3QtWquq6yEA",
+        "T6qnwU16Y48",
+        "Tl13Z42277s",
+        "hfAzwS79PXE",
+        "i7aidpUwGC4",
+        "s5by_uGGkX0",
+        "3i_Xl-JYx_Q",
+        "4sOMfEAqzEg",
+        "pFjyrjw5HPc",
+        "pQ5OQRqOer8",
+        "yu4rbnEk6BU"
+      ],
+      "video_count": 23,
+      "transcript_chars": 240553,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155953_1a775a",
+      "package_number": 12,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Hair Loss, Scalp Health and Hair-Care Products",
+      "video_ids": [
+        "0FdtR6dRyBw",
+        "6C3kt88ECSo",
+        "8Pen8O8RrzQ",
+        "BNDrajnXIko",
+        "hMA8FaDd_Oc",
+        "pCaz06psb0s",
+        "z3LlqXNZe2s",
+        "2ruV2AQrCSw",
+        "3_h29kEU7dE",
+        "7xsxMUFgNt8",
+        "BvYwa6u0WLI",
+        "_u6yrYAP_7w",
+        "hLCvr7HHJNs",
+        "joav_O3pupo",
+        "lsY_Llt59x0",
+        "nwWJsUqtzcY",
+        "qfB7tnJ-kRI",
+        "r-DIv65zHwY",
+        "tbO66nDf7r8"
+      ],
+      "video_count": 19,
+      "transcript_chars": 188510,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155955_69565e",
+      "package_number": 13,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Packaged-Food Rankings and Ingredient Comparisons",
+      "video_ids": [
+        "0HgLywUBhzI",
+        "7j_XpLlh3GE",
+        "9lrdgOiWmdA",
+        "AxMQw7Q9ou0",
+        "BgMP3Bx1q10",
+        "Ih5FtGD_Ofo",
+        "JhaFxsMp1sQ",
+        "OVAQXdFza54",
+        "POKzKwFqaNE",
+        "SlGIjCPlWF0",
+        "SobRqlT0pOM",
+        "YHdxBff_M6k",
+        "fKxmRoD3_y4",
+        "hRdUnvkmaF4",
+        "lCSgRPINplc",
+        "moZjGDwG5UU",
+        "pOBWgUhRLCo",
+        "pqoz66rf7gE",
+        "raMWkXbDU2A",
+        "sgAhnEhOq30"
+      ],
+      "video_count": 20,
+      "transcript_chars": 207015,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155957_4ed24f",
+      "package_number": 14,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Game of Thrones and Westeros Lore",
+      "video_ids": [
+        "1tjf8ULIWzM",
+        "4aGAPBS5AmM",
+        "8mgtXYMPWV4",
+        "CJ95UDhwO0g",
+        "CkPbJ8Wwtgc",
+        "FT01_aAaAvQ",
+        "Jazy2Fr4K2o",
+        "LGLrGhsYE5M",
+        "PTtJJ5k0VHI",
+        "QjFLMxSbdJQ",
+        "SAZotzpq8No",
+        "VriBoTeMByk",
+        "WxQ-FVRVuaI",
+        "aW816rEx_WQ",
+        "h4hbLS1BTqA",
+        "vNNLOx-TjH0"
+      ],
+      "video_count": 16,
+      "transcript_chars": 99436,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155957_80d226",
+      "package_number": 15,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Public Affairs, Consumer Claims and Accountability",
+      "video_ids": [
+        "8SJhgzx5DVM",
+        "P9LW2lwgYiQ",
+        "SrfvgMH1NmY",
+        "w1c9JhNYyRA",
+        "j8HApM9L0ss",
+        "-9t8G3r8HrA",
+        "qOmM94CvOLs",
+        "xYah1XWcm4s",
+        "4nvkTCfYxBo",
+        "IOMnLG-9jzs",
+        "JUMO3rk8GrY",
+        "N7yf7zQyBHk",
+        "NWkJ72Vo3nk",
+        "U97qYFkja8c",
+        "dutNG5SCIis",
+        "ooMKNswME18",
+        "raH3rx2oO9k"
+      ],
+      "video_count": 17,
+      "transcript_chars": 148469,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_155959_c4019c",
+      "package_number": 16,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Protein, Supplements and Bodybuilding Nutrition",
+      "video_ids": [
+        "-fYoE_jIbNU",
+        "3TDm3fmgk3I",
+        "3sZ_a6BL8aE",
+        "4Ddo_rQIC8g",
+        "8hFr16_3cuI",
+        "J-JaGlLiU8k",
+        "Pcd28t9x8w8",
+        "TDv7SVMt-Fw",
+        "TOAaMcVmVOg",
+        "UVHOJM0bdVc",
+        "gVHuh75Xhdw",
+        "gkjA_4GJ93c",
+        "i6aFZgDcm-M",
+        "k1WyIcsM42c",
+        "mGZBVAp883Q",
+        "uIC5GngsSUE",
+        "x3UzDgOrnd8",
+        "zMXQXe03dSI"
+      ],
+      "video_count": 18,
+      "transcript_chars": 143338,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_160000_d1572d",
+      "package_number": 17,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Skin Care, Acne, Pigmentation and Moisturizers",
+      "video_ids": [
+        "055dZcV9nLs",
+        "1kIVVEeivy0",
+        "4Wd7xjCvUq0",
+        "4tj5I3NsLjE",
+        "9g3cF-DIY_c",
+        "EyKPK1_asSY",
+        "Mqe0NYVQZRY",
+        "Mu3vP4GfRE0",
+        "OnhHNETGc44",
+        "YiPiB7hwxGc",
+        "_kHuBGn5yoQ",
+        "ehCw14qk12c",
+        "gaMrnhFILJc",
+        "jbmpHgVSp6k",
+        "khhA-FiwuGE",
+        "kqD1X1q6suM",
+        "majCZ5SMp7Q",
+        "pskMbM-2QQQ",
+        "urzOFEAZ-2M"
+      ],
+      "video_count": 19,
+      "transcript_chars": 182435,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_160002_2be3aa",
+      "package_number": 18,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Weight Loss, Metabolism and Weight Gain",
+      "video_ids": [
+        "6saouOhPhMU",
+        "11vCt2JtHeE",
+        "4qqFLcoe3yQ",
+        "4yCvXX-fC3c",
+        "5xjGq6lL4BA",
+        "F4_Ne6re0RA",
+        "GWQu3k9ls3g",
+        "GYYpP8ihJ20",
+        "JaMQfQK1_i8",
+        "JlMtsyXkxQE",
+        "PIws4Rn-mZI",
+        "XB_o_yKvQkI",
+        "YN7kv9j4J_4",
+        "aMheJmu5YfU",
+        "d02j1cBsdDQ",
+        "gjYVS8m91UU",
+        "lYJDlH0CoE4",
+        "o4JWr10bw48",
+        "tLLO3tEMkyk",
+        "zalL4B4FxH0"
+      ],
+      "video_count": 20,
+      "transcript_chars": 177313,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_160003_e16f85",
+      "package_number": 19,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Sexual Health, Women's Health and Body Care",
+      "video_ids": [
+        "HLfBMPErl3Q",
+        "NyEOHULKxz4",
+        "SRX5qJTVZMY",
+        "AJz18CVg9Ww",
+        "ATVyyg74Owc",
+        "Rpj-O4Lk6QI",
+        "WLsl3M26K-I",
+        "dQadi21TIwc",
+        "6xvL8oGcF_o",
+        "Ypq6bEh_CnM",
+        "c5iae3FZK_4",
+        "c7jWQZf8jvo",
+        "lGUoBm0FCZQ",
+        "vb9tlrQl5GM",
+        "wY44LKLysHg",
+        "wbRj49wjtF0",
+        "x3MVEwkIQro"
+      ],
+      "video_count": 17,
+      "transcript_chars": 141152,
+      "split_reason": "parent_group"
+    },
+    {
+      "package_id": "vh_full_intelligence_20260906_160005_5981e9",
+      "package_number": 20,
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Oral Care, Hygiene and Grooming",
+      "video_ids": [
+        "-QPF6OezA0Y",
+        "G-lzFmHgoyE",
+        "IA3pZKYB0ew",
+        "OYpXKocfWlU",
+        "QjTxB_hUA9U",
+        "RfinWpg9MYY",
+        "UBZdJR5zEBk",
+        "XCRPbZ_vVb4",
+        "_tSN_1OlcEg",
+        "c6yvIGvLWC8",
+        "ci-uXyWw5R4",
+        "cuMlOIBY7zY",
+        "vqRBCa1Jv4w",
+        "weDmVu1SPuI",
+        "y4HBGiiZpI4",
+        "yAkBZvGijJQ"
+      ],
+      "video_count": 16,
+      "transcript_chars": 157284,
+      "split_reason": "parent_group"
+    }
+  ],
+  "instructions": "Master modular sequential grouped mode: upload each package's single CHATGPT_PACKAGE.json file in a fresh ChatGPT chat. When a validated planner supplies parent_groups, VideoHoarder creates one package per parent group, not one package per small topic subgroup. Only transcript/SRT-backed videos are packaged in compact mode. Each package embeds VIDEO_LIBRARY_MASTER_PROMPT_MODULAR_SEQUENTIAL.md as master_prompt_exact and instructs ChatGPT to follow it as authoritative. Viewer-comment intelligence is excluded because that master prompt says not to use comments for transcript analysis. Adaptive batching uses the master prompt standard of up to 25 similar-topic videos per package, with transcript character count as the real safety limit.",
+  "batches": [
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Creator Workflows, DIY and Entertainment",
+      "number": 1,
+      "package_number": 1,
+      "package_id": "vh_full_intelligence_20260906_155936_06618e",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155936_06618e",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155936_06618e\\CHATGPT_PACKAGE.json",
+      "video_count": 18,
+      "video_ids": [
+        "-wJpoCmMcCY",
+        "31bZOIk53_I",
+        "IiOKhg4RUrw",
+        "QucgvbO5gsM",
+        "SDJD85dLWwk",
+        "TazjcZrTl7Y",
+        "V_t51u1tBJc",
+        "_9YXliQTAkg",
+        "_uLdo-Buoz8",
+        "kYPAlvnRiiI",
+        "qJkC05DjVlA",
+        "CgEs12XWwaQ",
+        "IzrVhjZiy2M",
+        "me7i3OmFTIc",
+        "xJNX3sF3fL0",
+        "Mf0nw5Dlb8Y",
+        "O-v38a14cA0",
+        "Ua0VBPXN5j8"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 205559,
+      "split_reason": "parent_group_package_boundary",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 12,
+        "E": 3,
+        "D": 3
+      },
+      "evidence_by_video": {
+        "-wJpoCmMcCY": "A",
+        "31bZOIk53_I": "A",
+        "CgEs12XWwaQ": "A",
+        "IiOKhg4RUrw": "A",
+        "IzrVhjZiy2M": "E",
+        "Mf0nw5Dlb8Y": "E",
+        "O-v38a14cA0": "E",
+        "QucgvbO5gsM": "A",
+        "SDJD85dLWwk": "A",
+        "TazjcZrTl7Y": "A",
+        "Ua0VBPXN5j8": "D",
+        "V_t51u1tBJc": "A",
+        "_9YXliQTAkg": "A",
+        "_uLdo-Buoz8": "A",
+        "kYPAlvnRiiI": "A",
+        "me7i3OmFTIc": "A",
+        "qJkC05DjVlA": "D",
+        "xJNX3sF3fL0": "D"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Creator Workflows, DIY and Entertainment",
+      "number": 2,
+      "package_number": 2,
+      "package_id": "vh_full_intelligence_20260906_155938_7d2bee",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155938_7d2bee",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155938_7d2bee\\CHATGPT_PACKAGE.json",
+      "video_count": 7,
+      "video_ids": [
+        "VtUxnAj5HsI",
+        "jN6m8o6XWJ4",
+        "s1lSPL9nVxU",
+        "EExc6X58BTU",
+        "QC10nmqfekc",
+        "jh8RZtwo6Fc",
+        "n-YuK_bV8kw"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 103202,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 3,
+        "E": 3,
+        "D": 1
+      },
+      "evidence_by_video": {
+        "EExc6X58BTU": "A",
+        "QC10nmqfekc": "A",
+        "VtUxnAj5HsI": "E",
+        "jN6m8o6XWJ4": "E",
+        "jh8RZtwo6Fc": "D",
+        "n-YuK_bV8kw": "A",
+        "s1lSPL9nVxU": "E"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Ayurveda, Herbs and Traditional Remedies",
+      "number": 3,
+      "package_number": 3,
+      "package_id": "vh_full_intelligence_20260906_155939_00ce0e",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155939_00ce0e",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155939_00ce0e\\CHATGPT_PACKAGE.json",
+      "video_count": 22,
+      "video_ids": [
+        "2-QNs0K8jqs",
+        "34F9MqgQhxg",
+        "3IYM8K9ZtWw",
+        "4V2-onCssQQ",
+        "92MmoC7mtSc",
+        "9vPN-xBfNC8",
+        "Krf7Vmsf2M0",
+        "NkdZ_N1mmjI",
+        "QhEE0EmhOaU",
+        "Tt-6djN5YvM",
+        "UWCf9pDTmJI",
+        "Vw5kOT9ocjk",
+        "WUWdVtbZrLQ",
+        "WYt9VnY6PmY",
+        "cLh2VdPBWSM",
+        "l5RZZe4h7T0",
+        "oQjbkYD28jQ",
+        "ogHiefVlTaM",
+        "qnTc5WeBamo",
+        "ucOmGiNg1kg",
+        "wtVsFfFeYNs",
+        "y0GFbd_uOwI"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 189931,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 18,
+        "E": 1,
+        "D": 2,
+        "B": 1
+      },
+      "evidence_by_video": {
+        "2-QNs0K8jqs": "A",
+        "34F9MqgQhxg": "A",
+        "3IYM8K9ZtWw": "A",
+        "4V2-onCssQQ": "A",
+        "92MmoC7mtSc": "A",
+        "9vPN-xBfNC8": "A",
+        "Krf7Vmsf2M0": "A",
+        "NkdZ_N1mmjI": "A",
+        "QhEE0EmhOaU": "A",
+        "Tt-6djN5YvM": "A",
+        "UWCf9pDTmJI": "E",
+        "Vw5kOT9ocjk": "D",
+        "WUWdVtbZrLQ": "A",
+        "WYt9VnY6PmY": "B",
+        "cLh2VdPBWSM": "A",
+        "l5RZZe4h7T0": "A",
+        "oQjbkYD28jQ": "D",
+        "ogHiefVlTaM": "A",
+        "qnTc5WeBamo": "A",
+        "ucOmGiNg1kg": "A",
+        "wtVsFfFeYNs": "A",
+        "y0GFbd_uOwI": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Home Fitness, Strength, Mobility and Body Composition",
+      "number": 4,
+      "package_number": 4,
+      "package_id": "vh_full_intelligence_20260906_155940_e808fe",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155940_e808fe",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155940_e808fe\\CHATGPT_PACKAGE.json",
+      "video_count": 25,
+      "video_ids": [
+        "iUY-JJUueqI",
+        "AzV3EA-1-yM",
+        "BPHMxr51VQE",
+        "BbWmzx8JpAY",
+        "PPBZcXyhH_M",
+        "TIEZQWSMfUM",
+        "Y2L2kBthqNE",
+        "_d1VU6A5Cd4",
+        "cO8cccJkQ1c",
+        "dAqQqmaI9vY",
+        "iOgbAm4hbDo",
+        "qiwb7zGy-34",
+        "s6r_9Pznkco",
+        "tamUJ23i33k",
+        "70zlJUqOwnQ",
+        "9BQ40Q8l7ek",
+        "9sYLPCmOyQI",
+        "GYHM2df0DGQ",
+        "e9iTLyPLb8U",
+        "-Re6Mk--uxw",
+        "1FU6KwaSw0E",
+        "UnjiirIHTYU",
+        "_mUsMQL8DuA",
+        "pYHakKTMa0s",
+        "tbT8N23qczw"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 170864,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "D": 7,
+        "A": 15,
+        "B": 3
+      },
+      "evidence_by_video": {
+        "-Re6Mk--uxw": "D",
+        "1FU6KwaSw0E": "A",
+        "70zlJUqOwnQ": "B",
+        "9BQ40Q8l7ek": "A",
+        "9sYLPCmOyQI": "A",
+        "AzV3EA-1-yM": "A",
+        "BPHMxr51VQE": "A",
+        "BbWmzx8JpAY": "B",
+        "GYHM2df0DGQ": "A",
+        "PPBZcXyhH_M": "A",
+        "TIEZQWSMfUM": "B",
+        "UnjiirIHTYU": "A",
+        "Y2L2kBthqNE": "A",
+        "_d1VU6A5Cd4": "D",
+        "_mUsMQL8DuA": "A",
+        "cO8cccJkQ1c": "A",
+        "dAqQqmaI9vY": "D",
+        "e9iTLyPLb8U": "A",
+        "iOgbAm4hbDo": "A",
+        "iUY-JJUueqI": "A",
+        "pYHakKTMa0s": "D",
+        "qiwb7zGy-34": "D",
+        "s6r_9Pznkco": "A",
+        "tamUJ23i33k": "D",
+        "tbT8N23qczw": "D"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Mind Wellness, Lifestyle Habits, Sleep and Yoga",
+      "number": 5,
+      "package_number": 5,
+      "package_id": "vh_full_intelligence_20260906_155942_5d560b",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155942_5d560b",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155942_5d560b\\CHATGPT_PACKAGE.json",
+      "video_count": 22,
+      "video_ids": [
+        "5vCeJpPnBnM",
+        "A-VJ4_6Y9Cc",
+        "ANvmzG8YFtA",
+        "BtPEpEeAPI8",
+        "MCD5xGPsnHg",
+        "P1Gd0JJoRO4",
+        "1Zgnl189KcM",
+        "KAZqPIvQT2c",
+        "Lg1wRs5Wb90",
+        "dkeHhKP7vR0",
+        "ggNxHVqNwGw",
+        "j_sTk4JdQpY",
+        "nVqguQH45gw",
+        "qBGy1ibJrRc",
+        "8enq8pzdQI0",
+        "LpIgf_2Yi2c",
+        "RUIi4c09HE0",
+        "Qev0A0iUzbo",
+        "k77F184hi5g",
+        "lNvBXLbInXE",
+        "s2NQhpFGIOg",
+        "xRppi-Ezowg"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 181530,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "D": 3,
+        "B": 4,
+        "A": 15
+      },
+      "evidence_by_video": {
+        "1Zgnl189KcM": "D",
+        "5vCeJpPnBnM": "B",
+        "8enq8pzdQI0": "A",
+        "A-VJ4_6Y9Cc": "B",
+        "ANvmzG8YFtA": "A",
+        "BtPEpEeAPI8": "A",
+        "KAZqPIvQT2c": "B",
+        "Lg1wRs5Wb90": "A",
+        "LpIgf_2Yi2c": "A",
+        "MCD5xGPsnHg": "A",
+        "P1Gd0JJoRO4": "A",
+        "Qev0A0iUzbo": "A",
+        "RUIi4c09HE0": "A",
+        "dkeHhKP7vR0": "D",
+        "ggNxHVqNwGw": "B",
+        "j_sTk4JdQpY": "A",
+        "k77F184hi5g": "A",
+        "lNvBXLbInXE": "A",
+        "nVqguQH45gw": "D",
+        "qBGy1ibJrRc": "A",
+        "s2NQhpFGIOg": "A",
+        "xRppi-Ezowg": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "number": 6,
+      "package_number": 6,
+      "package_id": "vh_full_intelligence_20260906_155944_4dea8f",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155944_4dea8f",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155944_4dea8f\\CHATGPT_PACKAGE.json",
+      "video_count": 21,
+      "video_ids": [
+        "0ZnNOVzYY3Q",
+        "0aBAqHcHpu8",
+        "6ZUFT0CwU1w",
+        "7F6PRVqNna8",
+        "F31ErEAoXnc",
+        "GYAM59KENZo",
+        "JlD_ALoujtM",
+        "LcjxB_yO3to",
+        "bcZ9_kClq6I",
+        "dE4i4LUq2R4",
+        "8zl7lF4Mb5E",
+        "F4wUMbrUR78",
+        "L9H16WSFF-U",
+        "SBVkI7tAUm4",
+        "SHICcnohvTE",
+        "up1fvFIecWw",
+        "K813P2p0IU0",
+        "Kkn_u1gK1kw",
+        "s7tEurbw1zU",
+        "sCOyx-Wglss",
+        "px7qgNyf7kM"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 239886,
+      "split_reason": "parent_group_package_boundary",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 12,
+        "D": 9
+      },
+      "evidence_by_video": {
+        "0ZnNOVzYY3Q": "A",
+        "0aBAqHcHpu8": "D",
+        "6ZUFT0CwU1w": "A",
+        "7F6PRVqNna8": "A",
+        "8zl7lF4Mb5E": "D",
+        "F31ErEAoXnc": "D",
+        "F4wUMbrUR78": "A",
+        "GYAM59KENZo": "A",
+        "JlD_ALoujtM": "A",
+        "K813P2p0IU0": "D",
+        "Kkn_u1gK1kw": "A",
+        "L9H16WSFF-U": "D",
+        "LcjxB_yO3to": "A",
+        "SBVkI7tAUm4": "A",
+        "SHICcnohvTE": "D",
+        "bcZ9_kClq6I": "A",
+        "dE4i4LUq2R4": "A",
+        "px7qgNyf7kM": "D",
+        "s7tEurbw1zU": "D",
+        "sCOyx-Wglss": "A",
+        "up1fvFIecWw": "D"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Digestion, Eating Patterns and Practical Diets",
+      "number": 7,
+      "package_number": 7,
+      "package_id": "vh_full_intelligence_20260906_155946_3098ae",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155946_3098ae",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155946_3098ae\\CHATGPT_PACKAGE.json",
+      "video_count": 1,
+      "video_ids": [
+        "BEzASBGeEIM"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 10676,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 1
+      },
+      "evidence_by_video": {
+        "BEzASBGeEIM": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Healthy Recipes and Homemade Pantry Foods",
+      "number": 8,
+      "package_number": 8,
+      "package_id": "vh_full_intelligence_20260906_155946_79f370",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155946_79f370",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155946_79f370\\CHATGPT_PACKAGE.json",
+      "video_count": 23,
+      "video_ids": [
+        "-X5j5EBLNv8",
+        "BCuD36zzimU",
+        "PtSjjISiSs0",
+        "d4vAv6CG7M0",
+        "ee0SfGSJOTc",
+        "g4GSHgFfaMA",
+        "hLrny7Xjy2g",
+        "jwmNjJgZanM",
+        "pIf_TK2JC9M",
+        "zeqeWQb9FCY",
+        "0mrrZYTvQ44",
+        "5qgREntrTXs",
+        "65A_lShqZA8",
+        "DujE3X1X4Yg",
+        "IFRaJrS0Qyo",
+        "MLcQ0yIGq1c",
+        "STwFTUM0EHs",
+        "V8zN8saFXMQ",
+        "bHzxdWpWhW4",
+        "e2JiidC3qO4",
+        "mbo5wXh1lWE",
+        "r-zlwA_Pk84",
+        "xfNY-0EItDs"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 184511,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 14,
+        "B": 4,
+        "D": 5
+      },
+      "evidence_by_video": {
+        "-X5j5EBLNv8": "A",
+        "0mrrZYTvQ44": "B",
+        "5qgREntrTXs": "A",
+        "65A_lShqZA8": "A",
+        "BCuD36zzimU": "A",
+        "DujE3X1X4Yg": "A",
+        "IFRaJrS0Qyo": "D",
+        "MLcQ0yIGq1c": "B",
+        "PtSjjISiSs0": "A",
+        "STwFTUM0EHs": "B",
+        "V8zN8saFXMQ": "D",
+        "bHzxdWpWhW4": "D",
+        "d4vAv6CG7M0": "A",
+        "e2JiidC3qO4": "D",
+        "ee0SfGSJOTc": "A",
+        "g4GSHgFfaMA": "A",
+        "hLrny7Xjy2g": "A",
+        "jwmNjJgZanM": "B",
+        "mbo5wXh1lWE": "A",
+        "pIf_TK2JC9M": "D",
+        "r-zlwA_Pk84": "A",
+        "xfNY-0EItDs": "A",
+        "zeqeWQb9FCY": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Food Safety, Produce and Kitchen Risks",
+      "number": 9,
+      "package_number": 9,
+      "package_id": "vh_full_intelligence_20260906_155948_ba9b09",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155948_ba9b09",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155948_ba9b09\\CHATGPT_PACKAGE.json",
+      "video_count": 16,
+      "video_ids": [
+        "6YXPuEL-ti4",
+        "6rVeXkayn8Q",
+        "6vgcPkuQOpU",
+        "8ToYJycXw0I",
+        "Hk4Zhx0M0PE",
+        "UgIfDo9e_Jk",
+        "vTYuNp7wq10",
+        "Fw1HKAOyO54",
+        "N_dVcI5p5ck",
+        "Qn2AjYZZo-8",
+        "WJ2xwLRI3pE",
+        "_eljsPT1Qws",
+        "_urKrTNH5G0",
+        "dtP8pTwQgc8",
+        "gcNGaTYwA3I",
+        "xnu-7K-IikM"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 150078,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 16
+      },
+      "evidence_by_video": {
+        "6YXPuEL-ti4": "A",
+        "6rVeXkayn8Q": "A",
+        "6vgcPkuQOpU": "A",
+        "8ToYJycXw0I": "A",
+        "Fw1HKAOyO54": "A",
+        "Hk4Zhx0M0PE": "A",
+        "N_dVcI5p5ck": "A",
+        "Qn2AjYZZo-8": "A",
+        "UgIfDo9e_Jk": "A",
+        "WJ2xwLRI3pE": "A",
+        "_eljsPT1Qws": "A",
+        "_urKrTNH5G0": "A",
+        "dtP8pTwQgc8": "A",
+        "gcNGaTYwA3I": "A",
+        "vTYuNp7wq10": "A",
+        "xnu-7K-IikM": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Traditional Foods, Indian Nutrition and Product Reviews",
+      "number": 10,
+      "package_number": 10,
+      "package_id": "vh_full_intelligence_20260906_155950_7f3512",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155950_7f3512",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155950_7f3512\\CHATGPT_PACKAGE.json",
+      "video_count": 18,
+      "video_ids": [
+        "09W4jwgSHzI",
+        "AKGDDwnVAHg",
+        "MJcM3baHkqg",
+        "MdTfLzT5FZw",
+        "RWRDGnsQX_k",
+        "_3beJopLD2Y",
+        "ypkpJRyxgxE",
+        "VK-G0vkfqOQ",
+        "XctGOSf08js",
+        "Z8dAhgsHwQg",
+        "bRsQuDUnU4g",
+        "7RW1u-TddDU",
+        "DXPUWbJgmLE",
+        "SKhSKH_LHN4",
+        "SZmNa9931eA",
+        "UposRQt67Dg",
+        "fb5gHqmreas",
+        "w0kOxvV26cw"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 195211,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 15,
+        "B": 1,
+        "D": 2
+      },
+      "evidence_by_video": {
+        "09W4jwgSHzI": "A",
+        "7RW1u-TddDU": "A",
+        "AKGDDwnVAHg": "A",
+        "DXPUWbJgmLE": "A",
+        "MJcM3baHkqg": "A",
+        "MdTfLzT5FZw": "B",
+        "RWRDGnsQX_k": "A",
+        "SKhSKH_LHN4": "A",
+        "SZmNa9931eA": "A",
+        "UposRQt67Dg": "A",
+        "VK-G0vkfqOQ": "D",
+        "XctGOSf08js": "A",
+        "Z8dAhgsHwQg": "A",
+        "_3beJopLD2Y": "A",
+        "bRsQuDUnU4g": "A",
+        "fb5gHqmreas": "D",
+        "w0kOxvV26cw": "A",
+        "ypkpJRyxgxE": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Health Warning Signs, Deficiencies and Everyday Guidance",
+      "number": 11,
+      "package_number": 11,
+      "package_id": "vh_full_intelligence_20260906_155951_a4aa36",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155951_a4aa36",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155951_a4aa36\\CHATGPT_PACKAGE.json",
+      "video_count": 23,
+      "video_ids": [
+        "2e-Z0-hjq8Y",
+        "7YwsUAcMX60",
+        "Qd_SOd9RAeg",
+        "RLg1hrKZ5FA",
+        "YQsQjFO0uBk",
+        "mVWSWc--zGE",
+        "vSVeEsjkito",
+        "utoB7wXrmHY",
+        "AeNU-BqwWvE",
+        "TSyg05S-5-I",
+        "oeBNmD1iwDo",
+        "rEPsDiWn9O0",
+        "3QtWquq6yEA",
+        "T6qnwU16Y48",
+        "Tl13Z42277s",
+        "hfAzwS79PXE",
+        "i7aidpUwGC4",
+        "s5by_uGGkX0",
+        "3i_Xl-JYx_Q",
+        "4sOMfEAqzEg",
+        "pFjyrjw5HPc",
+        "pQ5OQRqOer8",
+        "yu4rbnEk6BU"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 240553,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 16,
+        "D": 6,
+        "B": 1
+      },
+      "evidence_by_video": {
+        "2e-Z0-hjq8Y": "A",
+        "3QtWquq6yEA": "A",
+        "3i_Xl-JYx_Q": "A",
+        "4sOMfEAqzEg": "A",
+        "7YwsUAcMX60": "A",
+        "AeNU-BqwWvE": "A",
+        "Qd_SOd9RAeg": "A",
+        "RLg1hrKZ5FA": "D",
+        "T6qnwU16Y48": "D",
+        "TSyg05S-5-I": "D",
+        "Tl13Z42277s": "A",
+        "YQsQjFO0uBk": "A",
+        "hfAzwS79PXE": "A",
+        "i7aidpUwGC4": "A",
+        "mVWSWc--zGE": "A",
+        "oeBNmD1iwDo": "A",
+        "pFjyrjw5HPc": "B",
+        "pQ5OQRqOer8": "A",
+        "rEPsDiWn9O0": "D",
+        "s5by_uGGkX0": "A",
+        "utoB7wXrmHY": "D",
+        "vSVeEsjkito": "D",
+        "yu4rbnEk6BU": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Hair Loss, Scalp Health and Hair-Care Products",
+      "number": 12,
+      "package_number": 12,
+      "package_id": "vh_full_intelligence_20260906_155953_1a775a",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155953_1a775a",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155953_1a775a\\CHATGPT_PACKAGE.json",
+      "video_count": 19,
+      "video_ids": [
+        "0FdtR6dRyBw",
+        "6C3kt88ECSo",
+        "8Pen8O8RrzQ",
+        "BNDrajnXIko",
+        "hMA8FaDd_Oc",
+        "pCaz06psb0s",
+        "z3LlqXNZe2s",
+        "2ruV2AQrCSw",
+        "3_h29kEU7dE",
+        "7xsxMUFgNt8",
+        "BvYwa6u0WLI",
+        "_u6yrYAP_7w",
+        "hLCvr7HHJNs",
+        "joav_O3pupo",
+        "lsY_Llt59x0",
+        "nwWJsUqtzcY",
+        "qfB7tnJ-kRI",
+        "r-DIv65zHwY",
+        "tbO66nDf7r8"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 188510,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 17,
+        "B": 1,
+        "D": 1
+      },
+      "evidence_by_video": {
+        "0FdtR6dRyBw": "A",
+        "2ruV2AQrCSw": "A",
+        "3_h29kEU7dE": "B",
+        "6C3kt88ECSo": "A",
+        "7xsxMUFgNt8": "A",
+        "8Pen8O8RrzQ": "A",
+        "BNDrajnXIko": "A",
+        "BvYwa6u0WLI": "A",
+        "_u6yrYAP_7w": "A",
+        "hLCvr7HHJNs": "A",
+        "hMA8FaDd_Oc": "A",
+        "joav_O3pupo": "A",
+        "lsY_Llt59x0": "A",
+        "nwWJsUqtzcY": "A",
+        "pCaz06psb0s": "D",
+        "qfB7tnJ-kRI": "A",
+        "r-DIv65zHwY": "A",
+        "tbO66nDf7r8": "A",
+        "z3LlqXNZe2s": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Packaged-Food Rankings and Ingredient Comparisons",
+      "number": 13,
+      "package_number": 13,
+      "package_id": "vh_full_intelligence_20260906_155955_69565e",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155955_69565e",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155955_69565e\\CHATGPT_PACKAGE.json",
+      "video_count": 20,
+      "video_ids": [
+        "0HgLywUBhzI",
+        "7j_XpLlh3GE",
+        "9lrdgOiWmdA",
+        "AxMQw7Q9ou0",
+        "BgMP3Bx1q10",
+        "Ih5FtGD_Ofo",
+        "JhaFxsMp1sQ",
+        "OVAQXdFza54",
+        "POKzKwFqaNE",
+        "SlGIjCPlWF0",
+        "SobRqlT0pOM",
+        "YHdxBff_M6k",
+        "fKxmRoD3_y4",
+        "hRdUnvkmaF4",
+        "lCSgRPINplc",
+        "moZjGDwG5UU",
+        "pOBWgUhRLCo",
+        "pqoz66rf7gE",
+        "raMWkXbDU2A",
+        "sgAhnEhOq30"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 207015,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 17,
+        "B": 2,
+        "D": 1
+      },
+      "evidence_by_video": {
+        "0HgLywUBhzI": "A",
+        "7j_XpLlh3GE": "A",
+        "9lrdgOiWmdA": "A",
+        "AxMQw7Q9ou0": "A",
+        "BgMP3Bx1q10": "A",
+        "Ih5FtGD_Ofo": "B",
+        "JhaFxsMp1sQ": "A",
+        "OVAQXdFza54": "A",
+        "POKzKwFqaNE": "A",
+        "SlGIjCPlWF0": "A",
+        "SobRqlT0pOM": "A",
+        "YHdxBff_M6k": "A",
+        "fKxmRoD3_y4": "A",
+        "hRdUnvkmaF4": "B",
+        "lCSgRPINplc": "A",
+        "moZjGDwG5UU": "A",
+        "pOBWgUhRLCo": "A",
+        "pqoz66rf7gE": "D",
+        "raMWkXbDU2A": "A",
+        "sgAhnEhOq30": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Game of Thrones and Westeros Lore",
+      "number": 14,
+      "package_number": 14,
+      "package_id": "vh_full_intelligence_20260906_155957_4ed24f",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155957_4ed24f",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155957_4ed24f\\CHATGPT_PACKAGE.json",
+      "video_count": 16,
+      "video_ids": [
+        "1tjf8ULIWzM",
+        "4aGAPBS5AmM",
+        "8mgtXYMPWV4",
+        "CJ95UDhwO0g",
+        "CkPbJ8Wwtgc",
+        "FT01_aAaAvQ",
+        "Jazy2Fr4K2o",
+        "LGLrGhsYE5M",
+        "PTtJJ5k0VHI",
+        "QjFLMxSbdJQ",
+        "SAZotzpq8No",
+        "VriBoTeMByk",
+        "WxQ-FVRVuaI",
+        "aW816rEx_WQ",
+        "h4hbLS1BTqA",
+        "vNNLOx-TjH0"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 99436,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 5,
+        "D": 9,
+        "E": 1,
+        "B": 1
+      },
+      "evidence_by_video": {
+        "1tjf8ULIWzM": "A",
+        "4aGAPBS5AmM": "A",
+        "8mgtXYMPWV4": "D",
+        "CJ95UDhwO0g": "E",
+        "CkPbJ8Wwtgc": "B",
+        "FT01_aAaAvQ": "A",
+        "Jazy2Fr4K2o": "D",
+        "LGLrGhsYE5M": "A",
+        "PTtJJ5k0VHI": "D",
+        "QjFLMxSbdJQ": "D",
+        "SAZotzpq8No": "D",
+        "VriBoTeMByk": "D",
+        "WxQ-FVRVuaI": "D",
+        "aW816rEx_WQ": "A",
+        "h4hbLS1BTqA": "D",
+        "vNNLOx-TjH0": "D"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Public Affairs, Consumer Claims and Accountability",
+      "number": 15,
+      "package_number": 15,
+      "package_id": "vh_full_intelligence_20260906_155957_80d226",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155957_80d226",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155957_80d226\\CHATGPT_PACKAGE.json",
+      "video_count": 17,
+      "video_ids": [
+        "8SJhgzx5DVM",
+        "P9LW2lwgYiQ",
+        "SrfvgMH1NmY",
+        "w1c9JhNYyRA",
+        "j8HApM9L0ss",
+        "-9t8G3r8HrA",
+        "qOmM94CvOLs",
+        "xYah1XWcm4s",
+        "4nvkTCfYxBo",
+        "IOMnLG-9jzs",
+        "JUMO3rk8GrY",
+        "N7yf7zQyBHk",
+        "NWkJ72Vo3nk",
+        "U97qYFkja8c",
+        "dutNG5SCIis",
+        "ooMKNswME18",
+        "raH3rx2oO9k"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 148469,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 12,
+        "E": 3,
+        "B": 1,
+        "D": 1
+      },
+      "evidence_by_video": {
+        "-9t8G3r8HrA": "A",
+        "4nvkTCfYxBo": "E",
+        "8SJhgzx5DVM": "A",
+        "IOMnLG-9jzs": "E",
+        "JUMO3rk8GrY": "E",
+        "N7yf7zQyBHk": "A",
+        "NWkJ72Vo3nk": "A",
+        "P9LW2lwgYiQ": "A",
+        "SrfvgMH1NmY": "A",
+        "U97qYFkja8c": "A",
+        "dutNG5SCIis": "B",
+        "j8HApM9L0ss": "A",
+        "ooMKNswME18": "D",
+        "qOmM94CvOLs": "A",
+        "raH3rx2oO9k": "A",
+        "w1c9JhNYyRA": "A",
+        "xYah1XWcm4s": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Protein, Supplements and Bodybuilding Nutrition",
+      "number": 16,
+      "package_number": 16,
+      "package_id": "vh_full_intelligence_20260906_155959_c4019c",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155959_c4019c",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_155959_c4019c\\CHATGPT_PACKAGE.json",
+      "video_count": 18,
+      "video_ids": [
+        "-fYoE_jIbNU",
+        "3TDm3fmgk3I",
+        "3sZ_a6BL8aE",
+        "4Ddo_rQIC8g",
+        "8hFr16_3cuI",
+        "J-JaGlLiU8k",
+        "Pcd28t9x8w8",
+        "TDv7SVMt-Fw",
+        "TOAaMcVmVOg",
+        "UVHOJM0bdVc",
+        "gVHuh75Xhdw",
+        "gkjA_4GJ93c",
+        "i6aFZgDcm-M",
+        "k1WyIcsM42c",
+        "mGZBVAp883Q",
+        "uIC5GngsSUE",
+        "x3UzDgOrnd8",
+        "zMXQXe03dSI"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 143338,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 10,
+        "B": 4,
+        "D": 3,
+        "E": 1
+      },
+      "evidence_by_video": {
+        "-fYoE_jIbNU": "A",
+        "3TDm3fmgk3I": "A",
+        "3sZ_a6BL8aE": "A",
+        "4Ddo_rQIC8g": "B",
+        "8hFr16_3cuI": "B",
+        "J-JaGlLiU8k": "A",
+        "Pcd28t9x8w8": "A",
+        "TDv7SVMt-Fw": "A",
+        "TOAaMcVmVOg": "A",
+        "UVHOJM0bdVc": "D",
+        "gVHuh75Xhdw": "A",
+        "gkjA_4GJ93c": "D",
+        "i6aFZgDcm-M": "B",
+        "k1WyIcsM42c": "A",
+        "mGZBVAp883Q": "D",
+        "uIC5GngsSUE": "B",
+        "x3UzDgOrnd8": "A",
+        "zMXQXe03dSI": "E"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Skin Care, Acne, Pigmentation and Moisturizers",
+      "number": 17,
+      "package_number": 17,
+      "package_id": "vh_full_intelligence_20260906_160000_d1572d",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160000_d1572d",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160000_d1572d\\CHATGPT_PACKAGE.json",
+      "video_count": 19,
+      "video_ids": [
+        "055dZcV9nLs",
+        "1kIVVEeivy0",
+        "4Wd7xjCvUq0",
+        "4tj5I3NsLjE",
+        "9g3cF-DIY_c",
+        "EyKPK1_asSY",
+        "Mqe0NYVQZRY",
+        "Mu3vP4GfRE0",
+        "OnhHNETGc44",
+        "YiPiB7hwxGc",
+        "_kHuBGn5yoQ",
+        "ehCw14qk12c",
+        "gaMrnhFILJc",
+        "jbmpHgVSp6k",
+        "khhA-FiwuGE",
+        "kqD1X1q6suM",
+        "majCZ5SMp7Q",
+        "pskMbM-2QQQ",
+        "urzOFEAZ-2M"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 182435,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "D": 3,
+        "A": 14,
+        "B": 2
+      },
+      "evidence_by_video": {
+        "055dZcV9nLs": "D",
+        "1kIVVEeivy0": "A",
+        "4Wd7xjCvUq0": "A",
+        "4tj5I3NsLjE": "A",
+        "9g3cF-DIY_c": "B",
+        "EyKPK1_asSY": "A",
+        "Mqe0NYVQZRY": "B",
+        "Mu3vP4GfRE0": "A",
+        "OnhHNETGc44": "A",
+        "YiPiB7hwxGc": "A",
+        "_kHuBGn5yoQ": "A",
+        "ehCw14qk12c": "A",
+        "gaMrnhFILJc": "D",
+        "jbmpHgVSp6k": "A",
+        "khhA-FiwuGE": "A",
+        "kqD1X1q6suM": "D",
+        "majCZ5SMp7Q": "A",
+        "pskMbM-2QQQ": "A",
+        "urzOFEAZ-2M": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Weight Loss, Metabolism and Weight Gain",
+      "number": 18,
+      "package_number": 18,
+      "package_id": "vh_full_intelligence_20260906_160002_2be3aa",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160002_2be3aa",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160002_2be3aa\\CHATGPT_PACKAGE.json",
+      "video_count": 20,
+      "video_ids": [
+        "6saouOhPhMU",
+        "11vCt2JtHeE",
+        "4qqFLcoe3yQ",
+        "4yCvXX-fC3c",
+        "5xjGq6lL4BA",
+        "F4_Ne6re0RA",
+        "GWQu3k9ls3g",
+        "GYYpP8ihJ20",
+        "JaMQfQK1_i8",
+        "JlMtsyXkxQE",
+        "PIws4Rn-mZI",
+        "XB_o_yKvQkI",
+        "YN7kv9j4J_4",
+        "aMheJmu5YfU",
+        "d02j1cBsdDQ",
+        "gjYVS8m91UU",
+        "lYJDlH0CoE4",
+        "o4JWr10bw48",
+        "tLLO3tEMkyk",
+        "zalL4B4FxH0"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 177313,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 8,
+        "D": 7,
+        "B": 4,
+        "E": 1
+      },
+      "evidence_by_video": {
+        "11vCt2JtHeE": "A",
+        "4qqFLcoe3yQ": "D",
+        "4yCvXX-fC3c": "D",
+        "5xjGq6lL4BA": "A",
+        "6saouOhPhMU": "D",
+        "F4_Ne6re0RA": "A",
+        "GWQu3k9ls3g": "B",
+        "GYYpP8ihJ20": "B",
+        "JaMQfQK1_i8": "A",
+        "JlMtsyXkxQE": "D",
+        "PIws4Rn-mZI": "B",
+        "XB_o_yKvQkI": "B",
+        "YN7kv9j4J_4": "A",
+        "aMheJmu5YfU": "D",
+        "d02j1cBsdDQ": "A",
+        "gjYVS8m91UU": "A",
+        "lYJDlH0CoE4": "E",
+        "o4JWr10bw48": "D",
+        "tLLO3tEMkyk": "D",
+        "zalL4B4FxH0": "A"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Sexual Health, Women's Health and Body Care",
+      "number": 19,
+      "package_number": 19,
+      "package_id": "vh_full_intelligence_20260906_160003_e16f85",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160003_e16f85",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160003_e16f85\\CHATGPT_PACKAGE.json",
+      "video_count": 17,
+      "video_ids": [
+        "HLfBMPErl3Q",
+        "NyEOHULKxz4",
+        "SRX5qJTVZMY",
+        "AJz18CVg9Ww",
+        "ATVyyg74Owc",
+        "Rpj-O4Lk6QI",
+        "WLsl3M26K-I",
+        "dQadi21TIwc",
+        "6xvL8oGcF_o",
+        "Ypq6bEh_CnM",
+        "c5iae3FZK_4",
+        "c7jWQZf8jvo",
+        "lGUoBm0FCZQ",
+        "vb9tlrQl5GM",
+        "wY44LKLysHg",
+        "wbRj49wjtF0",
+        "x3MVEwkIQro"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 141152,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 13,
+        "B": 3,
+        "D": 1
+      },
+      "evidence_by_video": {
+        "6xvL8oGcF_o": "A",
+        "AJz18CVg9Ww": "B",
+        "ATVyyg74Owc": "A",
+        "HLfBMPErl3Q": "A",
+        "NyEOHULKxz4": "A",
+        "Rpj-O4Lk6QI": "B",
+        "SRX5qJTVZMY": "A",
+        "WLsl3M26K-I": "B",
+        "Ypq6bEh_CnM": "A",
+        "c5iae3FZK_4": "A",
+        "c7jWQZf8jvo": "A",
+        "dQadi21TIwc": "A",
+        "lGUoBm0FCZQ": "A",
+        "vb9tlrQl5GM": "A",
+        "wY44LKLysHg": "A",
+        "wbRj49wjtF0": "A",
+        "x3MVEwkIQro": "D"
+      }
+    },
+    {
+      "profile": "FULL_INTELLIGENCE",
+      "group_name": "Oral Care, Hygiene and Grooming",
+      "number": 20,
+      "package_number": 20,
+      "package_id": "vh_full_intelligence_20260906_160005_5981e9",
+      "folder": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160005_5981e9",
+      "upload_file": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\packages\\vh_full_intelligence_20260906_160005_5981e9\\CHATGPT_PACKAGE.json",
+      "video_count": 16,
+      "video_ids": [
+        "-QPF6OezA0Y",
+        "G-lzFmHgoyE",
+        "IA3pZKYB0ew",
+        "OYpXKocfWlU",
+        "QjTxB_hUA9U",
+        "RfinWpg9MYY",
+        "UBZdJR5zEBk",
+        "XCRPbZ_vVb4",
+        "_tSN_1OlcEg",
+        "c6yvIGvLWC8",
+        "ci-uXyWw5R4",
+        "cuMlOIBY7zY",
+        "vqRBCa1Jv4w",
+        "weDmVu1SPuI",
+        "y4HBGiiZpI4",
+        "yAkBZvGijJQ"
+      ],
+      "features": [
+        "title_en.v1",
+        "taxonomy.v3",
+        "detailed_summary.v3",
+        "timeline_sections.v3",
+        "editorial_assessment.v1"
+      ],
+      "transcript_chars": 157284,
+      "split_reason": "parent_group",
+      "target_package_size": 25,
+      "max_package_size": 25,
+      "evidence_grades": {
+        "A": 14,
+        "E": 1,
+        "B": 1
+      },
+      "evidence_by_video": {
+        "-QPF6OezA0Y": "A",
+        "G-lzFmHgoyE": "A",
+        "IA3pZKYB0ew": "A",
+        "OYpXKocfWlU": "A",
+        "QjTxB_hUA9U": "A",
+        "RfinWpg9MYY": "A",
+        "UBZdJR5zEBk": "A",
+        "XCRPbZ_vVb4": "A",
+        "_tSN_1OlcEg": "E",
+        "c6yvIGvLWC8": "A",
+        "ci-uXyWw5R4": "A",
+        "cuMlOIBY7zY": "A",
+        "vqRBCa1Jv4w": "A",
+        "weDmVu1SPuI": "A",
+        "y4HBGiiZpI4": "A",
+        "yAkBZvGijJQ": "B"
+      }
+    }
+  ],
+  "batch_summary_csv": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\BATCH_PACKAGE_SUMMARY.csv",
+  "skipped_no_transcript_csv": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\SKIPPED_NO_TRANSCRIPT.csv",
+  "batch_validation_csv": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b\\BATCH_VALIDATION_REPORT.csv",
+  "local_batch_validation_status": "PASS",
+  "upload_zip": "D:\\YT GUi\\downloads\\data\\chatgpt\\exchange\\outgoing\\group_similar\\batches\\vh_batch_set_20260906_155925_b5700b.zip"
+}
