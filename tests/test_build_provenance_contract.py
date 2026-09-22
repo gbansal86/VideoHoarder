@@ -19,8 +19,10 @@ def test_windows_builds_package_provenance_files() -> None:
         assert "release_self_test.json" in text
         assert "SHA256" in text
 
-    assert "python -m pip freeze" in workflow
-    assert "-m pip freeze" in private_build
+    assert "python -m pip list --format=freeze" in workflow
+    assert "-m pip list --format=freeze" in private_build
+    assert "pip freeze" not in workflow
+    assert "pip freeze" not in private_build
     assert '"app\\VERSION.txt"' in private_build
     assert '"app\\\\VERSION.txt"' not in private_build
     assert "COMPUTERNAME" not in private_build
