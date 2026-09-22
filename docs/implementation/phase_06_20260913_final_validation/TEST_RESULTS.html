@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><title>VideoHoarder Final Test Results</title><style>body{font-family:Segoe UI,Arial,sans-serif;max-width:1180px;margin:32px auto;padding:0 24px;color:#162033;background:#f7f9fc}h1,h2,h3{color:#0f2b4d}h1{border-bottom:3px solid #315d8a;padding-bottom:12px}table{width:100%;border-collapse:collapse;background:white;margin:14px 0 26px}th,td{border:1px solid #d8e0ea;padding:9px 10px;text-align:left;vertical-align:top}th{background:#eaf0f7}.pass{color:#16733b;font-weight:700}.pending{color:#9a5a00;font-weight:700}.fail{color:#b21e2b;font-weight:700}.box{background:white;border:1px solid #d8e0ea;border-left:5px solid #315d8a;padding:14px 16px;margin:14px 0}.mono{font-family:Consolas,monospace;background:#eef2f7;padding:2px 5px;border-radius:4px}ul{line-height:1.5}.small{color:#53657a;font-size:.94em}</style></head><body>
+<h1>VideoHoarder — Final Cumulative Test Results</h1>
+<p class="small">Change set: VH-AUDIT-20260913 · Validation host: Linux · Git checkpoint unavailable because the supplied package contains no .git metadata.</p>
+<div class="box"><b>Final status:</b> <span class="pass">IMPLEMENTATION COMPLETE for source/unit/integration/package gates executable on this host.</span> <span class="pending">Release-complete status remains pending Windows-native PySide6 + PowerShell/PyInstaller execution.</span></div>
+<h2>Phase gates</h2><table><tr><th>Phase</th><th>Scope</th><th>Cumulative evidence</th><th>Status</th></tr><tr><td>0</td><td>Governance/package/test baseline</td><td>216 passed / 19 skipped</td><td>Complete</td></tr><tr><td>1</td><td>Job execution contract — F01/F02/F06/F12</td><td>222 passed / 19 skipped</td><td>Complete</td></tr><tr><td>2</td><td>Safety &amp; integrity — F13–F17</td><td>240 passed / 19 skipped</td><td>Complete</td></tr><tr><td>3</td><td>Native UI contract — F04/F07/F09</td><td>243 passed / 21 skipped</td><td>Logic/source complete; Windows native pending</td></tr><tr><td>4</td><td>Windows release contract — F03/F05</td><td>248 passed / 21 skipped</td><td>Source/build contract complete; Windows build pending</td></tr><tr><td>5</td><td>Scale &amp; AI correctness — F08/F10/F11</td><td>256 passed / 21 skipped</td><td>Complete</td></tr><tr><td>6</td><td>Final validation</td><td>256 passed / 21 skipped</td><td>Linux-executable gates complete; Windows acceptance pending</td></tr></table>
+<h2>Final evidence</h2><ul>
+<li><b>Compileall:</b> PASS for <span class="mono">app</span> and <span class="mono">tests</span>.</li>
+<li><b>Focused cross-phase contracts:</b> 44 passed, 2 skipped (both native PySide6).</li>
+<li><b>Final full suite:</b> 256 passed, 21 skipped, 0 failed; 277 collected.</li>
+<li><b>Skip audit:</b> all 21 skips are native PySide6 runtime tests; no non-GUI functional test is skipped.</li>
+<li><b>Phase-5 completeness:</b> 32/32 checks PASS.</li>
+<li><b>Phase-6 completeness:</b> 40/40 checks PASS.</li>
+<li><b>Governance completeness after final fix:</b> 43/43 checks PASS.</li>
+<li><b>Code Parent reproducibility pre-final-report:</b> two generated archives, 273 files each, identical archive file sets and identical content SHA256 maps.</li>
+</ul>
+<h2>Findings disposition</h2><table><tr><th>Finding</th><th>Disposition</th><th>Evidence</th></tr>
+<tr><td>F01/F02/F06/F12</td><td class="pass">Fixed</td><td>Per-job JobContext/DownloadOptions, truthful result ledger, transfer progress regressions.</td></tr>
+<tr><td>F13–F17</td><td class="pass">Fixed</td><td>Atomic settings, mutation authorization/strict JSON, correct ranges, SAVEPOINT migration.</td></tr>
+<tr><td>F04/F07/F09</td><td class="pass">Implemented</td><td>Source/static contracts pass; two PySide execution tests remain platform-skipped.</td></tr>
+<tr><td>F03/F05</td><td class="pass">Build contract fixed</td><td>Release/dev builds split; full pytest/native/clean-room gates encoded. Actual Windows build not executed here.</td></tr>
+<tr><td>F08</td><td class="pass">Fixed</td><td>12,050-row page-121 regression and 1,800-search-score relation regression.</td></tr>
+<tr><td>F10/F11</td><td class="pass">Fixed</td><td>Wrong-backend vector forced rebuild; corrected same-ID evidence forces fresh Local AI answer.</td></tr>
+<tr><td>G01/G02</td><td class="pass">Fixed in source/governance</td><td>Central docs reconciled; clean package generator includes governance, sanitizes live state, hashes/validates archive.</td></tr>
+</table>
+<h2>Not executed / must remain pending</h2><ul>
+<li>Actual Windows <span class="mono">BUILD_WINDOWS.ps1</span> execution and PyInstaller artifact production.</li>
+<li>21 native PySide6 runtime tests on the target Windows GUI environment.</li>
+<li>EXE-only clean-room self-test of the produced Windows executable.</li>
+<li>Windows visual/click-through acceptance: saved New Download defaults, Cancel-one vs Stop-all, global notices, Library paging, Queue/Job Details layout.</li>
+<li>Live YouTube/network-dependent acceptance and destructive real-library recovery/migration scenarios were not run against user production data.</li>
+</ul>
+<p class="small">No pending platform item is represented as PASS.</p>
+</body></html>

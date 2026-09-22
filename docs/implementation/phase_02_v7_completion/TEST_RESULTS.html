@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Phase 02 Test Results</title><style>body{font-family:Segoe UI,Arial;margin:30px;color:#172033}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd5e0;padding:8px;text-align:left}th{background:#eef3f8}pre{background:#101826;color:#eaf2ff;padding:14px;white-space:pre-wrap;max-height:520px;overflow:auto}.pass{color:#146c2e;font-weight:700}.warn{color:#8a5b00;font-weight:700}</style></head><body><h1>Phase 02 — v7 Test Results</h1><table><tr><th>Evidence</th><th>Actual</th><th>Result</th></tr><tr><td>Targeted v7 tests</td><td>12 tests</td><td class="pass">PASS</td></tr><tr><td>Full unittest discovery</td><td>127 run; 19 skipped</td><td class="pass">PASS</td></tr><tr><td>Compileall app + tests</td><td>COMPILE_PASS</td><td class="pass">PASS</td></tr><tr><td>Native PySide6 Windows tests</td><td>Not executable in this Linux environment</td><td class="warn">NOT EXECUTED</td></tr><tr><td>Git checkpoint</td><td>No .git metadata in supplied ZIP</td><td class="warn">NOT AVAILABLE</td></tr></table><h2>Targeted log</h2><pre>test_legacy_duplicate_report_includes_current_queue (tests.test_v7_completion.V7BackendGuardTests.test_legacy_duplicate_report_includes_current_queue) ... ok
+test_successful_retry_requires_explicit_confirmation (tests.test_v7_completion.V7BackendGuardTests.test_successful_retry_requires_explicit_confirmation) ... ok
+test_unlimited_snapshot_returns_more_than_60 (tests.test_v7_completion.V7BackendGuardTests.test_unlimited_snapshot_returns_more_than_60) ... ok
+test_completed_today_counts_physical_videos_not_generic_jobs (tests.test_v7_completion.V7DashboardMetricTests.test_completed_today_counts_physical_videos_not_generic_jobs) ... ok
+test_queue_wait_reason_distinguishes_worker_start_from_earlier_jobs (tests.test_v7_completion.V7DashboardMetricTests.test_queue_wait_reason_distinguishes_worker_start_from_earlier_jobs) ... ok
+test_completed_today_comes_from_library_stats (tests.test_v7_completion.V7SourceContractTests.test_completed_today_comes_from_library_stats) ... ok
+test_full_download_records_downloaded_at (tests.test_v7_completion.V7SourceContractTests.test_full_download_records_downloaded_at) ... ok
+test_legacy_job_start_has_server_side_duplicate_gate (tests.test_v7_completion.V7SourceContractTests.test_legacy_job_start_has_server_side_duplicate_gate) ... ok
+test_legacy_retry_prompts_before_successful_redownload (tests.test_v7_completion.V7SourceContractTests.test_legacy_retry_prompts_before_successful_redownload) ... ok
+test_queue_page_requests_unlimited_snapshot (tests.test_v7_completion.V7SourceContractTests.test_queue_page_requests_unlimited_snapshot) ... ok
+test_refresh_all_figures_bypasses_managed_download_queue (tests.test_v7_completion.V7SourceContractTests.test_refresh_all_figures_bypasses_managed_download_queue) ... ok
+test_stats_refresh_has_pending_and_inflight_targets (tests.test_v7_completion.V7SourceContractTests.test_stats_refresh_has_pending_and_inflight_targets) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.530s
+
+OK
+</pre><h2>Full-suite evidence</h2><pre>.[WEB] Dashboard server started: http://127.0.0.1:8765
+...................../usr/lib/python3.13/re/_parser.py:255: ResourceWarning: unclosed database in &lt;sqlite3.Connection object at 0x7f05c23322f0&gt;
+  def match(self, char):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+..........................................................................sssssssssssssssssss............
+----------------------------------------------------------------------
+Ran 127 tests in 1.338s
+
+OK (skipped=19)
+Root file migration: moved=0, skipped duplicates=0, failed=0
+</pre></body></html>
