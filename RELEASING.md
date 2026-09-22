@@ -20,7 +20,7 @@ A release should be reproducible from a clean public source commit.
    ```
 
 5. Start the packaged app and verify dashboard/native UI startup plus one non-destructive workflow.
-6. Record SHA-256 for the release archive/executable.
+6. Record SHA-256 for the release archive/executable and retain `BUILD_INFO.txt` plus `DEPENDENCIES.txt` from the validated build.
 7. Review `SECURITY.md`, dependency alerts, and provider/privacy changes.
 8. Tag the clean commit and publish release notes from `CHANGELOG.md`.
 
@@ -49,3 +49,13 @@ git push origin v33.2
 ```
 
 Do not move or recreate an already published release tag. Prepare a new version instead.
+
+## Build provenance files
+
+Every validated Windows build should carry the following evidence beside the executable:
+
+- `BUILD_INFO.txt` — application version, build environment, Python/PyInstaller versions, and EXE SHA-256;
+- `DEPENDENCIES.txt` — exact installed Python package versions from the build environment;
+- `release_self_test.json` — frozen clean-room acceptance evidence.
+
+These files make it easier to reproduce, compare, and audit a binary after dependencies evolve. The public dependency-security workflow also produces a CycloneDX SBOM for source-level dependency review.
