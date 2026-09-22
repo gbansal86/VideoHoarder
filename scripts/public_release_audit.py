@@ -41,6 +41,11 @@ def audit_tree(root: Path) -> list[dict[str, str]]:
         if not path.is_file():
             continue
         relative = path.relative_to(root)
+        # A checked-out Git repository necessarily contains .git metadata.
+        # The source audit evaluates files that can be committed, not Git's own
+        # internal object database/configuration created by checkout.
+        if relative.parts and relative.parts[0] == '.git':
+            continue
         parts = set(relative.parts)
         # Historical synthetic fixture is permitted; real exchange directories are not.
         is_fixture = relative.parts[:3] == ('tests', 'fixtures', 'chatgpt_integrity')
