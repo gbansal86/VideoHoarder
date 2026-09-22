@@ -125,6 +125,8 @@ jobs:
           $hash = (Get-FileHash -LiteralPath "release-dist\VideoHoarder.exe" -Algorithm SHA256).Hash
           $pyInstallerVersion = (python -m PyInstaller --version).Trim()
           python -m pip list --format=freeze | Set-Content -LiteralPath "release-dist\DEPENDENCIES.txt" -Encoding UTF8
+          if ($LASTEXITCODE -ne 0) { throw "Could not record dependency snapshot." }
+          if ((Get-Item -LiteralPath "release-dist\DEPENDENCIES.txt").Length -eq 0) { throw "Dependency snapshot is empty." }
           @(
             "VideoHoarder version: $version"
             "Git commit: $env:GITHUB_SHA"
