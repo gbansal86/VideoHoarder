@@ -25,3 +25,11 @@ def test_audit_rejects_realistic_private_files_and_a_key(tmp_path: Path):
 def test_audit_rejects_machine_paths(tmp_path: Path):
     (tmp_path / 'docs.md').write_text('Local installation: D:\\YT GUi\\Source', encoding='utf-8')
     assert any(x['kind'] == 'local-installation' for x in audit_tree(tmp_path))
+
+
+def test_audit_ignores_git_checkout_metadata(tmp_path: Path):
+    git_dir = tmp_path / '.git'
+    git_dir.mkdir()
+    (git_dir / 'config').write_text('[remote "origin"]\nurl = https://example.invalid/repo.git\n', encoding='utf-8')
+    (tmp_path / 'README.md').write_text('public source\n', encoding='utf-8')
+    assert audit_tree(tmp_path) == []
