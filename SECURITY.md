@@ -12,6 +12,8 @@ Prefer GitHub's private vulnerability reporting / Security Advisory mechanism wh
 
 ## Security boundaries
 
+For the project-level assets, trust boundaries, attacker assumptions, and review checklist, see [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
+
 ### Local server
 
 The desktop helper/server is expected to bind to loopback (`127.0.0.1`). Mutation endpoints use local request authorization. Changes that expose it to non-loopback interfaces require a separate threat review.

@@ -3,6 +3,7 @@
 [![CI](https://github.com/gbansal86/VideoHoarder/actions/workflows/ci.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/gbansal86/VideoHoarder/actions/workflows/codeql.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/codeql.yml)
 [![Windows Build](https://github.com/gbansal86/VideoHoarder/actions/workflows/windows-build.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/windows-build.yml)
+[![Dependency Security](https://github.com/gbansal86/VideoHoarder/actions/workflows/dependency-security.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/dependency-security.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
@@ -172,6 +173,8 @@ The OpenAI provider tests use a fake SDK/client and make **no external API calls
 The build runs source validation/tests before producing the packaged application. Release archives are intentionally not committed.
 
 ## Contributing
+
+A fully synthetic public example is available under [`examples/synthetic_local_import/`](examples/synthetic_local_import/) so new contributors can exercise local subtitle association without committing private media. For security-sensitive changes, read the public [threat model](docs/THREAT_MODEL.md).
 
 Bug reports, regression tests, documentation fixes, focused refactors, provider hardening, portability work, and carefully scoped features are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), and [GOVERNANCE.md](GOVERNANCE.md) first.
 
