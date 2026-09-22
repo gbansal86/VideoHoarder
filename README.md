@@ -13,6 +13,12 @@
 
 The project is designed around a simple rule: **source evidence stays deterministic and reviewable; AI suggestions never silently change the library.**
 
+## App at a glance
+
+![VideoHoarder application infographic](docs/images/videohoarder_app_infographic.jpg)
+
+This infographic summarizes the local-first workflow, local-video import, transcript handling, optional AI processing, reports, privacy controls, and the main outputs a new user can expect.
+
 ## What it does
 
 - Downloads and organizes supported video sources through managed jobs.
