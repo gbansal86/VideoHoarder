@@ -126,7 +126,7 @@ if (Test-Path -LiteralPath $OutputZip) { Remove-Item -LiteralPath $OutputZip -Fo
 
 $BuildInfoPath = Join-Path $OutputDir "BUILD_INFO.txt"
 $DependencySnapshotPath = Join-Path $OutputDir "DEPENDENCIES.txt"
-$AppVersion = (Get-Content -LiteralPath (Join-Path $ProjectRoot "app\\VERSION.txt") -Raw).Trim()
+$AppVersion = (Get-Content -LiteralPath (Join-Path $ProjectRoot "app\VERSION.txt") -Raw).Trim()
 $BuiltHash = (Get-FileHash -LiteralPath $OutputExe -Algorithm SHA256).Hash
 $PythonVersion = (& $VenvPython --version).Trim()
 $PyInstallerVersion = (& $VenvPython -m PyInstaller --version).Trim()
