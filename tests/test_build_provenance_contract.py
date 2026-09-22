@@ -23,6 +23,7 @@ def test_windows_builds_package_provenance_files() -> None:
     assert "-m pip freeze" in private_build
     assert '"app\\VERSION.txt"' in private_build
     assert '"app\\\\VERSION.txt"' not in private_build
+    assert "COMPUTERNAME" not in private_build
 
 
 def test_release_docs_explain_provenance_files() -> None:
