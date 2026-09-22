@@ -1,0 +1,149 @@
+name: Windows Build Artifact
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/windows-build.yml"
+      - "app/**"
+      - "assets/**"
+      - "build_support/**"
+      - "run_gui.pyw"
+      - "VideoHoarder.spec"
+      - "requirements*.txt"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/windows-build.yml"
+      - "app/**"
+      - "assets/**"
+      - "build_support/**"
+      - "run_gui.pyw"
+      - "VideoHoarder.spec"
+      - "requirements*.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install build dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-build.txt
+
+      - name: Public-source privacy preflight
+        run: python scripts/public_release_audit.py .
+
+      - name: Compile source
+        run: python -m compileall -q app tests build_support run_gui.pyw
+
+      - name: Run full test suite
+        run: python -m pytest -q
+
+      - name: Generate Windows icon
+        run: python build_support/generate_icon.py
+
+      - name: Build frozen executable
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path release-dist,release-build -Force | Out-Null
+          python -m PyInstaller --noconfirm --clean --distpath release-dist --workpath release-build VideoHoarder.spec
+          if ($LASTEXITCODE -ne 0) { throw "PyInstaller build failed." }
+          if (-not (Test-Path -LiteralPath "release-dist\VideoHoarder.exe" -PathType Leaf)) {
+            throw "Expected release-dist\VideoHoarder.exe was not produced."
+          }
+
+      - name: Frozen clean-room self-test
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $smokeRoot = Join-Path $env:RUNNER_TEMP ("videohoarder-smoke-" + [Guid]::NewGuid().ToString("N"))
+          $smokeLibrary = Join-Path $smokeRoot "FreshLibrary"
+          $smokeExe = Join-Path $smokeRoot "VideoHoarder.exe"
+          $smokeResult = Join-Path $smokeRoot "release_self_test.json"
+          New-Item -ItemType Directory -Path $smokeLibrary -Force | Out-Null
+          Copy-Item -LiteralPath "release-dist\VideoHoarder.exe" -Destination $smokeExe -Force
+
+          $oldLibrary = $env:VLM_LIBRARY_ROOT
+          $oldResult = $env:VIDEOHOARDER_RELEASE_SELFTEST_OUTPUT
+          try {
+            $env:VLM_LIBRARY_ROOT = $smokeLibrary
+            $env:VIDEOHOARDER_RELEASE_SELFTEST_OUTPUT = $smokeResult
+            $process = Start-Process -FilePath $smokeExe -ArgumentList "--release-self-test" -PassThru
+            if (-not $process.WaitForExit(120000)) {
+              $process.Kill()
+              throw "Frozen self-test timed out after 120 seconds."
+            }
+            if ($process.ExitCode -ne 0) {
+              throw "Frozen self-test returned exit code $($process.ExitCode)."
+            }
+            if (-not (Test-Path -LiteralPath $smokeResult -PathType Leaf)) {
+              throw "Frozen self-test did not write evidence."
+            }
+
+            $smoke = Get-Content -LiteralPath $smokeResult -Raw | ConvertFrom-Json
+            if (
+              -not $smoke.ok -or
+              -not $smoke.frozen -or
+              $smoke.source_neighbor_exists -or
+              $smoke.build_venv_neighbor_exists -or
+              -not $smoke.backend_http_ready -or
+              -not $smoke.queue_acceptance_ok -or
+              -not $smoke.restart_recovery_ok
+            ) {
+              throw "Frozen self-test evidence is not acceptable: $(Get-Content -LiteralPath $smokeResult -Raw)"
+            }
+            Copy-Item -LiteralPath $smokeResult -Destination "release-dist\release_self_test.json" -Force
+          }
+          finally {
+            $env:VLM_LIBRARY_ROOT = $oldLibrary
+            $env:VIDEOHOARDER_RELEASE_SELFTEST_OUTPUT = $oldResult
+            Remove-Item -LiteralPath $smokeRoot -Recurse -Force -ErrorAction SilentlyContinue
+          }
+
+      - name: Create build manifest and ZIP
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $version = (Get-Content -LiteralPath "app\VERSION.txt" -Raw).Trim()
+          $hash = (Get-FileHash -LiteralPath "release-dist\VideoHoarder.exe" -Algorithm SHA256).Hash
+          @(
+            "VideoHoarder version: $version"
+            "Git commit: $env:GITHUB_SHA"
+            "GitHub run: $env:GITHUB_RUN_ID"
+            "Runner OS: $env:RUNNER_OS"
+            "Python: $(python --version)"
+            "VideoHoarder.exe SHA256: $hash"
+          ) | Set-Content -LiteralPath "release-dist\BUILD_INFO.txt" -Encoding UTF8
+
+          $zip = "release-dist\VideoHoarder-$version-Windows-CI.zip"
+          Compress-Archive -LiteralPath @(
+            "release-dist\VideoHoarder.exe",
+            "release-dist\release_self_test.json",
+            "release-dist\BUILD_INFO.txt"
+          ) -DestinationPath $zip -CompressionLevel Optimal -Force
+
+          "VIDEOHOARDER_BUILD_ZIP=$zip" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Upload Windows build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VideoHoarder-Windows-CI
+          path: ${{ env.VIDEOHOARDER_BUILD_ZIP }}
+          if-no-files-found: error
+          retention-days: 30
