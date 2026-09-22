@@ -1,5 +1,9 @@
 # VideoHoarder Quick Start — Beginner Guide
 
+![VideoHoarder application infographic](images/videohoarder_app_infographic.jpg)
+
+The infographic above gives the full workflow at a glance. The numbered sections below walk through the same application step by step.
+
 This guide is written for someone who is comfortable opening folders and PowerShell but does not need to understand the source code. VideoHoarder is local-first: normal library use does **not** require an OpenAI API key.
 
 ## Step 1 — Download or clone the repository
