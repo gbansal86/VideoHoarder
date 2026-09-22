@@ -123,7 +123,30 @@ try {
 }
 
 if (Test-Path -LiteralPath $OutputZip) { Remove-Item -LiteralPath $OutputZip -Force }
-$ZipItems = @($OutputExe, (Join-Path $OutputDir "release_self_test.json"), $OutputPathConfig)
+
+$BuildInfoPath = Join-Path $OutputDir "BUILD_INFO.txt"
+$DependencySnapshotPath = Join-Path $OutputDir "DEPENDENCIES.txt"
+$AppVersion = (Get-Content -LiteralPath (Join-Path $ProjectRoot "app\\VERSION.txt") -Raw).Trim()
+$BuiltHash = (Get-FileHash -LiteralPath $OutputExe -Algorithm SHA256).Hash
+$PythonVersion = (& $VenvPython --version).Trim()
+$PyInstallerVersion = (& $VenvPython -m PyInstaller --version).Trim()
+& $VenvPython -m pip freeze | Set-Content -LiteralPath $DependencySnapshotPath -Encoding UTF8
+@(
+    "VideoHoarder version: $AppVersion"
+    "Build host: $env:COMPUTERNAME"
+    "Python: $PythonVersion"
+    "PyInstaller: $PyInstallerVersion"
+    "VideoHoarder.exe SHA256: $BuiltHash"
+    "Dependency snapshot: DEPENDENCIES.txt"
+) | Set-Content -LiteralPath $BuildInfoPath -Encoding UTF8
+
+$ZipItems = @(
+    $OutputExe,
+    (Join-Path $OutputDir "release_self_test.json"),
+    $OutputPathConfig,
+    $BuildInfoPath,
+    $DependencySnapshotPath
+)
 Compress-Archive -LiteralPath $ZipItems -DestinationPath $OutputZip -CompressionLevel Optimal
 
 if ($Deploy) {
