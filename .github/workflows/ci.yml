@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-full-suite:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements-build.txt
+      - name: Public-source privacy preflight
+        run: python scripts/public_release_audit.py .
+      - name: Compile source
+        run: python -m compileall -q app tests build_support
+      - name: Test
+        run: python -m pytest -q
+
+  linux-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements-build.txt
+      - name: Public-source privacy preflight
+        run: python scripts/public_release_audit.py .
+      - name: Compile source
+        run: python -m compileall -q app tests build_support
+      - name: Provider and package contracts
+        run: python -m pytest -q tests/test_local_video_import.py tests/test_openai_api_service.py tests/test_openai_app_integration.py tests/test_phase2_safety_contract.py tests/test_chatgpt_validation.py -k "not github_upload_git_lookup_uses_executable_discovery"

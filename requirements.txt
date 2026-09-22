@@ -1,0 +1,8 @@
+# Qt 6.11 uses an unversioned icuuc.dll name that collides with the Windows
+# system ICU shim and makes frozen builds fail at startup (missing ucnv_open).
+PySide6==6.9.3
+google-api-python-client>=2.150,<3
+google-auth-oauthlib>=1.2,<2
+selenium>=4.20,<5
+youtube-transcript-api>=1.0,<2
+openai>=2.0,<3

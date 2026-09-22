@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Phase 02 Test Results</title><style>body{font-family:Segoe UI,Arial;margin:32px;color:#172033}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd5e0;padding:8px;text-align:left}th{background:#eef3f8}.pass{color:#087538;font-weight:700}.skip{color:#8a6200;font-weight:700}</style></head><body>
+<h1>Phase 02 — Issues 2 Native UI — Test Results</h1>
+<p><b>Source baseline:</b> v3 AutoDeploy. <b>Change size:</b> MEDIUM.</p>
+<table><tr><th>Test</th><th>Actual evidence</th><th>Result</th></tr>
+<tr><td>Python compile</td><td><code>python -m compileall -q app</code> completed without error.</td><td class="pass">PASS</td></tr>
+<tr><td>Full unittest discovery</td><td><code>Ran 83 tests in 1.872s — OK (skipped=10)</code>.</td><td class="pass">PASS</td></tr>
+<tr><td>New non-PySide service tests</td><td>Library rows expose thumbnail/local media; 2,505 rows returned when limit=3,000.</td><td class="pass">PASS</td></tr>
+<tr><td>Native PySide widget tests</td><td>10 GUI tests were skipped because PySide6 is not installed in this validation environment.</td><td class="skip">NOT EXECUTED HERE</td></tr>
+<tr><td>Windows EXE/manual UI acceptance</td><td>Requires the user's Windows build/runtime.</td><td class="skip">NOT EXECUTED HERE</td></tr>
+</table>
+<p>No fabricated Windows UI execution is claimed.</p>
+</body></html>

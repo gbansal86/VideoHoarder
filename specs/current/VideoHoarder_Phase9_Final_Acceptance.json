@@ -1,0 +1,97 @@
+{
+  "overall_status": "PASS WITH KNOWN LIMITATIONS",
+  "phase9_acceptance_tests": "6 passed",
+  "phase1_9_focused": "61 passed in 0.92s",
+  "full_regression": "140 passed, 3 skipped in 1.76s",
+  "compile": "PASS",
+  "golden_fixture_routing": [
+    {
+      "video_id": "6YXPuEL-ti4",
+      "grade": "A",
+      "eligible": true,
+      "routing": "NORMAL"
+    },
+    {
+      "video_id": "gkjA_4GJ93c",
+      "grade": "A",
+      "eligible": true,
+      "routing": "NORMAL"
+    },
+    {
+      "video_id": "UBZdJR5zEBk",
+      "grade": "A",
+      "eligible": true,
+      "routing": "NORMAL"
+    },
+    {
+      "video_id": "-Re6Mk--uxw",
+      "grade": "B",
+      "eligible": true,
+      "routing": "NORMAL"
+    },
+    {
+      "video_id": "UWCf9pDTmJI",
+      "grade": "B",
+      "eligible": true,
+      "routing": "NORMAL"
+    },
+    {
+      "video_id": "QucgvbO5gsM",
+      "grade": "B",
+      "eligible": true,
+      "routing": "NORMAL"
+    },
+    {
+      "video_id": "TSyg05S-5-I",
+      "grade": "C",
+      "eligible": true,
+      "routing": "CAUTION"
+    },
+    {
+      "video_id": "nVqguQH45gw",
+      "grade": "C",
+      "eligible": true,
+      "routing": "CAUTION"
+    },
+    {
+      "video_id": "dAqQqmaI9vY",
+      "grade": "C",
+      "eligible": true,
+      "routing": "CAUTION"
+    },
+    {
+      "video_id": "s7tEurbw1zU",
+      "grade": "D",
+      "eligible": false,
+      "routing": "REPAIR_RECOMMENDED"
+    },
+    {
+      "video_id": "F31ErEAoXnc",
+      "grade": "D",
+      "eligible": false,
+      "routing": "REPAIR_RECOMMENDED"
+    },
+    {
+      "video_id": "4yCvXX-fC3c",
+      "grade": "D",
+      "eligible": false,
+      "routing": "REPAIR_RECOMMENDED"
+    },
+    {
+      "video_id": "px7qgNyf7kM",
+      "grade": "F",
+      "eligible": false,
+      "routing": "REPAIR_REQUIRED"
+    }
+  ],
+  "performance": {
+    "normalization_avg_ms": 0.1058,
+    "package_build_validate_avg_ms": 0.0379
+  },
+  "known_limitations": [
+    "Live YouTube/network operations not tested in offline environment",
+    "Whole real production-library migration not tested in this environment",
+    "Real repository Git checkpoint still required before rollout",
+    "Unrelated app.py modularization remains future technical debt"
+  ]
+}
