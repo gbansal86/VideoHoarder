@@ -37,3 +37,9 @@ Publishing ChatGPT exchange packages to a public repository is a separate explic
 ## Dependency and release hygiene
 
 Dependabot and CI should remain enabled. Release changes should pass compile/tests, document known security/privacy changes, and avoid bundling secrets or runtime library data.
+
+## Automated dependency auditing
+
+The repository runs a scheduled and requirements-change dependency audit with PyPA `pip-audit`. The job emits both a machine-readable vulnerability report and a CycloneDX JSON SBOM as temporary GitHub Actions artifacts. A known vulnerability or dependency-resolution failure makes the audit job fail rather than silently publishing a clean-looking report.
+
+The SBOM is evidence for a specific CI run; it does not replace reviewing dependency changes, Dependabot alerts, or release notes.
