@@ -131,6 +131,8 @@ $BuiltHash = (Get-FileHash -LiteralPath $OutputExe -Algorithm SHA256).Hash
 $PythonVersion = (& $VenvPython --version).Trim()
 $PyInstallerVersion = (& $VenvPython -m PyInstaller --version).Trim()
 & $VenvPython -m pip list --format=freeze | Set-Content -LiteralPath $DependencySnapshotPath -Encoding UTF8
+if ($LASTEXITCODE -ne 0) { throw "Could not record dependency snapshot." }
+if ((Get-Item -LiteralPath $DependencySnapshotPath).Length -eq 0) { throw "Dependency snapshot is empty." }
 @(
     "VideoHoarder version: $AppVersion"
     "Build mode: maintainer-local"
