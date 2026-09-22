@@ -23,6 +23,10 @@ def test_windows_builds_package_provenance_files() -> None:
     assert "-m pip list --format=freeze" in private_build
     assert "pip freeze" not in workflow
     assert "pip freeze" not in private_build
+    assert "Could not record dependency snapshot." in workflow
+    assert "Could not record dependency snapshot." in private_build
+    assert "Dependency snapshot is empty." in workflow
+    assert "Dependency snapshot is empty." in private_build
     assert '"app\\VERSION.txt"' in private_build
     assert '"app\\\\VERSION.txt"' not in private_build
     assert "COMPUTERNAME" not in private_build
