@@ -123,20 +123,26 @@ jobs:
           $ErrorActionPreference = "Stop"
           $version = (Get-Content -LiteralPath "app\VERSION.txt" -Raw).Trim()
           $hash = (Get-FileHash -LiteralPath "release-dist\VideoHoarder.exe" -Algorithm SHA256).Hash
+          $pyInstallerVersion = (python -m PyInstaller --version).Trim()
+          python -m pip freeze | Set-Content -LiteralPath "release-dist\DEPENDENCIES.txt" -Encoding UTF8
           @(
             "VideoHoarder version: $version"
             "Git commit: $env:GITHUB_SHA"
             "GitHub run: $env:GITHUB_RUN_ID"
             "Runner OS: $env:RUNNER_OS"
+            "Runner image: $env:ImageOS"
             "Python: $(python --version)"
+            "PyInstaller: $pyInstallerVersion"
             "VideoHoarder.exe SHA256: $hash"
+            "Dependency snapshot: DEPENDENCIES.txt"
           ) | Set-Content -LiteralPath "release-dist\BUILD_INFO.txt" -Encoding UTF8
 
           $zip = "release-dist\VideoHoarder-$version-Windows-CI.zip"
           Compress-Archive -LiteralPath @(
             "release-dist\VideoHoarder.exe",
             "release-dist\release_self_test.json",
-            "release-dist\BUILD_INFO.txt"
+            "release-dist\BUILD_INFO.txt",
+            "release-dist\DEPENDENCIES.txt"
           ) -DestinationPath $zip -CompressionLevel Optimal -Force
 
           "VIDEOHOARDER_BUILD_ZIP=$zip" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
