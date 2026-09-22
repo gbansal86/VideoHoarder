@@ -21,6 +21,7 @@ on:
       - "VideoHoarder.spec"
       - "requirements*.txt"
   workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: read
