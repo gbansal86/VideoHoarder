@@ -133,7 +133,7 @@ $PyInstallerVersion = (& $VenvPython -m PyInstaller --version).Trim()
 & $VenvPython -m pip freeze | Set-Content -LiteralPath $DependencySnapshotPath -Encoding UTF8
 @(
     "VideoHoarder version: $AppVersion"
-    "Build host: $env:COMPUTERNAME"
+    "Build mode: maintainer-local"
     "Python: $PythonVersion"
     "PyInstaller: $PyInstallerVersion"
     "VideoHoarder.exe SHA256: $BuiltHash"
