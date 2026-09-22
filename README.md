@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/gbansal86/VideoHoarder/actions/workflows/ci.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/gbansal86/VideoHoarder/actions/workflows/codeql.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/codeql.yml)
+[![Windows Build](https://github.com/gbansal86/VideoHoarder/actions/workflows/windows-build.yml/badge.svg)](https://github.com/gbansal86/VideoHoarder/actions/workflows/windows-build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
@@ -59,6 +60,20 @@ For a complete beginner walkthrough, see [docs/QUICK_START.md](docs/QUICK_START.
 ![Transcript intelligence workflow](docs/images/03_ai_processing.svg)
 
 ![Public repository safety boundary](docs/images/04_public_repo_safety.svg)
+
+## Windows CI build
+
+VideoHoarder now builds a frozen Windows executable from a clean public checkout in GitHub Actions. The workflow runs the privacy audit, full tests, PyInstaller build, and a clean-room frozen-app self-test **before** it uploads anything.
+
+For a layman-friendly download:
+
+1. Open **Actions → Windows Build Artifact**.
+2. Open the latest successful run on `main`.
+3. Scroll to **Artifacts** and download **VideoHoarder-Windows-CI**.
+4. GitHub wraps the uploaded file in an artifact ZIP. Open it to find the versioned VideoHoarder Windows ZIP.
+5. Inside the versioned ZIP, `BUILD_INFO.txt` records the commit and EXE SHA-256; `release_self_test.json` records the frozen-app acceptance result.
+
+Actions artifacts are temporary CI evidence (currently retained for 30 days), not a code-signed long-term GitHub Release. A formal release should still follow [RELEASING.md](RELEASING.md).
 
 ## Import videos from your hard drives
 
