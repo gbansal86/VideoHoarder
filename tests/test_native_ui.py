@@ -23,7 +23,7 @@ class NativeUiTests(unittest.TestCase):
         sidebar = Sidebar()
         self.assertEqual(
             list(sidebar.buttons),
-            ["dashboard", "downloads", "queue", "library", "oldimport", "repairdata", "chatgpt_processing", "knowledge", "subscriptions", "collections", "more", "settings"],
+            ["dashboard", "downloads", "queue", "library", "oldimport", "localimport", "repairdata", "chatgpt_processing", "knowledge", "subscriptions", "collections", "more", "settings"],
         )
 
     def test_tool_catalog_is_replaced_by_guided_workflows(self) -> None:
