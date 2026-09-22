@@ -124,7 +124,7 @@ jobs:
           $version = (Get-Content -LiteralPath "app\VERSION.txt" -Raw).Trim()
           $hash = (Get-FileHash -LiteralPath "release-dist\VideoHoarder.exe" -Algorithm SHA256).Hash
           $pyInstallerVersion = (python -m PyInstaller --version).Trim()
-          python -m pip freeze | Set-Content -LiteralPath "release-dist\DEPENDENCIES.txt" -Encoding UTF8
+          python -m pip list --format=freeze | Set-Content -LiteralPath "release-dist\DEPENDENCIES.txt" -Encoding UTF8
           @(
             "VideoHoarder version: $version"
             "Git commit: $env:GITHUB_SHA"
