@@ -130,7 +130,7 @@ $AppVersion = (Get-Content -LiteralPath (Join-Path $ProjectRoot "app\VERSION.txt
 $BuiltHash = (Get-FileHash -LiteralPath $OutputExe -Algorithm SHA256).Hash
 $PythonVersion = (& $VenvPython --version).Trim()
 $PyInstallerVersion = (& $VenvPython -m PyInstaller --version).Trim()
-& $VenvPython -m pip freeze | Set-Content -LiteralPath $DependencySnapshotPath -Encoding UTF8
+& $VenvPython -m pip list --format=freeze | Set-Content -LiteralPath $DependencySnapshotPath -Encoding UTF8
 @(
     "VideoHoarder version: $AppVersion"
     "Build mode: maintainer-local"
