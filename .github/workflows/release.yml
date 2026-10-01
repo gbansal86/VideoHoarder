@@ -36,7 +36,7 @@ jobs:
           fi
 
       - name: Download validated Windows build
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: VideoHoarder-Windows-CI
           path: release-artifact
